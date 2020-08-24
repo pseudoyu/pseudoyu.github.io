@@ -1,0 +1,48 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:webfeeds="http://webfeeds.org/rss/1.0">
+  <channel>
+    <title>Pseudoyu</title>
+    <link>https://pseudoyu.github.io/en/</link>
+    <description>Recent content on Pseudoyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 10 Apr 2020 18:03:46 +0800</lastBuildDate>
+    
+        <atom:link href="https://pseudoyu.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://pseudoyu.github.io/en/about/</link>
+      <pubDate>Fri, 10 Apr 2020 18:03:46 +0800</pubDate>
+      
+      <guid>https://pseudoyu.github.io/en/about/</guid>
+      
+        <description>&lt;p&gt;My name is Yu Zhang. I’m a passionate computer scientist who loves learning and embraces open source technologies.&lt;/p&gt;
+&lt;p&gt;I’m interested in Fin-Tech, Data Mining and Machine Learning.&lt;/p&gt;
+&lt;h3 id=&#34;education&#34;&gt;Education&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;MSc in Computer Science Department @ &lt;em&gt;&lt;strong&gt;The University of Hong Kong&lt;/strong&gt;&lt;/em&gt; | 2020/2021&lt;/li&gt;
+&lt;li&gt;BA in English @ &lt;em&gt;&lt;strong&gt;Wuhan University of Technology&lt;/strong&gt;&lt;/em&gt; | 2015/2019&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;experience&#34;&gt;Experience&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Founder &amp;amp; CEO @ &lt;em&gt;&lt;strong&gt;Wuhan Geek Education Technology co. LTD&lt;/strong&gt;&lt;/em&gt; | Now&lt;/li&gt;
+&lt;li&gt;Product Manager @ &lt;em&gt;&lt;strong&gt;Xiamen Ki-Year Blockchain Information Technology co., LTD&lt;/strong&gt;&lt;/em&gt; | 2018/2019&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Posts</title>
+      <link>https://pseudoyu.github.io/en/posts/</link>
+      <pubDate>Fri, 10 Apr 2020 18:03:46 +0800</pubDate>
+      
+      <guid>https://pseudoyu.github.io/en/posts/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

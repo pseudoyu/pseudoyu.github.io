@@ -1,0 +1,74 @@
+<?xml-stylesheet type="text/xsl" href="https://pseudoyu.github.io/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://pseudoyu.github.io/zh/about/</loc>
+    <lastmod>2020-04-10T18:03:46+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudoyu.github.io/zh/categories/</loc>
+    <lastmod>2020-04-10T18:03:46+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudoyu.github.io/zh/category/notes/</loc>
+    <lastmod>2020-04-10T18:03:46+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudoyu.github.io/zh/tag/notes/</loc>
+    <lastmod>2020-04-10T18:03:46+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudoyu.github.io/zh/posts/</loc>
+    <lastmod>2020-04-10T18:03:46+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudoyu.github.io/zh/category/projects/</loc>
+    <lastmod>2020-04-10T18:03:46+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudoyu.github.io/zh/tag/projects/</loc>
+    <lastmod>2020-04-10T18:03:46+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudoyu.github.io/zh/</loc>
+    <lastmod>2020-04-10T18:03:46+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudoyu.github.io/zh/tags/</loc>
+    <lastmod>2020-04-10T18:03:46+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudoyu.github.io/zh/2020/04/10/%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/</loc>
+    <lastmod>2020-04-10T18:03:46+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+</urlset>

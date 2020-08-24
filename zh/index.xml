@@ -1,0 +1,48 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:webfeeds="http://webfeeds.org/rss/1.0">
+  <channel>
+    <title>Pseudoyu</title>
+    <link>https://pseudoyu.github.io/zh/</link>
+    <description>Recent content on Pseudoyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 10 Apr 2020 18:03:46 +0800</lastBuildDate>
+    
+        <atom:link href="https://pseudoyu.github.io/zh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>关于</title>
+      <link>https://pseudoyu.github.io/zh/about/</link>
+      <pubDate>Fri, 10 Apr 2020 18:03:46 +0800</pubDate>
+      
+      <guid>https://pseudoyu.github.io/zh/about/</guid>
+      
+        <description>&lt;p&gt;我叫张宇，热爱计算机科学，拥抱开源技术。&lt;/p&gt;
+&lt;p&gt;兴趣领域：互联网金融，数据挖掘，机器学习。&lt;/p&gt;
+&lt;h3 id=&#34;教育&#34;&gt;教育&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;硕士，计算机学院 @ &lt;em&gt;&lt;strong&gt;香港大学&lt;/strong&gt;&lt;/em&gt; | 2020/2021&lt;/li&gt;
+&lt;li&gt;本科，外国语学院 @ &lt;em&gt;&lt;strong&gt;武汉理工大学&lt;/strong&gt;&lt;/em&gt; | 2015/2019&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;经历&#34;&gt;经历&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;创始人 &amp;amp; CEO @ &lt;em&gt;&lt;strong&gt;武汉极课教育科技有限公司&lt;/strong&gt;&lt;/em&gt; | 至今&lt;/li&gt;
+&lt;li&gt;产品经理 @ &lt;em&gt;&lt;strong&gt;厦门开源区块链信息技术有限公司&lt;/strong&gt;&lt;/em&gt; | 2018/2019&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Posts</title>
+      <link>https://pseudoyu.github.io/zh/posts/</link>
+      <pubDate>Fri, 10 Apr 2020 18:03:46 +0800</pubDate>
+      
+      <guid>https://pseudoyu.github.io/zh/posts/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

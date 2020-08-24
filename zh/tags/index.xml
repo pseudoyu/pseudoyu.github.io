@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Pseudoyu</title>
-    <link>https://pseudoyu.github.io/zh/tags/</link>
+    <link>https://www.hexarthur.com/zh/tags/</link>
     <description>Recent content in Tags on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Fri, 10 Apr 2020 18:03:46 +0800</lastBuildDate>
     
-	<atom:link href="https://pseudoyu.github.io/zh/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.hexarthur.com/zh/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>notes</title>
-      <link>https://pseudoyu.github.io/zh/tag/notes/</link>
+      <link>https://www.hexarthur.com/zh/tag/notes/</link>
       <pubDate>Fri, 10 Apr 2020 18:03:46 +0800</pubDate>
       
-      <guid>https://pseudoyu.github.io/zh/tag/notes/</guid>
+      <guid>https://www.hexarthur.com/zh/tag/notes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>projects</title>
-      <link>https://pseudoyu.github.io/zh/tag/projects/</link>
+      <link>https://www.hexarthur.com/zh/tag/projects/</link>
       <pubDate>Fri, 10 Apr 2020 18:03:46 +0800</pubDate>
       
-      <guid>https://pseudoyu.github.io/zh/tag/projects/</guid>
+      <guid>https://www.hexarthur.com/zh/tag/projects/</guid>
       <description></description>
     </item>
     

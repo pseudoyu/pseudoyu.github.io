@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Notes on Pseudoyu</title>
-    <link>https://pseudoyu.github.io/zh/category/notes/</link>
+    <link>https://www.hexarthur.com/zh/category/notes/</link>
     <description>Recent content in Notes on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Fri, 10 Apr 2020 18:03:46 +0800</lastBuildDate>
     
-	<atom:link href="https://pseudoyu.github.io/zh/category/notes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.hexarthur.com/zh/category/notes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>主题预览</title>
-      <link>https://pseudoyu.github.io/zh/2020/04/10/%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/</link>
+      <link>https://www.hexarthur.com/zh/2020/04/10/%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/</link>
       <pubDate>Fri, 10 Apr 2020 18:03:46 +0800</pubDate>
       
-      <guid>https://pseudoyu.github.io/zh/2020/04/10/%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/</guid>
+      <guid>https://www.hexarthur.com/zh/2020/04/10/%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/</guid>
       <description>&lt;p&gt;This is a simple preview for styles in Den.&lt;/p&gt;</description>
     </item>
     

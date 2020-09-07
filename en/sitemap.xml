@@ -44,6 +44,20 @@
   </url>
   
   <url>
+    <loc>https://www.hexarthur.com/en/category/projects/</loc>
+    <lastmod>2020-09-07T12:48:07+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/projects/</loc>
+    <lastmod>2020-09-07T12:48:07+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.hexarthur.com/en/</loc>
     <lastmod>2020-09-07T12:48:07+08:00</lastmod>
     <changefreq>weekly</changefreq>

@@ -3,77 +3,147 @@
   
   <url>
     <loc>https://www.hexarthur.com/en/about/</loc>
-    <lastmod>2020-04-10T18:03:46+08:00</lastmod>
+    <lastmod>2020-09-07T18:03:46+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.hexarthur.com/en/categories/</loc>
-    <lastmod>2020-09-07T23:40:25+08:00</lastmod>
+    <lastmod>2020-09-08T00:22:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.hexarthur.com/en/posts/</loc>
-    <lastmod>2020-09-07T23:40:25+08:00</lastmod>
+    <loc>https://www.hexarthur.com/en/tag/computer-science/</loc>
+    <lastmod>2020-09-08T00:22:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.hexarthur.com/en/2020/09/07/project-sample/</loc>
-    <lastmod>2020-09-07T23:40:25+08:00</lastmod>
+    <loc>https://www.hexarthur.com/en/tag/e-commerce/</loc>
+    <lastmod>2020-09-08T00:22:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.hexarthur.com/en/category/projects/</loc>
-    <lastmod>2020-09-07T23:40:25+08:00</lastmod>
+    <loc>https://www.hexarthur.com/en/2020/09/08/e-commerce-technologies-ecom6013/</loc>
+    <lastmod>2020-09-08T00:22:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.hexarthur.com/en/tag/projects/</loc>
-    <lastmod>2020-09-07T23:40:25+08:00</lastmod>
+    <loc>https://www.hexarthur.com/en/tag/ecic/</loc>
+    <lastmod>2020-09-08T00:22:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.hexarthur.com/en/</loc>
-    <lastmod>2020-09-07T23:40:25+08:00</lastmod>
+    <loc>https://www.hexarthur.com/en/tag/ecom/</loc>
+    <lastmod>2020-09-08T00:22:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.hexarthur.com/en/tags/</loc>
-    <lastmod>2020-09-07T23:40:25+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/en/2020/09/07/introduction-to-psychology/</loc>
-    <lastmod>2020-09-07T12:48:07+08:00</lastmod>
+    <loc>https://www.hexarthur.com/en/tag/hku/</loc>
+    <lastmod>2020-09-08T00:22:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.hexarthur.com/en/category/notes/</loc>
-    <lastmod>2020-09-07T12:48:07+08:00</lastmod>
+    <lastmod>2020-09-08T00:22:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.hexarthur.com/en/tag/notes/</loc>
+    <lastmod>2020-09-08T00:22:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/posts/</loc>
+    <lastmod>2020-09-08T00:22:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/</loc>
+    <lastmod>2020-09-08T00:22:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tags/</loc>
+    <lastmod>2020-09-08T00:22:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/technology/</loc>
+    <lastmod>2020-09-08T00:22:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/2020/09/07/introduction-to-psychology-psy103/</loc>
     <lastmod>2020-09-07T12:48:07+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/psy/</loc>
+    <lastmod>2020-09-07T12:48:07+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/psychology/</loc>
+    <lastmod>2020-09-07T12:48:07+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/sbu/</loc>
+    <lastmod>2020-09-07T12:48:07+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/2020/09/01/project-sample/</loc>
+    <lastmod>2020-09-01T23:40:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/category/projects/</loc>
+    <lastmod>2020-09-01T23:40:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/projects/</loc>
+    <lastmod>2020-09-01T23:40:25+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

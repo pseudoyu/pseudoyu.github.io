@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>computer-science on Pseudoyu</title>
+    <link>https://www.hexarthur.com/zh/tag/computer-science/</link>
+    <description>Recent content in computer-science on Pseudoyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 08 Sep 2020 00:22:28 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.hexarthur.com/zh/tag/computer-science/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>E-Commerce Technologies [ECOM6013]</title>
+      <link>https://www.hexarthur.com/zh/2020/09/08/e-commerce-technologies-ecom6013/</link>
+      <pubDate>Tue, 08 Sep 2020 00:22:28 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/2020/09/08/e-commerce-technologies-ecom6013/</guid>
+      <description>E-commerce Technologies Topic 1 Introduction Discussion Topic #1: Puma Goes Omni
+ What is the purpose of Puma&amp;rsquo;s content management systems? Why did Puma build a single centralized website rather than continue with multiple websites serving different countries and regions? [choosen] What social media sites does Puma use, and what do they contribute to Puma&amp;rsquo;s marketing effort?  Case Study
+ Alibaba Singles&amp;rsquo; Day 2019  Core E-Commerce Technologies
+ Introduction to E-Commerce Technology Internet and E-Commerce Infrasture E-Commerce Presence and Development Life Circle Web Design, Implementation and Testing Introduction to Mobile Commerce Internet and E-Commerce Commerce Electronic Payment Systems Cybercurrency, Bitcoin and Blockchain Emerging Technology &amp;amp; Cloud Computing and IoT Artificial Intelligence, Machine Learning and E-Commerce Trends  E-Commerce and Data Science</description>
+    </item>
+    
+  </channel>
+</rss>

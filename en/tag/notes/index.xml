@@ -6,18 +6,30 @@
     <description>Recent content in notes on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 07 Sep 2020 12:48:07 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 08 Sep 2020 00:22:28 +0800</lastBuildDate>
     
 	<atom:link href="https://www.hexarthur.com/en/tag/notes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Introduction to Psychology</title>
-      <link>https://www.hexarthur.com/en/2020/09/07/introduction-to-psychology/</link>
+      <title>E-Commerce Technologies [ECOM6013]</title>
+      <link>https://www.hexarthur.com/en/2020/09/08/e-commerce-technologies-ecom6013/</link>
+      <pubDate>Tue, 08 Sep 2020 00:22:28 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/2020/09/08/e-commerce-technologies-ecom6013/</guid>
+      <description>E-commerce Technologies Topic 1 Introduction Discussion Topic #1: Puma Goes Omni
+ What is the purpose of Puma&amp;rsquo;s content management systems? Why did Puma build a single centralized website rather than continue with multiple websites serving different countries and regions? [choosen] What social media sites does Puma use, and what do they contribute to Puma&amp;rsquo;s marketing effort?  Case Study
+ Alibaba Singles&amp;rsquo; Day 2019  Core E-Commerce Technologies
+ Introduction to E-Commerce Technology Internet and E-Commerce Infrasture E-Commerce Presence and Development Life Circle Web Design, Implementation and Testing Introduction to Mobile Commerce Internet and E-Commerce Commerce Electronic Payment Systems Cybercurrency, Bitcoin and Blockchain Emerging Technology &amp;amp; Cloud Computing and IoT Artificial Intelligence, Machine Learning and E-Commerce Trends  E-Commerce and Data Science</description>
+    </item>
+    
+    <item>
+      <title>Introduction to Psychology [PSY103]</title>
+      <link>https://www.hexarthur.com/en/2020/09/07/introduction-to-psychology-psy103/</link>
       <pubDate>Mon, 07 Sep 2020 12:48:07 +0800</pubDate>
       
-      <guid>https://www.hexarthur.com/en/2020/09/07/introduction-to-psychology/</guid>
-      <description>Introduction to Psychology Chapter1 What Is Psychology Module1.1 Psychologists&amp;rsquo; Goal General Points about Psychology
+      <guid>https://www.hexarthur.com/en/2020/09/07/introduction-to-psychology-psy103/</guid>
+      <description>Introduction to Psychology Chapter 1 What Is Psychology Module 1.1 Psychologists&amp;rsquo; Goal General Points about Psychology
  It Depends Progress Depends on Good Measurement Confidence in the Conclusions Should Depend on the Strength of the Evidence  Major Philosophical Issues in Psychology
  Free Will versus Determinism The Mind-Brain Problem The Nature-Nurture Issue  What Psychologists Do
   Service Providers to Individuals

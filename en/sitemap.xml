@@ -148,4 +148,53 @@
     <priority>0.5</priority>
   </url>
   
+  <url>
+    <loc>https://www.hexarthur.com/en/2020/06/06/23%E5%B2%81%E7%9A%84%E8%87%AA%E7%99%BD%E5%8E%BB%E8%BF%BD%E5%AF%BB%E6%84%8F%E4%B9%89/</loc>
+    <lastmod>2020-06-06T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/birthday/</loc>
+    <lastmod>2020-06-06T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/future/</loc>
+    <lastmod>2020-06-06T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/category/ideas/</loc>
+    <lastmod>2020-06-06T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/ideas/</loc>
+    <lastmod>2020-06-06T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/review/</loc>
+    <lastmod>2020-06-06T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/university/</loc>
+    <lastmod>2020-06-06T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
 </urlset>

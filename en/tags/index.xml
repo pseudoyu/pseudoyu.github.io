@@ -111,15 +111,6 @@
     </item>
     
     <item>
-      <title>projects</title>
-      <link>https://www.hexarthur.com/en/tag/projects/</link>
-      <pubDate>Tue, 01 Sep 2020 23:40:25 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/tag/projects/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>birthday</title>
       <link>https://www.hexarthur.com/en/tag/birthday/</link>
       <pubDate>Sat, 06 Jun 2020 00:00:00 +0800</pubDate>
@@ -161,6 +152,42 @@
       <pubDate>Sat, 06 Jun 2020 00:00:00 +0800</pubDate>
       
       <guid>https://www.hexarthur.com/en/tag/university/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cloud-dev</title>
+      <link>https://www.hexarthur.com/en/tag/cloud-dev/</link>
+      <pubDate>Sun, 05 Apr 2020 23:40:25 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/tag/cloud-dev/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>css</title>
+      <link>https://www.hexarthur.com/en/tag/css/</link>
+      <pubDate>Sun, 05 Apr 2020 23:40:25 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/tag/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html</title>
+      <link>https://www.hexarthur.com/en/tag/html/</link>
+      <pubDate>Sun, 05 Apr 2020 23:40:25 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/tag/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://www.hexarthur.com/en/tag/javascript/</link>
+      <pubDate>Sun, 05 Apr 2020 23:40:25 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/tag/javascript/</guid>
       <description></description>
     </item>
     

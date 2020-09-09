@@ -16,21 +16,7 @@
   </url>
   
   <url>
-    <loc>https://www.hexarthur.com/en/tag/computer-science/</loc>
-    <lastmod>2020-09-09T04:28:28+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://www.hexarthur.com/en/tag/e-commerce/</loc>
-    <lastmod>2020-09-09T04:28:28+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/en/2020/09/09/e-commerce-technologies-ecom6013/</loc>
     <lastmod>2020-09-09T04:28:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -45,6 +31,20 @@
   
   <url>
     <loc>https://www.hexarthur.com/en/tag/ecom/</loc>
+    <lastmod>2020-09-09T04:28:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/ecom6013/</loc>
+    <lastmod>2020-09-09T04:28:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/2020/09/09/ecom6013-topic-2-internet-and-e-commerce-infrasture/</loc>
     <lastmod>2020-09-09T04:28:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -107,14 +107,21 @@
   </url>
   
   <url>
-    <loc>https://www.hexarthur.com/en/2020/09/07/introduction-to-psychology-psy103/</loc>
+    <loc>https://www.hexarthur.com/en/tag/psy/</loc>
     <lastmod>2020-09-07T12:48:07+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.hexarthur.com/en/tag/psy/</loc>
+    <loc>https://www.hexarthur.com/en/tag/psy103/</loc>
+    <lastmod>2020-09-07T12:48:07+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/2020/09/07/psy103-chapter-1-what-is-psychology/</loc>
     <lastmod>2020-09-07T12:48:07+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -130,6 +137,13 @@
   <url>
     <loc>https://www.hexarthur.com/en/tag/sbu/</loc>
     <lastmod>2020-09-07T12:48:07+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/2020/09/06/ecom6013-topic-1-introduction-to-e-commerce-technology/</loc>
+    <lastmod>2020-09-06T04:28:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

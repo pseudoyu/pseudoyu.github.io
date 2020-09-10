@@ -38,7 +38,7 @@ Financial Model
  Define Financial Objectives Identify Input &amp; Output Variables Construct Financial Model Design Solution &amp; Implement Processing Logic Output Presentation &amp; Validation  Topic 1.2 Basic Financial Arithmetic Interest Rate">
 <meta itemprop="datePublished" content="2020-09-10T13:02:17+08:00" />
 <meta itemprop="dateModified" content="2020-09-10T13:02:17+08:00" />
-<meta itemprop="wordCount" content="272">
+<meta itemprop="wordCount" content="292">
 
 
 
@@ -217,6 +217,9 @@ nominal_rate = [(1 + effective_rate)^(1 / n) - 1] * n
 </code></pre>
 <p><strong>Annually Compound Rates</strong></p>
 <pre><code>annually_compound_rate = [(1 + nominal_rate * (days / year))^(365 / days) - 1]
+
+Interest = (1 + annually_compound_rate)^(days / 365) - 1
+Interest = (1 + nominal_rate * (days / year)) - 1
 </code></pre>
 <p><strong>Compound Yield</strong></p>
 <pre><code>compound_yield = (1 + nominal_rate * (days / year))^(365 / days) - 1

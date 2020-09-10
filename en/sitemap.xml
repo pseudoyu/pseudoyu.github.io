@@ -10,7 +10,84 @@
   
   <url>
     <loc>https://www.hexarthur.com/en/categories/</loc>
-    <lastmod>2020-09-09T20:22:09+08:00</lastmod>
+    <lastmod>2020-09-10T09:28:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/eco/</loc>
+    <lastmod>2020-09-10T09:28:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/eco108/</loc>
+    <lastmod>2020-09-10T09:28:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/2020/09/10/eco108-chapter-1-ten-principles-of-economics/</loc>
+    <lastmod>2020-09-10T09:28:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/economics/</loc>
+    <lastmod>2020-09-10T09:28:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/finance/</loc>
+    <lastmod>2020-09-10T09:28:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/category/notes/</loc>
+    <lastmod>2020-09-10T09:28:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/notes/</loc>
+    <lastmod>2020-09-10T09:28:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/posts/</loc>
+    <lastmod>2020-09-10T09:28:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/</loc>
+    <lastmod>2020-09-10T09:28:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/sbu/</loc>
+    <lastmod>2020-09-10T09:28:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tags/</loc>
+    <lastmod>2020-09-10T09:28:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -52,41 +129,6 @@
   
   <url>
     <loc>https://www.hexarthur.com/en/tag/internet/</loc>
-    <lastmod>2020-09-09T20:22:09+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/en/category/notes/</loc>
-    <lastmod>2020-09-09T20:22:09+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/en/tag/notes/</loc>
-    <lastmod>2020-09-09T20:22:09+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/en/posts/</loc>
-    <lastmod>2020-09-09T20:22:09+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/en/</loc>
-    <lastmod>2020-09-09T20:22:09+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/en/tags/</loc>
     <lastmod>2020-09-09T20:22:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -164,13 +206,6 @@
   
   <url>
     <loc>https://www.hexarthur.com/en/tag/psychology/</loc>
-    <lastmod>2020-09-02T12:48:07+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/en/tag/sbu/</loc>
     <lastmod>2020-09-02T12:48:07+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

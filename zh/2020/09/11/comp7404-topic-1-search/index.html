@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta name="generator" content="Hugo 0.74.3" />
+  <meta charset="utf-8">
+  <title>COMP7404 Topic 1 Search · Pseudoyu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="COMP7404 Computational Intelligence and Machine Learning Topic 1 Search Types of Search
+ Uninformed Search (Know nothing about the problem except definition) Informed Search (know something more like how close to the goal) Local Search (Randomly initilize a state and make it better, e.g. Deep Learning) Constraint Satisfaction Problems (Know more about the problem) Adversarial Search (have an opponent, e.g. chess, star craft game)  Is Search the same as Unsupervised/Supervised Learning?" />
+
+  <meta name="keywords" content="Hugo, theme, den" />
+
+<link rel="canonical" href="https://www.hexarthur.com/zh/2020/09/11/comp7404-topic-1-search/" />
+<link rel="alternate" href="https://www.hexarthur.com/en/2020/09/11/comp7404-topic-1-search/" hreflang="en">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.hexarthur.com/css/den.css">
+
+
+
+
+<meta property="og:title" content="COMP7404 Topic 1 Search" />
+<meta property="og:description" content="COMP7404 Computational Intelligence and Machine Learning Topic 1 Search Types of Search
+ Uninformed Search (Know nothing about the problem except definition) Informed Search (know something more like how close to the goal) Local Search (Randomly initilize a state and make it better, e.g. Deep Learning) Constraint Satisfaction Problems (Know more about the problem) Adversarial Search (have an opponent, e.g. chess, star craft game)  Is Search the same as Unsupervised/Supervised Learning?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.hexarthur.com/zh/2020/09/11/comp7404-topic-1-search/" />
+<meta property="article:published_time" content="2020-09-11T00:28:11+08:00" />
+<meta property="article:modified_time" content="2020-09-11T00:28:11+08:00" />
+<meta itemprop="name" content="COMP7404 Topic 1 Search">
+<meta itemprop="description" content="COMP7404 Computational Intelligence and Machine Learning Topic 1 Search Types of Search
+ Uninformed Search (Know nothing about the problem except definition) Informed Search (know something more like how close to the goal) Local Search (Randomly initilize a state and make it better, e.g. Deep Learning) Constraint Satisfaction Problems (Know more about the problem) Adversarial Search (have an opponent, e.g. chess, star craft game)  Is Search the same as Unsupervised/Supervised Learning?">
+<meta itemprop="datePublished" content="2020-09-11T00:28:11+08:00" />
+<meta itemprop="dateModified" content="2020-09-11T00:28:11+08:00" />
+<meta itemprop="wordCount" content="675">
+
+
+
+<meta itemprop="keywords" content="notes,programming,python,ml,ai,algorithm,hku,ecic,comp,comp7404," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="COMP7404 Topic 1 Search"/>
+<meta name="twitter:description" content="COMP7404 Computational Intelligence and Machine Learning Topic 1 Search Types of Search
+ Uninformed Search (Know nothing about the problem except definition) Informed Search (know something more like how close to the goal) Local Search (Randomly initilize a state and make it better, e.g. Deep Learning) Constraint Satisfaction Problems (Know more about the problem) Adversarial Search (have an opponent, e.g. chess, star craft game)  Is Search the same as Unsupervised/Supervised Learning?"/>
+</head>
+<body>
+  
+  <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://www.hexarthur.com/images/background.jpg'); background-position: center; background-size: cover;">
+  <div class="container">
+  <nav class="header-nav navbar navbar-expand-md navbar-dark light-dark">
+    <div class="header-logo navbar-brand">
+      
+        <a class="float-left" href="https://www.hexarthur.com/zh/">
+      
+        
+        <img class="mr20 header-logo-image" src="https://www.hexarthur.com/images/fly.png" alt="logo">
+        
+        
+          Pseudoyu
+         
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav-menu collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.hexarthur.com/zh/category/ideas/">思考</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.hexarthur.com/zh/category/notes/">笔记</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.hexarthur.com/zh/category/projects/">项目</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              <a class="nav-link" href="https://www.hexarthur.com/zh/about/">关于</a>
+            
+          </li>
+        
+        
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.hexarthur.com/en/"><i class="fas fa-globe"></i> English</a>
+            </li>
+          
+          
+        
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container header-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="header-content">
+        <h1 class="header-title">COMP7404 Topic 1 Search</h1>
+        <p class="header-date">作者：
+          pseudoyu /
+        
+        2020-09-11
+          / 分类：
+          <a href="https://www.hexarthur.com/zh/category/notes/">Notes</a>
+        </p>
+        
+        <div class="header-underline"></div>
+        
+          <div class="clearfix"></div>
+          <p class="float-right header-tags">
+              <i class="fas fa-tags" aria-hidden="true"></i>
+              <a href="https://www.hexarthur.com/zh/tag/ai/">ai</a>, 
+                <a href="https://www.hexarthur.com/zh/tag/algorithm/">algorithm</a>, 
+                <a href="https://www.hexarthur.com/zh/tag/comp/">comp</a>, 
+                <a href="https://www.hexarthur.com/zh/tag/comp7404/">comp7404</a>, 
+                <a href="https://www.hexarthur.com/zh/tag/ecic/">ecic</a>, 
+                <a href="https://www.hexarthur.com/zh/tag/hku/">hku</a>, 
+                <a href="https://www.hexarthur.com/zh/tag/ml/">ml</a>, 
+                <a href="https://www.hexarthur.com/zh/tag/notes/">notes</a>, 
+                <a href="https://www.hexarthur.com/zh/tag/programming/">programming</a>, 
+                <a href="https://www.hexarthur.com/zh/tag/python/">python</a>
+          </p>
+        
+        <div class="clearfix"></div>
+<p class="float-right translations">
+    <i class="fas fa-language" aria-hidden="true"></i>
+    翻译： 
+    <a href="https://www.hexarthur.com/en/2020/09/11/comp7404-topic-1-search/">EN</a>
+</p>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <main>
+<div class="container content">
+  <article>
+  <h1 id="comp7404-computational-intelligence-and-machine-learning">COMP7404 Computational Intelligence and Machine Learning</h1>
+<h2 id="topic-1-search">Topic 1 Search</h2>
+<p><strong>Types of Search</strong></p>
+<ul>
+<li>Uninformed Search (Know nothing about the problem except definition)</li>
+<li>Informed Search (know something more like how close to the goal)</li>
+<li>Local Search (Randomly initilize a state and make it better, e.g. Deep Learning)</li>
+<li>Constraint Satisfaction Problems (Know more about the problem)</li>
+<li>Adversarial Search (have an opponent, e.g. chess, star craft game)</li>
+</ul>
+<p><strong>Is Search the same as Unsupervised/Supervised Learning?</strong></p>
+<p>Search is a process that tries to explore all options and find out which one is best. Search itself isn&rsquo;t considered as Machine Learning though it&rsquo;s always combined with Machine Learning in some system to improve the performance. Machine Learning is part of Artificial Intelligence.</p>
+<p><strong>Search Problem Definition</strong></p>
+<ul>
+<li>States</li>
+<li>Initial State</li>
+<li>Actions and Transition Model
+<ul>
+<li>available possible actions</li>
+<li>what each action does</li>
+</ul>
+</li>
+<li>Goal Test</li>
+<li>Path Cost</li>
+</ul>
+<p><em>A solution is a sequence of actions which transforms the start state to a goal state</em></p>
+<p><strong>State Space (the set of all reachable states)</strong></p>
+<ul>
+<li>Usually a graph</li>
+<li>The possible action sequences form a search tree</li>
+</ul>
+<p><strong>State Space Graph vs. Search Tree</strong></p>
+<ul>
+<li>State Space Graph (each state occurs only once)
+<ul>
+<li>Nodes - states</li>
+<li>Arcs (connections between nodes) - action results</li>
+<li>A set of goal nodes - goal test</li>
+</ul>
+</li>
+<li>Search Tree (states may occur more than once)
+<ul>
+<li>Root - start state</li>
+<li>Nodes - possible action sequences</li>
+</ul>
+</li>
+</ul>
+<p>some related concepts:</p>
+<ul>
+<li>depth of tree</li>
+<li>branching factor (max children)</li>
+</ul>
+<p><strong>States vs. State Sequence</strong></p>
+<p>A large number of state space -&gt; A huge number of state sequences (e.g. a large number of nodes in the search tree)</p>
+<p>Example: Chess (10^43 possible states and 10^120 possible state sequences)</p>
+<p><strong>Romania Problem</strong></p>
+<ul>
+<li>States
+<ul>
+<li>The cities</li>
+</ul>
+</li>
+<li>Initial State
+<ul>
+<li>Arad</li>
+</ul>
+</li>
+<li>Actions and Transition model
+<ul>
+<li>Go to neighboring city</li>
+</ul>
+</li>
+<li>Goal Test
+<ul>
+<li>In Bucharest?</li>
+</ul>
+</li>
+<li>Path Cost
+<ul>
+<li>Distance between the cities</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/romania_problem.png" alt="Romania Problem"></p>
+<p>Store data in Python dictionary</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">romania</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;A&#39;</span><span class="p">:[</span><span class="s1">&#39;S&#39;</span><span class="p">,</span><span class="s1">&#39;T&#39;</span><span class="p">,</span><span class="s1">&#39;Z&#39;</span><span class="p">],</span><span class="s1">&#39;Z&#39;</span><span class="p">:[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;O&#39;</span><span class="p">],</span><span class="s1">&#39;O&#39;</span><span class="p">:[</span><span class="s1">&#39;S&#39;</span><span class="p">,</span><span class="s1">&#39;Z&#39;</span><span class="p">],</span><span class="s1">&#39;T&#39;</span><span class="p">:[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;L&#39;</span><span class="p">],</span><span class="s1">&#39;L&#39;</span><span class="p">:[</span><span class="s1">&#39;M&#39;</span><span class="p">,</span><span class="s1">&#39;T&#39;</span><span class="p">],</span><span class="s1">&#39;M&#39;</span><span class="p">:[</span><span class="s1">&#39;D&#39;</span><span class="p">,</span><span class="s1">&#39;L&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;D&#39;</span><span class="p">:[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="s1">&#39;M&#39;</span><span class="p">],</span><span class="s1">&#39;S&#39;</span><span class="p">:[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;F&#39;</span><span class="p">,</span><span class="s1">&#39;O&#39;</span><span class="p">,</span><span class="s1">&#39;R&#39;</span><span class="p">],</span><span class="s1">&#39;R&#39;</span><span class="p">:[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="s1">&#39;P&#39;</span><span class="p">,</span><span class="s1">&#39;S&#39;</span><span class="p">],</span><span class="s1">&#39;C&#39;</span><span class="p">:[</span><span class="s1">&#39;D&#39;</span><span class="p">,</span><span class="s1">&#39;P&#39;</span><span class="p">,</span><span class="s1">&#39;R&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;F&#39;</span><span class="p">:[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;S&#39;</span><span class="p">],</span><span class="s1">&#39;P&#39;</span><span class="p">:[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="s1">&#39;R&#39;</span><span class="p">],</span><span class="s1">&#39;B&#39;</span><span class="p">:[]</span>
+    <span class="p">}</span>
+</code></pre></div><p>Use dictionart to store neighbors for each cities</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="n">romania</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="s1">&#39;Z&#39;</span><span class="p">]</span>
+</code></pre></div><p><strong>Search Strategy</strong></p>
+<ul>
+<li>Defines the order of node expansion</li>
+<li>Evaluated along the following dimensions
+<ul>
+<li>Completeness (always find a solution if exists)</li>
+<li>Optimality (find a least-cost solution)</li>
+<li>Time complexity (number of nodes generated)</li>
+<li>Space complexity (max number of nodes in memory)</li>
+</ul>
+</li>
+</ul>
+<p><strong>Time/Space complexity</strong></p>
+<ul>
+<li>b: maximum branching factor of the search tree</li>
+<li>d: distance to root of the shadowest solution</li>
+<li>m: maximum length of any path in the state space</li>
+</ul>
+<p><strong>Search Algorithms</strong></p>
+<ul>
+<li><del>Tree search algorithm</del> (TSA)</li>
+<li><del>Graph search algorithm</del> (GSA)</li>
+</ul>
+<p><strong>Uninformed (Blind) Search Strategies</strong></p>
+<ul>
+<li>Breadth-first search (BFS)
+<ul>
+<li>TSA</li>
+<li>GSA</li>
+</ul>
+</li>
+<li>Depth-first search (DFS)
+<ul>
+<li>TSA</li>
+<li>GSA</li>
+</ul>
+</li>
+<li>Uniform-cost search (UCS)
+<ul>
+<li>TSA</li>
+<li>GSA</li>
+</ul>
+</li>
+</ul>
+<p><strong>Queue</strong></p>
+<p><a href="https://docs.python.org/3.8/library/collections.html#collections.deque"><em><strong>Use deque in Python3</strong></em></a></p>
+<pre><code>class collections.deque([iterable[, maxlen]])
+Returns a new deque object initialized left-to-right (using append()) with data from iterable.
+If iterable is not specified, the new deque is empty.
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">collections</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">queue</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">deque</span><span class="p">([</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">queue</span><span class="o">.</span><span class="n">popleft</span><span class="p">()</span>
+<span class="s1">&#39;A&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">queue</span>
+<span class="n">deque</span><span class="p">([</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">queue</span><span class="o">.</span><span class="n">popleft</span><span class="p">()</span>
+<span class="s1">&#39;B&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">queue</span>
+<span class="n">deque</span><span class="p">([</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">])</span>
+</code></pre></div><p><strong>TSA - BFS Version</strong></p>
+<p>When it applies DFS/UCS, only need to change the <strong>data type of the frontier</strong> variable.</p>
+<p><em><strong>pseudo code</strong></em></p>
+<pre><code>function TSA(problem) returns solution
+    initialize frontier using initial state of problem
+    while frontier is not empty
+        choose a node and remove it from frontier
+        if node contains a goal state then return corresponding solution
+        explore the node, adding the resulting nodes to the frontier
+</code></pre>
+<p><em><strong>actual python code</strong></em></p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">collections</span>
+<span class="k">def</span> <span class="nf">bfsTsa</span><span class="p">(</span><span class="n">stateSpaceGraph</span><span class="p">,</span> <span class="n">startState</span><span class="p">,</span> <span class="n">goalState</span><span class="p">):</span>
+    <span class="n">frontier</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">deque</span><span class="p">([</span><span class="n">startState</span><span class="p">])</span>
+    <span class="k">while</span> <span class="n">frontier</span><span class="p">:</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="n">frontier</span><span class="o">.</span><span class="n">popleft</span><span class="p">()</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">goalState</span><span class="p">)):</span> <span class="k">return</span> <span class="n">node</span>
+        <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">stateSpaceGraph</span><span class="p">[</span><span class="n">node</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]:</span> <span class="n">frontier</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="o">+</span><span class="n">child</span><span class="p">)</span>
+</code></pre></div><p><strong><a href="https://py3.codeskulptor.org/#user305_9vJQ4fFg1V_18.py">My demo of this bfsTsa.py</a></strong></p>
+<p><strong>GSA - BFS Version</strong></p>
+<p><em><strong>pseudo code</strong></em></p>
+<pre><code>function GSA (problem) returns solution
+    initialize frontier using initial state of problem
+    initialize explored set to be empty
+    while frontier is not empty
+        choose a node and remove it from frontier
+        if node contains a goal state then return corresponding solution
+        If node is not in explored set
+            add node to explored set
+            explore the node, adding the resulting nodes to the frontier
+</code></pre>
+<p><em><strong>actual python code</strong></em></p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">collections</span>
+<span class="k">def</span> <span class="nf">bfsGsa</span><span class="p">(</span><span class="n">stateSpaceGraph</span><span class="p">,</span> <span class="n">startState</span><span class="p">,</span> <span class="n">goalState</span><span class="p">):</span>
+    <span class="n">frontier</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">deque</span><span class="p">([</span><span class="n">startState</span><span class="p">])</span>
+    <span class="n">exploredSet</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">while</span> <span class="n">frontier</span><span class="p">:</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="n">frontier</span><span class="o">.</span><span class="n">popleft</span><span class="p">()</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">goalState</span><span class="p">)):</span> <span class="k">return</span> <span class="n">node</span>
+        <span class="k">if</span> <span class="n">node</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">exploredSet</span><span class="p">:</span>
+            <span class="n">exploredSet</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">node</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+            <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">stateSpaceGraph</span><span class="p">[</span><span class="n">node</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]:</span> <span class="n">frontier</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="o">+</span><span class="n">child</span><span class="p">)</span>
+</code></pre></div><p><strong><a href="https://py3.codeskulptor.org/#user305_y821hvugeL_0.py">My demo of this bfsGsa.py</a></strong></p>
+
+  </article>
+
+  
+  
+    
+    
+    
+  
+  
+
+
+</div>
+
+  </main><div class="footer gradient-2">
+  <div class="container footer-container ">
+    <div class="row">
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        <div class="footer-title">网站地图</div>
+        <ul class="list-unstyled">
+            
+              
+                <li><a href="https://www.hexarthur.com/zh/tags/">标签</a></li>
+              
+              
+                <li><a href="https://www.hexarthur.com/zh/categories/">分类</a></li>
+              
+            
+            
+            
+            <li><a rel="alternate" type="application/rss&#43;xml" href="https://www.hexarthur.com/zh/index.xml"><i class="fas fa-rss-square"></i> RSS订阅</a></li>
+            
+            
+            
+        </ul>
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">社群</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://github.com/pseudoyu" rel="noopener" target="_blank">GitHub</a></li>
+          
+        </ul>
+        
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">友链</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://www.linkedin.com/in/pseudoyu/" rel="noopener" target="_blank">关于我</a></li>
+          
+        </ul>
+        
+      </div> 
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <p class="pull-right text-right">
+          <small><em>Proudly powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo</a></em></small><br/>
+          <small><em>Theme - <a href="https://github.com/shaform/hugo-theme-den" rel="noopener" target="_blank">Den</a></em></small><br/>
+          <small>
+            &copy; 
+            pseudoyu
+            2020
+          </small>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

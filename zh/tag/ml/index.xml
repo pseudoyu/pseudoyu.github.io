@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ml on Pseudoyu</title>
+    <link>https://www.hexarthur.com/zh/tag/ml/</link>
+    <description>Recent content in ml on Pseudoyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 11 Sep 2020 00:28:11 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.hexarthur.com/zh/tag/ml/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>COMP7404 Topic 1 Search</title>
+      <link>https://www.hexarthur.com/zh/2020/09/11/comp7404-topic-1-search/</link>
+      <pubDate>Fri, 11 Sep 2020 00:28:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/2020/09/11/comp7404-topic-1-search/</guid>
+      <description>COMP7404 Computational Intelligence and Machine Learning Topic 1 Search Types of Search
+ Uninformed Search (Know nothing about the problem except definition) Informed Search (know something more like how close to the goal) Local Search (Randomly initilize a state and make it better, e.g. Deep Learning) Constraint Satisfaction Problems (Know more about the problem) Adversarial Search (have an opponent, e.g. chess, star craft game)  Is Search the same as Unsupervised/Supervised Learning?</description>
+    </item>
+    
+  </channel>
+</rss>

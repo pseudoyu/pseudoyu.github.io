@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>comp7103 on Pseudoyu</title>
+    <link>https://www.hexarthur.com/en/tag/comp7103/</link>
+    <description>Recent content in comp7103 on Pseudoyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 12 Sep 2020 00:05:17 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.hexarthur.com/en/tag/comp7103/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>COMP7103 Lecture 1 Introduction</title>
+      <link>https://www.hexarthur.com/en/2020/09/12/comp7103-lecture-1-introduction/</link>
+      <pubDate>Sat, 12 Sep 2020 00:05:17 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/2020/09/12/comp7103-lecture-1-introduction/</guid>
+      <description>COMP7103 Data Mining Lecture 1 Introduction Data Mining and KDD
+ KDD (Knowledge Discovery in Databases)  A process of discovering useful knowledge from big collection of data   Data Mining  A step within the KDD process in which interesting patterns are found. Some of these patterns are then interpreted and transformed into useful knowledge.    Data and Knowledge
+ Data  A collecion of facts about certain group of objects   Pattern  Certain characteristics of data that are frequently observed   Knowledge  Some general rules about the objects    KDD is a process of identifying patterns in data and deriving knowledge from them</description>
+    </item>
+    
+  </channel>
+</rss>

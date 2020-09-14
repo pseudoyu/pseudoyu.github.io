@@ -32,7 +32,7 @@
  Uninformed Search (Know nothing about the problem except definition) Informed Search (know something more like how close to the goal) Local Search (Randomly initilize a state and make it better, e.g. Deep Learning) Constraint Satisfaction Problems (Know more about the problem) Adversarial Search (have an opponent, e.g. chess, star craft game)  Is Search the same as Unsupervised/Supervised Learning?">
 <meta itemprop="datePublished" content="2020-09-11T00:28:11+08:00" />
 <meta itemprop="dateModified" content="2020-09-11T00:28:11+08:00" />
-<meta itemprop="wordCount" content="675">
+<meta itemprop="wordCount" content="1522">
 
 
 
@@ -169,9 +169,19 @@
 </ul>
 <p><strong>Is Search the same as Unsupervised/Supervised Learning?</strong></p>
 <p>Search is a process that tries to explore all options and find out which one is best. Search itself isn&rsquo;t considered as Machine Learning though it&rsquo;s always combined with Machine Learning in some system to improve the performance. Machine Learning is part of Artificial Intelligence.</p>
+<p><strong>Search Applications</strong></p>
+<ul>
+<li>Vacuum World</li>
+<li>Pancake Flipping</li>
+<li>8 Puzzle</li>
+<li>Pathing</li>
+<li>TSP</li>
+<li>Game Play (chess, Go)</li>
+</ul>
+<p><em>Any problem where more than one alternative  needs to be explored may try search</em></p>
 <p><strong>Search Problem Definition</strong></p>
 <ul>
-<li>States</li>
+<li>States - Agent location, dirt location</li>
 <li>Initial State</li>
 <li>Actions and Transition Model
 <ul>
@@ -277,23 +287,39 @@
 <ul>
 <li>Breadth-first search (BFS)
 <ul>
-<li>TSA</li>
-<li>GSA</li>
+<li>BFS-TSA</li>
+<li>BFS-GSA</li>
 </ul>
 </li>
 <li>Depth-first search (DFS)
 <ul>
-<li>TSA</li>
-<li>GSA</li>
+<li>DFS-TSA</li>
+<li>DFS-GSA</li>
 </ul>
 </li>
 <li>Uniform-cost search (UCS)
 <ul>
-<li>TSA</li>
-<li>GSA</li>
+<li>UCS-TSA</li>
+<li>UCS-GSA</li>
 </ul>
 </li>
 </ul>
+<p><strong>BFS (Time and Space Complexity)</strong></p>
+<ul>
+<li>Time - O(b^(d+1))</li>
+<li>Space - O(b^(d+1))</li>
+</ul>
+<p><strong>DFS (Space Complexity)</strong></p>
+<ul>
+<li>Time - O(b^m)</li>
+<li>Space - O(m*b)</li>
+</ul>
+<p><strong>UCS (Time and Space Complexity)</strong></p>
+<ul>
+<li>O(b^(C*/epsilon))</li>
+</ul>
+<p>C*: cost of the optimal solution</p>
+<p>epsilon: smallest path cost</p>
 <p><strong>Queue</strong></p>
 <p><a href="https://docs.python.org/3.8/library/collections.html#collections.deque"><em><strong>Use deque in Python3</strong></em></a></p>
 <pre><code>class collections.deque([iterable[, maxlen]])
@@ -353,6 +379,239 @@ If iterable is not specified, the new deque is empty.
             <span class="n">exploredSet</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">node</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
             <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">stateSpaceGraph</span><span class="p">[</span><span class="n">node</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]:</span> <span class="n">frontier</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="o">+</span><span class="n">child</span><span class="p">)</span>
 </code></pre></div><p><strong><a href="https://py3.codeskulptor.org/#user305_y821hvugeL_0.py">My demo of this bfsGsa.py</a></strong></p>
+<p><strong>DFS</strong></p>
+<p>DFS explores the deepest node in the search tree</p>
+<p><strong>Stack</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">collections</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">queue</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">deque</span><span class="p">([</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">queue</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="s1">&#39;D&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">queue</span>
+<span class="n">deque</span><span class="p">([</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">queue</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="s1">&#39;C&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">queue</span>
+<span class="n">deque</span><span class="p">([</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">])</span>
+</code></pre></div><p><strong>TSA - DFS Version</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">collections</span>
+<span class="k">def</span> <span class="nf">dfsTsa</span><span class="p">(</span><span class="n">stateSpaceGraph</span><span class="p">,</span> <span class="n">startState</span><span class="p">,</span> <span class="n">goalState</span><span class="p">):</span> 
+    <span class="n">frontier</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">deque</span><span class="p">([</span><span class="n">startState</span><span class="p">])</span>
+    <span class="k">while</span> <span class="n">frontier</span><span class="p">:</span> 
+        <span class="n">node</span> <span class="o">=</span> <span class="n">frontier</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">goalState</span><span class="p">)):</span> <span class="k">return</span> <span class="n">node</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Exploring:&#39;</span><span class="p">,</span><span class="n">node</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="s1">&#39;...&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">stateSpaceGraph</span><span class="p">[</span><span class="n">node</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]:</span> <span class="n">frontier</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="o">+</span><span class="n">child</span><span class="p">)</span>
+</code></pre></div><p><em>No results due to revisiting already explored nodes</em></p>
+<p><strong><a href="https://py3.codeskulptor.org/#user305_EDFKe58dW9_5.py">My demo of this dfsTsa.py</a></strong></p>
+<p><strong>GSA - DFS Version</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">collections</span>
+<span class="k">def</span> <span class="nf">dfsGsa</span><span class="p">(</span><span class="n">stateSpaceGraph</span><span class="p">,</span> <span class="n">startState</span><span class="p">,</span> <span class="n">goalState</span><span class="p">):</span> 
+    <span class="n">frontier</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">deque</span><span class="p">([</span><span class="n">startState</span><span class="p">])</span>
+    <span class="n">exploredSet</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">while</span> <span class="n">frontier</span><span class="p">:</span> 
+        <span class="n">node</span> <span class="o">=</span> <span class="n">frontier</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">goalState</span><span class="p">)):</span> <span class="k">return</span> <span class="n">node</span>
+        <span class="k">if</span> <span class="n">node</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">exploredSet</span><span class="p">:</span>
+            <span class="n">exploredSet</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">node</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+            <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">stateSpaceGraph</span><span class="p">[</span><span class="n">node</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]:</span> <span class="n">frontier</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="o">+</span><span class="n">child</span><span class="p">)</span>
+</code></pre></div><p><strong><a href="https://py3.codeskulptor.org/#user305_9vJQ4fFg1V_26.py">My demo of this dfsGsa.py</a></strong></p>
+<p><strong>Choices of Search Algorithms</strong></p>
+<ul>
+<li>BFS vs DFS
+<ul>
+<li>Don&rsquo;t use BFS when b (maximum branching factor) / d (distance to root of the shadowest solution) is big</li>
+<li>Don&rsquo;t use DFS when m (maximum length of any path) is big</li>
+<li>Choose BFS is solution is close to the root of tree</li>
+<li>Choose DFS is solution is deep inside the search tree</li>
+</ul>
+</li>
+<li>TSA vs GSA
+<ul>
+<li>TSA (only frontier)
+<ul>
+<li>Could stuck in infinite loops</li>
+<li>Explore redundant loops</li>
+<li>Require less memory</li>
+<li>Easier to implement</li>
+</ul>
+</li>
+<li>GSA (froniter + explored set)
+<ul>
+<li>Avoid infinite loops</li>
+<li>Eliminate many redundant paths</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><em>Both have time complexity issue</em></p>
+<p><strong>UCS (Cheapest First Search)</strong></p>
+<p>Explores the cheapest node first</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">romania</span> <span class="o">=</span> <span class="p">{</span>
+<span class="s1">&#39;A&#39;</span><span class="p">:[(</span><span class="mi">140</span><span class="p">,</span><span class="s1">&#39;S&#39;</span><span class="p">),(</span><span class="mi">118</span><span class="p">,</span><span class="s1">&#39;T&#39;</span><span class="p">),(</span><span class="mi">75</span><span class="p">,</span><span class="s1">&#39;Z&#39;</span><span class="p">)],</span><span class="s1">&#39;Z&#39;</span><span class="p">:[(</span><span class="mi">75</span><span class="p">,</span><span class="s1">&#39;A&#39;</span><span class="p">),(</span><span class="mi">71</span><span class="p">,</span><span class="s1">&#39;O&#39;</span><span class="p">)],</span><span class="s1">&#39;O&#39;</span><span class="p">:[(</span><span class="mi">151</span><span class="p">,</span><span class="s1">&#39;S&#39;</span><span class="p">),(</span><span class="mi">71</span><span class="p">,</span><span class="s1">&#39;Z&#39;</span><span class="p">)],</span>
+<span class="s1">&#39;T&#39;</span><span class="p">:[(</span><span class="mi">118</span><span class="p">,</span><span class="s1">&#39;A&#39;</span><span class="p">),(</span><span class="mi">111</span><span class="p">,</span><span class="s1">&#39;L&#39;</span><span class="p">)],</span><span class="s1">&#39;L&#39;</span><span class="p">:[(</span><span class="mi">70</span><span class="p">,</span><span class="s1">&#39;M&#39;</span><span class="p">),(</span><span class="mi">111</span><span class="p">,</span><span class="s1">&#39;T&#39;</span><span class="p">)],</span><span class="s1">&#39;M&#39;</span><span class="p">:[(</span><span class="mi">75</span><span class="p">,</span><span class="s1">&#39;D&#39;</span><span class="p">),(</span><span class="mi">70</span><span class="p">,</span><span class="s1">&#39;L&#39;</span><span class="p">)],</span> <span class="s1">&#39;D&#39;</span><span class="p">:[(</span><span class="mi">120</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">),(</span><span class="mi">75</span><span class="p">,</span><span class="s1">&#39;M&#39;</span><span class="p">)],</span><span class="s1">&#39;S&#39;</span><span class="p">:[(</span><span class="mi">140</span><span class="p">,</span><span class="s1">&#39;A&#39;</span><span class="p">),(</span><span class="mi">99</span><span class="p">,</span><span class="s1">&#39;F&#39;</span><span class="p">),(</span><span class="mi">151</span><span class="p">,</span><span class="s1">&#39;O&#39;</span><span class="p">),(</span><span class="mi">80</span><span class="p">,</span><span class="s1">&#39;R&#39;</span><span class="p">)],</span> <span class="s1">&#39;R&#39;</span><span class="p">:[(</span><span class="mi">146</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">),(</span><span class="mi">97</span><span class="p">,</span><span class="s1">&#39;P&#39;</span><span class="p">),(</span><span class="mi">80</span><span class="p">,</span><span class="s1">&#39;S&#39;</span><span class="p">)],</span><span class="s1">&#39;C&#39;</span><span class="p">:[(</span><span class="mi">120</span><span class="p">,</span><span class="s1">&#39;D&#39;</span><span class="p">),(</span><span class="mi">138</span><span class="p">,</span><span class="s1">&#39;P&#39;</span><span class="p">),(</span><span class="mi">146</span><span class="p">,</span><span class="s1">&#39;R&#39;</span><span class="p">)],</span> <span class="s1">&#39;F&#39;</span><span class="p">:[(</span><span class="mi">211</span><span class="p">,</span><span class="s1">&#39;B&#39;</span><span class="p">),(</span><span class="mi">99</span><span class="p">,</span><span class="s1">&#39;S&#39;</span><span class="p">)],</span><span class="s1">&#39;P&#39;</span><span class="p">:[(</span><span class="mi">101</span><span class="p">,</span><span class="s1">&#39;B&#39;</span><span class="p">),(</span><span class="mi">138</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">),(</span><span class="mi">97</span><span class="p">,</span><span class="s1">&#39;R&#39;</span><span class="p">)],</span><span class="s1">&#39;B&#39;</span><span class="p">:[]}</span>
+</code></pre></div><p><strong>Priority Queue in Python (<a href="https://docs.python.org/3.8/library/heapq.html#module-heapq">Use heapq in Python3</a>)</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">frontier</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">heapq</span> <span class="kn">import</span> <span class="n">heappush</span><span class="p">,</span> <span class="n">heappop</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">heappush</span><span class="p">(</span><span class="n">frontier</span><span class="p">,</span> <span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="s1">&#39;A&#39;</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">heappush</span><span class="p">(</span><span class="n">frontier</span><span class="p">,</span> <span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="s1">&#39;B&#39;</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">heappush</span><span class="p">(</span><span class="n">frontier</span><span class="p">,</span> <span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="s1">&#39;C&#39;</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">frontier</span>
+<span class="p">[(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">)]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">heappop</span><span class="p">(</span><span class="n">frontier</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">heappop</span><span class="p">(</span><span class="n">frontier</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">heappop</span><span class="p">(</span><span class="n">frontier</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">)</span> <span class="o">&lt;</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">)</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">)</span> <span class="o">&lt;</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">)</span>
+<span class="bp">False</span>
+</code></pre></div><p><strong>TSA - UCS Version</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">heapq</span> <span class="kn">import</span> <span class="n">heappush</span><span class="p">,</span> <span class="n">heappop</span>
+<span class="k">def</span> <span class="nf">ucsTsa</span><span class="p">(</span><span class="n">stateSpaceGraph</span><span class="p">,</span> <span class="n">startState</span><span class="p">,</span> <span class="n">goalState</span><span class="p">):</span> 
+    <span class="n">frontier</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">heappush</span><span class="p">(</span><span class="n">frontier</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">startState</span><span class="p">))</span>
+    <span class="k">while</span> <span class="n">frontier</span><span class="p">:</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="n">heappop</span><span class="p">(</span><span class="n">frontier</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">node</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">goalState</span><span class="p">)):</span> <span class="k">return</span> <span class="n">node</span>
+        <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">stateSpaceGraph</span><span class="p">[</span><span class="n">node</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]]:</span>
+            <span class="n">heappush</span><span class="p">(</span><span class="n">frontier</span><span class="p">,</span> <span class="p">(</span><span class="n">node</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">child</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">node</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">child</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+</code></pre></div><p><strong>GSA - UCS Version</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">heapq</span> <span class="kn">import</span> <span class="n">heappush</span><span class="p">,</span> <span class="n">heappop</span>
+<span class="k">def</span> <span class="nf">ucsGsa</span><span class="p">(</span><span class="n">stateSpaceGraph</span><span class="p">,</span> <span class="n">startState</span><span class="p">,</span> <span class="n">goalState</span><span class="p">):</span> 
+    <span class="n">frontier</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">heappush</span><span class="p">(</span><span class="n">frontier</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">startState</span><span class="p">))</span>
+    <span class="n">exploredSet</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">while</span> <span class="n">frontier</span><span class="p">:</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="n">heappop</span><span class="p">(</span><span class="n">frontier</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">node</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">goalState</span><span class="p">)):</span> <span class="k">return</span> <span class="n">node</span>
+        <span class="k">if</span> <span class="n">node</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">exploredSet</span><span class="p">:</span>
+            <span class="n">exploredSet</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">node</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+            <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">stateSpaceGraph</span><span class="p">[</span><span class="n">node</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]]:</span>
+                <span class="n">heappush</span><span class="p">(</span><span class="n">frontier</span><span class="p">,</span> <span class="p">(</span><span class="n">node</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">child</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">node</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">child</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+</code></pre></div><p><strong>Informed Search</strong></p>
+<p>Employ problem specific knowledge beyond the definition of the problem itself</p>
+<ul>
+<li>Heuristic function</li>
+</ul>
+<p>Example</p>
+<ul>
+<li>Greedy best-first search</li>
+<li>A* search</li>
+</ul>
+<p><strong>Heuristic Function (designed for a particular search problem)</strong></p>
+<p>A function that estimate how close you are to the goal</p>
+<p>h(n)</p>
+<ul>
+<li>Cost of the cheapest path from the state at node n to a goal state</li>
+<li>If n is a goal node, h(n) = 0</li>
+</ul>
+<p><strong>Greedy Search (Best-first Search)</strong></p>
+<p>Expand the node that has the lowest h(n)</p>
+<p><strong>Updated Romania Problem Definition (Add h(n))</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">romaniaH</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;A&#39;</span><span class="p">:</span><span class="mi">366</span><span class="p">,</span><span class="s1">&#39;B&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">:</span><span class="mi">160</span><span class="p">,</span><span class="s1">&#39;D&#39;</span><span class="p">:</span><span class="mi">242</span><span class="p">,</span><span class="s1">&#39;E&#39;</span><span class="p">:</span><span class="mi">161</span><span class="p">,</span><span class="s1">&#39;F&#39;</span><span class="p">:</span><span class="mi">176</span><span class="p">,</span><span class="s1">&#39;G&#39;</span><span class="p">:</span><span class="mi">77</span><span class="p">,</span><span class="s1">&#39;H&#39;</span><span class="p">:</span><span class="mi">151</span><span class="p">,</span><span class="s1">&#39;I&#39;</span><span class="p">:</span><span class="mi">226</span><span class="p">,</span>
+    <span class="s1">&#39;L&#39;</span><span class="p">:</span><span class="mi">244</span><span class="p">,</span><span class="s1">&#39;M&#39;</span><span class="p">:</span><span class="mi">241</span><span class="p">,</span><span class="s1">&#39;N&#39;</span><span class="p">:</span><span class="mi">234</span><span class="p">,</span><span class="s1">&#39;O&#39;</span><span class="p">:</span><span class="mi">380</span><span class="p">,</span><span class="s1">&#39;P&#39;</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span><span class="s1">&#39;R&#39;</span><span class="p">:</span><span class="mi">193</span><span class="p">,</span><span class="s1">&#39;S&#39;</span><span class="p">:</span><span class="mi">253</span><span class="p">,</span><span class="s1">&#39;T&#39;</span><span class="p">:</span><span class="mi">329</span><span class="p">,</span><span class="s1">&#39;U&#39;</span><span class="p">:</span><span class="mi">80</span><span class="p">,</span>
+    <span class="s1">&#39;V&#39;</span><span class="p">:</span><span class="mi">199</span><span class="p">,</span><span class="s1">&#39;Z&#39;</span><span class="p">:</span><span class="mi">374</span><span class="p">}</span>
+</code></pre></div><p><strong>Greedy TSA Practice</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">heapq</span> <span class="kn">import</span> <span class="n">heappush</span><span class="p">,</span> <span class="n">heappop</span>
+<span class="k">def</span> <span class="nf">greedyTsa</span><span class="p">(</span><span class="n">stateSpaceGraph</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">startState</span><span class="p">,</span> <span class="n">goalState</span><span class="p">):</span> 
+    <span class="n">frontier</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">heappush</span><span class="p">(</span><span class="n">frontier</span><span class="p">,</span> <span class="p">(</span><span class="n">h</span><span class="p">[</span><span class="n">startState</span><span class="p">],</span> <span class="n">startState</span><span class="p">))</span>
+    <span class="k">while</span> <span class="n">frontier</span><span class="p">:</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="n">heappop</span><span class="p">(</span><span class="n">frontier</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">node</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">goalState</span><span class="p">)):</span> <span class="k">return</span> <span class="n">node</span>
+        <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">stateSpaceGraph</span><span class="p">[</span><span class="n">node</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]]:</span>
+            <span class="n">heappush</span><span class="p">(</span><span class="n">frontier</span><span class="p">,</span> <span class="p">(</span><span class="n">h</span><span class="p">[</span><span class="n">child</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="n">node</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">child</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+</code></pre></div><p><strong>A* Motivation UCS-TSA</strong></p>
+<p>orders by backward cost</p>
+<p>g(n)</p>
+<p><strong>A* Motivation Greedy-TSA</strong></p>
+<p>orders by forward cost</p>
+<p>h(n)</p>
+<p><em>* always means optimal in AI</em></p>
+<p><strong>A* Motivation A*-TSA</strong></p>
+<p>orders by backward cost + forward cost</p>
+<p>f(n) = g(n) + h(n)</p>
+<p><strong>A*-TSA Practice</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">heapq</span> <span class="kn">import</span> <span class="n">heappush</span><span class="p">,</span> <span class="n">heappop</span>  
+<span class="k">def</span> <span class="nf">aStarTsa</span><span class="p">(</span><span class="n">stateSpaceGraph</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">startState</span><span class="p">,</span> <span class="n">goalState</span><span class="p">):</span> 
+    <span class="n">frontier</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">heappush</span><span class="p">(</span><span class="n">frontier</span><span class="p">,</span> <span class="p">(</span><span class="n">h</span><span class="p">[</span><span class="n">startState</span><span class="p">],</span> <span class="n">startState</span><span class="p">))</span>
+    <span class="k">while</span> <span class="n">frontier</span><span class="p">:</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="n">heappop</span><span class="p">(</span><span class="n">frontier</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">node</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">goalState</span><span class="p">)):</span> <span class="k">return</span> <span class="n">node</span>
+        <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">stateSpaceGraph</span><span class="p">[</span><span class="n">node</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]]:</span>
+            <span class="n">heappush</span><span class="p">(</span><span class="n">frontier</span><span class="p">,</span> <span class="p">(</span><span class="n">node</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">child</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">h</span><span class="p">[</span><span class="n">node</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span><span class="o">+</span><span class="n">h</span><span class="p">[</span><span class="n">child</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="n">node</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">child</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="n">aStarMotivation</span> <span class="o">=</span> <span class="p">{</span>
+<span class="s1">&#39;S&#39;</span><span class="p">:[(</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">)],</span><span class="s1">&#39;a&#39;</span><span class="p">:[(</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">),(</span><span class="mi">3</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">),(</span><span class="mi">8</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">)],</span><span class="s1">&#39;b&#39;</span><span class="p">:[(</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">)],</span><span class="s1">&#39;c&#39;</span><span class="p">:[],</span><span class="s1">&#39;d&#39;</span><span class="p">:[(</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;G&#39;</span><span class="p">)],</span><span class="s1">&#39;e&#39;</span><span class="p">:[(</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">)]}</span>
+<span class="n">aStarMotivationH</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;S&#39;</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">:</span><span class="mi">7</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;G&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">}</span>
+</code></pre></div><p><strong>Admissibility of Heuristic</strong></p>
+<p>A heuristic h(n) is admissible (optimistic)</p>
+<p><em>1 &lt;= h(n) &lt;= h</em>(n)*</p>
+<p>where h*(n) is the true cost of the nearest goal</p>
+<p><strong>Optimality of A*</strong></p>
+<p>A* is optimal if an admissible heuristic is used</p>
+<p><strong>Consistency of Heuristic</strong></p>
+<ul>
+<li>Definition
+<ul>
+<li>Heuristic cost &lt;= actually cost for each arc
+<ul>
+<li>h(a) - h(c) &lt;= cost (a to c)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Consequence of consistency
+<ul>
+<li>The f value along a path never decrease
+<ul>
+<li>h(a) &lt;= cost(a to c) + h(c)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Planning vs Identification</strong></p>
+<ul>
+<li>Planing: sequence of actions
+<ul>
+<li>The path to the goal is the important thing</li>
+<li>Paths have various costs, depths</li>
+<li>Heuristics to guide, frontier to keep backups</li>
+</ul>
+</li>
+<li>Identification: assignments to variables
+<ul>
+<li>The goal itself is important, not the path</li>
+</ul>
+</li>
+</ul>
+<p><em>Local Search can find solutions faster for specific types of identification problems</em></p>
+<p><strong>Local Search</strong></p>
+<ul>
+<li>Evaluate and modify one current state rather than systematically explore paths from an initial state</li>
+<li>Suitable for problems were all that matters in the solution state and not the path cost to reach it</li>
+<li>Although local search algorithms are not systematic they have two advantages
+<ul>
+<li>Require very little memory</li>
+<li>Often find reasonable solutions in large spaces</li>
+</ul>
+</li>
+</ul>
+<p><strong>Example: 8-Queens</strong></p>
+<ul>
+<li>States
+<ul>
+<li>Each state has 8 queens on board, one per column</li>
+</ul>
+</li>
+<li>Successors</li>
+</ul>
 
   </article>
 

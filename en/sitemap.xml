@@ -9,6 +9,97 @@
   </url>
   
   <url>
+    <loc>https://www.hexarthur.com/en/categories/</loc>
+    <lastmod>2020-09-16T19:28:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/e-commerce/</loc>
+    <lastmod>2020-09-16T19:28:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/ecic/</loc>
+    <lastmod>2020-09-16T19:28:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/ecom/</loc>
+    <lastmod>2020-09-16T19:28:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/ecom6013/</loc>
+    <lastmod>2020-09-16T19:28:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/2020/09/16/ecom6013-topic-2-internet-and-e-commerce-infrasture/</loc>
+    <lastmod>2020-09-16T19:28:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/hku/</loc>
+    <lastmod>2020-09-16T19:28:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/category/notes/</loc>
+    <lastmod>2020-09-16T19:28:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/notes/</loc>
+    <lastmod>2020-09-16T19:28:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/posts/</loc>
+    <lastmod>2020-09-16T19:28:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/</loc>
+    <lastmod>2020-09-16T19:28:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tags/</loc>
+    <lastmod>2020-09-16T19:28:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/technology/</loc>
+    <lastmod>2020-09-16T19:28:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.hexarthur.com/en/tag/ai/</loc>
     <lastmod>2020-09-16T00:28:11+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -17,13 +108,6 @@
   
   <url>
     <loc>https://www.hexarthur.com/en/tag/algorithm/</loc>
-    <lastmod>2020-09-16T00:28:11+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/en/categories/</loc>
     <lastmod>2020-09-16T00:28:11+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -51,42 +135,7 @@
   </url>
   
   <url>
-    <loc>https://www.hexarthur.com/en/tag/ecic/</loc>
-    <lastmod>2020-09-16T00:28:11+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/en/tag/hku/</loc>
-    <lastmod>2020-09-16T00:28:11+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://www.hexarthur.com/en/tag/ml/</loc>
-    <lastmod>2020-09-16T00:28:11+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/en/category/notes/</loc>
-    <lastmod>2020-09-16T00:28:11+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/en/tag/notes/</loc>
-    <lastmod>2020-09-16T00:28:11+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/en/posts/</loc>
     <lastmod>2020-09-16T00:28:11+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -100,21 +149,7 @@
   </url>
   
   <url>
-    <loc>https://www.hexarthur.com/en/</loc>
-    <lastmod>2020-09-16T00:28:11+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://www.hexarthur.com/en/tag/python/</loc>
-    <lastmod>2020-09-16T00:28:11+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/en/tags/</loc>
     <lastmod>2020-09-16T00:28:11+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -242,41 +277,6 @@
   <url>
     <loc>https://www.hexarthur.com/en/tag/internet/</loc>
     <lastmod>2020-09-09T20:22:09+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/en/tag/technology/</loc>
-    <lastmod>2020-09-09T20:22:09+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/en/tag/e-commerce/</loc>
-    <lastmod>2020-09-09T04:28:28+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/en/tag/ecom/</loc>
-    <lastmod>2020-09-09T04:28:28+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/en/tag/ecom6013/</loc>
-    <lastmod>2020-09-09T04:28:28+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/en/2020/09/09/ecom6013-topic-2-internet-and-e-commerce-infrasture/</loc>
-    <lastmod>2020-09-09T04:28:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

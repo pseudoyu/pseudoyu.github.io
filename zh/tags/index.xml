@@ -6,17 +6,98 @@
     <description>Recent content in Tags on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 12 Sep 2020 00:05:17 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 16 Sep 2020 00:28:11 +0800</lastBuildDate>
     
 	<atom:link href="https://www.hexarthur.com/zh/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>ai</title>
+      <link>https://www.hexarthur.com/zh/tag/ai/</link>
+      <pubDate>Wed, 16 Sep 2020 00:28:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>algorithm</title>
+      <link>https://www.hexarthur.com/zh/tag/algorithm/</link>
+      <pubDate>Wed, 16 Sep 2020 00:28:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/algorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>comp</title>
       <link>https://www.hexarthur.com/zh/tag/comp/</link>
-      <pubDate>Sat, 12 Sep 2020 00:05:17 +0800</pubDate>
+      <pubDate>Wed, 16 Sep 2020 00:28:11 +0800</pubDate>
       
       <guid>https://www.hexarthur.com/zh/tag/comp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>comp7404</title>
+      <link>https://www.hexarthur.com/zh/tag/comp7404/</link>
+      <pubDate>Wed, 16 Sep 2020 00:28:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/comp7404/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ecic</title>
+      <link>https://www.hexarthur.com/zh/tag/ecic/</link>
+      <pubDate>Wed, 16 Sep 2020 00:28:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/ecic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hku</title>
+      <link>https://www.hexarthur.com/zh/tag/hku/</link>
+      <pubDate>Wed, 16 Sep 2020 00:28:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/hku/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ml</title>
+      <link>https://www.hexarthur.com/zh/tag/ml/</link>
+      <pubDate>Wed, 16 Sep 2020 00:28:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/ml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>notes</title>
+      <link>https://www.hexarthur.com/zh/tag/notes/</link>
+      <pubDate>Wed, 16 Sep 2020 00:28:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programming</title>
+      <link>https://www.hexarthur.com/zh/tag/programming/</link>
+      <pubDate>Wed, 16 Sep 2020 00:28:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://www.hexarthur.com/zh/tag/python/</link>
+      <pubDate>Wed, 16 Sep 2020 00:28:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/python/</guid>
       <description></description>
     </item>
     
@@ -44,87 +125,6 @@
       <pubDate>Sat, 12 Sep 2020 00:05:17 +0800</pubDate>
       
       <guid>https://www.hexarthur.com/zh/tag/data-mining/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ecic</title>
-      <link>https://www.hexarthur.com/zh/tag/ecic/</link>
-      <pubDate>Sat, 12 Sep 2020 00:05:17 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/ecic/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hku</title>
-      <link>https://www.hexarthur.com/zh/tag/hku/</link>
-      <pubDate>Sat, 12 Sep 2020 00:05:17 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/hku/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>notes</title>
-      <link>https://www.hexarthur.com/zh/tag/notes/</link>
-      <pubDate>Sat, 12 Sep 2020 00:05:17 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/notes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>programming</title>
-      <link>https://www.hexarthur.com/zh/tag/programming/</link>
-      <pubDate>Sat, 12 Sep 2020 00:05:17 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ai</title>
-      <link>https://www.hexarthur.com/zh/tag/ai/</link>
-      <pubDate>Fri, 11 Sep 2020 00:28:11 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/ai/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>algorithm</title>
-      <link>https://www.hexarthur.com/zh/tag/algorithm/</link>
-      <pubDate>Fri, 11 Sep 2020 00:28:11 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/algorithm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>comp7404</title>
-      <link>https://www.hexarthur.com/zh/tag/comp7404/</link>
-      <pubDate>Fri, 11 Sep 2020 00:28:11 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/comp7404/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ml</title>
-      <link>https://www.hexarthur.com/zh/tag/ml/</link>
-      <pubDate>Fri, 11 Sep 2020 00:28:11 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/ml/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://www.hexarthur.com/zh/tag/python/</link>
-      <pubDate>Fri, 11 Sep 2020 00:28:11 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/python/</guid>
       <description></description>
     </item>
     

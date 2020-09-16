@@ -6,10 +6,20 @@
     <description>Recent content in programming on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 12 Sep 2020 00:05:17 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 16 Sep 2020 00:28:11 +0800</lastBuildDate>
     
 	<atom:link href="https://www.hexarthur.com/en/tag/programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>COMP7404 Topic 1 Search</title>
+      <link>https://www.hexarthur.com/en/2020/09/16/comp7404-topic-1-search/</link>
+      <pubDate>Wed, 16 Sep 2020 00:28:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/2020/09/16/comp7404-topic-1-search/</guid>
+      <description>COMP7404 Computational Intelligence and Machine Learning Topic 1 Search Types of Search
+ Uninformed Search (Know nothing about the problem except definition) Informed Search (know something more like how close to the goal) Local Search (Randomly initilize a state and make it better, e.g. Deep Learning) Constraint Satisfaction Problems (Know more about the problem) Adversarial Search (have an opponent, e.g. chess, star craft game)  Is Search the same as Unsupervised/Supervised Learning?</description>
+    </item>
     
     <item>
       <title>COMP7103 Topic 1 Introduction</title>
@@ -20,16 +30,6 @@
       <description>COMP7103 Data Mining Topic 1 Introduction Data Mining and KDD
  KDD (Knowledge Discovery in Databases)  A process of discovering useful knowledge from big collection of data   Data Mining  A step within the KDD process in which interesting patterns are found. Some of these patterns are then interpreted and transformed into useful knowledge.    Data and Knowledge
  Data  A collecion of facts about certain group of objects   Pattern  Certain characteristics of data that are frequently observed   Knowledge  Some general rules about the objects    KDD is a process of identifying patterns in data and deriving knowledge from them</description>
-    </item>
-    
-    <item>
-      <title>COMP7404 Topic 1 Search</title>
-      <link>https://www.hexarthur.com/en/2020/09/11/comp7404-topic-1-search/</link>
-      <pubDate>Fri, 11 Sep 2020 00:28:11 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/2020/09/11/comp7404-topic-1-search/</guid>
-      <description>COMP7404 Computational Intelligence and Machine Learning Topic 1 Search Types of Search
- Uninformed Search (Know nothing about the problem except definition) Informed Search (know something more like how close to the goal) Local Search (Randomly initilize a state and make it better, e.g. Deep Learning) Constraint Satisfaction Problems (Know more about the problem) Adversarial Search (have an opponent, e.g. chess, star craft game)  Is Search the same as Unsupervised/Supervised Learning?</description>
     </item>
     
   </channel>

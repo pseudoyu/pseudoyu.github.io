@@ -6,17 +6,98 @@
     <description>Recent content in Tags on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 12 Sep 2020 00:05:17 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 16 Sep 2020 00:28:11 +0800</lastBuildDate>
     
 	<atom:link href="https://www.hexarthur.com/en/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>ai</title>
+      <link>https://www.hexarthur.com/en/tag/ai/</link>
+      <pubDate>Wed, 16 Sep 2020 00:28:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/tag/ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>algorithm</title>
+      <link>https://www.hexarthur.com/en/tag/algorithm/</link>
+      <pubDate>Wed, 16 Sep 2020 00:28:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/tag/algorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>comp</title>
       <link>https://www.hexarthur.com/en/tag/comp/</link>
-      <pubDate>Sat, 12 Sep 2020 00:05:17 +0800</pubDate>
+      <pubDate>Wed, 16 Sep 2020 00:28:11 +0800</pubDate>
       
       <guid>https://www.hexarthur.com/en/tag/comp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>comp7404</title>
+      <link>https://www.hexarthur.com/en/tag/comp7404/</link>
+      <pubDate>Wed, 16 Sep 2020 00:28:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/tag/comp7404/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ecic</title>
+      <link>https://www.hexarthur.com/en/tag/ecic/</link>
+      <pubDate>Wed, 16 Sep 2020 00:28:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/tag/ecic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hku</title>
+      <link>https://www.hexarthur.com/en/tag/hku/</link>
+      <pubDate>Wed, 16 Sep 2020 00:28:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/tag/hku/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ml</title>
+      <link>https://www.hexarthur.com/en/tag/ml/</link>
+      <pubDate>Wed, 16 Sep 2020 00:28:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/tag/ml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>notes</title>
+      <link>https://www.hexarthur.com/en/tag/notes/</link>
+      <pubDate>Wed, 16 Sep 2020 00:28:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/tag/notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programming</title>
+      <link>https://www.hexarthur.com/en/tag/programming/</link>
+      <pubDate>Wed, 16 Sep 2020 00:28:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/tag/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://www.hexarthur.com/en/tag/python/</link>
+      <pubDate>Wed, 16 Sep 2020 00:28:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/tag/python/</guid>
       <description></description>
     </item>
     
@@ -44,87 +125,6 @@
       <pubDate>Sat, 12 Sep 2020 00:05:17 +0800</pubDate>
       
       <guid>https://www.hexarthur.com/en/tag/data-mining/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ecic</title>
-      <link>https://www.hexarthur.com/en/tag/ecic/</link>
-      <pubDate>Sat, 12 Sep 2020 00:05:17 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/tag/ecic/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hku</title>
-      <link>https://www.hexarthur.com/en/tag/hku/</link>
-      <pubDate>Sat, 12 Sep 2020 00:05:17 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/tag/hku/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>notes</title>
-      <link>https://www.hexarthur.com/en/tag/notes/</link>
-      <pubDate>Sat, 12 Sep 2020 00:05:17 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/tag/notes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>programming</title>
-      <link>https://www.hexarthur.com/en/tag/programming/</link>
-      <pubDate>Sat, 12 Sep 2020 00:05:17 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/tag/programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ai</title>
-      <link>https://www.hexarthur.com/en/tag/ai/</link>
-      <pubDate>Fri, 11 Sep 2020 00:28:11 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/tag/ai/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>algorithm</title>
-      <link>https://www.hexarthur.com/en/tag/algorithm/</link>
-      <pubDate>Fri, 11 Sep 2020 00:28:11 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/tag/algorithm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>comp7404</title>
-      <link>https://www.hexarthur.com/en/tag/comp7404/</link>
-      <pubDate>Fri, 11 Sep 2020 00:28:11 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/tag/comp7404/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ml</title>
-      <link>https://www.hexarthur.com/en/tag/ml/</link>
-      <pubDate>Fri, 11 Sep 2020 00:28:11 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/tag/ml/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://www.hexarthur.com/en/tag/python/</link>
-      <pubDate>Fri, 11 Sep 2020 00:28:11 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/tag/python/</guid>
       <description></description>
     </item>
     

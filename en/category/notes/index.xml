@@ -6,10 +6,21 @@
     <description>Recent content in Notes on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 17 Sep 2020 10:18:09 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2020 01:18:17 +0800</lastBuildDate>
     
 	<atom:link href="https://www.hexarthur.com/en/category/notes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>COMP7103 Topic 1 Introduction</title>
+      <link>https://www.hexarthur.com/en/2020/09/18/comp7103-topic-1-introduction/</link>
+      <pubDate>Fri, 18 Sep 2020 01:18:17 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/2020/09/18/comp7103-topic-1-introduction/</guid>
+      <description>COMP7103 Data Mining Topic 1 Introduction Decision-Support System (DSS)
+ A decision-support system (DSS) is a system that assists decision makers to make important decisions for an organization or business KDD and data mining are important components in many DSS&amp;rsquo;s  Data and Knowledge
+ Data  A collecion of facts about certain group of objects   Pattern  Certain characteristics of data that are frequently observed   Knowledge  Some general rules about the objects    Data Warehouse</description>
+    </item>
     
     <item>
       <title>ICOM6012 Topic 2 The Big Picture</title>
@@ -63,17 +74,6 @@
       <guid>https://www.hexarthur.com/en/2020/09/16/comp7404-topic-1-search/</guid>
       <description>COMP7404 Computational Intelligence and Machine Learning Topic 1 Search Types of Search
  Uninformed Search (Know nothing about the problem except definition) Informed Search (know something more like how close to the goal) Local Search (Randomly initilize a state and make it better, e.g. Deep Learning) Constraint Satisfaction Problems (Know more about the problem) Adversarial Search (have an opponent, e.g. chess, star craft game)  Is Search the same as Unsupervised/Supervised Learning?</description>
-    </item>
-    
-    <item>
-      <title>COMP7103 Topic 1 Introduction</title>
-      <link>https://www.hexarthur.com/en/2020/09/12/comp7103-topic-1-introduction/</link>
-      <pubDate>Sat, 12 Sep 2020 00:05:17 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/2020/09/12/comp7103-topic-1-introduction/</guid>
-      <description>COMP7103 Data Mining Topic 1 Introduction Data Mining and KDD
- KDD (Knowledge Discovery in Databases)  A process of discovering useful knowledge from big collection of data   Data Mining  A step within the KDD process in which interesting patterns are found. Some of these patterns are then interpreted and transformed into useful knowledge.    Data and Knowledge
- Data  A collecion of facts about certain group of objects   Pattern  Certain characteristics of data that are frequently observed   Knowledge  Some general rules about the objects    KDD is a process of identifying patterns in data and deriving knowledge from them</description>
     </item>
     
     <item>

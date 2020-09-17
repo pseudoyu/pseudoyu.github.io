@@ -6,10 +6,73 @@
     <description>Recent content in Tags on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 18 Sep 2020 01:18:17 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2020 01:25:19 +0800</lastBuildDate>
     
 	<atom:link href="https://www.hexarthur.com/en/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>e-commerce</title>
+      <link>https://www.hexarthur.com/en/tag/e-commerce/</link>
+      <pubDate>Fri, 18 Sep 2020 01:25:19 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/tag/e-commerce/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ecic</title>
+      <link>https://www.hexarthur.com/en/tag/ecic/</link>
+      <pubDate>Fri, 18 Sep 2020 01:25:19 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/tag/ecic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ecom</title>
+      <link>https://www.hexarthur.com/en/tag/ecom/</link>
+      <pubDate>Fri, 18 Sep 2020 01:25:19 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/tag/ecom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ecom6013</title>
+      <link>https://www.hexarthur.com/en/tag/ecom6013/</link>
+      <pubDate>Fri, 18 Sep 2020 01:25:19 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/tag/ecom6013/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hku</title>
+      <link>https://www.hexarthur.com/en/tag/hku/</link>
+      <pubDate>Fri, 18 Sep 2020 01:25:19 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/tag/hku/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>notes</title>
+      <link>https://www.hexarthur.com/en/tag/notes/</link>
+      <pubDate>Fri, 18 Sep 2020 01:25:19 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/tag/notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>technology</title>
+      <link>https://www.hexarthur.com/en/tag/technology/</link>
+      <pubDate>Fri, 18 Sep 2020 01:25:19 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/tag/technology/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>comp</title>
@@ -48,33 +111,6 @@
     </item>
     
     <item>
-      <title>ecic</title>
-      <link>https://www.hexarthur.com/en/tag/ecic/</link>
-      <pubDate>Fri, 18 Sep 2020 01:18:17 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/tag/ecic/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hku</title>
-      <link>https://www.hexarthur.com/en/tag/hku/</link>
-      <pubDate>Fri, 18 Sep 2020 01:18:17 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/tag/hku/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>notes</title>
-      <link>https://www.hexarthur.com/en/tag/notes/</link>
-      <pubDate>Fri, 18 Sep 2020 01:18:17 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/tag/notes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>programming</title>
       <link>https://www.hexarthur.com/en/tag/programming/</link>
       <pubDate>Fri, 18 Sep 2020 01:18:17 +0800</pubDate>
@@ -107,42 +143,6 @@
       <pubDate>Thu, 17 Sep 2020 10:18:09 +0800</pubDate>
       
       <guid>https://www.hexarthur.com/en/tag/internet/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>technology</title>
-      <link>https://www.hexarthur.com/en/tag/technology/</link>
-      <pubDate>Thu, 17 Sep 2020 10:18:09 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/tag/technology/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>e-commerce</title>
-      <link>https://www.hexarthur.com/en/tag/e-commerce/</link>
-      <pubDate>Wed, 16 Sep 2020 21:25:28 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/tag/e-commerce/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ecom</title>
-      <link>https://www.hexarthur.com/en/tag/ecom/</link>
-      <pubDate>Wed, 16 Sep 2020 21:25:28 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/tag/ecom/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ecom6013</title>
-      <link>https://www.hexarthur.com/en/tag/ecom6013/</link>
-      <pubDate>Wed, 16 Sep 2020 21:25:28 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/tag/ecom6013/</guid>
       <description></description>
     </item>
     

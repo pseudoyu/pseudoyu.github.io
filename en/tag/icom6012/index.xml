@@ -6,10 +6,20 @@
     <description>Recent content in icom6012 on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 09 Sep 2020 20:22:09 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2020 10:18:09 +0800</lastBuildDate>
     
 	<atom:link href="https://www.hexarthur.com/en/tag/icom6012/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ICOM6012 Topic 2 The Big Picture</title>
+      <link>https://www.hexarthur.com/en/2020/09/17/icom6012-topic-2-the-big-picture/</link>
+      <pubDate>Thu, 17 Sep 2020 10:18:09 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/2020/09/17/icom6012-topic-2-the-big-picture/</guid>
+      <description>ICOM6012 Internet Infrastructure Technologies Topic 2 The Big Picture The Internet: &amp;ldquo;nuts and bolts&amp;rdquo; view
+ Billions of connected computing devices  Host = end system Running network apps Internet of things (IoT)   Packet switches  routers switchers   Communication links  Fiber, copper, radio, satellite Transmission rate: bandwidth   Networks  Collection of devices, routers, switches, links Managed by an organization   Internet: &amp;ldquo;network of networks&amp;rdquo;  Interconnected ISPs   Protocols  Control sending, receiving of messages   Internet standards  RFC: Requests for Comments IETF: Internet Engineering Task Force IEEE: Institute of Electronical &amp;amp; Electronic Engineering    The Internet: a &amp;ldquo;service&amp;rdquo; view</description>
+    </item>
     
     <item>
       <title>ICOM6012 Topic 1 Overview</title>

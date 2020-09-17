@@ -23,13 +23,6 @@
   </url>
   
   <url>
-    <loc>https://www.hexarthur.com/en/2020/09/18/e-commerce-presence-look-around/</loc>
-    <lastmod>2020-09-18T01:25:19+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://www.hexarthur.com/en/tag/ecic/</loc>
     <lastmod>2020-09-18T01:25:19+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -52,6 +45,13 @@
   
   <url>
     <loc>https://www.hexarthur.com/en/tag/hku/</loc>
+    <lastmod>2020-09-18T01:25:19+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/2020/09/18/new-ipad-air-4-2020-presence-by-apple-inc./</loc>
     <lastmod>2020-09-18T01:25:19+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

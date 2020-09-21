@@ -6,10 +6,20 @@
     <description>Recent content in technology on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 21 Sep 2020 10:44:28 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 21 Sep 2020 16:12:09 +0800</lastBuildDate>
     
 	<atom:link href="https://www.hexarthur.com/en/tag/technology/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ICOM6012 Topic 2 The Big Picture</title>
+      <link>https://www.hexarthur.com/en/2020/09/21/icom6012-topic-2-the-big-picture/</link>
+      <pubDate>Mon, 21 Sep 2020 16:12:09 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/2020/09/21/icom6012-topic-2-the-big-picture/</guid>
+      <description>ICOM6012 Internet Infrastructure Technologies Topic 2 The Big Picture The Internet: &amp;ldquo;nuts and bolts&amp;rdquo; view
+ Billions of connected computing devices  Host = end system Running network apps Internet of things (IoT)   Packet switches  routers switchers   Communication links  Fiber, copper, radio, satellite Transmission rate: bandwidth   Networks  Collection of devices, routers, switches, links Managed by an organization   Internet: &amp;ldquo;network of networks&amp;rdquo;  Interconnected ISPs   Protocols  Control sending, receiving of messages   Internet standards  RFC: Requests for Comments IETF: Internet Engineering Task Force IEEE: Institute of Electronical &amp;amp; Electronic Engineering    The Internet: a &amp;ldquo;service&amp;rdquo; view</description>
+    </item>
     
     <item>
       <title>ECOM6013 Topic 5 Mobile Commerce</title>
@@ -34,16 +44,6 @@ Cell Handover
       <description>E-Commerce Presence Look Around New iPad Air 4 (2020) Presence by Apple Inc. Website Link
 The iPad Air 4 (2020) got shown off at Apple&amp;rsquo;s September event held on September 16. There is a specific designed website (mobile version included) for this product. I&amp;rsquo;d like to do an analysis towards this very impressive E-Commerce presence.
 Apple iPad Air product line is mainly targeted to educators/students, staffs and kids/teenagers. So, the most premium features this new product wants to convey to customers is its fancy appearance and powerful A14 Bionic for creation, study and entertainment.</description>
-    </item>
-    
-    <item>
-      <title>ICOM6012 Topic 2 The Big Picture</title>
-      <link>https://www.hexarthur.com/en/2020/09/17/icom6012-topic-2-the-big-picture/</link>
-      <pubDate>Thu, 17 Sep 2020 10:18:09 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/2020/09/17/icom6012-topic-2-the-big-picture/</guid>
-      <description>ICOM6012 Internet Infrastructure Technologies Topic 2 The Big Picture The Internet: &amp;ldquo;nuts and bolts&amp;rdquo; view
- Billions of connected computing devices  Host = end system Running network apps Internet of things (IoT)   Packet switches  routers switchers   Communication links  Fiber, copper, radio, satellite Transmission rate: bandwidth   Networks  Collection of devices, routers, switches, links Managed by an organization   Internet: &amp;ldquo;network of networks&amp;rdquo;  Interconnected ISPs   Protocols  Control sending, receiving of messages   Internet standards  RFC: Requests for Comments IETF: Internet Engineering Task Force IEEE: Institute of Electronical &amp;amp; Electronic Engineering    The Internet: a &amp;ldquo;service&amp;rdquo; view</description>
     </item>
     
     <item>

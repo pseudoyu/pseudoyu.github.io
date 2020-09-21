@@ -6,10 +6,24 @@
     <description>Recent content in ecom on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 18 Sep 2020 01:25:19 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 21 Sep 2020 10:44:28 +0800</lastBuildDate>
     
 	<atom:link href="https://www.hexarthur.com/en/tag/ecom/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ECOM6013 Topic 5 Mobile Commerce</title>
+      <link>https://www.hexarthur.com/en/2020/09/21/ecom6013-topic-5-mobile-commerce/</link>
+      <pubDate>Mon, 21 Sep 2020 10:44:28 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/2020/09/21/ecom6013-topic-5-mobile-commerce/</guid>
+      <description>ECOM6013 E-Commerce Technologies Topic 5 Mobile Commerce Basic Principle of Mobile Technology
+ FDMA (Frequency Division Multiple Access) TDMA (Time Division Multiple Access) CDMA (Code Division Multiple Access)  Fundamental Mobility: Cellphones
+Cell Handover
+4G vs. 5G
+ 4G  10 ms 100 Thousand Connections / km^2 1 Gbps   5G  &amp;lt; 1ms 1 Million Connections / km^2 20 Gbps    E-Commerce vs. M-Commerce
+ E-Commerce  Device: PC Network: Internet (HTTP)   M-Commerce  Device: Mobile devices Network  Mobile carrier network WiFi Local frequency (RFID/NFC)      Definition of M-Commerce</description>
+    </item>
     
     <item>
       <title>New iPad Air 4 (2020) Presence by Apple Inc.</title>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blockchain on Pseudoyu</title>
+    <link>https://www.hexarthur.com/zh/tag/blockchain/</link>
+    <description>Recent content in blockchain on Pseudoyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 23 Sep 2020 03:12:17 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.hexarthur.com/zh/tag/blockchain/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Introduction to Crypto and Cryptocurrencies</title>
+      <link>https://www.hexarthur.com/zh/2020/09/23/introduction-to-crypto-and-cryptocurrencies/</link>
+      <pubDate>Wed, 23 Sep 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/2020/09/23/introduction-to-crypto-and-cryptocurrencies/</guid>
+      <description>Bitcoin and Cryptocurrency Technologies Lecture 1 Introduction to Crypto and Cryptocurrencies Hash Function
+ Takes any string as input Fixed-size output Efficiently computable  Security Properties
+ Collision-free  Nobody can find x and y such as &amp;ldquo;x!=y and H(x)=H(y)&amp;quot;   Hiding  Given H(x), it&amp;rsquo;s infeasible to find x   Puzzle-friendly  For every possible output value y, if k is chosen from a distribution with high min-entropy, then it&amp;rsquo;s infeasible to find x such as H(k|x)=y    SHA-256 Hash Function</description>
+    </item>
+    
+  </channel>
+</rss>

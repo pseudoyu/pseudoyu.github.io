@@ -6,10 +6,73 @@
     <description>Recent content in Tags on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 23 Sep 2020 03:12:17 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 26 Sep 2020 15:46:28 +0800</lastBuildDate>
     
 	<atom:link href="https://www.hexarthur.com/zh/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>e-commerce</title>
+      <link>https://www.hexarthur.com/zh/tag/e-commerce/</link>
+      <pubDate>Sat, 26 Sep 2020 15:46:28 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/e-commerce/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ecic</title>
+      <link>https://www.hexarthur.com/zh/tag/ecic/</link>
+      <pubDate>Sat, 26 Sep 2020 15:46:28 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/ecic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ecom</title>
+      <link>https://www.hexarthur.com/zh/tag/ecom/</link>
+      <pubDate>Sat, 26 Sep 2020 15:46:28 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/ecom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ecom6013</title>
+      <link>https://www.hexarthur.com/zh/tag/ecom6013/</link>
+      <pubDate>Sat, 26 Sep 2020 15:46:28 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/ecom6013/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hku</title>
+      <link>https://www.hexarthur.com/zh/tag/hku/</link>
+      <pubDate>Sat, 26 Sep 2020 15:46:28 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/hku/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>notes</title>
+      <link>https://www.hexarthur.com/zh/tag/notes/</link>
+      <pubDate>Sat, 26 Sep 2020 15:46:28 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>technology</title>
+      <link>https://www.hexarthur.com/zh/tag/technology/</link>
+      <pubDate>Sat, 26 Sep 2020 15:46:28 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/technology/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>bitcoin</title>
@@ -75,33 +138,6 @@
     </item>
     
     <item>
-      <title>technology</title>
-      <link>https://www.hexarthur.com/zh/tag/technology/</link>
-      <pubDate>Wed, 23 Sep 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/technology/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ecic</title>
-      <link>https://www.hexarthur.com/zh/tag/ecic/</link>
-      <pubDate>Mon, 21 Sep 2020 16:12:09 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/ecic/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hku</title>
-      <link>https://www.hexarthur.com/zh/tag/hku/</link>
-      <pubDate>Mon, 21 Sep 2020 16:12:09 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/hku/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>icom</title>
       <link>https://www.hexarthur.com/zh/tag/icom/</link>
       <pubDate>Mon, 21 Sep 2020 16:12:09 +0800</pubDate>
@@ -125,42 +161,6 @@
       <pubDate>Mon, 21 Sep 2020 16:12:09 +0800</pubDate>
       
       <guid>https://www.hexarthur.com/zh/tag/internet/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>notes</title>
-      <link>https://www.hexarthur.com/zh/tag/notes/</link>
-      <pubDate>Mon, 21 Sep 2020 16:12:09 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/notes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>e-commerce</title>
-      <link>https://www.hexarthur.com/zh/tag/e-commerce/</link>
-      <pubDate>Mon, 21 Sep 2020 10:44:28 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/e-commerce/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ecom</title>
-      <link>https://www.hexarthur.com/zh/tag/ecom/</link>
-      <pubDate>Mon, 21 Sep 2020 10:44:28 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/ecom/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ecom6013</title>
-      <link>https://www.hexarthur.com/zh/tag/ecom6013/</link>
-      <pubDate>Mon, 21 Sep 2020 10:44:28 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/ecom6013/</guid>
       <description></description>
     </item>
     

@@ -6,10 +6,21 @@
     <description>Recent content in technology on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 26 Sep 2020 15:46:28 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 27 Sep 2020 11:30:28 +0800</lastBuildDate>
     
 	<atom:link href="https://www.hexarthur.com/zh/tag/technology/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ECOM6013 Topic 7 E-Payment Systems</title>
+      <link>https://www.hexarthur.com/zh/2020/09/27/ecom6013-topic-7-e-payment-systems/</link>
+      <pubDate>Sun, 27 Sep 2020 11:30:28 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/2020/09/27/ecom6013-topic-7-e-payment-systems/</guid>
+      <description>ECOM6013 E-Commerce Technologies Topic 7 E-Payment Systems Payment System Stakeholders&amp;rsquo; Priorities
+ Customer  Low-risk Low-cost Refutable Convenience Reliable   Merchants  Low-risks Low-cost Irrefutable Secure Reliable   Financial intermediaries  Secure Low-risk Maximizing profit   Government regulators  Secure Trust Protecting participants and enforcing reporting    Type of Payment Systems
+ Cash Cheque transfer Credit card Stored value Accumulating balance  B2C Payment System</description>
+    </item>
     
     <item>
       <title>ECOM6013 Topic 6 E-Commerce Security</title>

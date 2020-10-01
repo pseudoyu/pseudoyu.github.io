@@ -9,8 +9,92 @@
   </url>
   
   <url>
+    <loc>https://www.hexarthur.com/en/tag/blockchain/</loc>
+    <lastmod>2020-10-02T00:53:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/2020/10/02/blockchain-job-description/</loc>
+    <lastmod>2020-10-02T00:53:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.hexarthur.com/en/categories/</loc>
-    <lastmod>2020-10-01T22:25:19+08:00</lastmod>
+    <lastmod>2020-10-02T00:53:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/ideas/</loc>
+    <lastmod>2020-10-02T00:53:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/category/ideas/</loc>
+    <lastmod>2020-10-02T00:53:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/interview/</loc>
+    <lastmod>2020-10-02T00:53:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/job/</loc>
+    <lastmod>2020-10-02T00:53:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/learning/</loc>
+    <lastmod>2020-10-02T00:53:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/plan/</loc>
+    <lastmod>2020-10-02T00:53:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/posts/</loc>
+    <lastmod>2020-10-02T00:53:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/</loc>
+    <lastmod>2020-10-02T00:53:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tags/</loc>
+    <lastmod>2020-10-02T00:53:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/en/tag/technology/</loc>
+    <lastmod>2020-10-02T00:53:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -58,13 +142,6 @@
   </url>
   
   <url>
-    <loc>https://www.hexarthur.com/en/posts/</loc>
-    <lastmod>2020-10-01T22:25:19+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://www.hexarthur.com/en/category/projects/</loc>
     <lastmod>2020-10-01T22:25:19+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -73,27 +150,6 @@
   
   <url>
     <loc>https://www.hexarthur.com/en/tag/projects/</loc>
-    <lastmod>2020-10-01T22:25:19+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/en/</loc>
-    <lastmod>2020-10-01T22:25:19+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/en/tags/</loc>
-    <lastmod>2020-10-01T22:25:19+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/en/tag/technology/</loc>
     <lastmod>2020-10-01T22:25:19+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -129,13 +185,6 @@
   
   <url>
     <loc>https://www.hexarthur.com/en/tag/bitcoin/</loc>
-    <lastmod>2020-09-23T03:12:17+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/en/tag/blockchain/</loc>
     <lastmod>2020-09-23T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -437,20 +486,6 @@
   
   <url>
     <loc>https://www.hexarthur.com/en/tag/future/</loc>
-    <lastmod>2020-06-06T00:00:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/en/category/ideas/</loc>
-    <lastmod>2020-06-06T00:00:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/en/tag/ideas/</loc>
     <lastmod>2020-06-06T00:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

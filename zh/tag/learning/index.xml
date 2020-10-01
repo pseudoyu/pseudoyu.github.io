@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>learning on Pseudoyu</title>
+    <link>https://www.hexarthur.com/zh/tag/learning/</link>
+    <description>Recent content in learning on Pseudoyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 02 Oct 2020 00:53:31 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.hexarthur.com/zh/tag/learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Blockchain Job Description</title>
+      <link>https://www.hexarthur.com/zh/2020/10/02/blockchain-job-description/</link>
+      <pubDate>Fri, 02 Oct 2020 00:53:31 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/2020/10/02/blockchain-job-description/</guid>
+      <description>Blockchain Job Description 蚂蚁集团-区块链安全高级研发工程师/研发专家 岗位描述 负责智能合约安全审计工具、合约虚拟机增强扩展等系统的研发 负责区块链相关安全解决方案</description>
+    </item>
+    
+  </channel>
+</rss>

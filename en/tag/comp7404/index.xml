@@ -6,17 +6,17 @@
     <description>Recent content in comp7404 on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 04 Oct 2020 23:04:11 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 05 Oct 2020 00:30:11 +0800</lastBuildDate>
     
 	<atom:link href="https://www.hexarthur.com/en/tag/comp7404/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>COMP7404 Topic 3 Adversarial Search</title>
-      <link>https://www.hexarthur.com/en/2020/10/04/comp7404-topic-3-adversarial-search/</link>
-      <pubDate>Sun, 04 Oct 2020 23:04:11 +0800</pubDate>
+      <link>https://www.hexarthur.com/en/2020/10/05/comp7404-topic-3-adversarial-search/</link>
+      <pubDate>Mon, 05 Oct 2020 00:30:11 +0800</pubDate>
       
-      <guid>https://www.hexarthur.com/en/2020/10/04/comp7404-topic-3-adversarial-search/</guid>
+      <guid>https://www.hexarthur.com/en/2020/10/05/comp7404-topic-3-adversarial-search/</guid>
       <description>COMP7404 Computational Intelligence and Machine Learning Topic 3 Adversarial Search A Multi-agent Competitive Environment
  Other agents are planning against us Goals are in conflict (not necessarily)  Game Definition
  A game can be defined as  s : States s0: Initial state Player(s) : Defines which player has the move Actions(s) : Returns a set of legal moves Result(s,a) : Defines the result of a move TerminalTest(s) : True when game is over, false otherwise Utility(s,p) : Defines the final numeric value for a game that ends in terminal state s for player p   A game tree can be constructed  Nodes are game states and edges are moves    Tic-Tac-Toe Game Tree</description>

@@ -6,10 +6,20 @@
     <description>Recent content in Notes on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 27 Sep 2020 11:30:28 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 04 Oct 2020 21:30:11 +0800</lastBuildDate>
     
 	<atom:link href="https://www.hexarthur.com/zh/category/notes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>COMP7404 Topic 2 Beyond Classical Search</title>
+      <link>https://www.hexarthur.com/zh/2020/10/04/comp7404-topic-2-beyond-classical-search/</link>
+      <pubDate>Sun, 04 Oct 2020 21:30:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/2020/10/04/comp7404-topic-2-beyond-classical-search/</guid>
+      <description>COMP7404 Computational Intelligence and Machine Learning Topic 2 Beyond Classical SearchTopic 1 Search Planning vs Identification
+ Planing: sequence of actions  The path to the goal is the important thing Paths have various costs, depths Heuristics to guide, frontier to keep backups   Identification: assignments to variables  The goal itself is important, not the path    Local Search can find solutions faster for specific types of identification problems</description>
+    </item>
     
     <item>
       <title>ECOM6013 Topic 7 E-Payment Systems</title>

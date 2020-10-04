@@ -6,10 +6,100 @@
     <description>Recent content in Tags on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 02 Oct 2020 00:53:31 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 04 Oct 2020 21:30:11 +0800</lastBuildDate>
     
 	<atom:link href="https://www.hexarthur.com/zh/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ai</title>
+      <link>https://www.hexarthur.com/zh/tag/ai/</link>
+      <pubDate>Sun, 04 Oct 2020 21:30:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>algorithm</title>
+      <link>https://www.hexarthur.com/zh/tag/algorithm/</link>
+      <pubDate>Sun, 04 Oct 2020 21:30:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/algorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>comp</title>
+      <link>https://www.hexarthur.com/zh/tag/comp/</link>
+      <pubDate>Sun, 04 Oct 2020 21:30:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/comp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>comp7404</title>
+      <link>https://www.hexarthur.com/zh/tag/comp7404/</link>
+      <pubDate>Sun, 04 Oct 2020 21:30:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/comp7404/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ecic</title>
+      <link>https://www.hexarthur.com/zh/tag/ecic/</link>
+      <pubDate>Sun, 04 Oct 2020 21:30:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/ecic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hku</title>
+      <link>https://www.hexarthur.com/zh/tag/hku/</link>
+      <pubDate>Sun, 04 Oct 2020 21:30:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/hku/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ml</title>
+      <link>https://www.hexarthur.com/zh/tag/ml/</link>
+      <pubDate>Sun, 04 Oct 2020 21:30:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/ml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>notes</title>
+      <link>https://www.hexarthur.com/zh/tag/notes/</link>
+      <pubDate>Sun, 04 Oct 2020 21:30:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programming</title>
+      <link>https://www.hexarthur.com/zh/tag/programming/</link>
+      <pubDate>Sun, 04 Oct 2020 21:30:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://www.hexarthur.com/zh/tag/python/</link>
+      <pubDate>Sun, 04 Oct 2020 21:30:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/python/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>blockchain</title>
@@ -84,15 +174,6 @@
     </item>
     
     <item>
-      <title>ecic</title>
-      <link>https://www.hexarthur.com/zh/tag/ecic/</link>
-      <pubDate>Thu, 01 Oct 2020 22:25:19 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/ecic/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>ecom</title>
       <link>https://www.hexarthur.com/zh/tag/ecom/</link>
       <pubDate>Thu, 01 Oct 2020 22:25:19 +0800</pubDate>
@@ -107,87 +188,6 @@
       <pubDate>Thu, 01 Oct 2020 22:25:19 +0800</pubDate>
       
       <guid>https://www.hexarthur.com/zh/tag/ecom6013/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hku</title>
-      <link>https://www.hexarthur.com/zh/tag/hku/</link>
-      <pubDate>Thu, 01 Oct 2020 22:25:19 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/hku/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>projects</title>
-      <link>https://www.hexarthur.com/zh/tag/projects/</link>
-      <pubDate>Thu, 01 Oct 2020 22:25:19 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/projects/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>notes</title>
-      <link>https://www.hexarthur.com/zh/tag/notes/</link>
-      <pubDate>Sun, 27 Sep 2020 11:30:28 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/notes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>bitcoin</title>
-      <link>https://www.hexarthur.com/zh/tag/bitcoin/</link>
-      <pubDate>Wed, 23 Sep 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/bitcoin/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>coursera</title>
-      <link>https://www.hexarthur.com/zh/tag/coursera/</link>
-      <pubDate>Wed, 23 Sep 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/coursera/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cryptocurrency</title>
-      <link>https://www.hexarthur.com/zh/tag/cryptocurrency/</link>
-      <pubDate>Wed, 23 Sep 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/cryptocurrency/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>decentralization</title>
-      <link>https://www.hexarthur.com/zh/tag/decentralization/</link>
-      <pubDate>Wed, 23 Sep 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/decentralization/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>princeton</title>
-      <link>https://www.hexarthur.com/zh/tag/princeton/</link>
-      <pubDate>Wed, 23 Sep 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/princeton/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>security</title>
-      <link>https://www.hexarthur.com/zh/tag/security/</link>
-      <pubDate>Wed, 23 Sep 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/security/</guid>
       <description></description>
     </item>
     

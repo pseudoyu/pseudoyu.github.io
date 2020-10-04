@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 02 Oct 2020 00:53:31 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 04 Oct 2020 21:30:11 +0800</lastBuildDate>
     
 	<atom:link href="https://www.hexarthur.com/en/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>COMP7404 Topic 2 Beyond Classical Search</title>
+      <link>https://www.hexarthur.com/en/2020/10/04/comp7404-topic-2-beyond-classical-search/</link>
+      <pubDate>Sun, 04 Oct 2020 21:30:11 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/2020/10/04/comp7404-topic-2-beyond-classical-search/</guid>
+      <description>COMP7404 Computational Intelligence and Machine Learning Topic 2 Beyond Classical SearchTopic 1 Search Planning vs Identification
+ Planing: sequence of actions  The path to the goal is the important thing Paths have various costs, depths Heuristics to guide, frontier to keep backups   Identification: assignments to variables  The goal itself is important, not the path    Local Search can find solutions faster for specific types of identification problems</description>
+    </item>
     
     <item>
       <title>Blockchain Job Description</title>
@@ -224,18 +234,6 @@ Core E-Commerce Technologies  Introduction to E-Commerce Technology Internet and
       
       <guid>https://www.hexarthur.com/en/2020/06/06/dear-yu-are-you-ready-for-23/</guid>
       <description>23岁的自白：去追寻意义 现在是2020年6月6日，我23岁了，这个年纪似乎是一个尴尬的存在，若按照人生阶段来界定，本科毕业已经是一年之前，而</description>
-    </item>
-    
-    <item>
-      <title>What To Eat - A WeChat Mini-Program Project</title>
-      <link>https://www.hexarthur.com/en/2020/04/05/what-to-eat-a-wechat-mini-program-project/</link>
-      <pubDate>Sun, 05 Apr 2020 23:40:25 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/2020/04/05/what-to-eat-a-wechat-mini-program-project/</guid>
-      <description>What To Eat - A WeChat Mini-Program Project Source Code on Github
-Development Details To be updated&amp;hellip;
-WeChat Cloud-Dev Technology Utilized the WeChat official cloud-dev technology. There is no need to prepare/deploy our own server for the mini-program and save large images locally (exceeding the upload size limit of the mini program)
-Screenshots QR-Code of this Mini-Program </description>
     </item>
     
   </channel>

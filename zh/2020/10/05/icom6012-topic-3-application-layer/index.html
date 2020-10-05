@@ -27,15 +27,15 @@
  Server  Always-on host Permanent IP address Often in data centers (for scaling)   Clients  Contact, communicate with server May be intermittently connected May have dynamic IP addresses Don&rsquo;t communicate directly with each other    Peer-to-Peer (P2P) Architecture" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.hexarthur.com/zh/2020/10/05/icom6012-topic-3-application-layer/" />
-<meta property="article:published_time" content="2020-10-05T14:52:09+08:00" />
-<meta property="article:modified_time" content="2020-10-05T14:52:09+08:00" />
+<meta property="article:published_time" content="2020-10-05T18:00:09+08:00" />
+<meta property="article:modified_time" content="2020-10-05T18:00:09+08:00" />
 <meta itemprop="name" content="ICOM6012 Topic 3 Application Layer">
 <meta itemprop="description" content="ICOM6012 Internet Infrastructure Technologies Topic 3 Application Layer Creating a Network App
  Run on different end systems Communication over network No need to write for network-core devices  Client-Server Architecture (The Centralized Internet)
  Server  Always-on host Permanent IP address Often in data centers (for scaling)   Clients  Contact, communicate with server May be intermittently connected May have dynamic IP addresses Don&rsquo;t communicate directly with each other    Peer-to-Peer (P2P) Architecture">
-<meta itemprop="datePublished" content="2020-10-05T14:52:09+08:00" />
-<meta itemprop="dateModified" content="2020-10-05T14:52:09+08:00" />
-<meta itemprop="wordCount" content="355">
+<meta itemprop="datePublished" content="2020-10-05T18:00:09+08:00" />
+<meta itemprop="dateModified" content="2020-10-05T18:00:09+08:00" />
+<meta itemprop="wordCount" content="626">
 
 
 
@@ -366,6 +366,97 @@
 </li>
 </ul>
 <p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ssl_tls.png" alt="ssl_tls"></p>
+<p><strong>The IP Hourglass</strong></p>
+<p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ip_hourglass.png" alt="ip_hourglass"></p>
+<p><strong>HTTP Overview</strong></p>
+<ul>
+<li>HTTP: Hypertext Transfer Protocol</li>
+<li>Web&rsquo;s application-layer protocol</li>
+<li>Client/Server model
+<ul>
+<li>Client - browser that requests, receives and &ldquo;display&rdquo; web objects</li>
+<li>Server - Web server sends objects in response to requests</li>
+</ul>
+</li>
+<li>Development
+<ul>
+<li>HTTP/1.0: RFC 1945 (1996)</li>
+<li>HTTP/1.1: RFC 2616 (1997)</li>
+<li>HTTP/2: RFC 7540 (2015)</li>
+<li>HTTP/3: Internet-Draft (2020)</li>
+</ul>
+</li>
+<li>Uses TCP
+<ul>
+<li>Client initiates TCP connection (create sockets) to server, port 80</li>
+<li>Server accepts TCP connection from client</li>
+<li>HTTP messages exchanged between browser and web server</li>
+<li>TCP connection closed</li>
+</ul>
+</li>
+<li>HTTP is stateless
+<ul>
+<li>Server maintains no information about past client requests</li>
+</ul>
+</li>
+</ul>
+<p><strong>HTTP Connections</strong></p>
+<ul>
+<li>Non-persistent HTTP
+<ul>
+<li>Downloading multiple objects required multiple connections
+<ul>
+<li>Sequential</li>
+<li>Parallel</li>
+</ul>
+</li>
+<li>Procedures
+<ul>
+<li>TCP connection opened</li>
+<li>At most one object sent over TCP connection</li>
+<li>TCP connection closed</li>
+</ul>
+</li>
+<li>OS must work nd allocate host resources for each TCP connection</li>
+<li>Browser often open parallel TCP connections to fetch referenced objects</li>
+<li>HTTP response time (2RTT+)
+<ul>
+<li>RTT: Time for a small packet to travel from client to server and back</li>
+<li>1RTT to initiate TCP connection</li>
+<li>1RTT for HTTP request and dirst few bytes of HTTP response to return</li>
+<li>File transmission time</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Persistent HTTP
+<ul>
+<li>Procedures
+<ul>
+<li>TCP connection opened to a server</li>
+<li>Multiple objects can be sent over single TCP connection between clients and that server</li>
+<li>TCP connection closed</li>
+</ul>
+</li>
+<li>Server leaves connection open after sending response</li>
+<li>Subsequent HTTP messages between same client/server are sent over connection</li>
+</ul>
+</li>
+<li>Persistent HTTP without pipelining
+<ul>
+<li>Client issues new request only when previous response has been received</li>
+<li>1RTT for each referenced object</li>
+<li>Head-of-line (HoL) blocking</li>
+</ul>
+</li>
+<li>Persistent HTTP with pipelining
+<ul>
+<li>Client sends requests as soon as it encounters a referenced object</li>
+<li>As little as 1RTT for all the referenced objects</li>
+<li><em>Not activated in practice</em></li>
+</ul>
+</li>
+</ul>
 
   </article>
 

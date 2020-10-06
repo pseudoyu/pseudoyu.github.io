@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 05 Oct 2020 09:06:09 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2020 20:45:44 +0800</lastBuildDate>
     
 	<atom:link href="https://www.hexarthur.com/zh/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ICOM6012 Topic 3 Application Layer</title>
+      <link>https://www.hexarthur.com/zh/2020/10/06/icom6012-topic-3-application-layer/</link>
+      <pubDate>Tue, 06 Oct 2020 20:45:44 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/2020/10/06/icom6012-topic-3-application-layer/</guid>
+      <description>ICOM6012 Internet Infrastructure Technologies Topic 3 Application Layer Creating a Network App
+ Run on different end systems Communication over network No need to write for network-core devices  Client-Server Architecture (The Centralized Internet)
+ Server  Always-on host Permanent IP address Often in data centers (for scaling)   Clients  Contact, communicate with server May be intermittently connected May have dynamic IP addresses Don&amp;rsquo;t communicate directly with each other    Peer-to-Peer (P2P) Architecture</description>
+    </item>
     
     <item>
       <title>ICOM6012 Topic 2 The Big Picture</title>
@@ -223,19 +234,6 @@ Building a Centralize Website Restructuring Strategy
  What is the purpose of Puma&amp;rsquo;s content management systems? Why did Puma build a single centralized website rather than continue with multiple websites serving different countries and regions? [choosen] What social media sites does Puma use, and what do they contribute to Puma&amp;rsquo;s marketing effort?  Case Study
 Alibaba Singles&amp;rsquo; Day 2019
 Core E-Commerce Technologies  Introduction to E-Commerce Technology Internet and E-Commerce Infrasture E-Commerce Presence and Development Life Circle Web Design, Implementation and Testing Introduction to Mobile Commerce Internet and E-Commerce Commerce Electronic Payment Systems Cybercurrency, Bitcoin and Blockchain Emerging Technology &amp;amp; Cloud Computing and IoT Artificial Intelligence, Machine Learning and E-Commerce Trends  E-Commerce and Data Science</description>
-    </item>
-    
-    <item>
-      <title>PSY103 Topic 1 What Is Psychology</title>
-      <link>https://www.hexarthur.com/zh/2020/09/02/psy103-topic-1-what-is-psychology/</link>
-      <pubDate>Wed, 02 Sep 2020 12:48:07 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/2020/09/02/psy103-topic-1-what-is-psychology/</guid>
-      <description>Introduction to Psychology Topic 1 What Is Psychology Module 1.1 Psychologists&amp;rsquo; Goal General Points about Psychology
- It Depends Progress Depends on Good Measurement Confidence in the Conclusions Should Depend on the Strength of the Evidence  Major Philosophical Issues in Psychology
- Free Will versus Determinism The Mind-Brain Problem The Nature-Nurture Issue  What Psychologists Do
-  Service Providers to Individuals
- Clinical Psychology Psychiatry Other Mental Health Professionals  Psychoanalysts Clinical social worker Counseling psychologists Forensic psychologists      Service Providers to Organizations</description>
     </item>
     
   </channel>

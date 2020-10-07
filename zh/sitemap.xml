@@ -9,6 +9,27 @@
   </url>
   
   <url>
+    <loc>https://www.hexarthur.com/zh/2020/10/07/new/</loc>
+    <lastmod>2020-10-07T15:13:47+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/zh/posts/</loc>
+    <lastmod>2020-10-07T15:13:47+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/zh/</loc>
+    <lastmod>2020-10-07T15:13:47+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.hexarthur.com/zh/categories/</loc>
     <lastmod>2020-10-07T09:32:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -66,20 +87,6 @@
   
   <url>
     <loc>https://www.hexarthur.com/zh/tag/notes/</loc>
-    <lastmod>2020-10-07T09:32:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/zh/posts/</loc>
-    <lastmod>2020-10-07T09:32:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/zh/</loc>
     <lastmod>2020-10-07T09:32:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

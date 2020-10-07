@@ -6,19 +6,10 @@
     <description>Recent content in Posts on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 07 Oct 2020 15:13:47 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2020 09:32:44 +0800</lastBuildDate>
     
 	<atom:link href="https://www.hexarthur.com/zh/posts/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>New</title>
-      <link>https://www.hexarthur.com/zh/2020/10/07/new/</link>
-      <pubDate>Wed, 07 Oct 2020 15:13:47 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/2020/10/07/new/</guid>
-      <description>&lt;p&gt;This is a simple preview for styles in Den.&lt;/p&gt;</description>
-    </item>
     
     <item>
       <title>ICOM6012 Topic 3 Application Layer</title>
@@ -229,6 +220,18 @@ The company was founded in 1948 by Rudolf Dassler.
 Building a Centralize Website Restructuring Strategy
  Replacing multiple e-commerce sites on different platform Unifying content and product strategies Building multiple teams in different regions, separate tasks  Content Management System (CMS)
 &amp;ldquo;Database software program specifically designed to manage structures, unstructured data and objects in a Website environment.</description>
+    </item>
+    
+    <item>
+      <title>ECOM6013 Topic 1 Introduction to E-Commerce Technology</title>
+      <link>https://www.hexarthur.com/zh/2020/09/06/ecom6013-topic-1-introduction-to-e-commerce-technology/</link>
+      <pubDate>Sun, 06 Sep 2020 04:28:28 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/2020/09/06/ecom6013-topic-1-introduction-to-e-commerce-technology/</guid>
+      <description>ECOM6013 E-Commerce Technologies Topic 1 Introduction to E-Commerce Technology Discussion Topic #1: Puma Goes Omni
+ What is the purpose of Puma&amp;rsquo;s content management systems? Why did Puma build a single centralized website rather than continue with multiple websites serving different countries and regions? [choosen] What social media sites does Puma use, and what do they contribute to Puma&amp;rsquo;s marketing effort?  Case Study
+Alibaba Singles&amp;rsquo; Day 2019
+Core E-Commerce Technologies  Introduction to E-Commerce Technology Internet and E-Commerce Infrasture E-Commerce Presence and Development Life Circle Web Design, Implementation and Testing Introduction to Mobile Commerce Internet and E-Commerce Commerce Electronic Payment Systems Cybercurrency, Bitcoin and Blockchain Emerging Technology &amp;amp; Cloud Computing and IoT Artificial Intelligence, Machine Learning and E-Commerce Trends  E-Commerce and Data Science</description>
     </item>
     
   </channel>

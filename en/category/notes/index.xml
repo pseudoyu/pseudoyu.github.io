@@ -6,17 +6,17 @@
     <description>Recent content in Notes on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 06 Oct 2020 20:45:44 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2020 09:32:44 +0800</lastBuildDate>
     
 	<atom:link href="https://www.hexarthur.com/en/category/notes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ICOM6012 Topic 3 Application Layer</title>
-      <link>https://www.hexarthur.com/en/2020/10/06/icom6012-topic-3-application-layer/</link>
-      <pubDate>Tue, 06 Oct 2020 20:45:44 +0800</pubDate>
+      <link>https://www.hexarthur.com/en/2020/10/07/icom6012-topic-3-application-layer/</link>
+      <pubDate>Wed, 07 Oct 2020 09:32:44 +0800</pubDate>
       
-      <guid>https://www.hexarthur.com/en/2020/10/06/icom6012-topic-3-application-layer/</guid>
+      <guid>https://www.hexarthur.com/en/2020/10/07/icom6012-topic-3-application-layer/</guid>
       <description>ICOM6012 Internet Infrastructure Technologies Topic 3 Application Layer Creating a Network App Run on different end systems Communication over network No need to write for network-core devices Client-Server Architecture (The Centralized Internet) Server Always-on host Permanent IP address Often in data centers (for scaling) Clients Contact, communicate with server May be intermittently connected May have dynamic IP addresses Don&amp;rsquo;t communicate directly with each other Peer-to-Peer (P2P) Architecture No always-on server</description>
     </item>
     

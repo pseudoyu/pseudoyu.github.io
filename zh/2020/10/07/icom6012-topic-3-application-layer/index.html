@@ -5,14 +5,12 @@
   <meta charset="utf-8">
   <title>ICOM6012 Topic 3 Application Layer · Pseudoyu</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="ICOM6012 Internet Infrastructure Technologies Topic 3 Application Layer Creating a Network App
- Run on different end systems Communication over network No need to write for network-core devices  Client-Server Architecture (The Centralized Internet)
- Server  Always-on host Permanent IP address Often in data centers (for scaling)   Clients  Contact, communicate with server May be intermittently connected May have dynamic IP addresses Don&amp;rsquo;t communicate directly with each other    Peer-to-Peer (P2P) Architecture" />
+  <meta name="description" content="ICOM6012 Internet Infrastructure Technologies Topic 3 Application Layer Creating a Network App Run on different end systems Communication over network No need to write for network-core devices Client-Server Architecture (The Centralized Internet) Server Always-on host Permanent IP address Often in data centers (for scaling) Clients Contact, communicate with server May be intermittently connected May have dynamic IP addresses Don&amp;rsquo;t communicate directly with each other Peer-to-Peer (P2P) Architecture No always-on server" />
 
   <meta name="keywords" content="Hugo, theme, den" />
 
-<link rel="canonical" href="https://www.hexarthur.com/zh/2020/10/06/icom6012-topic-3-application-layer/" />
-<link rel="alternate" href="https://www.hexarthur.com/en/2020/10/06/icom6012-topic-3-application-layer/" hreflang="en">
+<link rel="canonical" href="https://www.hexarthur.com/zh/2020/10/07/icom6012-topic-3-application-layer/" />
+<link rel="alternate" href="https://www.hexarthur.com/en/2020/10/07/icom6012-topic-3-application-layer/" hreflang="en">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -22,29 +20,23 @@
 
 
 <meta property="og:title" content="ICOM6012 Topic 3 Application Layer" />
-<meta property="og:description" content="ICOM6012 Internet Infrastructure Technologies Topic 3 Application Layer Creating a Network App
- Run on different end systems Communication over network No need to write for network-core devices  Client-Server Architecture (The Centralized Internet)
- Server  Always-on host Permanent IP address Often in data centers (for scaling)   Clients  Contact, communicate with server May be intermittently connected May have dynamic IP addresses Don&rsquo;t communicate directly with each other    Peer-to-Peer (P2P) Architecture" />
+<meta property="og:description" content="ICOM6012 Internet Infrastructure Technologies Topic 3 Application Layer Creating a Network App Run on different end systems Communication over network No need to write for network-core devices Client-Server Architecture (The Centralized Internet) Server Always-on host Permanent IP address Often in data centers (for scaling) Clients Contact, communicate with server May be intermittently connected May have dynamic IP addresses Don&rsquo;t communicate directly with each other Peer-to-Peer (P2P) Architecture No always-on server" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.hexarthur.com/zh/2020/10/06/icom6012-topic-3-application-layer/" />
-<meta property="article:published_time" content="2020-10-06T20:45:44+08:00" />
-<meta property="article:modified_time" content="2020-10-06T20:45:44+08:00" />
+<meta property="og:url" content="https://www.hexarthur.com/zh/2020/10/07/icom6012-topic-3-application-layer/" />
+<meta property="article:published_time" content="2020-10-07T09:32:44+08:00" />
+<meta property="article:modified_time" content="2020-10-07T09:32:44+08:00" />
 <meta itemprop="name" content="ICOM6012 Topic 3 Application Layer">
-<meta itemprop="description" content="ICOM6012 Internet Infrastructure Technologies Topic 3 Application Layer Creating a Network App
- Run on different end systems Communication over network No need to write for network-core devices  Client-Server Architecture (The Centralized Internet)
- Server  Always-on host Permanent IP address Often in data centers (for scaling)   Clients  Contact, communicate with server May be intermittently connected May have dynamic IP addresses Don&rsquo;t communicate directly with each other    Peer-to-Peer (P2P) Architecture">
-<meta itemprop="datePublished" content="2020-10-06T20:45:44+08:00" />
-<meta itemprop="dateModified" content="2020-10-06T20:45:44+08:00" />
-<meta itemprop="wordCount" content="931">
+<meta itemprop="description" content="ICOM6012 Internet Infrastructure Technologies Topic 3 Application Layer Creating a Network App Run on different end systems Communication over network No need to write for network-core devices Client-Server Architecture (The Centralized Internet) Server Always-on host Permanent IP address Often in data centers (for scaling) Clients Contact, communicate with server May be intermittently connected May have dynamic IP addresses Don&rsquo;t communicate directly with each other Peer-to-Peer (P2P) Architecture No always-on server">
+<meta itemprop="datePublished" content="2020-10-07T09:32:44+08:00" />
+<meta itemprop="dateModified" content="2020-10-07T09:32:44+08:00" />
+<meta itemprop="wordCount" content="1538">
 
 
 
 <meta itemprop="keywords" content="notes,internet,technology,hku,ecic,icom,icom6012," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ICOM6012 Topic 3 Application Layer"/>
-<meta name="twitter:description" content="ICOM6012 Internet Infrastructure Technologies Topic 3 Application Layer Creating a Network App
- Run on different end systems Communication over network No need to write for network-core devices  Client-Server Architecture (The Centralized Internet)
- Server  Always-on host Permanent IP address Often in data centers (for scaling)   Clients  Contact, communicate with server May be intermittently connected May have dynamic IP addresses Don&rsquo;t communicate directly with each other    Peer-to-Peer (P2P) Architecture"/>
+<meta name="twitter:description" content="ICOM6012 Internet Infrastructure Technologies Topic 3 Application Layer Creating a Network App Run on different end systems Communication over network No need to write for network-core devices Client-Server Architecture (The Centralized Internet) Server Always-on host Permanent IP address Often in data centers (for scaling) Clients Contact, communicate with server May be intermittently connected May have dynamic IP addresses Don&rsquo;t communicate directly with each other Peer-to-Peer (P2P) Architecture No always-on server"/>
 </head>
 <body>
   
@@ -122,7 +114,7 @@
         <p class="header-date">作者：
           pseudoyu /
         
-        2020-10-06
+        2020-10-07
           / 分类：
           <a href="https://www.hexarthur.com/zh/category/notes/">Notes</a>
         </p>
@@ -145,7 +137,7 @@
 <p class="float-right translations">
     <i class="fas fa-language" aria-hidden="true"></i>
     翻译： 
-    <a href="https://www.hexarthur.com/en/2020/10/06/icom6012-topic-3-application-layer/">EN</a>
+    <a href="https://www.hexarthur.com/en/2020/10/07/icom6012-topic-3-application-layer/">EN</a>
 </p>
 
 
@@ -580,6 +572,270 @@
 <li>HTTP/3 over UDP (to address the HoL blocking)
 <ul>
 <li>Adds security, per object error and congestion-control</li>
+</ul>
+</li>
+</ul>
+<p><strong>Email</strong></p>
+<ul>
+<li>Components
+<ul>
+<li>User agents
+<ul>
+<li>Composing, editing, reading mail messages</li>
+<li>Outgoing, incoming messages stored on server</li>
+</ul>
+</li>
+<li>Mail server
+<ul>
+<li>Mailbox</li>
+<li>Message queue</li>
+</ul>
+</li>
+<li>SMTP (Simple Mail Transfer Protocol)
+<ul>
+<li>Client: Sending mail server</li>
+<li>Server: Receiving mail server</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>SMTP [RFC 5321]</strong></p>
+<ul>
+<li>Uses TCP to reliably transfer email message from client to server, port 25 (or 587)</li>
+<li>Direct transfer: sending server to receiving server</li>
+<li>Three phases of transfer
+<ul>
+<li>Handshaking (greeting)</li>
+<li>Transfer of messages</li>
+<li>Closure</li>
+</ul>
+</li>
+<li>Command/response interaction (like HTTP, FTP)
+<ul>
+<li>Commands: ASCII text</li>
+<li>Response: status code and phrase</li>
+</ul>
+</li>
+<li>Messages must be in 7-bit ASCII</li>
+<li>Uses persistent connections</li>
+<li>use <em>CRLF.CRLF</em> to determine end of message</li>
+<li>Example
+<ul>
+<li><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/smtp_example.png" alt="smtp_example"></li>
+</ul>
+</li>
+</ul>
+<p><strong>Mail Message Format</strong></p>
+<ul>
+<li>RFC 822: standard for text message format
+<ul>
+<li>Header lines (different from SMTP MAIL FROM, RCPT TO commands)
+<ul>
+<li>To</li>
+<li>From</li>
+<li>Subject</li>
+</ul>
+</li>
+<li>Body (the message)
+<ul>
+<li>ASCII characters only</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Message Format: multimedia extensions</strong></p>
+<ul>
+<li>MIME (multipurpose internet mail extension): multimedia mail extension (to RFC 822), RFC 2045, 2056</li>
+<li>Additional lines in msg header declare MIME content type</li>
+<li><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mail_mime.png" alt="mail_mime"></li>
+</ul>
+<p><strong>Mail Access Protocols</strong></p>
+<p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mail_access_protocols.png" alt="mail_access_protocols"></p>
+<ul>
+<li>SMTP
+<ul>
+<li>Delivery/storage to receiver&rsquo;s server</li>
+</ul>
+</li>
+<li>Mail access protocol: retrieval from server
+<ul>
+<li>POP
+<ul>
+<li>Post Office Protocol [RFC 1939]: authorization, download</li>
+</ul>
+</li>
+<li>IMAP
+<ul>
+<li>Internet Mail Access Protocol [RFC 1730]: more features, including manipulation of stored msgs on server</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>HTTP
+<ul>
+<li>Provides web-based interface on top of STMP (to send), IMAP (or POP) to retrieve e-mail messages</li>
+<li>Gmail, Hotmail, etc.</li>
+</ul>
+</li>
+</ul>
+<p><strong>DNS (Domain Name System)</strong></p>
+<ul>
+<li>Why not a single centralized DNS server
+<ul>
+<li>Single point of failure</li>
+<li>Traffic jam due to huge number of requests/queries</li>
+<li>Long distance =&gt; slow response</li>
+<li>Maintenance issue</li>
+</ul>
+</li>
+<li>DNS services
+<ul>
+<li>Hostname to IP address translation</li>
+<li>Host aliasing</li>
+<li>Mail server aliasing</li>
+<li>Load distribution</li>
+</ul>
+</li>
+<li><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/dns_services.png" alt="dns_services"></li>
+<li>Root Name Servers
+<ul>
+<li><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/root_name_servers.png" alt="root_name_servers"></li>
+<li>13 LOGICAL root name servers, but 1086(or more) PHYICAL servers</li>
+<li>Reply with a referral to the DNS servers for a TLD, or indicating no such TLD exists.</li>
+</ul>
+</li>
+<li>TLD &amp; authoritative servers
+<ul>
+<li>Top-level domain (TLD) servers
+<ul>
+<li>gTLD (originally 7): com, net, biz, edu, org, int, mil, …</li>
+<li>ccTLD (249): uk, cn, hk, …</li>
+<li>IDN (internationalized top-level domains): .中国, .香港 and .台灣</li>
+</ul>
+</li>
+<li>Authoritative DNS servers
+<ul>
+<li>Organization&rsquo;s own DNS server(s), providing authoritative hostname to IP mappings for organization’s named hosts</li>
+<li>Can be maintained by organization or service provider</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Local/Default DNS Server</strong></p>
+<ul>
+<li>Does not strictly belong to hierarchy</li>
+<li>When host makes DNS query, query is sent to its local DNS server
+<ul>
+<li>Has local cache of recent name-to-address translation</li>
+<li>Acts as proxy, forwards query into hierarchy</li>
+</ul>
+</li>
+<li>Each ISP (residential ISP, company, university) has one</li>
+<li>Public DNS server
+<ul>
+<li>Google public DNS (with IP address 8.8.8.8)</li>
+</ul>
+</li>
+<li>Your home WiFi router may act as your local DNS server</li>
+</ul>
+<p><strong>DNS: Caching, Updating Records</strong></p>
+<ul>
+<li>Once (any) name server learns mapping, it caches mapping
+<ul>
+<li>Cache entries timeout (disappear) after some time (TTL)</li>
+<li>TLD servers typically cached in local name servers
+<ul>
+<li>Root name servers not often visited</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Cached entries may be out-of-date
+<ul>
+<li>If name host changes IP address, may not be known Internet-wide until all TTLs expire</li>
+</ul>
+</li>
+<li>Update/notify mechanisms proposed IETF standard
+<ul>
+<li>RFC 2136</li>
+</ul>
+</li>
+</ul>
+<p><strong>DNS Records</strong></p>
+<ul>
+<li>DNS: distributed db storing resource records (RR)
+<ul>
+<li>RR format
+<ul>
+<li>(name, value, type, ttl)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>type = A</li>
+<li>type = CNAME</li>
+<li>type = NS</li>
+<li>type = MX</li>
+</ul>
+<p><strong>DNS Protocol, Messages</strong></p>
+<ul>
+<li>DNS query and reply messages, both with same message format
+<ul>
+<li>Message header
+<ul>
+<li>Identification
+<ul>
+<li>16 bit</li>
+<li>For query, reply to query uses same</li>
+</ul>
+</li>
+<li>Flags
+<ul>
+<li>Query or reply</li>
+<li>Recursion desired</li>
+<li>Recursion available</li>
+<li>Reply is authoritative</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/dns_message.png" alt="dns_message"></li>
+</ul>
+</li>
+</ul>
+<p><strong>Attacking DNS</strong></p>
+<ul>
+<li>DDoS attacks
+<ul>
+<li>Bombard root servers with traffic
+<ul>
+<li>Not successful to date</li>
+<li>Traffic Filtering</li>
+<li>Local DNS servers cache IPs of TLD servers, allowing root server bypass</li>
+</ul>
+</li>
+<li>Bombard TLD servers
+<ul>
+<li>Potentially more dangerous</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Redirect attacks
+<ul>
+<li>Man-in-middle
+<ul>
+<li>Intercept queries</li>
+</ul>
+</li>
+<li>DNS poisoning
+<ul>
+<li>Send bogus replies to DNS server, which caches</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

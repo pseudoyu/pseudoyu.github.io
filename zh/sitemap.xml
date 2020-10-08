@@ -177,13 +177,6 @@
   </url>
   
   <url>
-    <loc>https://www.hexarthur.com/zh/2020/10/02/blockchain-job-description/</loc>
-    <lastmod>2020-10-02T00:53:31+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://www.hexarthur.com/zh/category/ideas/</loc>
     <lastmod>2020-10-02T00:53:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -220,6 +213,13 @@
   
   <url>
     <loc>https://www.hexarthur.com/zh/tag/plan/</loc>
+    <lastmod>2020-10-02T00:53:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/zh/2020/10/02/%E5%8C%BA%E5%9D%97%E9%93%BE-job-description/</loc>
     <lastmod>2020-10-02T00:53:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

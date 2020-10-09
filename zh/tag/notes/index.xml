@@ -6,10 +6,20 @@
     <description>Recent content in notes on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 07 Oct 2020 09:32:44 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2020 11:01:28 +0800</lastBuildDate>
     
 	<atom:link href="https://www.hexarthur.com/zh/tag/notes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ECOM6013 Topic 8 Blockchain and Cybercurrency</title>
+      <link>https://www.hexarthur.com/zh/2020/10/09/ecom6013-topic-8-blockchain-and-cybercurrency/</link>
+      <pubDate>Fri, 09 Oct 2020 11:01:28 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/2020/10/09/ecom6013-topic-8-blockchain-and-cybercurrency/</guid>
+      <description>ECOM6013 E-Commerce Technologies Topic 8 Blockchain and Cybercurrency Form of Money
+ Token money  Physical token Value is lost without the token No intermediary is required for spending Requires faith in the issuer (a government or a bank)   Notationary money  Notation/entry in a ledger, passbook, or database Can&amp;rsquo;t be lost Requires an intermediary Requires faith in the maintainer of the ledger   Hybrid money  Requires both a token and a ledger account Can be lost Requires an intermediary Requires faith in the issuer   Virtual money  No token/ledger Can be lost No intermediary required No issuer, no government backing   Digital money  String of bytes (data) stored on a device Value is lost/stolen when devices fail/invaded   Cybercurrency  Bitcoin is the most influential one Based on blockchain    Bitcoin</description>
+    </item>
     
     <item>
       <title>ICOM6012 Topic 3 Application Layer</title>

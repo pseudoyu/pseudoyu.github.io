@@ -71,6 +71,24 @@
       <guid>https://www.hexarthur.com/en/2020/10/14/blockchain-job-description/</guid>
       
         <description>&lt;h1 id=&#34;区块链研发&#34;&gt;区块链研发&lt;/h1&gt;
+&lt;h2 id=&#34;学习路径&#34;&gt;学习路径&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;刷题 - 全程，每天2题&lt;/li&gt;
+&lt;li&gt;Jave相关 - 2月&lt;/li&gt;
+&lt;li&gt;Linux基础与数据库 - 1周&lt;/li&gt;
+&lt;li&gt;Web/App开发 - 2周&lt;/li&gt;
+&lt;li&gt;区块链Case(基于Ethereum的分布式数据隐私应用) - 2月
+&lt;ul&gt;
+&lt;li&gt;需求调研 - Misty&lt;/li&gt;
+&lt;li&gt;产品规划 - Marshal&lt;/li&gt;
+&lt;li&gt;前端开发 - TBD&lt;/li&gt;
+&lt;li&gt;后端开发 - Arthur&lt;/li&gt;
+&lt;li&gt;数据处理 - Misty&lt;/li&gt;
+&lt;li&gt;技术指导 - Mengling&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;区块链相关岗位实习 - 2021年2月开始&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;技术要求&#34;&gt;技术要求&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;编程语言&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -222,24 +240,6 @@
 &lt;li&gt;对系统质量苛刻要求&lt;/li&gt;
 &lt;li&gt;识别和设计通用框架及模块&lt;/li&gt;
 &lt;li&gt;识别业务关键需求和设计领域模型&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;学习路径&#34;&gt;学习路径&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;刷题 - 全程，每天2题&lt;/li&gt;
-&lt;li&gt;Jave相关 - 2月&lt;/li&gt;
-&lt;li&gt;Linux基础与数据库 - 1周&lt;/li&gt;
-&lt;li&gt;Web/App开发 - 2周&lt;/li&gt;
-&lt;li&gt;区块链Case(基于Ethereum的分布式数据隐私应用) - 2月
-&lt;ul&gt;
-&lt;li&gt;需求调研 - Misty&lt;/li&gt;
-&lt;li&gt;产品规划 - Marshal&lt;/li&gt;
-&lt;li&gt;前端开发 - TBD&lt;/li&gt;
-&lt;li&gt;后端开发 - Arthur&lt;/li&gt;
-&lt;li&gt;数据处理 - Misty&lt;/li&gt;
-&lt;li&gt;技术指导 - Mengling&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;区块链相关岗位实习 - 2021年2月开始&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
 &lt;h2 id=&#34;蚂蚁集团-区块链安全高级研发工程师研发专家&#34;&gt;蚂蚁集团-区块链安全高级研发工程师/研发专家&lt;/h2&gt;

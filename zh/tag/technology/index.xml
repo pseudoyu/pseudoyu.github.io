@@ -6,10 +6,19 @@
     <description>Recent content in technology on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 09 Oct 2020 11:01:28 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2020 12:00:31 +0800</lastBuildDate>
     
 	<atom:link href="https://www.hexarthur.com/zh/tag/technology/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Blockchain Job Description</title>
+      <link>https://www.hexarthur.com/zh/2020/10/14/blockchain-job-description/</link>
+      <pubDate>Wed, 14 Oct 2020 12:00:31 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/2020/10/14/blockchain-job-description/</guid>
+      <description>区块链研发 技术要求 编程语言 硬性要求（熟练/精通至少一种） JAVA 多线程编程 分布式 缓存 消息队列 JVM 内存模型 类加载机制 性能优化 SOA架构（面向服务的架构</description>
+    </item>
     
     <item>
       <title>ECOM6013 Topic 8 Blockchain and Cybercurrency</title>

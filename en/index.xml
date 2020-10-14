@@ -77,7 +77,7 @@
 &lt;li&gt;Jave相关 - 2月&lt;/li&gt;
 &lt;li&gt;Linux基础与数据库 - 1周&lt;/li&gt;
 &lt;li&gt;Web/App开发 - 2周&lt;/li&gt;
-&lt;li&gt;区块链Case(基于Ethereum的分布式数据隐私应用) - 2月
+&lt;li&gt;区块链Case (基于Ethereum的分布式数据隐私应用) - 2月
 &lt;ul&gt;
 &lt;li&gt;需求调研 - Misty&lt;/li&gt;
 &lt;li&gt;产品规划 - Marshal&lt;/li&gt;
@@ -94,15 +94,15 @@
 &lt;ul&gt;
 &lt;li&gt;硬性要求 (熟练/精通至少一种)
 &lt;ul&gt;
-&lt;li&gt;JAVA(主要掌握)
+&lt;li&gt;JAVA (主要掌握)
 &lt;ul&gt;
-&lt;li&gt;多线程编程(threadpool)&lt;/li&gt;
+&lt;li&gt;多线程编程 (threadpool)&lt;/li&gt;
 &lt;li&gt;分布式(Redius实现分布式一致的锁)&lt;/li&gt;
 &lt;li&gt;缓存&lt;/li&gt;
-&lt;li&gt;消息队列(Kafka工作原理+配置)&lt;/li&gt;
+&lt;li&gt;消息队列 (Kafka工作原理+配置)&lt;/li&gt;
 &lt;li&gt;JVM
 &lt;ul&gt;
-&lt;li&gt;内存模型(JVM内存整理、垃圾处理的策略，root链搜索引用)&lt;/li&gt;
+&lt;li&gt;内存模型 (JVM内存整理、垃圾处理的策略，root链搜索引用)&lt;/li&gt;
 &lt;li&gt;类加载机制&lt;/li&gt;
 &lt;li&gt;性能优化&lt;/li&gt;
 &lt;/ul&gt;
@@ -110,7 +110,7 @@
 &lt;li&gt;微服务架构
 &lt;ul&gt;
 &lt;li&gt;阿里微服务Dubbo，服务注册机制&lt;/li&gt;
-&lt;li&gt;DDD(领域驱动设计，Domain Driven Design)&lt;/li&gt;
+&lt;li&gt;DDD (领域驱动设计，Domain Driven Design)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;开源框架应用场景

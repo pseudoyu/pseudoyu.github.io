@@ -71,7 +71,7 @@
       <guid>https://www.hexarthur.com/en/2020/10/14/blockchain-learning-plan/</guid>
       
         <description>&lt;h1 id=&#34;blockchain-learning-plan&#34;&gt;Blockchain Learning Plan&lt;/h1&gt;
-&lt;h2 id=&#34;laerning-path&#34;&gt;Laerning Path&lt;/h2&gt;
+&lt;h2 id=&#34;learning-path&#34;&gt;Learning Path&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;刷题 - 全程，每天2题&lt;/li&gt;
 &lt;li&gt;Jave相关 - 2月&lt;/li&gt;
@@ -240,123 +240,6 @@
 &lt;li&gt;对系统质量苛刻要求&lt;/li&gt;
 &lt;li&gt;识别和设计通用框架及模块&lt;/li&gt;
 &lt;li&gt;识别业务关键需求和设计领域模型&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
-&lt;h2 id=&#34;蚂蚁集团-区块链安全高级研发工程师研发专家&#34;&gt;蚂蚁集团-区块链安全高级研发工程师/研发专家&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;岗位描述&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;负责智能合约安全审计工具、合约虚拟机增强扩展等系统的研发&lt;/li&gt;
-&lt;li&gt;负责区块链相关安全解决方案的研发&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;岗位要求&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;熟练掌握至少一种编程语言（C/C++、GO等）&lt;/li&gt;
-&lt;li&gt;熟悉区块链技术原理，并熟悉至少一种业界常见的区块链开源系统或解决方案（如比特币、以太坊、EOS、Fabric等）&lt;/li&gt;
-&lt;li&gt;熟悉智能合约虚拟机（如EVM、WASM等）的原理，具备定制化开发能力&lt;/li&gt;
-&lt;li&gt;具备良好的沟通表达能力，逻辑能力，良好的团队合作意识&lt;/li&gt;
-&lt;li&gt;3年以上研发经验，如有区块链研发经历者更优先&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;蚂蚁金服-区块链研发专家&#34;&gt;蚂蚁金服-区块链研发专家&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;岗位描述&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;参与区块链核心系统的架构设计和研发工作&lt;/li&gt;
-&lt;li&gt;发展区块链技术，探索和推进区块链技术在不同场景的应用&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;岗位要求&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;精通C/C++/JAVA语言开发，重视代码质量和容错性，遵守良好的编码风格&lt;/li&gt;
-&lt;li&gt;熟悉LInux环境下多进程/线程、文件系统及网络编程&lt;/li&gt;
-&lt;li&gt;熟悉Linux的常用命令，熟悉常见的性能查看及调优工具使用&lt;/li&gt;
-&lt;li&gt;具备以下背景或经验之一者优先：
-&lt;ul&gt;
-&lt;li&gt;参与过网络框架、搜索引擎、分布式数据库、云计算平台等底层平台或组件开发&lt;/li&gt;
-&lt;li&gt;熟悉Bitcoin、Ethereum等开源区块链系统细节设计&lt;/li&gt;
-&lt;li&gt;熟悉BFT、Paxos、Raft等一致性协议之一的细节&lt;/li&gt;
-&lt;li&gt;熟悉PoW，PoS等区块链共识算法/协议细节&lt;/li&gt;
-&lt;li&gt;熟悉现代密码学或者网络安全相关技术&lt;/li&gt;
-&lt;li&gt;精通可信计算技术原理与应用&lt;/li&gt;
-&lt;li&gt;熟悉软件形式化验证技术&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;蚂蚁金服-baas-区块链平台高级研发工程师&#34;&gt;蚂蚁金服-BaaS-区块链平台高级研发工程师&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;岗位描述&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;负责基于联盟链的区块链云平台架构设计与核心代码开发&lt;/li&gt;
-&lt;li&gt;搭建开发区块链的平台和基础框架，衔接与落地区块链技术的行业应用&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;岗位要求&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;掌握区块链原理，熟悉至少一个区块链开源项目，例如 Hyperledger Fabric、Ethereum等，有区块链开发和开源贡献经验更佳&lt;/li&gt;
-&lt;li&gt;理解各类主流的共识算法，包括不限于DPoS，PBFT，Paxos，Raft等&lt;/li&gt;
-&lt;li&gt;熟练掌握Go，Java，C++等主流区块链系统开发语言至少一种，Go优先，参与过区块链开源社区并贡献源码者优先&lt;/li&gt;
-&lt;li&gt;了解一些主流NoSQL数据库的原理与使用，尤其是KV型数据库，包括不限于LevelDB，RocksDB等&lt;/li&gt;
-&lt;li&gt;熟悉Linux操作系统，熟练掌握Docker容器技术的原理，部署和使用优化&lt;/li&gt;
-&lt;li&gt;熟悉数字加密算法，安全协议，分布式计算&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;区块链研发专家&#34;&gt;区块链研发专家&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;岗位描述&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;主导全球支付区块链项目的各类业务、技术改造类项目的系统分析与设计工作，承担核心功能代码编写，开发与维护系统公用核心模块；探索实践区块链在业务中的应用场景及价值&lt;/li&gt;
-&lt;li&gt;系统性能优化，主导技术难题攻关，持续提升系统在大规模分布式系统环境下性能，解决各类潜在系统技术风险，保证系统的安全、稳定、快速运行&lt;/li&gt;
-&lt;li&gt;负责指导、培训普通开发工程师，审核开发工程师的设计与研发质量&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;岗位要求&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;扎实的java编程基础，精通Java EE、SOA、OSGI等相关技术；对各种开源的框架如Spring、Mybatis/Hibernate等有深入的了解，对框架本身有过开发或重构者可优先考虑&lt;/li&gt;
-&lt;li&gt;熟练使用主流关系/对象数据库，3年以上大规模高并发访问的Web应用系统设计和开发经验&lt;/li&gt;
-&lt;li&gt;了解区块链相关技术及概念，熟悉区块链开源项目优先，例如 IBM Hyperledge、Ethereum等&lt;/li&gt;
-&lt;li&gt;具备良好的识别和设计通用框架及模块的能力，有网关或开放平台设计经验者优先&lt;/li&gt;
-&lt;li&gt;熟练掌握unix/linux操作系统，对常用命令运用娴熟，能够根据实际需要快速编写shell脚本&lt;/li&gt;
-&lt;li&gt;较强的表达和沟通能力；工作认真、严谨、敬业，对系统质量有近乎苛刻的要求意识&lt;/li&gt;
-&lt;li&gt;具有大型电子商务网站以及银行业核心系统、电信boss系统设计与研发经验背景的优先考虑&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;蚂蚁金服-区块链应用开发工程师技术专家&#34;&gt;蚂蚁金服-区块链应用开发工程师/技术专家&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;岗位描述&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;负责蚂蚁金融科技区块链各业务产品的系统分析和架构设计，并主导完成详细设计和编码的任务，确保项目的进度和质量&lt;/li&gt;
-&lt;li&gt;维护和升级现有金融科技区块链软件产品和系统，快速定位并修复现有软件缺陷&lt;/li&gt;
-&lt;li&gt;能够有效地对新人或普通开发工程师进行辅导，帮助其快速成长&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;岗位要求&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;3年以上开发工作经验，JAVA、 C++、Golang 至少精通一种&lt;/li&gt;
-&lt;li&gt;JAVA基础扎实：精通多线程编程，熟悉分布式,缓存,消息队列等机制；熟悉JVM，包括内存模型、类加载机制以及性能优化&lt;/li&gt;
-&lt;li&gt;具备良好的识别业务关键需求和设计领域模型的能力&lt;/li&gt;
-&lt;li&gt;热爱技术，工作认真、严谨，对系统质量有高要求的意识，善于沟通与团队协作&lt;/li&gt;
-&lt;li&gt;有区块链、云产品、中间件、复杂企业软件开发经验经验者优先&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;蚂蚁金服-平台技术专家高级专家&#34;&gt;蚂蚁金服-平台技术专家/高级专家&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;岗位描述&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;负责区块链系统核心数据据结构和算法的设计和开发&lt;/li&gt;
-&lt;li&gt;负责区块链系统核心模块的设计和开发&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;岗位要求&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;5年以上工作经历，良好的计算机编程技术基础&lt;/li&gt;
-&lt;li&gt;熟悉开源的区块链系统之一，了解其架构和核心数据结构，Ethereum、Bitcoin、HyperLedger等&lt;/li&gt;
-&lt;li&gt;熟悉分布式一致性算法或区块链共识协议之一Paxos、Raft 、PBFT、PoW、PoS、Algorand等&lt;/li&gt;
-&lt;li&gt;精通C++，GoLang等编程语言之一，熟悉Linux应用开发&lt;/li&gt;
-&lt;li&gt;熟悉分布式、 多线程及高性能的设计与编码及性能调优&lt;/li&gt;
-&lt;li&gt;逻辑能力强、思维活跃，接受新事物能力强&lt;/li&gt;
-&lt;li&gt;性格开朗乐观，责任心强，积极主动，善于沟通，具有团队精神&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;蚂蚁金服-区块链云服务开发技术专家&#34;&gt;蚂蚁金服-区块链云服务开发技术专家&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;岗位描述&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;设计开发基于云平台的区块链云服务（包括BaaS、以及基于区块链的SaaS服务等），可支持面向公有云和私有云的部署&lt;/li&gt;
-&lt;li&gt;与阿里云产品技术团队合作，完成区块链云服务的管控运维体系的开发、测试、上线、升级、客户支持等工作&lt;/li&gt;
-&lt;li&gt;研究并攻克区块链技术和云服务的关键技术挑战&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;岗位要求&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;3-5年企业级软件/云服务开发工作经验，精通Golang/Java/Node.js等一种开发语言，熟悉Spring Boot和微服务架构、了解容器技术(Docker、Kubernetes)者优先&lt;/li&gt;
-&lt;li&gt;熟悉性能、可用性、伸缩性、扩展性、安全性、运维监控、集成发布等&lt;/li&gt;
-&lt;li&gt;有全栈开发能力者优先&lt;/li&gt;
-&lt;li&gt;熟悉开源区块链技术框架(如Hyperledger Fabric/Ethereum/R3 Corda)或对区块链开源技术做出代码贡献者优先&lt;/li&gt;
-&lt;li&gt;有云计算平台（阿里云/Azure/AWS等等）工作经验者优先&lt;/li&gt;
-&lt;li&gt;快速学习能力，出色的团队沟通和协作能力，较强的自我驱动能力&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       
@@ -2267,6 +2150,134 @@ Select cheapest neighbor as currentState and goto step2
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Blockchain Job Description</title>
+      <link>https://www.hexarthur.com/en/2020/10/02/blockchain-job-description/</link>
+      <pubDate>Fri, 02 Oct 2020 00:07:31 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/2020/10/02/blockchain-job-description/</guid>
+      
+        <description>&lt;h1 id=&#34;blockchain-job-description&#34;&gt;Blockchain Job Description&lt;/h1&gt;
+&lt;h2 id=&#34;蚂蚁集团-区块链安全高级研发工程师研发专家&#34;&gt;蚂蚁集团-区块链安全高级研发工程师/研发专家&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;岗位描述&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;负责智能合约安全审计工具、合约虚拟机增强扩展等系统的研发&lt;/li&gt;
+&lt;li&gt;负责区块链相关安全解决方案的研发&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;岗位要求&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;熟练掌握至少一种编程语言（C/C++、GO等）&lt;/li&gt;
+&lt;li&gt;熟悉区块链技术原理，并熟悉至少一种业界常见的区块链开源系统或解决方案（如比特币、以太坊、EOS、Fabric等）&lt;/li&gt;
+&lt;li&gt;熟悉智能合约虚拟机（如EVM、WASM等）的原理，具备定制化开发能力&lt;/li&gt;
+&lt;li&gt;具备良好的沟通表达能力，逻辑能力，良好的团队合作意识&lt;/li&gt;
+&lt;li&gt;3年以上研发经验，如有区块链研发经历者更优先&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;蚂蚁金服-区块链研发专家&#34;&gt;蚂蚁金服-区块链研发专家&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;岗位描述&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;参与区块链核心系统的架构设计和研发工作&lt;/li&gt;
+&lt;li&gt;发展区块链技术，探索和推进区块链技术在不同场景的应用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;岗位要求&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;精通C/C++/JAVA语言开发，重视代码质量和容错性，遵守良好的编码风格&lt;/li&gt;
+&lt;li&gt;熟悉LInux环境下多进程/线程、文件系统及网络编程&lt;/li&gt;
+&lt;li&gt;熟悉Linux的常用命令，熟悉常见的性能查看及调优工具使用&lt;/li&gt;
+&lt;li&gt;具备以下背景或经验之一者优先：
+&lt;ul&gt;
+&lt;li&gt;参与过网络框架、搜索引擎、分布式数据库、云计算平台等底层平台或组件开发&lt;/li&gt;
+&lt;li&gt;熟悉Bitcoin、Ethereum等开源区块链系统细节设计&lt;/li&gt;
+&lt;li&gt;熟悉BFT、Paxos、Raft等一致性协议之一的细节&lt;/li&gt;
+&lt;li&gt;熟悉PoW，PoS等区块链共识算法/协议细节&lt;/li&gt;
+&lt;li&gt;熟悉现代密码学或者网络安全相关技术&lt;/li&gt;
+&lt;li&gt;精通可信计算技术原理与应用&lt;/li&gt;
+&lt;li&gt;熟悉软件形式化验证技术&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;蚂蚁金服-baas-区块链平台高级研发工程师&#34;&gt;蚂蚁金服-BaaS-区块链平台高级研发工程师&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;岗位描述&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;负责基于联盟链的区块链云平台架构设计与核心代码开发&lt;/li&gt;
+&lt;li&gt;搭建开发区块链的平台和基础框架，衔接与落地区块链技术的行业应用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;岗位要求&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;掌握区块链原理，熟悉至少一个区块链开源项目，例如 Hyperledger Fabric、Ethereum等，有区块链开发和开源贡献经验更佳&lt;/li&gt;
+&lt;li&gt;理解各类主流的共识算法，包括不限于DPoS，PBFT，Paxos，Raft等&lt;/li&gt;
+&lt;li&gt;熟练掌握Go，Java，C++等主流区块链系统开发语言至少一种，Go优先，参与过区块链开源社区并贡献源码者优先&lt;/li&gt;
+&lt;li&gt;了解一些主流NoSQL数据库的原理与使用，尤其是KV型数据库，包括不限于LevelDB，RocksDB等&lt;/li&gt;
+&lt;li&gt;熟悉Linux操作系统，熟练掌握Docker容器技术的原理，部署和使用优化&lt;/li&gt;
+&lt;li&gt;熟悉数字加密算法，安全协议，分布式计算&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;区块链研发专家&#34;&gt;区块链研发专家&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;岗位描述&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;主导全球支付区块链项目的各类业务、技术改造类项目的系统分析与设计工作，承担核心功能代码编写，开发与维护系统公用核心模块；探索实践区块链在业务中的应用场景及价值&lt;/li&gt;
+&lt;li&gt;系统性能优化，主导技术难题攻关，持续提升系统在大规模分布式系统环境下性能，解决各类潜在系统技术风险，保证系统的安全、稳定、快速运行&lt;/li&gt;
+&lt;li&gt;负责指导、培训普通开发工程师，审核开发工程师的设计与研发质量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;岗位要求&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;扎实的java编程基础，精通Java EE、SOA、OSGI等相关技术；对各种开源的框架如Spring、Mybatis/Hibernate等有深入的了解，对框架本身有过开发或重构者可优先考虑&lt;/li&gt;
+&lt;li&gt;熟练使用主流关系/对象数据库，3年以上大规模高并发访问的Web应用系统设计和开发经验&lt;/li&gt;
+&lt;li&gt;了解区块链相关技术及概念，熟悉区块链开源项目优先，例如 IBM Hyperledge、Ethereum等&lt;/li&gt;
+&lt;li&gt;具备良好的识别和设计通用框架及模块的能力，有网关或开放平台设计经验者优先&lt;/li&gt;
+&lt;li&gt;熟练掌握unix/linux操作系统，对常用命令运用娴熟，能够根据实际需要快速编写shell脚本&lt;/li&gt;
+&lt;li&gt;较强的表达和沟通能力；工作认真、严谨、敬业，对系统质量有近乎苛刻的要求意识&lt;/li&gt;
+&lt;li&gt;具有大型电子商务网站以及银行业核心系统、电信boss系统设计与研发经验背景的优先考虑&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;蚂蚁金服-区块链应用开发工程师技术专家&#34;&gt;蚂蚁金服-区块链应用开发工程师/技术专家&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;岗位描述&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;负责蚂蚁金融科技区块链各业务产品的系统分析和架构设计，并主导完成详细设计和编码的任务，确保项目的进度和质量&lt;/li&gt;
+&lt;li&gt;维护和升级现有金融科技区块链软件产品和系统，快速定位并修复现有软件缺陷&lt;/li&gt;
+&lt;li&gt;能够有效地对新人或普通开发工程师进行辅导，帮助其快速成长&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;岗位要求&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;3年以上开发工作经验，JAVA、 C++、Golang 至少精通一种&lt;/li&gt;
+&lt;li&gt;JAVA基础扎实：精通多线程编程，熟悉分布式,缓存,消息队列等机制；熟悉JVM，包括内存模型、类加载机制以及性能优化&lt;/li&gt;
+&lt;li&gt;具备良好的识别业务关键需求和设计领域模型的能力&lt;/li&gt;
+&lt;li&gt;热爱技术，工作认真、严谨，对系统质量有高要求的意识，善于沟通与团队协作&lt;/li&gt;
+&lt;li&gt;有区块链、云产品、中间件、复杂企业软件开发经验经验者优先&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;蚂蚁金服-平台技术专家高级专家&#34;&gt;蚂蚁金服-平台技术专家/高级专家&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;岗位描述&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;负责区块链系统核心数据据结构和算法的设计和开发&lt;/li&gt;
+&lt;li&gt;负责区块链系统核心模块的设计和开发&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;岗位要求&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;5年以上工作经历，良好的计算机编程技术基础&lt;/li&gt;
+&lt;li&gt;熟悉开源的区块链系统之一，了解其架构和核心数据结构，Ethereum、Bitcoin、HyperLedger等&lt;/li&gt;
+&lt;li&gt;熟悉分布式一致性算法或区块链共识协议之一Paxos、Raft 、PBFT、PoW、PoS、Algorand等&lt;/li&gt;
+&lt;li&gt;精通C++，GoLang等编程语言之一，熟悉Linux应用开发&lt;/li&gt;
+&lt;li&gt;熟悉分布式、 多线程及高性能的设计与编码及性能调优&lt;/li&gt;
+&lt;li&gt;逻辑能力强、思维活跃，接受新事物能力强&lt;/li&gt;
+&lt;li&gt;性格开朗乐观，责任心强，积极主动，善于沟通，具有团队精神&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;蚂蚁金服-区块链云服务开发技术专家&#34;&gt;蚂蚁金服-区块链云服务开发技术专家&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;岗位描述&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;设计开发基于云平台的区块链云服务（包括BaaS、以及基于区块链的SaaS服务等），可支持面向公有云和私有云的部署&lt;/li&gt;
+&lt;li&gt;与阿里云产品技术团队合作，完成区块链云服务的管控运维体系的开发、测试、上线、升级、客户支持等工作&lt;/li&gt;
+&lt;li&gt;研究并攻克区块链技术和云服务的关键技术挑战&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;岗位要求&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;3-5年企业级软件/云服务开发工作经验，精通Golang/Java/Node.js等一种开发语言，熟悉Spring Boot和微服务架构、了解容器技术(Docker、Kubernetes)者优先&lt;/li&gt;
+&lt;li&gt;熟悉性能、可用性、伸缩性、扩展性、安全性、运维监控、集成发布等&lt;/li&gt;
+&lt;li&gt;有全栈开发能力者优先&lt;/li&gt;
+&lt;li&gt;熟悉开源区块链技术框架(如Hyperledger Fabric/Ethereum/R3 Corda)或对区块链开源技术做出代码贡献者优先&lt;/li&gt;
+&lt;li&gt;有云计算平台（阿里云/Azure/AWS等等）工作经验者优先&lt;/li&gt;
+&lt;li&gt;快速学习能力，出色的团队沟通和协作能力，较强的自我驱动能力&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       
@@ -4525,75 +4536,6 @@ If iterable is not specified, the new deque is empty.
 &lt;p&gt;When a government creates large quantity of the nation&amp;rsquo;s money, the value of the money falls.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Principle 10: Society Faces a Short-Run Trade-Off between Inflation and Unemployment&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Over a period of a year or two, many economic policies push inflation and unemployment in opposite directions&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>ICOM6012 Topic 1 Overview</title>
-      <link>https://www.hexarthur.com/en/2020/09/09/icom6012-topic-1-overview/</link>
-      <pubDate>Wed, 09 Sep 2020 20:22:09 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/2020/09/09/icom6012-topic-1-overview/</guid>
-      
-        <description>&lt;h1 id=&#34;icom6012-internet-infrastructure-technologies&#34;&gt;ICOM6012 Internet Infrastructure Technologies&lt;/h1&gt;
-&lt;h2 id=&#34;topic-1-overview&#34;&gt;Topic 1 Overview&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Internet&amp;rsquo;s Birthday:&lt;/strong&gt; Sept. 2 or Oct. 29, 1969.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;ARPANET (1969 -)
-&lt;ul&gt;
-&lt;li&gt;TCP protocol in 1974&lt;/li&gt;
-&lt;li&gt;&amp;ldquo;Internet = Internetworking&amp;rdquo;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;NSFNET (1986 -)&lt;/li&gt;
-&lt;li&gt;The Internet (late 1980s)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Some Interesting Topics about Internet (More than Technical)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=XvSBkoAdAPw&#34;&gt;Who controls the Internet?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=HqXKEgTYZBQ&#34;&gt;What is Net Neutrality?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.nytimes.com/2020/08/18/opinion/tiktok-wechat-ban-trump.html&#34;&gt;A TikTok Ban Is Overdue&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.cnbc.com/2020/09/01/zooms-stock-surges-41percent-on-earnings-adding-over-37-billion-in-value.html&#34;&gt;Zoom’s stock surges 41% after earnings beat, adding over $37 billion in market cap&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Evolution of Computers&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Mainframe&lt;/li&gt;
-&lt;li&gt;Mini-Computer&lt;/li&gt;
-&lt;li&gt;Workstation&lt;/li&gt;
-&lt;li&gt;Personal Computer&lt;/li&gt;
-&lt;li&gt;Laptop&lt;/li&gt;
-&lt;li&gt;Smart Phone&lt;/li&gt;
-&lt;li&gt;mm-scale sensors&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/evolution_of_computers.png&#34; alt=&#34;evolution_of_computers&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Semiconductors in Computers&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Transistor: a semiconductor device used to amplify or switch electronic signals and electrical power.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/semiconductor.png&#34; alt=&#34;semiconductor&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;IC: a set of electronic circuits on a small flat piece (&amp;ldquo;chip&amp;rdquo;) of semiconductor. Makes extensive use of transistors.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Electronic circuit: Processing (Computing), DC&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Electrical circuit: Powering, AC&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Integrated Circuit&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;General purpose, microprocessors from Intel&lt;/li&gt;
-&lt;li&gt;Application-specific, or ASIC, &lt;a href=&#34;https://www.apple.com/hk/en/newsroom/2020/06/apple-announces-mac-transition-to-apple-silicon/&#34;&gt;Apple-designed Processors&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;To Make an IC&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Design&lt;/li&gt;
-&lt;li&gt;Fabrication (fabrication plants/factories, &amp;ldquo;foundries&amp;rdquo; or &amp;ldquo;fabs&amp;rdquo;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/fabrication_process.png&#34; alt=&#34;fabrication_process&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&amp;ldquo;Fabless&amp;rdquo; Chipmakers&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Design and sells chips but outsources the fabrication&lt;/li&gt;
-&lt;li&gt;Create significant savings for fabless companies&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://vimeo.com/70293585&#34;&gt;Gordon Moore: Intel Founder&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
       
     </item>

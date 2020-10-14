@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 14 Oct 2020 12:00:31 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2020 19:07:31 +0800</lastBuildDate>
     
     <atom:link href="https://www.hexarthur.com/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -66,7 +66,7 @@
     <item>
       <title>Blockchain Job Description</title>
       <link>https://www.hexarthur.com/en/2020/10/14/blockchain-job-description/</link>
-      <pubDate>Wed, 14 Oct 2020 12:00:31 +0800</pubDate>
+      <pubDate>Wed, 14 Oct 2020 19:07:31 +0800</pubDate>
       
       <guid>https://www.hexarthur.com/en/2020/10/14/blockchain-job-description/</guid>
       
@@ -74,34 +74,41 @@
 &lt;h2 id=&#34;技术要求&#34;&gt;技术要求&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;编程语言&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;硬性要求（熟练/精通至少一种）
+&lt;li&gt;硬性要求 (熟练/精通至少一种)
 &lt;ul&gt;
-&lt;li&gt;JAVA
+&lt;li&gt;JAVA(主要掌握)
 &lt;ul&gt;
-&lt;li&gt;多线程编程&lt;/li&gt;
-&lt;li&gt;分布式&lt;/li&gt;
+&lt;li&gt;多线程编程(threadpool)&lt;/li&gt;
+&lt;li&gt;分布式(Redius实现分布式一致的锁)&lt;/li&gt;
 &lt;li&gt;缓存&lt;/li&gt;
-&lt;li&gt;消息队列&lt;/li&gt;
+&lt;li&gt;消息队列(Kafka工作原理+配置)&lt;/li&gt;
 &lt;li&gt;JVM
 &lt;ul&gt;
-&lt;li&gt;内存模型&lt;/li&gt;
+&lt;li&gt;内存模型(JVM内存整理、垃圾处理的策略，root链搜索引用)&lt;/li&gt;
 &lt;li&gt;类加载机制&lt;/li&gt;
 &lt;li&gt;性能优化&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;SOA架构（面向服务的架构，Service-Oriented Architecture）&lt;/li&gt;
-&lt;li&gt;OSGI（开放服务网关协议，Open Service Gateway Initiative）&lt;/li&gt;
-&lt;li&gt;开源框架
+&lt;li&gt;微服务架构
+&lt;ul&gt;
+&lt;li&gt;阿里微服务Dubbo，服务注册机制&lt;/li&gt;
+&lt;li&gt;DDD(领域驱动设计，Domain Driven Design)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;开源框架应用场景
 &lt;ul&gt;
 &lt;li&gt;Spring&lt;/li&gt;
+&lt;li&gt;Spring Boot&lt;/li&gt;
 &lt;li&gt;Mybatis&lt;/li&gt;
 &lt;li&gt;Hibernate&lt;/li&gt;
 &lt;li&gt;&amp;hellip;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;SOA架构 (面向服务的架构，Service-Oriented Architecture)&lt;/li&gt;
+&lt;li&gt;OSGI (开放服务网关协议，Open Service Gateway Initiative)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Golang (标注优先)&lt;/li&gt;
+&lt;li&gt;Golang&lt;/li&gt;
 &lt;li&gt;C++&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -134,11 +141,13 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;关系型数据库&lt;/li&gt;
+&lt;li&gt;关系型数据库
+&lt;ul&gt;
+&lt;li&gt;悲观锁&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Spring Boot&lt;/li&gt;
-&lt;li&gt;微服务架构&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;容器技术
 &lt;ul&gt;
 &lt;li&gt;Docker
@@ -167,7 +176,7 @@
 &lt;/li&gt;
 &lt;li&gt;智能合约虚拟机
 &lt;ul&gt;
-&lt;li&gt;EVM&lt;/li&gt;
+&lt;li&gt;EVM命令集，以太坊白皮书&lt;/li&gt;
 &lt;li&gt;WASM&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -214,7 +223,25 @@
 &lt;li&gt;识别和设计通用框架及模块&lt;/li&gt;
 &lt;li&gt;识别业务关键需求和设计领域模型&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;references-collected-from-alibaba-career-website&#34;&gt;References: Collected from Alibaba career website)&lt;/h1&gt;
+&lt;h2 id=&#34;学习路径&#34;&gt;学习路径&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;刷题 - 全程，每天2题&lt;/li&gt;
+&lt;li&gt;Jave相关 - 2月&lt;/li&gt;
+&lt;li&gt;Linux基础与数据库 - 1周&lt;/li&gt;
+&lt;li&gt;Web/App开发 - 2周&lt;/li&gt;
+&lt;li&gt;区块链Case(基于Ethereum的分布式数据隐私应用) - 2月
+&lt;ul&gt;
+&lt;li&gt;需求调研 - Misty&lt;/li&gt;
+&lt;li&gt;产品规划 - Marshal&lt;/li&gt;
+&lt;li&gt;前端开发 - TBD&lt;/li&gt;
+&lt;li&gt;后端开发 - Arthur&lt;/li&gt;
+&lt;li&gt;数据处理 - Misty&lt;/li&gt;
+&lt;li&gt;技术指导 - Mengling&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;区块链相关岗位实习 - 2021年2月开始&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
 &lt;h2 id=&#34;蚂蚁集团-区块链安全高级研发工程师研发专家&#34;&gt;蚂蚁集团-区块链安全高级研发工程师/研发专家&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;岗位描述&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;

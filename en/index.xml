@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 14 Oct 2020 19:07:31 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2020 17:32:44 +0800</lastBuildDate>
     
     <atom:link href="https://www.hexarthur.com/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -59,6 +59,183 @@
 &lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCR0O0s303tGBi3P02hstQPA/&#34;&gt;Youtube&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.reddit.com/user/pseudo_yu&#34;&gt;Reddit&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>ICOM6012 Topic 4 Transport Layer</title>
+      <link>https://www.hexarthur.com/en/2020/10/15/icom6012-topic-4-transport-layer/</link>
+      <pubDate>Thu, 15 Oct 2020 17:32:44 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/2020/10/15/icom6012-topic-4-transport-layer/</guid>
+      
+        <description>&lt;h1 id=&#34;icom6012-internet-infrastructure-technologies&#34;&gt;ICOM6012 Internet Infrastructure Technologies&lt;/h1&gt;
+&lt;h2 id=&#34;topic-4-transport-layer&#34;&gt;Topic 4 Transport Layer&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Transport Services and Protocol&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Provide logical communication between app processes running on different hosts&lt;/li&gt;
+&lt;li&gt;Run in end systems
+&lt;ul&gt;
+&lt;li&gt;Send side
+&lt;ul&gt;
+&lt;li&gt;Breaks app messages into segments, passes to network layer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Receive side
+&lt;ul&gt;
+&lt;li&gt;Reassembles segments into messages, passes to application layer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;More than one transport protocol available to apps
+&lt;ul&gt;
+&lt;li&gt;TCP (RFC 793, 1981)&lt;/li&gt;
+&lt;li&gt;UDP (RFC 768, 1980)&lt;/li&gt;
+&lt;li&gt;SCTP (RFC 4960, 2007)&lt;/li&gt;
+&lt;li&gt;DCCP (RFC 4340, 2006)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Transport vs. Network Layer&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Network layer
+&lt;ul&gt;
+&lt;li&gt;Logical communication between hosts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Transport layer
+&lt;ul&gt;
+&lt;li&gt;Logical communication between processes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Transport Layer Actions&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sender
+&lt;ul&gt;
+&lt;li&gt;Get application layer message&lt;/li&gt;
+&lt;li&gt;Determine segment header fields values&lt;/li&gt;
+&lt;li&gt;Create segment&lt;/li&gt;
+&lt;li&gt;Pass segment to IP&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Reveiver
+&lt;ul&gt;
+&lt;li&gt;Receive segment from IP&lt;/li&gt;
+&lt;li&gt;Check header values&lt;/li&gt;
+&lt;li&gt;Extract  application layer message&lt;/li&gt;
+&lt;li&gt;Demultiplexes message up to application via socket&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Internet Transport Layer Protocols&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;TCP (Reliable, in-order delivery)
+&lt;ul&gt;
+&lt;li&gt;Congestion control&lt;/li&gt;
+&lt;li&gt;Flow control&lt;/li&gt;
+&lt;li&gt;Connection setup&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;UDP (Unreliable unordered delivery)
+&lt;ul&gt;
+&lt;li&gt;No frills&lt;/li&gt;
+&lt;li&gt;Bare bones&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;best-effort&amp;rdquo;
+&lt;ul&gt;
+&lt;li&gt;Lost&lt;/li&gt;
+&lt;li&gt;Delivered out-of-order to app&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;No handshaking between UDP sender, receiver&lt;/li&gt;
+&lt;li&gt;Each UDP segemnt handled independently of others&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Services not available
+&lt;ul&gt;
+&lt;li&gt;Delay guarantee&lt;/li&gt;
+&lt;li&gt;Bandwidth guarantee&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Multiplexing and Demultiplexing&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/multiplexing.png&#34; alt=&#34;multiplexing&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Demultiplexing
+&lt;ul&gt;
+&lt;li&gt;Host receives IP datagrams
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/demultiplexing.jpeg&#34; alt=&#34;demultiplexing&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Source IP address&lt;/li&gt;
+&lt;li&gt;Destination IP address&lt;/li&gt;
+&lt;li&gt;One transport layer segment
+&lt;ul&gt;
+&lt;li&gt;Source port number&lt;/li&gt;
+&lt;li&gt;Destination port number&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Host uses IP addresses &amp;amp; port numbers to redirect segment to appropriate socket&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Connectionless Demux (UDP)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create socket with unique local port #&lt;/li&gt;
+&lt;li&gt;Sender side: create datagram to send into UDP socket
+&lt;ul&gt;
+&lt;li&gt;Desitiation IP address&lt;/li&gt;
+&lt;li&gt;Destination port #&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Receiver side: receive UDP segemnt
+&lt;ul&gt;
+&lt;li&gt;Check desitnation port # in segment&lt;/li&gt;
+&lt;li&gt;Directs UDP segement to socket with that port #
+&lt;ul&gt;
+&lt;li&gt;IP datagrams with same dest. port #, but different source IP addresses and/or source port numbers will be directed to same socket at dest&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Example
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/connectionless_demux.png&#34; alt=&#34;connectionless_demux&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Connection-oriented Demux (TCP)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;TCP socket identified by 4-tuple
+&lt;ul&gt;
+&lt;li&gt;Source IP address&lt;/li&gt;
+&lt;li&gt;Source port number&lt;/li&gt;
+&lt;li&gt;Destination IP address&lt;/li&gt;
+&lt;li&gt;Destination port number&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Server host may support many simultaneous TCP sockets&lt;/li&gt;
+&lt;li&gt;Demux
+&lt;ul&gt;
+&lt;li&gt;Receiver uses all four values to direct segment to appropriate socket&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Web servers have different sockets for each connecting client
+&lt;ul&gt;
+&lt;li&gt;Non‐persistent HTTP will have different socket for each request&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Example
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/connection_oriented_demux.png&#34; alt=&#34;connection_oriented_demux&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Demultiplexing: A Complete View&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/demultiplexing_complete_view.png&#34; alt=&#34;demultiplexing_complete_view&#34;&gt;&lt;/p&gt;
 </description>
       
     </item>
@@ -4493,49 +4670,6 @@ If iterable is not specified, the new deque is empty.
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>ECO108 Topic 1 Ten Principles of Economics</title>
-      <link>https://www.hexarthur.com/en/2020/09/10/eco108-topic-1-ten-principles-of-economics/</link>
-      <pubDate>Thu, 10 Sep 2020 09:28:12 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/2020/09/10/eco108-topic-1-ten-principles-of-economics/</guid>
-      
-        <description>&lt;h1 id=&#34;introduction-to-economics&#34;&gt;Introduction to Economics&lt;/h1&gt;
-&lt;p&gt;&lt;em&gt;The word economy comes from the Greek work oikonomos, which means &amp;ldquo;one who manages a household&amp;rdquo;.&lt;/em&gt;
-&lt;em&gt;Economics is the study of How society manages its scarce resources.&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;topic-1-ten-principles-of-economics&#34;&gt;Topic 1 Ten Principles of Economics&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Principle 1: People Face Trade-Offs&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;One classic trade-off - &amp;ldquo;guns (national defense) and butter (consumer goods)&amp;rdquo;.&lt;/p&gt;
-&lt;p&gt;Another trade-off - efficiency and equality.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Principle 2: The Cost of Something Is What You Give Up to Get It&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Opportunity Cost&lt;/em&gt; of an item is what you give up to get that item&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Principle 3: Rational People Think at the Margin&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Marginal Change:&lt;/em&gt; A small incremental adjustment to an existing plan of action&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Principle 4: People Respond to Incentives&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;An &lt;em&gt;incentive&lt;/em&gt; is something that includes a person to act, such as the prospect of a punishment or reward&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Principle 5: Trade Can Make Everyone Better Off&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Trade allows countries to specialize in what they do best and to enjoy a greater variety of goods and services&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Principle 6: Markets Are Usually a Good Way to Organize Economic Activity&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;In a &lt;em&gt;market economy&lt;/em&gt;, the decision of a central planner are replaced by the decisions of millions of firms and households&lt;/p&gt;
-&lt;p&gt;A Case Study: Uber&lt;/p&gt;
-&lt;p&gt;Surge pricing makes consumers pay more at times, but because Uber drivers respond to incentives, it also increases the quantity of car services supplied when they are most needed.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Adam Smith is saying that participants in the economy are motivated by self-interest and that the &amp;ldquo;invisible hand&amp;rdquo; of the market guides this self-interest into promoting general economic well-beings.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Principle 7: Governments Can Sometimes Improve Market Outcomes&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Market failure&lt;/em&gt; ia a situation in which the market on its own fails to produce an rfficient allocation of resources.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Externality, the impact of one person&amp;rsquo;s actions on the well-being of a bystander, e.g. pollution&lt;/li&gt;
-&lt;li&gt;Market power, the ability of a single person or firm o unduly influence market prices, e.g. monopoly&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Principle 8: A Country&amp;rsquo;s Standard of Living Depends on Its Ability to Produce Goods and Services&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Productivity&lt;/em&gt; is the amount of goods and services produced by each unit of labor input&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Principle 9: Prices Rise When the Government Prints Too Much Money&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;When a government creates large quantity of the nation&amp;rsquo;s money, the value of the money falls.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Principle 10: Society Faces a Short-Run Trade-Off between Inflation and Unemployment&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Over a period of a year or two, many economic policies push inflation and unemployment in opposite directions&lt;/p&gt;
 </description>
       
     </item>

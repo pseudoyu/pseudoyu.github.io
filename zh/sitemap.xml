@@ -9,14 +9,98 @@
   </url>
   
   <url>
-    <loc>https://www.hexarthur.com/zh/tag/blockchain/</loc>
-    <lastmod>2020-10-14T19:07:31+08:00</lastmod>
+    <loc>https://www.hexarthur.com/zh/categories/</loc>
+    <lastmod>2020-10-15T17:32:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.hexarthur.com/zh/categories/</loc>
+    <loc>https://www.hexarthur.com/zh/tag/ecic/</loc>
+    <lastmod>2020-10-15T17:32:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/zh/tag/hku/</loc>
+    <lastmod>2020-10-15T17:32:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/zh/tag/icom/</loc>
+    <lastmod>2020-10-15T17:32:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/zh/tag/icom6012/</loc>
+    <lastmod>2020-10-15T17:32:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/zh/2020/10/15/icom6012-topic-4-transport-layer/</loc>
+    <lastmod>2020-10-15T17:32:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/zh/tag/internet/</loc>
+    <lastmod>2020-10-15T17:32:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/zh/category/notes/</loc>
+    <lastmod>2020-10-15T17:32:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/zh/tag/notes/</loc>
+    <lastmod>2020-10-15T17:32:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/zh/posts/</loc>
+    <lastmod>2020-10-15T17:32:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/zh/</loc>
+    <lastmod>2020-10-15T17:32:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/zh/tags/</loc>
+    <lastmod>2020-10-15T17:32:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/zh/tag/technology/</loc>
+    <lastmod>2020-10-15T17:32:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hexarthur.com/zh/tag/blockchain/</loc>
     <lastmod>2020-10-14T19:07:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -44,49 +128,7 @@
   </url>
   
   <url>
-    <loc>https://www.hexarthur.com/zh/category/notes/</loc>
-    <lastmod>2020-10-14T19:07:31+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/zh/tag/notes/</loc>
-    <lastmod>2020-10-14T19:07:31+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://www.hexarthur.com/zh/tag/plan/</loc>
-    <lastmod>2020-10-14T19:07:31+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/zh/posts/</loc>
-    <lastmod>2020-10-14T19:07:31+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/zh/</loc>
-    <lastmod>2020-10-14T19:07:31+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/zh/tags/</loc>
-    <lastmod>2020-10-14T19:07:31+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/zh/tag/technology/</loc>
     <lastmod>2020-10-14T19:07:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -101,13 +143,6 @@
   
   <url>
     <loc>https://www.hexarthur.com/zh/tag/e-commerce/</loc>
-    <lastmod>2020-10-09T11:01:28+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/zh/tag/ecic/</loc>
     <lastmod>2020-10-09T11:01:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -135,35 +170,7 @@
   </url>
   
   <url>
-    <loc>https://www.hexarthur.com/zh/tag/hku/</loc>
-    <lastmod>2020-10-09T11:01:28+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/zh/tag/icom/</loc>
-    <lastmod>2020-10-07T09:32:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/zh/tag/icom6012/</loc>
-    <lastmod>2020-10-07T09:32:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://www.hexarthur.com/zh/2020/10/07/icom6012-topic-3-application-layer/</loc>
-    <lastmod>2020-10-07T09:32:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hexarthur.com/zh/tag/internet/</loc>
     <lastmod>2020-10-07T09:32:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

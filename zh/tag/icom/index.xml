@@ -6,10 +6,20 @@
     <description>Recent content in icom on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 07 Oct 2020 09:32:44 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2020 17:32:44 +0800</lastBuildDate>
     
 	<atom:link href="https://www.hexarthur.com/zh/tag/icom/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ICOM6012 Topic 4 Transport Layer</title>
+      <link>https://www.hexarthur.com/zh/2020/10/15/icom6012-topic-4-transport-layer/</link>
+      <pubDate>Thu, 15 Oct 2020 17:32:44 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/2020/10/15/icom6012-topic-4-transport-layer/</guid>
+      <description>ICOM6012 Internet Infrastructure Technologies Topic 4 Transport Layer Transport Services and Protocol
+ Provide logical communication between app processes running on different hosts Run in end systems  Send side  Breaks app messages into segments, passes to network layer   Receive side  Reassembles segments into messages, passes to application layer     More than one transport protocol available to apps  TCP (RFC 793, 1981) UDP (RFC 768, 1980) SCTP (RFC 4960, 2007) DCCP (RFC 4340, 2006)    Transport vs.</description>
+    </item>
     
     <item>
       <title>ICOM6012 Topic 3 Application Layer</title>

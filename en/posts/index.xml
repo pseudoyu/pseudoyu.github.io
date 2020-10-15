@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 14 Oct 2020 19:07:31 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2020 17:32:44 +0800</lastBuildDate>
     
 	<atom:link href="https://www.hexarthur.com/en/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ICOM6012 Topic 4 Transport Layer</title>
+      <link>https://www.hexarthur.com/en/2020/10/15/icom6012-topic-4-transport-layer/</link>
+      <pubDate>Thu, 15 Oct 2020 17:32:44 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/2020/10/15/icom6012-topic-4-transport-layer/</guid>
+      <description>ICOM6012 Internet Infrastructure Technologies Topic 4 Transport Layer Transport Services and Protocol
+ Provide logical communication between app processes running on different hosts Run in end systems  Send side  Breaks app messages into segments, passes to network layer   Receive side  Reassembles segments into messages, passes to application layer     More than one transport protocol available to apps  TCP (RFC 793, 1981) UDP (RFC 768, 1980) SCTP (RFC 4960, 2007) DCCP (RFC 4340, 2006)    Transport vs.</description>
+    </item>
     
     <item>
       <title>Blockchain Learning Plan</title>
@@ -212,17 +222,6 @@ Topic 1 Ten Principles of Economics Principle 1: People Face Trade-Offs
 One classic trade-off - &amp;ldquo;guns (national defense) and butter (consumer goods)&amp;rdquo;.
 Another trade-off - efficiency and equality.
 Principle 2: The Cost of Something Is What You Give Up to Get It</description>
-    </item>
-    
-    <item>
-      <title>ICOM6012 Topic 1 Overview</title>
-      <link>https://www.hexarthur.com/en/2020/09/09/icom6012-topic-1-overview/</link>
-      <pubDate>Wed, 09 Sep 2020 20:22:09 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/2020/09/09/icom6012-topic-1-overview/</guid>
-      <description>ICOM6012 Internet Infrastructure Technologies Topic 1 Overview Internet&amp;rsquo;s Birthday: Sept. 2 or Oct. 29, 1969.
- ARPANET (1969 -)  TCP protocol in 1974 &amp;ldquo;Internet = Internetworking&amp;rdquo;   NSFNET (1986 -) The Internet (late 1980s)  Some Interesting Topics about Internet (More than Technical)
- Who controls the Internet? What is Net Neutrality? A TikTok Ban Is Overdue Zoom’s stock surges 41% after earnings beat, adding over $37 billion in market cap  Evolution of Computers</description>
     </item>
     
   </channel>

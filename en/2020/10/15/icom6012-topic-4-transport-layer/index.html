@@ -32,7 +32,7 @@
  Provide logical communication between app processes running on different hosts Run in end systems  Send side  Breaks app messages into segments, passes to network layer   Receive side  Reassembles segments into messages, passes to application layer     More than one transport protocol available to apps  TCP (RFC 793, 1981) UDP (RFC 768, 1980) SCTP (RFC 4960, 2007) DCCP (RFC 4340, 2006)    Transport vs.">
 <meta itemprop="datePublished" content="2020-10-15T17:32:44+08:00" />
 <meta itemprop="dateModified" content="2020-10-15T17:32:44+08:00" />
-<meta itemprop="wordCount" content="343">
+<meta itemprop="wordCount" content="524">
 
 
 
@@ -218,9 +218,68 @@
 <ul>
 <li>TCP (Reliable, in-order delivery)
 <ul>
-<li>Congestion control</li>
-<li>Flow control</li>
+<li>Congestion control
+<ul>
+<li>Router buffer</li>
+</ul>
+</li>
+<li>Point-to-point
+<ul>
+<li>One sender, one receiver</li>
+</ul>
+</li>
+<li>Reliable, in-order byte stream
+<ul>
+<li>No &ldquo;message boundaries&rdquo;</li>
+</ul>
+</li>
+<li>Full duplex data
+<ul>
+<li>Bi‐directional data flow in same connection</li>
+<li>MSS: maximum segment size (excluding header)</li>
+</ul>
+</li>
+<li>Cumulative ACKs</li>
+<li>Pipelining
+<ul>
+<li>TCP congestion and flow control set window size</li>
+</ul>
+</li>
+<li>Flow control
+<ul>
+<li>Sender will not overwhelm receiver</li>
+</ul>
+</li>
 <li>Connection setup</li>
+<li>Connection-oriented
+<ul>
+<li>Handshaking (exchange of control messages) initializes sender, receiver state before data exchange</li>
+<li>TCP socket identified by 4-tuple
+<ul>
+<li>Source IP address</li>
+<li>Source port number</li>
+<li>Destination IP address</li>
+<li>Destination port number</li>
+</ul>
+</li>
+<li>Server host may support many simultaneous TCP sockets</li>
+<li>Demux
+<ul>
+<li>Receiver uses all four values to direct segment to appropriate socket</li>
+</ul>
+</li>
+<li>Web servers have different sockets for each connecting client
+<ul>
+<li>Non‐persistent HTTP will have different socket for each request</li>
+</ul>
+</li>
+<li>Example
+<ul>
+<li><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/connection_oriented_demux.png" alt="connection_oriented_demux"></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>UDP (Unreliable unordered delivery)
@@ -235,38 +294,13 @@
 </li>
 <li>No handshaking between UDP sender, receiver</li>
 <li>Each UDP segemnt handled independently of others</li>
-</ul>
-</li>
 <li>Services not available
 <ul>
 <li>Delay guarantee</li>
 <li>Bandwidth guarantee</li>
 </ul>
 </li>
-</ul>
-<p><strong>Multiplexing and Demultiplexing</strong></p>
-<p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/multiplexing.png" alt="multiplexing"></p>
-<ul>
-<li>Demultiplexing
-<ul>
-<li>Host receives IP datagrams
-<ul>
-<li><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/demultiplexing.jpeg" alt="demultiplexing"></li>
-<li>Source IP address</li>
-<li>Destination IP address</li>
-<li>One transport layer segment
-<ul>
-<li>Source port number</li>
-<li>Destination port number</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Host uses IP addresses &amp; port numbers to redirect segment to appropriate socket</li>
-</ul>
-</li>
-</ul>
-<p><strong>Connectionless Demux (UDP)</strong></p>
+<li>Connectionless Demux
 <ul>
 <li>Create socket with unique local port #</li>
 <li>Sender side: create datagram to send into UDP socket
@@ -291,30 +325,81 @@
 </ul>
 </li>
 </ul>
-<p><strong>Connection-oriented Demux (TCP)</strong></p>
+</li>
+<li>UDP segmeng format
 <ul>
-<li>TCP socket identified by 4-tuple
+<li>Source port #</li>
+<li>Dest port #</li>
+<li>Length</li>
+<li>Checksum (in bytes of UDP segment, including header)
+<ul>
+<li>Goal
+<ul>
+<li>Detect errors (e.g. flipped bits) in transmitted segemnt</li>
+<li><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/udp_checksum.png" alt="udp_checksum"></li>
+</ul>
+</li>
+<li>Sender
+<ul>
+<li>Treat segment contents, including header fields, as sequence of 16‐bit integers</li>
+<li>Checksum: addition (1&rsquo;s complement sum) of segment contents</li>
+<li>Sender puts checksum value into UDP checksum field</li>
+</ul>
+</li>
+<li>Receiver
+<ul>
+<li>Compute checksum of received segment</li>
+<li>Check if computed checksum equals checksum field value
+<ul>
+<li>NO ‐ error detected</li>
+<li>YES ‐ no error detected (may still have errors)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Some implementations allow UDP checksum calculation to be disabled in order to speed up the processing of incoming UDP datagrams</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>UDP used by
+<ul>
+<li>Streaming multimedia apps (loss tolerant, rate sensitive)</li>
+<li>DNS</li>
+<li>SNMP</li>
+<li>HTTP/3</li>
+</ul>
+</li>
+<li>Reliable transfer needed over UDP
+<ul>
+<li>Needed reliability at application layer</li>
+<li>Congestion control</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Multiplexing and Demultiplexing</strong></p>
+<p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/multiplexing.png" alt="multiplexing"></p>
+<ul>
+<li>
+<p>Demultiplexing</p>
+</li>
+<li>
+<p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/demultiplexing.jpeg" alt="demultiplexing"></p>
+</li>
+<li>
+<p>Host receives IP datagrams</p>
 <ul>
 <li>Source IP address</li>
-<li>Source port number</li>
 <li>Destination IP address</li>
+<li>One transport layer segment
+<ul>
+<li>Source port number</li>
 <li>Destination port number</li>
 </ul>
 </li>
-<li>Server host may support many simultaneous TCP sockets</li>
-<li>Demux
-<ul>
-<li>Receiver uses all four values to direct segment to appropriate socket</li>
-</ul>
-</li>
-<li>Web servers have different sockets for each connecting client
-<ul>
-<li>Non‐persistent HTTP will have different socket for each request</li>
-</ul>
-</li>
-<li>Example
-<ul>
-<li><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/connection_oriented_demux.png" alt="connection_oriented_demux"></li>
+<li>Host uses IP addresses &amp; port numbers to redirect segment to appropriate socket</li>
 </ul>
 </li>
 </ul>

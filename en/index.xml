@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 16 Oct 2020 09:19:19 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2020 21:32:44 +0800</lastBuildDate>
     
     <atom:link href="https://www.hexarthur.com/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -64,28 +64,11 @@
     </item>
     
     <item>
-      <title>A Look at Tik-Tok</title>
-      <link>https://www.hexarthur.com/en/2020/10/16/a-look-at-tik-tok/</link>
-      <pubDate>Fri, 16 Oct 2020 09:19:19 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/2020/10/16/a-look-at-tik-tok/</guid>
-      
-        <description>&lt;h1 id=&#34;a-look-at-tik-tok&#34;&gt;A Look at Tik-Tok&lt;/h1&gt;
-&lt;h2 id=&#34;given-there-are-many-social-media-platforms-already-existing-in-us-what-makes-tik-tok-so-successful-that-it-becomes-a-big-enough-threat-to-cause-the-us-government-to-act-the-way-it-did-towards-a-commercial-company-ignore-political-factors&#34;&gt;Given there are many social media platforms already existing in US, what makes Tik-Tok so successful that it becomes a big enough threat to cause the US Government to act the way it did towards a commercial company (ignore political factors)?&lt;/h2&gt;
-&lt;p&gt;Economically, at about 2016, US tech giants such as Facebook or Google mainly focused on long video platform instead of the short video platform. A company called Musical.ly (later acquired by ByteDance and became a part of Tik-Tok) grasped this opportunity to extend the US market and gained a massive amount of market share. Generally, the US market is relatively a free market that encourages new products (startups) to participate in the competition. In addition to acquiring Musical.ly, which already played an essential role in the short video market, Tik-Tok also utilized targeted strategies to fulfil the US market&amp;rsquo;s needs and fashion to gain and retain more users.&lt;/p&gt;
-&lt;p&gt;Socially, the majority of users of short video platform are young people, and they tend to follow fashions and do more social interactions. Tik-Tok carries out new creative forms of videos for users to easily create, share and connect interesting videos in their social circle, which brings the long tail influence on the spread of Tik-Tok videos. Besides, some organizations or even official medias also joined the Tik-Tok platform to please their audience or get more subscribers, which further increase the social influence of Tik-Tok.&lt;/p&gt;
-&lt;p&gt;Technically, as the rapid development of Internet and smartphone industry, short video has gradually become a mainstream form of creation and entertainment. US people especially young people get more accustomed to using their smartphones to entertain or do social interactions, like watching or shooting videos in their leisure time. What&amp;rsquo;s more, the recommendation system and mechanism applying artificial intelligence and machine learning algorithms become more powerful and smart, keeping attracting their users&amp;rsquo; attention.&lt;/p&gt;
-&lt;p&gt;To sum up, Tik-Tok chose the right market expanding strategy, successfully meets the market demand and captures their users&amp;rsquo; needs to get its market share. And it makes fair use of their technical benefits and most advanced innovation like machine learning algorithms to continually improve their product, making them become a very influential platform.&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
       <title>ICOM6012 Topic 4 Transport Layer</title>
-      <link>https://www.hexarthur.com/en/2020/10/15/icom6012-topic-4-transport-layer/</link>
-      <pubDate>Thu, 15 Oct 2020 17:32:44 +0800</pubDate>
+      <link>https://www.hexarthur.com/en/2020/10/17/icom6012-topic-4-transport-layer/</link>
+      <pubDate>Sat, 17 Oct 2020 21:32:44 +0800</pubDate>
       
-      <guid>https://www.hexarthur.com/en/2020/10/15/icom6012-topic-4-transport-layer/</guid>
+      <guid>https://www.hexarthur.com/en/2020/10/17/icom6012-topic-4-transport-layer/</guid>
       
         <description>&lt;h1 id=&#34;icom6012-internet-infrastructure-technologies&#34;&gt;ICOM6012 Internet Infrastructure Technologies&lt;/h1&gt;
 &lt;h2 id=&#34;topic-4-transport-layer&#34;&gt;Topic 4 Transport Layer&lt;/h2&gt;
@@ -211,6 +194,60 @@
 &lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/connection_oriented_demux.png&#34; alt=&#34;connection_oriented_demux&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;TCP segment structure
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/tcp_segment_structure.png&#34; alt=&#34;tcp_segment_structure&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;TCP sequence numbers, ACKs
+&lt;ul&gt;
+&lt;li&gt;Sequence numbers
+&lt;ul&gt;
+&lt;li&gt;Byte stream &amp;ldquo;number&amp;rdquo; of first byte in segment&amp;rsquo;s data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Acknowledgements
+&lt;ul&gt;
+&lt;li&gt;Seq # of next byte expected from other side&lt;/li&gt;
+&lt;li&gt;Cumulative ACKs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;TCP sender
+&lt;ul&gt;
+&lt;li&gt;Event: data received from application
+&lt;ul&gt;
+&lt;li&gt;Create segment with seq #&lt;/li&gt;
+&lt;li&gt;Seq # is byte-stream number of first data byte in segment&lt;/li&gt;
+&lt;li&gt;Start timer if not already running
+&lt;ul&gt;
+&lt;li&gt;Think of timer as for oldest unACKed segment&lt;/li&gt;
+&lt;li&gt;Expiration interval: TimeOutInterval&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Event: timeout
+&lt;ul&gt;
+&lt;li&gt;Retransmit segment that caused timeout&lt;/li&gt;
+&lt;li&gt;Restart timer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Event: ACK received
+&lt;ul&gt;
+&lt;li&gt;If ACK acknowledges previously unACKed segments
+&lt;ul&gt;
+&lt;li&gt;Update what is known to ACKed&lt;/li&gt;
+&lt;li&gt;Start timer if there are still un ACKed segments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Retransmission&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/retransmission.png&#34; alt=&#34;retransmission&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -338,6 +375,23 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Demultiplexing: A Complete View&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/demultiplexing_complete_view.png&#34; alt=&#34;demultiplexing_complete_view&#34;&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>A Look at Tik-Tok</title>
+      <link>https://www.hexarthur.com/en/2020/10/16/a-look-at-tik-tok/</link>
+      <pubDate>Fri, 16 Oct 2020 09:19:19 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/2020/10/16/a-look-at-tik-tok/</guid>
+      
+        <description>&lt;h1 id=&#34;a-look-at-tik-tok&#34;&gt;A Look at Tik-Tok&lt;/h1&gt;
+&lt;h2 id=&#34;given-there-are-many-social-media-platforms-already-existing-in-us-what-makes-tik-tok-so-successful-that-it-becomes-a-big-enough-threat-to-cause-the-us-government-to-act-the-way-it-did-towards-a-commercial-company-ignore-political-factors&#34;&gt;Given there are many social media platforms already existing in US, what makes Tik-Tok so successful that it becomes a big enough threat to cause the US Government to act the way it did towards a commercial company (ignore political factors)?&lt;/h2&gt;
+&lt;p&gt;Economically, at about 2016, US tech giants such as Facebook or Google mainly focused on long video platform instead of the short video platform. A company called Musical.ly (later acquired by ByteDance and became a part of Tik-Tok) grasped this opportunity to extend the US market and gained a massive amount of market share. Generally, the US market is relatively a free market that encourages new products (startups) to participate in the competition. In addition to acquiring Musical.ly, which already played an essential role in the short video market, Tik-Tok also utilized targeted strategies to fulfil the US market&amp;rsquo;s needs and fashion to gain and retain more users.&lt;/p&gt;
+&lt;p&gt;Socially, the majority of users of short video platform are young people, and they tend to follow fashions and do more social interactions. Tik-Tok carries out new creative forms of videos for users to easily create, share and connect interesting videos in their social circle, which brings the long tail influence on the spread of Tik-Tok videos. Besides, some organizations or even official medias also joined the Tik-Tok platform to please their audience or get more subscribers, which further increase the social influence of Tik-Tok.&lt;/p&gt;
+&lt;p&gt;Technically, as the rapid development of Internet and smartphone industry, short video has gradually become a mainstream form of creation and entertainment. US people especially young people get more accustomed to using their smartphones to entertain or do social interactions, like watching or shooting videos in their leisure time. What&amp;rsquo;s more, the recommendation system and mechanism applying artificial intelligence and machine learning algorithms become more powerful and smart, keeping attracting their users&amp;rsquo; attention.&lt;/p&gt;
+&lt;p&gt;To sum up, Tik-Tok chose the right market expanding strategy, successfully meets the market demand and captures their users&amp;rsquo; needs to get its market share. And it makes fair use of their technical benefits and most advanced innovation like machine learning algorithms to continually improve their product, making them become a very influential platform.&lt;/p&gt;
 </description>
       
     </item>

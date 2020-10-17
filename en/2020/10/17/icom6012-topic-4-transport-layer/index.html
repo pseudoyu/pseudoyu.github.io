@@ -32,7 +32,7 @@
  Provide logical communication between app processes running on different hosts Run in end systems  Send side  Breaks app messages into segments, passes to network layer   Receive side  Reassembles segments into messages, passes to application layer     More than one transport protocol available to apps  TCP (RFC 793, 1981) UDP (RFC 768, 1980) SCTP (RFC 4960, 2007) DCCP (RFC 4340, 2006)    Transport vs.">
 <meta itemprop="datePublished" content="2020-10-17T21:32:44+08:00" />
 <meta itemprop="dateModified" content="2020-10-17T21:32:44+08:00" />
-<meta itemprop="wordCount" content="628">
+<meta itemprop="wordCount" content="705">
 
 
 
@@ -332,6 +332,28 @@
 </li>
 <li>Retransmission</li>
 <li><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/retransmission.png" alt="retransmission"></li>
+<li>TCP connection management
+<ul>
+<li>Before exchanging data, sender/receiver &ldquo;handshake&rdquo;
+<ul>
+<li>Agree to establish connection</li>
+<li>Agree on connection parameters</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>TCP 3‐way handshake</li>
+<li><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/3way_handshake.png" alt="3way_handshake"></li>
+<li>TCP: closing a connection</li>
+<li><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/closing_a_connection.png" alt="closing_a_connection"></li>
+<li>TCP SYN DoS Attack
+<ul>
+<li>A denial of service (DoS) attack is an incident in which a user or organization is deprived of the services of a resource they would normally expect to have</li>
+<li>TCP SYN DoS attack: &ldquo;Half‐open&rdquo; TCP connections consume all the TCP connection resources</li>
+<li>SYN packet with a spoofed source IP address</li>
+<li><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/dos_attack.png" alt="dos_attack"></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

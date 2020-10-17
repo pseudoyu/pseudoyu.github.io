@@ -248,6 +248,28 @@
 &lt;/li&gt;
 &lt;li&gt;Retransmission&lt;/li&gt;
 &lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/retransmission.png&#34; alt=&#34;retransmission&#34;&gt;&lt;/li&gt;
+&lt;li&gt;TCP connection management
+&lt;ul&gt;
+&lt;li&gt;Before exchanging data, sender/receiver &amp;ldquo;handshake&amp;rdquo;
+&lt;ul&gt;
+&lt;li&gt;Agree to establish connection&lt;/li&gt;
+&lt;li&gt;Agree on connection parameters&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;TCP 3‐way handshake&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/3way_handshake.png&#34; alt=&#34;3way_handshake&#34;&gt;&lt;/li&gt;
+&lt;li&gt;TCP: closing a connection&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/closing_a_connection.png&#34; alt=&#34;closing_a_connection&#34;&gt;&lt;/li&gt;
+&lt;li&gt;TCP SYN DoS Attack
+&lt;ul&gt;
+&lt;li&gt;A denial of service (DoS) attack is an incident in which a user or organization is deprived of the services of a resource they would normally expect to have&lt;/li&gt;
+&lt;li&gt;TCP SYN DoS attack: &amp;ldquo;Half‐open&amp;rdquo; TCP connections consume all the TCP connection resources&lt;/li&gt;
+&lt;li&gt;SYN packet with a spoofed source IP address&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/dos_attack.png&#34; alt=&#34;dos_attack&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;

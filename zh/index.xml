@@ -114,8 +114,7 @@
 &lt;ul&gt;
 &lt;li&gt;硬性要求 (熟练/精通至少一种)
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;JAVA (主要掌握)&lt;/p&gt;
+&lt;li&gt;JAVA (主要掌握)
 &lt;ul&gt;
 &lt;li&gt;基础
 &lt;ul&gt;
@@ -139,8 +138,7 @@
 &lt;li&gt;I/O&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;其他(了解)&lt;/p&gt;
+&lt;li&gt;其他(了解)
 &lt;ul&gt;
 &lt;li&gt;Golang&lt;/li&gt;
 &lt;li&gt;C++&lt;/li&gt;
@@ -152,8 +150,7 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;主流工具/框架&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Unix/Linux系统&lt;/p&gt;
+&lt;li&gt;Unix/Linux系统
 &lt;ul&gt;
 &lt;li&gt;常用命令&lt;/li&gt;
 &lt;li&gt;Shell脚本&lt;/li&gt;
@@ -165,8 +162,7 @@
 &lt;li&gt;网络编程&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;系统设计&lt;/p&gt;
+&lt;li&gt;系统设计
 &lt;ul&gt;
 &lt;li&gt;基础&lt;/li&gt;
 &lt;li&gt;分布式(Redius实现分布式一致的锁)&lt;/li&gt;
@@ -176,19 +172,15 @@
 &lt;li&gt;攻击技术&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Docker&lt;/p&gt;
+&lt;li&gt;Docker
 &lt;ul&gt;
 &lt;li&gt;技术原理&lt;/li&gt;
 &lt;li&gt;部署&lt;/li&gt;
 &lt;li&gt;使用优化&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Kubernetes&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;数据库&lt;/p&gt;
+&lt;li&gt;Kubernetes&lt;/li&gt;
+&lt;li&gt;数据库
 &lt;ul&gt;
 &lt;li&gt;非关系型数据库
 &lt;ul&gt;
@@ -208,21 +200,18 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;版本控制&lt;/p&gt;
+&lt;li&gt;版本控制
 &lt;ul&gt;
 &lt;li&gt;Git&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;微服务架构&lt;/p&gt;
+&lt;li&gt;微服务架构
 &lt;ul&gt;
 &lt;li&gt;阿里微服务Dubbo，服务注册机制&lt;/li&gt;
 &lt;li&gt;DDD (领域驱动设计，Domain Driven Design)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;开源框架应用场景&lt;/p&gt;
+&lt;li&gt;开源框架应用场景
 &lt;ul&gt;
 &lt;li&gt;Spring&lt;/li&gt;
 &lt;li&gt;Spring Boot&lt;/li&gt;
@@ -231,20 +220,13 @@
 &lt;li&gt;&amp;hellip;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;SOA架构 (面向服务的架构，Service-Oriented Architecture)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;OSGI (开放服务网关协议，Open Service Gateway Initiative)&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;SOA架构 (面向服务的架构，Service-Oriented Architecture)&lt;/li&gt;
+&lt;li&gt;OSGI (开放服务网关协议，Open Service Gateway Initiative)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;区块链技术&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;区块链技术原理&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;常见开源系统/解决方案&lt;/p&gt;
+&lt;li&gt;区块链技术原理&lt;/li&gt;
+&lt;li&gt;常见开源系统/解决方案
 &lt;ul&gt;
 &lt;li&gt;Bitcoin&lt;/li&gt;
 &lt;li&gt;Ethereum&lt;/li&gt;
@@ -254,23 +236,20 @@
 &lt;li&gt;R3 Corda&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;智能合约虚拟机&lt;/p&gt;
+&lt;li&gt;智能合约虚拟机
 &lt;ul&gt;
 &lt;li&gt;EVM命令集，以太坊白皮书&lt;/li&gt;
 &lt;li&gt;WASM&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;一致性算法&lt;/p&gt;
+&lt;li&gt;一致性算法
 &lt;ul&gt;
 &lt;li&gt;BFT&lt;/li&gt;
 &lt;li&gt;Paxos&lt;/li&gt;
 &lt;li&gt;Raft&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;共识协议&lt;/p&gt;
+&lt;li&gt;共识协议
 &lt;ul&gt;
 &lt;li&gt;PoW&lt;/li&gt;
 &lt;li&gt;PoS&lt;/li&gt;

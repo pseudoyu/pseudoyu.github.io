@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 17 Oct 2020 21:32:44 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2020 08:30:31 +0800</lastBuildDate>
     
     <atom:link href="https://www.hexarthur.com/zh/index.xml" rel="self" type="application/rss+xml" />
     
@@ -58,6 +58,253 @@
 &lt;li&gt;&lt;a href=&#34;https://medium.com/@pseudoyu&#34;&gt;Medium&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCR0O0s303tGBi3P02hstQPA/&#34;&gt;Youtube&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.reddit.com/user/pseudo_yu&#34;&gt;Reddit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>区块链学习计划</title>
+      <link>https://www.hexarthur.com/zh/2020/10/18/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</link>
+      <pubDate>Sun, 18 Oct 2020 08:30:31 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/2020/10/18/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</guid>
+      
+        <description>&lt;h1 id=&#34;区块链学习计划&#34;&gt;区块链学习计划&lt;/h1&gt;
+&lt;h2 id=&#34;学习路径&#34;&gt;学习路径&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;算法相关 (刷题)
+&lt;ul&gt;
+&lt;li&gt;剑指Offer&lt;/li&gt;
+&lt;li&gt;LeetCode&lt;/li&gt;
+&lt;li&gt;笔试面试题库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Jave相关&lt;/li&gt;
+&lt;li&gt;系统/工具/框架&lt;/li&gt;
+&lt;li&gt;计算机网络
+&lt;ul&gt;
+&lt;li&gt;ICOM6012&lt;/li&gt;
+&lt;li&gt;教材&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;网络安全
+&lt;ul&gt;
+&lt;li&gt;ICOM6045&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;操作系统&lt;/li&gt;
+&lt;li&gt;Linux基础&lt;/li&gt;
+&lt;li&gt;数据库&lt;/li&gt;
+&lt;li&gt;Web/App开发 + 实践项目&lt;/li&gt;
+&lt;li&gt;区块链Case (基于Ethereum的分布式数据隐私应用)(TBD)
+&lt;ul&gt;
+&lt;li&gt;需求调研 - Misty&lt;/li&gt;
+&lt;li&gt;产品规划 - Marshal&lt;/li&gt;
+&lt;li&gt;前端开发 - Arthur, TBD&lt;/li&gt;
+&lt;li&gt;后端开发 - Arthur&lt;/li&gt;
+&lt;li&gt;数据处理 - Misty&lt;/li&gt;
+&lt;li&gt;技术指导 - Mengling&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;区块链相关岗位实习&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;技术要求&#34;&gt;技术要求&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;编程语言&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;硬性要求 (熟练/精通至少一种)
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;JAVA (主要掌握)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基础
+&lt;ul&gt;
+&lt;li&gt;CS61B&lt;/li&gt;
+&lt;li&gt;书 + 文章 + 实战&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;容器&lt;/li&gt;
+&lt;li&gt;并发
+&lt;ul&gt;
+&lt;li&gt;多线程编程 (threadpool)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;JVM
+&lt;ul&gt;
+&lt;li&gt;内存模型 (JVM内存整理、垃圾处理的策略，root链搜索引用)&lt;/li&gt;
+&lt;li&gt;类加载机制&lt;/li&gt;
+&lt;li&gt;性能优化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;I/O&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;其他(了解)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Golang&lt;/li&gt;
+&lt;li&gt;C++&lt;/li&gt;
+&lt;li&gt;Node.js&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;主流工具/框架&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Unix/Linux系统&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;常用命令&lt;/li&gt;
+&lt;li&gt;Shell脚本&lt;/li&gt;
+&lt;li&gt;应用开发&lt;/li&gt;
+&lt;li&gt;性能查看工具&lt;/li&gt;
+&lt;li&gt;性能调优工具&lt;/li&gt;
+&lt;li&gt;多线程/进程&lt;/li&gt;
+&lt;li&gt;文件系统&lt;/li&gt;
+&lt;li&gt;网络编程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;系统设计&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基础&lt;/li&gt;
+&lt;li&gt;分布式(Redius实现分布式一致的锁)&lt;/li&gt;
+&lt;li&gt;缓存&lt;/li&gt;
+&lt;li&gt;消息队列 (Kafka工作原理+配置)&lt;/li&gt;
+&lt;li&gt;集群&lt;/li&gt;
+&lt;li&gt;攻击技术&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Docker&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;技术原理&lt;/li&gt;
+&lt;li&gt;部署&lt;/li&gt;
+&lt;li&gt;使用优化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Kubernetes&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据库&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;非关系型数据库
+&lt;ul&gt;
+&lt;li&gt;KV型数据库
+&lt;ul&gt;
+&lt;li&gt;LevelDB&lt;/li&gt;
+&lt;li&gt;RocksDB&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;关系型数据库
+&lt;ul&gt;
+&lt;li&gt;悲观锁&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;版本控制&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Git&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;微服务架构&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;阿里微服务Dubbo，服务注册机制&lt;/li&gt;
+&lt;li&gt;DDD (领域驱动设计，Domain Driven Design)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;开源框架应用场景&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Spring&lt;/li&gt;
+&lt;li&gt;Spring Boot&lt;/li&gt;
+&lt;li&gt;Mybatis&lt;/li&gt;
+&lt;li&gt;Hibernate&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SOA架构 (面向服务的架构，Service-Oriented Architecture)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;OSGI (开放服务网关协议，Open Service Gateway Initiative)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;区块链技术&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;区块链技术原理&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;常见开源系统/解决方案&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bitcoin&lt;/li&gt;
+&lt;li&gt;Ethereum&lt;/li&gt;
+&lt;li&gt;EOS&lt;/li&gt;
+&lt;li&gt;Fabric&lt;/li&gt;
+&lt;li&gt;IBM Hyperledge&lt;/li&gt;
+&lt;li&gt;R3 Corda&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;智能合约虚拟机&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;EVM命令集，以太坊白皮书&lt;/li&gt;
+&lt;li&gt;WASM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一致性算法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;BFT&lt;/li&gt;
+&lt;li&gt;Paxos&lt;/li&gt;
+&lt;li&gt;Raft&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;共识协议&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PoW&lt;/li&gt;
+&lt;li&gt;PoS&lt;/li&gt;
+&lt;li&gt;Algorand&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;其他相关背景&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;密码学（数字加密算法）&lt;/li&gt;
+&lt;li&gt;网络安全&lt;/li&gt;
+&lt;li&gt;分布式计算&lt;/li&gt;
+&lt;li&gt;云计算
+&lt;ul&gt;
+&lt;li&gt;阿里云&lt;/li&gt;
+&lt;li&gt;Azure&lt;/li&gt;
+&lt;li&gt;AWS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;中间件&lt;/li&gt;
+&lt;li&gt;网关或开放平台设计&lt;/li&gt;
+&lt;li&gt;可信计算技术原理与应用&lt;/li&gt;
+&lt;li&gt;软件形式化验证&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;软性技能&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;逻辑&lt;/li&gt;
+&lt;li&gt;接受新事物&lt;/li&gt;
+&lt;li&gt;自我驱动&lt;/li&gt;
+&lt;li&gt;沟通表达&lt;/li&gt;
+&lt;li&gt;团队合作&lt;/li&gt;
+&lt;li&gt;对系统质量苛刻要求&lt;/li&gt;
+&lt;li&gt;识别和设计通用框架及模块&lt;/li&gt;
+&lt;li&gt;识别业务关键需求和设计领域模型&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       
@@ -414,188 +661,6 @@
 &lt;p&gt;Socially, the majority of users of short video platform are young people, and they tend to follow fashions and do more social interactions. Tik-Tok carries out new creative forms of videos for users to easily create, share and connect interesting videos in their social circle, which brings the long tail influence on the spread of Tik-Tok videos. Besides, some organizations or even official medias also joined the Tik-Tok platform to please their audience or get more subscribers, which further increase the social influence of Tik-Tok.&lt;/p&gt;
 &lt;p&gt;Technically, as the rapid development of Internet and smartphone industry, short video has gradually become a mainstream form of creation and entertainment. US people especially young people get more accustomed to using their smartphones to entertain or do social interactions, like watching or shooting videos in their leisure time. What&amp;rsquo;s more, the recommendation system and mechanism applying artificial intelligence and machine learning algorithms become more powerful and smart, keeping attracting their users&amp;rsquo; attention.&lt;/p&gt;
 &lt;p&gt;To sum up, Tik-Tok chose the right market expanding strategy, successfully meets the market demand and captures their users&amp;rsquo; needs to get its market share. And it makes fair use of their technical benefits and most advanced innovation like machine learning algorithms to continually improve their product, making them become a very influential platform.&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>区块链学习计划</title>
-      <link>https://www.hexarthur.com/zh/2020/10/14/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</link>
-      <pubDate>Wed, 14 Oct 2020 19:07:31 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/2020/10/14/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</guid>
-      
-        <description>&lt;h1 id=&#34;区块链学习计划&#34;&gt;区块链学习计划&lt;/h1&gt;
-&lt;h2 id=&#34;学习路径&#34;&gt;学习路径&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;刷题 - 全程，每天2题&lt;/li&gt;
-&lt;li&gt;Jave相关 - 2月&lt;/li&gt;
-&lt;li&gt;Linux基础与数据库 - 1周&lt;/li&gt;
-&lt;li&gt;Web/App开发 - 2周&lt;/li&gt;
-&lt;li&gt;区块链Case (基于Ethereum的分布式数据隐私应用) - 2月
-&lt;ul&gt;
-&lt;li&gt;需求调研 - Misty&lt;/li&gt;
-&lt;li&gt;产品规划 - Marshal&lt;/li&gt;
-&lt;li&gt;前端开发 - Arthur, TBD&lt;/li&gt;
-&lt;li&gt;后端开发 - Arthur&lt;/li&gt;
-&lt;li&gt;数据处理 - Misty&lt;/li&gt;
-&lt;li&gt;技术指导 - Mengling&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;区块链相关岗位实习 - 2021年2月开始&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;技术要求&#34;&gt;技术要求&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;编程语言&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;硬性要求 (熟练/精通至少一种)
-&lt;ul&gt;
-&lt;li&gt;JAVA (主要掌握)
-&lt;ul&gt;
-&lt;li&gt;多线程编程 (threadpool)&lt;/li&gt;
-&lt;li&gt;分布式(Redius实现分布式一致的锁)&lt;/li&gt;
-&lt;li&gt;缓存&lt;/li&gt;
-&lt;li&gt;消息队列 (Kafka工作原理+配置)&lt;/li&gt;
-&lt;li&gt;JVM
-&lt;ul&gt;
-&lt;li&gt;内存模型 (JVM内存整理、垃圾处理的策略，root链搜索引用)&lt;/li&gt;
-&lt;li&gt;类加载机制&lt;/li&gt;
-&lt;li&gt;性能优化&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;微服务架构
-&lt;ul&gt;
-&lt;li&gt;阿里微服务Dubbo，服务注册机制&lt;/li&gt;
-&lt;li&gt;DDD (领域驱动设计，Domain Driven Design)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;开源框架应用场景
-&lt;ul&gt;
-&lt;li&gt;Spring&lt;/li&gt;
-&lt;li&gt;Spring Boot&lt;/li&gt;
-&lt;li&gt;Mybatis&lt;/li&gt;
-&lt;li&gt;Hibernate&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;SOA架构 (面向服务的架构，Service-Oriented Architecture)&lt;/li&gt;
-&lt;li&gt;OSGI (开放服务网关协议，Open Service Gateway Initiative)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Golang&lt;/li&gt;
-&lt;li&gt;C++&lt;/li&gt;
-&lt;li&gt;Node.js&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;主流工具/框架&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Unix/Linux系统
-&lt;ul&gt;
-&lt;li&gt;常用命令&lt;/li&gt;
-&lt;li&gt;Shell脚本&lt;/li&gt;
-&lt;li&gt;应用开发&lt;/li&gt;
-&lt;li&gt;性能查看工具&lt;/li&gt;
-&lt;li&gt;性能调优工具&lt;/li&gt;
-&lt;li&gt;多线程/进程&lt;/li&gt;
-&lt;li&gt;文件系统&lt;/li&gt;
-&lt;li&gt;网络编程&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;数据库
-&lt;ul&gt;
-&lt;li&gt;非关系型数据库
-&lt;ul&gt;
-&lt;li&gt;KV型数据库
-&lt;ul&gt;
-&lt;li&gt;LevelDB&lt;/li&gt;
-&lt;li&gt;RocksDB&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;关系型数据库
-&lt;ul&gt;
-&lt;li&gt;悲观锁&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;容器技术
-&lt;ul&gt;
-&lt;li&gt;Docker
-&lt;ul&gt;
-&lt;li&gt;技术原理&lt;/li&gt;
-&lt;li&gt;部署&lt;/li&gt;
-&lt;li&gt;使用优化&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Kubernetes&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;区块链技术&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;区块链技术原理&lt;/li&gt;
-&lt;li&gt;常见开源系统/解决方案
-&lt;ul&gt;
-&lt;li&gt;Bitcoin&lt;/li&gt;
-&lt;li&gt;Ethereum&lt;/li&gt;
-&lt;li&gt;EOS&lt;/li&gt;
-&lt;li&gt;Fabric&lt;/li&gt;
-&lt;li&gt;IBM Hyperledge&lt;/li&gt;
-&lt;li&gt;R3 Corda&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;智能合约虚拟机
-&lt;ul&gt;
-&lt;li&gt;EVM命令集，以太坊白皮书&lt;/li&gt;
-&lt;li&gt;WASM&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;一致性算法
-&lt;ul&gt;
-&lt;li&gt;BFT&lt;/li&gt;
-&lt;li&gt;Paxos&lt;/li&gt;
-&lt;li&gt;Raft&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;共识协议
-&lt;ul&gt;
-&lt;li&gt;PoW&lt;/li&gt;
-&lt;li&gt;PoS&lt;/li&gt;
-&lt;li&gt;Algorand&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;其他相关背景&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;密码学（数字加密算法）&lt;/li&gt;
-&lt;li&gt;网络安全&lt;/li&gt;
-&lt;li&gt;分布式计算&lt;/li&gt;
-&lt;li&gt;云计算
-&lt;ul&gt;
-&lt;li&gt;阿里云&lt;/li&gt;
-&lt;li&gt;Azure&lt;/li&gt;
-&lt;li&gt;AWS&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;中间件&lt;/li&gt;
-&lt;li&gt;网关或开放平台设计&lt;/li&gt;
-&lt;li&gt;可信计算技术原理与应用&lt;/li&gt;
-&lt;li&gt;软件形式化验证&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;软性技能&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;逻辑&lt;/li&gt;
-&lt;li&gt;接受新事物&lt;/li&gt;
-&lt;li&gt;自我驱动&lt;/li&gt;
-&lt;li&gt;沟通表达&lt;/li&gt;
-&lt;li&gt;团队合作&lt;/li&gt;
-&lt;li&gt;对系统质量苛刻要求&lt;/li&gt;
-&lt;li&gt;识别和设计通用框架及模块&lt;/li&gt;
-&lt;li&gt;识别业务关键需求和设计领域模型&lt;/li&gt;
-&lt;/ul&gt;
 </description>
       
     </item>

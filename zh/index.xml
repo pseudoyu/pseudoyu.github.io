@@ -173,9 +173,9 @@
 &lt;li&gt;技术原理&lt;/li&gt;
 &lt;li&gt;部署&lt;/li&gt;
 &lt;li&gt;使用优化&lt;/li&gt;
+&lt;li&gt;Kubernetes&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Kubernetes&lt;/li&gt;
 &lt;li&gt;数据库
 &lt;ul&gt;
 &lt;li&gt;非关系型数据库

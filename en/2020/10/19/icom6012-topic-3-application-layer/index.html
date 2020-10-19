@@ -9,8 +9,8 @@
 
   <meta name="keywords" content="Hugo, theme, den" />
 
-<link rel="canonical" href="https://www.hexarthur.com/en/2020/10/07/icom6012-topic-3-application-layer/" />
-<link rel="alternate" href="https://www.hexarthur.com/zh/2020/10/07/icom6012-topic-3-application-layer/" hreflang="zh">
+<link rel="canonical" href="https://www.hexarthur.com/en/2020/10/19/icom6012-topic-3-application-layer/" />
+<link rel="alternate" href="https://www.hexarthur.com/zh/2020/10/19/icom6012-topic-3-application-layer/" hreflang="zh">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -22,14 +22,14 @@
 <meta property="og:title" content="ICOM6012 Topic 3 Application Layer" />
 <meta property="og:description" content="ICOM6012 Internet Infrastructure Technologies Topic 3 Application Layer Creating a Network App Run on different end systems Communication over network No need to write for network-core devices Client-Server Architecture (The Centralized Internet) Server Always-on host Permanent IP address Often in data centers (for scaling) Clients Contact, communicate with server May be intermittently connected May have dynamic IP addresses Don&rsquo;t communicate directly with each other Peer-to-Peer (P2P) Architecture No always-on server" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.hexarthur.com/en/2020/10/07/icom6012-topic-3-application-layer/" />
-<meta property="article:published_time" content="2020-10-07T09:32:44+08:00" />
-<meta property="article:modified_time" content="2020-10-07T09:32:44+08:00" />
+<meta property="og:url" content="https://www.hexarthur.com/en/2020/10/19/icom6012-topic-3-application-layer/" />
+<meta property="article:published_time" content="2020-10-19T17:50:44+08:00" />
+<meta property="article:modified_time" content="2020-10-19T17:50:44+08:00" />
 <meta itemprop="name" content="ICOM6012 Topic 3 Application Layer">
 <meta itemprop="description" content="ICOM6012 Internet Infrastructure Technologies Topic 3 Application Layer Creating a Network App Run on different end systems Communication over network No need to write for network-core devices Client-Server Architecture (The Centralized Internet) Server Always-on host Permanent IP address Often in data centers (for scaling) Clients Contact, communicate with server May be intermittently connected May have dynamic IP addresses Don&rsquo;t communicate directly with each other Peer-to-Peer (P2P) Architecture No always-on server">
-<meta itemprop="datePublished" content="2020-10-07T09:32:44+08:00" />
-<meta itemprop="dateModified" content="2020-10-07T09:32:44+08:00" />
-<meta itemprop="wordCount" content="1543">
+<meta itemprop="datePublished" content="2020-10-19T17:50:44+08:00" />
+<meta itemprop="dateModified" content="2020-10-19T17:50:44+08:00" />
+<meta itemprop="wordCount" content="1735">
 
 
 
@@ -114,7 +114,7 @@
         <p class="header-date">By
           pseudoyu /
         
-        2020-10-07
+        2020-10-19
           / In categories
           <a href="https://www.hexarthur.com/en/category/notes/">Notes</a>
         </p>
@@ -137,7 +137,7 @@
 <p class="float-right translations">
     <i class="fas fa-language" aria-hidden="true"></i>
     Translations: 
-    <a href="https://www.hexarthur.com/zh/2020/10/07/icom6012-topic-3-application-layer/">ZH</a>
+    <a href="https://www.hexarthur.com/zh/2020/10/19/icom6012-topic-3-application-layer/">ZH</a>
 </p>
 
 
@@ -834,6 +834,112 @@
 <li>DNS poisoning
 <ul>
 <li>Send bogus replies to DNS server, which caches</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Peer-to-peer File Distribution</strong></p>
+<ul>
+<li>P2P architecture
+<ul>
+<li>No always-on server</li>
+<li>Arbitrary end systems directly communicate</li>
+<li>Self scalibility</li>
+<li>Peers are intermittently connected and change IP address</li>
+<li>Example
+<ul>
+<li>File distribution - BitTorrent</li>
+<li>Streaming - KanKan</li>
+<li>Volp - Skype</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>File Distribution (Client-Server)</strong></p>
+<p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/client_server_file.png" alt="client_server_file"></p>
+<ul>
+<li>Server transmission
+<ul>
+<li>Must send/upload N file copies</li>
+<li>Time: NF/U(s)</li>
+</ul>
+</li>
+<li>Client
+<ul>
+<li>Each client must download one file copy</li>
+<li>Slowest time: F/d(min)</li>
+</ul>
+</li>
+<li>Time to distribute F to N
+<ul>
+<li>D(c-s) &gt;= max {NF/U(s), F/d(min)}</li>
+</ul>
+</li>
+</ul>
+<p><strong>File Distribution (P2P)</strong></p>
+<ul>
+<li>Server transmission
+<ul>
+<li>Must upload at least one copy</li>
+<li>Time: F/U(s)</li>
+</ul>
+</li>
+<li>Client
+<ul>
+<li>Each client must download one file copy</li>
+<li>Slowest time: F/d(min)</li>
+</ul>
+</li>
+<li>All clients
+<ul>
+<li>As aggregate must download NF bits</li>
+<li>Max upload rate: U(s)+NU(i)</li>
+</ul>
+</li>
+<li>Time to distribute F to N
+<ul>
+<li>D(P2P) &gt;= max {F/U(s), F/d(min), NF/(U(s)+Sum(U(i)))}</li>
+</ul>
+</li>
+</ul>
+<p><strong>Client-Server vs. P2P</strong></p>
+<p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/p2p_cs.png" alt="p2p_cs"></p>
+<p><strong>P2P File Distribution: BitTorrent</strong></p>
+<ul>
+<li>Procedure
+<ul>
+<li>File divided into 256KB chunks</li>
+<li>Peers in torrent send/receive file chucks</li>
+</ul>
+</li>
+<li>Roles
+<ul>
+<li>Tracker
+<ul>
+<li>Track peers participating in torrent</li>
+</ul>
+</li>
+<li>Torrent
+<ul>
+<li>Group of peers exchanging chucks of a file</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Actions
+<ul>
+<li>Requesting chunks
+<ul>
+<li>Ask each peer for chunks they have</li>
+<li>Request missing chunks (rarest piece first)</li>
+</ul>
+</li>
+<li>Sending chunks (tit-for-tat)
+<ul>
+<li>Send chunks to peers who currently sending her chunks at highest rate</li>
+<li>Randomly select another peers and send chunks (for new peers)</li>
 </ul>
 </li>
 </ul>

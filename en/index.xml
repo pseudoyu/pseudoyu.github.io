@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 19 Oct 2020 11:44:44 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2020 14:03:44 +0800</lastBuildDate>
     
     <atom:link href="https://www.hexarthur.com/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -66,7 +66,7 @@
     <item>
       <title>ICOM6012 Topic 4 Transport Layer</title>
       <link>https://www.hexarthur.com/en/2020/10/19/icom6012-topic-4-transport-layer/</link>
-      <pubDate>Mon, 19 Oct 2020 11:44:44 +0800</pubDate>
+      <pubDate>Mon, 19 Oct 2020 14:03:44 +0800</pubDate>
       
       <guid>https://www.hexarthur.com/en/2020/10/19/icom6012-topic-4-transport-layer/</guid>
       
@@ -444,6 +444,8 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;cwnd is dynamically adjusted in response to observed network congestion&lt;/li&gt;
+&lt;li&gt;Approachs
+&lt;ul&gt;
 &lt;li&gt;AIMD Approach
 &lt;ul&gt;
 &lt;li&gt;Senders can increase sending rate until packet loss occurs, then decrease&lt;/li&gt;
@@ -484,6 +486,23 @@
 &lt;/li&gt;
 &lt;li&gt;From slow start to congestion avoidance&lt;/li&gt;
 &lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/start_congestion_avoidance.png&#34; alt=&#34;start_congestion_avoidance&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Fairness
+&lt;ul&gt;
+&lt;li&gt;TCP
+&lt;ul&gt;
+&lt;li&gt;Same RTT&lt;/li&gt;
+&lt;li&gt;Fixed number of sessions only in congestion avoidance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;UDP
+&lt;ul&gt;
+&lt;li&gt;No police of congestion control&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       

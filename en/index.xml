@@ -427,7 +427,7 @@
 &lt;/li&gt;
 &lt;li&gt;Network-assisted congestion control
 &lt;ul&gt;
-&lt;li&gt;Router provide direct feedbackto hosts with flow passing throught congested router&lt;/li&gt;
+&lt;li&gt;Router provide direct feedback to hosts with flow passing throught congested router&lt;/li&gt;
 &lt;li&gt;May indicate congestion level or explicitly set sending rate&lt;/li&gt;
 &lt;li&gt;TCP ECN: indicates to the receiving host that congestion occurred&lt;/li&gt;
 &lt;/ul&gt;

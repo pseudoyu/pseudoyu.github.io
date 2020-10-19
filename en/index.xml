@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 19 Oct 2020 14:03:44 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2020 15:23:44 +0800</lastBuildDate>
     
     <atom:link href="https://www.hexarthur.com/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -66,12 +66,13 @@
     <item>
       <title>ICOM6012 Topic 4 Transport Layer</title>
       <link>https://www.hexarthur.com/en/2020/10/19/icom6012-topic-4-transport-layer/</link>
-      <pubDate>Mon, 19 Oct 2020 14:03:44 +0800</pubDate>
+      <pubDate>Mon, 19 Oct 2020 15:23:44 +0800</pubDate>
       
       <guid>https://www.hexarthur.com/en/2020/10/19/icom6012-topic-4-transport-layer/</guid>
       
         <description>&lt;h1 id=&#34;icom6012-internet-infrastructure-technologies&#34;&gt;ICOM6012 Internet Infrastructure Technologies&lt;/h1&gt;
 &lt;h2 id=&#34;topic-4-transport-layer&#34;&gt;Topic 4 Transport Layer&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/Transport_Layer.svg&#34; alt=&#34;Transport_Layer&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Transport Services and Protocol&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Provide logical communication between app processes running on different hosts&lt;/li&gt;
@@ -456,7 +457,7 @@
 &lt;/li&gt;
 &lt;li&gt;Multiplicative Decrease
 &lt;ul&gt;
-&lt;li&gt;Cue sending rate in half at each loss event&lt;/li&gt;
+&lt;li&gt;Cut sending rate in half at each loss event&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -465,7 +466,7 @@
 &lt;ul&gt;
 &lt;li&gt;ACKs problem
 &lt;ul&gt;
-&lt;li&gt;swnd is cut in half&lt;/li&gt;
+&lt;li&gt;cwnd is cut in half&lt;/li&gt;
 &lt;li&gt;Window grow linearly&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;

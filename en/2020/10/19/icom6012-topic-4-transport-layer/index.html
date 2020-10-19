@@ -10,8 +10,8 @@
 
   <meta name="keywords" content="Hugo, theme, den" />
 
-<link rel="canonical" href="https://www.hexarthur.com/en/2020/10/17/icom6012-topic-4-transport-layer/" />
-<link rel="alternate" href="https://www.hexarthur.com/zh/2020/10/17/icom6012-topic-4-transport-layer/" hreflang="zh">
+<link rel="canonical" href="https://www.hexarthur.com/en/2020/10/19/icom6012-topic-4-transport-layer/" />
+<link rel="alternate" href="https://www.hexarthur.com/zh/2020/10/19/icom6012-topic-4-transport-layer/" hreflang="zh">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -24,15 +24,15 @@
 <meta property="og:description" content="ICOM6012 Internet Infrastructure Technologies Topic 4 Transport Layer Transport Services and Protocol
  Provide logical communication between app processes running on different hosts Run in end systems  Send side  Breaks app messages into segments, passes to network layer   Receive side  Reassembles segments into messages, passes to application layer     More than one transport protocol available to apps  TCP (RFC 793, 1981) UDP (RFC 768, 1980) SCTP (RFC 4960, 2007) DCCP (RFC 4340, 2006)    Transport vs." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.hexarthur.com/en/2020/10/17/icom6012-topic-4-transport-layer/" />
-<meta property="article:published_time" content="2020-10-17T21:32:44+08:00" />
-<meta property="article:modified_time" content="2020-10-17T21:32:44+08:00" />
+<meta property="og:url" content="https://www.hexarthur.com/en/2020/10/19/icom6012-topic-4-transport-layer/" />
+<meta property="article:published_time" content="2020-10-19T11:44:44+08:00" />
+<meta property="article:modified_time" content="2020-10-19T11:44:44+08:00" />
 <meta itemprop="name" content="ICOM6012 Topic 4 Transport Layer">
 <meta itemprop="description" content="ICOM6012 Internet Infrastructure Technologies Topic 4 Transport Layer Transport Services and Protocol
  Provide logical communication between app processes running on different hosts Run in end systems  Send side  Breaks app messages into segments, passes to network layer   Receive side  Reassembles segments into messages, passes to application layer     More than one transport protocol available to apps  TCP (RFC 793, 1981) UDP (RFC 768, 1980) SCTP (RFC 4960, 2007) DCCP (RFC 4340, 2006)    Transport vs.">
-<meta itemprop="datePublished" content="2020-10-17T21:32:44+08:00" />
-<meta itemprop="dateModified" content="2020-10-17T21:32:44+08:00" />
-<meta itemprop="wordCount" content="705">
+<meta itemprop="datePublished" content="2020-10-19T11:44:44+08:00" />
+<meta itemprop="dateModified" content="2020-10-19T11:44:44+08:00" />
+<meta itemprop="wordCount" content="901">
 
 
 
@@ -118,7 +118,7 @@
         <p class="header-date">By
           pseudoyu /
         
-        2020-10-17
+        2020-10-19
           / In categories
           <a href="https://www.hexarthur.com/en/category/notes/">Notes</a>
         </p>
@@ -141,7 +141,7 @@
 <p class="float-right translations">
     <i class="fas fa-language" aria-hidden="true"></i>
     Translations: 
-    <a href="https://www.hexarthur.com/zh/2020/10/17/icom6012-topic-4-transport-layer/">ZH</a>
+    <a href="https://www.hexarthur.com/zh/2020/10/19/icom6012-topic-4-transport-layer/">ZH</a>
 </p>
 
 
@@ -481,6 +481,94 @@
 </ul>
 <p><strong>Demultiplexing: A Complete View</strong></p>
 <p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/demultiplexing_complete_view.png" alt="demultiplexing_complete_view"></p>
+<p><strong>Congestion Control</strong></p>
+<ul>
+<li>Informally
+<ul>
+<li>Too many sources sending too much data too fast for network to handle</li>
+</ul>
+</li>
+<li>Manifestations
+<ul>
+<li>Long delay (queueing in router buffers)</li>
+<li>Packet loss (buffer overflow at network)</li>
+</ul>
+</li>
+<li>Approachs
+<ul>
+<li>End-end congestion control
+<ul>
+<li>Approach taken by TCP</li>
+<li>No explicit feedback from network</li>
+<li>Congestion inferred from observed loss, delay</li>
+<li>Shortcomings
+<ul>
+<li>Loss</li>
+<li>Delay</li>
+</ul>
+</li>
+<li>Network-assisted congestion control
+<ul>
+<li>Router provide direct feedbackto hosts with flow passing throught congested router</li>
+<li>May indicate congestion level or explicitly set sending rate</li>
+<li>TCP ECN: indicates to the receiving host that congestion occurred</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>TCP Congestion Control</strong></p>
+<p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/cwnd.png" alt="cwnd"></p>
+<ul>
+<li>TCP sender limits transmission
+<ul>
+<li>LastByteSent - LastByteAcked &lt;= cwnd</li>
+</ul>
+</li>
+<li>cwnd is dynamically adjusted in response to observed network congestion</li>
+<li>AIMD Approach
+<ul>
+<li>Senders can increase sending rate until packet loss occurs, then decrease</li>
+<li>Additive Increase
+<ul>
+<li>1 MSS (maximum segment size) until loss detected</li>
+</ul>
+</li>
+<li>Multiplicative Decrease
+<ul>
+<li>Cue sending rate in half at each loss event</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Detecting, reacting to loss
+<ul>
+<li>ACKs problem
+<ul>
+<li>swnd is cut in half</li>
+<li>Window grow linearly</li>
+</ul>
+</li>
+<li>Timeout event
+<ul>
+<li>cwnd is set to 1 MSS</li>
+<li>Window grow exponentially to a threshold, then linearly</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>TCP slow start
+<ul>
+<li>Initially cwnd = 1 MSS</li>
+<li>Double cwnd every RTT</li>
+<li>Done by incrementing cwnd for every ACK received</li>
+</ul>
+</li>
+<li>From slow start to congestion avoidance</li>
+<li><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/start_congestion_avoidance.png" alt="start_congestion_avoidance"></li>
+</ul>
 
   </article>
 

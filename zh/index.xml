@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 18 Oct 2020 08:30:31 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2020 11:44:44 +0800</lastBuildDate>
     
     <atom:link href="https://www.hexarthur.com/zh/index.xml" rel="self" type="application/rss+xml" />
     
@@ -64,235 +64,11 @@
     </item>
     
     <item>
-      <title>区块链学习计划</title>
-      <link>https://www.hexarthur.com/zh/2020/10/18/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</link>
-      <pubDate>Sun, 18 Oct 2020 08:30:31 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/2020/10/18/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</guid>
-      
-        <description>&lt;h1 id=&#34;区块链学习计划&#34;&gt;区块链学习计划&lt;/h1&gt;
-&lt;h2 id=&#34;学习路径&#34;&gt;学习路径&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_path.svg&#34; alt=&#34;blockchain_path&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;算法相关 (刷题)
-&lt;ul&gt;
-&lt;li&gt;剑指Offer&lt;/li&gt;
-&lt;li&gt;LeetCode&lt;/li&gt;
-&lt;li&gt;笔试面试题库&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Jave相关&lt;/li&gt;
-&lt;li&gt;系统/工具/框架&lt;/li&gt;
-&lt;li&gt;计算机网络
-&lt;ul&gt;
-&lt;li&gt;ICOM6012&lt;/li&gt;
-&lt;li&gt;教材&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;网络安全
-&lt;ul&gt;
-&lt;li&gt;ICOM6045&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;操作系统&lt;/li&gt;
-&lt;li&gt;Linux基础&lt;/li&gt;
-&lt;li&gt;数据库&lt;/li&gt;
-&lt;li&gt;Web/App开发 + 实践项目&lt;/li&gt;
-&lt;li&gt;区块链Case (基于Ethereum的分布式数据隐私应用)(TBD)
-&lt;ul&gt;
-&lt;li&gt;需求调研 - Misty&lt;/li&gt;
-&lt;li&gt;产品规划 - Marshal&lt;/li&gt;
-&lt;li&gt;前端开发 - Arthur, TBD&lt;/li&gt;
-&lt;li&gt;后端开发 - Arthur&lt;/li&gt;
-&lt;li&gt;数据处理 - Misty&lt;/li&gt;
-&lt;li&gt;技术指导 - Mengling&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;区块链相关岗位实习&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;技术要求&#34;&gt;技术要求&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_plan.svg&#34; alt=&#34;blockchain_plan&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;编程语言&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;JAVA (主要掌握)
-&lt;ul&gt;
-&lt;li&gt;基础
-&lt;ul&gt;
-&lt;li&gt;CS61B&lt;/li&gt;
-&lt;li&gt;书 + 文章 + 实战&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;容器&lt;/li&gt;
-&lt;li&gt;并发
-&lt;ul&gt;
-&lt;li&gt;多线程编程 (threadpool)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;JVM
-&lt;ul&gt;
-&lt;li&gt;内存模型 (JVM内存整理、垃圾处理的策略，root链搜索引用)&lt;/li&gt;
-&lt;li&gt;类加载机制&lt;/li&gt;
-&lt;li&gt;性能优化&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;I/O&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;其他 (了解)
-&lt;ul&gt;
-&lt;li&gt;Golang&lt;/li&gt;
-&lt;li&gt;C++&lt;/li&gt;
-&lt;li&gt;Node.js&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;主流工具/框架&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Unix/Linux系统
-&lt;ul&gt;
-&lt;li&gt;常用命令&lt;/li&gt;
-&lt;li&gt;Shell脚本&lt;/li&gt;
-&lt;li&gt;应用开发&lt;/li&gt;
-&lt;li&gt;性能查看工具&lt;/li&gt;
-&lt;li&gt;性能调优工具&lt;/li&gt;
-&lt;li&gt;多线程/进程&lt;/li&gt;
-&lt;li&gt;文件系统&lt;/li&gt;
-&lt;li&gt;网络编程&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;系统设计
-&lt;ul&gt;
-&lt;li&gt;基础&lt;/li&gt;
-&lt;li&gt;分布式(Redius实现分布式一致的锁)&lt;/li&gt;
-&lt;li&gt;缓存&lt;/li&gt;
-&lt;li&gt;消息队列 (Kafka工作原理+配置)&lt;/li&gt;
-&lt;li&gt;集群&lt;/li&gt;
-&lt;li&gt;攻击技术&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Docker
-&lt;ul&gt;
-&lt;li&gt;技术原理&lt;/li&gt;
-&lt;li&gt;部署&lt;/li&gt;
-&lt;li&gt;使用优化&lt;/li&gt;
-&lt;li&gt;Kubernetes&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;数据库
-&lt;ul&gt;
-&lt;li&gt;非关系型数据库
-&lt;ul&gt;
-&lt;li&gt;KV型数据库
-&lt;ul&gt;
-&lt;li&gt;LevelDB&lt;/li&gt;
-&lt;li&gt;RocksDB&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;关系型数据库
-&lt;ul&gt;
-&lt;li&gt;悲观锁&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;版本控制
-&lt;ul&gt;
-&lt;li&gt;Git&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;微服务架构
-&lt;ul&gt;
-&lt;li&gt;阿里微服务Dubbo，服务注册机制&lt;/li&gt;
-&lt;li&gt;DDD (领域驱动设计，Domain Driven Design)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;开源框架应用场景
-&lt;ul&gt;
-&lt;li&gt;Spring&lt;/li&gt;
-&lt;li&gt;Spring Boot&lt;/li&gt;
-&lt;li&gt;Mybatis&lt;/li&gt;
-&lt;li&gt;Hibernate&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;SOA架构 (面向服务的架构，Service-Oriented Architecture)&lt;/li&gt;
-&lt;li&gt;OSGI (开放服务网关协议，Open Service Gateway Initiative)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;区块链技术&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;区块链技术原理&lt;/li&gt;
-&lt;li&gt;常见开源系统/解决方案
-&lt;ul&gt;
-&lt;li&gt;Bitcoin&lt;/li&gt;
-&lt;li&gt;Ethereum&lt;/li&gt;
-&lt;li&gt;EOS&lt;/li&gt;
-&lt;li&gt;Fabric&lt;/li&gt;
-&lt;li&gt;IBM Hyperledge&lt;/li&gt;
-&lt;li&gt;R3 Corda&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;智能合约虚拟机
-&lt;ul&gt;
-&lt;li&gt;EVM命令集，以太坊白皮书&lt;/li&gt;
-&lt;li&gt;WASM&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;一致性算法
-&lt;ul&gt;
-&lt;li&gt;BFT&lt;/li&gt;
-&lt;li&gt;Paxos&lt;/li&gt;
-&lt;li&gt;Raft&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;共识协议
-&lt;ul&gt;
-&lt;li&gt;PoW&lt;/li&gt;
-&lt;li&gt;PoS&lt;/li&gt;
-&lt;li&gt;Algorand&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;其他相关背景&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;密码学（数字加密算法）&lt;/li&gt;
-&lt;li&gt;网络安全&lt;/li&gt;
-&lt;li&gt;分布式计算&lt;/li&gt;
-&lt;li&gt;云计算
-&lt;ul&gt;
-&lt;li&gt;阿里云&lt;/li&gt;
-&lt;li&gt;Azure&lt;/li&gt;
-&lt;li&gt;AWS&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;中间件&lt;/li&gt;
-&lt;li&gt;网关或开放平台设计&lt;/li&gt;
-&lt;li&gt;可信计算技术原理与应用&lt;/li&gt;
-&lt;li&gt;软件形式化验证&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;软性技能&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;逻辑&lt;/li&gt;
-&lt;li&gt;接受新事物&lt;/li&gt;
-&lt;li&gt;自我驱动&lt;/li&gt;
-&lt;li&gt;沟通表达&lt;/li&gt;
-&lt;li&gt;团队合作&lt;/li&gt;
-&lt;li&gt;对系统质量苛刻要求&lt;/li&gt;
-&lt;li&gt;识别和设计通用框架及模块&lt;/li&gt;
-&lt;li&gt;识别业务关键需求和设计领域模型&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
       <title>ICOM6012 Topic 4 Transport Layer</title>
-      <link>https://www.hexarthur.com/zh/2020/10/17/icom6012-topic-4-transport-layer/</link>
-      <pubDate>Sat, 17 Oct 2020 21:32:44 +0800</pubDate>
+      <link>https://www.hexarthur.com/zh/2020/10/19/icom6012-topic-4-transport-layer/</link>
+      <pubDate>Mon, 19 Oct 2020 11:44:44 +0800</pubDate>
       
-      <guid>https://www.hexarthur.com/zh/2020/10/17/icom6012-topic-4-transport-layer/</guid>
+      <guid>https://www.hexarthur.com/zh/2020/10/19/icom6012-topic-4-transport-layer/</guid>
       
         <description>&lt;h1 id=&#34;icom6012-internet-infrastructure-technologies&#34;&gt;ICOM6012 Internet Infrastructure Technologies&lt;/h1&gt;
 &lt;h2 id=&#34;topic-4-transport-layer&#34;&gt;Topic 4 Transport Layer&lt;/h2&gt;
@@ -621,6 +397,318 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Demultiplexing: A Complete View&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/demultiplexing_complete_view.png&#34; alt=&#34;demultiplexing_complete_view&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Congestion Control&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Informally
+&lt;ul&gt;
+&lt;li&gt;Too many sources sending too much data too fast for network to handle&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Manifestations
+&lt;ul&gt;
+&lt;li&gt;Long delay (queueing in router buffers)&lt;/li&gt;
+&lt;li&gt;Packet loss (buffer overflow at network)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Approachs
+&lt;ul&gt;
+&lt;li&gt;End-end congestion control
+&lt;ul&gt;
+&lt;li&gt;Approach taken by TCP&lt;/li&gt;
+&lt;li&gt;No explicit feedback from network&lt;/li&gt;
+&lt;li&gt;Congestion inferred from observed loss, delay&lt;/li&gt;
+&lt;li&gt;Shortcomings
+&lt;ul&gt;
+&lt;li&gt;Loss&lt;/li&gt;
+&lt;li&gt;Delay&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Network-assisted congestion control
+&lt;ul&gt;
+&lt;li&gt;Router provide direct feedbackto hosts with flow passing throught congested router&lt;/li&gt;
+&lt;li&gt;May indicate congestion level or explicitly set sending rate&lt;/li&gt;
+&lt;li&gt;TCP ECN: indicates to the receiving host that congestion occurred&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;TCP Congestion Control&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/cwnd.png&#34; alt=&#34;cwnd&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;TCP sender limits transmission
+&lt;ul&gt;
+&lt;li&gt;LastByteSent - LastByteAcked &amp;lt;= cwnd&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;cwnd is dynamically adjusted in response to observed network congestion&lt;/li&gt;
+&lt;li&gt;AIMD Approach
+&lt;ul&gt;
+&lt;li&gt;Senders can increase sending rate until packet loss occurs, then decrease&lt;/li&gt;
+&lt;li&gt;Additive Increase
+&lt;ul&gt;
+&lt;li&gt;1 MSS (maximum segment size) until loss detected&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Multiplicative Decrease
+&lt;ul&gt;
+&lt;li&gt;Cue sending rate in half at each loss event&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Detecting, reacting to loss
+&lt;ul&gt;
+&lt;li&gt;ACKs problem
+&lt;ul&gt;
+&lt;li&gt;swnd is cut in half&lt;/li&gt;
+&lt;li&gt;Window grow linearly&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Timeout event
+&lt;ul&gt;
+&lt;li&gt;cwnd is set to 1 MSS&lt;/li&gt;
+&lt;li&gt;Window grow exponentially to a threshold, then linearly&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;TCP slow start
+&lt;ul&gt;
+&lt;li&gt;Initially cwnd = 1 MSS&lt;/li&gt;
+&lt;li&gt;Double cwnd every RTT&lt;/li&gt;
+&lt;li&gt;Done by incrementing cwnd for every ACK received&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;From slow start to congestion avoidance&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/start_congestion_avoidance.png&#34; alt=&#34;start_congestion_avoidance&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>区块链学习计划</title>
+      <link>https://www.hexarthur.com/zh/2020/10/18/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</link>
+      <pubDate>Sun, 18 Oct 2020 08:30:31 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/2020/10/18/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</guid>
+      
+        <description>&lt;h1 id=&#34;区块链学习计划&#34;&gt;区块链学习计划&lt;/h1&gt;
+&lt;h2 id=&#34;学习路径&#34;&gt;学习路径&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_path.svg&#34; alt=&#34;blockchain_path&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;算法相关 (刷题)
+&lt;ul&gt;
+&lt;li&gt;剑指Offer&lt;/li&gt;
+&lt;li&gt;LeetCode&lt;/li&gt;
+&lt;li&gt;笔试面试题库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Jave相关&lt;/li&gt;
+&lt;li&gt;系统/工具/框架&lt;/li&gt;
+&lt;li&gt;计算机网络
+&lt;ul&gt;
+&lt;li&gt;ICOM6012&lt;/li&gt;
+&lt;li&gt;教材&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;网络安全
+&lt;ul&gt;
+&lt;li&gt;ICOM6045&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;操作系统&lt;/li&gt;
+&lt;li&gt;Linux基础&lt;/li&gt;
+&lt;li&gt;数据库&lt;/li&gt;
+&lt;li&gt;Web/App开发 + 实践项目&lt;/li&gt;
+&lt;li&gt;区块链Case (基于Ethereum的分布式数据隐私应用)(TBD)
+&lt;ul&gt;
+&lt;li&gt;需求调研 - Misty&lt;/li&gt;
+&lt;li&gt;产品规划 - Marshal&lt;/li&gt;
+&lt;li&gt;前端开发 - Arthur, TBD&lt;/li&gt;
+&lt;li&gt;后端开发 - Arthur&lt;/li&gt;
+&lt;li&gt;数据处理 - Misty&lt;/li&gt;
+&lt;li&gt;技术指导 - Mengling&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;区块链相关岗位实习&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;技术要求&#34;&gt;技术要求&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_plan.svg&#34; alt=&#34;blockchain_plan&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;编程语言&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;JAVA (主要掌握)
+&lt;ul&gt;
+&lt;li&gt;基础
+&lt;ul&gt;
+&lt;li&gt;CS61B&lt;/li&gt;
+&lt;li&gt;书 + 文章 + 实战&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;容器&lt;/li&gt;
+&lt;li&gt;并发
+&lt;ul&gt;
+&lt;li&gt;多线程编程 (threadpool)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;JVM
+&lt;ul&gt;
+&lt;li&gt;内存模型 (JVM内存整理、垃圾处理的策略，root链搜索引用)&lt;/li&gt;
+&lt;li&gt;类加载机制&lt;/li&gt;
+&lt;li&gt;性能优化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;I/O&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;其他 (了解)
+&lt;ul&gt;
+&lt;li&gt;Golang&lt;/li&gt;
+&lt;li&gt;C++&lt;/li&gt;
+&lt;li&gt;Node.js&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;主流工具/框架&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Unix/Linux系统
+&lt;ul&gt;
+&lt;li&gt;常用命令&lt;/li&gt;
+&lt;li&gt;Shell脚本&lt;/li&gt;
+&lt;li&gt;应用开发&lt;/li&gt;
+&lt;li&gt;性能查看工具&lt;/li&gt;
+&lt;li&gt;性能调优工具&lt;/li&gt;
+&lt;li&gt;多线程/进程&lt;/li&gt;
+&lt;li&gt;文件系统&lt;/li&gt;
+&lt;li&gt;网络编程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;系统设计
+&lt;ul&gt;
+&lt;li&gt;基础&lt;/li&gt;
+&lt;li&gt;分布式(Redius实现分布式一致的锁)&lt;/li&gt;
+&lt;li&gt;缓存&lt;/li&gt;
+&lt;li&gt;消息队列 (Kafka工作原理+配置)&lt;/li&gt;
+&lt;li&gt;集群&lt;/li&gt;
+&lt;li&gt;攻击技术&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Docker
+&lt;ul&gt;
+&lt;li&gt;技术原理&lt;/li&gt;
+&lt;li&gt;部署&lt;/li&gt;
+&lt;li&gt;使用优化&lt;/li&gt;
+&lt;li&gt;Kubernetes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;数据库
+&lt;ul&gt;
+&lt;li&gt;非关系型数据库
+&lt;ul&gt;
+&lt;li&gt;KV型数据库
+&lt;ul&gt;
+&lt;li&gt;LevelDB&lt;/li&gt;
+&lt;li&gt;RocksDB&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;关系型数据库
+&lt;ul&gt;
+&lt;li&gt;悲观锁&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;版本控制
+&lt;ul&gt;
+&lt;li&gt;Git&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;微服务架构
+&lt;ul&gt;
+&lt;li&gt;阿里微服务Dubbo，服务注册机制&lt;/li&gt;
+&lt;li&gt;DDD (领域驱动设计，Domain Driven Design)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;开源框架应用场景
+&lt;ul&gt;
+&lt;li&gt;Spring&lt;/li&gt;
+&lt;li&gt;Spring Boot&lt;/li&gt;
+&lt;li&gt;Mybatis&lt;/li&gt;
+&lt;li&gt;Hibernate&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;SOA架构 (面向服务的架构，Service-Oriented Architecture)&lt;/li&gt;
+&lt;li&gt;OSGI (开放服务网关协议，Open Service Gateway Initiative)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;区块链技术&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;区块链技术原理&lt;/li&gt;
+&lt;li&gt;常见开源系统/解决方案
+&lt;ul&gt;
+&lt;li&gt;Bitcoin&lt;/li&gt;
+&lt;li&gt;Ethereum&lt;/li&gt;
+&lt;li&gt;EOS&lt;/li&gt;
+&lt;li&gt;Fabric&lt;/li&gt;
+&lt;li&gt;IBM Hyperledge&lt;/li&gt;
+&lt;li&gt;R3 Corda&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;智能合约虚拟机
+&lt;ul&gt;
+&lt;li&gt;EVM命令集，以太坊白皮书&lt;/li&gt;
+&lt;li&gt;WASM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;一致性算法
+&lt;ul&gt;
+&lt;li&gt;BFT&lt;/li&gt;
+&lt;li&gt;Paxos&lt;/li&gt;
+&lt;li&gt;Raft&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;共识协议
+&lt;ul&gt;
+&lt;li&gt;PoW&lt;/li&gt;
+&lt;li&gt;PoS&lt;/li&gt;
+&lt;li&gt;Algorand&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;其他相关背景&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;密码学（数字加密算法）&lt;/li&gt;
+&lt;li&gt;网络安全&lt;/li&gt;
+&lt;li&gt;分布式计算&lt;/li&gt;
+&lt;li&gt;云计算
+&lt;ul&gt;
+&lt;li&gt;阿里云&lt;/li&gt;
+&lt;li&gt;Azure&lt;/li&gt;
+&lt;li&gt;AWS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;中间件&lt;/li&gt;
+&lt;li&gt;网关或开放平台设计&lt;/li&gt;
+&lt;li&gt;可信计算技术原理与应用&lt;/li&gt;
+&lt;li&gt;软件形式化验证&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;软性技能&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;逻辑&lt;/li&gt;
+&lt;li&gt;接受新事物&lt;/li&gt;
+&lt;li&gt;自我驱动&lt;/li&gt;
+&lt;li&gt;沟通表达&lt;/li&gt;
+&lt;li&gt;团队合作&lt;/li&gt;
+&lt;li&gt;对系统质量苛刻要求&lt;/li&gt;
+&lt;li&gt;识别和设计通用框架及模块&lt;/li&gt;
+&lt;li&gt;识别业务关键需求和设计领域模型&lt;/li&gt;
+&lt;/ul&gt;
 </description>
       
     </item>

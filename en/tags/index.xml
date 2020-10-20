@@ -6,15 +6,33 @@
     <description>Recent content in Tags on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 19 Oct 2020 17:50:44 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2020 22:24:17 +0800</lastBuildDate>
     
 	<atom:link href="https://www.hexarthur.com/en/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>blockchain</title>
+      <link>https://www.hexarthur.com/en/tag/blockchain/</link>
+      <pubDate>Tue, 20 Oct 2020 22:24:17 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/tag/blockchain/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cryptography</title>
+      <link>https://www.hexarthur.com/en/tag/cryptography/</link>
+      <pubDate>Tue, 20 Oct 2020 22:24:17 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/tag/cryptography/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>ecic</title>
       <link>https://www.hexarthur.com/en/tag/ecic/</link>
-      <pubDate>Mon, 19 Oct 2020 17:50:44 +0800</pubDate>
+      <pubDate>Tue, 20 Oct 2020 22:24:17 +0800</pubDate>
       
       <guid>https://www.hexarthur.com/en/tag/ecic/</guid>
       <description></description>
@@ -23,18 +41,45 @@
     <item>
       <title>hku</title>
       <link>https://www.hexarthur.com/en/tag/hku/</link>
-      <pubDate>Mon, 19 Oct 2020 17:50:44 +0800</pubDate>
+      <pubDate>Tue, 20 Oct 2020 22:24:17 +0800</pubDate>
       
       <guid>https://www.hexarthur.com/en/tag/hku/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>icmo6045</title>
+      <link>https://www.hexarthur.com/en/tag/icmo6045/</link>
+      <pubDate>Tue, 20 Oct 2020 22:24:17 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/tag/icmo6045/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>icom</title>
       <link>https://www.hexarthur.com/en/tag/icom/</link>
-      <pubDate>Mon, 19 Oct 2020 17:50:44 +0800</pubDate>
+      <pubDate>Tue, 20 Oct 2020 22:24:17 +0800</pubDate>
       
       <guid>https://www.hexarthur.com/en/tag/icom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>https://www.hexarthur.com/en/tag/security/</link>
+      <pubDate>Tue, 20 Oct 2020 22:24:17 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/tag/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>technology</title>
+      <link>https://www.hexarthur.com/en/tag/technology/</link>
+      <pubDate>Tue, 20 Oct 2020 22:24:17 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/tag/technology/</guid>
       <description></description>
     </item>
     
@@ -62,24 +107,6 @@
       <pubDate>Mon, 19 Oct 2020 17:50:44 +0800</pubDate>
       
       <guid>https://www.hexarthur.com/en/tag/notes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>technology</title>
-      <link>https://www.hexarthur.com/en/tag/technology/</link>
-      <pubDate>Mon, 19 Oct 2020 17:50:44 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/tag/technology/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>blockchain</title>
-      <link>https://www.hexarthur.com/en/tag/blockchain/</link>
-      <pubDate>Sun, 18 Oct 2020 08:30:31 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/tag/blockchain/</guid>
       <description></description>
     </item>
     
@@ -161,33 +188,6 @@
       <pubDate>Mon, 05 Oct 2020 00:30:11 +0800</pubDate>
       
       <guid>https://www.hexarthur.com/en/tag/ai/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>algorithm</title>
-      <link>https://www.hexarthur.com/en/tag/algorithm/</link>
-      <pubDate>Mon, 05 Oct 2020 00:30:11 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/tag/algorithm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>comp</title>
-      <link>https://www.hexarthur.com/en/tag/comp/</link>
-      <pubDate>Mon, 05 Oct 2020 00:30:11 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/tag/comp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>comp7404</title>
-      <link>https://www.hexarthur.com/en/tag/comp7404/</link>
-      <pubDate>Mon, 05 Oct 2020 00:30:11 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/tag/comp7404/</guid>
       <description></description>
     </item>
     

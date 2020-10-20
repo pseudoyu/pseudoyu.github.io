@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 19 Oct 2020 17:50:44 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2020 22:24:17 +0800</lastBuildDate>
     
     <atom:link href="https://www.hexarthur.com/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -59,6 +59,20 @@
 &lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCR0O0s303tGBi3P02hstQPA/&#34;&gt;Youtube&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.reddit.com/user/pseudo_yu&#34;&gt;Reddit&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>ICOM6045 Topic 1 Cryptography</title>
+      <link>https://www.hexarthur.com/en/2020/10/20/icom6045-topic-1-cryptography/</link>
+      <pubDate>Tue, 20 Oct 2020 22:24:17 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/2020/10/20/icom6045-topic-1-cryptography/</guid>
+      
+        <description>&lt;h1 id=&#34;icom6045-fundamentals-of-e-commerce-security&#34;&gt;ICOM6045 Fundamentals of E-Commerce Security&lt;/h1&gt;
+&lt;h2 id=&#34;topic-1-cryptography&#34;&gt;Topic 1 Cryptography&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/cryptography.svg&#34; alt=&#34;cryptography&#34;&gt;&lt;/p&gt;
 </description>
       
     </item>
@@ -4381,299 +4395,6 @@ Select cheapest neighbor as currentState and goto step2
 &lt;li&gt;Social media implementation&lt;/li&gt;
 &lt;li&gt;Mobile plan&lt;/li&gt;
 &lt;/ol&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>ECOM6013 Topic 2 Internet and E-Commerce Infrasture</title>
-      <link>https://www.hexarthur.com/en/2020/09/16/ecom6013-topic-2-internet-and-e-commerce-infrasture/</link>
-      <pubDate>Wed, 16 Sep 2020 19:28:28 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/2020/09/16/ecom6013-topic-2-internet-and-e-commerce-infrasture/</guid>
-      
-        <description>&lt;h1 id=&#34;ecom6013-e-commerce-technologies&#34;&gt;ECOM6013 E-Commerce Technologies&lt;/h1&gt;
-&lt;h2 id=&#34;topic-2-internet-and-e-commerce-infrasture&#34;&gt;Topic 2 Internet and E-Commerce Infrasture&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Internet&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Interconnected network of thousands of networks and hundreds of millions of computers&lt;/li&gt;
-&lt;li&gt;Links businesses, educational institutions, government agencies, and individuals&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;World Wide Web (WWW)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;One of the internet&amp;rsquo;s most popular services&lt;/li&gt;
-&lt;li&gt;Provides access to billions, possibly trillions, of Web pages&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Evolution of Internet&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Innovation phase (1961 - 1974)&lt;/li&gt;
-&lt;li&gt;Institutionalization phase (1975 - 1995)&lt;/li&gt;
-&lt;li&gt;Commercialization Phase (1995 - present)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Packet Switching&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Slices digital messages into packets&lt;/li&gt;
-&lt;li&gt;Sends packets along different communication paths as they become available&lt;/li&gt;
-&lt;li&gt;Reassembles packets once they arrive at destination&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;It uses routers (special purpose computers that interconnect the computer networks that make up the internet and route packets)&lt;/p&gt;
-&lt;p&gt;Less expensive, wasteful than circuit-switching&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;TCP/IP&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Four TCP/IP Layers&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Application layer (HTTPS - Web, Telnet - Terminal, FTP - Files, SMTP - E-mail)&lt;/li&gt;
-&lt;li&gt;Transport layer (TCP)&lt;/li&gt;
-&lt;li&gt;Internet layer (IP)&lt;/li&gt;
-&lt;li&gt;Network interface layer (Ethernet)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;IPv4&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;32-bit number (handle up to 4 billion addresses)&lt;/li&gt;
-&lt;li&gt;Four sets of numbers (201.61.186.227)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;IPv6&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;128-bit number (handle up to 1 quadrillion addresses)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Domain Names, DNS, and URLs&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Domain Name: IP address expressed in natural language&lt;/li&gt;
-&lt;li&gt;Domain Name System (DNS): Allows numeric IP addresses to be expressed in natural language&lt;/li&gt;
-&lt;li&gt;Uniform resource locator (URL): Address used by Web browser to identify location of content on the Web&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;DHCP (Dynamic Host Configuration Protocol)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;How computer gets its IP Address&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Client/Server Computing&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Powerful personal computers (clients) connectd in network with one or more servers&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Storing files&lt;/li&gt;
-&lt;li&gt;Software applications&lt;/li&gt;
-&lt;li&gt;Access to printers, and so on&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;The Mobile Platform&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Tablets&lt;/li&gt;
-&lt;li&gt;Smartphones (disruptive technology): New processors &amp;amp; New operating systems&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Cloud Computing&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Firms and individuals obtain computing power and software over Internet (public, private and hybrid clouds)&lt;/p&gt;
-&lt;p&gt;Three Types of Services&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Infrasture as a service (IaaS)&lt;/li&gt;
-&lt;li&gt;Software as a service (SaaS)&lt;/li&gt;
-&lt;li&gt;Platform as a service (PaaS)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Reduces Cost of&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Building and operating Websites&lt;/li&gt;
-&lt;li&gt;Infrasture, IT support&lt;/li&gt;
-&lt;li&gt;Hardware, software&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Drawbacks&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Security risks&lt;/li&gt;
-&lt;li&gt;Shifts responsibility for storage and control to providers&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Internet Infrasture&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Internet growth has boomed without disruption because of&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Client/server computing mode&lt;/li&gt;
-&lt;li&gt;Hourglass, layered architecture&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/hourglass_model.png&#34; alt=&#34;hourglass_model&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Applications&lt;/li&gt;
-&lt;li&gt;Middleware Services&lt;/li&gt;
-&lt;li&gt;Transport Services and Representation Standards&lt;/li&gt;
-&lt;li&gt;Network Technology Substrate&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Internet Network Architecture&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/internet_network_architecture.png&#34; alt=&#34;internet_network_architecture&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://www.thousandeyes.com/learning/techtorials/isp-tiers&#34;&gt;Three Tiers Internet&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/three_tiers_internet.png&#34; alt=&#34;three_tiers_internet&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;The Internet Backbone&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Comprised of fiber-optic cable&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Faster speeds and greater bandwidth&lt;/li&gt;
-&lt;li&gt;Thinner, lighter cables&lt;/li&gt;
-&lt;li&gt;Less interference&lt;/li&gt;
-&lt;li&gt;Better data security&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Tier 1 Internet Service Providers (Tier 1 ISPs) or transit ISPs&lt;/p&gt;
-&lt;p&gt;Numberous private networks physically connected to each other&lt;/p&gt;
-&lt;p&gt;Underseas fiber optics, satellite links&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Internet Exchange Points (IXPs)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Originally called Network access Points (NAPs) or Metropolitan Area Exchanges (MAEs)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Regional hubs where Tier 1 ISPs physically connect with one another and with regional Tier 2 ISPs&lt;/li&gt;
-&lt;li&gt;Tier 2 ISPs provide Tier 3 ISPs with Internet access&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Tier 3 Internet Services Providers&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Services&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Narrowband&lt;/li&gt;
-&lt;li&gt;Broadband&lt;/li&gt;
-&lt;li&gt;Digital subscriber line (DSL)&lt;/li&gt;
-&lt;li&gt;Cable Internet&lt;/li&gt;
-&lt;li&gt;Satellite Internet&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Campus/Corporate Area Networks&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Local area networks operating within single organization&lt;/li&gt;
-&lt;li&gt;Lease Internet access directly from regional and national carriers&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Mobile Internet Access&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Telephone-based&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;3G/4G technologies now&lt;/li&gt;
-&lt;li&gt;5G - higher bandwidth (10 Gbps), lower latency&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Computer network-based (wireless local area network-based)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Wi-Fi (IEEE 802.11 standards)
-&lt;ul&gt;
-&lt;li&gt;High speed, fixed broadband wireless LAN (WLAN)&lt;/li&gt;
-&lt;li&gt;Wireless access point (Hot Spots)&lt;/li&gt;
-&lt;li&gt;Limited range but inexpensive&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Zigbee, Bluetooth, BLE&lt;/li&gt;
-&lt;li&gt;Low-power WAN - LoRaWan&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Intranets&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;TCP/IP network located within a single organization for communications and processing&lt;/li&gt;
-&lt;li&gt;Used by private and government organizations for iternal networks&lt;/li&gt;
-&lt;li&gt;All Internet application can be used in private intranets&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;The Internet of Things (IOT)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Objects connected via sensors/RFID to Internet&lt;/li&gt;
-&lt;li&gt;Interoperability issues and standards&lt;/li&gt;
-&lt;li&gt;Security and privacy concerns&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;&amp;ldquo;Smart things&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Limitations of the Current Internet&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Bandwidth&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Slow peak-hour service&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Quality of Service&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Lantency&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Network Architecture&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Identical requests are processed individually&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Wired Internet&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Copper and expensive fiber-optic cables&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Who Governs the Internet?&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Internet Corporation for Assigned Names and Numbers (ICANN)&lt;/li&gt;
-&lt;li&gt;Internet Engineering Task Force (IETF)&lt;/li&gt;
-&lt;li&gt;Internet Research Task Force (IRTF)&lt;/li&gt;
-&lt;li&gt;Internet Engineering Steering Group (IESG)&lt;/li&gt;
-&lt;li&gt;Internet Architecture Board (IAB)&lt;/li&gt;
-&lt;li&gt;Internet Society (ISOC)&lt;/li&gt;
-&lt;li&gt;Internet Governance Forum (IGF)&lt;/li&gt;
-&lt;li&gt;World Wide Web Consortium (W3C)&lt;/li&gt;
-&lt;li&gt;Internet Network Operators Groups (NOGs)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;The Web&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Web invented (1989 - 1991)&lt;/li&gt;
-&lt;li&gt;Mosaic web browser w/GUI (1993)&lt;/li&gt;
-&lt;li&gt;Netscape Navigator, first commerical web browser (1994)&lt;/li&gt;
-&lt;li&gt;Microsoft Internet Explorer (1995)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Hypertext&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Text formatted with embedded links&lt;/li&gt;
-&lt;li&gt;Use Hypertext Transfer  Protocol (HTTP) and URLs to locate resources on the web&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Markup Languages&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;HTML - Hypertext Markup Language&lt;/li&gt;
-&lt;li&gt;XML - eXtensible Markup Language (Tags used are defined by user)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Web Servers and Clients&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Web server (web servers or physical server)&lt;/li&gt;
-&lt;li&gt;Web server softwares (FTP, search engine, data capture, security services)&lt;/li&gt;
-&lt;li&gt;Web client  (capable of making HTTP requests and displaying HTML pages)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Features of the Internet and Web&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Communication Tools
-&lt;ul&gt;
-&lt;li&gt;E-mail&lt;/li&gt;
-&lt;li&gt;Messaging application&lt;/li&gt;
-&lt;li&gt;Online message boards&lt;/li&gt;
-&lt;li&gt;Internet telephony (VOIP)&lt;/li&gt;
-&lt;li&gt;Video conference, video chat, teleprence&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Search Engines (Google, Bing, Yahoo, baidu,&amp;hellip;)
-&lt;ul&gt;
-&lt;li&gt;Identify web pages that mach queries based
-&lt;ul&gt;
-&lt;li&gt;Keyword indexes&lt;/li&gt;
-&lt;li&gt;Page ranking&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Downloadable and Streaming Media
-&lt;ul&gt;
-&lt;li&gt;Downloads&lt;/li&gt;
-&lt;li&gt;Streaming technologies&lt;/li&gt;
-&lt;li&gt;Podcasting&lt;/li&gt;
-&lt;li&gt;Online video viewing (Explosion)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Web 2.0 Features and Services
-&lt;ul&gt;
-&lt;li&gt;Online Social Networks&lt;/li&gt;
-&lt;li&gt;Blogs&lt;/li&gt;
-&lt;li&gt;Wikis&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;VR and AR
-&lt;ul&gt;
-&lt;li&gt;Virtual reality - VR&lt;/li&gt;
-&lt;li&gt;Augmented reality - AR (Pokemon Go)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Intelligent Digital Assistants
-&lt;ul&gt;
-&lt;li&gt;Used by search engine
-&lt;ul&gt;
-&lt;li&gt;Natural language&lt;/li&gt;
-&lt;li&gt;Conversational interfaces, verbal commands&lt;/li&gt;
-&lt;li&gt;Situation awareness&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Intelligent Assistants
-&lt;ul&gt;
-&lt;li&gt;Apple Siri&lt;/li&gt;
-&lt;li&gt;Amazon Alexa&lt;/li&gt;
-&lt;li&gt;Google Assistant&lt;/li&gt;
-&lt;li&gt;Xiaomi Xiaoai&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Mobile Apps
-&lt;ul&gt;
-&lt;li&gt;Wide range of use&lt;/li&gt;
-&lt;li&gt;Platforms - IOS, Android&amp;hellip;&lt;/li&gt;
-&lt;li&gt;Marketplaces - App Store, Google Play&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
 </description>
       
     </item>

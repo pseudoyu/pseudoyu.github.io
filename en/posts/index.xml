@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 19 Oct 2020 17:50:44 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2020 22:24:17 +0800</lastBuildDate>
     
 	<atom:link href="https://www.hexarthur.com/en/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ICOM6045 Topic 1 Cryptography</title>
+      <link>https://www.hexarthur.com/en/2020/10/20/icom6045-topic-1-cryptography/</link>
+      <pubDate>Tue, 20 Oct 2020 22:24:17 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/2020/10/20/icom6045-topic-1-cryptography/</guid>
+      <description>ICOM6045 Fundamentals of E-Commerce Security Topic 1 Cryptography </description>
+    </item>
     
     <item>
       <title>ICOM6012 Topic 3 Application Layer</title>
@@ -208,16 +217,6 @@ Apple iPad Air product line is mainly targeted to educators/students, staffs and
  Interconnected network of thousands of networks and hundreds of millions of computers Links businesses, educational institutions, government agencies, and individuals  World Wide Web (WWW)
  One of the internet&amp;rsquo;s most popular services Provides access to billions, possibly trillions, of Web pages  Evolution of Internet
  Innovation phase (1961 - 1974) Institutionalization phase (1975 - 1995) Commercialization Phase (1995 - present)  Packet Switching</description>
-    </item>
-    
-    <item>
-      <title>COMP7404 Topic 1 Solving Problems by Searching</title>
-      <link>https://www.hexarthur.com/en/2020/09/16/comp7404-topic-1-solving-problems-by-searching/</link>
-      <pubDate>Wed, 16 Sep 2020 00:28:11 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/2020/09/16/comp7404-topic-1-solving-problems-by-searching/</guid>
-      <description>COMP7404 Computational Intelligence and Machine Learning Topic 1 Solving Problems by Searching Types of Search
- Uninformed Search (Know nothing about the problem except definition) Informed Search (know something more like how close to the goal) Local Search (Randomly initilize a state and make it better, e.g. Deep Learning) Constraint Satisfaction Problems (Know more about the problem) Adversarial Search (have an opponent, e.g. chess, star craft game)  Is Search the same as Unsupervised/Supervised Learning?</description>
     </item>
     
   </channel>

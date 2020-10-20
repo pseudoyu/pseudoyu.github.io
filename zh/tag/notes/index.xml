@@ -6,10 +6,19 @@
     <description>Recent content in notes on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 19 Oct 2020 17:50:44 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2020 22:24:17 +0800</lastBuildDate>
     
 	<atom:link href="https://www.hexarthur.com/zh/tag/notes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ICOM6045 Topic 1 Cryptography</title>
+      <link>https://www.hexarthur.com/zh/2020/10/20/icom6045-topic-1-cryptography/</link>
+      <pubDate>Tue, 20 Oct 2020 22:24:17 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/2020/10/20/icom6045-topic-1-cryptography/</guid>
+      <description>ICOM6045 Fundamentals of E-Commerce Security Topic 1 Cryptography </description>
+    </item>
     
     <item>
       <title>ICOM6012 Topic 3 Application Layer</title>
@@ -112,6 +121,17 @@
     </item>
     
     <item>
+      <title>Introduction to Crypto and Cryptocurrencies</title>
+      <link>https://www.hexarthur.com/zh/2020/09/23/introduction-to-crypto-and-cryptocurrencies/</link>
+      <pubDate>Wed, 23 Sep 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/2020/09/23/introduction-to-crypto-and-cryptocurrencies/</guid>
+      <description>Bitcoin and Cryptocurrency Technologies Lecture 1 Introduction to Crypto and Cryptocurrencies Hash Function
+ Takes any string as input Fixed-size output Efficiently computable  Security Properties
+ Collision-free  Nobody can find x and y such as &amp;ldquo;x!=y and H(x)=H(y)&amp;quot;   Hiding  Given H(x), it&amp;rsquo;s infeasible to find x   Puzzle-friendly  For every possible output value y, if k is chosen from a distribution with high min-entropy, then it&amp;rsquo;s infeasible to find x such as H(k|x)=y    SHA-256 Hash Function</description>
+    </item>
+    
+    <item>
       <title>ECOM6013 Topic 5 Mobile Commerce</title>
       <link>https://www.hexarthur.com/zh/2020/09/21/ecom6013-topic-5-mobile-commerce/</link>
       <pubDate>Mon, 21 Sep 2020 10:44:28 +0800</pubDate>
@@ -202,31 +222,6 @@ Principle 2: The Cost of Something Is What You Give Up to Get It</description>
       <description>ICOM6012 Internet Infrastructure Technologies Topic 1 Overview Internet&amp;rsquo;s Birthday: Sept. 2 or Oct. 29, 1969.
  ARPANET (1969 -)  TCP protocol in 1974 &amp;ldquo;Internet = Internetworking&amp;rdquo;   NSFNET (1986 -) The Internet (late 1980s)  Some Interesting Topics about Internet (More than Technical)
  Who controls the Internet? What is Net Neutrality? A TikTok Ban Is Overdue Zoom’s stock surges 41% after earnings beat, adding over $37 billion in market cap  Evolution of Computers</description>
-    </item>
-    
-    <item>
-      <title>ECOM6013 Topic 1 Introduction to E-Commerce Technology</title>
-      <link>https://www.hexarthur.com/zh/2020/09/06/ecom6013-topic-1-introduction-to-e-commerce-technology/</link>
-      <pubDate>Sun, 06 Sep 2020 04:28:28 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/2020/09/06/ecom6013-topic-1-introduction-to-e-commerce-technology/</guid>
-      <description>ECOM6013 E-Commerce Technologies Topic 1 Introduction to E-Commerce Technology Discussion Topic #1: Puma Goes Omni
- What is the purpose of Puma&amp;rsquo;s content management systems? Why did Puma build a single centralized website rather than continue with multiple websites serving different countries and regions? [choosen] What social media sites does Puma use, and what do they contribute to Puma&amp;rsquo;s marketing effort?  Case Study
-Alibaba Singles&amp;rsquo; Day 2019
-Core E-Commerce Technologies  Introduction to E-Commerce Technology Internet and E-Commerce Infrasture E-Commerce Presence and Development Life Circle Web Design, Implementation and Testing Introduction to Mobile Commerce Internet and E-Commerce Commerce Electronic Payment Systems Cybercurrency, Bitcoin and Blockchain Emerging Technology &amp;amp; Cloud Computing and IoT Artificial Intelligence, Machine Learning and E-Commerce Trends  E-Commerce and Data Science</description>
-    </item>
-    
-    <item>
-      <title>PSY103 Topic 1 What Is Psychology</title>
-      <link>https://www.hexarthur.com/zh/2020/09/02/psy103-topic-1-what-is-psychology/</link>
-      <pubDate>Wed, 02 Sep 2020 12:48:07 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/2020/09/02/psy103-topic-1-what-is-psychology/</guid>
-      <description>Introduction to Psychology Topic 1 What Is Psychology Module 1.1 Psychologists&amp;rsquo; Goal General Points about Psychology
- It Depends Progress Depends on Good Measurement Confidence in the Conclusions Should Depend on the Strength of the Evidence  Major Philosophical Issues in Psychology
- Free Will versus Determinism The Mind-Brain Problem The Nature-Nurture Issue  What Psychologists Do
-  Service Providers to Individuals
- Clinical Psychology Psychiatry Other Mental Health Professionals  Psychoanalysts Clinical social worker Counseling psychologists Forensic psychologists      Service Providers to Organizations</description>
     </item>
     
   </channel>

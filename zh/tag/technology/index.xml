@@ -6,10 +6,19 @@
     <description>Recent content in technology on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 21 Oct 2020 19:53:17 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2020 23:00:17 +0800</lastBuildDate>
     
 	<atom:link href="https://www.hexarthur.com/zh/tag/technology/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Blockchain Technology and Applications</title>
+      <link>https://www.hexarthur.com/zh/2020/10/21/blockchain-technology-and-applications/</link>
+      <pubDate>Wed, 21 Oct 2020 23:00:17 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/2020/10/21/blockchain-technology-and-applications/</guid>
+      <description>Blockchain Technology and Applications </description>
+    </item>
     
     <item>
       <title>ICOM6045 Topic 1 Cryptography</title>
@@ -205,22 +214,6 @@ Apple iPad Air product line is mainly targeted to educators/students, staffs and
       <description>ICOM6012 Internet Infrastructure Technologies Topic 1 Overview Internet&amp;rsquo;s Birthday: Sept. 2 or Oct. 29, 1969.
  ARPANET (1969 -)  TCP protocol in 1974 &amp;ldquo;Internet = Internetworking&amp;rdquo;   NSFNET (1986 -) The Internet (late 1980s)  Some Interesting Topics about Internet (More than Technical)
  Who controls the Internet? What is Net Neutrality? A TikTok Ban Is Overdue Zoom’s stock surges 41% after earnings beat, adding over $37 billion in market cap  Evolution of Computers</description>
-    </item>
-    
-    <item>
-      <title>Puma Goes Omni Case Study</title>
-      <link>https://www.hexarthur.com/zh/2020/09/08/puma-goes-omni-case-study/</link>
-      <pubDate>Tue, 08 Sep 2020 23:30:19 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/2020/09/08/puma-goes-omni-case-study/</guid>
-      <description>Puma Goes Omni About Puma Puma Official Website
-A Fancy Presentation
-Slogan: &amp;ldquo;Run The Streets. Do You.&amp;rdquo;
-The third largest sportswear manufacture in the world. (2018)
-The company was founded in 1948 by Rudolf Dassler.
-Building a Centralize Website Restructuring Strategy
- Replacing multiple e-commerce sites on different platform Unifying content and product strategies Building multiple teams in different regions, separate tasks  Content Management System (CMS)
-&amp;ldquo;Database software program specifically designed to manage structures, unstructured data and objects in a Website environment.</description>
     </item>
     
   </channel>

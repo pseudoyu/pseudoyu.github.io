@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 21 Oct 2020 19:53:17 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2020 23:00:17 +0800</lastBuildDate>
     
 	<atom:link href="https://www.hexarthur.com/en/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Blockchain Technology and Applications</title>
+      <link>https://www.hexarthur.com/en/2020/10/21/blockchain-technology-and-applications/</link>
+      <pubDate>Wed, 21 Oct 2020 23:00:17 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/2020/10/21/blockchain-technology-and-applications/</guid>
+      <description>Blockchain Technology and Applications </description>
+    </item>
     
     <item>
       <title>ICOM6045 Topic 1 Cryptography</title>
@@ -204,16 +213,6 @@ Apple iPad Air product line is mainly targeted to educators/students, staffs and
  Systems analysis/planing  Busisess objectives System functionalities Information requirements   Systems design Building the system Testing Implementation  Quality Consideration
  Navigation Accessibility Scalability Reliability Maintainability Usability Compatibility and interoperability Security Readability  In-House / Outsourcing (Hiring vendors to provide services)
  Build own / outsourcing Host own / outsourcing (preferred)  Implementation, Maintenance, and Optimization</description>
-    </item>
-    
-    <item>
-      <title>ECOM6013 Topic 3 E-Commerce Presence</title>
-      <link>https://www.hexarthur.com/en/2020/09/16/ecom6013-topic-3-e-commerce-presence/</link>
-      <pubDate>Wed, 16 Sep 2020 20:25:28 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/2020/09/16/ecom6013-topic-3-e-commerce-presence/</guid>
-      <description>ECOM6013 E-Commerce Technologies Topic 3 E-Commerce Presence Image You E-Commerce Presence
- Idea  Mission Target audience Intended market space Strategic analysis Marketing matrix Development timeline Preliminary budget   About Money (e.g. Amazon&amp;rsquo;s e-commerce &amp;amp; Amazon&amp;rsquo;s AWS)  Business models Revenue models   About target audience  Demographics Lifestyle Consumption patterns &amp;hellip;   Marketplace Characteristics  Size Growth Demographics Structure   Content SWOT Analysis E-Commerce presence map Milestones Costs  Simple website: US$5000 Small startup: US$25,000 tp US$50,000 Large corporate website: US$100,000 + to millions    SWOT Analysis</description>
     </item>
     
   </channel>

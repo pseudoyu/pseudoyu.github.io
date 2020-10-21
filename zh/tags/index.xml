@@ -6,10 +6,64 @@
     <description>Recent content in Tags on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 20 Oct 2020 23:16:17 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2020 17:30:17 +0800</lastBuildDate>
     
 	<atom:link href="https://www.hexarthur.com/zh/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>basic</title>
+      <link>https://www.hexarthur.com/zh/tag/basic/</link>
+      <pubDate>Wed, 21 Oct 2020 17:30:17 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/basic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>https://www.hexarthur.com/zh/tag/github/</link>
+      <pubDate>Wed, 21 Oct 2020 17:30:17 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>java</title>
+      <link>https://www.hexarthur.com/zh/tag/java/</link>
+      <pubDate>Wed, 21 Oct 2020 17:30:17 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>notes</title>
+      <link>https://www.hexarthur.com/zh/tag/notes/</link>
+      <pubDate>Wed, 21 Oct 2020 17:30:17 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programming</title>
+      <link>https://www.hexarthur.com/zh/tag/programming/</link>
+      <pubDate>Wed, 21 Oct 2020 17:30:17 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>technology</title>
+      <link>https://www.hexarthur.com/zh/tag/technology/</link>
+      <pubDate>Wed, 21 Oct 2020 17:30:17 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/tag/technology/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>blockchain</title>
@@ -66,29 +120,11 @@
     </item>
     
     <item>
-      <title>notes</title>
-      <link>https://www.hexarthur.com/zh/tag/notes/</link>
-      <pubDate>Tue, 20 Oct 2020 23:16:17 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/notes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>security</title>
       <link>https://www.hexarthur.com/zh/tag/security/</link>
       <pubDate>Tue, 20 Oct 2020 23:16:17 +0800</pubDate>
       
       <guid>https://www.hexarthur.com/zh/tag/security/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>technology</title>
-      <link>https://www.hexarthur.com/zh/tag/technology/</link>
-      <pubDate>Tue, 20 Oct 2020 23:16:17 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/technology/</guid>
       <description></description>
     </item>
     
@@ -152,42 +188,6 @@
       <pubDate>Fri, 16 Oct 2020 09:19:19 +0800</pubDate>
       
       <guid>https://www.hexarthur.com/zh/tag/e-commerce/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ecom</title>
-      <link>https://www.hexarthur.com/zh/tag/ecom/</link>
-      <pubDate>Fri, 16 Oct 2020 09:19:19 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/ecom/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ecom6013</title>
-      <link>https://www.hexarthur.com/zh/tag/ecom6013/</link>
-      <pubDate>Fri, 16 Oct 2020 09:19:19 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/ecom6013/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>projects</title>
-      <link>https://www.hexarthur.com/zh/tag/projects/</link>
-      <pubDate>Fri, 16 Oct 2020 09:19:19 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/projects/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ai</title>
-      <link>https://www.hexarthur.com/zh/tag/ai/</link>
-      <pubDate>Mon, 05 Oct 2020 00:30:11 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/tag/ai/</guid>
       <description></description>
     </item>
     

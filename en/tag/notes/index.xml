@@ -6,10 +6,19 @@
     <description>Recent content in notes on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 20 Oct 2020 23:16:17 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2020 17:30:17 +0800</lastBuildDate>
     
 	<atom:link href="https://www.hexarthur.com/en/tag/notes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Java Basics</title>
+      <link>https://www.hexarthur.com/en/2020/10/21/java-basics/</link>
+      <pubDate>Wed, 21 Oct 2020 17:30:17 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/en/2020/10/21/java-basics/</guid>
+      <description>Java Basics </description>
+    </item>
     
     <item>
       <title>ICOM6045 Topic 1 Cryptography</title>
@@ -211,17 +220,6 @@ Topic 1 Ten Principles of Economics Principle 1: People Face Trade-Offs
 One classic trade-off - &amp;ldquo;guns (national defense) and butter (consumer goods)&amp;rdquo;.
 Another trade-off - efficiency and equality.
 Principle 2: The Cost of Something Is What You Give Up to Get It</description>
-    </item>
-    
-    <item>
-      <title>ICOM6012 Topic 1 Overview</title>
-      <link>https://www.hexarthur.com/en/2020/09/09/icom6012-topic-1-overview/</link>
-      <pubDate>Wed, 09 Sep 2020 20:22:09 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/en/2020/09/09/icom6012-topic-1-overview/</guid>
-      <description>ICOM6012 Internet Infrastructure Technologies Topic 1 Overview Internet&amp;rsquo;s Birthday: Sept. 2 or Oct. 29, 1969.
- ARPANET (1969 -)  TCP protocol in 1974 &amp;ldquo;Internet = Internetworking&amp;rdquo;   NSFNET (1986 -) The Internet (late 1980s)  Some Interesting Topics about Internet (More than Technical)
- Who controls the Internet? What is Net Neutrality? A TikTok Ban Is Overdue Zoom’s stock surges 41% after earnings beat, adding over $37 billion in market cap  Evolution of Computers</description>
     </item>
     
   </channel>

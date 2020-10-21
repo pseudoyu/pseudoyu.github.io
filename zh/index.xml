@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 20 Oct 2020 23:16:17 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2020 17:30:17 +0800</lastBuildDate>
     
     <atom:link href="https://www.hexarthur.com/zh/index.xml" rel="self" type="application/rss+xml" />
     
@@ -59,6 +59,19 @@
 &lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCR0O0s303tGBi3P02hstQPA/&#34;&gt;Youtube&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.reddit.com/user/pseudo_yu&#34;&gt;Reddit&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Java Basics</title>
+      <link>https://www.hexarthur.com/zh/2020/10/21/java-basics/</link>
+      <pubDate>Wed, 21 Oct 2020 17:30:17 +0800</pubDate>
+      
+      <guid>https://www.hexarthur.com/zh/2020/10/21/java-basics/</guid>
+      
+        <description>&lt;h1 id=&#34;java-basics&#34;&gt;Java Basics&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/java_basics.svg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </description>
       
     </item>
@@ -4303,98 +4316,6 @@ Select cheapest neighbor as currentState and goto step2
 &lt;li&gt;&lt;a href=&#34;https://wordpress.com&#34;&gt;WordPress&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>ECOM6013 Topic 3 E-Commerce Presence</title>
-      <link>https://www.hexarthur.com/zh/2020/09/16/ecom6013-topic-3-e-commerce-presence/</link>
-      <pubDate>Wed, 16 Sep 2020 20:25:28 +0800</pubDate>
-      
-      <guid>https://www.hexarthur.com/zh/2020/09/16/ecom6013-topic-3-e-commerce-presence/</guid>
-      
-        <description>&lt;h1 id=&#34;ecom6013-e-commerce-technologies&#34;&gt;ECOM6013 E-Commerce Technologies&lt;/h1&gt;
-&lt;h2 id=&#34;topic-3-e-commerce-presence&#34;&gt;Topic 3 E-Commerce Presence&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Image You E-Commerce Presence&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Idea
-&lt;ul&gt;
-&lt;li&gt;Mission&lt;/li&gt;
-&lt;li&gt;Target audience&lt;/li&gt;
-&lt;li&gt;Intended market space&lt;/li&gt;
-&lt;li&gt;Strategic analysis&lt;/li&gt;
-&lt;li&gt;Marketing matrix&lt;/li&gt;
-&lt;li&gt;Development timeline&lt;/li&gt;
-&lt;li&gt;Preliminary budget&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;About Money (e.g. Amazon&amp;rsquo;s e-commerce &amp;amp; Amazon&amp;rsquo;s AWS)
-&lt;ul&gt;
-&lt;li&gt;Business models&lt;/li&gt;
-&lt;li&gt;Revenue models&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;About target audience
-&lt;ul&gt;
-&lt;li&gt;Demographics&lt;/li&gt;
-&lt;li&gt;Lifestyle&lt;/li&gt;
-&lt;li&gt;Consumption patterns&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Marketplace Characteristics
-&lt;ul&gt;
-&lt;li&gt;Size&lt;/li&gt;
-&lt;li&gt;Growth&lt;/li&gt;
-&lt;li&gt;Demographics&lt;/li&gt;
-&lt;li&gt;Structure&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Content&lt;/li&gt;
-&lt;li&gt;SWOT Analysis&lt;/li&gt;
-&lt;li&gt;E-Commerce presence map&lt;/li&gt;
-&lt;li&gt;Milestones&lt;/li&gt;
-&lt;li&gt;Costs
-&lt;ul&gt;
-&lt;li&gt;Simple website: US$5000&lt;/li&gt;
-&lt;li&gt;Small startup: US$25,000 tp US$50,000&lt;/li&gt;
-&lt;li&gt;Large corporate website: US$100,000 + to millions&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;SWOT Analysis&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ecommerce_swot_analysis.png&#34; alt=&#34;ecommerce_swot_analysis&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;E-Commerce Presence Map&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ecommerce_presence.png&#34; alt=&#34;ecommerce_presence&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Building an E-Commerce Site: A Systematic Approach&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Challenges
-&lt;ul&gt;
-&lt;li&gt;Developing a clear understanding of business objectives&lt;/li&gt;
-&lt;li&gt;Knowing how to choose the right technology to achieve those objectives&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Main factors
-&lt;ul&gt;
-&lt;li&gt;Management&lt;/li&gt;
-&lt;li&gt;Hardware architecture&lt;/li&gt;
-&lt;li&gt;Software&lt;/li&gt;
-&lt;li&gt;Design&lt;/li&gt;
-&lt;li&gt;Telecommunications&lt;/li&gt;
-&lt;li&gt;Human resources&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;E-Commerce Presence Timeline&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Planing&lt;/li&gt;
-&lt;li&gt;Website development&lt;/li&gt;
-&lt;li&gt;Web implementation&lt;/li&gt;
-&lt;li&gt;Social media plan&lt;/li&gt;
-&lt;li&gt;Social media implementation&lt;/li&gt;
-&lt;li&gt;Mobile plan&lt;/li&gt;
-&lt;/ol&gt;
 </description>
       
     </item>

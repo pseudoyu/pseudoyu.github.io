@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>basic on Pseudoyu</title>
-    <link>https://www.pseudoyu.com/en/tag/basic/</link>
+    <link>http://www.pseudoyu.com/en/tag/basic/</link>
     <description>Recent content in basic on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 21 Oct 2020 19:50:17 +0800</lastBuildDate>
     
-	<atom:link href="https://www.pseudoyu.com/en/tag/basic/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.pseudoyu.com/en/tag/basic/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Java Basics</title>
-      <link>https://www.pseudoyu.com/en/2020/10/21/java-basics/</link>
+      <link>http://www.pseudoyu.com/en/2020/10/21/java-basics/</link>
       <pubDate>Wed, 21 Oct 2020 19:50:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2020/10/21/java-basics/</guid>
+      <guid>http://www.pseudoyu.com/en/2020/10/21/java-basics/</guid>
       <description>Java Basics </description>
     </item>
     

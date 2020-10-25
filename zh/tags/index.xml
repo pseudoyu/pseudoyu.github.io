@@ -2,192 +2,192 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Pseudoyu</title>
-    <link>https://www.pseudoyu.com/zh/tags/</link>
+    <link>http://www.pseudoyu.com/zh/tags/</link>
     <description>Recent content in Tags on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Fri, 23 Oct 2020 14:00:17 +0800</lastBuildDate>
     
-	<atom:link href="https://www.pseudoyu.com/zh/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.pseudoyu.com/zh/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>bilibili</title>
-      <link>https://www.pseudoyu.com/zh/tag/bilibili/</link>
+      <link>http://www.pseudoyu.com/zh/tag/bilibili/</link>
       <pubDate>Fri, 23 Oct 2020 14:00:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/tag/bilibili/</guid>
+      <guid>http://www.pseudoyu.com/zh/tag/bilibili/</guid>
       <description></description>
     </item>
     
     <item>
       <title>bitcoin</title>
-      <link>https://www.pseudoyu.com/zh/tag/bitcoin/</link>
+      <link>http://www.pseudoyu.com/zh/tag/bitcoin/</link>
       <pubDate>Fri, 23 Oct 2020 14:00:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/tag/bitcoin/</guid>
+      <guid>http://www.pseudoyu.com/zh/tag/bitcoin/</guid>
       <description></description>
     </item>
     
     <item>
       <title>blockchain</title>
-      <link>https://www.pseudoyu.com/zh/tag/blockchain/</link>
+      <link>http://www.pseudoyu.com/zh/tag/blockchain/</link>
       <pubDate>Fri, 23 Oct 2020 14:00:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/tag/blockchain/</guid>
+      <guid>http://www.pseudoyu.com/zh/tag/blockchain/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cryptocurrency</title>
-      <link>https://www.pseudoyu.com/zh/tag/cryptocurrency/</link>
+      <link>http://www.pseudoyu.com/zh/tag/cryptocurrency/</link>
       <pubDate>Fri, 23 Oct 2020 14:00:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/tag/cryptocurrency/</guid>
+      <guid>http://www.pseudoyu.com/zh/tag/cryptocurrency/</guid>
       <description></description>
     </item>
     
     <item>
       <title>decentralization</title>
-      <link>https://www.pseudoyu.com/zh/tag/decentralization/</link>
+      <link>http://www.pseudoyu.com/zh/tag/decentralization/</link>
       <pubDate>Fri, 23 Oct 2020 14:00:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/tag/decentralization/</guid>
+      <guid>http://www.pseudoyu.com/zh/tag/decentralization/</guid>
       <description></description>
     </item>
     
     <item>
       <title>notes</title>
-      <link>https://www.pseudoyu.com/zh/tag/notes/</link>
+      <link>http://www.pseudoyu.com/zh/tag/notes/</link>
       <pubDate>Fri, 23 Oct 2020 14:00:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/tag/notes/</guid>
+      <guid>http://www.pseudoyu.com/zh/tag/notes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>pku</title>
-      <link>https://www.pseudoyu.com/zh/tag/pku/</link>
+      <link>http://www.pseudoyu.com/zh/tag/pku/</link>
       <pubDate>Fri, 23 Oct 2020 14:00:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/tag/pku/</guid>
+      <guid>http://www.pseudoyu.com/zh/tag/pku/</guid>
       <description></description>
     </item>
     
     <item>
       <title>security</title>
-      <link>https://www.pseudoyu.com/zh/tag/security/</link>
+      <link>http://www.pseudoyu.com/zh/tag/security/</link>
       <pubDate>Fri, 23 Oct 2020 14:00:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/tag/security/</guid>
+      <guid>http://www.pseudoyu.com/zh/tag/security/</guid>
       <description></description>
     </item>
     
     <item>
       <title>technology</title>
-      <link>https://www.pseudoyu.com/zh/tag/technology/</link>
+      <link>http://www.pseudoyu.com/zh/tag/technology/</link>
       <pubDate>Fri, 23 Oct 2020 14:00:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/tag/technology/</guid>
+      <guid>http://www.pseudoyu.com/zh/tag/technology/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cryptography</title>
-      <link>https://www.pseudoyu.com/zh/tag/cryptography/</link>
+      <link>http://www.pseudoyu.com/zh/tag/cryptography/</link>
       <pubDate>Wed, 21 Oct 2020 19:53:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/tag/cryptography/</guid>
+      <guid>http://www.pseudoyu.com/zh/tag/cryptography/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ecic</title>
-      <link>https://www.pseudoyu.com/zh/tag/ecic/</link>
+      <link>http://www.pseudoyu.com/zh/tag/ecic/</link>
       <pubDate>Wed, 21 Oct 2020 19:53:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/tag/ecic/</guid>
+      <guid>http://www.pseudoyu.com/zh/tag/ecic/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hku</title>
-      <link>https://www.pseudoyu.com/zh/tag/hku/</link>
+      <link>http://www.pseudoyu.com/zh/tag/hku/</link>
       <pubDate>Wed, 21 Oct 2020 19:53:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/tag/hku/</guid>
+      <guid>http://www.pseudoyu.com/zh/tag/hku/</guid>
       <description></description>
     </item>
     
     <item>
       <title>icmo6045</title>
-      <link>https://www.pseudoyu.com/zh/tag/icmo6045/</link>
+      <link>http://www.pseudoyu.com/zh/tag/icmo6045/</link>
       <pubDate>Wed, 21 Oct 2020 19:53:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/tag/icmo6045/</guid>
+      <guid>http://www.pseudoyu.com/zh/tag/icmo6045/</guid>
       <description></description>
     </item>
     
     <item>
       <title>icom</title>
-      <link>https://www.pseudoyu.com/zh/tag/icom/</link>
+      <link>http://www.pseudoyu.com/zh/tag/icom/</link>
       <pubDate>Wed, 21 Oct 2020 19:53:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/tag/icom/</guid>
+      <guid>http://www.pseudoyu.com/zh/tag/icom/</guid>
       <description></description>
     </item>
     
     <item>
       <title>basic</title>
-      <link>https://www.pseudoyu.com/zh/tag/basic/</link>
+      <link>http://www.pseudoyu.com/zh/tag/basic/</link>
       <pubDate>Wed, 21 Oct 2020 19:50:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/tag/basic/</guid>
+      <guid>http://www.pseudoyu.com/zh/tag/basic/</guid>
       <description></description>
     </item>
     
     <item>
       <title>github</title>
-      <link>https://www.pseudoyu.com/zh/tag/github/</link>
+      <link>http://www.pseudoyu.com/zh/tag/github/</link>
       <pubDate>Wed, 21 Oct 2020 19:50:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/tag/github/</guid>
+      <guid>http://www.pseudoyu.com/zh/tag/github/</guid>
       <description></description>
     </item>
     
     <item>
       <title>java</title>
-      <link>https://www.pseudoyu.com/zh/tag/java/</link>
+      <link>http://www.pseudoyu.com/zh/tag/java/</link>
       <pubDate>Wed, 21 Oct 2020 19:50:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/tag/java/</guid>
+      <guid>http://www.pseudoyu.com/zh/tag/java/</guid>
       <description></description>
     </item>
     
     <item>
       <title>programming</title>
-      <link>https://www.pseudoyu.com/zh/tag/programming/</link>
+      <link>http://www.pseudoyu.com/zh/tag/programming/</link>
       <pubDate>Wed, 21 Oct 2020 19:50:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/tag/programming/</guid>
+      <guid>http://www.pseudoyu.com/zh/tag/programming/</guid>
       <description></description>
     </item>
     
     <item>
       <title>icom6012</title>
-      <link>https://www.pseudoyu.com/zh/tag/icom6012/</link>
+      <link>http://www.pseudoyu.com/zh/tag/icom6012/</link>
       <pubDate>Mon, 19 Oct 2020 17:50:44 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/tag/icom6012/</guid>
+      <guid>http://www.pseudoyu.com/zh/tag/icom6012/</guid>
       <description></description>
     </item>
     
     <item>
       <title>internet</title>
-      <link>https://www.pseudoyu.com/zh/tag/internet/</link>
+      <link>http://www.pseudoyu.com/zh/tag/internet/</link>
       <pubDate>Mon, 19 Oct 2020 17:50:44 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/tag/internet/</guid>
+      <guid>http://www.pseudoyu.com/zh/tag/internet/</guid>
       <description></description>
     </item>
     

@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Pseudoyu</title>
-    <link>http://www.pseudoyu.com/en/category/projects/</link>
+    <link>https://www.pseudoyu.com/en/category/projects/</link>
     <description>Recent content in Projects on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 16 Oct 2020 09:19:19 +0800</lastBuildDate>
     
-	<atom:link href="http://www.pseudoyu.com/en/category/projects/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.pseudoyu.com/en/category/projects/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>A Look at Tik-Tok</title>
-      <link>http://www.pseudoyu.com/en/2020/10/16/a-look-at-tik-tok/</link>
+      <link>https://www.pseudoyu.com/en/2020/10/16/a-look-at-tik-tok/</link>
       <pubDate>Fri, 16 Oct 2020 09:19:19 +0800</pubDate>
       
-      <guid>http://www.pseudoyu.com/en/2020/10/16/a-look-at-tik-tok/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/10/16/a-look-at-tik-tok/</guid>
       <description>A Look at Tik-Tok Given there are many social media platforms already existing in US, what makes Tik-Tok so successful that it becomes a big enough threat to cause the US Government to act the way it did towards a commercial company (ignore political factors)? Economically, at about 2016, US tech giants such as Facebook or Google mainly focused on long video platform instead of the short video platform. A company called Musical.</description>
     </item>
     
     <item>
       <title>Mobile Payment Systems Case Study</title>
-      <link>http://www.pseudoyu.com/en/2020/10/01/mobile-payment-systems-case-study/</link>
+      <link>https://www.pseudoyu.com/en/2020/10/01/mobile-payment-systems-case-study/</link>
       <pubDate>Thu, 01 Oct 2020 22:25:19 +0800</pubDate>
       
-      <guid>http://www.pseudoyu.com/en/2020/10/01/mobile-payment-systems-case-study/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/10/01/mobile-payment-systems-case-study/</guid>
       <description>Mobile Payment Systems Why has China been an ideal environment to support mobile payment systems? Politically, payment licenses are controlled by government (relative financial institutions) and under strict regulation. So, tech giants like Alibaba who are qualified can increasingly develop their payment business in the early age. Plus, in the early stage of mobile payment, laws and rules are not so completed. Payment platform can utilize smart market strategies (like very high return rate) to attract more new potential users and enhance existing users’ engagement, which is effective in market expanding stage.</description>
     </item>
     
     <item>
       <title>New iPad Air 4 (2020) Presence by Apple Inc.</title>
-      <link>http://www.pseudoyu.com/en/2020/09/18/new-ipad-air-4-2020-presence-by-apple-inc./</link>
+      <link>https://www.pseudoyu.com/en/2020/09/18/new-ipad-air-4-2020-presence-by-apple-inc./</link>
       <pubDate>Fri, 18 Sep 2020 01:25:19 +0800</pubDate>
       
-      <guid>http://www.pseudoyu.com/en/2020/09/18/new-ipad-air-4-2020-presence-by-apple-inc./</guid>
+      <guid>https://www.pseudoyu.com/en/2020/09/18/new-ipad-air-4-2020-presence-by-apple-inc./</guid>
       <description>E-Commerce Presence Look Around New iPad Air 4 (2020) Presence by Apple Inc. Website Link
 The iPad Air 4 (2020) got shown off at Apple&amp;rsquo;s September event held on September 16. There is a specific designed website (mobile version included) for this product. I&amp;rsquo;d like to do an analysis towards this very impressive E-Commerce presence.
 Apple iPad Air product line is mainly targeted to educators/students, staffs and kids/teenagers. So, the most premium features this new product wants to convey to customers is its fancy appearance and powerful A14 Bionic for creation, study and entertainment.</description>
@@ -42,10 +42,10 @@ Apple iPad Air product line is mainly targeted to educators/students, staffs and
     
     <item>
       <title>Puma Goes Omni Case Study</title>
-      <link>http://www.pseudoyu.com/en/2020/09/08/puma-goes-omni-case-study/</link>
+      <link>https://www.pseudoyu.com/en/2020/09/08/puma-goes-omni-case-study/</link>
       <pubDate>Tue, 08 Sep 2020 23:30:19 +0800</pubDate>
       
-      <guid>http://www.pseudoyu.com/en/2020/09/08/puma-goes-omni-case-study/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/09/08/puma-goes-omni-case-study/</guid>
       <description>Puma Goes Omni About Puma Puma Official Website
 A Fancy Presentation
 Slogan: &amp;ldquo;Run The Streets. Do You.&amp;rdquo;
@@ -58,10 +58,10 @@ Building a Centralize Website Restructuring Strategy
     
     <item>
       <title>What To Eat - A WeChat Mini-Program Project</title>
-      <link>http://www.pseudoyu.com/en/2020/04/05/what-to-eat-a-wechat-mini-program-project/</link>
+      <link>https://www.pseudoyu.com/en/2020/04/05/what-to-eat-a-wechat-mini-program-project/</link>
       <pubDate>Sun, 05 Apr 2020 23:40:25 +0800</pubDate>
       
-      <guid>http://www.pseudoyu.com/en/2020/04/05/what-to-eat-a-wechat-mini-program-project/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/04/05/what-to-eat-a-wechat-mini-program-project/</guid>
       <description>What To Eat - A WeChat Mini-Program Project Source Code on Github
 Development Details To be updated&amp;hellip;
 WeChat Cloud-Dev Technology Utilized the WeChat official cloud-dev technology. There is no need to prepare/deploy our own server for the mini-program and save large images locally (exceeding the upload size limit of the mini program)

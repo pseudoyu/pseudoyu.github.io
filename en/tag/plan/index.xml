@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>plan on Pseudoyu</title>
-    <link>http://www.pseudoyu.com/en/tag/plan/</link>
+    <link>https://www.pseudoyu.com/en/tag/plan/</link>
     <description>Recent content in plan on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 18 Oct 2020 08:30:31 +0800</lastBuildDate>
     
-	<atom:link href="http://www.pseudoyu.com/en/tag/plan/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.pseudoyu.com/en/tag/plan/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Blockchain Learning Plan</title>
-      <link>http://www.pseudoyu.com/en/2020/10/18/blockchain-learning-plan/</link>
+      <link>https://www.pseudoyu.com/en/2020/10/18/blockchain-learning-plan/</link>
       <pubDate>Sun, 18 Oct 2020 08:30:31 +0800</pubDate>
       
-      <guid>http://www.pseudoyu.com/en/2020/10/18/blockchain-learning-plan/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/10/18/blockchain-learning-plan/</guid>
       <description>区块链学习计划 学习路径 算法相关 (刷题) 剑指Offer LeetCode 笔试面试题库 Jave相关 系统/工具/框架 计算机网络 ICOM6012 教材 网络安全 ICOM6045 操作系统 Linux基</description>
     </item>
     
     <item>
       <title>Blockchain Job Description</title>
-      <link>http://www.pseudoyu.com/en/2020/10/02/blockchain-job-description/</link>
+      <link>https://www.pseudoyu.com/en/2020/10/02/blockchain-job-description/</link>
       <pubDate>Fri, 02 Oct 2020 00:07:31 +0800</pubDate>
       
-      <guid>http://www.pseudoyu.com/en/2020/10/02/blockchain-job-description/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/10/02/blockchain-job-description/</guid>
       <description>区块链岗位描述 蚂蚁集团-区块链安全高级研发工程师/研发专家 岗位描述 负责智能合约安全审计工具、合约虚拟机增强扩展等系统的研发 负责区块链相关安全</description>
     </item>
     

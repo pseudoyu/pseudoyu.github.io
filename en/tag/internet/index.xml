@@ -2,50 +2,50 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>internet on Pseudoyu</title>
-    <link>http://www.pseudoyu.com/en/tag/internet/</link>
+    <link>https://www.pseudoyu.com/en/tag/internet/</link>
     <description>Recent content in internet on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 19 Oct 2020 17:50:44 +0800</lastBuildDate>
     
-	<atom:link href="http://www.pseudoyu.com/en/tag/internet/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.pseudoyu.com/en/tag/internet/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ICOM6012 Topic 3 Application Layer</title>
-      <link>http://www.pseudoyu.com/en/2020/10/19/icom6012-topic-3-application-layer/</link>
+      <link>https://www.pseudoyu.com/en/2020/10/19/icom6012-topic-3-application-layer/</link>
       <pubDate>Mon, 19 Oct 2020 17:50:44 +0800</pubDate>
       
-      <guid>http://www.pseudoyu.com/en/2020/10/19/icom6012-topic-3-application-layer/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/10/19/icom6012-topic-3-application-layer/</guid>
       <description>ICOM6012 Internet Infrastructure Technologies Topic 3 Application Layer Creating a Network App Run on different end systems Communication over network No need to write for network-core devices Client-Server Architecture (The Centralized Internet) Server Always-on host Permanent IP address Often in data centers (for scaling) Clients Contact, communicate with server May be intermittently connected May have dynamic IP addresses Don&amp;rsquo;t communicate directly with each other Peer-to-Peer (P2P) Architecture No always-on server</description>
     </item>
     
     <item>
       <title>ICOM6012 Topic 4 Transport Layer</title>
-      <link>http://www.pseudoyu.com/en/2020/10/19/icom6012-topic-4-transport-layer/</link>
+      <link>https://www.pseudoyu.com/en/2020/10/19/icom6012-topic-4-transport-layer/</link>
       <pubDate>Mon, 19 Oct 2020 15:23:44 +0800</pubDate>
       
-      <guid>http://www.pseudoyu.com/en/2020/10/19/icom6012-topic-4-transport-layer/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/10/19/icom6012-topic-4-transport-layer/</guid>
       <description>ICOM6012 Internet Infrastructure Technologies Topic 4 Transport Layer Transport Services and Protocol
  Provide logical communication between app processes running on different hosts Run in end systems  Send side  Breaks app messages into segments, passes to network layer   Receive side  Reassembles segments into messages, passes to application layer     More than one transport protocol available to apps  TCP (RFC 793, 1981) UDP (RFC 768, 1980) SCTP (RFC 4960, 2007) DCCP (RFC 4340, 2006)    Transport vs.</description>
     </item>
     
     <item>
       <title>ICOM6012 Topic 2 The Big Picture</title>
-      <link>http://www.pseudoyu.com/en/2020/10/05/icom6012-topic-2-the-big-picture/</link>
+      <link>https://www.pseudoyu.com/en/2020/10/05/icom6012-topic-2-the-big-picture/</link>
       <pubDate>Mon, 05 Oct 2020 09:06:09 +0800</pubDate>
       
-      <guid>http://www.pseudoyu.com/en/2020/10/05/icom6012-topic-2-the-big-picture/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/10/05/icom6012-topic-2-the-big-picture/</guid>
       <description>ICOM6012 Internet Infrastructure Technologies Topic 2 The Big Picture The Internet: &amp;ldquo;nuts and bolts&amp;rdquo; view
  Billions of connected computing devices  Host = end system Running network apps Internet of things (IoT)   Packet switches  routers switchers   Communication links  Fiber, copper, radio, satellite Transmission rate: bandwidth   Networks  Collection of devices, routers, switches, links Managed by an organization   Internet: &amp;ldquo;network of networks&amp;rdquo;  Interconnected ISPs   Protocols  Control sending, receiving of messages   Internet standards  RFC: Requests for Comments IETF: Internet Engineering Task Force IEEE: Institute of Electronical &amp;amp; Electronic Engineering    The Internet: a &amp;ldquo;service&amp;rdquo; view</description>
     </item>
     
     <item>
       <title>ICOM6012 Topic 1 Overview</title>
-      <link>http://www.pseudoyu.com/en/2020/09/09/icom6012-topic-1-overview/</link>
+      <link>https://www.pseudoyu.com/en/2020/09/09/icom6012-topic-1-overview/</link>
       <pubDate>Wed, 09 Sep 2020 20:22:09 +0800</pubDate>
       
-      <guid>http://www.pseudoyu.com/en/2020/09/09/icom6012-topic-1-overview/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/09/09/icom6012-topic-1-overview/</guid>
       <description>ICOM6012 Internet Infrastructure Technologies Topic 1 Overview Internet&amp;rsquo;s Birthday: Sept. 2 or Oct. 29, 1969.
  ARPANET (1969 -)  TCP protocol in 1974 &amp;ldquo;Internet = Internetworking&amp;rdquo;   NSFNET (1986 -) The Internet (late 1980s)  Some Interesting Topics about Internet (More than Technical)
  Who controls the Internet? What is Net Neutrality? A TikTok Ban Is Overdue Zoom’s stock surges 41% after earnings beat, adding over $37 billion in market cap  Evolution of Computers</description>

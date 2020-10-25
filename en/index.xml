@@ -918,7 +918,7 @@
       
         <description>&lt;h1 id=&#34;icom6012-internet-infrastructure-technologies&#34;&gt;ICOM6012 Internet Infrastructure Technologies&lt;/h1&gt;
 &lt;h2 id=&#34;topic-4-transport-layer&#34;&gt;Topic 4 Transport Layer&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/Transport_Layer.svg&#34; alt=&#34;Transport_Layer&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/transport_layer.svg&#34; alt=&#34;transport_layer.svg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Transport Services and Protocol&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Provide logical communication between app processes running on different hosts&lt;/li&gt;

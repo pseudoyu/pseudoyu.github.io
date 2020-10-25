@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>plan on Pseudoyu</title>
-    <link>https://www.hexarthur.com/zh/tag/plan/</link>
+    <link>https://www.pseudoyu.com/zh/tag/plan/</link>
     <description>Recent content in plan on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Sun, 18 Oct 2020 08:30:31 +0800</lastBuildDate>
     
-	<atom:link href="https://www.hexarthur.com/zh/tag/plan/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.pseudoyu.com/zh/tag/plan/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>区块链学习计划</title>
-      <link>https://www.hexarthur.com/zh/2020/10/18/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</link>
+      <link>https://www.pseudoyu.com/zh/2020/10/18/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</link>
       <pubDate>Sun, 18 Oct 2020 08:30:31 +0800</pubDate>
       
-      <guid>https://www.hexarthur.com/zh/2020/10/18/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</guid>
+      <guid>https://www.pseudoyu.com/zh/2020/10/18/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</guid>
       <description>区块链学习计划 学习路径 算法相关 (刷题) 剑指Offer LeetCode 笔试面试题库 Jave相关 系统/工具/框架 计算机网络 ICOM6012 教材 网络安全 ICOM6045 操作系统 Linux基</description>
     </item>
     
     <item>
       <title>区块链岗位描述</title>
-      <link>https://www.hexarthur.com/zh/2020/10/02/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%B2%97%E4%BD%8D%E6%8F%8F%E8%BF%B0/</link>
+      <link>https://www.pseudoyu.com/zh/2020/10/02/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%B2%97%E4%BD%8D%E6%8F%8F%E8%BF%B0/</link>
       <pubDate>Fri, 02 Oct 2020 00:07:31 +0800</pubDate>
       
-      <guid>https://www.hexarthur.com/zh/2020/10/02/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%B2%97%E4%BD%8D%E6%8F%8F%E8%BF%B0/</guid>
+      <guid>https://www.pseudoyu.com/zh/2020/10/02/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%B2%97%E4%BD%8D%E6%8F%8F%E8%BF%B0/</guid>
       <description>区块链岗位描述 蚂蚁集团-区块链安全高级研发工程师/研发专家 岗位描述 负责智能合约安全审计工具、合约虚拟机增强扩展等系统的研发 负责区块链相关安全</description>
     </item>
     

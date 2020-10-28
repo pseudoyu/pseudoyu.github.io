@@ -72,8 +72,7 @@
       
         <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_technology_and_applications.svg&#34; alt=&#34;blockchain_technology_and_applications&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;blockchain-technology&#34;&gt;Blockchain Technology&lt;/h1&gt;
-&lt;p&gt;and Applications&lt;/p&gt;
+&lt;h1 id=&#34;blockchain-technology-and-applications-1&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
 &lt;h2 id=&#34;cryptography&#34;&gt;Cryptography&lt;/h2&gt;
 &lt;h3 id=&#34;cryptographic-hash-function&#34;&gt;Cryptographic hash function&lt;/h3&gt;
 &lt;ul&gt;
@@ -168,8 +167,7 @@ O(log(n))&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;application&#34;&gt;Application&lt;/h3&gt;
-&lt;p&gt;(blockchain)&lt;/p&gt;
+&lt;h3 id=&#34;application-blockchain&#34;&gt;Application (blockchain)&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Node
 &lt;ul&gt;
@@ -707,8 +705,7 @@ multiple call will invoke the same object&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;string-pool&#34;&gt;String Pool&lt;/h3&gt;
-&lt;p&gt;(stores all literal strings)&lt;/p&gt;
+&lt;h3 id=&#34;string-pool-stores-all-literal-strings&#34;&gt;String Pool (stores all literal strings)&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Useful to reduce memory requirements&lt;/li&gt;
 &lt;li&gt;intern() method

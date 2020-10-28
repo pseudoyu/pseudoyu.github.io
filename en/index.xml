@@ -1943,6 +1943,9 @@ no prior requirement of knowing the object when writing or compiling code&lt;/li
 &lt;li&gt;finally&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;generics&#34;&gt;Generics&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Definition&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;annotation&#34;&gt;Annotation&lt;/h2&gt;
 &lt;h3 id=&#34;meta-information-attached-in-the-code&#34;&gt;Meta information attached in the code&lt;/h3&gt;
 &lt;ul&gt;

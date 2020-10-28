@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 28 Oct 2020 08:50:17 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2020 09:11:17 +0800</lastBuildDate>
     
     <atom:link href="https://www.pseudoyu.com/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -59,6 +59,509 @@
 &lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCR0O0s303tGBi3P02hstQPA/&#34;&gt;Youtube&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.reddit.com/user/pseudo_yu&#34;&gt;Reddit&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Blockchain Technology and Applications</title>
+      <link>https://www.pseudoyu.com/en/2020/10/28/blockchain-technology-and-applications/</link>
+      <pubDate>Wed, 28 Oct 2020 09:11:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/10/28/blockchain-technology-and-applications/</guid>
+      
+        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_technology_and_applications.svg&#34; alt=&#34;blockchain_technology_and_applications&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;blockchain-technology&#34;&gt;Blockchain Technology&lt;/h1&gt;
+&lt;p&gt;and Applications&lt;/p&gt;
+&lt;h2 id=&#34;cryptography&#34;&gt;Cryptography&lt;/h2&gt;
+&lt;h3 id=&#34;cryptographic-hash-function&#34;&gt;Cryptographic hash function&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Application
+&lt;ul&gt;
+&lt;li&gt;Digital commitment
+(digital equivalent of a sealed envelop)
+&lt;ul&gt;
+&lt;li&gt;H(x || nonce)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;SHA-256
+(used in bitcoin)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Features
+&lt;ul&gt;
+&lt;li&gt;Collision resistance
+&lt;ul&gt;
+&lt;li&gt;x != y, H(x) = H(y)&lt;/li&gt;
+&lt;li&gt;MD5 (proved bad)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Hiding
+&lt;ul&gt;
+&lt;li&gt;x -&amp;gt; H(x), H(x) !-&amp;gt; x&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Puzzle friendly
+&lt;ul&gt;
+&lt;li&gt;H(block header) &amp;lt;= target&lt;/li&gt;
+&lt;li&gt;Keep trying nonce, no shortcuts&lt;/li&gt;
+&lt;li&gt;Difficult to solve, but easy to verify&lt;/li&gt;
+&lt;li&gt;Application
+&lt;ul&gt;
+&lt;li&gt;PoW&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;encryption&#34;&gt;Encryption&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Symmetric encryption
+&lt;ul&gt;
+&lt;li&gt;Use the same one key&lt;/li&gt;
+&lt;li&gt;Not secure to transport encryption key&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Asymmetric encryption
+(public key encryption)
+&lt;ul&gt;
+&lt;li&gt;Use two keys
+(one for encryption, another for decryption)&lt;/li&gt;
+&lt;li&gt;A good source of randomness
+(assume)&lt;/li&gt;
+&lt;li&gt;Application
+&lt;ul&gt;
+&lt;li&gt;Signature
+(used in bitcoin)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;data-structure&#34;&gt;Data Structure&lt;/h2&gt;
+&lt;h3 id=&#34;hash-pointer&#34;&gt;Hash pointer&lt;/h3&gt;
+&lt;p&gt;(blockchain is a linked list
+using hash pointers)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Genesis block &amp;lt;- block1 &amp;lt;- block2 &amp;lt;-&amp;hellip;&amp;lt;- recent block
+(every block has a hash pointer)&lt;/li&gt;
+&lt;li&gt;Tamper-event log&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;merkle-tree&#34;&gt;Merkle tree&lt;/h3&gt;
+&lt;p&gt;(using hash pointer instead of pointer)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Merkle proof
+(proof of membership/inclusion)
+&lt;ul&gt;
+&lt;li&gt;O(log(n))&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Think:
+proof of non-membership
+&lt;ul&gt;
+&lt;li&gt;O(n)&lt;/li&gt;
+&lt;li&gt;Sorted merkle tree:
+O(log(n))&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;application&#34;&gt;Application&lt;/h3&gt;
+&lt;p&gt;(blockchain)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Node
+&lt;ul&gt;
+&lt;li&gt;Full node
+(fully validating node)
+&lt;ul&gt;
+&lt;li&gt;Block header
+&lt;ul&gt;
+&lt;li&gt;Version&lt;/li&gt;
+&lt;li&gt;Hash of previous block header&lt;/li&gt;
+&lt;li&gt;Merkle root hash
+(protect all nodes)&lt;/li&gt;
+&lt;li&gt;Target&lt;/li&gt;
+&lt;li&gt;Nonce&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Block body
+&lt;ul&gt;
+&lt;li&gt;Transaction lists&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Light node
+(light weight node)
+&lt;ul&gt;
+&lt;li&gt;Only store block headers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Problem
+&lt;ul&gt;
+&lt;li&gt;Double spending&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;protocol&#34;&gt;Protocol&lt;/h2&gt;
+&lt;h3 id=&#34;distributed-consensus&#34;&gt;Distributed consensus&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;ldquo;Impossibility result&amp;rdquo;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;FLP
+&lt;ul&gt;
+&lt;li&gt;In an asynchronous system,
+if one faulty exists, there is no consensus&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;CAP Theorem
+&lt;ul&gt;
+&lt;li&gt;Consistency&lt;/li&gt;
+&lt;li&gt;Availability&lt;/li&gt;
+&lt;li&gt;Partition tolerance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Example&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Distributed hash table&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;consensus-in-bitcoin&#34;&gt;Consensus in BitCoin&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Membership
+(decide who can vote)
+&lt;ul&gt;
+&lt;li&gt;Hyperledger
+&lt;ul&gt;
+&lt;li&gt;Fabric&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Vote by computing power
+(based on puzzle friendly)&lt;/li&gt;
+&lt;li&gt;Increasing concern
+&lt;ul&gt;
+&lt;li&gt;Win
+&lt;ul&gt;
+&lt;li&gt;Longest valid chain&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Lose
+&lt;ul&gt;
+&lt;li&gt;Orphan block&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;bitcoin-system&#34;&gt;BitCoin System&lt;/h2&gt;
+&lt;p&gt;(Transaction-based ledger)&lt;/p&gt;
+&lt;h3 id=&#34;utxo&#34;&gt;UTXO&lt;/h3&gt;
+&lt;p&gt;(Unspent Transaction Output)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Total inputs = total outputs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;quantity&#34;&gt;Quantity&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;21,000,000&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;block-reward&#34;&gt;Block reward&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Coinbase transaction&lt;/li&gt;
+&lt;li&gt;Cut half every 4 year&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;transaction-fee&#34;&gt;Transaction fee&lt;/h3&gt;
+&lt;h3 id=&#34;mining&#34;&gt;Mining&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Solve puzzles
+&lt;ul&gt;
+&lt;li&gt;Average block time
+&lt;ul&gt;
+&lt;li&gt;10 minutes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Difficulty
+&lt;ul&gt;
+&lt;li&gt;Target = target * (actual time / expected time)&lt;/li&gt;
+&lt;li&gt;Adjust every 2 weeks&lt;/li&gt;
+&lt;li&gt;Ar most 4 times, at least 1/4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Bernoulli process
+(nearly poisson process
+in BitCoin mining)
+&lt;ul&gt;
+&lt;li&gt;Bernoulli trial
+&lt;ul&gt;
+&lt;li&gt;A random experiment
+with binary outcome&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;A sequence of independent Bernoulli trial&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Feature
+&lt;ul&gt;
+&lt;li&gt;Memoryless&lt;/li&gt;
+&lt;li&gt;Progress free
+&lt;ul&gt;
+&lt;li&gt;Ensure the fairness of mining&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Exponential distribution&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Device
+(Universal -&amp;gt; Specific)
+&lt;ul&gt;
+&lt;li&gt;CPU&lt;/li&gt;
+&lt;li&gt;GPU&lt;/li&gt;
+&lt;li&gt;ASIC
+(Application Specific
+Integrated Circuit))&lt;/li&gt;
+&lt;li&gt;Mining pool
+(on demand mining)
+&lt;ul&gt;
+&lt;li&gt;Pool manager
+(risks of 51% attack)&lt;/li&gt;
+&lt;li&gt;miners&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;fork&#34;&gt;Fork&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;State fork
+&lt;ul&gt;
+&lt;li&gt;Forking attack
+(deliberate fork)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Protocol fork
+&lt;ul&gt;
+&lt;li&gt;Hard fork
+(permanent)
+&lt;ul&gt;
+&lt;li&gt;Block size limit
+(1M -&amp;gt; 4M)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Soft fork
+(&amp;gt; 50%, temporary)
+&lt;ul&gt;
+&lt;li&gt;Block size limit
+(1M -&amp;gt; 0.5M)&lt;/li&gt;
+&lt;li&gt;coinbase
+&lt;ul&gt;
+&lt;li&gt;As extra nonce
+2^32 -&amp;gt; 2^96 (adding 8 bytes)&lt;/li&gt;
+&lt;li&gt;As root hash of UTXO&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;P2SH
+(Pay to
+Script Hash)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;bitcoin-network&#34;&gt;BitCoin network&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Structure
+&lt;ul&gt;
+&lt;li&gt;Application layer
+&lt;ul&gt;
+&lt;li&gt;BitCoin blockchain&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Network layer
+&lt;ul&gt;
+&lt;li&gt;P2P overlay network&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Node
+&lt;ul&gt;
+&lt;li&gt;Seed node&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Feature
+&lt;ul&gt;
+&lt;li&gt;Simple&lt;/li&gt;
+&lt;li&gt;Robust&lt;/li&gt;
+&lt;li&gt;Not efficient&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Best effort&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Message transport
+&lt;ul&gt;
+&lt;li&gt;Flooding&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;security&#34;&gt;Security&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Problem
+&lt;ul&gt;
+&lt;li&gt;Sybil attack&lt;/li&gt;
+&lt;li&gt;Forking attack&lt;/li&gt;
+&lt;li&gt;Boycott&lt;/li&gt;
+&lt;li&gt;Selfish mining
+&lt;ul&gt;
+&lt;li&gt;Reduce competition&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Solution
+&lt;ul&gt;
+&lt;li&gt;Based on computing power
+(large cost)&lt;/li&gt;
+&lt;li&gt;Require 6 confirmation by nodes
+(long time, about 1 hour)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;scripts&#34;&gt;Scripts&lt;/h3&gt;
+&lt;p&gt;(stack based language)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;TX structure
+&lt;ul&gt;
+&lt;li&gt;txid&lt;/li&gt;
+&lt;li&gt;hash&lt;/li&gt;
+&lt;li&gt;version (of bitcoin)&lt;/li&gt;
+&lt;li&gt;size&lt;/li&gt;
+&lt;li&gt;locktime (take effect time)&lt;/li&gt;
+&lt;li&gt;vin
+&lt;ul&gt;
+&lt;li&gt;txid&lt;/li&gt;
+&lt;li&gt;vout&lt;/li&gt;
+&lt;li&gt;scriptSig
+(input script)
+&lt;ul&gt;
+&lt;li&gt;asm&lt;/li&gt;
+&lt;li&gt;hex&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;vout
+&lt;ul&gt;
+&lt;li&gt;value&lt;/li&gt;
+&lt;li&gt;n&lt;/li&gt;
+&lt;li&gt;scriptPubKey
+(output script)&lt;/li&gt;
+&lt;li&gt;value&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;blockhash&lt;/li&gt;
+&lt;li&gt;confirmations&lt;/li&gt;
+&lt;li&gt;time (tx time)&lt;/li&gt;
+&lt;li&gt;blocktime&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Transaction
+&lt;ul&gt;
+&lt;li&gt;P2PK
+(Pay to
+Public Key)
+&lt;ul&gt;
+&lt;li&gt;input
+script
+&lt;ul&gt;
+&lt;li&gt;PUSHDATA (Sig)
+(signed by provate key)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;output
+script
+&lt;ul&gt;
+&lt;li&gt;PUSHDATA (PubKey)&lt;/li&gt;
+&lt;li&gt;CHECKSIG&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;P2PKH
+(Pay to
+Public Key Hash)
+&lt;ul&gt;
+&lt;li&gt;input
+script
+&lt;ul&gt;
+&lt;li&gt;PUSHDATA (Sig)
+(signed by provate key)&lt;/li&gt;
+&lt;li&gt;PUSHDATA (PubKey)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;output
+script
+&lt;ul&gt;
+&lt;li&gt;DUP
+(duplicate a PubKey)&lt;/li&gt;
+&lt;li&gt;HASH160
+(calculate the PubKey&amp;rsquo;s hash)&lt;/li&gt;
+&lt;li&gt;PUSHDATA (PubKeyHash)&lt;/li&gt;
+&lt;li&gt;EQUALVERIFY&lt;/li&gt;
+&lt;li&gt;CHECKSIG&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;P2SH
+(Pay to
+Script Hash)
+&lt;ul&gt;
+&lt;li&gt;redeemScript
+&lt;ul&gt;
+&lt;li&gt;PUSHDATA (PubKey)&lt;/li&gt;
+&lt;li&gt;CHECKSIG&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;input
+script
+&lt;ul&gt;
+&lt;li&gt;PUSHDATA (Sig)&lt;/li&gt;
+&lt;li&gt;PUSHDATA
+(serialized redeemScript)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;output
+script
+&lt;ul&gt;
+&lt;li&gt;HASH160&lt;/li&gt;
+&lt;li&gt;PUSHDATA
+(redeemScriptHash)&lt;/li&gt;
+&lt;li&gt;EQUAL&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Proof of Burn
+&lt;ul&gt;
+&lt;li&gt;Destroy bitcoin&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ethereum-system&#34;&gt;Ethereum System&lt;/h2&gt;
+&lt;p&gt;(Account-based ledger)&lt;/p&gt;
 </description>
       
     </item>
@@ -632,19 +1135,6 @@ no prior requirement of knowing the object when writing or compiling code&lt;/li
 &lt;li&gt;Illustration&lt;/li&gt;
 &lt;li&gt;Configuration&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Blockchain Technology and Applications</title>
-      <link>https://www.pseudoyu.com/en/2020/10/23/blockchain-technology-and-applications/</link>
-      <pubDate>Fri, 23 Oct 2020 14:00:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/23/blockchain-technology-and-applications/</guid>
-      
-        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_technology_and_applications.svg&#34; alt=&#34;blockchain_technology_and_applications&#34;&gt;&lt;/p&gt;
 </description>
       
     </item>

@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 23 Oct 2020 14:00:17 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2020 08:50:17 +0800</lastBuildDate>
     
 	<atom:link href="https://www.pseudoyu.com/en/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Java Basics</title>
+      <link>https://www.pseudoyu.com/en/2020/10/28/java-basics/</link>
+      <pubDate>Wed, 28 Oct 2020 08:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/10/28/java-basics/</guid>
+      <description>Java Basics Java Basics Data Type Primitive type  byte/8 char/16 short/16 int/32 float/32 long/64 double/64 boolean/~  Value  true(1) false(0)   JVM will convert it to int when compiling    Types &amp;lt;-&amp;gt; Warpper class  boolean - Boolean byte - Byte char - Character float - Float int - Integer long - Long short - Short double - Double  Autoboxing  Use valueOf() method primitive types -&amp;gt; corresponding object wrapper classes (e.</description>
+    </item>
     
     <item>
       <title>Blockchain Technology and Applications</title>
@@ -27,15 +36,6 @@
       
       <guid>https://www.pseudoyu.com/en/2020/10/21/icom6045-topic-1-cryptography/</guid>
       <description>ICOM6045 Fundamentals of E-Commerce Security Topic 1 Cryptography </description>
-    </item>
-    
-    <item>
-      <title>Java Basics</title>
-      <link>https://www.pseudoyu.com/en/2020/10/21/java-basics/</link>
-      <pubDate>Wed, 21 Oct 2020 19:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/21/java-basics/</guid>
-      <description>Java Basics </description>
     </item>
     
     <item>

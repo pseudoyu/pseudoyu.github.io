@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 23 Oct 2020 14:00:17 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2020 08:50:17 +0800</lastBuildDate>
     
     <atom:link href="https://www.pseudoyu.com/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -64,6 +64,579 @@
     </item>
     
     <item>
+      <title>Java Basics</title>
+      <link>https://www.pseudoyu.com/en/2020/10/28/java-basics/</link>
+      <pubDate>Wed, 28 Oct 2020 08:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/10/28/java-basics/</guid>
+      
+        <description>&lt;h1 id=&#34;java-basics&#34;&gt;Java Basics&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/java_basics.svg&#34; alt=&#34;java_basics&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;java-basics-1&#34;&gt;Java Basics&lt;/h1&gt;
+&lt;h2 id=&#34;data-type&#34;&gt;Data Type&lt;/h2&gt;
+&lt;h3 id=&#34;primitive-type&#34;&gt;Primitive type&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;byte/8&lt;/li&gt;
+&lt;li&gt;char/16&lt;/li&gt;
+&lt;li&gt;short/16&lt;/li&gt;
+&lt;li&gt;int/32&lt;/li&gt;
+&lt;li&gt;float/32&lt;/li&gt;
+&lt;li&gt;long/64&lt;/li&gt;
+&lt;li&gt;double/64&lt;/li&gt;
+&lt;li&gt;boolean/~
+&lt;ul&gt;
+&lt;li&gt;Value
+&lt;ul&gt;
+&lt;li&gt;true(1)&lt;/li&gt;
+&lt;li&gt;false(0)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;JVM will convert it to int when compiling&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;types---warpper-class&#34;&gt;Types &amp;lt;-&amp;gt; Warpper class&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;boolean - Boolean&lt;/li&gt;
+&lt;li&gt;byte - Byte&lt;/li&gt;
+&lt;li&gt;char - Character&lt;/li&gt;
+&lt;li&gt;float - Float&lt;/li&gt;
+&lt;li&gt;int - Integer&lt;/li&gt;
+&lt;li&gt;long - Long&lt;/li&gt;
+&lt;li&gt;short - Short&lt;/li&gt;
+&lt;li&gt;double - Double&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;autoboxing&#34;&gt;Autoboxing&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Use valueOf() method&lt;/li&gt;
+&lt;li&gt;primitive types -&amp;gt; corresponding object wrapper classes
+(e.g. int -&amp;gt; Integer, double -&amp;gt; Double)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;unboxing&#34;&gt;Unboxing&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Object wrapper classes -&amp;gt; corresponding primitive types
+(e.g. Integer -&amp;gt; int, Double -&amp;gt; double)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;cache&#34;&gt;Cache&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Primitive data type and corresponding cache
+(If the data is in the range of cache, we can use the objects in the cache)
+&lt;ul&gt;
+&lt;li&gt;boolean value | true and false&lt;/li&gt;
+&lt;li&gt;byte values | all&lt;/li&gt;
+&lt;li&gt;short values | between -128 and 127&lt;/li&gt;
+&lt;li&gt;int values | between -128 and 127&lt;/li&gt;
+&lt;li&gt;char | in range of \u0000 to \u007F&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Compare
+&lt;ul&gt;
+&lt;li&gt;Integer.valueOf(123)
+&lt;ul&gt;
+&lt;li&gt;Use objet in the cache,
+multiple call will invoke the same object&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;new Integer(123)
+&lt;ul&gt;
+&lt;li&gt;Create a new object every call&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;string&#34;&gt;String&lt;/h2&gt;
+&lt;h3 id=&#34;feature&#34;&gt;Feature&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Immutable
+(byte, stated as final type)
+&lt;ul&gt;
+&lt;li&gt;Cache hash value
+&lt;ul&gt;
+&lt;li&gt;As the key of HashMap&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Requirement of String Pool
+&lt;ul&gt;
+&lt;li&gt;Get reference from String Pool if it exists&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Security
+&lt;ul&gt;
+&lt;li&gt;As parameter for many java classes
+&lt;ul&gt;
+&lt;li&gt;Network connection&lt;/li&gt;
+&lt;li&gt;Opening files&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Thread-safety
+&lt;ul&gt;
+&lt;li&gt;Shared among multiple threads freely&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;compare&#34;&gt;Compare&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;String
+&lt;ul&gt;
+&lt;li&gt;Immutable&lt;/li&gt;
+&lt;li&gt;Thread-safe&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;StringBuffer
+&lt;ul&gt;
+&lt;li&gt;Mutable&lt;/li&gt;
+&lt;li&gt;Thread-safe
+&lt;ul&gt;
+&lt;li&gt;Requirements of doing synchronization&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;StringBuilder
+&lt;ul&gt;
+&lt;li&gt;Mutable&lt;/li&gt;
+&lt;li&gt;Not thread-safe&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;string-pool&#34;&gt;String Pool&lt;/h3&gt;
+&lt;p&gt;(stores all literal strings)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Useful to reduce memory requirements&lt;/li&gt;
+&lt;li&gt;intern() method
+&lt;ul&gt;
+&lt;li&gt;If there is a string equals to the called one exists, return it
+(using equals() method)&lt;/li&gt;
+&lt;li&gt;If not, create a new string and return&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Create 2 &amp;ldquo;same&amp;rdquo; string
+&lt;ul&gt;
+&lt;li&gt;new String()
+&lt;ul&gt;
+&lt;li&gt;Create different strings&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;s.intern()
+&lt;ul&gt;
+&lt;li&gt;Get reference of one string&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;String s = &amp;quot;&amp;rdquo;
+&lt;ul&gt;
+&lt;li&gt;Automatically put into String Pool&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;operation&#34;&gt;Operation&lt;/h2&gt;
+&lt;h3 id=&#34;compare-1&#34;&gt;Compare&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Pass by value
+(Java use pass-by-value to pass parameters)
+&lt;ul&gt;
+&lt;li&gt;Change object&amp;rsquo;s value in a function
+will affect the original object&amp;rsquo;s value (same object)&lt;/li&gt;
+&lt;li&gt;When referencing to a new object,
+change won&amp;rsquo;t affect the original object&amp;rsquo;s value (different object)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Pass by reference&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;casting&#34;&gt;Casting&lt;/h3&gt;
+&lt;p&gt;(compiler force to convert types using (type of))&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;+=&lt;/li&gt;
+&lt;li&gt;-=&lt;/li&gt;
+&lt;li&gt;*=&lt;/li&gt;
+&lt;li&gt;/=&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;switch&#34;&gt;switch&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Use string object in switch conditional statements&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;keywords&#34;&gt;Keywords&lt;/h2&gt;
+&lt;h3 id=&#34;final&#34;&gt;final&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Data
+&lt;ul&gt;
+&lt;li&gt;As for primitive data type, final make its value immutable&lt;/li&gt;
+&lt;li&gt;As for reference, it can&amp;rsquo;t reference other objects but can modify itself&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Method
+&lt;ul&gt;
+&lt;li&gt;Methods stated can&amp;rsquo;t be rewrite by its child class&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Class
+&lt;ul&gt;
+&lt;li&gt;Can&amp;rsquo;t be inherited&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;static&#34;&gt;static&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Variable
+&lt;ul&gt;
+&lt;li&gt;static variable
+(also called class variable)
+&lt;ul&gt;
+&lt;li&gt;Belongs to the class
+and can be shared/accessed by the class name&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;instance variable
+&lt;ul&gt;
+&lt;li&gt;When creating an instance there will be an instance variable&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;static method
+&lt;ul&gt;
+&lt;li&gt;It exists when loading the class&lt;/li&gt;
+&lt;li&gt;Don&amp;rsquo;t rely on any instance&lt;/li&gt;
+&lt;li&gt;Can&amp;rsquo;t be abstract&lt;/li&gt;
+&lt;li&gt;Can&amp;rsquo;t contain this, super keywords
+(they are related to specific object)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;static (initialization) block
+&lt;ul&gt;
+&lt;li&gt;Operate once when doing the class initialization&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;static inner class
+&lt;ul&gt;
+&lt;li&gt;Don&amp;rsquo;t rely on external instance&lt;/li&gt;
+&lt;li&gt;Can&amp;rsquo;t access non-static variables or methods of external class&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;static import
+&lt;ul&gt;
+&lt;li&gt;No need to refer to the ClassName
+&lt;ul&gt;
+&lt;li&gt;Simplify&lt;/li&gt;
+&lt;li&gt;Hard to read&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Initialization order
+&lt;ul&gt;
+&lt;li&gt;static variable, static block (Parent class)&lt;/li&gt;
+&lt;li&gt;static variable, static block (Child class)&lt;/li&gt;
+&lt;li&gt;instance variable, block (Parent class)&lt;/li&gt;
+&lt;li&gt;Constructor (Parent class)&lt;/li&gt;
+&lt;li&gt;instance variable, block (Child class)&lt;/li&gt;
+&lt;li&gt;Constructor (Child class)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;object-universal-functions&#34;&gt;Object universal functions&lt;/h2&gt;
+&lt;h3 id=&#34;equals&#34;&gt;equals()&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Equivalence relationship
+&lt;ul&gt;
+&lt;li&gt;x.euqal(x);
+&lt;ul&gt;
+&lt;li&gt;Compared to self&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;x.equals(y) == y.equals(x);
+&lt;ul&gt;
+&lt;li&gt;When conversed, also true&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;if (x.equals(y) &amp;amp;&amp;amp; y.equals(z))
+x.equals(z);
+&lt;ul&gt;
+&lt;li&gt;When transited, also true&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;x.equals(y) == x.equals(y);
+&lt;ul&gt;
+&lt;li&gt;When repeated, always true&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;x.equals(null) == false;
+&lt;ul&gt;
+&lt;li&gt;When compared to null, always false (when x is not assigned null)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;About ==
+&lt;ul&gt;
+&lt;li&gt;For primitive data type, == measures the equivalence (there is no equals())&lt;/li&gt;
+&lt;li&gt;For reference, == measures whether the variables reference to the same object or not&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Mechanism
+&lt;ul&gt;
+&lt;li&gt;Check if it refers to the same object
+&lt;ul&gt;
+&lt;li&gt;Yes, return true&lt;/li&gt;
+&lt;li&gt;No, continue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Check their type
+&lt;ul&gt;
+&lt;li&gt;No, return false&lt;/li&gt;
+&lt;li&gt;Yes, continue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Convert the object&lt;/li&gt;
+&lt;li&gt;Check the equivalence of every key fields&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;hashcode&#34;&gt;hashCode()&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;hashCode() returns a hash value,
+and use equals() to check the equivalence
+&lt;ul&gt;
+&lt;li&gt;equal -&amp;gt; same hash&lt;/li&gt;
+&lt;li&gt;same hash can&amp;rsquo;t -&amp;gt; equal (hash generated randomly)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Cover hashCode() before equals()&lt;/li&gt;
+&lt;li&gt;Add/realize hashCode() before using HashSet or HashMap class&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;clone&#34;&gt;clone()&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Object protected function&lt;/li&gt;
+&lt;li&gt;Shallow clone
+&lt;ul&gt;
+&lt;li&gt;Cloned object and the original object refer to the same object&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Deep clone
+&lt;ul&gt;
+&lt;li&gt;Cloned object and the original object refer to different object&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Alternative method
+&lt;ul&gt;
+&lt;li&gt;Clone constructor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;tostring&#34;&gt;toString()&lt;/h3&gt;
+&lt;h2 id=&#34;inheritance&#34;&gt;Inheritance&lt;/h2&gt;
+&lt;h3 id=&#34;access&#34;&gt;Access&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Modifiers
+&lt;ul&gt;
+&lt;li&gt;protected
+&lt;ul&gt;
+&lt;li&gt;Visible to child class&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;private&lt;/li&gt;
+&lt;li&gt;public&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Encapsulation
+&lt;ul&gt;
+&lt;li&gt;Using API to communicate&lt;/li&gt;
+&lt;li&gt;Class or members can be least accessed by external&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Child class rewrites the parent class
+&lt;ul&gt;
+&lt;li&gt;Methods in child class must have higher access level&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Field can&amp;rsquo;t be public
+&lt;ul&gt;
+&lt;li&gt;getter&lt;/li&gt;
+&lt;li&gt;setter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;abstract-class-and-interface&#34;&gt;Abstract class and Interface&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Abstract class
+&lt;ul&gt;
+&lt;li&gt;abstract keyword
+&lt;ul&gt;
+&lt;li&gt;abstract method -&amp;gt; abstract class&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Can&amp;rsquo;t be instanced&lt;/li&gt;
+&lt;li&gt;Can be inherited&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Interface
+&lt;ul&gt;
+&lt;li&gt;public field
+&lt;ul&gt;
+&lt;li&gt;static&lt;/li&gt;
+&lt;li&gt;final&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Members(field and method)
+&lt;ul&gt;
+&lt;li&gt;public&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Difference
+&lt;ul&gt;
+&lt;li&gt;Abstract class provide a IS-A relationship
+while Interface provides a LIKE-A relationship&lt;/li&gt;
+&lt;li&gt;One class can applied several interfaces
+but can&amp;rsquo;t inherit more than one abstract class&lt;/li&gt;
+&lt;li&gt;Fields of interface must be static/final
+but abstract class has no restriction&lt;/li&gt;
+&lt;li&gt;Members of interface must be public
+but abstract class have multiple accesses&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Choose
+&lt;ul&gt;
+&lt;li&gt;Interface
+(higher priority)
+&lt;ul&gt;
+&lt;li&gt;Irrelevant classes need to realize the same method&lt;/li&gt;
+&lt;li&gt;need to use multiple inheritance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Abstract class
+&lt;ul&gt;
+&lt;li&gt;Relevant classes need to share same code block&lt;/li&gt;
+&lt;li&gt;Need to control members&amp;rsquo; access&lt;/li&gt;
+&lt;li&gt;Need to inherit non-static or no-constant field&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;super&#34;&gt;Super&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Access parent classes&amp;rsquo; constructor&lt;/li&gt;
+&lt;li&gt;Access members of parent classes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;method-priority&#34;&gt;Method priority&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;this.func(this)&lt;/li&gt;
+&lt;li&gt;super.func(this)&lt;/li&gt;
+&lt;li&gt;this.func(super)&lt;/li&gt;
+&lt;li&gt;super.func(super)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;override&#34;&gt;Override&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Child class realizes the same method as its parent class (statement)&lt;/li&gt;
+&lt;li&gt;Restrictions
+(using @override to check)
+&lt;ul&gt;
+&lt;li&gt;Child class method has higher access&lt;/li&gt;
+&lt;li&gt;Child class returns the same type (or sub type)&lt;/li&gt;
+&lt;li&gt;Child class throws the same Exception type or sub type&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;overload&#34;&gt;Overload&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Same method name&lt;/li&gt;
+&lt;li&gt;Different parameter/amount/order
+(at least one)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reflect&#34;&gt;Reflect&lt;/h2&gt;
+&lt;h3 id=&#34;core-concept&#34;&gt;Core concept&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Load classes, methods/fields when JVM is running,
+no prior requirement of knowing the object when writing or compiling code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;functions&#34;&gt;Functions&lt;/h3&gt;
+&lt;p&gt;(runtime)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Enables java code to discover information about the fields, methods and constructors of loaded classes&lt;/li&gt;
+&lt;li&gt;Operate on their underlying counterparts within security restructions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Develop universal frameworks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;javalangreflect&#34;&gt;java.lang.reflect&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Field&lt;/li&gt;
+&lt;li&gt;Method&lt;/li&gt;
+&lt;li&gt;Constructor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;Advantages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Extensibility&lt;/li&gt;
+&lt;li&gt;Help with development (IDE)&lt;/li&gt;
+&lt;li&gt;Help with debugging and testing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;Disadvantages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Cost/Optimization&lt;/li&gt;
+&lt;li&gt;Security restructions&lt;/li&gt;
+&lt;li&gt;Exposing inner elements (private attributes or methods)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;throwable&#34;&gt;Throwable&lt;/h2&gt;
+&lt;h3 id=&#34;error&#34;&gt;Error&lt;/h3&gt;
+&lt;p&gt;(JVM can&amp;rsquo;t handle with)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;VirtualMachineError
+&lt;ul&gt;
+&lt;li&gt;StackOverFlowError&lt;/li&gt;
+&lt;li&gt;OutOfMemoryError&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;AWTError&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;exception&#34;&gt;Exception&lt;/h3&gt;
+&lt;p&gt;(Can be deal with by program)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IOException
+&lt;ul&gt;
+&lt;li&gt;EOFException&lt;/li&gt;
+&lt;li&gt;FileNotFoundException&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;RuntimeException
+&lt;ul&gt;
+&lt;li&gt;ArrithmeticException&lt;/li&gt;
+&lt;li&gt;MissingResourceException&lt;/li&gt;
+&lt;li&gt;ClassNotFoundException&lt;/li&gt;
+&lt;li&gt;NullPointerException&lt;/li&gt;
+&lt;li&gt;IllegalArgumentException&lt;/li&gt;
+&lt;li&gt;ArrayIndexOutOfBoundsException&lt;/li&gt;
+&lt;li&gt;UnknownTypeException&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;basic-syntax&#34;&gt;Basic syntax&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;try-catch&lt;/li&gt;
+&lt;li&gt;throw&lt;/li&gt;
+&lt;li&gt;throws&lt;/li&gt;
+&lt;li&gt;finally&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;generics&#34;&gt;Generics&lt;/h2&gt;
+&lt;h2 id=&#34;annotation&#34;&gt;Annotation&lt;/h2&gt;
+&lt;h3 id=&#34;meta-information-attached-in-the-code&#34;&gt;Meta information attached in the code&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Illustration&lt;/li&gt;
+&lt;li&gt;Configuration&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>Blockchain Technology and Applications</title>
       <link>https://www.pseudoyu.com/en/2020/10/23/blockchain-technology-and-applications/</link>
       <pubDate>Fri, 23 Oct 2020 14:00:17 +0800</pubDate>
@@ -86,19 +659,6 @@
         <description>&lt;h1 id=&#34;icom6045-fundamentals-of-e-commerce-security&#34;&gt;ICOM6045 Fundamentals of E-Commerce Security&lt;/h1&gt;
 &lt;h2 id=&#34;topic-1-cryptography&#34;&gt;Topic 1 Cryptography&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/cryptography.svg&#34; alt=&#34;cryptography&#34;&gt;&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Java Basics</title>
-      <link>https://www.pseudoyu.com/en/2020/10/21/java-basics/</link>
-      <pubDate>Wed, 21 Oct 2020 19:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/21/java-basics/</guid>
-      
-        <description>&lt;h1 id=&#34;java-basics&#34;&gt;Java Basics&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/java_basics.svg&#34; alt=&#34;java_basics&#34;&gt;&lt;/p&gt;
 </description>
       
     </item>

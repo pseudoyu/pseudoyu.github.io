@@ -965,16 +965,14 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;data-structure&#34;&gt;Data Structure&lt;/h2&gt;
-&lt;h3 id=&#34;hash-pointer&#34;&gt;Hash pointer&lt;/h3&gt;
-&lt;p&gt;(blockchain is a linked list
-using hash pointers)&lt;/p&gt;
+&lt;h3 id=&#34;hash-pointer-blockchain-is-a-linked-list&#34;&gt;Hash pointer (blockchain is a linked list&lt;/h3&gt;
+&lt;p&gt;using hash pointers)&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Genesis block &amp;lt;- block1 &amp;lt;- block2 &amp;lt;-&amp;hellip;&amp;lt;- recent block
 (every block has a hash pointer)&lt;/li&gt;
 &lt;li&gt;Tamper-event log&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;merkle-tree&#34;&gt;Merkle tree&lt;/h3&gt;
-&lt;p&gt;(using hash pointer instead of pointer)&lt;/p&gt;
+&lt;h3 id=&#34;merkle-tree-using-hash-pointer-instead-of-pointer&#34;&gt;Merkle tree (using hash pointer instead of pointer)&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Merkle proof
 (proof of membership/inclusion)
@@ -1032,8 +1030,7 @@ O(log(n))&lt;/li&gt;
 &lt;h2 id=&#34;protocol&#34;&gt;Protocol&lt;/h2&gt;
 &lt;h3 id=&#34;distributed-consensus&#34;&gt;Distributed consensus&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&amp;ldquo;Impossibility result&amp;rdquo;&lt;/p&gt;
+&lt;li&gt;&amp;ldquo;Impossibility result&amp;rdquo;
 &lt;ul&gt;
 &lt;li&gt;FLP
 &lt;ul&gt;
@@ -1050,8 +1047,7 @@ if one faulty exists, there is no consensus&lt;/li&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Example&lt;/p&gt;
+&lt;li&gt;Example
 &lt;ul&gt;
 &lt;li&gt;Distributed hash table&lt;/li&gt;
 &lt;/ul&gt;
@@ -1086,10 +1082,8 @@ if one faulty exists, there is no consensus&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;bitcoin-system&#34;&gt;BitCoin System&lt;/h2&gt;
-&lt;p&gt;(Transaction-based ledger)&lt;/p&gt;
-&lt;h3 id=&#34;utxo&#34;&gt;UTXO&lt;/h3&gt;
-&lt;p&gt;(Unspent Transaction Output)&lt;/p&gt;
+&lt;h2 id=&#34;bitcoin-system-transaction-based-ledger&#34;&gt;BitCoin System (Transaction-based ledger)&lt;/h2&gt;
+&lt;h3 id=&#34;utxo-unspent-transaction-output&#34;&gt;UTXO (Unspent Transaction Output)&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Total inputs = total outputs&lt;/li&gt;
 &lt;/ul&gt;
@@ -1382,8 +1376,7 @@ script
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;ethereum-system&#34;&gt;Ethereum System&lt;/h2&gt;
-&lt;p&gt;(Account-based ledger)&lt;/p&gt;
+&lt;h2 id=&#34;ethereum-system-account-based-ledger&#34;&gt;Ethereum System (Account-based ledger)&lt;/h2&gt;
 </description>
       
     </item>

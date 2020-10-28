@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 28 Oct 2020 09:11:17 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2020 09:20:31 +0800</lastBuildDate>
     
     <atom:link href="https://www.pseudoyu.com/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -58,6 +58,441 @@
 &lt;li&gt;&lt;a href=&#34;https://medium.com/@pseudoyu&#34;&gt;Medium&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCR0O0s303tGBi3P02hstQPA/&#34;&gt;Youtube&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.reddit.com/user/pseudo_yu&#34;&gt;Reddit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>区块链学习计划</title>
+      <link>https://www.pseudoyu.com/en/2020/10/28/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</link>
+      <pubDate>Wed, 28 Oct 2020 09:20:31 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/10/28/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</guid>
+      
+        <description>&lt;h1 id=&#34;区块链学习计划&#34;&gt;区块链学习计划&lt;/h1&gt;
+&lt;h2 id=&#34;学习路径&#34;&gt;学习路径&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_path.svg&#34; alt=&#34;blockchain_path&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;10月&#34;&gt;10月&lt;/h2&gt;
+&lt;h3 id=&#34;学习java基础&#34;&gt;学习Java基础&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;CS61B - UC Berkley&lt;/li&gt;
+&lt;li&gt;Java笔记 - GitHub&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;学习区块链基础&#34;&gt;学习区块链基础&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;区块链原理
+&lt;ul&gt;
+&lt;li&gt;区块链技术与应用 - 肖臻
+&lt;ul&gt;
+&lt;li&gt;整理知识体系&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Bitcoin and Cryptocurrency Technology - Coursera
+&lt;ul&gt;
+&lt;li&gt;完成Assignment（Java）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;搭建区块链
+&lt;ul&gt;
+&lt;li&gt;Let&amp;rsquo;s build a blockchain - YouTube （Ruby）
+&lt;ul&gt;
+&lt;li&gt;用Java重写&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;搭建区块链 - B站落拓（Node.js）
+&lt;ul&gt;
+&lt;li&gt;用Java重写&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;case-study调研&#34;&gt;Case Study调研&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;结合市场需求
+&lt;ul&gt;
+&lt;li&gt;数据隐私（待定）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;解决方案
+&lt;ul&gt;
+&lt;li&gt;产品形态&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;mini-project调研&#34;&gt;Mini Project调研&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;数据隐私&lt;/li&gt;
+&lt;li&gt;未来区块链解决方案&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;熟悉版本控制工具&#34;&gt;熟悉版本控制工具&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Git
+&lt;ul&gt;
+&lt;li&gt;熟悉常用命令&lt;/li&gt;
+&lt;li&gt;培养工作流&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;GitHub
+&lt;ul&gt;
+&lt;li&gt;优化个人Profile&lt;/li&gt;
+&lt;li&gt;日常更新&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;刷题&#34;&gt;刷题&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;剑指Offer&lt;/li&gt;
+&lt;li&gt;LeetCode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;11月&#34;&gt;11月&lt;/h2&gt;
+&lt;h3 id=&#34;提升技术能力&#34;&gt;提升技术能力&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Web开发
+&lt;ul&gt;
+&lt;li&gt;Web Developer Bootcamp - Udemy
+&lt;ul&gt;
+&lt;li&gt;前端&lt;/li&gt;
+&lt;li&gt;后端（课程用Node.js，了解）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;数据库&lt;/li&gt;
+&lt;li&gt;Linux基础&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;学习系统相关&#34;&gt;学习系统相关&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;系统设计笔记 - GitHub
+&lt;ul&gt;
+&lt;li&gt;理解原理&lt;/li&gt;
+&lt;li&gt;了解配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Docke&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;区块链进阶与实践&#34;&gt;区块链进阶与实践&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;区块链技术原理
+&lt;ul&gt;
+&lt;li&gt;Bitcoin and Cryptocurrency Technology - Coursera
+&lt;ul&gt;
+&lt;li&gt;继续完成Assignment（Java）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;共识协议&lt;/li&gt;
+&lt;li&gt;一致性算法&lt;/li&gt;
+&lt;li&gt;智能合约虚拟机&lt;/li&gt;
+&lt;li&gt;开源系统、解决方案
+&lt;ul&gt;
+&lt;li&gt;Bitcoin
+&lt;ul&gt;
+&lt;li&gt;了解机制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Ethereum
+&lt;ul&gt;
+&lt;li&gt;项目实践&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;case-study规划及知识储备&#34;&gt;Case Study规划及知识储备&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;产品规划
+&lt;ul&gt;
+&lt;li&gt;需求文档&lt;/li&gt;
+&lt;li&gt;开发安排&lt;/li&gt;
+&lt;li&gt;产品设计
+&lt;ul&gt;
+&lt;li&gt;产品原型&lt;/li&gt;
+&lt;li&gt;技术框架&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;技术开发
+&lt;ul&gt;
+&lt;li&gt;前端&lt;/li&gt;
+&lt;li&gt;后端&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;数据相关&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;刷题-1&#34;&gt;刷题&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;剑指Offer&lt;/li&gt;
+&lt;li&gt;LeetCode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;提高英语口语&#34;&gt;提高英语口语&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Presentation&lt;/li&gt;
+&lt;li&gt;面试&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;12月&#34;&gt;12月&lt;/h2&gt;
+&lt;h3 id=&#34;case-study开发&#34;&gt;Case Study开发&lt;/h3&gt;
+&lt;h3 id=&#34;学习了解主流开源框架架构&#34;&gt;学习了解主流开源框架/架构&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;微服务架构&lt;/li&gt;
+&lt;li&gt;开源框架应用场景&lt;/li&gt;
+&lt;li&gt;SOA框架&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;了解云计算&#34;&gt;了解云计算&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;阿里云&lt;/li&gt;
+&lt;li&gt;AWS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;刷题-2&#34;&gt;刷题&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;剑指Offer&lt;/li&gt;
+&lt;li&gt;LeetCode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;提高英语口语-1&#34;&gt;提高英语口语&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Presentation&lt;/li&gt;
+&lt;li&gt;面试&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;1月&#34;&gt;1月&lt;/h2&gt;
+&lt;h3 id=&#34;case-study开发-1&#34;&gt;Case Study开发&lt;/h3&gt;
+&lt;h3 id=&#34;区块链开源项目实践&#34;&gt;区块链开源项目实践&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;了解主流项目&lt;/li&gt;
+&lt;li&gt;实践小型项目&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;个人信息完善&#34;&gt;个人信息完善&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;整理项目及展示&lt;/li&gt;
+&lt;li&gt;简历&lt;/li&gt;
+&lt;li&gt;LinkedIn&lt;/li&gt;
+&lt;li&gt;GitHub&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;刷题-3&#34;&gt;刷题&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;剑指Offer&lt;/li&gt;
+&lt;li&gt;LeetCode&lt;/li&gt;
+&lt;li&gt;公司笔试/面试真题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;提高英语口语-2&#34;&gt;提高英语口语&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;面试&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2月&#34;&gt;2月&lt;/h2&gt;
+&lt;h3 id=&#34;投递及笔试面试准备&#34;&gt;投递及笔试/面试准备&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;香港
+&lt;ul&gt;
+&lt;li&gt;学校就业资源
+&lt;ul&gt;
+&lt;li&gt;宣讲会&lt;/li&gt;
+&lt;li&gt;网站&lt;/li&gt;
+&lt;li&gt;相关教授&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;外部就业资源
+&lt;ul&gt;
+&lt;li&gt;JobDB&lt;/li&gt;
+&lt;li&gt;LinkedIn&lt;/li&gt;
+&lt;li&gt;公司招聘&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;LinkedIn&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;内地
+&lt;ul&gt;
+&lt;li&gt;暑期实习提前批&lt;/li&gt;
+&lt;li&gt;日常实习&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;实习&#34;&gt;实习&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;To Be Decided&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;学习计划&#34;&gt;学习计划&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_plan.svg&#34; alt=&#34;blockchain_plan&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;算法刷题&#34;&gt;算法刷题&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;剑指Offer&lt;/li&gt;
+&lt;li&gt;LeetCode&lt;/li&gt;
+&lt;li&gt;笔试面试题库&lt;/li&gt;
+&lt;li&gt;编程语言&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;java相关&#34;&gt;Java相关&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;基础
+&lt;ul&gt;
+&lt;li&gt;CS61B - UC Berkley&lt;/li&gt;
+&lt;li&gt;Java学习笔记 - GitHub&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;容器&lt;/li&gt;
+&lt;li&gt;并发
+&lt;ul&gt;
+&lt;li&gt;多线程编程（threadpool）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;JVM
+&lt;ul&gt;
+&lt;li&gt;内存模型
+&lt;ul&gt;
+&lt;li&gt;JVM内存整理&lt;/li&gt;
+&lt;li&gt;垃圾处理策略&lt;/li&gt;
+&lt;li&gt;Root链搜索引用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;I/O&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;其他&#34;&gt;其他&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Golang&lt;/li&gt;
+&lt;li&gt;C++&lt;/li&gt;
+&lt;li&gt;Node.js&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;系统设计&#34;&gt;系统设计&lt;/h2&gt;
+&lt;h3 id=&#34;基础&#34;&gt;基础&lt;/h3&gt;
+&lt;h3 id=&#34;分布式&#34;&gt;分布式&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Redius实现分布式一致的锁&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缓存&#34;&gt;缓存&lt;/h3&gt;
+&lt;h3 id=&#34;消息队列&#34;&gt;消息队列&lt;/h3&gt;
+&lt;h3 id=&#34;集群&#34;&gt;集群&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Kafka
+&lt;ul&gt;
+&lt;li&gt;工作原理&lt;/li&gt;
+&lt;li&gt;配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;攻击技术&#34;&gt;攻击技术&lt;/h3&gt;
+&lt;h2 id=&#34;主流工具框架&#34;&gt;主流工具/框架&lt;/h2&gt;
+&lt;h3 id=&#34;unixlinux系统了解&#34;&gt;Unix/Linux系统（了解）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;常用命令&lt;/li&gt;
+&lt;li&gt;Shell脚本&lt;/li&gt;
+&lt;li&gt;应用开发&lt;/li&gt;
+&lt;li&gt;性能查看工具&lt;/li&gt;
+&lt;li&gt;性能调优工具&lt;/li&gt;
+&lt;li&gt;多线程/进程&lt;/li&gt;
+&lt;li&gt;文件系统&lt;/li&gt;
+&lt;li&gt;网络编程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;docker&#34;&gt;Docker&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;技术原理&lt;/li&gt;
+&lt;li&gt;部署&lt;/li&gt;
+&lt;li&gt;使用优化&lt;/li&gt;
+&lt;li&gt;Kubernetes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;数据库&#34;&gt;数据库&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;非关系型数据库
+&lt;ul&gt;
+&lt;li&gt;KV型数据库
+&lt;ul&gt;
+&lt;li&gt;LevelDB&lt;/li&gt;
+&lt;li&gt;RocksDB&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;关系型数据库
+&lt;ul&gt;
+&lt;li&gt;悲观锁&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;版本控制&#34;&gt;版本控制&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Git
+&lt;ul&gt;
+&lt;li&gt;GitHub&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;微服务架构&#34;&gt;微服务架构&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;阿里微服务Dubbo&lt;/li&gt;
+&lt;li&gt;DDD（领域驱动设计，Domain Driven Design）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;开源框架应用场景&#34;&gt;开源框架应用场景&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Spring&lt;/li&gt;
+&lt;li&gt;Mybatis&lt;/li&gt;
+&lt;li&gt;Hibernate&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;架构&#34;&gt;架构&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;SOA架构（面向服务的架构，Service-Oriented Architecture）&lt;/li&gt;
+&lt;li&gt;OSGI架构（开放服务网关协议，Open Service Gateway Initiative）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;区块链技术&#34;&gt;区块链技术&lt;/h2&gt;
+&lt;h3 id=&#34;技术原理&#34;&gt;技术原理&lt;/h3&gt;
+&lt;h3 id=&#34;常见开源系统解决方案&#34;&gt;常见开源系统/解决方案&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Bitcoin&lt;/li&gt;
+&lt;li&gt;Ethereum&lt;/li&gt;
+&lt;li&gt;EOS&lt;/li&gt;
+&lt;li&gt;Fabric&lt;/li&gt;
+&lt;li&gt;IBM Hyperledge&lt;/li&gt;
+&lt;li&gt;R3 Corda&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;智能合约虚拟机&#34;&gt;智能合约虚拟机&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;EVM命令集&lt;/li&gt;
+&lt;li&gt;WASM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;一致性算法&#34;&gt;一致性算法&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;BFT&lt;/li&gt;
+&lt;li&gt;Paxos&lt;/li&gt;
+&lt;li&gt;Raft&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;共识协议&#34;&gt;共识协议&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;PoW&lt;/li&gt;
+&lt;li&gt;PoS&lt;/li&gt;
+&lt;li&gt;Algorand&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;其他相关背景&#34;&gt;其他相关背景&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;密码学&lt;/li&gt;
+&lt;li&gt;网络安全&lt;/li&gt;
+&lt;li&gt;分布式计算&lt;/li&gt;
+&lt;li&gt;云计算
+&lt;ul&gt;
+&lt;li&gt;阿里云&lt;/li&gt;
+&lt;li&gt;AWS&lt;/li&gt;
+&lt;li&gt;Azure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;中间件&lt;/li&gt;
+&lt;li&gt;网关或开放平台设计&lt;/li&gt;
+&lt;li&gt;可信计算技术原理与应用&lt;/li&gt;
+&lt;li&gt;软件形式化验证&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;软性技能&#34;&gt;软性技能&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;逻辑&lt;/li&gt;
+&lt;li&gt;接受新事物&lt;/li&gt;
+&lt;li&gt;自我驱动&lt;/li&gt;
+&lt;li&gt;沟通表达&lt;/li&gt;
+&lt;li&gt;团队合作&lt;/li&gt;
+&lt;li&gt;对系统质量苛刻要求&lt;/li&gt;
+&lt;li&gt;识别和设计通用框架及模块&lt;/li&gt;
+&lt;li&gt;识别业务关键需求和设计领域模型&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       
@@ -2397,230 +2832,6 @@ no prior requirement of knowing the object when writing or compiling code&lt;/li
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Blockchain Learning Plan</title>
-      <link>https://www.pseudoyu.com/en/2020/10/18/blockchain-learning-plan/</link>
-      <pubDate>Sun, 18 Oct 2020 08:30:31 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/18/blockchain-learning-plan/</guid>
-      
-        <description>&lt;h1 id=&#34;区块链学习计划&#34;&gt;区块链学习计划&lt;/h1&gt;
-&lt;h2 id=&#34;学习路径&#34;&gt;学习路径&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_path.svg&#34; alt=&#34;blockchain_path&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;算法相关 (刷题)
-&lt;ul&gt;
-&lt;li&gt;剑指Offer&lt;/li&gt;
-&lt;li&gt;LeetCode&lt;/li&gt;
-&lt;li&gt;笔试面试题库&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Jave相关&lt;/li&gt;
-&lt;li&gt;系统/工具/框架&lt;/li&gt;
-&lt;li&gt;计算机网络
-&lt;ul&gt;
-&lt;li&gt;ICOM6012&lt;/li&gt;
-&lt;li&gt;教材&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;网络安全
-&lt;ul&gt;
-&lt;li&gt;ICOM6045&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;操作系统&lt;/li&gt;
-&lt;li&gt;Linux基础&lt;/li&gt;
-&lt;li&gt;数据库&lt;/li&gt;
-&lt;li&gt;Web/App开发 + 实践项目&lt;/li&gt;
-&lt;li&gt;区块链Case (基于Ethereum的分布式数据隐私应用)(TBD)
-&lt;ul&gt;
-&lt;li&gt;需求调研 - Misty&lt;/li&gt;
-&lt;li&gt;产品规划 - Marshal&lt;/li&gt;
-&lt;li&gt;前端开发 - Arthur, TBD&lt;/li&gt;
-&lt;li&gt;后端开发 - Arthur&lt;/li&gt;
-&lt;li&gt;数据处理 - Misty&lt;/li&gt;
-&lt;li&gt;技术指导 - Mengling&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;区块链相关岗位实习&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;技术要求&#34;&gt;技术要求&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_plan.svg&#34; alt=&#34;blockchain_plan&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;编程语言&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;JAVA (主要掌握)
-&lt;ul&gt;
-&lt;li&gt;基础
-&lt;ul&gt;
-&lt;li&gt;CS61B&lt;/li&gt;
-&lt;li&gt;书 + 文章 + 实战&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;容器&lt;/li&gt;
-&lt;li&gt;并发
-&lt;ul&gt;
-&lt;li&gt;多线程编程 (threadpool)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;JVM
-&lt;ul&gt;
-&lt;li&gt;内存模型 (JVM内存整理、垃圾处理的策略，root链搜索引用)&lt;/li&gt;
-&lt;li&gt;类加载机制&lt;/li&gt;
-&lt;li&gt;性能优化&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;I/O&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;其他 (了解)
-&lt;ul&gt;
-&lt;li&gt;Golang&lt;/li&gt;
-&lt;li&gt;C++&lt;/li&gt;
-&lt;li&gt;Node.js&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;主流工具/框架&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Unix/Linux系统
-&lt;ul&gt;
-&lt;li&gt;常用命令&lt;/li&gt;
-&lt;li&gt;Shell脚本&lt;/li&gt;
-&lt;li&gt;应用开发&lt;/li&gt;
-&lt;li&gt;性能查看工具&lt;/li&gt;
-&lt;li&gt;性能调优工具&lt;/li&gt;
-&lt;li&gt;多线程/进程&lt;/li&gt;
-&lt;li&gt;文件系统&lt;/li&gt;
-&lt;li&gt;网络编程&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;系统设计
-&lt;ul&gt;
-&lt;li&gt;基础&lt;/li&gt;
-&lt;li&gt;分布式(Redius实现分布式一致的锁)&lt;/li&gt;
-&lt;li&gt;缓存&lt;/li&gt;
-&lt;li&gt;消息队列 (Kafka工作原理+配置)&lt;/li&gt;
-&lt;li&gt;集群&lt;/li&gt;
-&lt;li&gt;攻击技术&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Docker
-&lt;ul&gt;
-&lt;li&gt;技术原理&lt;/li&gt;
-&lt;li&gt;部署&lt;/li&gt;
-&lt;li&gt;使用优化&lt;/li&gt;
-&lt;li&gt;Kubernetes&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;数据库
-&lt;ul&gt;
-&lt;li&gt;非关系型数据库
-&lt;ul&gt;
-&lt;li&gt;KV型数据库
-&lt;ul&gt;
-&lt;li&gt;LevelDB&lt;/li&gt;
-&lt;li&gt;RocksDB&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;关系型数据库
-&lt;ul&gt;
-&lt;li&gt;悲观锁&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;版本控制
-&lt;ul&gt;
-&lt;li&gt;Git&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;微服务架构
-&lt;ul&gt;
-&lt;li&gt;阿里微服务Dubbo，服务注册机制&lt;/li&gt;
-&lt;li&gt;DDD (领域驱动设计，Domain Driven Design)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;开源框架应用场景
-&lt;ul&gt;
-&lt;li&gt;Spring&lt;/li&gt;
-&lt;li&gt;Spring Boot&lt;/li&gt;
-&lt;li&gt;Mybatis&lt;/li&gt;
-&lt;li&gt;Hibernate&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;SOA架构 (面向服务的架构，Service-Oriented Architecture)&lt;/li&gt;
-&lt;li&gt;OSGI (开放服务网关协议，Open Service Gateway Initiative)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;区块链技术&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;区块链技术原理&lt;/li&gt;
-&lt;li&gt;常见开源系统/解决方案
-&lt;ul&gt;
-&lt;li&gt;Bitcoin&lt;/li&gt;
-&lt;li&gt;Ethereum&lt;/li&gt;
-&lt;li&gt;EOS&lt;/li&gt;
-&lt;li&gt;Fabric&lt;/li&gt;
-&lt;li&gt;IBM Hyperledge&lt;/li&gt;
-&lt;li&gt;R3 Corda&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;智能合约虚拟机
-&lt;ul&gt;
-&lt;li&gt;EVM命令集，以太坊白皮书&lt;/li&gt;
-&lt;li&gt;WASM&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;一致性算法
-&lt;ul&gt;
-&lt;li&gt;BFT&lt;/li&gt;
-&lt;li&gt;Paxos&lt;/li&gt;
-&lt;li&gt;Raft&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;共识协议
-&lt;ul&gt;
-&lt;li&gt;PoW&lt;/li&gt;
-&lt;li&gt;PoS&lt;/li&gt;
-&lt;li&gt;Algorand&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;其他相关背景&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;密码学（数字加密算法）&lt;/li&gt;
-&lt;li&gt;网络安全&lt;/li&gt;
-&lt;li&gt;分布式计算&lt;/li&gt;
-&lt;li&gt;云计算
-&lt;ul&gt;
-&lt;li&gt;阿里云&lt;/li&gt;
-&lt;li&gt;Azure&lt;/li&gt;
-&lt;li&gt;AWS&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;中间件&lt;/li&gt;
-&lt;li&gt;网关或开放平台设计&lt;/li&gt;
-&lt;li&gt;可信计算技术原理与应用&lt;/li&gt;
-&lt;li&gt;软件形式化验证&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;软性技能&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;逻辑&lt;/li&gt;
-&lt;li&gt;接受新事物&lt;/li&gt;
-&lt;li&gt;自我驱动&lt;/li&gt;
-&lt;li&gt;沟通表达&lt;/li&gt;
-&lt;li&gt;团队合作&lt;/li&gt;
-&lt;li&gt;对系统质量苛刻要求&lt;/li&gt;
-&lt;li&gt;识别和设计通用框架及模块&lt;/li&gt;
-&lt;li&gt;识别业务关键需求和设计领域模型&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       

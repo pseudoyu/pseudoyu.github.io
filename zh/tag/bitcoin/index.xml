@@ -75,6 +75,15 @@
     </item>
     
     <item>
+      <title>Blockchain Protocol</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/21/blockchain-protocol/</link>
+      <pubDate>Wed, 21 Oct 2020 12:07:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/21/blockchain-protocol/</guid>
+      <description>Blockchain Technology and Applications Protocol Distributed consensus  &amp;ldquo;Impossibility result&amp;rdquo;  FLP  In an asynchronous system, if one faulty exists, there is no consensus   CAP Theorem  Consistency Availability Partition tolerance     Example  Distributed hash table    Consensus in BitCoin  Membership (decide who can vote)  Hyperledger  Fabric     Vote by computing power (based on puzzle friendly) Increasing concern  Win  Longest valid chain   Lose  Orphan block      </description>
+    </item>
+    
+    <item>
       <title>Blockchain Cryptography</title>
       <link>https://www.pseudoyu.com/zh/2020/10/21/blockchain-cryptography/</link>
       <pubDate>Wed, 21 Oct 2020 09:07:17 +0800</pubDate>
@@ -91,15 +100,6 @@
       <guid>https://www.pseudoyu.com/zh/2020/10/21/blockchain-data-structure/</guid>
       <description>Blockchain Technology and Applications Data Structure Hash pointer (blockchain is a linked list using hash pointers)
  Genesis block &amp;lt;- block1 &amp;lt;- block2 &amp;lt;-&amp;hellip;&amp;lt;- recent block (every block has a hash pointer) Tamper-event log  Merkle tree (using hash pointer instead of pointer)  Merkle proof (proof of membership/inclusion)  O(log(n))   Think: proof of non-membership  O(n) Sorted merkle tree: O(log(n))    Application (blockchain)  Node  Full node (fully validating node)  Block header  Version Hash of previous block header Merkle root hash (protect all nodes) Target Nonce   Block body  Transaction lists     Light node (light weight node)  Only store block headers     Problem  Double spending    </description>
-    </item>
-    
-    <item>
-      <title>Blockchain Protocol</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/21/blockchain-protocol/</link>
-      <pubDate>Wed, 21 Oct 2020 09:07:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/21/blockchain-protocol/</guid>
-      <description>Blockchain Technology and Applications Protocol Distributed consensus  &amp;ldquo;Impossibility result&amp;rdquo;  FLP  In an asynchronous system, if one faulty exists, there is no consensus   CAP Theorem  Consistency Availability Partition tolerance     Example  Distributed hash table    Consensus in BitCoin  Membership (decide who can vote)  Hyperledger  Fabric     Vote by computing power (based on puzzle friendly) Increasing concern  Win  Longest valid chain   Lose  Orphan block      </description>
     </item>
     
     <item>

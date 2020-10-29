@@ -1546,6 +1546,71 @@ with binary outcome&lt;/li&gt;
     </item>
     
     <item>
+      <title>Blockchain Protocol</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/21/blockchain-protocol/</link>
+      <pubDate>Wed, 21 Oct 2020 12:07:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/21/blockchain-protocol/</guid>
+      
+        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
+&lt;h2 id=&#34;protocol&#34;&gt;Protocol&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_protocol.svg&#34; alt=&#34;blockchain_protocol&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;distributed-consensus&#34;&gt;Distributed consensus&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;Impossibility result&amp;rdquo;
+&lt;ul&gt;
+&lt;li&gt;FLP
+&lt;ul&gt;
+&lt;li&gt;In an asynchronous system, if one faulty exists, there is no consensus&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;CAP Theorem
+&lt;ul&gt;
+&lt;li&gt;Consistency&lt;/li&gt;
+&lt;li&gt;Availability&lt;/li&gt;
+&lt;li&gt;Partition tolerance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Example
+&lt;ul&gt;
+&lt;li&gt;Distributed hash table&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;consensus-in-bitcoin&#34;&gt;Consensus in BitCoin&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Membership (decide who can vote)
+&lt;ul&gt;
+&lt;li&gt;Hyperledger
+&lt;ul&gt;
+&lt;li&gt;Fabric&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Vote by computing power (based on puzzle friendly)&lt;/li&gt;
+&lt;li&gt;Increasing concern
+&lt;ul&gt;
+&lt;li&gt;Win
+&lt;ul&gt;
+&lt;li&gt;Longest valid chain&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Lose
+&lt;ul&gt;
+&lt;li&gt;Orphan block&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>Blockchain Cryptography</title>
       <link>https://www.pseudoyu.com/zh/2020/10/21/blockchain-cryptography/</link>
       <pubDate>Wed, 21 Oct 2020 09:07:17 +0800</pubDate>
@@ -1687,71 +1752,6 @@ with binary outcome&lt;/li&gt;
 &lt;li&gt;Problem
 &lt;ul&gt;
 &lt;li&gt;Double spending&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Blockchain Protocol</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/21/blockchain-protocol/</link>
-      <pubDate>Wed, 21 Oct 2020 09:07:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/21/blockchain-protocol/</guid>
-      
-        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
-&lt;h2 id=&#34;protocol&#34;&gt;Protocol&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_protocol.svg&#34; alt=&#34;blockchain_protocol&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;distributed-consensus&#34;&gt;Distributed consensus&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&amp;ldquo;Impossibility result&amp;rdquo;
-&lt;ul&gt;
-&lt;li&gt;FLP
-&lt;ul&gt;
-&lt;li&gt;In an asynchronous system, if one faulty exists, there is no consensus&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;CAP Theorem
-&lt;ul&gt;
-&lt;li&gt;Consistency&lt;/li&gt;
-&lt;li&gt;Availability&lt;/li&gt;
-&lt;li&gt;Partition tolerance&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Example
-&lt;ul&gt;
-&lt;li&gt;Distributed hash table&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;consensus-in-bitcoin&#34;&gt;Consensus in BitCoin&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Membership (decide who can vote)
-&lt;ul&gt;
-&lt;li&gt;Hyperledger
-&lt;ul&gt;
-&lt;li&gt;Fabric&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Vote by computing power (based on puzzle friendly)&lt;/li&gt;
-&lt;li&gt;Increasing concern
-&lt;ul&gt;
-&lt;li&gt;Win
-&lt;ul&gt;
-&lt;li&gt;Longest valid chain&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Lose
-&lt;ul&gt;
-&lt;li&gt;Orphan block&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;

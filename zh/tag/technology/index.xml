@@ -21,12 +21,21 @@
     </item>
     
     <item>
-      <title>Blockchain Scripts</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/29/blockchain-scripts/</link>
-      <pubDate>Thu, 29 Oct 2020 09:07:17 +0800</pubDate>
+      <title>Blockchain BitCoin Questions</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/28/blockchain-bitcoin-questions/</link>
+      <pubDate>Wed, 28 Oct 2020 14:07:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2020/10/29/blockchain-scripts/</guid>
-      <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Scripts (stack based language)  TX structure  txid hash version (of bitcoin) size locktime (take effect time) vin  txid vout scriptSig (input script)  asm hex     vout  value n scriptPubKey (output script) value   blockhash confirmations time (tx time) blocktime   Transaction  P2PK (Pay to Public Key)  input script  PUSHDATA (Sig) (signed by provate key)   output script  PUSHDATA (PubKey) CHECKSIG     P2PKH (Pay to Public Key Hash)  input script  PUSHDATA (Sig) (signed by provate key) PUSHDATA (PubKey)   output script  DUP (duplicate a PubKey) HASH160 (calculate the PubKey&amp;rsquo;s hash) PUSHDATA (PubKeyHash) EQUALVERIFY CHECKSIG     P2SH (Pay to Script Hash)  redeemScript  PUSHDATA (PubKey) CHECKSIG   input script  PUSHDATA (Sig) PUSHDATA (serialized redeemScript)   output script  HASH160 PUSHDATA (redeemScriptHash) EQUAL     Proof of Burn  Destroy bitcoin      </description>
+      <guid>https://www.pseudoyu.com/zh/2020/10/28/blockchain-bitcoin-questions/</guid>
+      <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Additional questions  Q: In a transaction, the receiver is not connected to the bitcoin network.  A: No need online, just records   Q: Lost private key  A: No solution Exchanges: Mt. Gox   Q: Wrong address  A: No solution   Q: OP_RETURN, return mistake, why it&amp;rsquo;s still executed?  A: OP_RETURN is in the output, so it will be verified in the next TX   Q: How to judge who find the nonce first?</description>
+    </item>
+    
+    <item>
+      <title>Blockchain BitCoin Anonymity</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/28/blockchain-bitcoin-anonymity/</link>
+      <pubDate>Wed, 28 Oct 2020 10:07:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/28/blockchain-bitcoin-anonymity/</guid>
+      <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Anonymity  Pseudonymity Threats  Address generation  Analyze tx Analyze wallets (if used)   Connection to real identity  KYC (Know Your Customer)     Bad use  Silk road (eBay for illegal drugs)   Tips  TOR browser Coin mixing   Zero-knowledge proof  Signature (public key - private key)   Possible solution  Sacrifice  Performance Not absolutely secure   Zerocoin  Base coin Zero coin   Zerocash    </description>
     </item>
     
     <item>
@@ -39,24 +48,6 @@
     </item>
     
     <item>
-      <title>Blockchain Anonymity</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/28/blockchain-anonymity/</link>
-      <pubDate>Wed, 28 Oct 2020 09:07:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/28/blockchain-anonymity/</guid>
-      <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Anonymity  Pseudonymity Threats  Address generation  Analyze tx Analyze wallets (if used)   Connection to real identity  KYC (Know Your Customer)     Bad use  Silk road (eBay for illegal drugs)   Tips  TOR browser Coin mixing   Zero-knowledge proof  Signature (public key - private key)   Possible solution  Sacrifice  Performance Not absolutely secure   Zerocoin  Base coin Zero coin   Zerocash    </description>
-    </item>
-    
-    <item>
-      <title>Blockchain BitCoin Questions</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/28/blockchain-bitcoin-questions/</link>
-      <pubDate>Wed, 28 Oct 2020 09:07:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/28/blockchain-bitcoin-questions/</guid>
-      <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Additional questions  Q: In a transaction, the receiver is not connected to the bitcoin network.  A: No need online, just records   Q: Lost private key  A: No solution Exchanges: Mt. Gox   Q: Wrong address  A: No solution   Q: OP_RETURN, return mistake, why it&amp;rsquo;s still executed?  A: OP_RETURN is in the output, so it will be verified in the next TX   Q: How to judge who find the nonce first?</description>
-    </item>
-    
-    <item>
       <title>Java Basics</title>
       <link>https://www.pseudoyu.com/zh/2020/10/28/java-basics/</link>
       <pubDate>Wed, 28 Oct 2020 08:50:17 +0800</pubDate>
@@ -66,21 +57,39 @@
     </item>
     
     <item>
-      <title>Blockchain Fork</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/23/blockchain-fork/</link>
+      <title>Blockchain BitCoin Scripts</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/24/blockchain-bitcoin-scripts/</link>
+      <pubDate>Sat, 24 Oct 2020 09:07:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/24/blockchain-bitcoin-scripts/</guid>
+      <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Scripts (stack based language)  TX structure  txid hash version (of bitcoin) size locktime (take effect time) vin  txid vout scriptSig (input script)  asm hex     vout  value n scriptPubKey (output script) value   blockhash confirmations time (tx time) blocktime   Transaction  P2PK (Pay to Public Key)  input script  PUSHDATA (Sig) (signed by provate key)   output script  PUSHDATA (PubKey) CHECKSIG     P2PKH (Pay to Public Key Hash)  input script  PUSHDATA (Sig) (signed by provate key) PUSHDATA (PubKey)   output script  DUP (duplicate a PubKey) HASH160 (calculate the PubKey&amp;rsquo;s hash) PUSHDATA (PubKeyHash) EQUALVERIFY CHECKSIG     P2SH (Pay to Script Hash)  redeemScript  PUSHDATA (PubKey) CHECKSIG   input script  PUSHDATA (Sig) PUSHDATA (serialized redeemScript)   output script  HASH160 PUSHDATA (redeemScriptHash) EQUAL     Proof of Burn  Destroy bitcoin      </description>
+    </item>
+    
+    <item>
+      <title>Blockchain BitCoin Fork</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/23/blockchain-bitcoin-fork/</link>
       <pubDate>Fri, 23 Oct 2020 09:07:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2020/10/23/blockchain-fork/</guid>
+      <guid>https://www.pseudoyu.com/zh/2020/10/23/blockchain-bitcoin-fork/</guid>
       <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Fork  State fork  Forking attack (deliberate fork)   Protocol fork  Hard fork (permanent)  Block size limit (1M -&amp;gt; 4M)   Soft fork (&amp;gt; 50%, temporary)  Block size limit (1M -&amp;gt; 0.5M) coinbase  As extra nonce 2^32 -&amp;gt; 2^96 (adding 8 bytes) As root hash of UTXO   P2SH(Pay to Script Hash)      </description>
     </item>
     
     <item>
-      <title>Blockchain Mining</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/22/blockchain-mining/</link>
+      <title>Blockchain BitCoin Mining</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/22/blockchain-bitcoin-mining/</link>
       <pubDate>Thu, 22 Oct 2020 09:07:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2020/10/22/blockchain-mining/</guid>
+      <guid>https://www.pseudoyu.com/zh/2020/10/22/blockchain-bitcoin-mining/</guid>
       <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Mining  Solve puzzles  Average block time  10 minutes   Difficulty  Target = target * (actual time / expected time) Adjust every 2 weeks Ar most 4 times, at least 1/4     Bernoulli process (nearly poisson process in BitCoin mining)  Bernoulli trial  A random experiment with binary outcome   A sequence of independent Bernoulli trial   Feature  Memoryless Progress free  Ensure the fairness of mining   Exponential distribution   Device (Universal -&amp;gt; Specific)  CPU GPU ASIC (Application Specific Integrated Circuit)) Mining pool (on demand mining)  Pool manager (risks of 51% attack) miners      </description>
+    </item>
+    
+    <item>
+      <title>Blockchain BitCoin Features</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/21/blockchain-bitcoin-features/</link>
+      <pubDate>Wed, 21 Oct 2020 22:07:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/21/blockchain-bitcoin-features/</guid>
+      <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) UTXO (Unspent Transaction Output)  Total inputs = total outputs  Quantity  21,000,000  Block reward  Coinbase transaction Cut half every 4 year  Transaction fee BitCoin network  Structure  Application layer  BitCoin blockchain   Network layer  P2P overlay network     Node  Seed node   Feature  Simple Robust Not efficient &amp;ldquo;Best effort&amp;rdquo;   Message transport  Flooding    Security  Problem  Sybil attack Forking attack Boycott Selfish mining  Reduce competition     Solution  Based on computing power (large cost) Require 6 confirmation by nodes (long time, about 1 hour)    </description>
     </item>
     
     <item>
@@ -145,15 +154,6 @@
       
       <guid>https://www.pseudoyu.com/zh/2020/10/18/%E5%8C%BA%E5%9D%97%E9%93%BE%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/</guid>
       <description>区块链学习计划 知识结构 算法刷题 剑指Offer LeetCode 笔试面试题库 编程语言 Java相关 基础 CS61B - UC Berkley Java学习笔记 - GitHub 容器 并发 多线程编程（threa</description>
-    </item>
-    
-    <item>
-      <title>Blockchain BitCoin Features</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/18/blockchain-bitcoin-features/</link>
-      <pubDate>Sun, 18 Oct 2020 09:07:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/18/blockchain-bitcoin-features/</guid>
-      <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) UTXO (Unspent Transaction Output)  Total inputs = total outputs  Quantity  21,000,000  Block reward  Coinbase transaction Cut half every 4 year  Transaction fee BitCoin network  Structure  Application layer  BitCoin blockchain   Network layer  P2P overlay network     Node  Seed node   Feature  Simple Robust Not efficient &amp;ldquo;Best effort&amp;rdquo;   Message transport  Flooding    Security  Problem  Sybil attack Forking attack Boycott Selfish mining  Reduce competition     Solution  Based on computing power (large cost) Require 6 confirmation by nodes (long time, about 1 hour)    </description>
     </item>
     
     <item>

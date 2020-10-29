@@ -191,11 +191,11 @@
     </item>
     
     <item>
-      <title>Blockchain Anonymity</title>
-      <link>https://www.pseudoyu.com/en/2020/10/28/blockchain-anonymity/</link>
+      <title>Blockchain BitCoin Anonymity</title>
+      <link>https://www.pseudoyu.com/en/2020/10/28/blockchain-bitcoin-anonymity/</link>
       <pubDate>Wed, 28 Oct 2020 10:07:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2020/10/28/blockchain-anonymity/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/10/28/blockchain-bitcoin-anonymity/</guid>
       
         <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
 &lt;h2 id=&#34;bitcoin-system-transaction-based-ledger&#34;&gt;BitCoin System (Transaction-based ledger)&lt;/h2&gt;
@@ -1221,11 +1221,11 @@ no prior requirement of knowing the object when writing or compiling code&lt;/li
     </item>
     
     <item>
-      <title>Blockchain Scripts</title>
-      <link>https://www.pseudoyu.com/en/2020/10/24/blockchain-scripts/</link>
+      <title>Blockchain BitCoin Scripts</title>
+      <link>https://www.pseudoyu.com/en/2020/10/24/blockchain-bitcoin-scripts/</link>
       <pubDate>Sat, 24 Oct 2020 09:07:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2020/10/24/blockchain-scripts/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/10/24/blockchain-bitcoin-scripts/</guid>
       
         <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
 &lt;h2 id=&#34;bitcoin-system-transaction-based-ledger&#34;&gt;BitCoin System (Transaction-based ledger)&lt;/h2&gt;
@@ -1337,11 +1337,11 @@ no prior requirement of knowing the object when writing or compiling code&lt;/li
     </item>
     
     <item>
-      <title>Blockchain Fork</title>
-      <link>https://www.pseudoyu.com/en/2020/10/23/blockchain-fork/</link>
+      <title>Blockchain BitCoin Fork</title>
+      <link>https://www.pseudoyu.com/en/2020/10/23/blockchain-bitcoin-fork/</link>
       <pubDate>Fri, 23 Oct 2020 09:07:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2020/10/23/blockchain-fork/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/10/23/blockchain-bitcoin-fork/</guid>
       
         <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
 &lt;h2 id=&#34;bitcoin-system-transaction-based-ledger&#34;&gt;BitCoin System (Transaction-based ledger)&lt;/h2&gt;
@@ -1380,11 +1380,11 @@ no prior requirement of knowing the object when writing or compiling code&lt;/li
     </item>
     
     <item>
-      <title>Blockchain Mining</title>
-      <link>https://www.pseudoyu.com/en/2020/10/22/blockchain-mining/</link>
+      <title>Blockchain BitCoin Mining</title>
+      <link>https://www.pseudoyu.com/en/2020/10/22/blockchain-bitcoin-mining/</link>
       <pubDate>Thu, 22 Oct 2020 09:07:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2020/10/22/blockchain-mining/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/10/22/blockchain-bitcoin-mining/</guid>
       
         <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
 &lt;h2 id=&#34;bitcoin-system-transaction-based-ledger&#34;&gt;BitCoin System (Transaction-based ledger)&lt;/h2&gt;
@@ -1440,6 +1440,90 @@ with binary outcome&lt;/li&gt;
 &lt;li&gt;miners&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Blockchain BitCoin Features</title>
+      <link>https://www.pseudoyu.com/en/2020/10/21/blockchain-bitcoin-features/</link>
+      <pubDate>Wed, 21 Oct 2020 22:07:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/10/21/blockchain-bitcoin-features/</guid>
+      
+        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
+&lt;h2 id=&#34;bitcoin-system-transaction-based-ledger&#34;&gt;BitCoin System (Transaction-based ledger)&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_features.svg&#34; alt=&#34;blockchain_bitcoin_features&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;utxo-unspent-transaction-output&#34;&gt;UTXO (Unspent Transaction Output)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Total inputs = total outputs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;quantity&#34;&gt;Quantity&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;21,000,000&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;block-reward&#34;&gt;Block reward&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Coinbase transaction&lt;/li&gt;
+&lt;li&gt;Cut half every 4 year&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;transaction-fee&#34;&gt;Transaction fee&lt;/h3&gt;
+&lt;h3 id=&#34;bitcoin-network&#34;&gt;BitCoin network&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Structure
+&lt;ul&gt;
+&lt;li&gt;Application layer
+&lt;ul&gt;
+&lt;li&gt;BitCoin blockchain&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Network layer
+&lt;ul&gt;
+&lt;li&gt;P2P overlay network&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Node
+&lt;ul&gt;
+&lt;li&gt;Seed node&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Feature
+&lt;ul&gt;
+&lt;li&gt;Simple&lt;/li&gt;
+&lt;li&gt;Robust&lt;/li&gt;
+&lt;li&gt;Not efficient&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Best effort&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Message transport
+&lt;ul&gt;
+&lt;li&gt;Flooding&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;security&#34;&gt;Security&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Problem
+&lt;ul&gt;
+&lt;li&gt;Sybil attack&lt;/li&gt;
+&lt;li&gt;Forking attack&lt;/li&gt;
+&lt;li&gt;Boycott&lt;/li&gt;
+&lt;li&gt;Selfish mining
+&lt;ul&gt;
+&lt;li&gt;Reduce competition&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Solution
+&lt;ul&gt;
+&lt;li&gt;Based on computing power (large cost)&lt;/li&gt;
+&lt;li&gt;Require 6 confirmation by nodes (long time, about 1 hour)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1668,90 +1752,6 @@ with binary outcome&lt;/li&gt;
 (used in bitcoin)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Blockchain Bitcoin Features</title>
-      <link>https://www.pseudoyu.com/en/2020/10/19/blockchain-bitcoin-features/</link>
-      <pubDate>Mon, 19 Oct 2020 20:07:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/19/blockchain-bitcoin-features/</guid>
-      
-        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
-&lt;h2 id=&#34;bitcoin-system-transaction-based-ledger&#34;&gt;BitCoin System (Transaction-based ledger)&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_features.svg&#34; alt=&#34;blockchain_bitcoin_features&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;utxo-unspent-transaction-output&#34;&gt;UTXO (Unspent Transaction Output)&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Total inputs = total outputs&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;quantity&#34;&gt;Quantity&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;21,000,000&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;block-reward&#34;&gt;Block reward&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Coinbase transaction&lt;/li&gt;
-&lt;li&gt;Cut half every 4 year&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;transaction-fee&#34;&gt;Transaction fee&lt;/h3&gt;
-&lt;h3 id=&#34;bitcoin-network&#34;&gt;BitCoin network&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Structure
-&lt;ul&gt;
-&lt;li&gt;Application layer
-&lt;ul&gt;
-&lt;li&gt;BitCoin blockchain&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Network layer
-&lt;ul&gt;
-&lt;li&gt;P2P overlay network&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Node
-&lt;ul&gt;
-&lt;li&gt;Seed node&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Feature
-&lt;ul&gt;
-&lt;li&gt;Simple&lt;/li&gt;
-&lt;li&gt;Robust&lt;/li&gt;
-&lt;li&gt;Not efficient&lt;/li&gt;
-&lt;li&gt;&amp;ldquo;Best effort&amp;rdquo;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Message transport
-&lt;ul&gt;
-&lt;li&gt;Flooding&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;security&#34;&gt;Security&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Problem
-&lt;ul&gt;
-&lt;li&gt;Sybil attack&lt;/li&gt;
-&lt;li&gt;Forking attack&lt;/li&gt;
-&lt;li&gt;Boycott&lt;/li&gt;
-&lt;li&gt;Selfish mining
-&lt;ul&gt;
-&lt;li&gt;Reduce competition&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Solution
-&lt;ul&gt;
-&lt;li&gt;Based on computing power (large cost)&lt;/li&gt;
-&lt;li&gt;Require 6 confirmation by nodes (long time, about 1 hour)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;

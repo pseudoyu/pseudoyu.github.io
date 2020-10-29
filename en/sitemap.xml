@@ -121,7 +121,7 @@
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/en/2020/10/28/blockchain-anonymity/</loc>
+    <loc>https://www.pseudoyu.com/en/2020/10/28/blockchain-bitcoin-anonymity/</loc>
     <lastmod>2020-10-28T10:07:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -205,22 +205,29 @@
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/en/2020/10/24/blockchain-scripts/</loc>
+    <loc>https://www.pseudoyu.com/en/2020/10/24/blockchain-bitcoin-scripts/</loc>
     <lastmod>2020-10-24T09:07:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/en/2020/10/23/blockchain-fork/</loc>
+    <loc>https://www.pseudoyu.com/en/2020/10/23/blockchain-bitcoin-fork/</loc>
     <lastmod>2020-10-23T09:07:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/en/2020/10/22/blockchain-mining/</loc>
+    <loc>https://www.pseudoyu.com/en/2020/10/22/blockchain-bitcoin-mining/</loc>
     <lastmod>2020-10-22T09:07:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/en/2020/10/21/blockchain-bitcoin-features/</loc>
+    <lastmod>2020-10-21T22:07:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -263,13 +270,6 @@
   <url>
     <loc>https://www.pseudoyu.com/en/2020/10/21/blockchain-cryptography/</loc>
     <lastmod>2020-10-21T09:07:17+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pseudoyu.com/en/2020/10/19/blockchain-bitcoin-features/</loc>
-    <lastmod>2020-10-19T20:07:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

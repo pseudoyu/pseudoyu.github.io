@@ -3,14 +3,14 @@
 <head>
   <meta name="generator" content="Hugo 0.74.3" />
   <meta charset="utf-8">
-  <title>Blockchain Fork · Pseudoyu</title>
+  <title>Blockchain BitCoin Scripts · Pseudoyu</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Fork  State fork  Forking attack (deliberate fork)   Protocol fork  Hard fork (permanent)  Block size limit (1M -&amp;gt; 4M)   Soft fork (&amp;gt; 50%, temporary)  Block size limit (1M -&amp;gt; 0.5M) coinbase  As extra nonce 2^32 -&amp;gt; 2^96 (adding 8 bytes) As root hash of UTXO   P2SH(Pay to Script Hash)      " />
+  <meta name="description" content="Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Scripts (stack based language)  TX structure  txid hash version (of bitcoin) size locktime (take effect time) vin  txid vout scriptSig (input script)  asm hex     vout  value n scriptPubKey (output script) value   blockhash confirmations time (tx time) blocktime   Transaction  P2PK (Pay to Public Key)  input script  PUSHDATA (Sig) (signed by provate key)   output script  PUSHDATA (PubKey) CHECKSIG     P2PKH (Pay to Public Key Hash)  input script  PUSHDATA (Sig) (signed by provate key) PUSHDATA (PubKey)   output script  DUP (duplicate a PubKey) HASH160 (calculate the PubKey&amp;rsquo;s hash) PUSHDATA (PubKeyHash) EQUALVERIFY CHECKSIG     P2SH (Pay to Script Hash)  redeemScript  PUSHDATA (PubKey) CHECKSIG   input script  PUSHDATA (Sig) PUSHDATA (serialized redeemScript)   output script  HASH160 PUSHDATA (redeemScriptHash) EQUAL     Proof of Burn  Destroy bitcoin      " />
 
   <meta name="keywords" content="Hugo, theme, den" />
 
-<link rel="canonical" href="https://www.pseudoyu.com/zh/2020/10/23/blockchain-fork/" />
-<link rel="alternate" href="https://www.pseudoyu.com/en/2020/10/23/blockchain-fork/" hreflang="en">
+<link rel="canonical" href="https://www.pseudoyu.com/zh/2020/10/24/blockchain-bitcoin-scripts/" />
+<link rel="alternate" href="https://www.pseudoyu.com/en/2020/10/24/blockchain-bitcoin-scripts/" hreflang="en">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -19,24 +19,24 @@
 
 
 
-<meta property="og:title" content="Blockchain Fork" />
-<meta property="og:description" content="Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Fork  State fork  Forking attack (deliberate fork)   Protocol fork  Hard fork (permanent)  Block size limit (1M -&gt; 4M)   Soft fork (&gt; 50%, temporary)  Block size limit (1M -&gt; 0.5M) coinbase  As extra nonce 2^32 -&gt; 2^96 (adding 8 bytes) As root hash of UTXO   P2SH(Pay to Script Hash)      " />
+<meta property="og:title" content="Blockchain BitCoin Scripts" />
+<meta property="og:description" content="Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Scripts (stack based language)  TX structure  txid hash version (of bitcoin) size locktime (take effect time) vin  txid vout scriptSig (input script)  asm hex     vout  value n scriptPubKey (output script) value   blockhash confirmations time (tx time) blocktime   Transaction  P2PK (Pay to Public Key)  input script  PUSHDATA (Sig) (signed by provate key)   output script  PUSHDATA (PubKey) CHECKSIG     P2PKH (Pay to Public Key Hash)  input script  PUSHDATA (Sig) (signed by provate key) PUSHDATA (PubKey)   output script  DUP (duplicate a PubKey) HASH160 (calculate the PubKey&rsquo;s hash) PUSHDATA (PubKeyHash) EQUALVERIFY CHECKSIG     P2SH (Pay to Script Hash)  redeemScript  PUSHDATA (PubKey) CHECKSIG   input script  PUSHDATA (Sig) PUSHDATA (serialized redeemScript)   output script  HASH160 PUSHDATA (redeemScriptHash) EQUAL     Proof of Burn  Destroy bitcoin      " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.pseudoyu.com/zh/2020/10/23/blockchain-fork/" />
-<meta property="article:published_time" content="2020-10-23T09:07:17+08:00" />
-<meta property="article:modified_time" content="2020-10-23T09:07:17+08:00" />
-<meta itemprop="name" content="Blockchain Fork">
-<meta itemprop="description" content="Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Fork  State fork  Forking attack (deliberate fork)   Protocol fork  Hard fork (permanent)  Block size limit (1M -&gt; 4M)   Soft fork (&gt; 50%, temporary)  Block size limit (1M -&gt; 0.5M) coinbase  As extra nonce 2^32 -&gt; 2^96 (adding 8 bytes) As root hash of UTXO   P2SH(Pay to Script Hash)      ">
-<meta itemprop="datePublished" content="2020-10-23T09:07:17+08:00" />
-<meta itemprop="dateModified" content="2020-10-23T09:07:17+08:00" />
-<meta itemprop="wordCount" content="56">
+<meta property="og:url" content="https://www.pseudoyu.com/zh/2020/10/24/blockchain-bitcoin-scripts/" />
+<meta property="article:published_time" content="2020-10-24T09:07:17+08:00" />
+<meta property="article:modified_time" content="2020-10-24T09:07:17+08:00" />
+<meta itemprop="name" content="Blockchain BitCoin Scripts">
+<meta itemprop="description" content="Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Scripts (stack based language)  TX structure  txid hash version (of bitcoin) size locktime (take effect time) vin  txid vout scriptSig (input script)  asm hex     vout  value n scriptPubKey (output script) value   blockhash confirmations time (tx time) blocktime   Transaction  P2PK (Pay to Public Key)  input script  PUSHDATA (Sig) (signed by provate key)   output script  PUSHDATA (PubKey) CHECKSIG     P2PKH (Pay to Public Key Hash)  input script  PUSHDATA (Sig) (signed by provate key) PUSHDATA (PubKey)   output script  DUP (duplicate a PubKey) HASH160 (calculate the PubKey&rsquo;s hash) PUSHDATA (PubKeyHash) EQUALVERIFY CHECKSIG     P2SH (Pay to Script Hash)  redeemScript  PUSHDATA (PubKey) CHECKSIG   input script  PUSHDATA (Sig) PUSHDATA (serialized redeemScript)   output script  HASH160 PUSHDATA (redeemScriptHash) EQUAL     Proof of Burn  Destroy bitcoin      ">
+<meta itemprop="datePublished" content="2020-10-24T09:07:17+08:00" />
+<meta itemprop="dateModified" content="2020-10-24T09:07:17+08:00" />
+<meta itemprop="wordCount" content="122">
 
 
 
 <meta itemprop="keywords" content="notes,bitcoin,blockchain,cryptocurrency,security,technology,decentralization,pku,bilibili," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Blockchain Fork"/>
-<meta name="twitter:description" content="Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Fork  State fork  Forking attack (deliberate fork)   Protocol fork  Hard fork (permanent)  Block size limit (1M -&gt; 4M)   Soft fork (&gt; 50%, temporary)  Block size limit (1M -&gt; 0.5M) coinbase  As extra nonce 2^32 -&gt; 2^96 (adding 8 bytes) As root hash of UTXO   P2SH(Pay to Script Hash)      "/>
+<meta name="twitter:title" content="Blockchain BitCoin Scripts"/>
+<meta name="twitter:description" content="Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Scripts (stack based language)  TX structure  txid hash version (of bitcoin) size locktime (take effect time) vin  txid vout scriptSig (input script)  asm hex     vout  value n scriptPubKey (output script) value   blockhash confirmations time (tx time) blocktime   Transaction  P2PK (Pay to Public Key)  input script  PUSHDATA (Sig) (signed by provate key)   output script  PUSHDATA (PubKey) CHECKSIG     P2PKH (Pay to Public Key Hash)  input script  PUSHDATA (Sig) (signed by provate key) PUSHDATA (PubKey)   output script  DUP (duplicate a PubKey) HASH160 (calculate the PubKey&rsquo;s hash) PUSHDATA (PubKeyHash) EQUALVERIFY CHECKSIG     P2SH (Pay to Script Hash)  redeemScript  PUSHDATA (PubKey) CHECKSIG   input script  PUSHDATA (Sig) PUSHDATA (serialized redeemScript)   output script  HASH160 PUSHDATA (redeemScriptHash) EQUAL     Proof of Burn  Destroy bitcoin      "/>
 </head>
 <body>
   
@@ -110,11 +110,11 @@
   <div class="row">
     <div class="col-lg-12">
       <div class="header-content">
-        <h1 class="header-title">Blockchain Fork</h1>
+        <h1 class="header-title">Blockchain BitCoin Scripts</h1>
         <p class="header-date">作者：
           pseudoyu /
         
-        2020-10-23
+        2020-10-24
           / 分类：
           <a href="https://www.pseudoyu.com/zh/category/notes/">Notes</a>
         </p>
@@ -139,7 +139,7 @@
 <p class="float-right translations">
     <i class="fas fa-language" aria-hidden="true"></i>
     翻译： 
-    <a href="https://www.pseudoyu.com/en/2020/10/23/blockchain-fork/">EN</a>
+    <a href="https://www.pseudoyu.com/en/2020/10/24/blockchain-bitcoin-scripts/">EN</a>
 </p>
 
 
@@ -154,31 +154,104 @@
   <article>
   <h1 id="blockchain-technology-and-applications">Blockchain Technology and Applications</h1>
 <h2 id="bitcoin-system-transaction-based-ledger">BitCoin System (Transaction-based ledger)</h2>
-<h3 id="fork">Fork</h3>
-<p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_fork.svg" alt="blockchain_bitcoin_fork"></p>
+<h3 id="scripts-stack-based-language">Scripts (stack based language)</h3>
+<p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_scripts.svg" alt="blockchain_bitcoin_scripts"></p>
 <ul>
-<li>State fork
+<li>TX structure
 <ul>
-<li>Forking attack (deliberate fork)</li>
+<li>txid</li>
+<li>hash</li>
+<li>version (of bitcoin)</li>
+<li>size</li>
+<li>locktime (take effect time)</li>
+<li>vin
+<ul>
+<li>txid</li>
+<li>vout</li>
+<li>scriptSig (input script)
+<ul>
+<li>asm</li>
+<li>hex</li>
 </ul>
 </li>
-<li>Protocol fork
-<ul>
-<li>Hard fork (permanent)
-<ul>
-<li>Block size limit (1M -&gt; 4M)</li>
 </ul>
 </li>
-<li>Soft fork (&gt; 50%, temporary)
+<li>vout
 <ul>
-<li>Block size limit (1M -&gt; 0.5M)</li>
-<li>coinbase
-<ul>
-<li>As extra nonce 2^32 -&gt; 2^96 (adding 8 bytes)</li>
-<li>As root hash of UTXO</li>
+<li>value</li>
+<li>n</li>
+<li>scriptPubKey (output script)</li>
+<li>value</li>
 </ul>
 </li>
-<li>P2SH(Pay to Script Hash)</li>
+<li>blockhash</li>
+<li>confirmations</li>
+<li>time (tx time)</li>
+<li>blocktime</li>
+</ul>
+</li>
+<li>Transaction
+<ul>
+<li>P2PK (Pay to Public Key)
+<ul>
+<li>input script
+<ul>
+<li>PUSHDATA (Sig) (signed by provate key)</li>
+</ul>
+</li>
+<li>output script
+<ul>
+<li>PUSHDATA (PubKey)</li>
+<li>CHECKSIG</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>P2PKH (Pay to Public Key Hash)
+<ul>
+<li>input script
+<ul>
+<li>PUSHDATA (Sig) (signed by provate key)</li>
+<li>PUSHDATA (PubKey)</li>
+</ul>
+</li>
+<li>output script
+<ul>
+<li>DUP (duplicate a PubKey)</li>
+<li>HASH160 (calculate the PubKey&rsquo;s hash)</li>
+<li>PUSHDATA (PubKeyHash)</li>
+<li>EQUALVERIFY</li>
+<li>CHECKSIG</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>P2SH (Pay to Script Hash)
+<ul>
+<li>redeemScript
+<ul>
+<li>PUSHDATA (PubKey)</li>
+<li>CHECKSIG</li>
+</ul>
+</li>
+<li>input script
+<ul>
+<li>PUSHDATA (Sig)</li>
+<li>PUSHDATA (serialized redeemScript)</li>
+</ul>
+</li>
+<li>output script
+<ul>
+<li>HASH160</li>
+<li>PUSHDATA (redeemScriptHash)</li>
+<li>EQUAL</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Proof of Burn
+<ul>
+<li>Destroy bitcoin</li>
 </ul>
 </li>
 </ul>

@@ -170,41 +170,6 @@
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/en/tag/basic/</loc>
-    <lastmod>2020-10-28T08:50:17+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pseudoyu.com/en/tag/github/</loc>
-    <lastmod>2020-10-28T08:50:17+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pseudoyu.com/en/tag/java/</loc>
-    <lastmod>2020-10-28T08:50:17+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pseudoyu.com/en/2020/10/28/java-basics/</loc>
-    <lastmod>2020-10-28T08:50:17+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pseudoyu.com/en/tag/programming/</loc>
-    <lastmod>2020-10-28T08:50:17+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://www.pseudoyu.com/en/2020/10/24/blockchain-bitcoin-scripts/</loc>
     <lastmod>2020-10-24T09:07:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -214,6 +179,55 @@
   <url>
     <loc>https://www.pseudoyu.com/en/2020/10/23/blockchain-bitcoin-fork/</loc>
     <lastmod>2020-10-23T09:07:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/en/tag/basic/</loc>
+    <lastmod>2020-10-22T10:50:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/en/tag/github/</loc>
+    <lastmod>2020-10-22T10:50:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/en/tag/java/</loc>
+    <lastmod>2020-10-22T10:50:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/en/2020/10/22/java-throwable/</loc>
+    <lastmod>2020-10-22T10:50:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/en/tag/programming/</loc>
+    <lastmod>2020-10-22T10:50:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/en/2020/10/22/java-inheritance/</loc>
+    <lastmod>2020-10-22T09:50:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/en/2020/10/22/java-reflect/</loc>
+    <lastmod>2020-10-22T09:50:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -254,8 +268,29 @@
   </url>
   
   <url>
+    <loc>https://www.pseudoyu.com/en/2020/10/21/java-object-universal-functions/</loc>
+    <lastmod>2020-10-21T12:50:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.pseudoyu.com/en/2020/10/21/blockchain-protocol/</loc>
     <lastmod>2020-10-21T12:07:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/en/2020/10/21/java-keywords/</loc>
+    <lastmod>2020-10-21T11:50:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/en/2020/10/21/java-operation/</loc>
+    <lastmod>2020-10-21T10:50:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -268,8 +303,22 @@
   </url>
   
   <url>
+    <loc>https://www.pseudoyu.com/en/2020/10/21/java-string/</loc>
+    <lastmod>2020-10-21T09:50:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.pseudoyu.com/en/2020/10/21/blockchain-cryptography/</loc>
     <lastmod>2020-10-21T09:07:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/en/2020/10/21/java-data-type/</loc>
+    <lastmod>2020-10-21T08:50:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

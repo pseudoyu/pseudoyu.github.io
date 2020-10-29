@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta name="generator" content="Hugo 0.74.3" />
+  <meta charset="utf-8">
+  <title>Java Keywords · Pseudoyu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Java Basics Keywords final  Data  As for primitive data type, final make its value immutable As for reference, it can&amp;rsquo;t reference other objects but can modify itself   Method  Methods stated can&amp;rsquo;t be rewrite by its child class   Class  Can&amp;rsquo;t be inherited    static  Variable  static variable (also called class variable)  Belongs to the class and can be shared/accessed by the class name   instance variable  When creating an instance there will be an instance variable     static method  It exists when loading the class Don&amp;rsquo;t rely on any instance Can&amp;rsquo;t be abstract Can&amp;rsquo;t contain this, super keywords (they are related to specific object)   static (initialization) block  Operate once when doing the class initialization   static inner class  Don&amp;rsquo;t rely on external instance Can&amp;rsquo;t access non-static variables or methods of external class   static import  No need to refer to the ClassName  Simplify Hard to read     Initialization order  static variable, static block (Parent class) static variable, static block (Child class) instance variable, block (Parent class) Constructor (Parent class) instance variable, block (Child class) Constructor (Child class)    " />
+
+  <meta name="keywords" content="Hugo, theme, den" />
+
+<link rel="canonical" href="https://www.pseudoyu.com/zh/2020/10/21/java-keywords/" />
+<link rel="alternate" href="https://www.pseudoyu.com/en/2020/10/21/java-keywords/" hreflang="en">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.pseudoyu.com/css/den.css">
+
+
+
+
+<meta property="og:title" content="Java Keywords" />
+<meta property="og:description" content="Java Basics Keywords final  Data  As for primitive data type, final make its value immutable As for reference, it can&rsquo;t reference other objects but can modify itself   Method  Methods stated can&rsquo;t be rewrite by its child class   Class  Can&rsquo;t be inherited    static  Variable  static variable (also called class variable)  Belongs to the class and can be shared/accessed by the class name   instance variable  When creating an instance there will be an instance variable     static method  It exists when loading the class Don&rsquo;t rely on any instance Can&rsquo;t be abstract Can&rsquo;t contain this, super keywords (they are related to specific object)   static (initialization) block  Operate once when doing the class initialization   static inner class  Don&rsquo;t rely on external instance Can&rsquo;t access non-static variables or methods of external class   static import  No need to refer to the ClassName  Simplify Hard to read     Initialization order  static variable, static block (Parent class) static variable, static block (Child class) instance variable, block (Parent class) Constructor (Parent class) instance variable, block (Child class) Constructor (Child class)    " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.pseudoyu.com/zh/2020/10/21/java-keywords/" />
+<meta property="article:published_time" content="2020-10-21T11:50:17+08:00" />
+<meta property="article:modified_time" content="2020-10-21T11:50:17+08:00" />
+<meta itemprop="name" content="Java Keywords">
+<meta itemprop="description" content="Java Basics Keywords final  Data  As for primitive data type, final make its value immutable As for reference, it can&rsquo;t reference other objects but can modify itself   Method  Methods stated can&rsquo;t be rewrite by its child class   Class  Can&rsquo;t be inherited    static  Variable  static variable (also called class variable)  Belongs to the class and can be shared/accessed by the class name   instance variable  When creating an instance there will be an instance variable     static method  It exists when loading the class Don&rsquo;t rely on any instance Can&rsquo;t be abstract Can&rsquo;t contain this, super keywords (they are related to specific object)   static (initialization) block  Operate once when doing the class initialization   static inner class  Don&rsquo;t rely on external instance Can&rsquo;t access non-static variables or methods of external class   static import  No need to refer to the ClassName  Simplify Hard to read     Initialization order  static variable, static block (Parent class) static variable, static block (Child class) instance variable, block (Parent class) Constructor (Parent class) instance variable, block (Child class) Constructor (Child class)    ">
+<meta itemprop="datePublished" content="2020-10-21T11:50:17+08:00" />
+<meta itemprop="dateModified" content="2020-10-21T11:50:17+08:00" />
+<meta itemprop="wordCount" content="170">
+
+
+
+<meta itemprop="keywords" content="notes,technology,programming,java,github,basic," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Java Keywords"/>
+<meta name="twitter:description" content="Java Basics Keywords final  Data  As for primitive data type, final make its value immutable As for reference, it can&rsquo;t reference other objects but can modify itself   Method  Methods stated can&rsquo;t be rewrite by its child class   Class  Can&rsquo;t be inherited    static  Variable  static variable (also called class variable)  Belongs to the class and can be shared/accessed by the class name   instance variable  When creating an instance there will be an instance variable     static method  It exists when loading the class Don&rsquo;t rely on any instance Can&rsquo;t be abstract Can&rsquo;t contain this, super keywords (they are related to specific object)   static (initialization) block  Operate once when doing the class initialization   static inner class  Don&rsquo;t rely on external instance Can&rsquo;t access non-static variables or methods of external class   static import  No need to refer to the ClassName  Simplify Hard to read     Initialization order  static variable, static block (Parent class) static variable, static block (Child class) instance variable, block (Parent class) Constructor (Parent class) instance variable, block (Child class) Constructor (Child class)    "/>
+</head>
+<body>
+  
+  <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://www.pseudoyu.com/images/background.jpg'); background-position: center; background-size: cover;">
+  <div class="container">
+  <nav class="header-nav navbar navbar-expand-md navbar-dark light-dark">
+    <div class="header-logo navbar-brand">
+      
+        <a class="float-left" href="https://www.pseudoyu.com/zh/">
+      
+        
+        <img class="mr20 header-logo-image" src="https://www.pseudoyu.com/images/fly.png" alt="logo">
+        
+        
+          Pseudoyu
+         
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav-menu collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/ideas/">思考</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/notes/">笔记</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/projects/">项目</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              <a class="nav-link" href="https://www.pseudoyu.com/zh/about/">关于</a>
+            
+          </li>
+        
+        
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.pseudoyu.com/en/"><i class="fas fa-globe"></i> English</a>
+            </li>
+          
+          
+        
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container header-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="header-content">
+        <h1 class="header-title">Java Keywords</h1>
+        <p class="header-date">作者：
+          pseudoyu /
+        
+        2020-10-21
+          / 分类：
+          <a href="https://www.pseudoyu.com/zh/category/notes/">Notes</a>
+        </p>
+        
+        <div class="header-underline"></div>
+        
+          <div class="clearfix"></div>
+          <p class="float-right header-tags">
+              <i class="fas fa-tags" aria-hidden="true"></i>
+              <a href="https://www.pseudoyu.com/zh/tag/basic/">basic</a>, 
+                <a href="https://www.pseudoyu.com/zh/tag/github/">github</a>, 
+                <a href="https://www.pseudoyu.com/zh/tag/java/">java</a>, 
+                <a href="https://www.pseudoyu.com/zh/tag/notes/">notes</a>, 
+                <a href="https://www.pseudoyu.com/zh/tag/programming/">programming</a>, 
+                <a href="https://www.pseudoyu.com/zh/tag/technology/">technology</a>
+          </p>
+        
+        <div class="clearfix"></div>
+<p class="float-right translations">
+    <i class="fas fa-language" aria-hidden="true"></i>
+    翻译： 
+    <a href="https://www.pseudoyu.com/en/2020/10/21/java-keywords/">EN</a>
+</p>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <main>
+<div class="container content">
+  <article>
+  <h1 id="java-basics">Java Basics</h1>
+<h2 id="keywords">Keywords</h2>
+<p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/java_keywords.svg" alt="java_keywords"></p>
+<h3 id="final">final</h3>
+<ul>
+<li>Data
+<ul>
+<li>As for primitive data type, final make its value immutable</li>
+<li>As for reference, it can&rsquo;t reference other objects but can modify itself</li>
+</ul>
+</li>
+<li>Method
+<ul>
+<li>Methods stated can&rsquo;t be rewrite by its child class</li>
+</ul>
+</li>
+<li>Class
+<ul>
+<li>Can&rsquo;t be inherited</li>
+</ul>
+</li>
+</ul>
+<h3 id="static">static</h3>
+<ul>
+<li>Variable
+<ul>
+<li>static variable
+(also called class variable)
+<ul>
+<li>Belongs to the class
+and can be shared/accessed by the class name</li>
+</ul>
+</li>
+<li>instance variable
+<ul>
+<li>When creating an instance there will be an instance variable</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>static method
+<ul>
+<li>It exists when loading the class</li>
+<li>Don&rsquo;t rely on any instance</li>
+<li>Can&rsquo;t be abstract</li>
+<li>Can&rsquo;t contain this, super keywords
+(they are related to specific object)</li>
+</ul>
+</li>
+<li>static (initialization) block
+<ul>
+<li>Operate once when doing the class initialization</li>
+</ul>
+</li>
+<li>static inner class
+<ul>
+<li>Don&rsquo;t rely on external instance</li>
+<li>Can&rsquo;t access non-static variables or methods of external class</li>
+</ul>
+</li>
+<li>static import
+<ul>
+<li>No need to refer to the ClassName
+<ul>
+<li>Simplify</li>
+<li>Hard to read</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Initialization order
+<ul>
+<li>static variable, static block (Parent class)</li>
+<li>static variable, static block (Child class)</li>
+<li>instance variable, block (Parent class)</li>
+<li>Constructor (Parent class)</li>
+<li>instance variable, block (Child class)</li>
+<li>Constructor (Child class)</li>
+</ul>
+</li>
+</ul>
+
+  </article>
+
+  
+  
+  
+
+
+</div>
+
+  </main><div class="footer gradient-2">
+  <div class="container footer-container ">
+    <div class="row">
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        <div class="footer-title">网站地图</div>
+        <ul class="list-unstyled">
+            
+              
+                <li><a href="https://www.pseudoyu.com/zh/tags/">标签</a></li>
+              
+              
+                <li><a href="https://www.pseudoyu.com/zh/categories/">分类</a></li>
+              
+            
+            
+            
+            <li><a rel="alternate" type="application/rss&#43;xml" href="https://www.pseudoyu.com/zh/index.xml"><i class="fas fa-rss-square"></i> RSS订阅</a></li>
+            
+            
+            
+        </ul>
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">社群</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://space.bilibili.com/5374948/" rel="noopener" target="_blank">BiliBili</a></li>
+          
+          <li><a href="https://www.facebook.com/pseudoyuzhang" rel="noopener" target="_blank">Facebook</a></li>
+          
+          <li><a href="https://www.instagram.com/pseudo.yu/" rel="noopener" target="_blank">Instagram</a></li>
+          
+          <li><a href="https://medium.com/@pseudoyu" rel="noopener" target="_blank">Medium</a></li>
+          
+          <li><a href="https://www.reddit.com/user/pseudo_yu" rel="noopener" target="_blank">Reddit</a></li>
+          
+          <li><a href="https://twitter.com/pseudo_yu" rel="noopener" target="_blank">Twitter</a></li>
+          
+          <li><a href="https://www.youtube.com/channel/UCR0O0s303tGBi3P02hstQPA/" rel="noopener" target="_blank">Youtube</a></li>
+          
+        </ul>
+        
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">友链</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://www.coursera.org/user/ffe947f087d1f63b161c3fcb310a6578" rel="noopener" target="_blank">Coursera</a></li>
+          
+          <li><a href="https://github.com/pseudoyu" rel="noopener" target="_blank">GitHub</a></li>
+          
+          <li><a href="https://www.goodreads.com/user/show/121369734-yu-zhang" rel="noopener" target="_blank">Goodreads</a></li>
+          
+          <li><a href="https://www.hackerrank.com/pseudoyu" rel="noopener" target="_blank">HackerRank</a></li>
+          
+          <li><a href="https://leetcode.com/pseudoyu/" rel="noopener" target="_blank">LeetCode</a></li>
+          
+          <li><a href="https://www.linkedin.com/in/pseudoyu/" rel="noopener" target="_blank">LinkedIn</a></li>
+          
+          <li><a href="https://acm.timus.ru/author.aspx?id=300324" rel="noopener" target="_blank">Timus OJ</a></li>
+          
+        </ul>
+        
+      </div> 
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <p class="pull-right text-right">
+          <small><em>Team Rocket: <a href="https://www.marshalgao.com" rel="noopener" target="_blank">Marshal</a> | <a href="https://www.m1sty.com" rel="noopener" target="_blank">Misty</a></em></small><br/>
+          <small><em>The University of Hong Kong - <a href="https://www.cs.hku.hk" rel="noopener" target="_blank">CS</a></em></small><br/>
+          <small>
+            &copy; 
+            pseudoyu
+            2020
+          </small>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

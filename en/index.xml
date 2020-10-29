@@ -646,581 +646,6 @@
     </item>
     
     <item>
-      <title>Java Basics</title>
-      <link>https://www.pseudoyu.com/en/2020/10/28/java-basics/</link>
-      <pubDate>Wed, 28 Oct 2020 08:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/28/java-basics/</guid>
-      
-        <description>&lt;h1 id=&#34;java-basics&#34;&gt;Java Basics&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/java_basics.svg&#34; alt=&#34;java_basics&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;java-basics-1&#34;&gt;Java Basics&lt;/h1&gt;
-&lt;h2 id=&#34;data-type&#34;&gt;Data Type&lt;/h2&gt;
-&lt;h3 id=&#34;primitive-type&#34;&gt;Primitive type&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;byte/8&lt;/li&gt;
-&lt;li&gt;char/16&lt;/li&gt;
-&lt;li&gt;short/16&lt;/li&gt;
-&lt;li&gt;int/32&lt;/li&gt;
-&lt;li&gt;float/32&lt;/li&gt;
-&lt;li&gt;long/64&lt;/li&gt;
-&lt;li&gt;double/64&lt;/li&gt;
-&lt;li&gt;boolean/~
-&lt;ul&gt;
-&lt;li&gt;Value
-&lt;ul&gt;
-&lt;li&gt;true(1)&lt;/li&gt;
-&lt;li&gt;false(0)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;JVM will convert it to int when compiling&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;types---warpper-class&#34;&gt;Types &amp;lt;-&amp;gt; Warpper class&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;boolean - Boolean&lt;/li&gt;
-&lt;li&gt;byte - Byte&lt;/li&gt;
-&lt;li&gt;char - Character&lt;/li&gt;
-&lt;li&gt;float - Float&lt;/li&gt;
-&lt;li&gt;int - Integer&lt;/li&gt;
-&lt;li&gt;long - Long&lt;/li&gt;
-&lt;li&gt;short - Short&lt;/li&gt;
-&lt;li&gt;double - Double&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;autoboxing&#34;&gt;Autoboxing&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Use valueOf() method&lt;/li&gt;
-&lt;li&gt;primitive types -&amp;gt; corresponding object wrapper classes
-(e.g. int -&amp;gt; Integer, double -&amp;gt; Double)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;unboxing&#34;&gt;Unboxing&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Object wrapper classes -&amp;gt; corresponding primitive types
-(e.g. Integer -&amp;gt; int, Double -&amp;gt; double)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;cache&#34;&gt;Cache&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Primitive data type and corresponding cache
-(If the data is in the range of cache, we can use the objects in the cache)
-&lt;ul&gt;
-&lt;li&gt;boolean value | true and false&lt;/li&gt;
-&lt;li&gt;byte values | all&lt;/li&gt;
-&lt;li&gt;short values | between -128 and 127&lt;/li&gt;
-&lt;li&gt;int values | between -128 and 127&lt;/li&gt;
-&lt;li&gt;char | in range of \u0000 to \u007F&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Compare
-&lt;ul&gt;
-&lt;li&gt;Integer.valueOf(123)
-&lt;ul&gt;
-&lt;li&gt;Use objet in the cache,
-multiple call will invoke the same object&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;new Integer(123)
-&lt;ul&gt;
-&lt;li&gt;Create a new object every call&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;string&#34;&gt;String&lt;/h2&gt;
-&lt;h3 id=&#34;feature&#34;&gt;Feature&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Immutable
-(byte, stated as final type)
-&lt;ul&gt;
-&lt;li&gt;Cache hash value
-&lt;ul&gt;
-&lt;li&gt;As the key of HashMap&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Requirement of String Pool
-&lt;ul&gt;
-&lt;li&gt;Get reference from String Pool if it exists&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Security
-&lt;ul&gt;
-&lt;li&gt;As parameter for many java classes
-&lt;ul&gt;
-&lt;li&gt;Network connection&lt;/li&gt;
-&lt;li&gt;Opening files&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Thread-safety
-&lt;ul&gt;
-&lt;li&gt;Shared among multiple threads freely&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;compare&#34;&gt;Compare&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;String
-&lt;ul&gt;
-&lt;li&gt;Immutable&lt;/li&gt;
-&lt;li&gt;Thread-safe&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;StringBuffer
-&lt;ul&gt;
-&lt;li&gt;Mutable&lt;/li&gt;
-&lt;li&gt;Thread-safe
-&lt;ul&gt;
-&lt;li&gt;Requirements of doing synchronization&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;StringBuilder
-&lt;ul&gt;
-&lt;li&gt;Mutable&lt;/li&gt;
-&lt;li&gt;Not thread-safe&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;string-pool-stores-all-literal-strings&#34;&gt;String Pool (stores all literal strings)&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Useful to reduce memory requirements&lt;/li&gt;
-&lt;li&gt;intern() method
-&lt;ul&gt;
-&lt;li&gt;If there is a string equals to the called one exists, return it
-(using equals() method)&lt;/li&gt;
-&lt;li&gt;If not, create a new string and return&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Create 2 &amp;ldquo;same&amp;rdquo; string
-&lt;ul&gt;
-&lt;li&gt;new String()
-&lt;ul&gt;
-&lt;li&gt;Create different strings&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;s.intern()
-&lt;ul&gt;
-&lt;li&gt;Get reference of one string&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;String s = &amp;quot;&amp;rdquo;
-&lt;ul&gt;
-&lt;li&gt;Automatically put into String Pool&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;operation&#34;&gt;Operation&lt;/h2&gt;
-&lt;h3 id=&#34;compare-1&#34;&gt;Compare&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Pass by value
-(Java use pass-by-value to pass parameters)
-&lt;ul&gt;
-&lt;li&gt;Change object&amp;rsquo;s value in a function
-will affect the original object&amp;rsquo;s value (same object)&lt;/li&gt;
-&lt;li&gt;When referencing to a new object,
-change won&amp;rsquo;t affect the original object&amp;rsquo;s value (different object)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Pass by reference&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;casting&#34;&gt;Casting&lt;/h3&gt;
-&lt;p&gt;(compiler force to convert types using (type of))&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;+=&lt;/li&gt;
-&lt;li&gt;-=&lt;/li&gt;
-&lt;li&gt;*=&lt;/li&gt;
-&lt;li&gt;/=&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;switch&#34;&gt;switch&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Use string object in switch conditional statements&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;keywords&#34;&gt;Keywords&lt;/h2&gt;
-&lt;h3 id=&#34;final&#34;&gt;final&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Data
-&lt;ul&gt;
-&lt;li&gt;As for primitive data type, final make its value immutable&lt;/li&gt;
-&lt;li&gt;As for reference, it can&amp;rsquo;t reference other objects but can modify itself&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Method
-&lt;ul&gt;
-&lt;li&gt;Methods stated can&amp;rsquo;t be rewrite by its child class&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Class
-&lt;ul&gt;
-&lt;li&gt;Can&amp;rsquo;t be inherited&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;static&#34;&gt;static&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Variable
-&lt;ul&gt;
-&lt;li&gt;static variable
-(also called class variable)
-&lt;ul&gt;
-&lt;li&gt;Belongs to the class
-and can be shared/accessed by the class name&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;instance variable
-&lt;ul&gt;
-&lt;li&gt;When creating an instance there will be an instance variable&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;static method
-&lt;ul&gt;
-&lt;li&gt;It exists when loading the class&lt;/li&gt;
-&lt;li&gt;Don&amp;rsquo;t rely on any instance&lt;/li&gt;
-&lt;li&gt;Can&amp;rsquo;t be abstract&lt;/li&gt;
-&lt;li&gt;Can&amp;rsquo;t contain this, super keywords
-(they are related to specific object)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;static (initialization) block
-&lt;ul&gt;
-&lt;li&gt;Operate once when doing the class initialization&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;static inner class
-&lt;ul&gt;
-&lt;li&gt;Don&amp;rsquo;t rely on external instance&lt;/li&gt;
-&lt;li&gt;Can&amp;rsquo;t access non-static variables or methods of external class&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;static import
-&lt;ul&gt;
-&lt;li&gt;No need to refer to the ClassName
-&lt;ul&gt;
-&lt;li&gt;Simplify&lt;/li&gt;
-&lt;li&gt;Hard to read&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Initialization order
-&lt;ul&gt;
-&lt;li&gt;static variable, static block (Parent class)&lt;/li&gt;
-&lt;li&gt;static variable, static block (Child class)&lt;/li&gt;
-&lt;li&gt;instance variable, block (Parent class)&lt;/li&gt;
-&lt;li&gt;Constructor (Parent class)&lt;/li&gt;
-&lt;li&gt;instance variable, block (Child class)&lt;/li&gt;
-&lt;li&gt;Constructor (Child class)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;object-universal-functions&#34;&gt;Object universal functions&lt;/h2&gt;
-&lt;h3 id=&#34;equals&#34;&gt;equals()&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Equivalence relationship
-&lt;ul&gt;
-&lt;li&gt;x.euqal(x);
-&lt;ul&gt;
-&lt;li&gt;Compared to self&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;x.equals(y) == y.equals(x);
-&lt;ul&gt;
-&lt;li&gt;When conversed, also true&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;if (x.equals(y) &amp;amp;&amp;amp; y.equals(z))
-x.equals(z);
-&lt;ul&gt;
-&lt;li&gt;When transited, also true&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;x.equals(y) == x.equals(y);
-&lt;ul&gt;
-&lt;li&gt;When repeated, always true&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;x.equals(null) == false;
-&lt;ul&gt;
-&lt;li&gt;When compared to null, always false (when x is not assigned null)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;About ==
-&lt;ul&gt;
-&lt;li&gt;For primitive data type, == measures the equivalence (there is no equals())&lt;/li&gt;
-&lt;li&gt;For reference, == measures whether the variables reference to the same object or not&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Mechanism
-&lt;ul&gt;
-&lt;li&gt;Check if it refers to the same object
-&lt;ul&gt;
-&lt;li&gt;Yes, return true&lt;/li&gt;
-&lt;li&gt;No, continue&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Check their type
-&lt;ul&gt;
-&lt;li&gt;No, return false&lt;/li&gt;
-&lt;li&gt;Yes, continue&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Convert the object&lt;/li&gt;
-&lt;li&gt;Check the equivalence of every key fields&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;hashcode&#34;&gt;hashCode()&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;hashCode() returns a hash value,
-and use equals() to check the equivalence
-&lt;ul&gt;
-&lt;li&gt;equal -&amp;gt; same hash&lt;/li&gt;
-&lt;li&gt;same hash can&amp;rsquo;t -&amp;gt; equal (hash generated randomly)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Cover hashCode() before equals()&lt;/li&gt;
-&lt;li&gt;Add/realize hashCode() before using HashSet or HashMap class&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;clone&#34;&gt;clone()&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Object protected function&lt;/li&gt;
-&lt;li&gt;Shallow clone
-&lt;ul&gt;
-&lt;li&gt;Cloned object and the original object refer to the same object&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Deep clone
-&lt;ul&gt;
-&lt;li&gt;Cloned object and the original object refer to different object&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Alternative method
-&lt;ul&gt;
-&lt;li&gt;Clone constructor&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;tostring&#34;&gt;toString()&lt;/h3&gt;
-&lt;h2 id=&#34;inheritance&#34;&gt;Inheritance&lt;/h2&gt;
-&lt;h3 id=&#34;access&#34;&gt;Access&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Modifiers
-&lt;ul&gt;
-&lt;li&gt;protected
-&lt;ul&gt;
-&lt;li&gt;Visible to child class&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;private&lt;/li&gt;
-&lt;li&gt;public&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Encapsulation
-&lt;ul&gt;
-&lt;li&gt;Using API to communicate&lt;/li&gt;
-&lt;li&gt;Class or members can be least accessed by external&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Child class rewrites the parent class
-&lt;ul&gt;
-&lt;li&gt;Methods in child class must have higher access level&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Field can&amp;rsquo;t be public
-&lt;ul&gt;
-&lt;li&gt;getter&lt;/li&gt;
-&lt;li&gt;setter&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;abstract-class-and-interface&#34;&gt;Abstract class and Interface&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Abstract class
-&lt;ul&gt;
-&lt;li&gt;abstract keyword
-&lt;ul&gt;
-&lt;li&gt;abstract method -&amp;gt; abstract class&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Can&amp;rsquo;t be instanced&lt;/li&gt;
-&lt;li&gt;Can be inherited&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Interface
-&lt;ul&gt;
-&lt;li&gt;public field
-&lt;ul&gt;
-&lt;li&gt;static&lt;/li&gt;
-&lt;li&gt;final&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Members(field and method)
-&lt;ul&gt;
-&lt;li&gt;public&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Difference
-&lt;ul&gt;
-&lt;li&gt;Abstract class provide a IS-A relationship
-while Interface provides a LIKE-A relationship&lt;/li&gt;
-&lt;li&gt;One class can applied several interfaces
-but can&amp;rsquo;t inherit more than one abstract class&lt;/li&gt;
-&lt;li&gt;Fields of interface must be static/final
-but abstract class has no restriction&lt;/li&gt;
-&lt;li&gt;Members of interface must be public
-but abstract class have multiple accesses&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Choose
-&lt;ul&gt;
-&lt;li&gt;Interface
-(higher priority)
-&lt;ul&gt;
-&lt;li&gt;Irrelevant classes need to realize the same method&lt;/li&gt;
-&lt;li&gt;need to use multiple inheritance&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Abstract class
-&lt;ul&gt;
-&lt;li&gt;Relevant classes need to share same code block&lt;/li&gt;
-&lt;li&gt;Need to control members&amp;rsquo; access&lt;/li&gt;
-&lt;li&gt;Need to inherit non-static or no-constant field&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;super&#34;&gt;Super&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Access parent classes&amp;rsquo; constructor&lt;/li&gt;
-&lt;li&gt;Access members of parent classes&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;method-priority&#34;&gt;Method priority&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;this.func(this)&lt;/li&gt;
-&lt;li&gt;super.func(this)&lt;/li&gt;
-&lt;li&gt;this.func(super)&lt;/li&gt;
-&lt;li&gt;super.func(super)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;override&#34;&gt;Override&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Child class realizes the same method as its parent class (statement)&lt;/li&gt;
-&lt;li&gt;Restrictions
-(using @override to check)
-&lt;ul&gt;
-&lt;li&gt;Child class method has higher access&lt;/li&gt;
-&lt;li&gt;Child class returns the same type (or sub type)&lt;/li&gt;
-&lt;li&gt;Child class throws the same Exception type or sub type&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;overload&#34;&gt;Overload&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Same method name&lt;/li&gt;
-&lt;li&gt;Different parameter/amount/order
-(at least one)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;reflect&#34;&gt;Reflect&lt;/h2&gt;
-&lt;h3 id=&#34;core-concept&#34;&gt;Core concept&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Load classes, methods/fields when JVM is running,
-no prior requirement of knowing the object when writing or compiling code&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;functions&#34;&gt;Functions&lt;/h3&gt;
-&lt;p&gt;(runtime)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Enables java code to discover information about the fields, methods and constructors of loaded classes&lt;/li&gt;
-&lt;li&gt;Operate on their underlying counterparts within security restructions&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Develop universal frameworks&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;javalangreflect&#34;&gt;java.lang.reflect&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Field&lt;/li&gt;
-&lt;li&gt;Method&lt;/li&gt;
-&lt;li&gt;Constructor&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;advantages&#34;&gt;Advantages&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Extensibility&lt;/li&gt;
-&lt;li&gt;Help with development (IDE)&lt;/li&gt;
-&lt;li&gt;Help with debugging and testing&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;disadvantages&#34;&gt;Disadvantages&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Cost/Optimization&lt;/li&gt;
-&lt;li&gt;Security restructions&lt;/li&gt;
-&lt;li&gt;Exposing inner elements (private attributes or methods)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;throwable&#34;&gt;Throwable&lt;/h2&gt;
-&lt;h3 id=&#34;error&#34;&gt;Error&lt;/h3&gt;
-&lt;p&gt;(JVM can&amp;rsquo;t handle with)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;VirtualMachineError
-&lt;ul&gt;
-&lt;li&gt;StackOverFlowError&lt;/li&gt;
-&lt;li&gt;OutOfMemoryError&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;AWTError&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;exception&#34;&gt;Exception&lt;/h3&gt;
-&lt;p&gt;(Can be deal with by program)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;IOException
-&lt;ul&gt;
-&lt;li&gt;EOFException&lt;/li&gt;
-&lt;li&gt;FileNotFoundException&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;RuntimeException
-&lt;ul&gt;
-&lt;li&gt;ArrithmeticException&lt;/li&gt;
-&lt;li&gt;MissingResourceException&lt;/li&gt;
-&lt;li&gt;ClassNotFoundException&lt;/li&gt;
-&lt;li&gt;NullPointerException&lt;/li&gt;
-&lt;li&gt;IllegalArgumentException&lt;/li&gt;
-&lt;li&gt;ArrayIndexOutOfBoundsException&lt;/li&gt;
-&lt;li&gt;UnknownTypeException&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;basic-syntax&#34;&gt;Basic syntax&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;try-catch&lt;/li&gt;
-&lt;li&gt;throw&lt;/li&gt;
-&lt;li&gt;throws&lt;/li&gt;
-&lt;li&gt;finally&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;generics&#34;&gt;Generics&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Definition&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;annotation&#34;&gt;Annotation&lt;/h2&gt;
-&lt;h3 id=&#34;meta-information-attached-in-the-code&#34;&gt;Meta information attached in the code&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Illustration&lt;/li&gt;
-&lt;li&gt;Configuration&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
       <title>Blockchain BitCoin Scripts</title>
       <link>https://www.pseudoyu.com/en/2020/10/24/blockchain-bitcoin-scripts/</link>
       <pubDate>Sat, 24 Oct 2020 09:07:17 +0800</pubDate>
@@ -1374,6 +799,240 @@ no prior requirement of knowing the object when writing or compiling code&lt;/li
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Java Throwable</title>
+      <link>https://www.pseudoyu.com/en/2020/10/22/java-throwable/</link>
+      <pubDate>Thu, 22 Oct 2020 10:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/10/22/java-throwable/</guid>
+      
+        <description>&lt;h1 id=&#34;java-basics&#34;&gt;Java Basics&lt;/h1&gt;
+&lt;h2 id=&#34;throwable&#34;&gt;Throwable&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/java_throwable.svg&#34; alt=&#34;java_throwable&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;error&#34;&gt;Error&lt;/h3&gt;
+&lt;p&gt;(JVM can&amp;rsquo;t handle with)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;VirtualMachineError
+&lt;ul&gt;
+&lt;li&gt;StackOverFlowError&lt;/li&gt;
+&lt;li&gt;OutOfMemoryError&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;AWTError&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;exception&#34;&gt;Exception&lt;/h3&gt;
+&lt;p&gt;(Can be deal with by program)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IOException
+&lt;ul&gt;
+&lt;li&gt;EOFException&lt;/li&gt;
+&lt;li&gt;FileNotFoundException&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;RuntimeException
+&lt;ul&gt;
+&lt;li&gt;ArrithmeticException&lt;/li&gt;
+&lt;li&gt;MissingResourceException&lt;/li&gt;
+&lt;li&gt;ClassNotFoundException&lt;/li&gt;
+&lt;li&gt;NullPointerException&lt;/li&gt;
+&lt;li&gt;IllegalArgumentException&lt;/li&gt;
+&lt;li&gt;ArrayIndexOutOfBoundsException&lt;/li&gt;
+&lt;li&gt;UnknownTypeException&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;basic-syntax&#34;&gt;Basic syntax&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;try-catch&lt;/li&gt;
+&lt;li&gt;throw&lt;/li&gt;
+&lt;li&gt;throws&lt;/li&gt;
+&lt;li&gt;finally&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Java Inheritance</title>
+      <link>https://www.pseudoyu.com/en/2020/10/22/java-inheritance/</link>
+      <pubDate>Thu, 22 Oct 2020 09:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/10/22/java-inheritance/</guid>
+      
+        <description>&lt;h1 id=&#34;java-basics&#34;&gt;Java Basics&lt;/h1&gt;
+&lt;h2 id=&#34;inheritance&#34;&gt;Inheritance&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/java_inheritance.svg&#34; alt=&#34;java_inheritance&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;access&#34;&gt;Access&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Modifiers
+&lt;ul&gt;
+&lt;li&gt;protected
+&lt;ul&gt;
+&lt;li&gt;Visible to child class&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;private&lt;/li&gt;
+&lt;li&gt;public&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Encapsulation
+&lt;ul&gt;
+&lt;li&gt;Using API to communicate&lt;/li&gt;
+&lt;li&gt;Class or members can be least accessed by external&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Child class rewrites the parent class
+&lt;ul&gt;
+&lt;li&gt;Methods in child class must have higher access level&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Field can&amp;rsquo;t be public
+&lt;ul&gt;
+&lt;li&gt;getter&lt;/li&gt;
+&lt;li&gt;setter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;abstract-class-and-interface&#34;&gt;Abstract class and Interface&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Abstract class
+&lt;ul&gt;
+&lt;li&gt;abstract keyword
+&lt;ul&gt;
+&lt;li&gt;abstract method -&amp;gt; abstract class&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Can&amp;rsquo;t be instanced&lt;/li&gt;
+&lt;li&gt;Can be inherited&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Interface
+&lt;ul&gt;
+&lt;li&gt;public field
+&lt;ul&gt;
+&lt;li&gt;static&lt;/li&gt;
+&lt;li&gt;final&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Members(field and method)
+&lt;ul&gt;
+&lt;li&gt;public&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Difference
+&lt;ul&gt;
+&lt;li&gt;Abstract class provide a IS-A relationship
+while Interface provides a LIKE-A relationship&lt;/li&gt;
+&lt;li&gt;One class can applied several interfaces
+but can&amp;rsquo;t inherit more than one abstract class&lt;/li&gt;
+&lt;li&gt;Fields of interface must be static/final
+but abstract class has no restriction&lt;/li&gt;
+&lt;li&gt;Members of interface must be public
+but abstract class have multiple accesses&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Choose
+&lt;ul&gt;
+&lt;li&gt;Interface
+(higher priority)
+&lt;ul&gt;
+&lt;li&gt;Irrelevant classes need to realize the same method&lt;/li&gt;
+&lt;li&gt;need to use multiple inheritance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Abstract class
+&lt;ul&gt;
+&lt;li&gt;Relevant classes need to share same code block&lt;/li&gt;
+&lt;li&gt;Need to control members&amp;rsquo; access&lt;/li&gt;
+&lt;li&gt;Need to inherit non-static or no-constant field&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;super&#34;&gt;Super&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Access parent classes&amp;rsquo; constructor&lt;/li&gt;
+&lt;li&gt;Access members of parent classes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;method-priority&#34;&gt;Method priority&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;this.func(this)&lt;/li&gt;
+&lt;li&gt;super.func(this)&lt;/li&gt;
+&lt;li&gt;this.func(super)&lt;/li&gt;
+&lt;li&gt;super.func(super)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;override&#34;&gt;Override&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Child class realizes the same method as its parent class (statement)&lt;/li&gt;
+&lt;li&gt;Restrictions
+(using @override to check)
+&lt;ul&gt;
+&lt;li&gt;Child class method has higher access&lt;/li&gt;
+&lt;li&gt;Child class returns the same type (or sub type)&lt;/li&gt;
+&lt;li&gt;Child class throws the same Exception type or sub type&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;overload&#34;&gt;Overload&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Same method name&lt;/li&gt;
+&lt;li&gt;Different parameter/amount/order
+(at least one)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Java Reflect</title>
+      <link>https://www.pseudoyu.com/en/2020/10/22/java-reflect/</link>
+      <pubDate>Thu, 22 Oct 2020 09:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/10/22/java-reflect/</guid>
+      
+        <description>&lt;h1 id=&#34;java-basics&#34;&gt;Java Basics&lt;/h1&gt;
+&lt;h2 id=&#34;reflect&#34;&gt;Reflect&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/java_reflect.svg&#34; alt=&#34;java_reflect&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;core-concept&#34;&gt;Core concept&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Load classes, methods/fields when JVM is running,
+no prior requirement of knowing the object when writing or compiling code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;functions&#34;&gt;Functions&lt;/h3&gt;
+&lt;p&gt;(runtime)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Enables java code to discover information about the fields, methods and constructors of loaded classes&lt;/li&gt;
+&lt;li&gt;Operate on their underlying counterparts within security restructions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Develop universal frameworks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;javalangreflect&#34;&gt;java.lang.reflect&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Field&lt;/li&gt;
+&lt;li&gt;Method&lt;/li&gt;
+&lt;li&gt;Constructor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;Advantages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Extensibility&lt;/li&gt;
+&lt;li&gt;Help with development (IDE)&lt;/li&gt;
+&lt;li&gt;Help with debugging and testing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;Disadvantages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Cost/Optimization&lt;/li&gt;
+&lt;li&gt;Security restructions&lt;/li&gt;
+&lt;li&gt;Exposing inner elements (private attributes or methods)&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       
@@ -1546,6 +1205,109 @@ with binary outcome&lt;/li&gt;
     </item>
     
     <item>
+      <title>Java Object Universal Functions</title>
+      <link>https://www.pseudoyu.com/en/2020/10/21/java-object-universal-functions/</link>
+      <pubDate>Wed, 21 Oct 2020 12:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/10/21/java-object-universal-functions/</guid>
+      
+        <description>&lt;h1 id=&#34;java-basics&#34;&gt;Java Basics&lt;/h1&gt;
+&lt;h2 id=&#34;object-universal-functions&#34;&gt;Object Universal Functions&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/java_object_functions.svg&#34; alt=&#34;java_object_functions&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;equals&#34;&gt;equals()&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Equivalence relationship
+&lt;ul&gt;
+&lt;li&gt;x.euqal(x);
+&lt;ul&gt;
+&lt;li&gt;Compared to self&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;x.equals(y) == y.equals(x);
+&lt;ul&gt;
+&lt;li&gt;When conversed, also true&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;if (x.equals(y) &amp;amp;&amp;amp; y.equals(z))
+x.equals(z);
+&lt;ul&gt;
+&lt;li&gt;When transited, also true&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;x.equals(y) == x.equals(y);
+&lt;ul&gt;
+&lt;li&gt;When repeated, always true&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;x.equals(null) == false;
+&lt;ul&gt;
+&lt;li&gt;When compared to null, always false (when x is not assigned null)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;About ==
+&lt;ul&gt;
+&lt;li&gt;For primitive data type, == measures the equivalence (there is no equals())&lt;/li&gt;
+&lt;li&gt;For reference, == measures whether the variables reference to the same object or not&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Mechanism
+&lt;ul&gt;
+&lt;li&gt;Check if it refers to the same object
+&lt;ul&gt;
+&lt;li&gt;Yes, return true&lt;/li&gt;
+&lt;li&gt;No, continue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Check their type
+&lt;ul&gt;
+&lt;li&gt;No, return false&lt;/li&gt;
+&lt;li&gt;Yes, continue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Convert the object&lt;/li&gt;
+&lt;li&gt;Check the equivalence of every key fields&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;hashcode&#34;&gt;hashCode()&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;hashCode() returns a hash value,
+and use equals() to check the equivalence
+&lt;ul&gt;
+&lt;li&gt;equal -&amp;gt; same hash&lt;/li&gt;
+&lt;li&gt;same hash can&amp;rsquo;t -&amp;gt; equal (hash generated randomly)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Cover hashCode() before equals()&lt;/li&gt;
+&lt;li&gt;Add/realize hashCode() before using HashSet or HashMap class&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;clone&#34;&gt;clone()&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Object protected function&lt;/li&gt;
+&lt;li&gt;Shallow clone
+&lt;ul&gt;
+&lt;li&gt;Cloned object and the original object refer to the same object&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Deep clone
+&lt;ul&gt;
+&lt;li&gt;Cloned object and the original object refer to different object&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Alternative method
+&lt;ul&gt;
+&lt;li&gt;Clone constructor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;tostring&#34;&gt;toString()&lt;/h3&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>Blockchain Protocol</title>
       <link>https://www.pseudoyu.com/en/2020/10/21/blockchain-protocol/</link>
       <pubDate>Wed, 21 Oct 2020 12:07:17 +0800</pubDate>
@@ -1605,6 +1367,137 @@ with binary outcome&lt;/li&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Java Keywords</title>
+      <link>https://www.pseudoyu.com/en/2020/10/21/java-keywords/</link>
+      <pubDate>Wed, 21 Oct 2020 11:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/10/21/java-keywords/</guid>
+      
+        <description>&lt;h1 id=&#34;java-basics&#34;&gt;Java Basics&lt;/h1&gt;
+&lt;h2 id=&#34;keywords&#34;&gt;Keywords&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/java_keywords.svg&#34; alt=&#34;java_keywords&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;final&#34;&gt;final&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Data
+&lt;ul&gt;
+&lt;li&gt;As for primitive data type, final make its value immutable&lt;/li&gt;
+&lt;li&gt;As for reference, it can&amp;rsquo;t reference other objects but can modify itself&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Method
+&lt;ul&gt;
+&lt;li&gt;Methods stated can&amp;rsquo;t be rewrite by its child class&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Class
+&lt;ul&gt;
+&lt;li&gt;Can&amp;rsquo;t be inherited&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;static&#34;&gt;static&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Variable
+&lt;ul&gt;
+&lt;li&gt;static variable
+(also called class variable)
+&lt;ul&gt;
+&lt;li&gt;Belongs to the class
+and can be shared/accessed by the class name&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;instance variable
+&lt;ul&gt;
+&lt;li&gt;When creating an instance there will be an instance variable&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;static method
+&lt;ul&gt;
+&lt;li&gt;It exists when loading the class&lt;/li&gt;
+&lt;li&gt;Don&amp;rsquo;t rely on any instance&lt;/li&gt;
+&lt;li&gt;Can&amp;rsquo;t be abstract&lt;/li&gt;
+&lt;li&gt;Can&amp;rsquo;t contain this, super keywords
+(they are related to specific object)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;static (initialization) block
+&lt;ul&gt;
+&lt;li&gt;Operate once when doing the class initialization&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;static inner class
+&lt;ul&gt;
+&lt;li&gt;Don&amp;rsquo;t rely on external instance&lt;/li&gt;
+&lt;li&gt;Can&amp;rsquo;t access non-static variables or methods of external class&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;static import
+&lt;ul&gt;
+&lt;li&gt;No need to refer to the ClassName
+&lt;ul&gt;
+&lt;li&gt;Simplify&lt;/li&gt;
+&lt;li&gt;Hard to read&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Initialization order
+&lt;ul&gt;
+&lt;li&gt;static variable, static block (Parent class)&lt;/li&gt;
+&lt;li&gt;static variable, static block (Child class)&lt;/li&gt;
+&lt;li&gt;instance variable, block (Parent class)&lt;/li&gt;
+&lt;li&gt;Constructor (Parent class)&lt;/li&gt;
+&lt;li&gt;instance variable, block (Child class)&lt;/li&gt;
+&lt;li&gt;Constructor (Child class)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Java Operation</title>
+      <link>https://www.pseudoyu.com/en/2020/10/21/java-operation/</link>
+      <pubDate>Wed, 21 Oct 2020 10:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/10/21/java-operation/</guid>
+      
+        <description>&lt;h1 id=&#34;java-basics&#34;&gt;Java Basics&lt;/h1&gt;
+&lt;h2 id=&#34;operation&#34;&gt;Operation&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/java_operation.svg&#34; alt=&#34;java_operation&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;compare&#34;&gt;Compare&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Pass by value
+(Java use pass-by-value to pass parameters)
+&lt;ul&gt;
+&lt;li&gt;Change object&amp;rsquo;s value in a function
+will affect the original object&amp;rsquo;s value (same object)&lt;/li&gt;
+&lt;li&gt;When referencing to a new object,
+change won&amp;rsquo;t affect the original object&amp;rsquo;s value (different object)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Pass by reference&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;casting&#34;&gt;Casting&lt;/h3&gt;
+&lt;p&gt;(compiler force to convert types using (type of))&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;+=&lt;/li&gt;
+&lt;li&gt;-=&lt;/li&gt;
+&lt;li&gt;*=&lt;/li&gt;
+&lt;li&gt;/=&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;switch&#34;&gt;switch&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Use string object in switch conditional statements&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       
@@ -1672,6 +1565,108 @@ with binary outcome&lt;/li&gt;
 &lt;li&gt;Problem
 &lt;ul&gt;
 &lt;li&gt;Double spending&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Java String</title>
+      <link>https://www.pseudoyu.com/en/2020/10/21/java-string/</link>
+      <pubDate>Wed, 21 Oct 2020 09:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/10/21/java-string/</guid>
+      
+        <description>&lt;h1 id=&#34;java-basics&#34;&gt;Java Basics&lt;/h1&gt;
+&lt;h2 id=&#34;string&#34;&gt;String&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/java_string.svg&#34; alt=&#34;java_string&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;feature&#34;&gt;Feature&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Immutable
+(byte, stated as final type)
+&lt;ul&gt;
+&lt;li&gt;Cache hash value
+&lt;ul&gt;
+&lt;li&gt;As the key of HashMap&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Requirement of String Pool
+&lt;ul&gt;
+&lt;li&gt;Get reference from String Pool if it exists&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Security
+&lt;ul&gt;
+&lt;li&gt;As parameter for many java classes
+&lt;ul&gt;
+&lt;li&gt;Network connection&lt;/li&gt;
+&lt;li&gt;Opening files&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Thread-safety
+&lt;ul&gt;
+&lt;li&gt;Shared among multiple threads freely&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;compare&#34;&gt;Compare&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;String
+&lt;ul&gt;
+&lt;li&gt;Immutable&lt;/li&gt;
+&lt;li&gt;Thread-safe&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;StringBuffer
+&lt;ul&gt;
+&lt;li&gt;Mutable&lt;/li&gt;
+&lt;li&gt;Thread-safe
+&lt;ul&gt;
+&lt;li&gt;Requirements of doing synchronization&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;StringBuilder
+&lt;ul&gt;
+&lt;li&gt;Mutable&lt;/li&gt;
+&lt;li&gt;Not thread-safe&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;string-pool-stores-all-literal-strings&#34;&gt;String Pool (stores all literal strings)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Useful to reduce memory requirements&lt;/li&gt;
+&lt;li&gt;intern() method
+&lt;ul&gt;
+&lt;li&gt;If there is a string equals to the called one exists, return it
+(using equals() method)&lt;/li&gt;
+&lt;li&gt;If not, create a new string and return&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Create 2 &amp;ldquo;same&amp;rdquo; string
+&lt;ul&gt;
+&lt;li&gt;new String()
+&lt;ul&gt;
+&lt;li&gt;Create different strings&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;s.intern()
+&lt;ul&gt;
+&lt;li&gt;Get reference of one string&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;String s = &amp;quot;&amp;rdquo;
+&lt;ul&gt;
+&lt;li&gt;Automatically put into String Pool&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1754,2140 +1749,6 @@ with binary outcome&lt;/li&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>ICOM6012 Topic 3 Application Layer</title>
-      <link>https://www.pseudoyu.com/en/2020/10/19/icom6012-topic-3-application-layer/</link>
-      <pubDate>Mon, 19 Oct 2020 17:50:44 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/19/icom6012-topic-3-application-layer/</guid>
-      
-        <description>&lt;h1 id=&#34;icom6012-internet-infrastructure-technologies&#34;&gt;ICOM6012 Internet Infrastructure Technologies&lt;/h1&gt;
-&lt;h2 id=&#34;topic-3-application-layer&#34;&gt;Topic 3 Application Layer&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Creating a Network App&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Run on different end systems&lt;/li&gt;
-&lt;li&gt;Communication over network&lt;/li&gt;
-&lt;li&gt;No need to write for network-core devices&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Client-Server Architecture (The Centralized Internet)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Server
-&lt;ul&gt;
-&lt;li&gt;Always-on host&lt;/li&gt;
-&lt;li&gt;Permanent IP address&lt;/li&gt;
-&lt;li&gt;Often in data centers (for scaling)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Clients
-&lt;ul&gt;
-&lt;li&gt;Contact, communicate with server&lt;/li&gt;
-&lt;li&gt;May be intermittently connected&lt;/li&gt;
-&lt;li&gt;May have dynamic IP addresses&lt;/li&gt;
-&lt;li&gt;Don&amp;rsquo;t communicate directly with each other&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Peer-to-Peer (P2P) Architecture&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;No always-on server&lt;/li&gt;
-&lt;li&gt;Arbitrary end systems directly communicate&lt;/li&gt;
-&lt;li&gt;Peers request service from other peers, providing service in return to other peers
-&lt;ul&gt;
-&lt;li&gt;Self scalability - new peers bring new service capacity, as well as new service demands&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Peers are intermittently connected with dynamic IP addresses
-&lt;ul&gt;
-&lt;li&gt;Complex management&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Processes Communicating&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Process: program running within a host
-&lt;ul&gt;
-&lt;li&gt;Same host
-&lt;ul&gt;
-&lt;li&gt;Inter-process communication (defined by OS)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Different hosts
-&lt;ul&gt;
-&lt;li&gt;Exchanging messages&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Client, servers
-&lt;ul&gt;
-&lt;li&gt;Client process: process that initiates communication&lt;/li&gt;
-&lt;li&gt;Server process: process that waits to be contacted&lt;/li&gt;
-&lt;li&gt;Applications with P2P architecture have both&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Sockets&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Process sends/receives messages to/from its socket&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/sockets.png&#34; alt=&#34;sockets&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Addressing Processes&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;To receive messages, process must have identifier
-&lt;ul&gt;
-&lt;li&gt;IP address
-&lt;ul&gt;
-&lt;li&gt;Host has unique 32-bits IP address&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Port number
-&lt;ul&gt;
-&lt;li&gt;Port 0 - 1023: Well-known
-&lt;ul&gt;
-&lt;li&gt;HTTP server: 80&lt;/li&gt;
-&lt;li&gt;Mail server: 25&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Port 1024 - 49151: Registered ports&lt;/li&gt;
-&lt;li&gt;Port &amp;gt; 49151: Dynamic/private ports&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;An Application-Layer Protocol Defines&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Types of messages exchanged
-&lt;ul&gt;
-&lt;li&gt;Request&lt;/li&gt;
-&lt;li&gt;Response&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Message syntax
-&lt;ul&gt;
-&lt;li&gt;What field&lt;/li&gt;
-&lt;li&gt;How fields are delineated&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Message semantics
-&lt;ul&gt;
-&lt;li&gt;Meaning of information in fields&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Rules
-&lt;ul&gt;
-&lt;li&gt;When and how process send &amp;amp; respond to messages&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Protocols
-&lt;ul&gt;
-&lt;li&gt;Open protocols
-&lt;ul&gt;
-&lt;li&gt;Defined in RFCs (by IETF)&lt;/li&gt;
-&lt;li&gt;Everyone has access to protocol definition&lt;/li&gt;
-&lt;li&gt;Allow for interoperability&lt;/li&gt;
-&lt;li&gt;Example
-&lt;ul&gt;
-&lt;li&gt;HTTP&lt;/li&gt;
-&lt;li&gt;SMTP&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Proprietary protocols
-&lt;ul&gt;
-&lt;li&gt;Skype&lt;/li&gt;
-&lt;li&gt;Zoom&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Transport Service&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Data integrity&lt;/li&gt;
-&lt;li&gt;Timing&lt;/li&gt;
-&lt;li&gt;Throughput&lt;/li&gt;
-&lt;li&gt;Security&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/transport_service.png&#34; alt=&#34;transport_service&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Internet Transport Protocols Services&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;TCP service
-&lt;ul&gt;
-&lt;li&gt;Connection-oriented&lt;/li&gt;
-&lt;li&gt;Reliable transport&lt;/li&gt;
-&lt;li&gt;Flow control&lt;/li&gt;
-&lt;li&gt;Congestion control&lt;/li&gt;
-&lt;li&gt;Doesn&amp;rsquo;t provide
-&lt;ul&gt;
-&lt;li&gt;Timing&lt;/li&gt;
-&lt;li&gt;Minimum throughput guarantee&lt;/li&gt;
-&lt;li&gt;Security&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;UDP service
-&lt;ul&gt;
-&lt;li&gt;Unreliable data transfer&lt;/li&gt;
-&lt;li&gt;Doesn&amp;rsquo;t provide
-&lt;ul&gt;
-&lt;li&gt;Reliability&lt;/li&gt;
-&lt;li&gt;Flow control&lt;/li&gt;
-&lt;li&gt;Congestion control&lt;/li&gt;
-&lt;li&gt;Timing&lt;/li&gt;
-&lt;li&gt;Throughput guarantee&lt;/li&gt;
-&lt;li&gt;Security&lt;/li&gt;
-&lt;li&gt;Connection setup&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/transport_protocols.png&#34; alt=&#34;transport_protocols&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Securing TCP&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;TCP &amp;amp; UDP
-&lt;ul&gt;
-&lt;li&gt;No encryption&lt;/li&gt;
-&lt;li&gt;Cleartext passwords sent into socket traverse Internet in cleartext&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;SSL (Secure Socket Layer) / TLS (Transport Layer Security)
-&lt;ul&gt;
-&lt;li&gt;Provides encrypted TCP connection&lt;/li&gt;
-&lt;li&gt;Data integrity&lt;/li&gt;
-&lt;li&gt;End-point authentication&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;SSL/TLS is at Application Layer
-&lt;ul&gt;
-&lt;li&gt;Apps use SSL/TLS libraries, which &amp;ldquo;talk&amp;rdquo; to TCP&lt;/li&gt;
-&lt;li&gt;Cleartext passwords sent into socket traverse Internet encrypted&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ssl_tls.png&#34; alt=&#34;ssl_tls&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;The IP Hourglass&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ip_hourglass.png&#34; alt=&#34;ip_hourglass&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;HTTP Overview&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;HTTP: Hypertext Transfer Protocol&lt;/li&gt;
-&lt;li&gt;Web&amp;rsquo;s application-layer protocol&lt;/li&gt;
-&lt;li&gt;Client/Server model
-&lt;ul&gt;
-&lt;li&gt;Client - browser that requests, receives and &amp;ldquo;display&amp;rdquo; web objects&lt;/li&gt;
-&lt;li&gt;Server - Web server sends objects in response to requests&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Development
-&lt;ul&gt;
-&lt;li&gt;HTTP/1.0: RFC 1945 (1996)&lt;/li&gt;
-&lt;li&gt;HTTP/1.1: RFC 2616 (1997)&lt;/li&gt;
-&lt;li&gt;HTTP/2: RFC 7540 (2015)&lt;/li&gt;
-&lt;li&gt;HTTP/3: Internet-Draft (2020)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Uses TCP
-&lt;ul&gt;
-&lt;li&gt;Client initiates TCP connection (create sockets) to server, port 80&lt;/li&gt;
-&lt;li&gt;Server accepts TCP connection from client&lt;/li&gt;
-&lt;li&gt;HTTP messages exchanged between browser and web server&lt;/li&gt;
-&lt;li&gt;TCP connection closed&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;HTTP is stateless
-&lt;ul&gt;
-&lt;li&gt;Server maintains no information about past client requests&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;HTTP Connections&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Non-persistent HTTP
-&lt;ul&gt;
-&lt;li&gt;Downloading multiple objects required multiple connections
-&lt;ul&gt;
-&lt;li&gt;Sequential&lt;/li&gt;
-&lt;li&gt;Parallel&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Procedures
-&lt;ul&gt;
-&lt;li&gt;TCP connection opened&lt;/li&gt;
-&lt;li&gt;At most one object sent over TCP connection&lt;/li&gt;
-&lt;li&gt;TCP connection closed&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;OS must work and allocate host resources for each TCP connection&lt;/li&gt;
-&lt;li&gt;Browser often open parallel TCP connections to fetch referenced objects&lt;/li&gt;
-&lt;li&gt;HTTP response time (2RTT+)
-&lt;ul&gt;
-&lt;li&gt;RTT: Time for a small packet to travel from client to server and back&lt;/li&gt;
-&lt;li&gt;1RTT to initiate TCP connection&lt;/li&gt;
-&lt;li&gt;1RTT for HTTP request and first few bytes of HTTP response to return&lt;/li&gt;
-&lt;li&gt;File transmission time&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Persistent HTTP
-&lt;ul&gt;
-&lt;li&gt;Procedures
-&lt;ul&gt;
-&lt;li&gt;TCP connection opened to a server&lt;/li&gt;
-&lt;li&gt;Multiple objects can be sent over single TCP connection between clients and that server&lt;/li&gt;
-&lt;li&gt;TCP connection closed&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Server leaves connection open after sending response&lt;/li&gt;
-&lt;li&gt;Subsequent HTTP messages between same client/server are sent over connection&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Persistent HTTP without pipelining
-&lt;ul&gt;
-&lt;li&gt;Client issues new request only when previous response has been received&lt;/li&gt;
-&lt;li&gt;1RTT for each referenced object&lt;/li&gt;
-&lt;li&gt;Head-of-line (HoL) blocking&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Persistent HTTP with pipelining
-&lt;ul&gt;
-&lt;li&gt;Client sends requests as soon as it encounters a referenced object&lt;/li&gt;
-&lt;li&gt;As little as 1RTT for all the referenced objects&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Not activated in practice&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;HTTP Message&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Request
-&lt;ul&gt;
-&lt;li&gt;In ASCII (human readable format)&lt;/li&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/http_request.png&#34; alt=&#34;http_request&#34;&gt;&lt;/li&gt;
-&lt;li&gt;Methods
-&lt;ul&gt;
-&lt;li&gt;POST&lt;/li&gt;
-&lt;li&gt;GET&lt;/li&gt;
-&lt;li&gt;HEAD&lt;/li&gt;
-&lt;li&gt;PUT&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Response
-&lt;ul&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/http_response.png&#34; alt=&#34;http_response&#34;&gt;&lt;/li&gt;
-&lt;li&gt;Statu Code
-&lt;ul&gt;
-&lt;li&gt;Informational, 1XX&lt;/li&gt;
-&lt;li&gt;Successful, 2XX, (200 OK)&lt;/li&gt;
-&lt;li&gt;Redirection, 3XX, (301 Moved Permanently)&lt;/li&gt;
-&lt;li&gt;Client Error, 4XX, (400 Bad Request, 404 Not Found)&lt;/li&gt;
-&lt;li&gt;Server Error, 5XX, (505 HTTP Version Not Support)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Cookies&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Components
-&lt;ul&gt;
-&lt;li&gt;Cookie header line of HTTP response message&lt;/li&gt;
-&lt;li&gt;Cookie header line in next HTTP request message&lt;/li&gt;
-&lt;li&gt;Cookie file kept on user&amp;rsquo;s host, managed by user&amp;rsquo;s browser&lt;/li&gt;
-&lt;li&gt;Back-end database at website&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Example
-&lt;ul&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/cookie_example.png&#34; alt=&#34;cookie_example&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;3rd-party cookies
-&lt;ul&gt;
-&lt;li&gt;Many sites use third party advertisements&lt;/li&gt;
-&lt;li&gt;The third party can set a cookie that identifies the user&lt;/li&gt;
-&lt;li&gt;This cookie is sent to the third party each time an ad is downloaded by the user’s browser along with the address of the page that contains the link to the ad&lt;/li&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/3_party_cookies.png&#34; alt=&#34;3_party_cookies&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Web Caches (Proxy Servers)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Goal
-&lt;ul&gt;
-&lt;li&gt;Satisfy client request without involving origin server&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;User configures browser to point to a web cache&lt;/li&gt;
-&lt;li&gt;Browser sends all HTTP requsets to cache
-&lt;ul&gt;
-&lt;li&gt;If object in cache: cache returns object&lt;/li&gt;
-&lt;li&gt;Else: cache requests object from origin server, then returns object to client&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Conditional GET&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Goal
-&lt;ul&gt;
-&lt;li&gt;Don&amp;rsquo;t send object if cache has up-to-date cached version
-&lt;ul&gt;
-&lt;li&gt;No object transmission delay&lt;/li&gt;
-&lt;li&gt;Lower link utilization&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Cache: specify date of cached copy in HTTP request&lt;/li&gt;
-&lt;li&gt;Server: response contains no object if cached copy is up-to-date&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/conditional_get.png&#34; alt=&#34;conditional_get&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;HTTP/2&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Goals
-&lt;ul&gt;
-&lt;li&gt;Backward compatible with HTTP 1.1&lt;/li&gt;
-&lt;li&gt;Improve page load speed
-&lt;ul&gt;
-&lt;li&gt;Data compression of HTTP headers&lt;/li&gt;
-&lt;li&gt;HTTP/2 Server Push&lt;/li&gt;
-&lt;li&gt;Pipelining of requests&lt;/li&gt;
-&lt;li&gt;Fixing the head-of-line blocking problem in HTTP 1.1&lt;/li&gt;
-&lt;li&gt;Multiplexing multiple requests over a single TCP connection&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Mitigating HOL blocking
-&lt;ul&gt;
-&lt;li&gt;Objects divided into frames, frame transmission interleaved&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;HTTP/2 to HTTP/3&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Goal
-&lt;ul&gt;
-&lt;li&gt;To further decrease delay in multi-object HTTP requests&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;HTTP/2 over single TCP connection means
-&lt;ul&gt;
-&lt;li&gt;Recovery from packet loss still stalls all object transmissions =&amp;gt; Head-of-line blocking!&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;HTTP/3 over UDP (to address the HoL blocking)
-&lt;ul&gt;
-&lt;li&gt;Adds security, per object error and congestion-control&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Email&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Components
-&lt;ul&gt;
-&lt;li&gt;User agents
-&lt;ul&gt;
-&lt;li&gt;Composing, editing, reading mail messages&lt;/li&gt;
-&lt;li&gt;Outgoing, incoming messages stored on server&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Mail server
-&lt;ul&gt;
-&lt;li&gt;Mailbox&lt;/li&gt;
-&lt;li&gt;Message queue&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;SMTP (Simple Mail Transfer Protocol)
-&lt;ul&gt;
-&lt;li&gt;Client: Sending mail server&lt;/li&gt;
-&lt;li&gt;Server: Receiving mail server&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;SMTP [RFC 5321]&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Uses TCP to reliably transfer email message from client to server, port 25 (or 587)&lt;/li&gt;
-&lt;li&gt;Direct transfer: sending server to receiving server&lt;/li&gt;
-&lt;li&gt;Three phases of transfer
-&lt;ul&gt;
-&lt;li&gt;Handshaking (greeting)&lt;/li&gt;
-&lt;li&gt;Transfer of messages&lt;/li&gt;
-&lt;li&gt;Closure&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Command/response interaction (like HTTP, FTP)
-&lt;ul&gt;
-&lt;li&gt;Commands: ASCII text&lt;/li&gt;
-&lt;li&gt;Response: status code and phrase&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Messages must be in 7-bit ASCII&lt;/li&gt;
-&lt;li&gt;Uses persistent connections&lt;/li&gt;
-&lt;li&gt;use &lt;em&gt;CRLF.CRLF&lt;/em&gt; to determine end of message&lt;/li&gt;
-&lt;li&gt;Example
-&lt;ul&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/smtp_example.png&#34; alt=&#34;smtp_example&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Mail Message Format&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;RFC 822: standard for text message format
-&lt;ul&gt;
-&lt;li&gt;Header lines (different from SMTP MAIL FROM, RCPT TO commands)
-&lt;ul&gt;
-&lt;li&gt;To&lt;/li&gt;
-&lt;li&gt;From&lt;/li&gt;
-&lt;li&gt;Subject&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Body (the message)
-&lt;ul&gt;
-&lt;li&gt;ASCII characters only&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Message Format: multimedia extensions&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;MIME (multipurpose internet mail extension): multimedia mail extension (to RFC 822), RFC 2045, 2056&lt;/li&gt;
-&lt;li&gt;Additional lines in msg header declare MIME content type&lt;/li&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mail_mime.png&#34; alt=&#34;mail_mime&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Mail Access Protocols&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mail_access_protocols.png&#34; alt=&#34;mail_access_protocols&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;SMTP
-&lt;ul&gt;
-&lt;li&gt;Delivery/storage to receiver&amp;rsquo;s server&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Mail access protocol: retrieval from server
-&lt;ul&gt;
-&lt;li&gt;POP
-&lt;ul&gt;
-&lt;li&gt;Post Office Protocol [RFC 1939]: authorization, download&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;IMAP
-&lt;ul&gt;
-&lt;li&gt;Internet Mail Access Protocol [RFC 1730]: more features, including manipulation of stored msgs on server&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;HTTP
-&lt;ul&gt;
-&lt;li&gt;Provides web-based interface on top of STMP (to send), IMAP (or POP) to retrieve e-mail messages&lt;/li&gt;
-&lt;li&gt;Gmail, Hotmail, etc.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;DNS (Domain Name System)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Why not a single centralized DNS server
-&lt;ul&gt;
-&lt;li&gt;Single point of failure&lt;/li&gt;
-&lt;li&gt;Traffic jam due to huge number of requests/queries&lt;/li&gt;
-&lt;li&gt;Long distance =&amp;gt; slow response&lt;/li&gt;
-&lt;li&gt;Maintenance issue&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;DNS services
-&lt;ul&gt;
-&lt;li&gt;Hostname to IP address translation&lt;/li&gt;
-&lt;li&gt;Host aliasing&lt;/li&gt;
-&lt;li&gt;Mail server aliasing&lt;/li&gt;
-&lt;li&gt;Load distribution&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/dns_services.png&#34; alt=&#34;dns_services&#34;&gt;&lt;/li&gt;
-&lt;li&gt;Root Name Servers
-&lt;ul&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/root_name_servers.png&#34; alt=&#34;root_name_servers&#34;&gt;&lt;/li&gt;
-&lt;li&gt;13 LOGICAL root name servers, but 1086(or more) PHYICAL servers&lt;/li&gt;
-&lt;li&gt;Reply with a referral to the DNS servers for a TLD, or indicating no such TLD exists.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;TLD &amp;amp; authoritative servers
-&lt;ul&gt;
-&lt;li&gt;Top-level domain (TLD) servers
-&lt;ul&gt;
-&lt;li&gt;gTLD (originally 7): com, net, biz, edu, org, int, mil, …&lt;/li&gt;
-&lt;li&gt;ccTLD (249): uk, cn, hk, …&lt;/li&gt;
-&lt;li&gt;IDN (internationalized top-level domains): .中国, .香港 and .台灣&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Authoritative DNS servers
-&lt;ul&gt;
-&lt;li&gt;Organization&amp;rsquo;s own DNS server(s), providing authoritative hostname to IP mappings for organization’s named hosts&lt;/li&gt;
-&lt;li&gt;Can be maintained by organization or service provider&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Local/Default DNS Server&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Does not strictly belong to hierarchy&lt;/li&gt;
-&lt;li&gt;When host makes DNS query, query is sent to its local DNS server
-&lt;ul&gt;
-&lt;li&gt;Has local cache of recent name-to-address translation&lt;/li&gt;
-&lt;li&gt;Acts as proxy, forwards query into hierarchy&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Each ISP (residential ISP, company, university) has one&lt;/li&gt;
-&lt;li&gt;Public DNS server
-&lt;ul&gt;
-&lt;li&gt;Google public DNS (with IP address 8.8.8.8)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Your home WiFi router may act as your local DNS server&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;DNS: Caching, Updating Records&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Once (any) name server learns mapping, it caches mapping
-&lt;ul&gt;
-&lt;li&gt;Cache entries timeout (disappear) after some time (TTL)&lt;/li&gt;
-&lt;li&gt;TLD servers typically cached in local name servers
-&lt;ul&gt;
-&lt;li&gt;Root name servers not often visited&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Cached entries may be out-of-date
-&lt;ul&gt;
-&lt;li&gt;If name host changes IP address, may not be known Internet-wide until all TTLs expire&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Update/notify mechanisms proposed IETF standard
-&lt;ul&gt;
-&lt;li&gt;RFC 2136&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;DNS Records&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;DNS: distributed db storing resource records (RR)
-&lt;ul&gt;
-&lt;li&gt;RR format
-&lt;ul&gt;
-&lt;li&gt;(name, value, type, ttl)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;type = A&lt;/li&gt;
-&lt;li&gt;type = CNAME&lt;/li&gt;
-&lt;li&gt;type = NS&lt;/li&gt;
-&lt;li&gt;type = MX&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;DNS Protocol, Messages&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;DNS query and reply messages, both with same message format
-&lt;ul&gt;
-&lt;li&gt;Message header
-&lt;ul&gt;
-&lt;li&gt;Identification
-&lt;ul&gt;
-&lt;li&gt;16 bit&lt;/li&gt;
-&lt;li&gt;For query, reply to query uses same&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Flags
-&lt;ul&gt;
-&lt;li&gt;Query or reply&lt;/li&gt;
-&lt;li&gt;Recursion desired&lt;/li&gt;
-&lt;li&gt;Recursion available&lt;/li&gt;
-&lt;li&gt;Reply is authoritative&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/dns_message.png&#34; alt=&#34;dns_message&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Attacking DNS&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;DDoS attacks
-&lt;ul&gt;
-&lt;li&gt;Bombard root servers with traffic
-&lt;ul&gt;
-&lt;li&gt;Not successful to date&lt;/li&gt;
-&lt;li&gt;Traffic Filtering&lt;/li&gt;
-&lt;li&gt;Local DNS servers cache IPs of TLD servers, allowing root server bypass&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Bombard TLD servers
-&lt;ul&gt;
-&lt;li&gt;Potentially more dangerous&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Redirect attacks
-&lt;ul&gt;
-&lt;li&gt;Man-in-middle
-&lt;ul&gt;
-&lt;li&gt;Intercept queries&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;DNS poisoning
-&lt;ul&gt;
-&lt;li&gt;Send bogus replies to DNS server, which caches&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Peer-to-peer File Distribution&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;P2P architecture
-&lt;ul&gt;
-&lt;li&gt;No always-on server&lt;/li&gt;
-&lt;li&gt;Arbitrary end systems directly communicate&lt;/li&gt;
-&lt;li&gt;Self scalibility&lt;/li&gt;
-&lt;li&gt;Peers are intermittently connected and change IP address&lt;/li&gt;
-&lt;li&gt;Example
-&lt;ul&gt;
-&lt;li&gt;File distribution - BitTorrent&lt;/li&gt;
-&lt;li&gt;Streaming - KanKan&lt;/li&gt;
-&lt;li&gt;Volp - Skype&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;File Distribution (Client-Server)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/client_server_file.png&#34; alt=&#34;client_server_file&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Server transmission
-&lt;ul&gt;
-&lt;li&gt;Must send/upload N file copies&lt;/li&gt;
-&lt;li&gt;Time: NF/U(s)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Client
-&lt;ul&gt;
-&lt;li&gt;Each client must download one file copy&lt;/li&gt;
-&lt;li&gt;Slowest time: F/d(min)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Time to distribute F to N
-&lt;ul&gt;
-&lt;li&gt;D(c-s) &amp;gt;= max {NF/U(s), F/d(min)}&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;File Distribution (P2P)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Server transmission
-&lt;ul&gt;
-&lt;li&gt;Must upload at least one copy&lt;/li&gt;
-&lt;li&gt;Time: F/U(s)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Client
-&lt;ul&gt;
-&lt;li&gt;Each client must download one file copy&lt;/li&gt;
-&lt;li&gt;Slowest time: F/d(min)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;All clients
-&lt;ul&gt;
-&lt;li&gt;As aggregate must download NF bits&lt;/li&gt;
-&lt;li&gt;Max upload rate: U(s)+NU(i)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Time to distribute F to N
-&lt;ul&gt;
-&lt;li&gt;D(P2P) &amp;gt;= max {F/U(s), F/d(min), NF/(U(s)+Sum(U(i)))}&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Client-Server vs. P2P&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/p2p_cs.png&#34; alt=&#34;p2p_cs&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;P2P File Distribution: BitTorrent&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Procedure
-&lt;ul&gt;
-&lt;li&gt;File divided into 256KB chunks&lt;/li&gt;
-&lt;li&gt;Peers in torrent send/receive file chucks&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Roles
-&lt;ul&gt;
-&lt;li&gt;Tracker
-&lt;ul&gt;
-&lt;li&gt;Track peers participating in torrent&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Torrent
-&lt;ul&gt;
-&lt;li&gt;Group of peers exchanging chucks of a file&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Actions
-&lt;ul&gt;
-&lt;li&gt;Requesting chunks
-&lt;ul&gt;
-&lt;li&gt;Ask each peer for chunks they have&lt;/li&gt;
-&lt;li&gt;Request missing chunks (rarest piece first)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Sending chunks (tit-for-tat)
-&lt;ul&gt;
-&lt;li&gt;Send chunks to peers who currently sending her chunks at highest rate&lt;/li&gt;
-&lt;li&gt;Randomly select another peers and send chunks (for new peers)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Blockchain Learning Plan</title>
-      <link>https://www.pseudoyu.com/en/2020/10/18/blockchain-learning-plan/</link>
-      <pubDate>Sun, 18 Oct 2020 09:20:31 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/18/blockchain-learning-plan/</guid>
-      
-        <description>&lt;h1 id=&#34;区块链学习计划&#34;&gt;区块链学习计划&lt;/h1&gt;
-&lt;h2 id=&#34;学习路径&#34;&gt;学习路径&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_path.svg&#34; alt=&#34;blockchain_path&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;10月&#34;&gt;10月&lt;/h2&gt;
-&lt;h3 id=&#34;学习java基础&#34;&gt;学习Java基础&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;CS61B - UC Berkley&lt;/li&gt;
-&lt;li&gt;Java笔记 - GitHub&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;学习区块链基础&#34;&gt;学习区块链基础&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;区块链原理
-&lt;ul&gt;
-&lt;li&gt;区块链技术与应用 - 肖臻
-&lt;ul&gt;
-&lt;li&gt;整理知识体系&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Bitcoin and Cryptocurrency Technology - Coursera
-&lt;ul&gt;
-&lt;li&gt;完成Assignment（Java）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;搭建区块链
-&lt;ul&gt;
-&lt;li&gt;Let&amp;rsquo;s build a blockchain - YouTube （Ruby）
-&lt;ul&gt;
-&lt;li&gt;用Java重写&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;搭建区块链 - B站落拓（Node.js）
-&lt;ul&gt;
-&lt;li&gt;用Java重写&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;case-study调研&#34;&gt;Case Study调研&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;结合市场需求
-&lt;ul&gt;
-&lt;li&gt;数据隐私（待定）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;解决方案
-&lt;ul&gt;
-&lt;li&gt;产品形态&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;mini-project调研&#34;&gt;Mini Project调研&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;数据隐私&lt;/li&gt;
-&lt;li&gt;未来区块链解决方案&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;熟悉版本控制工具&#34;&gt;熟悉版本控制工具&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Git
-&lt;ul&gt;
-&lt;li&gt;熟悉常用命令&lt;/li&gt;
-&lt;li&gt;培养工作流&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;GitHub
-&lt;ul&gt;
-&lt;li&gt;优化个人Profile&lt;/li&gt;
-&lt;li&gt;日常更新&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;刷题&#34;&gt;刷题&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;剑指Offer&lt;/li&gt;
-&lt;li&gt;LeetCode&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;11月&#34;&gt;11月&lt;/h2&gt;
-&lt;h3 id=&#34;提升技术能力&#34;&gt;提升技术能力&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Web开发
-&lt;ul&gt;
-&lt;li&gt;Web Developer Bootcamp - Udemy
-&lt;ul&gt;
-&lt;li&gt;前端&lt;/li&gt;
-&lt;li&gt;后端（课程用Node.js，了解）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;数据库&lt;/li&gt;
-&lt;li&gt;Linux基础&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;学习系统相关&#34;&gt;学习系统相关&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;系统设计笔记 - GitHub
-&lt;ul&gt;
-&lt;li&gt;理解原理&lt;/li&gt;
-&lt;li&gt;了解配置&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Docke&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;区块链进阶与实践&#34;&gt;区块链进阶与实践&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;区块链技术原理
-&lt;ul&gt;
-&lt;li&gt;Bitcoin and Cryptocurrency Technology - Coursera
-&lt;ul&gt;
-&lt;li&gt;继续完成Assignment（Java）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;共识协议&lt;/li&gt;
-&lt;li&gt;一致性算法&lt;/li&gt;
-&lt;li&gt;智能合约虚拟机&lt;/li&gt;
-&lt;li&gt;开源系统、解决方案
-&lt;ul&gt;
-&lt;li&gt;Bitcoin
-&lt;ul&gt;
-&lt;li&gt;了解机制&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Ethereum
-&lt;ul&gt;
-&lt;li&gt;项目实践&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;case-study规划及知识储备&#34;&gt;Case Study规划及知识储备&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;产品规划
-&lt;ul&gt;
-&lt;li&gt;需求文档&lt;/li&gt;
-&lt;li&gt;开发安排&lt;/li&gt;
-&lt;li&gt;产品设计
-&lt;ul&gt;
-&lt;li&gt;产品原型&lt;/li&gt;
-&lt;li&gt;技术框架&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;技术开发
-&lt;ul&gt;
-&lt;li&gt;前端&lt;/li&gt;
-&lt;li&gt;后端&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;数据相关&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;刷题-1&#34;&gt;刷题&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;剑指Offer&lt;/li&gt;
-&lt;li&gt;LeetCode&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;提高英语口语&#34;&gt;提高英语口语&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Presentation&lt;/li&gt;
-&lt;li&gt;面试&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;12月&#34;&gt;12月&lt;/h2&gt;
-&lt;h3 id=&#34;case-study开发&#34;&gt;Case Study开发&lt;/h3&gt;
-&lt;h3 id=&#34;学习了解主流开源框架架构&#34;&gt;学习了解主流开源框架/架构&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;微服务架构&lt;/li&gt;
-&lt;li&gt;开源框架应用场景&lt;/li&gt;
-&lt;li&gt;SOA框架&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;了解云计算&#34;&gt;了解云计算&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;阿里云&lt;/li&gt;
-&lt;li&gt;AWS&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;刷题-2&#34;&gt;刷题&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;剑指Offer&lt;/li&gt;
-&lt;li&gt;LeetCode&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;提高英语口语-1&#34;&gt;提高英语口语&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Presentation&lt;/li&gt;
-&lt;li&gt;面试&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;1月&#34;&gt;1月&lt;/h2&gt;
-&lt;h3 id=&#34;case-study开发-1&#34;&gt;Case Study开发&lt;/h3&gt;
-&lt;h3 id=&#34;区块链开源项目实践&#34;&gt;区块链开源项目实践&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;了解主流项目&lt;/li&gt;
-&lt;li&gt;实践小型项目&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;个人信息完善&#34;&gt;个人信息完善&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;整理项目及展示&lt;/li&gt;
-&lt;li&gt;简历&lt;/li&gt;
-&lt;li&gt;LinkedIn&lt;/li&gt;
-&lt;li&gt;GitHub&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;刷题-3&#34;&gt;刷题&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;剑指Offer&lt;/li&gt;
-&lt;li&gt;LeetCode&lt;/li&gt;
-&lt;li&gt;公司笔试/面试真题&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;提高英语口语-2&#34;&gt;提高英语口语&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;面试&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;2月&#34;&gt;2月&lt;/h2&gt;
-&lt;h3 id=&#34;投递及笔试面试准备&#34;&gt;投递及笔试/面试准备&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;香港
-&lt;ul&gt;
-&lt;li&gt;学校就业资源
-&lt;ul&gt;
-&lt;li&gt;宣讲会&lt;/li&gt;
-&lt;li&gt;网站&lt;/li&gt;
-&lt;li&gt;相关教授&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;外部就业资源
-&lt;ul&gt;
-&lt;li&gt;JobDB&lt;/li&gt;
-&lt;li&gt;LinkedIn&lt;/li&gt;
-&lt;li&gt;公司招聘&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;LinkedIn&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;内地
-&lt;ul&gt;
-&lt;li&gt;暑期实习提前批&lt;/li&gt;
-&lt;li&gt;日常实习&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;实习&#34;&gt;实习&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;To Be Decided&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Blockchain Learning Structure</title>
-      <link>https://www.pseudoyu.com/en/2020/10/18/blockchain-learning-structure/</link>
-      <pubDate>Sun, 18 Oct 2020 09:20:31 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/18/blockchain-learning-structure/</guid>
-      
-        <description>&lt;h1 id=&#34;区块链学习计划&#34;&gt;区块链学习计划&lt;/h1&gt;
-&lt;h1 id=&#34;知识结构&#34;&gt;知识结构&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_plan.svg&#34; alt=&#34;blockchain_plan&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;算法刷题&#34;&gt;算法刷题&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;剑指Offer&lt;/li&gt;
-&lt;li&gt;LeetCode&lt;/li&gt;
-&lt;li&gt;笔试面试题库&lt;/li&gt;
-&lt;li&gt;编程语言&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;java相关&#34;&gt;Java相关&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;基础
-&lt;ul&gt;
-&lt;li&gt;CS61B - UC Berkley&lt;/li&gt;
-&lt;li&gt;Java学习笔记 - GitHub&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;容器&lt;/li&gt;
-&lt;li&gt;并发
-&lt;ul&gt;
-&lt;li&gt;多线程编程（threadpool）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;JVM
-&lt;ul&gt;
-&lt;li&gt;内存模型
-&lt;ul&gt;
-&lt;li&gt;JVM内存整理&lt;/li&gt;
-&lt;li&gt;垃圾处理策略&lt;/li&gt;
-&lt;li&gt;Root链搜索引用&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;I/O&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;其他&#34;&gt;其他&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Golang&lt;/li&gt;
-&lt;li&gt;C++&lt;/li&gt;
-&lt;li&gt;Node.js&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;系统设计&#34;&gt;系统设计&lt;/h2&gt;
-&lt;h3 id=&#34;基础&#34;&gt;基础&lt;/h3&gt;
-&lt;h3 id=&#34;分布式&#34;&gt;分布式&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Redius实现分布式一致的锁&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;缓存&#34;&gt;缓存&lt;/h3&gt;
-&lt;h3 id=&#34;消息队列&#34;&gt;消息队列&lt;/h3&gt;
-&lt;h3 id=&#34;集群&#34;&gt;集群&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Kafka
-&lt;ul&gt;
-&lt;li&gt;工作原理&lt;/li&gt;
-&lt;li&gt;配置&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;攻击技术&#34;&gt;攻击技术&lt;/h3&gt;
-&lt;h2 id=&#34;主流工具框架&#34;&gt;主流工具/框架&lt;/h2&gt;
-&lt;h3 id=&#34;unixlinux系统了解&#34;&gt;Unix/Linux系统（了解）&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;常用命令&lt;/li&gt;
-&lt;li&gt;Shell脚本&lt;/li&gt;
-&lt;li&gt;应用开发&lt;/li&gt;
-&lt;li&gt;性能查看工具&lt;/li&gt;
-&lt;li&gt;性能调优工具&lt;/li&gt;
-&lt;li&gt;多线程/进程&lt;/li&gt;
-&lt;li&gt;文件系统&lt;/li&gt;
-&lt;li&gt;网络编程&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;docker&#34;&gt;Docker&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;技术原理&lt;/li&gt;
-&lt;li&gt;部署&lt;/li&gt;
-&lt;li&gt;使用优化&lt;/li&gt;
-&lt;li&gt;Kubernetes&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;数据库&#34;&gt;数据库&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;非关系型数据库
-&lt;ul&gt;
-&lt;li&gt;KV型数据库
-&lt;ul&gt;
-&lt;li&gt;LevelDB&lt;/li&gt;
-&lt;li&gt;RocksDB&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;关系型数据库
-&lt;ul&gt;
-&lt;li&gt;悲观锁&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;版本控制&#34;&gt;版本控制&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Git
-&lt;ul&gt;
-&lt;li&gt;GitHub&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;微服务架构&#34;&gt;微服务架构&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;阿里微服务Dubbo&lt;/li&gt;
-&lt;li&gt;DDD（领域驱动设计，Domain Driven Design）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;开源框架应用场景&#34;&gt;开源框架应用场景&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Spring&lt;/li&gt;
-&lt;li&gt;Mybatis&lt;/li&gt;
-&lt;li&gt;Hibernate&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;架构&#34;&gt;架构&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;SOA架构（面向服务的架构，Service-Oriented Architecture）&lt;/li&gt;
-&lt;li&gt;OSGI架构（开放服务网关协议，Open Service Gateway Initiative）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;区块链技术&#34;&gt;区块链技术&lt;/h2&gt;
-&lt;h3 id=&#34;技术原理&#34;&gt;技术原理&lt;/h3&gt;
-&lt;h3 id=&#34;常见开源系统解决方案&#34;&gt;常见开源系统/解决方案&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Bitcoin&lt;/li&gt;
-&lt;li&gt;Ethereum&lt;/li&gt;
-&lt;li&gt;EOS&lt;/li&gt;
-&lt;li&gt;Fabric&lt;/li&gt;
-&lt;li&gt;IBM Hyperledge&lt;/li&gt;
-&lt;li&gt;R3 Corda&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;智能合约虚拟机&#34;&gt;智能合约虚拟机&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;EVM命令集&lt;/li&gt;
-&lt;li&gt;WASM&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;一致性算法&#34;&gt;一致性算法&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;BFT&lt;/li&gt;
-&lt;li&gt;Paxos&lt;/li&gt;
-&lt;li&gt;Raft&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;共识协议&#34;&gt;共识协议&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;PoW&lt;/li&gt;
-&lt;li&gt;PoS&lt;/li&gt;
-&lt;li&gt;Algorand&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;其他相关背景&#34;&gt;其他相关背景&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;密码学&lt;/li&gt;
-&lt;li&gt;网络安全&lt;/li&gt;
-&lt;li&gt;分布式计算&lt;/li&gt;
-&lt;li&gt;云计算
-&lt;ul&gt;
-&lt;li&gt;阿里云&lt;/li&gt;
-&lt;li&gt;AWS&lt;/li&gt;
-&lt;li&gt;Azure&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;中间件&lt;/li&gt;
-&lt;li&gt;网关或开放平台设计&lt;/li&gt;
-&lt;li&gt;可信计算技术原理与应用&lt;/li&gt;
-&lt;li&gt;软件形式化验证&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;软性技能&#34;&gt;软性技能&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;逻辑&lt;/li&gt;
-&lt;li&gt;接受新事物&lt;/li&gt;
-&lt;li&gt;自我驱动&lt;/li&gt;
-&lt;li&gt;沟通表达&lt;/li&gt;
-&lt;li&gt;团队合作&lt;/li&gt;
-&lt;li&gt;对系统质量苛刻要求&lt;/li&gt;
-&lt;li&gt;识别和设计通用框架及模块&lt;/li&gt;
-&lt;li&gt;识别业务关键需求和设计领域模型&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>A Look at Tik-Tok</title>
-      <link>https://www.pseudoyu.com/en/2020/10/16/a-look-at-tik-tok/</link>
-      <pubDate>Fri, 16 Oct 2020 09:19:19 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/16/a-look-at-tik-tok/</guid>
-      
-        <description>&lt;h1 id=&#34;a-look-at-tik-tok&#34;&gt;A Look at Tik-Tok&lt;/h1&gt;
-&lt;h2 id=&#34;given-there-are-many-social-media-platforms-already-existing-in-us-what-makes-tik-tok-so-successful-that-it-becomes-a-big-enough-threat-to-cause-the-us-government-to-act-the-way-it-did-towards-a-commercial-company-ignore-political-factors&#34;&gt;Given there are many social media platforms already existing in US, what makes Tik-Tok so successful that it becomes a big enough threat to cause the US Government to act the way it did towards a commercial company (ignore political factors)?&lt;/h2&gt;
-&lt;p&gt;Economically, at about 2016, US tech giants such as Facebook or Google mainly focused on long video platform instead of the short video platform. A company called Musical.ly (later acquired by ByteDance and became a part of Tik-Tok) grasped this opportunity to extend the US market and gained a massive amount of market share. Generally, the US market is relatively a free market that encourages new products (startups) to participate in the competition. In addition to acquiring Musical.ly, which already played an essential role in the short video market, Tik-Tok also utilized targeted strategies to fulfil the US market&amp;rsquo;s needs and fashion to gain and retain more users.&lt;/p&gt;
-&lt;p&gt;Socially, the majority of users of short video platform are young people, and they tend to follow fashions and do more social interactions. Tik-Tok carries out new creative forms of videos for users to easily create, share and connect interesting videos in their social circle, which brings the long tail influence on the spread of Tik-Tok videos. Besides, some organizations or even official medias also joined the Tik-Tok platform to please their audience or get more subscribers, which further increase the social influence of Tik-Tok.&lt;/p&gt;
-&lt;p&gt;Technically, as the rapid development of Internet and smartphone industry, short video has gradually become a mainstream form of creation and entertainment. US people especially young people get more accustomed to using their smartphones to entertain or do social interactions, like watching or shooting videos in their leisure time. What&amp;rsquo;s more, the recommendation system and mechanism applying artificial intelligence and machine learning algorithms become more powerful and smart, keeping attracting their users&amp;rsquo; attention.&lt;/p&gt;
-&lt;p&gt;To sum up, Tik-Tok chose the right market expanding strategy, successfully meets the market demand and captures their users&amp;rsquo; needs to get its market share. And it makes fair use of their technical benefits and most advanced innovation like machine learning algorithms to continually improve their product, making them become a very influential platform.&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>ECOM6013 Topic 8 Blockchain and Cybercurrency</title>
-      <link>https://www.pseudoyu.com/en/2020/10/09/ecom6013-topic-8-blockchain-and-cybercurrency/</link>
-      <pubDate>Fri, 09 Oct 2020 11:01:28 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/09/ecom6013-topic-8-blockchain-and-cybercurrency/</guid>
-      
-        <description>&lt;h1 id=&#34;ecom6013-e-commerce-technologies&#34;&gt;ECOM6013 E-Commerce Technologies&lt;/h1&gt;
-&lt;h2 id=&#34;topic-8-blockchain-and-cybercurrency&#34;&gt;Topic 8 Blockchain and Cybercurrency&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Form of Money&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Token money
-&lt;ul&gt;
-&lt;li&gt;Physical token&lt;/li&gt;
-&lt;li&gt;Value is lost without the token&lt;/li&gt;
-&lt;li&gt;No intermediary is required for spending&lt;/li&gt;
-&lt;li&gt;Requires faith in the issuer (a government or a bank)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Notationary money
-&lt;ul&gt;
-&lt;li&gt;Notation/entry in a ledger, passbook, or database&lt;/li&gt;
-&lt;li&gt;Can&amp;rsquo;t be lost&lt;/li&gt;
-&lt;li&gt;Requires an intermediary&lt;/li&gt;
-&lt;li&gt;Requires faith in the maintainer of the ledger&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Hybrid money
-&lt;ul&gt;
-&lt;li&gt;Requires both a token and a ledger account&lt;/li&gt;
-&lt;li&gt;Can be lost&lt;/li&gt;
-&lt;li&gt;Requires an intermediary&lt;/li&gt;
-&lt;li&gt;Requires faith in the issuer&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Virtual money
-&lt;ul&gt;
-&lt;li&gt;No token/ledger&lt;/li&gt;
-&lt;li&gt;Can be lost&lt;/li&gt;
-&lt;li&gt;No intermediary required&lt;/li&gt;
-&lt;li&gt;No issuer, no government backing&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Digital money
-&lt;ul&gt;
-&lt;li&gt;String of bytes (data) stored on a device&lt;/li&gt;
-&lt;li&gt;Value is lost/stolen when devices fail/invaded&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Cybercurrency
-&lt;ul&gt;
-&lt;li&gt;Bitcoin is the most influential one&lt;/li&gt;
-&lt;li&gt;Based on blockchain&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Bitcoin&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Designed for the &amp;ldquo;online society&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;An important example application of Blockchain&lt;/li&gt;
-&lt;li&gt;Relationship with national currencies
-&lt;ul&gt;
-&lt;li&gt;Decentralized and independent of national currencies&lt;/li&gt;
-&lt;li&gt;Easily convertible to national currencies&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Excellent application Scenarios
-&lt;ul&gt;
-&lt;li&gt;Anonymous transactions&lt;/li&gt;
-&lt;li&gt;E-Commerce&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Land Deeds - A Blockchain Analogy&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/land_deeds.png&#34; alt=&#34;land_deeds&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A &amp;ldquo;chain of title&amp;rdquo; (a sequence of deeds leading from the original owner to the present owner)&lt;/li&gt;
-&lt;li&gt;Deeds are recorded in the Land Registry&lt;/li&gt;
-&lt;li&gt;Ownership is established by searching the Registry&lt;/li&gt;
-&lt;li&gt;The Land Registry is ledger holder&lt;/li&gt;
-&lt;li&gt;Double-selling is prevented by timestamps&lt;/li&gt;
-&lt;li&gt;If the Registry is altered, ownership can be lost&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;5 elements of Bitcoin&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Currency
-&lt;ul&gt;
-&lt;li&gt;Send units of value&lt;/li&gt;
-&lt;li&gt;Convertible&lt;/li&gt;
-&lt;li&gt;Divisible&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Commodity
-&lt;ul&gt;
-&lt;li&gt;Scarcity stores wealth&lt;/li&gt;
-&lt;li&gt;Market fluctuates with speculation&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Brand
-&lt;ul&gt;
-&lt;li&gt;Marketing message&lt;/li&gt;
-&lt;li&gt;Commodity and sharing knowledge&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Protocol
-&lt;ul&gt;
-&lt;li&gt;Decentralized trust&lt;/li&gt;
-&lt;li&gt;Distributed ledger&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Technology
-&lt;ul&gt;
-&lt;li&gt;Blockchain&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;How to Get Bitcoin&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Sell something&lt;/li&gt;
-&lt;li&gt;Salary (some companies)&lt;/li&gt;
-&lt;li&gt;Bitcoin exchange&lt;/li&gt;
-&lt;li&gt;Mining
-&lt;ul&gt;
-&lt;li&gt;No more than 21 million BTCs&lt;/li&gt;
-&lt;li&gt;Divisible into units as small as 1/100 millionth of a BTC&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Bitcoin and Encryption Technologies&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Hash functions&lt;/li&gt;
-&lt;li&gt;Public-private key (asymmetric) encryption&lt;/li&gt;
-&lt;li&gt;Digital signatures&lt;/li&gt;
-&lt;li&gt;All of these technologies are mature and trusted&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Bitcoin Characteristics&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;No physical object (not a character string)
-&lt;ul&gt;
-&lt;li&gt;&amp;ldquo;Bitcoin&amp;rdquo; - protocol&lt;/li&gt;
-&lt;li&gt;&amp;ldquo;bitcoin&amp;rdquo; - value&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;A chain of digitally signed transaction records leading from the original owner to the current owner&lt;/li&gt;
-&lt;li&gt;Transaction records
-&lt;ul&gt;
-&lt;li&gt;Hashes&lt;/li&gt;
-&lt;li&gt;Addresses&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;No Bitcoin registry&lt;/li&gt;
-&lt;li&gt;No central authority&lt;/li&gt;
-&lt;li&gt;Broadcast to everyone
-&lt;ul&gt;
-&lt;li&gt;Everyone can verify the Bitcoin blockchain&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Bitcoin Protocol&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Invented in 2008 by Satoshi Nakamoto, &lt;a href=&#34;https://bitcoin.org/bitcoin.pdf&#34;&gt;&lt;em&gt;Bitcoin: A Peer-to-Peer Electronic Cash System&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Publicly available, Open source software&lt;/li&gt;
-&lt;li&gt;Everyone can obtain and run a Bitcoin client&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Bitcoin addresses&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;An elliptic curve public key
-&lt;ul&gt;
-&lt;li&gt;25-44 characters for users&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Send Bitcoins
-&lt;ul&gt;
-&lt;li&gt;Receiving address (public)&lt;/li&gt;
-&lt;li&gt;Amount&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Receive Bitcoins
-&lt;ul&gt;
-&lt;li&gt;Receiving address (public)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Addresses are not directly registered to users&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Possible Vulnerabilities&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;No way to reverse a transaction without the payee’s cooperation&lt;/li&gt;
-&lt;li&gt;Software bugs&lt;/li&gt;
-&lt;li&gt;Bank robbery by hackers&lt;/li&gt;
-&lt;li&gt;Malware attacks against wallets&lt;/li&gt;
-&lt;li&gt;Government attempts to control&lt;/li&gt;
-&lt;li&gt;Competing digital currencies easy to make (fork)
-&lt;ul&gt;
-&lt;li&gt;Auroracoin&lt;/li&gt;
-&lt;li&gt;Dogecoin&lt;/li&gt;
-&lt;li&gt;Namecoin&lt;/li&gt;
-&lt;li&gt;Primecoin&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Challenges for Bitcoin&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Scalability&lt;/li&gt;
-&lt;li&gt;Time to solve a block (security concerns in algorithms)&lt;/li&gt;
-&lt;li&gt;Energy consumption&lt;/li&gt;
-&lt;li&gt;Meaningless and highly inefficient&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Possible Future of Bitcoin/Virtual Currencies (Social)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;For the world’s unbanked&lt;/li&gt;
-&lt;li&gt;For small businesses, freelancers and startups&lt;/li&gt;
-&lt;li&gt;Inevitable development of &amp;ldquo;money&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;Distributed trust&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Possible Future of Bitcoin/Virtual Currencies (Economic/Political)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A future with digital currencies and decentralized stores&lt;/li&gt;
-&lt;li&gt;National adoption of decentralized currencies may bring political transparency and economic neutrality&lt;/li&gt;
-&lt;li&gt;Developing nations seeking to curb corruption and break free of economic dependence on other countries could see potential in these technologies&lt;/li&gt;
-&lt;li&gt;Central Bank Digital Currency (CBDC)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Retail Money Key Attributes&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/retail_money.png&#34; alt=&#34;retail_money&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Different Degrees of Responsibilities for the Central Bank&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/central_bank.png&#34; alt=&#34;central_bank&#34;&gt;&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>ICOM6012 Topic 2 The Big Picture</title>
-      <link>https://www.pseudoyu.com/en/2020/10/05/icom6012-topic-2-the-big-picture/</link>
-      <pubDate>Mon, 05 Oct 2020 09:06:09 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/05/icom6012-topic-2-the-big-picture/</guid>
-      
-        <description>&lt;h1 id=&#34;icom6012-internet-infrastructure-technologies&#34;&gt;ICOM6012 Internet Infrastructure Technologies&lt;/h1&gt;
-&lt;h2 id=&#34;topic-2-the-big-picture&#34;&gt;Topic 2 The Big Picture&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;The Internet: &amp;ldquo;nuts and bolts&amp;rdquo; view&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Billions of connected computing devices
-&lt;ul&gt;
-&lt;li&gt;Host = end system&lt;/li&gt;
-&lt;li&gt;Running network apps&lt;/li&gt;
-&lt;li&gt;Internet of things (IoT)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Packet switches
-&lt;ul&gt;
-&lt;li&gt;routers&lt;/li&gt;
-&lt;li&gt;switchers&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Communication links
-&lt;ul&gt;
-&lt;li&gt;Fiber, copper, radio, satellite&lt;/li&gt;
-&lt;li&gt;Transmission rate: bandwidth&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Networks
-&lt;ul&gt;
-&lt;li&gt;Collection of devices, routers, switches, links&lt;/li&gt;
-&lt;li&gt;Managed by an organization&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Internet: &amp;ldquo;network of networks&amp;rdquo;
-&lt;ul&gt;
-&lt;li&gt;Interconnected ISPs&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Protocols
-&lt;ul&gt;
-&lt;li&gt;Control sending, receiving of messages&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Internet standards
-&lt;ul&gt;
-&lt;li&gt;RFC: Requests for Comments&lt;/li&gt;
-&lt;li&gt;IETF: Internet Engineering Task Force&lt;/li&gt;
-&lt;li&gt;IEEE: Institute of Electronical &amp;amp; Electronic Engineering&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;The Internet: a &amp;ldquo;service&amp;rdquo; view&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Infrastructure
-&lt;ul&gt;
-&lt;li&gt;Web&lt;/li&gt;
-&lt;li&gt;Streaming video&lt;/li&gt;
-&lt;li&gt;Multimedia teleconferencing&lt;/li&gt;
-&lt;li&gt;Email&lt;/li&gt;
-&lt;li&gt;Games&lt;/li&gt;
-&lt;li&gt;E‐Commerce&lt;/li&gt;
-&lt;li&gt;Social media&lt;/li&gt;
-&lt;li&gt;Inter‐connected appliances&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Programming interface
-&lt;ul&gt;
-&lt;li&gt;Sending/receiving apps&lt;/li&gt;
-&lt;li&gt;Service options&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Protocol&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Activities in the Internet involving two or more remote entities are governed by a protocol&lt;/li&gt;
-&lt;li&gt;Protocols are running everywhere in the Internet&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;A protocol defines the format and the order of messages exchanged between two or more communicating entities, as well as the actions taken on the transmission and/or receipt of a message or other event.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Network Standards&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://ietf.org/standards/&#34;&gt;IETF&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;Application&lt;/li&gt;
-&lt;li&gt;Transport&lt;/li&gt;
-&lt;li&gt;Network&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://ieeexplore.ieee.org/browse/standards/collection/ieee&#34;&gt;IEEE&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;Data link&lt;/li&gt;
-&lt;li&gt;Physical&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Network Edge&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Hosts
-&lt;ul&gt;
-&lt;li&gt;Clients&lt;/li&gt;
-&lt;li&gt;Servers (always in data centers)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Access Networks, Physical Media&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Residential access networks (cable-based)
-&lt;ul&gt;
-&lt;li&gt;Frequency Division Multiplexing (FDM)
-&lt;ul&gt;
-&lt;li&gt;Different channels transmitted in different frequency bands&lt;/li&gt;
-&lt;li&gt;Modem = Modulator + Demodulator
-&lt;ul&gt;
-&lt;li&gt;A device that converts data from digital format into one suitable for a transmission medium&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;HFC: hybrid fiber coax
-&lt;ul&gt;
-&lt;li&gt;Asymmetric: up to 40 Mbps – 1.2 Gbs downstream transmission rate, 30‐100 Mbps upstream transmission rate&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Network of cable, fiber attaches homes to ISP router
-&lt;ul&gt;
-&lt;li&gt;Homes share access network to cable headend&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Residential access networks: digital subscriber line (DSL)
-&lt;ul&gt;
-&lt;li&gt;Use existing telephone line to central office DSLAM
-&lt;ul&gt;
-&lt;li&gt;Data over DSL phone line goes to Internet&lt;/li&gt;
-&lt;li&gt;Voice over DSL phone line goes to telephone network&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Wireless access networks
-&lt;ul&gt;
-&lt;li&gt;Wireless local area networks (WLANs)
-&lt;ul&gt;
-&lt;li&gt;Within or around building (~100ft)&lt;/li&gt;
-&lt;li&gt;802.11b/g/n (WiFi) - 11,54,450 Mbps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Wide-area cellular access networks
-&lt;ul&gt;
-&lt;li&gt;Mobile (10km)&lt;/li&gt;
-&lt;li&gt;4G/5G cellular networks - 10 Mbps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;IoT
-&lt;ul&gt;
-&lt;li&gt;BLE&lt;/li&gt;
-&lt;li&gt;ZigBee&lt;/li&gt;
-&lt;li&gt;LoRa&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Remote areas
-&lt;ul&gt;
-&lt;li&gt;Satellite network: Geosynchronous Equatorial Orbit (GEO)
-&lt;ul&gt;
-&lt;li&gt;35,786 km above equator&lt;/li&gt;
-&lt;li&gt;Large RTT (Round trip time): 0.5s&lt;/li&gt;
-&lt;li&gt;Expensive&lt;/li&gt;
-&lt;li&gt;Slow&lt;/li&gt;
-&lt;li&gt;Examples
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=OFGW2sZsUiQ&#34;&gt;&amp;ldquo;Project Loon&amp;rdquo; &amp;ndash; Google&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=giQ8xEWjnBs&amp;amp;t=13s&#34;&gt;Starlink ‐‐ SpaceX&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Enterprise access networks (school, company)
-&lt;ul&gt;
-&lt;li&gt;Mix of wired, wireless link technologies
-&lt;ul&gt;
-&lt;li&gt;Ethernet
-&lt;ul&gt;
-&lt;li&gt;Wired access at 100Mbps, 1Gbps, 10Gbps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;WiFi
-&lt;ul&gt;
-&lt;li&gt;Wireless access points at 11, 54, 450 Mbps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;History of IEEE 802.11 (Use CSMA/CA)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Unlicensed ISM - 1985&lt;/li&gt;
-&lt;li&gt;802.11 - 1997
-&lt;ul&gt;
-&lt;li&gt;2.4GHz&lt;/li&gt;
-&lt;li&gt;DSSS &amp;amp; FHSS&lt;/li&gt;
-&lt;li&gt;1,2Mbps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;802.11b - 1999 (WiFi-1)
-&lt;ul&gt;
-&lt;li&gt;2.4GHz&lt;/li&gt;
-&lt;li&gt;DSSS&lt;/li&gt;
-&lt;li&gt;11Mbps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;802.11a - 1999 (WiFi-2)
-&lt;ul&gt;
-&lt;li&gt;5GHz&lt;/li&gt;
-&lt;li&gt;OFDM&lt;/li&gt;
-&lt;li&gt;54Mbps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;WiFi Alliance - 1999&lt;/li&gt;
-&lt;li&gt;802.11g - 2003 (WiFi-3)
-&lt;ul&gt;
-&lt;li&gt;2.4GHz&lt;/li&gt;
-&lt;li&gt;54Mbps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;802.11-2007 - 2007
-&lt;ul&gt;
-&lt;li&gt;Combined 802.11a/b/g&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;802.11n - 2009 (WiFi-4)
-&lt;ul&gt;
-&lt;li&gt;MIMO, 2.4 or 5GHz&lt;/li&gt;
-&lt;li&gt;600Mbps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;802.11-2012
-&lt;ul&gt;
-&lt;li&gt;Combined 802.11a/b/g/n&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;802.11ac - 2013 (WiFi-5)
-&lt;ul&gt;
-&lt;li&gt;5GHz&lt;/li&gt;
-&lt;li&gt;7Gbps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;802.11ah - 2017&lt;/li&gt;
-&lt;li&gt;802.11ax - 2020 (WiFi-6)
-&lt;ul&gt;
-&lt;li&gt;5GHz&lt;/li&gt;
-&lt;li&gt;OFDMA&lt;/li&gt;
-&lt;li&gt;9.6Gbps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Links: Physical Media&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Twisted pair (TP)
-&lt;ul&gt;
-&lt;li&gt;Two insulated copper wires
-&lt;ul&gt;
-&lt;li&gt;Category 5: 100Mbos, 1Gbps Ethernet&lt;/li&gt;
-&lt;li&gt;Category 6: 10Gbps Ethernet&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Coaxial cable
-&lt;ul&gt;
-&lt;li&gt;Two concentric copper conductors&lt;/li&gt;
-&lt;li&gt;Bidiretional&lt;/li&gt;
-&lt;li&gt;Broadband
-&lt;ul&gt;
-&lt;li&gt;Multiple frequency channels on cable&lt;/li&gt;
-&lt;li&gt;100 Mbps per channel&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://youtu.be/jZOg39v73c4&#34;&gt;Fiber optic cable&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;Glass fiber carrying light pulse a bit (each pulse a bit)&lt;/li&gt;
-&lt;li&gt;High-speed point-to-point transmission (10-100Gbps)&lt;/li&gt;
-&lt;li&gt;Low error rate
-&lt;ul&gt;
-&lt;li&gt;Repeaters spaced far apart&lt;/li&gt;
-&lt;li&gt;Immune to electromagnetic noise&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Wireless radio
-&lt;ul&gt;
-&lt;li&gt;Signal carried in electromagnetic spectrum&lt;/li&gt;
-&lt;li&gt;No physical &amp;ldquo;wire&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;Propagation environment effects
-&lt;ul&gt;
-&lt;li&gt;Reflection&lt;/li&gt;
-&lt;li&gt;Obstruction by objects&lt;/li&gt;
-&lt;li&gt;Interference&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Network Core&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Mesh of interconnected routers&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Packet-switching (hosts break application-layer messages into packets)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Forward packets from one router to the next&lt;/li&gt;
-&lt;li&gt;Each packet transmitted a full link capacity&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Packet transmission delay&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/packet_switch.png&#34; alt=&#34;packet_switch&#34;&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Packet transmission delay = L (bits) / R (bits/sec)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;End-end delay&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/store_and_forward.png&#34; alt=&#34;store_and_forward&#34;&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;End-end delay = 2L (bits) / R (bits/sec)
-(Assuming zero propagation delay)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Store and forward: entire packet must arrive at router before it can be transmitted on next link&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Packet queuing and loss&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;If arrival rate &amp;gt; transmission rate, packets will queue&lt;/li&gt;
-&lt;li&gt;If memory fills up, packets can be dropped&lt;/li&gt;
-&lt;li&gt;Bigger buffer can bring lower packet loss but higher delay+buffer cost&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Two key network-core functios&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Forwarding
-&lt;ul&gt;
-&lt;li&gt;Local action: input link -&amp;gt; output link&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Routing
-&lt;ul&gt;
-&lt;li&gt;Global action: source -&amp;gt; destinatin&lt;/li&gt;
-&lt;li&gt;Routing algorithms&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Circuit switching&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;End-end resources allocated to, reserved for &amp;ldquo;call&amp;rdquo; between source&amp;amp;dest&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/circuit_switching.png&#34; alt=&#34;circuit_switching&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Frequency Division Multiplexing (FDM)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/fdm.png&#34; alt=&#34;fdm&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Time Division Multiplexing (TDM)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/tdm.png&#34; alt=&#34;tdm&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Packet Switching vs. Circuit Switching&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Packet switching is great for bursty data
-&lt;ul&gt;
-&lt;li&gt;Resource sharing&lt;/li&gt;
-&lt;li&gt;Simpler, no call setup&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Packet switching can cause excessive congestion&lt;/li&gt;
-&lt;li&gt;Combined: Virtual Circuit Packet Switching&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Internet Structure: Network of networks&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Hosts connected to internet&lt;/li&gt;
-&lt;li&gt;Access ISPs (Internet Service Providers)
-&lt;ul&gt;
-&lt;li&gt;To ensure every two hosts can send packets to each other, access ISPs must be interconnected&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/isp_tiers.png&#34; alt=&#34;isp_tiers&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Tier-1 ISP
-&lt;ul&gt;
-&lt;li&gt;Sprint, AT&amp;amp;T, NTT&lt;/li&gt;
-&lt;li&gt;National &amp;amp; international coverage&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Content provider network (private network)
-&lt;ul&gt;
-&lt;li&gt;Google&lt;/li&gt;
-&lt;li&gt;Facebook&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Delay and Loss&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Nodal processing&lt;/li&gt;
-&lt;li&gt;Queueing delay&lt;/li&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/queueing_delay.png&#34; alt=&#34;queueing_delay&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;R: link bandwidth (bps)&lt;/li&gt;
-&lt;li&gt;L: packet length (bits)&lt;/li&gt;
-&lt;li&gt;a: average packet arrival rate&lt;/li&gt;
-&lt;li&gt;Traffic intensity = La / R&lt;/li&gt;
-&lt;li&gt;E(x) = La/R / (1 - La/R)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Transmission delay
-&lt;ul&gt;
-&lt;li&gt;L(packet length) / R (link bandwidth)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Propagation delay
-&lt;ul&gt;
-&lt;li&gt;d (length of physical link) / s (propagation speed)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/packet_delay.png&#34; alt=&#34;packet_delay&#34;&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;d(nodal) = d(proc) + d(queue) + d(trans) + d(prop)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Number of hops = M
-Per-hop processing delay = d(proc)
-Link propagation delay = d(prop)
-Packet transmission delay = d(trans)
-Message size = N packets
-
-End-to-end Delay (ignoring queueing delay)
-= M * d(prop) + N * d(trans) + (M-1) * d(trans) + (M-1) * d(proc)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/timing_diagram.png&#34; alt=&#34;timing_diagram&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&amp;ldquo;Real&amp;rdquo; Internet delays and routes: traceroute &lt;a href=&#34;https://www.youtube.com&#34;&gt;YouTube&lt;/a&gt; (macOS)&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;➜  ~ traceroute youtube.com
-traceroute to youtube.com &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;216.58.197.110&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, &lt;span class=&#34;m&#34;&gt;64&lt;/span&gt; hops max, &lt;span class=&#34;m&#34;&gt;52&lt;/span&gt; byte packets
- &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;  172.24.172.1 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;172.24.172.1&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  14.211 ms  1.584 ms  1.635 ms
- &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;  118.140.125.65 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;118.140.125.65&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  13.122 ms  23.362 ms  7.402 ms
- &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;  10.30.31.17 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;10.30.31.17&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  7.024 ms  23.736 ms  54.474 ms
- &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;  10.28.21.37 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;10.28.21.37&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  5.924 ms  3.565 ms  2.954 ms
- &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;  * * *
- &lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;  * 218.188.28.165 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;218.188.28.165&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  214.507 ms  3.344 ms
- &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;  108.170.241.65 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;108.170.241.65&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  3.595 ms
-    72.14.222.9 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;72.14.222.9&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  10.840 ms  3.377 ms
- &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;  108.170.241.65 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;108.170.241.65&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  3.156 ms
-    216.239.62.59 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;216.239.62.59&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  3.495 ms
-    216.239.62.57 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;216.239.62.57&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  2.733 ms
- &lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;  216.239.62.59 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;216.239.62.59&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  4.698 ms
-    hkg12s01-in-f14.1e100.net &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;216.58.197.110&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  3.252 ms  4.355 ms
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Packet Loss&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Queen (buffer) preceding link in buffer has finite capcity&lt;/li&gt;
-&lt;li&gt;Packet arriving to full queue dropped (lost)&lt;/li&gt;
-&lt;li&gt;Lost packet may be retransmitted by previous node, end system or not at all&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/packet_loss.png&#34; alt=&#34;packet_loss&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Throughput&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Rate (bits/time) at which bits transferred from sender to receiver
-&lt;ul&gt;
-&lt;li&gt;Instantaneous: rate at given point in time&lt;/li&gt;
-&lt;li&gt;Average: rate over longer period of time&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Bottleneck link
-&lt;ul&gt;
-&lt;li&gt;link on end-end path that constrains end-end throughput&lt;/li&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/throughput.png&#34; alt=&#34;throughput&#34;&gt;&lt;/li&gt;
-&lt;li&gt;Per-connection end-end throughput
-&lt;ul&gt;
-&lt;li&gt;min(Rc, Rs, R/10)&lt;/li&gt;
-&lt;li&gt;In practice, Rc or Rs is often bottleneck&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Why Layering&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Explicit structure allows identification, relationship of complex system&amp;rsquo;s pieces&lt;/li&gt;
-&lt;li&gt;Modularization eases maintenance, updating of system&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Internet Protocol Stack&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Application - supporting network applications
-&lt;ul&gt;
-&lt;li&gt;FTP&lt;/li&gt;
-&lt;li&gt;SMTP&lt;/li&gt;
-&lt;li&gt;HTTP&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Transport - process data transfer
-&lt;ul&gt;
-&lt;li&gt;TCP&lt;/li&gt;
-&lt;li&gt;UDP&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Network - routing of datagrams from source to destination
-&lt;ul&gt;
-&lt;li&gt;IP&lt;/li&gt;
-&lt;li&gt;Routing protocol&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Link - data transfer between neighboring network elements
-&lt;ul&gt;
-&lt;li&gt;Ethernet&lt;/li&gt;
-&lt;li&gt;WiFi&lt;/li&gt;
-&lt;li&gt;PPP&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Physical - bits &amp;ldquo;on the wire&amp;rdquo;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;ISO/OSI Reference Model (Implemented in Application)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Presentation
-&lt;ul&gt;
-&lt;li&gt;Allow applications to interpret meaning of data&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Session
-&lt;ul&gt;
-&lt;li&gt;Synchronization, checkpoint, recovery of data exchange&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Encapsulation&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/encapsulation.png&#34; alt=&#34;encapsulation&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Network Security&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Fields of network security
-&lt;ul&gt;
-&lt;li&gt;How bad guys can attack computer networks&lt;/li&gt;
-&lt;li&gt;How we can defend networks against attacks&lt;/li&gt;
-&lt;li&gt;How to design architectures that are immune to attacks&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Internet not originally designed with much security in mind&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Bad Guys&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Malware
-&lt;ul&gt;
-&lt;li&gt;From
-&lt;ul&gt;
-&lt;li&gt;Virus&lt;/li&gt;
-&lt;li&gt;Worm&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Spyware malware&lt;/li&gt;
-&lt;li&gt;Usage
-&lt;ul&gt;
-&lt;li&gt;Botnet&lt;/li&gt;
-&lt;li&gt;Spam&lt;/li&gt;
-&lt;li&gt;DDos attacks&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Denial of service (DoS)
-&lt;ul&gt;
-&lt;li&gt;Make resources (server, bandwidth) unavailable to legitimate traffic by overwhelming resource with fake traffic&lt;/li&gt;
-&lt;li&gt;Procedures
-&lt;ol&gt;
-&lt;li&gt;Select target&lt;/li&gt;
-&lt;li&gt;Break into hosts around the network&lt;/li&gt;
-&lt;li&gt;Send packets to target from compromised hosts&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Packet interception
-&lt;ul&gt;
-&lt;li&gt;Packet &amp;ldquo;sniffing&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/packet_sniffing.png&#34; alt=&#34;packet_sniffing&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;Broadcast media (shared ethernet, wireless)&lt;/li&gt;
-&lt;li&gt;Promiscuous network interface reads/records all packets&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Fake identity
-&lt;ul&gt;
-&lt;li&gt;IP spoofing: send packet with false source address&lt;/li&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ip_spoffing.png&#34; alt=&#34;ip_spoffing&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Use&amp;rsquo;s View Of Internet&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Single large (global) network
-&lt;ul&gt;
-&lt;li&gt;Achieved through software that implements abstractions&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;User&amp;rsquo;s computers all attach directly&lt;/li&gt;
-&lt;li&gt;No other structure visible&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/user_view_internet.png&#34; alt=&#34;user_view_internet&#34;&gt;
-&lt;strong&gt;Internet History&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Early packet-switching principles (1961-1972)&lt;/li&gt;
-&lt;li&gt;Internetworking, new and proprietary nets (1972-1980)&lt;/li&gt;
-&lt;li&gt;New protocols, a proliferation of networks (1980-1990)&lt;/li&gt;
-&lt;li&gt;Commercialization, the Web, new apps (1990&amp;rsquo;s, 2000&amp;rsquo;s)&lt;/li&gt;
-&lt;li&gt;More new applications, Internet is &amp;ldquo;everywhere&amp;rdquo; (2005-Present)&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       

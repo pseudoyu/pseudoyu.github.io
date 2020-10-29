@@ -6,18 +6,85 @@
     <description>Recent content in programming on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 28 Oct 2020 08:50:17 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2020 10:50:17 +0800</lastBuildDate>
     
 	<atom:link href="https://www.pseudoyu.com/en/tag/programming/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Java Basics</title>
-      <link>https://www.pseudoyu.com/en/2020/10/28/java-basics/</link>
-      <pubDate>Wed, 28 Oct 2020 08:50:17 +0800</pubDate>
+      <title>Java Throwable</title>
+      <link>https://www.pseudoyu.com/en/2020/10/22/java-throwable/</link>
+      <pubDate>Thu, 22 Oct 2020 10:50:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2020/10/28/java-basics/</guid>
-      <description>Java Basics Java Basics Data Type Primitive type  byte/8 char/16 short/16 int/32 float/32 long/64 double/64 boolean/~  Value  true(1) false(0)   JVM will convert it to int when compiling    Types &amp;lt;-&amp;gt; Warpper class  boolean - Boolean byte - Byte char - Character float - Float int - Integer long - Long short - Short double - Double  Autoboxing  Use valueOf() method primitive types -&amp;gt; corresponding object wrapper classes (e.</description>
+      <guid>https://www.pseudoyu.com/en/2020/10/22/java-throwable/</guid>
+      <description>Java Basics Throwable Error (JVM can&amp;rsquo;t handle with)
+ VirtualMachineError  StackOverFlowError OutOfMemoryError   AWTError  Exception (Can be deal with by program)
+ IOException  EOFException FileNotFoundException   RuntimeException  ArrithmeticException MissingResourceException ClassNotFoundException NullPointerException IllegalArgumentException ArrayIndexOutOfBoundsException UnknownTypeException    Basic syntax  try-catch throw throws finally  </description>
+    </item>
+    
+    <item>
+      <title>Java Inheritance</title>
+      <link>https://www.pseudoyu.com/en/2020/10/22/java-inheritance/</link>
+      <pubDate>Thu, 22 Oct 2020 09:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/10/22/java-inheritance/</guid>
+      <description>Java Basics Inheritance Access  Modifiers  protected  Visible to child class   private public   Encapsulation  Using API to communicate Class or members can be least accessed by external   Child class rewrites the parent class  Methods in child class must have higher access level   Field can&amp;rsquo;t be public  getter setter    Abstract class and Interface  Abstract class  abstract keyword  abstract method -&amp;gt; abstract class   Can&amp;rsquo;t be instanced Can be inherited   Interface  public field  static final   Members(field and method)  public     Difference  Abstract class provide a IS-A relationship while Interface provides a LIKE-A relationship One class can applied several interfaces but can&amp;rsquo;t inherit more than one abstract class Fields of interface must be static/final but abstract class has no restriction Members of interface must be public but abstract class have multiple accesses   Choose  Interface (higher priority)  Irrelevant classes need to realize the same method need to use multiple inheritance   Abstract class  Relevant classes need to share same code block Need to control members&amp;rsquo; access Need to inherit non-static or no-constant field      Super  Access parent classes&amp;rsquo; constructor Access members of parent classes  Method priority  this.</description>
+    </item>
+    
+    <item>
+      <title>Java Reflect</title>
+      <link>https://www.pseudoyu.com/en/2020/10/22/java-reflect/</link>
+      <pubDate>Thu, 22 Oct 2020 09:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/10/22/java-reflect/</guid>
+      <description>Java Basics Reflect Core concept  Load classes, methods/fields when JVM is running, no prior requirement of knowing the object when writing or compiling code  Functions (runtime)
+ Enables java code to discover information about the fields, methods and constructors of loaded classes Operate on their underlying counterparts within security restructions  Usage  Develop universal frameworks  java.lang.reflect  Field Method Constructor  Advantages  Extensibility Help with development (IDE) Help with debugging and testing  Disadvantages  Cost/Optimization Security restructions Exposing inner elements (private attributes or methods)  </description>
+    </item>
+    
+    <item>
+      <title>Java Object Universal Functions</title>
+      <link>https://www.pseudoyu.com/en/2020/10/21/java-object-universal-functions/</link>
+      <pubDate>Wed, 21 Oct 2020 12:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/10/21/java-object-universal-functions/</guid>
+      <description>Java Basics Object Universal Functions equals()  Equivalence relationship  x.euqal(x);  Compared to self   x.equals(y) == y.equals(x);  When conversed, also true   if (x.equals(y) &amp;amp;&amp;amp; y.equals(z)) x.equals(z);  When transited, also true   x.equals(y) == x.equals(y);  When repeated, always true   x.equals(null) == false;  When compared to null, always false (when x is not assigned null)     About ==  For primitive data type, == measures the equivalence (there is no equals()) For reference, == measures whether the variables reference to the same object or not   Mechanism  Check if it refers to the same object  Yes, return true No, continue   Check their type  No, return false Yes, continue   Convert the object Check the equivalence of every key fields    hashCode()  hashCode() returns a hash value, and use equals() to check the equivalence  equal -&amp;gt; same hash same hash can&amp;rsquo;t -&amp;gt; equal (hash generated randomly)   Cover hashCode() before equals() Add/realize hashCode() before using HashSet or HashMap class  clone()  Object protected function Shallow clone  Cloned object and the original object refer to the same object   Deep clone  Cloned object and the original object refer to different object   Alternative method  Clone constructor    toString() </description>
+    </item>
+    
+    <item>
+      <title>Java Keywords</title>
+      <link>https://www.pseudoyu.com/en/2020/10/21/java-keywords/</link>
+      <pubDate>Wed, 21 Oct 2020 11:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/10/21/java-keywords/</guid>
+      <description>Java Basics Keywords final  Data  As for primitive data type, final make its value immutable As for reference, it can&amp;rsquo;t reference other objects but can modify itself   Method  Methods stated can&amp;rsquo;t be rewrite by its child class   Class  Can&amp;rsquo;t be inherited    static  Variable  static variable (also called class variable)  Belongs to the class and can be shared/accessed by the class name   instance variable  When creating an instance there will be an instance variable     static method  It exists when loading the class Don&amp;rsquo;t rely on any instance Can&amp;rsquo;t be abstract Can&amp;rsquo;t contain this, super keywords (they are related to specific object)   static (initialization) block  Operate once when doing the class initialization   static inner class  Don&amp;rsquo;t rely on external instance Can&amp;rsquo;t access non-static variables or methods of external class   static import  No need to refer to the ClassName  Simplify Hard to read     Initialization order  static variable, static block (Parent class) static variable, static block (Child class) instance variable, block (Parent class) Constructor (Parent class) instance variable, block (Child class) Constructor (Child class)    </description>
+    </item>
+    
+    <item>
+      <title>Java Operation</title>
+      <link>https://www.pseudoyu.com/en/2020/10/21/java-operation/</link>
+      <pubDate>Wed, 21 Oct 2020 10:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/10/21/java-operation/</guid>
+      <description>Java Basics Operation Compare  Pass by value (Java use pass-by-value to pass parameters)  Change object&amp;rsquo;s value in a function will affect the original object&amp;rsquo;s value (same object) When referencing to a new object, change won&amp;rsquo;t affect the original object&amp;rsquo;s value (different object)   Pass by reference  Casting (compiler force to convert types using (type of))
+ += -= *= /=  switch  Use string object in switch conditional statements  </description>
+    </item>
+    
+    <item>
+      <title>Java String</title>
+      <link>https://www.pseudoyu.com/en/2020/10/21/java-string/</link>
+      <pubDate>Wed, 21 Oct 2020 09:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/10/21/java-string/</guid>
+      <description>Java Basics String Feature  Immutable (byte, stated as final type)  Cache hash value  As the key of HashMap   Requirement of String Pool  Get reference from String Pool if it exists   Security  As parameter for many java classes  Network connection Opening files     Thread-safety  Shared among multiple threads freely      Compare  String  Immutable Thread-safe   StringBuffer  Mutable Thread-safe  Requirements of doing synchronization     StringBuilder  Mutable Not thread-safe    String Pool (stores all literal strings)  Useful to reduce memory requirements intern() method  If there is a string equals to the called one exists, return it (using equals() method) If not, create a new string and return   Create 2 &amp;ldquo;same&amp;rdquo; string  new String()  Create different strings   s.</description>
+    </item>
+    
+    <item>
+      <title>Java Data Type</title>
+      <link>https://www.pseudoyu.com/en/2020/10/21/java-data-type/</link>
+      <pubDate>Wed, 21 Oct 2020 08:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/10/21/java-data-type/</guid>
+      <description>Java Basics Data Type Primitive type  byte/8 char/16 short/16 int/32 float/32 long/64 double/64 boolean/~  Value  true(1) false(0)   JVM will convert it to int when compiling    Types &amp;lt;-&amp;gt; Warpper class  boolean - Boolean byte - Byte char - Character float - Float int - Integer long - Long short - Short double - Double  Autoboxing  Use valueOf() method primitive types -&amp;gt; corresponding object wrapper classes (e.</description>
     </item>
     
     <item>

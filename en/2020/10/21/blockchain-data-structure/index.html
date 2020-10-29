@@ -11,7 +11,6 @@
   <meta name="keywords" content="Hugo, theme, den" />
 
 <link rel="canonical" href="https://www.pseudoyu.com/en/2020/10/21/blockchain-data-structure/" />
-<link rel="alternate" href="https://www.pseudoyu.com/zh/2020/10/21/blockchain-data-structure/" hreflang="zh">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -25,13 +24,13 @@
  Genesis block &lt;- block1 &lt;- block2 &lt;-&hellip;&lt;- recent block (every block has a hash pointer) Tamper-event log  Merkle tree (using hash pointer instead of pointer)  Merkle proof (proof of membership/inclusion)  O(log(n))   Think: proof of non-membership  O(n) Sorted merkle tree: O(log(n))    Application (blockchain)  Node  Full node (fully validating node)  Block header  Version Hash of previous block header Merkle root hash (protect all nodes) Target Nonce   Block body  Transaction lists     Light node (light weight node)  Only store block headers     Problem  Double spending    " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.pseudoyu.com/en/2020/10/21/blockchain-data-structure/" />
-<meta property="article:published_time" content="2020-10-21T09:07:17+08:00" />
-<meta property="article:modified_time" content="2020-10-21T09:07:17+08:00" />
+<meta property="article:published_time" content="2020-10-21T10:07:17+08:00" />
+<meta property="article:modified_time" content="2020-10-21T10:07:17+08:00" />
 <meta itemprop="name" content="Blockchain Data Structure">
 <meta itemprop="description" content="Blockchain Technology and Applications Data Structure Hash pointer (blockchain is a linked list using hash pointers)
  Genesis block &lt;- block1 &lt;- block2 &lt;-&hellip;&lt;- recent block (every block has a hash pointer) Tamper-event log  Merkle tree (using hash pointer instead of pointer)  Merkle proof (proof of membership/inclusion)  O(log(n))   Think: proof of non-membership  O(n) Sorted merkle tree: O(log(n))    Application (blockchain)  Node  Full node (fully validating node)  Block header  Version Hash of previous block header Merkle root hash (protect all nodes) Target Nonce   Block body  Transaction lists     Light node (light weight node)  Only store block headers     Problem  Double spending    ">
-<meta itemprop="datePublished" content="2020-10-21T09:07:17+08:00" />
-<meta itemprop="dateModified" content="2020-10-21T09:07:17+08:00" />
+<meta itemprop="datePublished" content="2020-10-21T10:07:17+08:00" />
+<meta itemprop="dateModified" content="2020-10-21T10:07:17+08:00" />
 <meta itemprop="wordCount" content="96">
 
 
@@ -139,13 +138,7 @@
                 <a href="https://www.pseudoyu.com/en/tag/technology/">technology</a>
           </p>
         
-        <div class="clearfix"></div>
-<p class="float-right translations">
-    <i class="fas fa-language" aria-hidden="true"></i>
-    Translations: 
-    <a href="https://www.pseudoyu.com/zh/2020/10/21/blockchain-data-structure/">ZH</a>
-</p>
-
+        
 
       </div>
     </div>

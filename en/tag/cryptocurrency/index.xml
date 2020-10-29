@@ -21,30 +21,30 @@
     </item>
     
     <item>
-      <title>Blockchain Scripts</title>
-      <link>https://www.pseudoyu.com/en/2020/10/29/blockchain-scripts/</link>
-      <pubDate>Thu, 29 Oct 2020 09:07:17 +0800</pubDate>
+      <title>Blockchain Questions</title>
+      <link>https://www.pseudoyu.com/en/2020/10/28/blockchain-questions/</link>
+      <pubDate>Wed, 28 Oct 2020 14:07:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2020/10/29/blockchain-scripts/</guid>
-      <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Scripts (stack based language)  TX structure  txid hash version (of bitcoin) size locktime (take effect time) vin  txid vout scriptSig (input script)  asm hex     vout  value n scriptPubKey (output script) value   blockhash confirmations time (tx time) blocktime   Transaction  P2PK (Pay to Public Key)  input script  PUSHDATA (Sig) (signed by provate key)   output script  PUSHDATA (PubKey) CHECKSIG     P2PKH (Pay to Public Key Hash)  input script  PUSHDATA (Sig) (signed by provate key) PUSHDATA (PubKey)   output script  DUP (duplicate a PubKey) HASH160 (calculate the PubKey&amp;rsquo;s hash) PUSHDATA (PubKeyHash) EQUALVERIFY CHECKSIG     P2SH (Pay to Script Hash)  redeemScript  PUSHDATA (PubKey) CHECKSIG   input script  PUSHDATA (Sig) PUSHDATA (serialized redeemScript)   output script  HASH160 PUSHDATA (redeemScriptHash) EQUAL     Proof of Burn  Destroy bitcoin      </description>
+      <guid>https://www.pseudoyu.com/en/2020/10/28/blockchain-questions/</guid>
+      <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Additional questions  Q: In a transaction, the receiver is not connected to the bitcoin network.  A: No need online, just records   Q: Lost private key  A: No solution Exchanges: Mt. Gox   Q: Wrong address  A: No solution   Q: OP_RETURN, return mistake, why it&amp;rsquo;s still executed?  A: OP_RETURN is in the output, so it will be verified in the next TX   Q: How to judge who find the nonce first?</description>
     </item>
     
     <item>
       <title>Blockchain Anonymity</title>
       <link>https://www.pseudoyu.com/en/2020/10/28/blockchain-anonymity/</link>
-      <pubDate>Wed, 28 Oct 2020 09:07:17 +0800</pubDate>
+      <pubDate>Wed, 28 Oct 2020 10:07:17 +0800</pubDate>
       
       <guid>https://www.pseudoyu.com/en/2020/10/28/blockchain-anonymity/</guid>
       <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Anonymity  Pseudonymity Threats  Address generation  Analyze tx Analyze wallets (if used)   Connection to real identity  KYC (Know Your Customer)     Bad use  Silk road (eBay for illegal drugs)   Tips  TOR browser Coin mixing   Zero-knowledge proof  Signature (public key - private key)   Possible solution  Sacrifice  Performance Not absolutely secure   Zerocoin  Base coin Zero coin   Zerocash    </description>
     </item>
     
     <item>
-      <title>Blockchain Questions</title>
-      <link>https://www.pseudoyu.com/en/2020/10/28/blockchain-questions/</link>
-      <pubDate>Wed, 28 Oct 2020 09:07:17 +0800</pubDate>
+      <title>Blockchain Scripts</title>
+      <link>https://www.pseudoyu.com/en/2020/10/24/blockchain-scripts/</link>
+      <pubDate>Sat, 24 Oct 2020 09:07:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2020/10/28/blockchain-questions/</guid>
-      <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Additional questions  Q: In a transaction, the receiver is not connected to the bitcoin network.  A: No need online, just records   Q: Lost private key  A: No solution Exchanges: Mt. Gox   Q: Wrong address  A: No solution   Q: OP_RETURN, return mistake, why it&amp;rsquo;s still executed?  A: OP_RETURN is in the output, so it will be verified in the next TX   Q: How to judge who find the nonce first?</description>
+      <guid>https://www.pseudoyu.com/en/2020/10/24/blockchain-scripts/</guid>
+      <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Scripts (stack based language)  TX structure  txid hash version (of bitcoin) size locktime (take effect time) vin  txid vout scriptSig (input script)  asm hex     vout  value n scriptPubKey (output script) value   blockhash confirmations time (tx time) blocktime   Transaction  P2PK (Pay to Public Key)  input script  PUSHDATA (Sig) (signed by provate key)   output script  PUSHDATA (PubKey) CHECKSIG     P2PKH (Pay to Public Key Hash)  input script  PUSHDATA (Sig) (signed by provate key) PUSHDATA (PubKey)   output script  DUP (duplicate a PubKey) HASH160 (calculate the PubKey&amp;rsquo;s hash) PUSHDATA (PubKeyHash) EQUALVERIFY CHECKSIG     P2SH (Pay to Script Hash)  redeemScript  PUSHDATA (PubKey) CHECKSIG   input script  PUSHDATA (Sig) PUSHDATA (serialized redeemScript)   output script  HASH160 PUSHDATA (redeemScriptHash) EQUAL     Proof of Burn  Destroy bitcoin      </description>
     </item>
     
     <item>
@@ -66,6 +66,25 @@
     </item>
     
     <item>
+      <title>Blockchain Protocol</title>
+      <link>https://www.pseudoyu.com/en/2020/10/21/blockchain-protocol/</link>
+      <pubDate>Wed, 21 Oct 2020 12:07:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/10/21/blockchain-protocol/</guid>
+      <description>Blockchain Technology and Applications Protocol Distributed consensus  &amp;ldquo;Impossibility result&amp;rdquo;  FLP  In an asynchronous system, if one faulty exists, there is no consensus   CAP Theorem  Consistency Availability Partition tolerance     Example  Distributed hash table    Consensus in BitCoin  Membership (decide who can vote)  Hyperledger  Fabric     Vote by computing power (based on puzzle friendly) Increasing concern  Win  Longest valid chain   Lose  Orphan block      </description>
+    </item>
+    
+    <item>
+      <title>Blockchain Data Structure</title>
+      <link>https://www.pseudoyu.com/en/2020/10/21/blockchain-data-structure/</link>
+      <pubDate>Wed, 21 Oct 2020 10:07:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/10/21/blockchain-data-structure/</guid>
+      <description>Blockchain Technology and Applications Data Structure Hash pointer (blockchain is a linked list using hash pointers)
+ Genesis block &amp;lt;- block1 &amp;lt;- block2 &amp;lt;-&amp;hellip;&amp;lt;- recent block (every block has a hash pointer) Tamper-event log  Merkle tree (using hash pointer instead of pointer)  Merkle proof (proof of membership/inclusion)  O(log(n))   Think: proof of non-membership  O(n) Sorted merkle tree: O(log(n))    Application (blockchain)  Node  Full node (fully validating node)  Block header  Version Hash of previous block header Merkle root hash (protect all nodes) Target Nonce   Block body  Transaction lists     Light node (light weight node)  Only store block headers     Problem  Double spending    </description>
+    </item>
+    
+    <item>
       <title>Blockchain Cryptography</title>
       <link>https://www.pseudoyu.com/en/2020/10/21/blockchain-cryptography/</link>
       <pubDate>Wed, 21 Oct 2020 09:07:17 +0800</pubDate>
@@ -75,30 +94,11 @@
     </item>
     
     <item>
-      <title>Blockchain Data Structure</title>
-      <link>https://www.pseudoyu.com/en/2020/10/21/blockchain-data-structure/</link>
-      <pubDate>Wed, 21 Oct 2020 09:07:17 +0800</pubDate>
+      <title>Blockchain Bitcoin Features</title>
+      <link>https://www.pseudoyu.com/en/2020/10/19/blockchain-bitcoin-features/</link>
+      <pubDate>Mon, 19 Oct 2020 20:07:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2020/10/21/blockchain-data-structure/</guid>
-      <description>Blockchain Technology and Applications Data Structure Hash pointer (blockchain is a linked list using hash pointers)
- Genesis block &amp;lt;- block1 &amp;lt;- block2 &amp;lt;-&amp;hellip;&amp;lt;- recent block (every block has a hash pointer) Tamper-event log  Merkle tree (using hash pointer instead of pointer)  Merkle proof (proof of membership/inclusion)  O(log(n))   Think: proof of non-membership  O(n) Sorted merkle tree: O(log(n))    Application (blockchain)  Node  Full node (fully validating node)  Block header  Version Hash of previous block header Merkle root hash (protect all nodes) Target Nonce   Block body  Transaction lists     Light node (light weight node)  Only store block headers     Problem  Double spending    </description>
-    </item>
-    
-    <item>
-      <title>Blockchain Protocol</title>
-      <link>https://www.pseudoyu.com/en/2020/10/21/blockchain-protocol/</link>
-      <pubDate>Wed, 21 Oct 2020 09:07:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/21/blockchain-protocol/</guid>
-      <description>Blockchain Technology and Applications Protocol Distributed consensus  &amp;ldquo;Impossibility result&amp;rdquo;  FLP  In an asynchronous system, if one faulty exists, there is no consensus   CAP Theorem  Consistency Availability Partition tolerance     Example  Distributed hash table    Consensus in BitCoin  Membership (decide who can vote)  Hyperledger  Fabric     Vote by computing power (based on puzzle friendly) Increasing concern  Win  Longest valid chain   Lose  Orphan block      </description>
-    </item>
-    
-    <item>
-      <title>Blockchain BitCoin Features</title>
-      <link>https://www.pseudoyu.com/en/2020/10/18/blockchain-bitcoin-features/</link>
-      <pubDate>Sun, 18 Oct 2020 09:07:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/18/blockchain-bitcoin-features/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/10/19/blockchain-bitcoin-features/</guid>
       <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) UTXO (Unspent Transaction Output)  Total inputs = total outputs  Quantity  21,000,000  Block reward  Coinbase transaction Cut half every 4 year  Transaction fee BitCoin network  Structure  Application layer  BitCoin blockchain   Network layer  P2P overlay network     Node  Seed node   Feature  Simple Robust Not efficient &amp;ldquo;Best effort&amp;rdquo;   Message transport  Flooding    Security  Problem  Sybil attack Forking attack Boycott Selfish mining  Reduce competition     Solution  Based on computing power (large cost) Require 6 confirmation by nodes (long time, about 1 hour)    </description>
     </item>
     

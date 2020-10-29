@@ -117,114 +117,138 @@
     </item>
     
     <item>
-      <title>Blockchain Scripts</title>
-      <link>https://www.pseudoyu.com/en/2020/10/29/blockchain-scripts/</link>
-      <pubDate>Thu, 29 Oct 2020 09:07:17 +0800</pubDate>
+      <title>Blockchain Questions</title>
+      <link>https://www.pseudoyu.com/en/2020/10/28/blockchain-questions/</link>
+      <pubDate>Wed, 28 Oct 2020 14:07:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2020/10/29/blockchain-scripts/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/10/28/blockchain-questions/</guid>
       
         <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
 &lt;h2 id=&#34;bitcoin-system-transaction-based-ledger&#34;&gt;BitCoin System (Transaction-based ledger)&lt;/h2&gt;
-&lt;h3 id=&#34;scripts-stack-based-language&#34;&gt;Scripts (stack based language)&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_scripts.svg&#34; alt=&#34;blockchain_bitcoin_scripts&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;additional-questions&#34;&gt;Additional questions&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_questions.svg&#34; alt=&#34;blockchain_bitcoin_questions&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;TX structure
+&lt;li&gt;Q: In a transaction, the receiver is not connected to the bitcoin network.
 &lt;ul&gt;
-&lt;li&gt;txid&lt;/li&gt;
-&lt;li&gt;hash&lt;/li&gt;
-&lt;li&gt;version (of bitcoin)&lt;/li&gt;
-&lt;li&gt;size&lt;/li&gt;
-&lt;li&gt;locktime (take effect time)&lt;/li&gt;
-&lt;li&gt;vin
+&lt;li&gt;A: No need online, just records&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Q: Lost private key
 &lt;ul&gt;
-&lt;li&gt;txid&lt;/li&gt;
-&lt;li&gt;vout&lt;/li&gt;
-&lt;li&gt;scriptSig (input script)
+&lt;li&gt;A: No solution&lt;/li&gt;
+&lt;li&gt;Exchanges: Mt. Gox&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Q: Wrong address
 &lt;ul&gt;
-&lt;li&gt;asm&lt;/li&gt;
-&lt;li&gt;hex&lt;/li&gt;
+&lt;li&gt;A: No solution&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Q: OP_RETURN, return mistake, why it&amp;rsquo;s still executed?
+&lt;ul&gt;
+&lt;li&gt;A: OP_RETURN is in the output, so it will be verified in the next TX&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Q: How to judge who find the nonce first?
+&lt;ul&gt;
+&lt;li&gt;A: Coinbase tx in the block&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Q: How to judge who will get the tx fee?
+&lt;ul&gt;
+&lt;li&gt;A: No need to know in advance, just calculate (output - input)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Q: How Hash pointer work in other hosts (pointer only works locally)?
+&lt;ul&gt;
+&lt;li&gt;A: Only Hash, no pointer (stored in key-value database, e.g. levelDB)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Q: Divide private key to several pieces?
+&lt;ul&gt;
+&lt;li&gt;A: Security, loss&lt;/li&gt;
+&lt;li&gt;Possible solution: MULTISIG&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Q: How can Bitcoin gets its consensus?
+&lt;ul&gt;
+&lt;li&gt;A: Actually no consensus, like fork attack, in principle/in practice&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Q: How to attrack miners?
+&lt;ul&gt;
+&lt;li&gt;A: Increase profits and lower cost, rareness&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Q: Will quantum computing influence Bitcoin?
+&lt;ul&gt;
+&lt;li&gt;A: Not in practical use&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Blockchain Anonymity</title>
+      <link>https://www.pseudoyu.com/en/2020/10/28/blockchain-anonymity/</link>
+      <pubDate>Wed, 28 Oct 2020 10:07:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/10/28/blockchain-anonymity/</guid>
+      
+        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
+&lt;h2 id=&#34;bitcoin-system-transaction-based-ledger&#34;&gt;BitCoin System (Transaction-based ledger)&lt;/h2&gt;
+&lt;h3 id=&#34;anonymity&#34;&gt;Anonymity&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_anonymity.svg&#34; alt=&#34;blockchain_bitcoin_anonymity&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pseudonymity&lt;/li&gt;
+&lt;li&gt;Threats
+&lt;ul&gt;
+&lt;li&gt;Address generation
+&lt;ul&gt;
+&lt;li&gt;Analyze tx&lt;/li&gt;
+&lt;li&gt;Analyze wallets (if used)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Connection to real identity
+&lt;ul&gt;
+&lt;li&gt;KYC (Know Your Customer)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;vout
+&lt;li&gt;Bad use
 &lt;ul&gt;
-&lt;li&gt;value&lt;/li&gt;
-&lt;li&gt;n&lt;/li&gt;
-&lt;li&gt;scriptPubKey (output script)&lt;/li&gt;
-&lt;li&gt;value&lt;/li&gt;
+&lt;li&gt;Silk road (eBay for illegal drugs)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;blockhash&lt;/li&gt;
-&lt;li&gt;confirmations&lt;/li&gt;
-&lt;li&gt;time (tx time)&lt;/li&gt;
-&lt;li&gt;blocktime&lt;/li&gt;
+&lt;li&gt;Tips
+&lt;ul&gt;
+&lt;li&gt;TOR browser&lt;/li&gt;
+&lt;li&gt;Coin mixing&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Transaction
+&lt;li&gt;Zero-knowledge proof
 &lt;ul&gt;
-&lt;li&gt;P2PK (Pay to Public Key)
-&lt;ul&gt;
-&lt;li&gt;input script
-&lt;ul&gt;
-&lt;li&gt;PUSHDATA (Sig) (signed by provate key)&lt;/li&gt;
+&lt;li&gt;Signature (public key - private key)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;output script
+&lt;li&gt;Possible solution
 &lt;ul&gt;
-&lt;li&gt;PUSHDATA (PubKey)&lt;/li&gt;
-&lt;li&gt;CHECKSIG&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;P2PKH (Pay to Public Key Hash)
+&lt;li&gt;Sacrifice
 &lt;ul&gt;
-&lt;li&gt;input script
+&lt;li&gt;Performance&lt;/li&gt;
+&lt;li&gt;Not absolutely secure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Zerocoin
 &lt;ul&gt;
-&lt;li&gt;PUSHDATA (Sig) (signed by provate key)&lt;/li&gt;
-&lt;li&gt;PUSHDATA (PubKey)&lt;/li&gt;
+&lt;li&gt;Base coin&lt;/li&gt;
+&lt;li&gt;Zero coin&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;output script
-&lt;ul&gt;
-&lt;li&gt;DUP (duplicate a PubKey)&lt;/li&gt;
-&lt;li&gt;HASH160 (calculate the PubKey&amp;rsquo;s hash)&lt;/li&gt;
-&lt;li&gt;PUSHDATA (PubKeyHash)&lt;/li&gt;
-&lt;li&gt;EQUALVERIFY&lt;/li&gt;
-&lt;li&gt;CHECKSIG&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;P2SH (Pay to Script Hash)
-&lt;ul&gt;
-&lt;li&gt;redeemScript
-&lt;ul&gt;
-&lt;li&gt;PUSHDATA (PubKey)&lt;/li&gt;
-&lt;li&gt;CHECKSIG&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;input script
-&lt;ul&gt;
-&lt;li&gt;PUSHDATA (Sig)&lt;/li&gt;
-&lt;li&gt;PUSHDATA (serialized redeemScript)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;output script
-&lt;ul&gt;
-&lt;li&gt;HASH160&lt;/li&gt;
-&lt;li&gt;PUSHDATA (redeemScriptHash)&lt;/li&gt;
-&lt;li&gt;EQUAL&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Proof of Burn
-&lt;ul&gt;
-&lt;li&gt;Destroy bitcoin&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;Zerocash&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -614,146 +638,6 @@
 &lt;li&gt;Initially cwnd = 1 MSS&lt;/li&gt;
 &lt;li&gt;Double cwnd every RTT&lt;/li&gt;
 &lt;li&gt;Done by incrementing cwnd for every ACK received&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Blockchain Anonymity</title>
-      <link>https://www.pseudoyu.com/en/2020/10/28/blockchain-anonymity/</link>
-      <pubDate>Wed, 28 Oct 2020 09:07:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/28/blockchain-anonymity/</guid>
-      
-        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
-&lt;h2 id=&#34;bitcoin-system-transaction-based-ledger&#34;&gt;BitCoin System (Transaction-based ledger)&lt;/h2&gt;
-&lt;h3 id=&#34;anonymity&#34;&gt;Anonymity&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_anonymity.svg&#34; alt=&#34;blockchain_bitcoin_anonymity&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Pseudonymity&lt;/li&gt;
-&lt;li&gt;Threats
-&lt;ul&gt;
-&lt;li&gt;Address generation
-&lt;ul&gt;
-&lt;li&gt;Analyze tx&lt;/li&gt;
-&lt;li&gt;Analyze wallets (if used)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Connection to real identity
-&lt;ul&gt;
-&lt;li&gt;KYC (Know Your Customer)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Bad use
-&lt;ul&gt;
-&lt;li&gt;Silk road (eBay for illegal drugs)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Tips
-&lt;ul&gt;
-&lt;li&gt;TOR browser&lt;/li&gt;
-&lt;li&gt;Coin mixing&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Zero-knowledge proof
-&lt;ul&gt;
-&lt;li&gt;Signature (public key - private key)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Possible solution
-&lt;ul&gt;
-&lt;li&gt;Sacrifice
-&lt;ul&gt;
-&lt;li&gt;Performance&lt;/li&gt;
-&lt;li&gt;Not absolutely secure&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Zerocoin
-&lt;ul&gt;
-&lt;li&gt;Base coin&lt;/li&gt;
-&lt;li&gt;Zero coin&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Zerocash&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Blockchain Questions</title>
-      <link>https://www.pseudoyu.com/en/2020/10/28/blockchain-questions/</link>
-      <pubDate>Wed, 28 Oct 2020 09:07:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/28/blockchain-questions/</guid>
-      
-        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
-&lt;h2 id=&#34;bitcoin-system-transaction-based-ledger&#34;&gt;BitCoin System (Transaction-based ledger)&lt;/h2&gt;
-&lt;h3 id=&#34;additional-questions&#34;&gt;Additional questions&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_questions.svg&#34; alt=&#34;blockchain_bitcoin_questions&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Q: In a transaction, the receiver is not connected to the bitcoin network.
-&lt;ul&gt;
-&lt;li&gt;A: No need online, just records&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Q: Lost private key
-&lt;ul&gt;
-&lt;li&gt;A: No solution&lt;/li&gt;
-&lt;li&gt;Exchanges: Mt. Gox&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Q: Wrong address
-&lt;ul&gt;
-&lt;li&gt;A: No solution&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Q: OP_RETURN, return mistake, why it&amp;rsquo;s still executed?
-&lt;ul&gt;
-&lt;li&gt;A: OP_RETURN is in the output, so it will be verified in the next TX&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Q: How to judge who find the nonce first?
-&lt;ul&gt;
-&lt;li&gt;A: Coinbase tx in the block&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Q: How to judge who will get the tx fee?
-&lt;ul&gt;
-&lt;li&gt;A: No need to know in advance, just calculate (output - input)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Q: How Hash pointer work in other hosts (pointer only works locally)?
-&lt;ul&gt;
-&lt;li&gt;A: Only Hash, no pointer (stored in key-value database, e.g. levelDB)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Q: Divide private key to several pieces?
-&lt;ul&gt;
-&lt;li&gt;A: Security, loss&lt;/li&gt;
-&lt;li&gt;Possible solution: MULTISIG&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Q: How can Bitcoin gets its consensus?
-&lt;ul&gt;
-&lt;li&gt;A: Actually no consensus, like fork attack, in principle/in practice&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Q: How to attrack miners?
-&lt;ul&gt;
-&lt;li&gt;A: Increase profits and lower cost, rareness&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Q: Will quantum computing influence Bitcoin?
-&lt;ul&gt;
-&lt;li&gt;A: Not in practical use&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1337,6 +1221,122 @@ no prior requirement of knowing the object when writing or compiling code&lt;/li
     </item>
     
     <item>
+      <title>Blockchain Scripts</title>
+      <link>https://www.pseudoyu.com/en/2020/10/24/blockchain-scripts/</link>
+      <pubDate>Sat, 24 Oct 2020 09:07:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/10/24/blockchain-scripts/</guid>
+      
+        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
+&lt;h2 id=&#34;bitcoin-system-transaction-based-ledger&#34;&gt;BitCoin System (Transaction-based ledger)&lt;/h2&gt;
+&lt;h3 id=&#34;scripts-stack-based-language&#34;&gt;Scripts (stack based language)&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_scripts.svg&#34; alt=&#34;blockchain_bitcoin_scripts&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;TX structure
+&lt;ul&gt;
+&lt;li&gt;txid&lt;/li&gt;
+&lt;li&gt;hash&lt;/li&gt;
+&lt;li&gt;version (of bitcoin)&lt;/li&gt;
+&lt;li&gt;size&lt;/li&gt;
+&lt;li&gt;locktime (take effect time)&lt;/li&gt;
+&lt;li&gt;vin
+&lt;ul&gt;
+&lt;li&gt;txid&lt;/li&gt;
+&lt;li&gt;vout&lt;/li&gt;
+&lt;li&gt;scriptSig (input script)
+&lt;ul&gt;
+&lt;li&gt;asm&lt;/li&gt;
+&lt;li&gt;hex&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;vout
+&lt;ul&gt;
+&lt;li&gt;value&lt;/li&gt;
+&lt;li&gt;n&lt;/li&gt;
+&lt;li&gt;scriptPubKey (output script)&lt;/li&gt;
+&lt;li&gt;value&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;blockhash&lt;/li&gt;
+&lt;li&gt;confirmations&lt;/li&gt;
+&lt;li&gt;time (tx time)&lt;/li&gt;
+&lt;li&gt;blocktime&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Transaction
+&lt;ul&gt;
+&lt;li&gt;P2PK (Pay to Public Key)
+&lt;ul&gt;
+&lt;li&gt;input script
+&lt;ul&gt;
+&lt;li&gt;PUSHDATA (Sig) (signed by provate key)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;output script
+&lt;ul&gt;
+&lt;li&gt;PUSHDATA (PubKey)&lt;/li&gt;
+&lt;li&gt;CHECKSIG&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;P2PKH (Pay to Public Key Hash)
+&lt;ul&gt;
+&lt;li&gt;input script
+&lt;ul&gt;
+&lt;li&gt;PUSHDATA (Sig) (signed by provate key)&lt;/li&gt;
+&lt;li&gt;PUSHDATA (PubKey)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;output script
+&lt;ul&gt;
+&lt;li&gt;DUP (duplicate a PubKey)&lt;/li&gt;
+&lt;li&gt;HASH160 (calculate the PubKey&amp;rsquo;s hash)&lt;/li&gt;
+&lt;li&gt;PUSHDATA (PubKeyHash)&lt;/li&gt;
+&lt;li&gt;EQUALVERIFY&lt;/li&gt;
+&lt;li&gt;CHECKSIG&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;P2SH (Pay to Script Hash)
+&lt;ul&gt;
+&lt;li&gt;redeemScript
+&lt;ul&gt;
+&lt;li&gt;PUSHDATA (PubKey)&lt;/li&gt;
+&lt;li&gt;CHECKSIG&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;input script
+&lt;ul&gt;
+&lt;li&gt;PUSHDATA (Sig)&lt;/li&gt;
+&lt;li&gt;PUSHDATA (serialized redeemScript)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;output script
+&lt;ul&gt;
+&lt;li&gt;HASH160&lt;/li&gt;
+&lt;li&gt;PUSHDATA (redeemScriptHash)&lt;/li&gt;
+&lt;li&gt;EQUAL&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Proof of Burn
+&lt;ul&gt;
+&lt;li&gt;Destroy bitcoin&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>Blockchain Fork</title>
       <link>https://www.pseudoyu.com/en/2020/10/23/blockchain-fork/</link>
       <pubDate>Fri, 23 Oct 2020 09:07:17 +0800</pubDate>
@@ -1462,6 +1462,140 @@ with binary outcome&lt;/li&gt;
     </item>
     
     <item>
+      <title>Blockchain Protocol</title>
+      <link>https://www.pseudoyu.com/en/2020/10/21/blockchain-protocol/</link>
+      <pubDate>Wed, 21 Oct 2020 12:07:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/10/21/blockchain-protocol/</guid>
+      
+        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
+&lt;h2 id=&#34;protocol&#34;&gt;Protocol&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_protocol.svg&#34; alt=&#34;blockchain_protocol&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;distributed-consensus&#34;&gt;Distributed consensus&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;Impossibility result&amp;rdquo;
+&lt;ul&gt;
+&lt;li&gt;FLP
+&lt;ul&gt;
+&lt;li&gt;In an asynchronous system, if one faulty exists, there is no consensus&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;CAP Theorem
+&lt;ul&gt;
+&lt;li&gt;Consistency&lt;/li&gt;
+&lt;li&gt;Availability&lt;/li&gt;
+&lt;li&gt;Partition tolerance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Example
+&lt;ul&gt;
+&lt;li&gt;Distributed hash table&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;consensus-in-bitcoin&#34;&gt;Consensus in BitCoin&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Membership (decide who can vote)
+&lt;ul&gt;
+&lt;li&gt;Hyperledger
+&lt;ul&gt;
+&lt;li&gt;Fabric&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Vote by computing power (based on puzzle friendly)&lt;/li&gt;
+&lt;li&gt;Increasing concern
+&lt;ul&gt;
+&lt;li&gt;Win
+&lt;ul&gt;
+&lt;li&gt;Longest valid chain&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Lose
+&lt;ul&gt;
+&lt;li&gt;Orphan block&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Blockchain Data Structure</title>
+      <link>https://www.pseudoyu.com/en/2020/10/21/blockchain-data-structure/</link>
+      <pubDate>Wed, 21 Oct 2020 10:07:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/10/21/blockchain-data-structure/</guid>
+      
+        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
+&lt;h2 id=&#34;data-structure&#34;&gt;Data Structure&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_data_structure.svg&#34; alt=&#34;blockchain_data_structure&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;hash-pointer-blockchain-is-a-linked-list&#34;&gt;Hash pointer (blockchain is a linked list&lt;/h3&gt;
+&lt;p&gt;using hash pointers)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Genesis block &amp;lt;- block1 &amp;lt;- block2 &amp;lt;-&amp;hellip;&amp;lt;- recent block (every block has a hash pointer)&lt;/li&gt;
+&lt;li&gt;Tamper-event log&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;merkle-tree-using-hash-pointer-instead-of-pointer&#34;&gt;Merkle tree (using hash pointer instead of pointer)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Merkle proof (proof of membership/inclusion)
+&lt;ul&gt;
+&lt;li&gt;O(log(n))&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Think: proof of non-membership
+&lt;ul&gt;
+&lt;li&gt;O(n)&lt;/li&gt;
+&lt;li&gt;Sorted merkle tree: O(log(n))&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;application-blockchain&#34;&gt;Application (blockchain)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Node
+&lt;ul&gt;
+&lt;li&gt;Full node (fully validating node)
+&lt;ul&gt;
+&lt;li&gt;Block header
+&lt;ul&gt;
+&lt;li&gt;Version&lt;/li&gt;
+&lt;li&gt;Hash of previous block header&lt;/li&gt;
+&lt;li&gt;Merkle root hash (protect all nodes)&lt;/li&gt;
+&lt;li&gt;Target&lt;/li&gt;
+&lt;li&gt;Nonce&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Block body
+&lt;ul&gt;
+&lt;li&gt;Transaction lists&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Light node (light weight node)
+&lt;ul&gt;
+&lt;li&gt;Only store block headers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Problem
+&lt;ul&gt;
+&lt;li&gt;Double spending&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>Blockchain Cryptography</title>
       <link>https://www.pseudoyu.com/en/2020/10/21/blockchain-cryptography/</link>
       <pubDate>Wed, 21 Oct 2020 09:07:17 +0800</pubDate>
@@ -1542,132 +1676,82 @@ with binary outcome&lt;/li&gt;
     </item>
     
     <item>
-      <title>Blockchain Data Structure</title>
-      <link>https://www.pseudoyu.com/en/2020/10/21/blockchain-data-structure/</link>
-      <pubDate>Wed, 21 Oct 2020 09:07:17 +0800</pubDate>
+      <title>Blockchain Bitcoin Features</title>
+      <link>https://www.pseudoyu.com/en/2020/10/19/blockchain-bitcoin-features/</link>
+      <pubDate>Mon, 19 Oct 2020 20:07:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2020/10/21/blockchain-data-structure/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/10/19/blockchain-bitcoin-features/</guid>
       
         <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
-&lt;h2 id=&#34;data-structure&#34;&gt;Data Structure&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_data_structure.svg&#34; alt=&#34;blockchain_data_structure&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;hash-pointer-blockchain-is-a-linked-list&#34;&gt;Hash pointer (blockchain is a linked list&lt;/h3&gt;
-&lt;p&gt;using hash pointers)&lt;/p&gt;
+&lt;h2 id=&#34;bitcoin-system-transaction-based-ledger&#34;&gt;BitCoin System (Transaction-based ledger)&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_features.svg&#34; alt=&#34;blockchain_bitcoin_features&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;utxo-unspent-transaction-output&#34;&gt;UTXO (Unspent Transaction Output)&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Genesis block &amp;lt;- block1 &amp;lt;- block2 &amp;lt;-&amp;hellip;&amp;lt;- recent block (every block has a hash pointer)&lt;/li&gt;
-&lt;li&gt;Tamper-event log&lt;/li&gt;
+&lt;li&gt;Total inputs = total outputs&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;merkle-tree-using-hash-pointer-instead-of-pointer&#34;&gt;Merkle tree (using hash pointer instead of pointer)&lt;/h3&gt;
+&lt;h3 id=&#34;quantity&#34;&gt;Quantity&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Merkle proof (proof of membership/inclusion)
+&lt;li&gt;21,000,000&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;block-reward&#34;&gt;Block reward&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;O(log(n))&lt;/li&gt;
+&lt;li&gt;Coinbase transaction&lt;/li&gt;
+&lt;li&gt;Cut half every 4 year&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;transaction-fee&#34;&gt;Transaction fee&lt;/h3&gt;
+&lt;h3 id=&#34;bitcoin-network&#34;&gt;BitCoin network&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Structure
+&lt;ul&gt;
+&lt;li&gt;Application layer
+&lt;ul&gt;
+&lt;li&gt;BitCoin blockchain&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Think: proof of non-membership
+&lt;li&gt;Network layer
 &lt;ul&gt;
-&lt;li&gt;O(n)&lt;/li&gt;
-&lt;li&gt;Sorted merkle tree: O(log(n))&lt;/li&gt;
+&lt;li&gt;P2P overlay network&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;application-blockchain&#34;&gt;Application (blockchain)&lt;/h3&gt;
-&lt;ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Node
 &lt;ul&gt;
-&lt;li&gt;Full node (fully validating node)
+&lt;li&gt;Seed node&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Feature
 &lt;ul&gt;
-&lt;li&gt;Block header
+&lt;li&gt;Simple&lt;/li&gt;
+&lt;li&gt;Robust&lt;/li&gt;
+&lt;li&gt;Not efficient&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Best effort&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Message transport
 &lt;ul&gt;
-&lt;li&gt;Version&lt;/li&gt;
-&lt;li&gt;Hash of previous block header&lt;/li&gt;
-&lt;li&gt;Merkle root hash (protect all nodes)&lt;/li&gt;
-&lt;li&gt;Target&lt;/li&gt;
-&lt;li&gt;Nonce&lt;/li&gt;
+&lt;li&gt;Flooding&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Block body
+&lt;/ul&gt;
+&lt;h3 id=&#34;security&#34;&gt;Security&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Transaction lists&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Light node (light weight node)
-&lt;ul&gt;
-&lt;li&gt;Only store block headers&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;li&gt;Problem
 &lt;ul&gt;
-&lt;li&gt;Double spending&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Blockchain Protocol</title>
-      <link>https://www.pseudoyu.com/en/2020/10/21/blockchain-protocol/</link>
-      <pubDate>Wed, 21 Oct 2020 09:07:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/21/blockchain-protocol/</guid>
-      
-        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
-&lt;h2 id=&#34;protocol&#34;&gt;Protocol&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_protocol.svg&#34; alt=&#34;blockchain_protocol&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;distributed-consensus&#34;&gt;Distributed consensus&lt;/h3&gt;
+&lt;li&gt;Sybil attack&lt;/li&gt;
+&lt;li&gt;Forking attack&lt;/li&gt;
+&lt;li&gt;Boycott&lt;/li&gt;
+&lt;li&gt;Selfish mining
 &lt;ul&gt;
-&lt;li&gt;&amp;ldquo;Impossibility result&amp;rdquo;
-&lt;ul&gt;
-&lt;li&gt;FLP
-&lt;ul&gt;
-&lt;li&gt;In an asynchronous system, if one faulty exists, there is no consensus&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;CAP Theorem
-&lt;ul&gt;
-&lt;li&gt;Consistency&lt;/li&gt;
-&lt;li&gt;Availability&lt;/li&gt;
-&lt;li&gt;Partition tolerance&lt;/li&gt;
+&lt;li&gt;Reduce competition&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Example
+&lt;li&gt;Solution
 &lt;ul&gt;
-&lt;li&gt;Distributed hash table&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;consensus-in-bitcoin&#34;&gt;Consensus in BitCoin&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Membership (decide who can vote)
-&lt;ul&gt;
-&lt;li&gt;Hyperledger
-&lt;ul&gt;
-&lt;li&gt;Fabric&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Vote by computing power (based on puzzle friendly)&lt;/li&gt;
-&lt;li&gt;Increasing concern
-&lt;ul&gt;
-&lt;li&gt;Win
-&lt;ul&gt;
-&lt;li&gt;Longest valid chain&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Lose
-&lt;ul&gt;
-&lt;li&gt;Orphan block&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;Based on computing power (large cost)&lt;/li&gt;
+&lt;li&gt;Require 6 confirmation by nodes (long time, about 1 hour)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -2923,90 +3007,6 @@ with binary outcome&lt;/li&gt;
 &lt;li&gt;对系统质量苛刻要求&lt;/li&gt;
 &lt;li&gt;识别和设计通用框架及模块&lt;/li&gt;
 &lt;li&gt;识别业务关键需求和设计领域模型&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Blockchain BitCoin Features</title>
-      <link>https://www.pseudoyu.com/en/2020/10/18/blockchain-bitcoin-features/</link>
-      <pubDate>Sun, 18 Oct 2020 09:07:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/18/blockchain-bitcoin-features/</guid>
-      
-        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
-&lt;h2 id=&#34;bitcoin-system-transaction-based-ledger&#34;&gt;BitCoin System (Transaction-based ledger)&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_features.svg&#34; alt=&#34;blockchain_bitcoin_features&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;utxo-unspent-transaction-output&#34;&gt;UTXO (Unspent Transaction Output)&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Total inputs = total outputs&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;quantity&#34;&gt;Quantity&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;21,000,000&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;block-reward&#34;&gt;Block reward&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Coinbase transaction&lt;/li&gt;
-&lt;li&gt;Cut half every 4 year&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;transaction-fee&#34;&gt;Transaction fee&lt;/h3&gt;
-&lt;h3 id=&#34;bitcoin-network&#34;&gt;BitCoin network&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Structure
-&lt;ul&gt;
-&lt;li&gt;Application layer
-&lt;ul&gt;
-&lt;li&gt;BitCoin blockchain&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Network layer
-&lt;ul&gt;
-&lt;li&gt;P2P overlay network&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Node
-&lt;ul&gt;
-&lt;li&gt;Seed node&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Feature
-&lt;ul&gt;
-&lt;li&gt;Simple&lt;/li&gt;
-&lt;li&gt;Robust&lt;/li&gt;
-&lt;li&gt;Not efficient&lt;/li&gt;
-&lt;li&gt;&amp;ldquo;Best effort&amp;rdquo;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Message transport
-&lt;ul&gt;
-&lt;li&gt;Flooding&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;security&#34;&gt;Security&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Problem
-&lt;ul&gt;
-&lt;li&gt;Sybil attack&lt;/li&gt;
-&lt;li&gt;Forking attack&lt;/li&gt;
-&lt;li&gt;Boycott&lt;/li&gt;
-&lt;li&gt;Selfish mining
-&lt;ul&gt;
-&lt;li&gt;Reduce competition&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Solution
-&lt;ul&gt;
-&lt;li&gt;Based on computing power (large cost)&lt;/li&gt;
-&lt;li&gt;Require 6 confirmation by nodes (long time, about 1 hour)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       

@@ -1200,6 +1200,367 @@ with binary outcome&lt;/li&gt;
         <description>&lt;h1 id=&#34;icom6045-fundamentals-of-e-commerce-security&#34;&gt;ICOM6045 Fundamentals of E-Commerce Security&lt;/h1&gt;
 &lt;h2 id=&#34;topic-1-cryptography&#34;&gt;Topic 1 Cryptography&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/cryptography.svg&#34; alt=&#34;cryptography&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;definition&#34;&gt;Definition&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Process of transforming information to make it unreadable to anyone except those possessing the key&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;purpose&#34;&gt;Purpose&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Data confidentiality&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;transpositionspermutations&#34;&gt;Transpositions/Permutations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;An encryption in which the letters of the message are rearranged&lt;/li&gt;
+&lt;li&gt;Function
+&lt;ul&gt;
+&lt;li&gt;Try to break established patterns&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Example
+&lt;ul&gt;
+&lt;li&gt;Columnar transposition
+&lt;ul&gt;
+&lt;li&gt;Rearrangement of the characters of the plaintext into columns&lt;/li&gt;
+&lt;li&gt;Based on characteristic patterns of pairs of adjacent letters, called digrams&lt;/li&gt;
+&lt;li&gt;Analysis
+&lt;ul&gt;
+&lt;li&gt;Compute the letter frequencies
+&lt;ul&gt;
+&lt;li&gt;Break the text into columns by compare a block of ciphertext characters against characters successively farther away in the ciphertext.&lt;/li&gt;
+&lt;li&gt;
+&lt;ol&gt;
+&lt;li&gt;Do common digrams appear.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Do most of the digram look reasonable&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Complexity
+&lt;ul&gt;
+&lt;li&gt;No additional work&lt;/li&gt;
+&lt;li&gt;Require storage for all characters of the message&lt;/li&gt;
+&lt;li&gt;Not good for long message&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Alternative
+&lt;ul&gt;
+&lt;li&gt;Permute the characters of the plaintext with a fixed period d&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;confusion&#34;&gt;Confusion&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Cipher that makes relationship between the plaintext/key pair and the ciphertext as complex as possible&lt;/li&gt;
+&lt;li&gt;Good confusion
+&lt;ul&gt;
+&lt;li&gt;poly-alphabetic substitution with a long key&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Bad confusion
+&lt;ul&gt;
+&lt;li&gt;Caesar cipher&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;diffusion&#34;&gt;Diffusion&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Cipher that spreads the information from the plaintext over the entire ciphertext&lt;/li&gt;
+&lt;li&gt;Change in the plaintext should affect many parts of the ciphertext&lt;/li&gt;
+&lt;li&gt;Good diffusion
+&lt;ul&gt;
+&lt;li&gt;DES&lt;/li&gt;
+&lt;li&gt;Transposition cipher&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Bad diffusion
+&lt;ul&gt;
+&lt;li&gt;Substitutin cipher&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;cryptanalysis&#34;&gt;Cryptanalysis&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Index of coincidence (A tool to rate how wella particular distribution
+matches the distribution of letter in English)&lt;/li&gt;
+&lt;li&gt;Procedure
+&lt;ul&gt;
+&lt;li&gt;Measure of roughness(variance)&lt;/li&gt;
+&lt;li&gt;If the distribution is perfectly flat&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Examine
+&lt;ul&gt;
+&lt;li&gt;Is it encrypted&lt;/li&gt;
+&lt;li&gt;How is it encrypted&lt;/li&gt;
+&lt;li&gt;What is the key&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;types&#34;&gt;Types&lt;/h2&gt;
+&lt;h3 id=&#34;symmetric-key-encryption&#34;&gt;Symmetric Key Encryption&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Procedure (Single key)
+&lt;ul&gt;
+&lt;li&gt;Original message&lt;/li&gt;
+&lt;li&gt;Key -&amp;gt; Encryption algorithm&lt;/li&gt;
+&lt;li&gt;Encrypted message&lt;/li&gt;
+&lt;li&gt;Encrypted message sent over Internet&lt;/li&gt;
+&lt;li&gt;Encrypted message arrives destination&lt;/li&gt;
+&lt;li&gt;Key -&amp;gt; Decryption algorithm&lt;/li&gt;
+&lt;li&gt;Original message&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Algorithms
+&lt;ul&gt;
+&lt;li&gt;DES(Data Encryption Standard)
+&lt;ul&gt;
+&lt;li&gt;Most commonly used block cipher&lt;/li&gt;
+&lt;li&gt;Purpose
+&lt;ul&gt;
+&lt;li&gt;Facilitate hardware implementation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Form
+&lt;ul&gt;
+&lt;li&gt;A block cipher with 56-bit key (64-bit including parity bits)&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Feistel&amp;rdquo; network structure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;AES(Advanced Encryption Standard)&lt;/li&gt;
+&lt;li&gt;RC4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Stream cipher
+&lt;ul&gt;
+&lt;li&gt;Definition
+&lt;ul&gt;
+&lt;li&gt;Convert one symbol of plaintext immediately into a symbol of ciphertext&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Advantage
+&lt;ul&gt;
+&lt;li&gt;Speed of transformation&lt;/li&gt;
+&lt;li&gt;Low error propagation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Disadvantage
+&lt;ul&gt;
+&lt;li&gt;Low diffusion&lt;/li&gt;
+&lt;li&gt;Possible for malicious insertions and modifications&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Block cipher
+&lt;ul&gt;
+&lt;li&gt;Definition
+&lt;ul&gt;
+&lt;li&gt;Encrypt a group of plaintext symbol as one block&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Advantage
+&lt;ul&gt;
+&lt;li&gt;Diffusion&lt;/li&gt;
+&lt;li&gt;Immunity to insertion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Disadvantage
+&lt;ul&gt;
+&lt;li&gt;Slowness of encryption&lt;/li&gt;
+&lt;li&gt;Error propagation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Kasiski method
+&lt;ul&gt;
+&lt;li&gt;Search for repeated sequence of characters&lt;/li&gt;
+&lt;li&gt;Example
+&lt;ul&gt;
+&lt;li&gt;3 occurrences of the 11-character sequence&lt;/li&gt;
+&lt;li&gt;Distance between first 2 sequence = 141- 90 = 51&lt;/li&gt;
+&lt;li&gt;Distance between second 2 sequences = 213 - 141 = 72&lt;/li&gt;
+&lt;li&gt;The common divisor between 51 and 72 is 3&lt;/li&gt;
+&lt;li&gt;Estimated key length is 3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Perfect&amp;rdquo; substitution cipher
+&lt;ul&gt;
+&lt;li&gt;Definition
+&lt;ul&gt;
+&lt;li&gt;Many alphabets for an unrecognizable distribution&lt;/li&gt;
+&lt;li&gt;No apparent pattern for the choice of an alphabet at a particular point&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Function
+&lt;ul&gt;
+&lt;li&gt;Confuse the Kasiski method&lt;/li&gt;
+&lt;li&gt;Index of coincidence would be close to 0.038&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Application
+&lt;ul&gt;
+&lt;li&gt;Caesar cipher
+&lt;ul&gt;
+&lt;li&gt;Definition
+&lt;ul&gt;
+&lt;li&gt;The message is enciphered with a 27-symbol alphabet (A-&amp;gt;Z) and the blank, the blank is translated to itself&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Permutation
+&lt;ul&gt;
+&lt;li&gt;Each letter is translated to a fixed number of letters after it in the alphabet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The &amp;ldquo;real&amp;rdquo; Caessar cipher by Julius Caesar used a shift of 3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Mono-alphabetic substitutions
+&lt;ul&gt;
+&lt;li&gt;Definition
+&lt;ul&gt;
+&lt;li&gt;The alphabet is scrambled, and each plaintext letter maps to a unique ciphertext letter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Permutation
+&lt;ul&gt;
+&lt;li&gt;A permutation is a recording of the elements of a series&lt;/li&gt;
+&lt;li&gt;A permutation can be a function&lt;/li&gt;
+&lt;li&gt;Some permutations can&amp;rsquo;t be represented as simple equation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Weakness
+&lt;ul&gt;
+&lt;li&gt;Frequency distribution&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Polyalphabetic substitutions
+&lt;ul&gt;
+&lt;li&gt;Definition
+&lt;ul&gt;
+&lt;li&gt;Combine distributions that are high with ones that are low&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Analysis
+&lt;ul&gt;
+&lt;li&gt;Use Kasiski method to predict likely numbers of enciphering alphabets&lt;/li&gt;
+&lt;li&gt;If no numbers emerge fairly regularly, may not a poly-alphabetic substitution&lt;/li&gt;
+&lt;li&gt;Compute the index of coincidence to validate the predictions from step 1&lt;/li&gt;
+&lt;li&gt;When step 1 and 3 indicate a promising value, separate the ciphertext into appropriate subsets and independently compute index of coincidence of each subset&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Example
+&lt;ul&gt;
+&lt;li&gt;Rotor Machines&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Vigenere cipher
+&lt;ul&gt;
+&lt;li&gt;Definition
+&lt;ul&gt;
+&lt;li&gt;Vigenere tableau
+&lt;ul&gt;
+&lt;li&gt;A collection of 26 permutations&lt;/li&gt;
+&lt;li&gt;Written in a 26*26 matrix&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Permutation
+&lt;ul&gt;
+&lt;li&gt;Use a key (keyword) -&amp;gt; select  particular permutaion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;One-time pad
+&lt;ul&gt;
+&lt;li&gt;Definition
+&lt;ul&gt;
+&lt;li&gt;Based on a large nonrepeating set of keys (written on paper and glued together into a pad)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Procedure
+&lt;ul&gt;
+&lt;li&gt;Sender writes key one time above the letters of the plaintext&lt;/li&gt;
+&lt;li&gt;Encipher the plaintext with a chart like Vigenere tableau&lt;/li&gt;
+&lt;li&gt;Sender destroys the key&lt;/li&gt;
+&lt;li&gt;Receiver takes the appropriate number of keys&lt;/li&gt;
+&lt;li&gt;Decipher the message&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Example
+&lt;ul&gt;
+&lt;li&gt;Vernam cipher
+&lt;ul&gt;
+&lt;li&gt;Involves an arbitrarily long nonrepeating sequence of numbers that are combined with the plaintext&lt;/li&gt;
+&lt;li&gt;Possible attack
+&lt;ul&gt;
+&lt;li&gt;Random number generator&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;public-key-encryption&#34;&gt;Public Key Encryption&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Procedure (Everyone has 2 keys)
+&lt;ul&gt;
+&lt;li&gt;Original message&lt;/li&gt;
+&lt;li&gt;Encryption key -&amp;gt; Encryption algorithm
+&lt;ul&gt;
+&lt;li&gt;Plaintext &amp;lt;- Encryption
+&lt;ul&gt;
+&lt;li&gt;The original form of a message&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Ciphertext &amp;lt;- Decryption
+&lt;ul&gt;
+&lt;li&gt;The encrypted form a message&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Original plaintext&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Encrypted message&lt;/li&gt;
+&lt;li&gt;Encrypted message sent over Internet&lt;/li&gt;
+&lt;li&gt;Encrypted message arrives destination&lt;/li&gt;
+&lt;li&gt;Decryption key -&amp;gt; Decryption algorithm&lt;/li&gt;
+&lt;li&gt;Original message&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Algorithms
+&lt;ul&gt;
+&lt;li&gt;RSA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 </description>
       
     </item>

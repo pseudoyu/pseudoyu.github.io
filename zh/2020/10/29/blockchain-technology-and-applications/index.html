@@ -9,8 +9,8 @@
 
   <meta name="keywords" content="Hugo, theme, den" />
 
-<link rel="canonical" href="https://www.pseudoyu.com/zh/2020/10/28/blockchain-technology-and-applications/" />
-<link rel="alternate" href="https://www.pseudoyu.com/en/2020/10/28/blockchain-technology-and-applications/" hreflang="en">
+<link rel="canonical" href="https://www.pseudoyu.com/zh/2020/10/29/blockchain-technology-and-applications/" />
+<link rel="alternate" href="https://www.pseudoyu.com/en/2020/10/29/blockchain-technology-and-applications/" hreflang="en">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -22,14 +22,14 @@
 <meta property="og:title" content="Blockchain Technology and Applications" />
 <meta property="og:description" content="Blockchain Technology and Applications Blockchain Technology and Applications Cryptography Cryptographic hash function  Application  Digital commitment (digital equivalent of a sealed envelop)  H(x || nonce)   SHA-256 (used in bitcoin)   Features  Collision resistance  x != y, H(x) = H(y) MD5 (proved bad)   Hiding  x -&gt; H(x), H(x) !-&gt; x   Puzzle friendly  H(block header) &lt;= target Keep trying nonce, no shortcuts Difficult to solve, but easy to verify Application  PoW (Proof of Work)        Encryption  Symmetric encryption  Use the same one key Not secure to transport encryption key   Asymmetric encryption (public key encryption)  Use two keys (one for encryption, another for decryption) A good source of randomness (assume) Application  Signature (used in bitcoin)      Data Structure Hash pointer (blockchain is a linked list using hash pointers)" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.pseudoyu.com/zh/2020/10/28/blockchain-technology-and-applications/" />
-<meta property="article:published_time" content="2020-10-28T23:30:17+08:00" />
-<meta property="article:modified_time" content="2020-10-28T23:30:17+08:00" />
+<meta property="og:url" content="https://www.pseudoyu.com/zh/2020/10/29/blockchain-technology-and-applications/" />
+<meta property="article:published_time" content="2020-10-29T09:07:17+08:00" />
+<meta property="article:modified_time" content="2020-10-29T09:07:17+08:00" />
 <meta itemprop="name" content="Blockchain Technology and Applications">
 <meta itemprop="description" content="Blockchain Technology and Applications Blockchain Technology and Applications Cryptography Cryptographic hash function  Application  Digital commitment (digital equivalent of a sealed envelop)  H(x || nonce)   SHA-256 (used in bitcoin)   Features  Collision resistance  x != y, H(x) = H(y) MD5 (proved bad)   Hiding  x -&gt; H(x), H(x) !-&gt; x   Puzzle friendly  H(block header) &lt;= target Keep trying nonce, no shortcuts Difficult to solve, but easy to verify Application  PoW (Proof of Work)        Encryption  Symmetric encryption  Use the same one key Not secure to transport encryption key   Asymmetric encryption (public key encryption)  Use two keys (one for encryption, another for decryption) A good source of randomness (assume) Application  Signature (used in bitcoin)      Data Structure Hash pointer (blockchain is a linked list using hash pointers)">
-<meta itemprop="datePublished" content="2020-10-28T23:30:17+08:00" />
-<meta itemprop="dateModified" content="2020-10-28T23:30:17+08:00" />
-<meta itemprop="wordCount" content="737">
+<meta itemprop="datePublished" content="2020-10-29T09:07:17+08:00" />
+<meta itemprop="dateModified" content="2020-10-29T09:07:17+08:00" />
+<meta itemprop="wordCount" content="809">
 
 
 
@@ -114,7 +114,7 @@
         <p class="header-date">作者：
           pseudoyu /
         
-        2020-10-28
+        2020-10-29
           / 分类：
           <a href="https://www.pseudoyu.com/zh/category/notes/">Notes</a>
         </p>
@@ -139,7 +139,7 @@
 <p class="float-right translations">
     <i class="fas fa-language" aria-hidden="true"></i>
     翻译： 
-    <a href="https://www.pseudoyu.com/en/2020/10/28/blockchain-technology-and-applications/">EN</a>
+    <a href="https://www.pseudoyu.com/en/2020/10/29/blockchain-technology-and-applications/">EN</a>
 </p>
 
 
@@ -704,8 +704,21 @@ A: OP_RETURN is in the output, so it will be verified in the next TX</li>
 A: Coinbase tx in the block</li>
 <li>Q: How to judge who will get the tx fee?
 A: No need to know in advance, just calculate (output - input)</li>
+<li>Q: How Hash pointer work in other hosts (pointer only works locally)?
+A: Only Hash, no pointer (stored in key-value database, e.g. levelDB)</li>
+<li>Q: Divide private key to several pieces?
+A: Security, loss
+<ul>
+<li>Possible solution: MULTISIG</li>
 </ul>
-<h2 id="ethereum-system-account-based-ledger">Ethereum System (Account-based ledger)</h2>
+</li>
+<li>Q: How can Bitcoin gets its consensus?
+A: Actually no consensus, like fork attack, in principle/in practice</li>
+<li>Q: How to attrack miners?
+A: Increase profits and lower cost, rareness</li>
+<li>Q: Will quantum computing influence Bitcoin?
+A: Not in practical use</li>
+</ul>
 
   </article>
 

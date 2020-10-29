@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 28 Oct 2020 23:30:17 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2020 09:07:17 +0800</lastBuildDate>
     
     <atom:link href="https://www.pseudoyu.com/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -65,10 +65,10 @@
     
     <item>
       <title>Blockchain Technology and Applications</title>
-      <link>https://www.pseudoyu.com/en/2020/10/28/blockchain-technology-and-applications/</link>
-      <pubDate>Wed, 28 Oct 2020 23:30:17 +0800</pubDate>
+      <link>https://www.pseudoyu.com/en/2020/10/29/blockchain-technology-and-applications/</link>
+      <pubDate>Thu, 29 Oct 2020 09:07:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2020/10/28/blockchain-technology-and-applications/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/10/29/blockchain-technology-and-applications/</guid>
       
         <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_technology_and_applications.svg&#34; alt=&#34;blockchain_technology_and_applications&#34;&gt;&lt;/p&gt;
@@ -622,8 +622,21 @@ A: OP_RETURN is in the output, so it will be verified in the next TX&lt;/li&gt;
 A: Coinbase tx in the block&lt;/li&gt;
 &lt;li&gt;Q: How to judge who will get the tx fee?
 A: No need to know in advance, just calculate (output - input)&lt;/li&gt;
+&lt;li&gt;Q: How Hash pointer work in other hosts (pointer only works locally)?
+A: Only Hash, no pointer (stored in key-value database, e.g. levelDB)&lt;/li&gt;
+&lt;li&gt;Q: Divide private key to several pieces?
+A: Security, loss
+&lt;ul&gt;
+&lt;li&gt;Possible solution: MULTISIG&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;ethereum-system-account-based-ledger&#34;&gt;Ethereum System (Account-based ledger)&lt;/h2&gt;
+&lt;/li&gt;
+&lt;li&gt;Q: How can Bitcoin gets its consensus?
+A: Actually no consensus, like fork attack, in principle/in practice&lt;/li&gt;
+&lt;li&gt;Q: How to attrack miners?
+A: Increase profits and lower cost, rareness&lt;/li&gt;
+&lt;li&gt;Q: Will quantum computing influence Bitcoin?
+A: Not in practical use&lt;/li&gt;
+&lt;/ul&gt;
 </description>
       
     </item>

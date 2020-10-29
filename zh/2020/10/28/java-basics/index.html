@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="zh" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta name="generator" content="Hugo 0.74.3" />
+  <meta charset="utf-8">
+  <title>Java Basics · Pseudoyu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Java Basics Java Basics Data Type Primitive type  byte/8 char/16 short/16 int/32 float/32 long/64 double/64 boolean/~  Value  true(1) false(0)   JVM will convert it to int when compiling    Types &amp;lt;-&amp;gt; Warpper class  boolean - Boolean byte - Byte char - Character float - Float int - Integer long - Long short - Short double - Double  Autoboxing  Use valueOf() method primitive types -&amp;gt; corresponding object wrapper classes (e." />
+
+  <meta name="keywords" content="Hugo, theme, den" />
+
+<link rel="canonical" href="https://www.pseudoyu.com/zh/2020/10/28/java-basics/" />
+<link rel="alternate" href="https://www.pseudoyu.com/en/2020/10/28/java-basics/" hreflang="en">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.pseudoyu.com/css/den.css">
+
+
+
+
+<meta property="og:title" content="Java Basics" />
+<meta property="og:description" content="Java Basics Java Basics Data Type Primitive type  byte/8 char/16 short/16 int/32 float/32 long/64 double/64 boolean/~  Value  true(1) false(0)   JVM will convert it to int when compiling    Types &lt;-&gt; Warpper class  boolean - Boolean byte - Byte char - Character float - Float int - Integer long - Long short - Short double - Double  Autoboxing  Use valueOf() method primitive types -&gt; corresponding object wrapper classes (e." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.pseudoyu.com/zh/2020/10/28/java-basics/" />
+<meta property="article:published_time" content="2020-10-28T08:50:17+08:00" />
+<meta property="article:modified_time" content="2020-10-28T08:50:17+08:00" />
+<meta itemprop="name" content="Java Basics">
+<meta itemprop="description" content="Java Basics Java Basics Data Type Primitive type  byte/8 char/16 short/16 int/32 float/32 long/64 double/64 boolean/~  Value  true(1) false(0)   JVM will convert it to int when compiling    Types &lt;-&gt; Warpper class  boolean - Boolean byte - Byte char - Character float - Float int - Integer long - Long short - Short double - Double  Autoboxing  Use valueOf() method primitive types -&gt; corresponding object wrapper classes (e.">
+<meta itemprop="datePublished" content="2020-10-28T08:50:17+08:00" />
+<meta itemprop="dateModified" content="2020-10-28T08:50:17+08:00" />
+<meta itemprop="wordCount" content="1050">
+
+
+
+<meta itemprop="keywords" content="notes,technology,programming,java,github,basic," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Java Basics"/>
+<meta name="twitter:description" content="Java Basics Java Basics Data Type Primitive type  byte/8 char/16 short/16 int/32 float/32 long/64 double/64 boolean/~  Value  true(1) false(0)   JVM will convert it to int when compiling    Types &lt;-&gt; Warpper class  boolean - Boolean byte - Byte char - Character float - Float int - Integer long - Long short - Short double - Double  Autoboxing  Use valueOf() method primitive types -&gt; corresponding object wrapper classes (e."/>
+</head>
+<body>
+  
+  <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://www.pseudoyu.com/images/background.jpg'); background-position: center; background-size: cover;">
+  <div class="container">
+  <nav class="header-nav navbar navbar-expand-md navbar-dark light-dark">
+    <div class="header-logo navbar-brand">
+      
+        <a class="float-left" href="https://www.pseudoyu.com/zh/">
+      
+        
+        <img class="mr20 header-logo-image" src="https://www.pseudoyu.com/images/fly.png" alt="logo">
+        
+        
+          Pseudoyu
+         
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav-menu collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/ideas/">思考</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/notes/">笔记</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/projects/">项目</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              <a class="nav-link" href="https://www.pseudoyu.com/zh/about/">关于</a>
+            
+          </li>
+        
+        
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.pseudoyu.com/en/"><i class="fas fa-globe"></i> English</a>
+            </li>
+          
+          
+        
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container header-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="header-content">
+        <h1 class="header-title">Java Basics</h1>
+        <p class="header-date">作者：
+          pseudoyu /
+        
+        2020-10-28
+          / 分类：
+          <a href="https://www.pseudoyu.com/zh/category/notes/">Notes</a>
+        </p>
+        
+        <div class="header-underline"></div>
+        
+          <div class="clearfix"></div>
+          <p class="float-right header-tags">
+              <i class="fas fa-tags" aria-hidden="true"></i>
+              <a href="https://www.pseudoyu.com/zh/tag/basic/">basic</a>, 
+                <a href="https://www.pseudoyu.com/zh/tag/github/">github</a>, 
+                <a href="https://www.pseudoyu.com/zh/tag/java/">java</a>, 
+                <a href="https://www.pseudoyu.com/zh/tag/notes/">notes</a>, 
+                <a href="https://www.pseudoyu.com/zh/tag/programming/">programming</a>, 
+                <a href="https://www.pseudoyu.com/zh/tag/technology/">technology</a>
+          </p>
+        
+        <div class="clearfix"></div>
+<p class="float-right translations">
+    <i class="fas fa-language" aria-hidden="true"></i>
+    翻译： 
+    <a href="https://www.pseudoyu.com/en/2020/10/28/java-basics/">EN</a>
+</p>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <main>
+<div class="container content">
+  <article>
+  <h1 id="java-basics">Java Basics</h1>
+<p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/java_basics.svg" alt="java_basics"></p>
+<h1 id="java-basics-1">Java Basics</h1>
+<h2 id="data-type">Data Type</h2>
+<h3 id="primitive-type">Primitive type</h3>
+<ul>
+<li>byte/8</li>
+<li>char/16</li>
+<li>short/16</li>
+<li>int/32</li>
+<li>float/32</li>
+<li>long/64</li>
+<li>double/64</li>
+<li>boolean/~
+<ul>
+<li>Value
+<ul>
+<li>true(1)</li>
+<li>false(0)</li>
+</ul>
+</li>
+<li>JVM will convert it to int when compiling</li>
+</ul>
+</li>
+</ul>
+<h3 id="types---warpper-class">Types &lt;-&gt; Warpper class</h3>
+<ul>
+<li>boolean - Boolean</li>
+<li>byte - Byte</li>
+<li>char - Character</li>
+<li>float - Float</li>
+<li>int - Integer</li>
+<li>long - Long</li>
+<li>short - Short</li>
+<li>double - Double</li>
+</ul>
+<h3 id="autoboxing">Autoboxing</h3>
+<ul>
+<li>Use valueOf() method</li>
+<li>primitive types -&gt; corresponding object wrapper classes
+(e.g. int -&gt; Integer, double -&gt; Double)</li>
+</ul>
+<h3 id="unboxing">Unboxing</h3>
+<ul>
+<li>Object wrapper classes -&gt; corresponding primitive types
+(e.g. Integer -&gt; int, Double -&gt; double)</li>
+</ul>
+<h3 id="cache">Cache</h3>
+<ul>
+<li>Primitive data type and corresponding cache
+(If the data is in the range of cache, we can use the objects in the cache)
+<ul>
+<li>boolean value | true and false</li>
+<li>byte values | all</li>
+<li>short values | between -128 and 127</li>
+<li>int values | between -128 and 127</li>
+<li>char | in range of \u0000 to \u007F</li>
+</ul>
+</li>
+<li>Compare
+<ul>
+<li>Integer.valueOf(123)
+<ul>
+<li>Use objet in the cache,
+multiple call will invoke the same object</li>
+</ul>
+</li>
+<li>new Integer(123)
+<ul>
+<li>Create a new object every call</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="string">String</h2>
+<h3 id="feature">Feature</h3>
+<ul>
+<li>Immutable
+(byte, stated as final type)
+<ul>
+<li>Cache hash value
+<ul>
+<li>As the key of HashMap</li>
+</ul>
+</li>
+<li>Requirement of String Pool
+<ul>
+<li>Get reference from String Pool if it exists</li>
+</ul>
+</li>
+<li>Security
+<ul>
+<li>As parameter for many java classes
+<ul>
+<li>Network connection</li>
+<li>Opening files</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Thread-safety
+<ul>
+<li>Shared among multiple threads freely</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="compare">Compare</h3>
+<ul>
+<li>String
+<ul>
+<li>Immutable</li>
+<li>Thread-safe</li>
+</ul>
+</li>
+<li>StringBuffer
+<ul>
+<li>Mutable</li>
+<li>Thread-safe
+<ul>
+<li>Requirements of doing synchronization</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>StringBuilder
+<ul>
+<li>Mutable</li>
+<li>Not thread-safe</li>
+</ul>
+</li>
+</ul>
+<h3 id="string-pool-stores-all-literal-strings">String Pool (stores all literal strings)</h3>
+<ul>
+<li>Useful to reduce memory requirements</li>
+<li>intern() method
+<ul>
+<li>If there is a string equals to the called one exists, return it
+(using equals() method)</li>
+<li>If not, create a new string and return</li>
+</ul>
+</li>
+<li>Create 2 &ldquo;same&rdquo; string
+<ul>
+<li>new String()
+<ul>
+<li>Create different strings</li>
+</ul>
+</li>
+<li>s.intern()
+<ul>
+<li>Get reference of one string</li>
+</ul>
+</li>
+<li>String s = &quot;&rdquo;
+<ul>
+<li>Automatically put into String Pool</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="operation">Operation</h2>
+<h3 id="compare-1">Compare</h3>
+<ul>
+<li>Pass by value
+(Java use pass-by-value to pass parameters)
+<ul>
+<li>Change object&rsquo;s value in a function
+will affect the original object&rsquo;s value (same object)</li>
+<li>When referencing to a new object,
+change won&rsquo;t affect the original object&rsquo;s value (different object)</li>
+</ul>
+</li>
+<li>Pass by reference</li>
+</ul>
+<h3 id="casting">Casting</h3>
+<p>(compiler force to convert types using (type of))</p>
+<ul>
+<li>+=</li>
+<li>-=</li>
+<li>*=</li>
+<li>/=</li>
+</ul>
+<h3 id="switch">switch</h3>
+<ul>
+<li>Use string object in switch conditional statements</li>
+</ul>
+<h2 id="keywords">Keywords</h2>
+<h3 id="final">final</h3>
+<ul>
+<li>Data
+<ul>
+<li>As for primitive data type, final make its value immutable</li>
+<li>As for reference, it can&rsquo;t reference other objects but can modify itself</li>
+</ul>
+</li>
+<li>Method
+<ul>
+<li>Methods stated can&rsquo;t be rewrite by its child class</li>
+</ul>
+</li>
+<li>Class
+<ul>
+<li>Can&rsquo;t be inherited</li>
+</ul>
+</li>
+</ul>
+<h3 id="static">static</h3>
+<ul>
+<li>Variable
+<ul>
+<li>static variable
+(also called class variable)
+<ul>
+<li>Belongs to the class
+and can be shared/accessed by the class name</li>
+</ul>
+</li>
+<li>instance variable
+<ul>
+<li>When creating an instance there will be an instance variable</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>static method
+<ul>
+<li>It exists when loading the class</li>
+<li>Don&rsquo;t rely on any instance</li>
+<li>Can&rsquo;t be abstract</li>
+<li>Can&rsquo;t contain this, super keywords
+(they are related to specific object)</li>
+</ul>
+</li>
+<li>static (initialization) block
+<ul>
+<li>Operate once when doing the class initialization</li>
+</ul>
+</li>
+<li>static inner class
+<ul>
+<li>Don&rsquo;t rely on external instance</li>
+<li>Can&rsquo;t access non-static variables or methods of external class</li>
+</ul>
+</li>
+<li>static import
+<ul>
+<li>No need to refer to the ClassName
+<ul>
+<li>Simplify</li>
+<li>Hard to read</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Initialization order
+<ul>
+<li>static variable, static block (Parent class)</li>
+<li>static variable, static block (Child class)</li>
+<li>instance variable, block (Parent class)</li>
+<li>Constructor (Parent class)</li>
+<li>instance variable, block (Child class)</li>
+<li>Constructor (Child class)</li>
+</ul>
+</li>
+</ul>
+<h2 id="object-universal-functions">Object universal functions</h2>
+<h3 id="equals">equals()</h3>
+<ul>
+<li>Equivalence relationship
+<ul>
+<li>x.euqal(x);
+<ul>
+<li>Compared to self</li>
+</ul>
+</li>
+<li>x.equals(y) == y.equals(x);
+<ul>
+<li>When conversed, also true</li>
+</ul>
+</li>
+<li>if (x.equals(y) &amp;&amp; y.equals(z))
+x.equals(z);
+<ul>
+<li>When transited, also true</li>
+</ul>
+</li>
+<li>x.equals(y) == x.equals(y);
+<ul>
+<li>When repeated, always true</li>
+</ul>
+</li>
+<li>x.equals(null) == false;
+<ul>
+<li>When compared to null, always false (when x is not assigned null)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>About ==
+<ul>
+<li>For primitive data type, == measures the equivalence (there is no equals())</li>
+<li>For reference, == measures whether the variables reference to the same object or not</li>
+</ul>
+</li>
+<li>Mechanism
+<ul>
+<li>Check if it refers to the same object
+<ul>
+<li>Yes, return true</li>
+<li>No, continue</li>
+</ul>
+</li>
+<li>Check their type
+<ul>
+<li>No, return false</li>
+<li>Yes, continue</li>
+</ul>
+</li>
+<li>Convert the object</li>
+<li>Check the equivalence of every key fields</li>
+</ul>
+</li>
+</ul>
+<h3 id="hashcode">hashCode()</h3>
+<ul>
+<li>hashCode() returns a hash value,
+and use equals() to check the equivalence
+<ul>
+<li>equal -&gt; same hash</li>
+<li>same hash can&rsquo;t -&gt; equal (hash generated randomly)</li>
+</ul>
+</li>
+<li>Cover hashCode() before equals()</li>
+<li>Add/realize hashCode() before using HashSet or HashMap class</li>
+</ul>
+<h3 id="clone">clone()</h3>
+<ul>
+<li>Object protected function</li>
+<li>Shallow clone
+<ul>
+<li>Cloned object and the original object refer to the same object</li>
+</ul>
+</li>
+<li>Deep clone
+<ul>
+<li>Cloned object and the original object refer to different object</li>
+</ul>
+</li>
+<li>Alternative method
+<ul>
+<li>Clone constructor</li>
+</ul>
+</li>
+</ul>
+<h3 id="tostring">toString()</h3>
+<h2 id="inheritance">Inheritance</h2>
+<h3 id="access">Access</h3>
+<ul>
+<li>Modifiers
+<ul>
+<li>protected
+<ul>
+<li>Visible to child class</li>
+</ul>
+</li>
+<li>private</li>
+<li>public</li>
+</ul>
+</li>
+<li>Encapsulation
+<ul>
+<li>Using API to communicate</li>
+<li>Class or members can be least accessed by external</li>
+</ul>
+</li>
+<li>Child class rewrites the parent class
+<ul>
+<li>Methods in child class must have higher access level</li>
+</ul>
+</li>
+<li>Field can&rsquo;t be public
+<ul>
+<li>getter</li>
+<li>setter</li>
+</ul>
+</li>
+</ul>
+<h3 id="abstract-class-and-interface">Abstract class and Interface</h3>
+<ul>
+<li>Abstract class
+<ul>
+<li>abstract keyword
+<ul>
+<li>abstract method -&gt; abstract class</li>
+</ul>
+</li>
+<li>Can&rsquo;t be instanced</li>
+<li>Can be inherited</li>
+</ul>
+</li>
+<li>Interface
+<ul>
+<li>public field
+<ul>
+<li>static</li>
+<li>final</li>
+</ul>
+</li>
+<li>Members(field and method)
+<ul>
+<li>public</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Difference
+<ul>
+<li>Abstract class provide a IS-A relationship
+while Interface provides a LIKE-A relationship</li>
+<li>One class can applied several interfaces
+but can&rsquo;t inherit more than one abstract class</li>
+<li>Fields of interface must be static/final
+but abstract class has no restriction</li>
+<li>Members of interface must be public
+but abstract class have multiple accesses</li>
+</ul>
+</li>
+<li>Choose
+<ul>
+<li>Interface
+(higher priority)
+<ul>
+<li>Irrelevant classes need to realize the same method</li>
+<li>need to use multiple inheritance</li>
+</ul>
+</li>
+<li>Abstract class
+<ul>
+<li>Relevant classes need to share same code block</li>
+<li>Need to control members&rsquo; access</li>
+<li>Need to inherit non-static or no-constant field</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="super">Super</h3>
+<ul>
+<li>Access parent classes&rsquo; constructor</li>
+<li>Access members of parent classes</li>
+</ul>
+<h3 id="method-priority">Method priority</h3>
+<ul>
+<li>this.func(this)</li>
+<li>super.func(this)</li>
+<li>this.func(super)</li>
+<li>super.func(super)</li>
+</ul>
+<h3 id="override">Override</h3>
+<ul>
+<li>Child class realizes the same method as its parent class (statement)</li>
+<li>Restrictions
+(using @override to check)
+<ul>
+<li>Child class method has higher access</li>
+<li>Child class returns the same type (or sub type)</li>
+<li>Child class throws the same Exception type or sub type</li>
+</ul>
+</li>
+</ul>
+<h3 id="overload">Overload</h3>
+<ul>
+<li>Same method name</li>
+<li>Different parameter/amount/order
+(at least one)</li>
+</ul>
+<h2 id="reflect">Reflect</h2>
+<h3 id="core-concept">Core concept</h3>
+<ul>
+<li>Load classes, methods/fields when JVM is running,
+no prior requirement of knowing the object when writing or compiling code</li>
+</ul>
+<h3 id="functions">Functions</h3>
+<p>(runtime)</p>
+<ul>
+<li>Enables java code to discover information about the fields, methods and constructors of loaded classes</li>
+<li>Operate on their underlying counterparts within security restructions</li>
+</ul>
+<h3 id="usage">Usage</h3>
+<ul>
+<li>Develop universal frameworks</li>
+</ul>
+<h3 id="javalangreflect">java.lang.reflect</h3>
+<ul>
+<li>Field</li>
+<li>Method</li>
+<li>Constructor</li>
+</ul>
+<h3 id="advantages">Advantages</h3>
+<ul>
+<li>Extensibility</li>
+<li>Help with development (IDE)</li>
+<li>Help with debugging and testing</li>
+</ul>
+<h3 id="disadvantages">Disadvantages</h3>
+<ul>
+<li>Cost/Optimization</li>
+<li>Security restructions</li>
+<li>Exposing inner elements (private attributes or methods)</li>
+</ul>
+<h2 id="throwable">Throwable</h2>
+<h3 id="error">Error</h3>
+<p>(JVM can&rsquo;t handle with)</p>
+<ul>
+<li>VirtualMachineError
+<ul>
+<li>StackOverFlowError</li>
+<li>OutOfMemoryError</li>
+</ul>
+</li>
+<li>AWTError</li>
+</ul>
+<h3 id="exception">Exception</h3>
+<p>(Can be deal with by program)</p>
+<ul>
+<li>IOException
+<ul>
+<li>EOFException</li>
+<li>FileNotFoundException</li>
+</ul>
+</li>
+<li>RuntimeException
+<ul>
+<li>ArrithmeticException</li>
+<li>MissingResourceException</li>
+<li>ClassNotFoundException</li>
+<li>NullPointerException</li>
+<li>IllegalArgumentException</li>
+<li>ArrayIndexOutOfBoundsException</li>
+<li>UnknownTypeException</li>
+</ul>
+</li>
+</ul>
+<h3 id="basic-syntax">Basic syntax</h3>
+<ul>
+<li>try-catch</li>
+<li>throw</li>
+<li>throws</li>
+<li>finally</li>
+</ul>
+<h2 id="generics">Generics</h2>
+<ul>
+<li>Definition</li>
+</ul>
+<h2 id="annotation">Annotation</h2>
+<h3 id="meta-information-attached-in-the-code">Meta information attached in the code</h3>
+<ul>
+<li>Illustration</li>
+<li>Configuration</li>
+</ul>
+
+  </article>
+
+  
+  
+  
+
+
+</div>
+
+  </main><div class="footer gradient-2">
+  <div class="container footer-container ">
+    <div class="row">
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        <div class="footer-title">网站地图</div>
+        <ul class="list-unstyled">
+            
+              
+                <li><a href="https://www.pseudoyu.com/zh/tags/">标签</a></li>
+              
+              
+                <li><a href="https://www.pseudoyu.com/zh/categories/">分类</a></li>
+              
+            
+            
+            
+            <li><a rel="alternate" type="application/rss&#43;xml" href="https://www.pseudoyu.com/zh/index.xml"><i class="fas fa-rss-square"></i> RSS订阅</a></li>
+            
+            
+            
+        </ul>
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">社群</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://space.bilibili.com/5374948/" rel="noopener" target="_blank">BiliBili</a></li>
+          
+          <li><a href="https://www.facebook.com/pseudoyuzhang" rel="noopener" target="_blank">Facebook</a></li>
+          
+          <li><a href="https://www.instagram.com/pseudo.yu/" rel="noopener" target="_blank">Instagram</a></li>
+          
+          <li><a href="https://medium.com/@pseudoyu" rel="noopener" target="_blank">Medium</a></li>
+          
+          <li><a href="https://www.reddit.com/user/pseudo_yu" rel="noopener" target="_blank">Reddit</a></li>
+          
+          <li><a href="https://twitter.com/pseudo_yu" rel="noopener" target="_blank">Twitter</a></li>
+          
+          <li><a href="https://www.youtube.com/channel/UCR0O0s303tGBi3P02hstQPA/" rel="noopener" target="_blank">Youtube</a></li>
+          
+        </ul>
+        
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">友链</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://www.coursera.org/user/ffe947f087d1f63b161c3fcb310a6578" rel="noopener" target="_blank">Coursera</a></li>
+          
+          <li><a href="https://github.com/pseudoyu" rel="noopener" target="_blank">GitHub</a></li>
+          
+          <li><a href="https://www.goodreads.com/user/show/121369734-yu-zhang" rel="noopener" target="_blank">Goodreads</a></li>
+          
+          <li><a href="https://www.hackerrank.com/pseudoyu" rel="noopener" target="_blank">HackerRank</a></li>
+          
+          <li><a href="https://leetcode.com/pseudoyu/" rel="noopener" target="_blank">LeetCode</a></li>
+          
+          <li><a href="https://www.linkedin.com/in/pseudoyu/" rel="noopener" target="_blank">LinkedIn</a></li>
+          
+          <li><a href="https://acm.timus.ru/author.aspx?id=300324" rel="noopener" target="_blank">Timus OJ</a></li>
+          
+        </ul>
+        
+      </div> 
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <p class="pull-right text-right">
+          <small><em>Team Rocket: <a href="https://www.marshalgao.com" rel="noopener" target="_blank">Marshal</a> | <a href="https://www.m1sty.com" rel="noopener" target="_blank">Misty</a></em></small><br/>
+          <small><em>The University of Hong Kong - <a href="https://www.cs.hku.hk" rel="noopener" target="_blank">CS</a></em></small><br/>
+          <small>
+            &copy; 
+            pseudoyu
+            2020
+          </small>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

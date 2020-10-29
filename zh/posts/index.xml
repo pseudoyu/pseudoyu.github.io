@@ -48,11 +48,11 @@
     </item>
     
     <item>
-      <title>Blockchain Questions</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/28/blockchain-questions/</link>
+      <title>Blockchain BitCoin Questions</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/28/blockchain-bitcoin-questions/</link>
       <pubDate>Wed, 28 Oct 2020 09:07:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2020/10/28/blockchain-questions/</guid>
+      <guid>https://www.pseudoyu.com/zh/2020/10/28/blockchain-bitcoin-questions/</guid>
       <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Additional questions  Q: In a transaction, the receiver is not connected to the bitcoin network.  A: No need online, just records   Q: Lost private key  A: No solution Exchanges: Mt. Gox   Q: Wrong address  A: No solution   Q: OP_RETURN, return mistake, why it&amp;rsquo;s still executed?  A: OP_RETURN is in the output, so it will be verified in the next TX   Q: How to judge who find the nonce first?</description>
     </item>
     

@@ -93,22 +93,22 @@
     </item>
     
     <item>
+      <title>Blockchain Data Structure</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/21/blockchain-data-structure/</link>
+      <pubDate>Wed, 21 Oct 2020 10:07:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/21/blockchain-data-structure/</guid>
+      <description>Blockchain Technology and Applications Data Structure Hash pointer (blockchain is a linked list using hash pointers)
+ Genesis block &amp;lt;- block1 &amp;lt;- block2 &amp;lt;-&amp;hellip;&amp;lt;- recent block (every block has a hash pointer) Tamper-event log  Merkle tree (using hash pointer instead of pointer)  Merkle proof (proof of membership/inclusion)  O(log(n))   Think: proof of non-membership  O(n) Sorted merkle tree: O(log(n))    Application (blockchain)  Node  Full node (fully validating node)  Block header  Version Hash of previous block header Merkle root hash (protect all nodes) Target Nonce   Block body  Transaction lists     Light node (light weight node)  Only store block headers     Problem  Double spending    </description>
+    </item>
+    
+    <item>
       <title>Blockchain Cryptography</title>
       <link>https://www.pseudoyu.com/zh/2020/10/21/blockchain-cryptography/</link>
       <pubDate>Wed, 21 Oct 2020 09:07:17 +0800</pubDate>
       
       <guid>https://www.pseudoyu.com/zh/2020/10/21/blockchain-cryptography/</guid>
       <description>Blockchain Technology and Applications Cryptography Cryptographic hash function  Application  Digital commitment (digital equivalent of a sealed envelop)  H(x || nonce)   SHA-256 (used in bitcoin)   Features  Collision resistance  x != y, H(x) = H(y) MD5 (proved bad)   Hiding  x -&amp;gt; H(x), H(x) !-&amp;gt; x   Puzzle friendly  H(block header) &amp;lt;= target Keep trying nonce, no shortcuts Difficult to solve, but easy to verify Application  PoW (Proof of Work)        Encryption  Symmetric encryption  Use the same one key Not secure to transport encryption key   Asymmetric encryption (public key encryption)  Use two keys (one for encryption, another for decryption) A good source of randomness (assume) Application  Signature (used in bitcoin)      </description>
-    </item>
-    
-    <item>
-      <title>Blockchain Data Structure</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/21/blockchain-data-structure/</link>
-      <pubDate>Wed, 21 Oct 2020 09:07:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/21/blockchain-data-structure/</guid>
-      <description>Blockchain Technology and Applications Data Structure Hash pointer (blockchain is a linked list using hash pointers)
- Genesis block &amp;lt;- block1 &amp;lt;- block2 &amp;lt;-&amp;hellip;&amp;lt;- recent block (every block has a hash pointer) Tamper-event log  Merkle tree (using hash pointer instead of pointer)  Merkle proof (proof of membership/inclusion)  O(log(n))   Think: proof of non-membership  O(n) Sorted merkle tree: O(log(n))    Application (blockchain)  Node  Full node (fully validating node)  Block header  Version Hash of previous block header Merkle root hash (protect all nodes) Target Nonce   Block body  Transaction lists     Light node (light weight node)  Only store block headers     Problem  Double spending    </description>
     </item>
     
     <item>

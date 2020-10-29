@@ -1611,89 +1611,9 @@ with binary outcome&lt;/li&gt;
     </item>
     
     <item>
-      <title>Blockchain Cryptography</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/21/blockchain-cryptography/</link>
-      <pubDate>Wed, 21 Oct 2020 09:07:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/21/blockchain-cryptography/</guid>
-      
-        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
-&lt;h2 id=&#34;cryptography&#34;&gt;Cryptography&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_cryptography.svg&#34; alt=&#34;blockchain_cryptography&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;cryptographic-hash-function&#34;&gt;Cryptographic hash function&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Application
-&lt;ul&gt;
-&lt;li&gt;Digital commitment
-(digital equivalent of a sealed envelop)
-&lt;ul&gt;
-&lt;li&gt;H(x || nonce)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;SHA-256
-(used in bitcoin)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Features
-&lt;ul&gt;
-&lt;li&gt;Collision resistance
-&lt;ul&gt;
-&lt;li&gt;x != y, H(x) = H(y)&lt;/li&gt;
-&lt;li&gt;MD5 (proved bad)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Hiding
-&lt;ul&gt;
-&lt;li&gt;x -&amp;gt; H(x), H(x) !-&amp;gt; x&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Puzzle friendly
-&lt;ul&gt;
-&lt;li&gt;H(block header) &amp;lt;= target&lt;/li&gt;
-&lt;li&gt;Keep trying nonce, no shortcuts&lt;/li&gt;
-&lt;li&gt;Difficult to solve, but easy to verify&lt;/li&gt;
-&lt;li&gt;Application
-&lt;ul&gt;
-&lt;li&gt;PoW (Proof of Work)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;encryption&#34;&gt;Encryption&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Symmetric encryption
-&lt;ul&gt;
-&lt;li&gt;Use the same one key&lt;/li&gt;
-&lt;li&gt;Not secure to transport encryption key&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Asymmetric encryption
-(public key encryption)
-&lt;ul&gt;
-&lt;li&gt;Use two keys
-(one for encryption, another for decryption)&lt;/li&gt;
-&lt;li&gt;A good source of randomness
-(assume)&lt;/li&gt;
-&lt;li&gt;Application
-&lt;ul&gt;
-&lt;li&gt;Signature
-(used in bitcoin)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
       <title>Blockchain Data Structure</title>
       <link>https://www.pseudoyu.com/zh/2020/10/21/blockchain-data-structure/</link>
-      <pubDate>Wed, 21 Oct 2020 09:07:17 +0800</pubDate>
+      <pubDate>Wed, 21 Oct 2020 10:07:17 +0800</pubDate>
       
       <guid>https://www.pseudoyu.com/zh/2020/10/21/blockchain-data-structure/</guid>
       
@@ -1752,6 +1672,80 @@ with binary outcome&lt;/li&gt;
 &lt;li&gt;Problem
 &lt;ul&gt;
 &lt;li&gt;Double spending&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Blockchain Cryptography</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/21/blockchain-cryptography/</link>
+      <pubDate>Wed, 21 Oct 2020 09:07:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/21/blockchain-cryptography/</guid>
+      
+        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
+&lt;h2 id=&#34;cryptography&#34;&gt;Cryptography&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_cryptography.svg&#34; alt=&#34;blockchain_cryptography&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;cryptographic-hash-function&#34;&gt;Cryptographic hash function&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Application
+&lt;ul&gt;
+&lt;li&gt;Digital commitment (digital equivalent of a sealed envelop)
+&lt;ul&gt;
+&lt;li&gt;H(x || nonce)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;SHA-256 (used in bitcoin)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Features
+&lt;ul&gt;
+&lt;li&gt;Collision resistance
+&lt;ul&gt;
+&lt;li&gt;x != y, H(x) = H(y)&lt;/li&gt;
+&lt;li&gt;MD5 (proved bad)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Hiding
+&lt;ul&gt;
+&lt;li&gt;x -&amp;gt; H(x), H(x) !-&amp;gt; x&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Puzzle friendly
+&lt;ul&gt;
+&lt;li&gt;H(block header) &amp;lt;= target&lt;/li&gt;
+&lt;li&gt;Keep trying nonce, no shortcuts&lt;/li&gt;
+&lt;li&gt;Difficult to solve, but easy to verify&lt;/li&gt;
+&lt;li&gt;Application
+&lt;ul&gt;
+&lt;li&gt;PoW (Proof of Work)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;encryption&#34;&gt;Encryption&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Symmetric encryption
+&lt;ul&gt;
+&lt;li&gt;Use the same one key&lt;/li&gt;
+&lt;li&gt;Not secure to transport encryption key&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Asymmetric encryption (public key encryption)
+&lt;ul&gt;
+&lt;li&gt;Use two keys (one for encryption, another for decryption)&lt;/li&gt;
+&lt;li&gt;A good source of randomness (assume)&lt;/li&gt;
+&lt;li&gt;Application
+&lt;ul&gt;
+&lt;li&gt;Signature (used in bitcoin)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;

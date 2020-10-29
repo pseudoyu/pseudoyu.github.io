@@ -37,6 +37,13 @@
   </url>
   
   <url>
+    <loc>https://www.pseudoyu.com/en/2020/10/29/blockchain-technology-and-applications/</loc>
+    <lastmod>2020-10-29T09:07:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.pseudoyu.com/en/categories/</loc>
     <lastmod>2020-10-29T09:07:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -156,36 +163,15 @@
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/en/2020/10/28/blockchain-learning-plan/</loc>
-    <lastmod>2020-10-28T09:20:31+08:00</lastmod>
+    <loc>https://www.pseudoyu.com/en/2020/10/28/blockchain-technology-and-applications/</loc>
+    <lastmod>2020-10-28T09:07:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/en/tag/interview/</loc>
-    <lastmod>2020-10-28T09:20:31+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pseudoyu.com/en/tag/job/</loc>
-    <lastmod>2020-10-28T09:20:31+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pseudoyu.com/en/tag/learning/</loc>
-    <lastmod>2020-10-28T09:20:31+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pseudoyu.com/en/tag/plan/</loc>
-    <lastmod>2020-10-28T09:20:31+08:00</lastmod>
+    <loc>https://www.pseudoyu.com/en/2020/10/28/blockchain-technology-and-applications/</loc>
+    <lastmod>2020-10-28T09:07:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -226,6 +212,20 @@
   </url>
   
   <url>
+    <loc>https://www.pseudoyu.com/en/2020/10/23/blockchain-technology-and-applications/</loc>
+    <lastmod>2020-10-23T09:07:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/en/2020/10/22/blockchain-technology-and-applications/</loc>
+    <lastmod>2020-10-22T09:07:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.pseudoyu.com/en/tag/cryptography/</loc>
     <lastmod>2020-10-21T19:53:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -247,8 +247,78 @@
   </url>
   
   <url>
+    <loc>https://www.pseudoyu.com/en/2020/10/21/blockchain-technology-and-applications/</loc>
+    <lastmod>2020-10-21T09:07:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/en/2020/10/21/blockchain-technology-and-applications/</loc>
+    <lastmod>2020-10-21T09:07:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/en/2020/10/21/blockchain-technology-and-applications/</loc>
+    <lastmod>2020-10-21T09:07:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.pseudoyu.com/en/2020/10/19/icom6012-topic-3-application-layer/</loc>
     <lastmod>2020-10-19T17:50:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/en/2020/10/18/blockchain-learning-plan/</loc>
+    <lastmod>2020-10-18T09:20:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/en/2020/10/18/blockchain-learning-plan/</loc>
+    <lastmod>2020-10-18T09:20:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/en/tag/interview/</loc>
+    <lastmod>2020-10-18T09:20:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/en/tag/job/</loc>
+    <lastmod>2020-10-18T09:20:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/en/tag/learning/</loc>
+    <lastmod>2020-10-18T09:20:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/en/tag/plan/</loc>
+    <lastmod>2020-10-18T09:20:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/en/2020/10/18/blockchain-technology-and-applications/</loc>
+    <lastmod>2020-10-18T09:07:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

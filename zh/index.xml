@@ -71,366 +71,9 @@
       <guid>https://www.pseudoyu.com/zh/2020/10/29/blockchain-technology-and-applications/</guid>
       
         <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_technology_and_applications.svg&#34; alt=&#34;blockchain_technology_and_applications&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;blockchain-technology-and-applications-1&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
-&lt;h2 id=&#34;cryptography&#34;&gt;Cryptography&lt;/h2&gt;
-&lt;h3 id=&#34;cryptographic-hash-function&#34;&gt;Cryptographic hash function&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Application
-&lt;ul&gt;
-&lt;li&gt;Digital commitment
-(digital equivalent of a sealed envelop)
-&lt;ul&gt;
-&lt;li&gt;H(x || nonce)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;SHA-256
-(used in bitcoin)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Features
-&lt;ul&gt;
-&lt;li&gt;Collision resistance
-&lt;ul&gt;
-&lt;li&gt;x != y, H(x) = H(y)&lt;/li&gt;
-&lt;li&gt;MD5 (proved bad)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Hiding
-&lt;ul&gt;
-&lt;li&gt;x -&amp;gt; H(x), H(x) !-&amp;gt; x&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Puzzle friendly
-&lt;ul&gt;
-&lt;li&gt;H(block header) &amp;lt;= target&lt;/li&gt;
-&lt;li&gt;Keep trying nonce, no shortcuts&lt;/li&gt;
-&lt;li&gt;Difficult to solve, but easy to verify&lt;/li&gt;
-&lt;li&gt;Application
-&lt;ul&gt;
-&lt;li&gt;PoW (Proof of Work)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;encryption&#34;&gt;Encryption&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Symmetric encryption
-&lt;ul&gt;
-&lt;li&gt;Use the same one key&lt;/li&gt;
-&lt;li&gt;Not secure to transport encryption key&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Asymmetric encryption
-(public key encryption)
-&lt;ul&gt;
-&lt;li&gt;Use two keys
-(one for encryption, another for decryption)&lt;/li&gt;
-&lt;li&gt;A good source of randomness
-(assume)&lt;/li&gt;
-&lt;li&gt;Application
-&lt;ul&gt;
-&lt;li&gt;Signature
-(used in bitcoin)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;data-structure&#34;&gt;Data Structure&lt;/h2&gt;
-&lt;h3 id=&#34;hash-pointer-blockchain-is-a-linked-list&#34;&gt;Hash pointer (blockchain is a linked list&lt;/h3&gt;
-&lt;p&gt;using hash pointers)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Genesis block &amp;lt;- block1 &amp;lt;- block2 &amp;lt;-&amp;hellip;&amp;lt;- recent block
-(every block has a hash pointer)&lt;/li&gt;
-&lt;li&gt;Tamper-event log&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;merkle-tree-using-hash-pointer-instead-of-pointer&#34;&gt;Merkle tree (using hash pointer instead of pointer)&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Merkle proof
-(proof of membership/inclusion)
-&lt;ul&gt;
-&lt;li&gt;O(log(n))&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Think:
-proof of non-membership
-&lt;ul&gt;
-&lt;li&gt;O(n)&lt;/li&gt;
-&lt;li&gt;Sorted merkle tree:
-O(log(n))&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;application-blockchain&#34;&gt;Application (blockchain)&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Node
-&lt;ul&gt;
-&lt;li&gt;Full node
-(fully validating node)
-&lt;ul&gt;
-&lt;li&gt;Block header
-&lt;ul&gt;
-&lt;li&gt;Version&lt;/li&gt;
-&lt;li&gt;Hash of previous block header&lt;/li&gt;
-&lt;li&gt;Merkle root hash
-(protect all nodes)&lt;/li&gt;
-&lt;li&gt;Target&lt;/li&gt;
-&lt;li&gt;Nonce&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Block body
-&lt;ul&gt;
-&lt;li&gt;Transaction lists&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Light node
-(light weight node)
-&lt;ul&gt;
-&lt;li&gt;Only store block headers&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Problem
-&lt;ul&gt;
-&lt;li&gt;Double spending&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;protocol&#34;&gt;Protocol&lt;/h2&gt;
-&lt;h3 id=&#34;distributed-consensus&#34;&gt;Distributed consensus&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&amp;ldquo;Impossibility result&amp;rdquo;
-&lt;ul&gt;
-&lt;li&gt;FLP
-&lt;ul&gt;
-&lt;li&gt;In an asynchronous system,
-if one faulty exists, there is no consensus&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;CAP Theorem
-&lt;ul&gt;
-&lt;li&gt;Consistency&lt;/li&gt;
-&lt;li&gt;Availability&lt;/li&gt;
-&lt;li&gt;Partition tolerance&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Example
-&lt;ul&gt;
-&lt;li&gt;Distributed hash table&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;consensus-in-bitcoin&#34;&gt;Consensus in BitCoin&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Membership
-(decide who can vote)
-&lt;ul&gt;
-&lt;li&gt;Hyperledger
-&lt;ul&gt;
-&lt;li&gt;Fabric&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Vote by computing power
-(based on puzzle friendly)&lt;/li&gt;
-&lt;li&gt;Increasing concern
-&lt;ul&gt;
-&lt;li&gt;Win
-&lt;ul&gt;
-&lt;li&gt;Longest valid chain&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Lose
-&lt;ul&gt;
-&lt;li&gt;Orphan block&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
 &lt;h2 id=&#34;bitcoin-system-transaction-based-ledger&#34;&gt;BitCoin System (Transaction-based ledger)&lt;/h2&gt;
-&lt;h3 id=&#34;utxo-unspent-transaction-output&#34;&gt;UTXO (Unspent Transaction Output)&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Total inputs = total outputs&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;quantity&#34;&gt;Quantity&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;21,000,000&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;block-reward&#34;&gt;Block reward&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Coinbase transaction&lt;/li&gt;
-&lt;li&gt;Cut half every 4 year&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;transaction-fee&#34;&gt;Transaction fee&lt;/h3&gt;
-&lt;h3 id=&#34;mining&#34;&gt;Mining&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Solve puzzles
-&lt;ul&gt;
-&lt;li&gt;Average block time
-&lt;ul&gt;
-&lt;li&gt;10 minutes&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Difficulty
-&lt;ul&gt;
-&lt;li&gt;Target = target * (actual time / expected time)&lt;/li&gt;
-&lt;li&gt;Adjust every 2 weeks&lt;/li&gt;
-&lt;li&gt;Ar most 4 times, at least 1/4&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Bernoulli process
-(nearly poisson process
-in BitCoin mining)
-&lt;ul&gt;
-&lt;li&gt;Bernoulli trial
-&lt;ul&gt;
-&lt;li&gt;A random experiment
-with binary outcome&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;A sequence of independent Bernoulli trial&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Feature
-&lt;ul&gt;
-&lt;li&gt;Memoryless&lt;/li&gt;
-&lt;li&gt;Progress free
-&lt;ul&gt;
-&lt;li&gt;Ensure the fairness of mining&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Exponential distribution&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Device
-(Universal -&amp;gt; Specific)
-&lt;ul&gt;
-&lt;li&gt;CPU&lt;/li&gt;
-&lt;li&gt;GPU&lt;/li&gt;
-&lt;li&gt;ASIC
-(Application Specific
-Integrated Circuit))&lt;/li&gt;
-&lt;li&gt;Mining pool
-(on demand mining)
-&lt;ul&gt;
-&lt;li&gt;Pool manager
-(risks of 51% attack)&lt;/li&gt;
-&lt;li&gt;miners&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;fork&#34;&gt;Fork&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;State fork
-&lt;ul&gt;
-&lt;li&gt;Forking attack
-(deliberate fork)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Protocol fork
-&lt;ul&gt;
-&lt;li&gt;Hard fork
-(permanent)
-&lt;ul&gt;
-&lt;li&gt;Block size limit
-(1M -&amp;gt; 4M)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Soft fork
-(&amp;gt; 50%, temporary)
-&lt;ul&gt;
-&lt;li&gt;Block size limit
-(1M -&amp;gt; 0.5M)&lt;/li&gt;
-&lt;li&gt;coinbase
-&lt;ul&gt;
-&lt;li&gt;As extra nonce
-2^32 -&amp;gt; 2^96 (adding 8 bytes)&lt;/li&gt;
-&lt;li&gt;As root hash of UTXO&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;P2SH
-(Pay to
-Script Hash)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;bitcoin-network&#34;&gt;BitCoin network&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Structure
-&lt;ul&gt;
-&lt;li&gt;Application layer
-&lt;ul&gt;
-&lt;li&gt;BitCoin blockchain&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Network layer
-&lt;ul&gt;
-&lt;li&gt;P2P overlay network&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Node
-&lt;ul&gt;
-&lt;li&gt;Seed node&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Feature
-&lt;ul&gt;
-&lt;li&gt;Simple&lt;/li&gt;
-&lt;li&gt;Robust&lt;/li&gt;
-&lt;li&gt;Not efficient&lt;/li&gt;
-&lt;li&gt;&amp;ldquo;Best effort&amp;rdquo;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Message transport
-&lt;ul&gt;
-&lt;li&gt;Flooding&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;security&#34;&gt;Security&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Problem
-&lt;ul&gt;
-&lt;li&gt;Sybil attack&lt;/li&gt;
-&lt;li&gt;Forking attack&lt;/li&gt;
-&lt;li&gt;Boycott&lt;/li&gt;
-&lt;li&gt;Selfish mining
-&lt;ul&gt;
-&lt;li&gt;Reduce competition&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Solution
-&lt;ul&gt;
-&lt;li&gt;Based on computing power
-(large cost)&lt;/li&gt;
-&lt;li&gt;Require 6 confirmation by nodes
-(long time, about 1 hour)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;scripts&#34;&gt;Scripts&lt;/h3&gt;
-&lt;p&gt;(stack based language)&lt;/p&gt;
+&lt;h3 id=&#34;scripts-stack-based-language&#34;&gt;Scripts (stack based language)&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_scripts.svg&#34; alt=&#34;blockchain_bitcoin_scripts&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;TX structure
 &lt;ul&gt;
@@ -443,8 +86,7 @@ Script Hash)&lt;/li&gt;
 &lt;ul&gt;
 &lt;li&gt;txid&lt;/li&gt;
 &lt;li&gt;vout&lt;/li&gt;
-&lt;li&gt;scriptSig
-(input script)
+&lt;li&gt;scriptSig (input script)
 &lt;ul&gt;
 &lt;li&gt;asm&lt;/li&gt;
 &lt;li&gt;hex&lt;/li&gt;
@@ -456,8 +98,7 @@ Script Hash)&lt;/li&gt;
 &lt;ul&gt;
 &lt;li&gt;value&lt;/li&gt;
 &lt;li&gt;n&lt;/li&gt;
-&lt;li&gt;scriptPubKey
-(output script)&lt;/li&gt;
+&lt;li&gt;scriptPubKey (output script)&lt;/li&gt;
 &lt;li&gt;value&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -469,19 +110,14 @@ Script Hash)&lt;/li&gt;
 &lt;/li&gt;
 &lt;li&gt;Transaction
 &lt;ul&gt;
-&lt;li&gt;P2PK
-(Pay to
-Public Key)
+&lt;li&gt;P2PK (Pay to Public Key)
 &lt;ul&gt;
-&lt;li&gt;input
-script
+&lt;li&gt;input script
 &lt;ul&gt;
-&lt;li&gt;PUSHDATA (Sig)
-(signed by provate key)&lt;/li&gt;
+&lt;li&gt;PUSHDATA (Sig) (signed by provate key)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;output
-script
+&lt;li&gt;output script
 &lt;ul&gt;
 &lt;li&gt;PUSHDATA (PubKey)&lt;/li&gt;
 &lt;li&gt;CHECKSIG&lt;/li&gt;
@@ -489,25 +125,18 @@ script
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;P2PKH
-(Pay to
-Public Key Hash)
+&lt;li&gt;P2PKH (Pay to Public Key Hash)
 &lt;ul&gt;
-&lt;li&gt;input
-script
+&lt;li&gt;input script
 &lt;ul&gt;
-&lt;li&gt;PUSHDATA (Sig)
-(signed by provate key)&lt;/li&gt;
+&lt;li&gt;PUSHDATA (Sig) (signed by provate key)&lt;/li&gt;
 &lt;li&gt;PUSHDATA (PubKey)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;output
-script
+&lt;li&gt;output script
 &lt;ul&gt;
-&lt;li&gt;DUP
-(duplicate a PubKey)&lt;/li&gt;
-&lt;li&gt;HASH160
-(calculate the PubKey&amp;rsquo;s hash)&lt;/li&gt;
+&lt;li&gt;DUP (duplicate a PubKey)&lt;/li&gt;
+&lt;li&gt;HASH160 (calculate the PubKey&amp;rsquo;s hash)&lt;/li&gt;
 &lt;li&gt;PUSHDATA (PubKeyHash)&lt;/li&gt;
 &lt;li&gt;EQUALVERIFY&lt;/li&gt;
 &lt;li&gt;CHECKSIG&lt;/li&gt;
@@ -515,9 +144,7 @@ script
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;P2SH
-(Pay to
-Script Hash)
+&lt;li&gt;P2SH (Pay to Script Hash)
 &lt;ul&gt;
 &lt;li&gt;redeemScript
 &lt;ul&gt;
@@ -525,20 +152,16 @@ Script Hash)
 &lt;li&gt;CHECKSIG&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;input
-script
+&lt;li&gt;input script
 &lt;ul&gt;
 &lt;li&gt;PUSHDATA (Sig)&lt;/li&gt;
-&lt;li&gt;PUSHDATA
-(serialized redeemScript)&lt;/li&gt;
+&lt;li&gt;PUSHDATA (serialized redeemScript)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;output
-script
+&lt;li&gt;output script
 &lt;ul&gt;
 &lt;li&gt;HASH160&lt;/li&gt;
-&lt;li&gt;PUSHDATA
-(redeemScriptHash)&lt;/li&gt;
+&lt;li&gt;PUSHDATA (redeemScriptHash)&lt;/li&gt;
 &lt;li&gt;EQUAL&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -552,91 +175,59 @@ script
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;anonymity&#34;&gt;Anonymity&lt;/h3&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Blockchain Technology and Applications</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/29/blockchain-technology-and-applications/</link>
+      <pubDate>Thu, 29 Oct 2020 09:07:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/29/blockchain-technology-and-applications/</guid>
+      
+        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
+&lt;h2 id=&#34;ethereum-system-account-based-ledger&#34;&gt;Ethereum System (Account-based ledger)&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_ethereum_features.svg&#34; alt=&#34;blockchain_ethereum_features&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;feature&#34;&gt;Feature&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Pseudonymity&lt;/li&gt;
+&lt;li&gt;Memory hard&lt;/li&gt;
+&lt;li&gt;Mining puzzle&lt;/li&gt;
+&lt;li&gt;ASIC resistance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;account&#34;&gt;Account&lt;/h3&gt;
+&lt;ul&gt;
 &lt;li&gt;Threats
 &lt;ul&gt;
-&lt;li&gt;Address generation
+&lt;li&gt;Double spending attack&lt;/li&gt;
+&lt;li&gt;Replay attack
 &lt;ul&gt;
-&lt;li&gt;Analyze tx&lt;/li&gt;
-&lt;li&gt;Analyze wallets (if used)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Connection to real identity
-&lt;ul&gt;
-&lt;li&gt;KYC (Know Your Customer)&lt;/li&gt;
+&lt;li&gt;Solution: add a nonce to count tx&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Bad use
+&lt;li&gt;Type
 &lt;ul&gt;
-&lt;li&gt;Silk road (eBay for illegal drugs)&lt;/li&gt;
+&lt;li&gt;Externally owned account
+&lt;ul&gt;
+&lt;li&gt;Balance&lt;/li&gt;
+&lt;li&gt;Nonce (sequence number)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Tips
+&lt;li&gt;Smart contract account (can&amp;rsquo;t start a transaction)
 &lt;ul&gt;
-&lt;li&gt;TOR browser&lt;/li&gt;
-&lt;li&gt;Coin mixing&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Zero-knowledge proof
-&lt;ul&gt;
-&lt;li&gt;Signature (public key - private key)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Possible solution
-&lt;ul&gt;
-&lt;li&gt;Sacrifice
-&lt;ul&gt;
-&lt;li&gt;Performance&lt;/li&gt;
-&lt;li&gt;Not absolutely secure&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Zerocoin
-&lt;ul&gt;
-&lt;li&gt;Base coin&lt;/li&gt;
-&lt;li&gt;Zero coin&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Zerocash&lt;/li&gt;
+&lt;li&gt;Balance&lt;/li&gt;
+&lt;li&gt;Nonce&lt;/li&gt;
+&lt;li&gt;Code&lt;/li&gt;
+&lt;li&gt;Storge&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;additional-questions&#34;&gt;Additional questions&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Q: In a transaction, the receiver is not connected to the bitcoin network.
-A: No need online, just records&lt;/li&gt;
-&lt;li&gt;Q: Lost private key
-A: No solution
-&lt;ul&gt;
-&lt;li&gt;Exchanges: Mt. Gox&lt;/li&gt;
-&lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Q: Wrong address
-A: No solution&lt;/li&gt;
-&lt;li&gt;Q: OP_RETURN, return mistake, why it&amp;rsquo;s still executed?
-A: OP_RETURN is in the output, so it will be verified in the next TX&lt;/li&gt;
-&lt;li&gt;Q: How to judge who find the nonce first?
-A: Coinbase tx in the block&lt;/li&gt;
-&lt;li&gt;Q: How to judge who will get the tx fee?
-A: No need to know in advance, just calculate (output - input)&lt;/li&gt;
-&lt;li&gt;Q: How Hash pointer work in other hosts (pointer only works locally)?
-A: Only Hash, no pointer (stored in key-value database, e.g. levelDB)&lt;/li&gt;
-&lt;li&gt;Q: Divide private key to several pieces?
-A: Security, loss
-&lt;ul&gt;
-&lt;li&gt;Possible solution: MULTISIG&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Q: How can Bitcoin gets its consensus?
-A: Actually no consensus, like fork attack, in principle/in practice&lt;/li&gt;
-&lt;li&gt;Q: How to attrack miners?
-A: Increase profits and lower cost, rareness&lt;/li&gt;
-&lt;li&gt;Q: Will quantum computing influence Bitcoin?
-A: Not in practical use&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&#34;pow---pos&#34;&gt;PoW -&amp;gt; PoS&lt;/h3&gt;
+&lt;h3 id=&#34;smart-contract-decentralized-contract&#34;&gt;Smart contract (decentralized contract)&lt;/h3&gt;
 </description>
       
     </item>
@@ -1031,435 +622,140 @@ A: Not in practical use&lt;/li&gt;
     </item>
     
     <item>
-      <title>区块链学习计划</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/28/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</link>
-      <pubDate>Wed, 28 Oct 2020 09:20:31 +0800</pubDate>
+      <title>Blockchain Technology and Applications</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/28/blockchain-technology-and-applications/</link>
+      <pubDate>Wed, 28 Oct 2020 09:07:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2020/10/28/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</guid>
+      <guid>https://www.pseudoyu.com/zh/2020/10/28/blockchain-technology-and-applications/</guid>
       
-        <description>&lt;h1 id=&#34;区块链学习计划&#34;&gt;区块链学习计划&lt;/h1&gt;
-&lt;h2 id=&#34;学习路径&#34;&gt;学习路径&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_path.svg&#34; alt=&#34;blockchain_path&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;10月&#34;&gt;10月&lt;/h2&gt;
-&lt;h3 id=&#34;学习java基础&#34;&gt;学习Java基础&lt;/h3&gt;
+        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
+&lt;h2 id=&#34;bitcoin-system-transaction-based-ledger&#34;&gt;BitCoin System (Transaction-based ledger)&lt;/h2&gt;
+&lt;h3 id=&#34;anonymity&#34;&gt;Anonymity&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_anonymity.svg&#34; alt=&#34;blockchain_bitcoin_anonymity&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;CS61B - UC Berkley&lt;/li&gt;
-&lt;li&gt;Java笔记 - GitHub&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;学习区块链基础&#34;&gt;学习区块链基础&lt;/h3&gt;
+&lt;li&gt;Pseudonymity&lt;/li&gt;
+&lt;li&gt;Threats
 &lt;ul&gt;
-&lt;li&gt;区块链原理
+&lt;li&gt;Address generation
 &lt;ul&gt;
-&lt;li&gt;区块链技术与应用 - 肖臻
-&lt;ul&gt;
-&lt;li&gt;整理知识体系&lt;/li&gt;
+&lt;li&gt;Analyze tx&lt;/li&gt;
+&lt;li&gt;Analyze wallets (if used)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Bitcoin and Cryptocurrency Technology - Coursera
+&lt;li&gt;Connection to real identity
 &lt;ul&gt;
-&lt;li&gt;完成Assignment（Java）&lt;/li&gt;
+&lt;li&gt;KYC (Know Your Customer)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;搭建区块链
+&lt;li&gt;Bad use
 &lt;ul&gt;
-&lt;li&gt;Let&amp;rsquo;s build a blockchain - YouTube （Ruby）
-&lt;ul&gt;
-&lt;li&gt;用Java重写&lt;/li&gt;
+&lt;li&gt;Silk road (eBay for illegal drugs)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;搭建区块链 - B站落拓（Node.js）
+&lt;li&gt;Tips
 &lt;ul&gt;
-&lt;li&gt;用Java重写&lt;/li&gt;
+&lt;li&gt;TOR browser&lt;/li&gt;
+&lt;li&gt;Coin mixing&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;Zero-knowledge proof
+&lt;ul&gt;
+&lt;li&gt;Signature (public key - private key)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;case-study调研&#34;&gt;Case Study调研&lt;/h3&gt;
+&lt;li&gt;Possible solution
 &lt;ul&gt;
-&lt;li&gt;结合市场需求
+&lt;li&gt;Sacrifice
 &lt;ul&gt;
-&lt;li&gt;数据隐私（待定）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;解决方案
-&lt;ul&gt;
-&lt;li&gt;产品形态&lt;/li&gt;
+&lt;li&gt;Performance&lt;/li&gt;
+&lt;li&gt;Not absolutely secure&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;mini-project调研&#34;&gt;Mini Project调研&lt;/h3&gt;
+&lt;li&gt;Zerocoin
 &lt;ul&gt;
-&lt;li&gt;数据隐私&lt;/li&gt;
-&lt;li&gt;未来区块链解决方案&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;熟悉版本控制工具&#34;&gt;熟悉版本控制工具&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Git
-&lt;ul&gt;
-&lt;li&gt;熟悉常用命令&lt;/li&gt;
-&lt;li&gt;培养工作流&lt;/li&gt;
+&lt;li&gt;Base coin&lt;/li&gt;
+&lt;li&gt;Zero coin&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;GitHub
-&lt;ul&gt;
-&lt;li&gt;优化个人Profile&lt;/li&gt;
-&lt;li&gt;日常更新&lt;/li&gt;
+&lt;li&gt;Zerocash&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;刷题&#34;&gt;刷题&lt;/h3&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Blockchain Technology and Applications</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/28/blockchain-technology-and-applications/</link>
+      <pubDate>Wed, 28 Oct 2020 09:07:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/28/blockchain-technology-and-applications/</guid>
+      
+        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
+&lt;h2 id=&#34;bitcoin-system-transaction-based-ledger&#34;&gt;BitCoin System (Transaction-based ledger)&lt;/h2&gt;
+&lt;h3 id=&#34;additional-questions&#34;&gt;Additional questions&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_questions.svg&#34; alt=&#34;blockchain_bitcoin_questions&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;剑指Offer&lt;/li&gt;
-&lt;li&gt;LeetCode&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;11月&#34;&gt;11月&lt;/h2&gt;
-&lt;h3 id=&#34;提升技术能力&#34;&gt;提升技术能力&lt;/h3&gt;
+&lt;li&gt;Q: In a transaction, the receiver is not connected to the bitcoin network.
 &lt;ul&gt;
-&lt;li&gt;Web开发
-&lt;ul&gt;
-&lt;li&gt;Web Developer Bootcamp - Udemy
-&lt;ul&gt;
-&lt;li&gt;前端&lt;/li&gt;
-&lt;li&gt;后端（课程用Node.js，了解）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;数据库&lt;/li&gt;
-&lt;li&gt;Linux基础&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;学习系统相关&#34;&gt;学习系统相关&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;系统设计笔记 - GitHub
-&lt;ul&gt;
-&lt;li&gt;理解原理&lt;/li&gt;
-&lt;li&gt;了解配置&lt;/li&gt;
+&lt;li&gt;A: No need online, just records&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Docke&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;区块链进阶与实践&#34;&gt;区块链进阶与实践&lt;/h3&gt;
+&lt;li&gt;Q: Lost private key
 &lt;ul&gt;
-&lt;li&gt;区块链技术原理
-&lt;ul&gt;
-&lt;li&gt;Bitcoin and Cryptocurrency Technology - Coursera
-&lt;ul&gt;
-&lt;li&gt;继续完成Assignment（Java）&lt;/li&gt;
+&lt;li&gt;A: No solution&lt;/li&gt;
+&lt;li&gt;Exchanges: Mt. Gox&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;Q: Wrong address
+&lt;ul&gt;
+&lt;li&gt;A: No solution&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;共识协议&lt;/li&gt;
-&lt;li&gt;一致性算法&lt;/li&gt;
-&lt;li&gt;智能合约虚拟机&lt;/li&gt;
-&lt;li&gt;开源系统、解决方案
+&lt;li&gt;Q: OP_RETURN, return mistake, why it&amp;rsquo;s still executed?
 &lt;ul&gt;
-&lt;li&gt;Bitcoin
-&lt;ul&gt;
-&lt;li&gt;了解机制&lt;/li&gt;
+&lt;li&gt;A: OP_RETURN is in the output, so it will be verified in the next TX&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Ethereum
+&lt;li&gt;Q: How to judge who find the nonce first?
 &lt;ul&gt;
-&lt;li&gt;项目实践&lt;/li&gt;
+&lt;li&gt;A: Coinbase tx in the block&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;Q: How to judge who will get the tx fee?
+&lt;ul&gt;
+&lt;li&gt;A: No need to know in advance, just calculate (output - input)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;case-study规划及知识储备&#34;&gt;Case Study规划及知识储备&lt;/h3&gt;
+&lt;li&gt;Q: How Hash pointer work in other hosts (pointer only works locally)?
 &lt;ul&gt;
-&lt;li&gt;产品规划
-&lt;ul&gt;
-&lt;li&gt;需求文档&lt;/li&gt;
-&lt;li&gt;开发安排&lt;/li&gt;
-&lt;li&gt;产品设计
-&lt;ul&gt;
-&lt;li&gt;产品原型&lt;/li&gt;
-&lt;li&gt;技术框架&lt;/li&gt;
+&lt;li&gt;A: Only Hash, no pointer (stored in key-value database, e.g. levelDB)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;Q: Divide private key to several pieces?
+&lt;ul&gt;
+&lt;li&gt;A: Security, loss&lt;/li&gt;
+&lt;li&gt;Possible solution: MULTISIG&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;技术开发
+&lt;li&gt;Q: How can Bitcoin gets its consensus?
 &lt;ul&gt;
-&lt;li&gt;前端&lt;/li&gt;
-&lt;li&gt;后端&lt;/li&gt;
+&lt;li&gt;A: Actually no consensus, like fork attack, in principle/in practice&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;数据相关&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;刷题-1&#34;&gt;刷题&lt;/h3&gt;
+&lt;li&gt;Q: How to attrack miners?
 &lt;ul&gt;
-&lt;li&gt;剑指Offer&lt;/li&gt;
-&lt;li&gt;LeetCode&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;提高英语口语&#34;&gt;提高英语口语&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Presentation&lt;/li&gt;
-&lt;li&gt;面试&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;12月&#34;&gt;12月&lt;/h2&gt;
-&lt;h3 id=&#34;case-study开发&#34;&gt;Case Study开发&lt;/h3&gt;
-&lt;h3 id=&#34;学习了解主流开源框架架构&#34;&gt;学习了解主流开源框架/架构&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;微服务架构&lt;/li&gt;
-&lt;li&gt;开源框架应用场景&lt;/li&gt;
-&lt;li&gt;SOA框架&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;了解云计算&#34;&gt;了解云计算&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;阿里云&lt;/li&gt;
-&lt;li&gt;AWS&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;刷题-2&#34;&gt;刷题&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;剑指Offer&lt;/li&gt;
-&lt;li&gt;LeetCode&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;提高英语口语-1&#34;&gt;提高英语口语&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Presentation&lt;/li&gt;
-&lt;li&gt;面试&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;1月&#34;&gt;1月&lt;/h2&gt;
-&lt;h3 id=&#34;case-study开发-1&#34;&gt;Case Study开发&lt;/h3&gt;
-&lt;h3 id=&#34;区块链开源项目实践&#34;&gt;区块链开源项目实践&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;了解主流项目&lt;/li&gt;
-&lt;li&gt;实践小型项目&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;个人信息完善&#34;&gt;个人信息完善&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;整理项目及展示&lt;/li&gt;
-&lt;li&gt;简历&lt;/li&gt;
-&lt;li&gt;LinkedIn&lt;/li&gt;
-&lt;li&gt;GitHub&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;刷题-3&#34;&gt;刷题&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;剑指Offer&lt;/li&gt;
-&lt;li&gt;LeetCode&lt;/li&gt;
-&lt;li&gt;公司笔试/面试真题&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;提高英语口语-2&#34;&gt;提高英语口语&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;面试&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;2月&#34;&gt;2月&lt;/h2&gt;
-&lt;h3 id=&#34;投递及笔试面试准备&#34;&gt;投递及笔试/面试准备&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;香港
-&lt;ul&gt;
-&lt;li&gt;学校就业资源
-&lt;ul&gt;
-&lt;li&gt;宣讲会&lt;/li&gt;
-&lt;li&gt;网站&lt;/li&gt;
-&lt;li&gt;相关教授&lt;/li&gt;
+&lt;li&gt;A: Increase profits and lower cost, rareness&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;外部就业资源
+&lt;li&gt;Q: Will quantum computing influence Bitcoin?
 &lt;ul&gt;
-&lt;li&gt;JobDB&lt;/li&gt;
-&lt;li&gt;LinkedIn&lt;/li&gt;
-&lt;li&gt;公司招聘&lt;/li&gt;
+&lt;li&gt;A: Not in practical use&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;LinkedIn&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;内地
-&lt;ul&gt;
-&lt;li&gt;暑期实习提前批&lt;/li&gt;
-&lt;li&gt;日常实习&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;实习&#34;&gt;实习&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;To Be Decided&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;学习计划&#34;&gt;学习计划&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_plan.svg&#34; alt=&#34;blockchain_plan&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;算法刷题&#34;&gt;算法刷题&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;剑指Offer&lt;/li&gt;
-&lt;li&gt;LeetCode&lt;/li&gt;
-&lt;li&gt;笔试面试题库&lt;/li&gt;
-&lt;li&gt;编程语言&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;java相关&#34;&gt;Java相关&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;基础
-&lt;ul&gt;
-&lt;li&gt;CS61B - UC Berkley&lt;/li&gt;
-&lt;li&gt;Java学习笔记 - GitHub&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;容器&lt;/li&gt;
-&lt;li&gt;并发
-&lt;ul&gt;
-&lt;li&gt;多线程编程（threadpool）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;JVM
-&lt;ul&gt;
-&lt;li&gt;内存模型
-&lt;ul&gt;
-&lt;li&gt;JVM内存整理&lt;/li&gt;
-&lt;li&gt;垃圾处理策略&lt;/li&gt;
-&lt;li&gt;Root链搜索引用&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;I/O&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;其他&#34;&gt;其他&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Golang&lt;/li&gt;
-&lt;li&gt;C++&lt;/li&gt;
-&lt;li&gt;Node.js&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;系统设计&#34;&gt;系统设计&lt;/h2&gt;
-&lt;h3 id=&#34;基础&#34;&gt;基础&lt;/h3&gt;
-&lt;h3 id=&#34;分布式&#34;&gt;分布式&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Redius实现分布式一致的锁&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;缓存&#34;&gt;缓存&lt;/h3&gt;
-&lt;h3 id=&#34;消息队列&#34;&gt;消息队列&lt;/h3&gt;
-&lt;h3 id=&#34;集群&#34;&gt;集群&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Kafka
-&lt;ul&gt;
-&lt;li&gt;工作原理&lt;/li&gt;
-&lt;li&gt;配置&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;攻击技术&#34;&gt;攻击技术&lt;/h3&gt;
-&lt;h2 id=&#34;主流工具框架&#34;&gt;主流工具/框架&lt;/h2&gt;
-&lt;h3 id=&#34;unixlinux系统了解&#34;&gt;Unix/Linux系统（了解）&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;常用命令&lt;/li&gt;
-&lt;li&gt;Shell脚本&lt;/li&gt;
-&lt;li&gt;应用开发&lt;/li&gt;
-&lt;li&gt;性能查看工具&lt;/li&gt;
-&lt;li&gt;性能调优工具&lt;/li&gt;
-&lt;li&gt;多线程/进程&lt;/li&gt;
-&lt;li&gt;文件系统&lt;/li&gt;
-&lt;li&gt;网络编程&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;docker&#34;&gt;Docker&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;技术原理&lt;/li&gt;
-&lt;li&gt;部署&lt;/li&gt;
-&lt;li&gt;使用优化&lt;/li&gt;
-&lt;li&gt;Kubernetes&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;数据库&#34;&gt;数据库&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;非关系型数据库
-&lt;ul&gt;
-&lt;li&gt;KV型数据库
-&lt;ul&gt;
-&lt;li&gt;LevelDB&lt;/li&gt;
-&lt;li&gt;RocksDB&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;关系型数据库
-&lt;ul&gt;
-&lt;li&gt;悲观锁&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;版本控制&#34;&gt;版本控制&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Git
-&lt;ul&gt;
-&lt;li&gt;GitHub&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;微服务架构&#34;&gt;微服务架构&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;阿里微服务Dubbo&lt;/li&gt;
-&lt;li&gt;DDD（领域驱动设计，Domain Driven Design）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;开源框架应用场景&#34;&gt;开源框架应用场景&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Spring&lt;/li&gt;
-&lt;li&gt;Mybatis&lt;/li&gt;
-&lt;li&gt;Hibernate&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;架构&#34;&gt;架构&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;SOA架构（面向服务的架构，Service-Oriented Architecture）&lt;/li&gt;
-&lt;li&gt;OSGI架构（开放服务网关协议，Open Service Gateway Initiative）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;区块链技术&#34;&gt;区块链技术&lt;/h2&gt;
-&lt;h3 id=&#34;技术原理&#34;&gt;技术原理&lt;/h3&gt;
-&lt;h3 id=&#34;常见开源系统解决方案&#34;&gt;常见开源系统/解决方案&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Bitcoin&lt;/li&gt;
-&lt;li&gt;Ethereum&lt;/li&gt;
-&lt;li&gt;EOS&lt;/li&gt;
-&lt;li&gt;Fabric&lt;/li&gt;
-&lt;li&gt;IBM Hyperledge&lt;/li&gt;
-&lt;li&gt;R3 Corda&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;智能合约虚拟机&#34;&gt;智能合约虚拟机&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;EVM命令集&lt;/li&gt;
-&lt;li&gt;WASM&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;一致性算法&#34;&gt;一致性算法&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;BFT&lt;/li&gt;
-&lt;li&gt;Paxos&lt;/li&gt;
-&lt;li&gt;Raft&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;共识协议&#34;&gt;共识协议&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;PoW&lt;/li&gt;
-&lt;li&gt;PoS&lt;/li&gt;
-&lt;li&gt;Algorand&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;其他相关背景&#34;&gt;其他相关背景&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;密码学&lt;/li&gt;
-&lt;li&gt;网络安全&lt;/li&gt;
-&lt;li&gt;分布式计算&lt;/li&gt;
-&lt;li&gt;云计算
-&lt;ul&gt;
-&lt;li&gt;阿里云&lt;/li&gt;
-&lt;li&gt;AWS&lt;/li&gt;
-&lt;li&gt;Azure&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;中间件&lt;/li&gt;
-&lt;li&gt;网关或开放平台设计&lt;/li&gt;
-&lt;li&gt;可信计算技术原理与应用&lt;/li&gt;
-&lt;li&gt;软件形式化验证&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;软性技能&#34;&gt;软性技能&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;逻辑&lt;/li&gt;
-&lt;li&gt;接受新事物&lt;/li&gt;
-&lt;li&gt;自我驱动&lt;/li&gt;
-&lt;li&gt;沟通表达&lt;/li&gt;
-&lt;li&gt;团队合作&lt;/li&gt;
-&lt;li&gt;对系统质量苛刻要求&lt;/li&gt;
-&lt;li&gt;识别和设计通用框架及模块&lt;/li&gt;
-&lt;li&gt;识别业务关键需求和设计领域模型&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       
@@ -2041,6 +1337,117 @@ no prior requirement of knowing the object when writing or compiling code&lt;/li
     </item>
     
     <item>
+      <title>Blockchain Technology and Applications</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/23/blockchain-technology-and-applications/</link>
+      <pubDate>Fri, 23 Oct 2020 09:07:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/23/blockchain-technology-and-applications/</guid>
+      
+        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
+&lt;h2 id=&#34;bitcoin-system-transaction-based-ledger&#34;&gt;BitCoin System (Transaction-based ledger)&lt;/h2&gt;
+&lt;h3 id=&#34;fork&#34;&gt;Fork&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_fork.svg&#34; alt=&#34;blockchain_bitcoin_fork&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;State fork
+&lt;ul&gt;
+&lt;li&gt;Forking attack (deliberate fork)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Protocol fork
+&lt;ul&gt;
+&lt;li&gt;Hard fork (permanent)
+&lt;ul&gt;
+&lt;li&gt;Block size limit (1M -&amp;gt; 4M)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Soft fork (&amp;gt; 50%, temporary)
+&lt;ul&gt;
+&lt;li&gt;Block size limit (1M -&amp;gt; 0.5M)&lt;/li&gt;
+&lt;li&gt;coinbase
+&lt;ul&gt;
+&lt;li&gt;As extra nonce 2^32 -&amp;gt; 2^96 (adding 8 bytes)&lt;/li&gt;
+&lt;li&gt;As root hash of UTXO&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;P2SH(Pay to Script Hash)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Blockchain Technology and Applications</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/22/blockchain-technology-and-applications/</link>
+      <pubDate>Thu, 22 Oct 2020 09:07:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/22/blockchain-technology-and-applications/</guid>
+      
+        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
+&lt;h2 id=&#34;bitcoin-system-transaction-based-ledger&#34;&gt;BitCoin System (Transaction-based ledger)&lt;/h2&gt;
+&lt;h3 id=&#34;mining&#34;&gt;Mining&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_mining.svg&#34; alt=&#34;blockchain_bitcoin_mining&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Solve puzzles
+&lt;ul&gt;
+&lt;li&gt;Average block time
+&lt;ul&gt;
+&lt;li&gt;10 minutes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Difficulty
+&lt;ul&gt;
+&lt;li&gt;Target = target * (actual time / expected time)&lt;/li&gt;
+&lt;li&gt;Adjust every 2 weeks&lt;/li&gt;
+&lt;li&gt;Ar most 4 times, at least 1/4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Bernoulli process (nearly poisson process in BitCoin mining)
+&lt;ul&gt;
+&lt;li&gt;Bernoulli trial
+&lt;ul&gt;
+&lt;li&gt;A random experiment
+with binary outcome&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;A sequence of independent Bernoulli trial&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Feature
+&lt;ul&gt;
+&lt;li&gt;Memoryless&lt;/li&gt;
+&lt;li&gt;Progress free
+&lt;ul&gt;
+&lt;li&gt;Ensure the fairness of mining&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Exponential distribution&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Device (Universal -&amp;gt; Specific)
+&lt;ul&gt;
+&lt;li&gt;CPU&lt;/li&gt;
+&lt;li&gt;GPU&lt;/li&gt;
+&lt;li&gt;ASIC (Application Specific Integrated Circuit))&lt;/li&gt;
+&lt;li&gt;Mining pool (on demand mining)
+&lt;ul&gt;
+&lt;li&gt;Pool manager (risks of 51% attack)&lt;/li&gt;
+&lt;li&gt;miners&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>ICOM6045 Topic 1 Cryptography</title>
       <link>https://www.pseudoyu.com/zh/2020/10/21/icom6045-topic-1-cryptography/</link>
       <pubDate>Wed, 21 Oct 2020 19:53:17 +0800</pubDate>
@@ -2050,6 +1457,220 @@ no prior requirement of knowing the object when writing or compiling code&lt;/li
         <description>&lt;h1 id=&#34;icom6045-fundamentals-of-e-commerce-security&#34;&gt;ICOM6045 Fundamentals of E-Commerce Security&lt;/h1&gt;
 &lt;h2 id=&#34;topic-1-cryptography&#34;&gt;Topic 1 Cryptography&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/cryptography.svg&#34; alt=&#34;cryptography&#34;&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Blockchain Technology and Applications</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/21/blockchain-technology-and-applications/</link>
+      <pubDate>Wed, 21 Oct 2020 09:07:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/21/blockchain-technology-and-applications/</guid>
+      
+        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
+&lt;h2 id=&#34;cryptography&#34;&gt;Cryptography&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_cryptography.svg&#34; alt=&#34;blockchain_cryptography&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;cryptographic-hash-function&#34;&gt;Cryptographic hash function&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Application
+&lt;ul&gt;
+&lt;li&gt;Digital commitment
+(digital equivalent of a sealed envelop)
+&lt;ul&gt;
+&lt;li&gt;H(x || nonce)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;SHA-256
+(used in bitcoin)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Features
+&lt;ul&gt;
+&lt;li&gt;Collision resistance
+&lt;ul&gt;
+&lt;li&gt;x != y, H(x) = H(y)&lt;/li&gt;
+&lt;li&gt;MD5 (proved bad)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Hiding
+&lt;ul&gt;
+&lt;li&gt;x -&amp;gt; H(x), H(x) !-&amp;gt; x&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Puzzle friendly
+&lt;ul&gt;
+&lt;li&gt;H(block header) &amp;lt;= target&lt;/li&gt;
+&lt;li&gt;Keep trying nonce, no shortcuts&lt;/li&gt;
+&lt;li&gt;Difficult to solve, but easy to verify&lt;/li&gt;
+&lt;li&gt;Application
+&lt;ul&gt;
+&lt;li&gt;PoW (Proof of Work)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;encryption&#34;&gt;Encryption&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Symmetric encryption
+&lt;ul&gt;
+&lt;li&gt;Use the same one key&lt;/li&gt;
+&lt;li&gt;Not secure to transport encryption key&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Asymmetric encryption
+(public key encryption)
+&lt;ul&gt;
+&lt;li&gt;Use two keys
+(one for encryption, another for decryption)&lt;/li&gt;
+&lt;li&gt;A good source of randomness
+(assume)&lt;/li&gt;
+&lt;li&gt;Application
+&lt;ul&gt;
+&lt;li&gt;Signature
+(used in bitcoin)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Blockchain Technology and Applications</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/21/blockchain-technology-and-applications/</link>
+      <pubDate>Wed, 21 Oct 2020 09:07:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/21/blockchain-technology-and-applications/</guid>
+      
+        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
+&lt;h2 id=&#34;data-structure&#34;&gt;Data Structure&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_data_structure.svg&#34; alt=&#34;blockchain_data_structure&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;hash-pointer-blockchain-is-a-linked-list&#34;&gt;Hash pointer (blockchain is a linked list&lt;/h3&gt;
+&lt;p&gt;using hash pointers)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Genesis block &amp;lt;- block1 &amp;lt;- block2 &amp;lt;-&amp;hellip;&amp;lt;- recent block (every block has a hash pointer)&lt;/li&gt;
+&lt;li&gt;Tamper-event log&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;merkle-tree-using-hash-pointer-instead-of-pointer&#34;&gt;Merkle tree (using hash pointer instead of pointer)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Merkle proof (proof of membership/inclusion)
+&lt;ul&gt;
+&lt;li&gt;O(log(n))&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Think: proof of non-membership
+&lt;ul&gt;
+&lt;li&gt;O(n)&lt;/li&gt;
+&lt;li&gt;Sorted merkle tree: O(log(n))&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;application-blockchain&#34;&gt;Application (blockchain)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Node
+&lt;ul&gt;
+&lt;li&gt;Full node (fully validating node)
+&lt;ul&gt;
+&lt;li&gt;Block header
+&lt;ul&gt;
+&lt;li&gt;Version&lt;/li&gt;
+&lt;li&gt;Hash of previous block header&lt;/li&gt;
+&lt;li&gt;Merkle root hash (protect all nodes)&lt;/li&gt;
+&lt;li&gt;Target&lt;/li&gt;
+&lt;li&gt;Nonce&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Block body
+&lt;ul&gt;
+&lt;li&gt;Transaction lists&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Light node (light weight node)
+&lt;ul&gt;
+&lt;li&gt;Only store block headers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Problem
+&lt;ul&gt;
+&lt;li&gt;Double spending&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Blockchain Technology and Applications</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/21/blockchain-technology-and-applications/</link>
+      <pubDate>Wed, 21 Oct 2020 09:07:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/21/blockchain-technology-and-applications/</guid>
+      
+        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
+&lt;h2 id=&#34;protocol&#34;&gt;Protocol&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_protocol.svg&#34; alt=&#34;blockchain_protocol&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;distributed-consensus&#34;&gt;Distributed consensus&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;Impossibility result&amp;rdquo;
+&lt;ul&gt;
+&lt;li&gt;FLP
+&lt;ul&gt;
+&lt;li&gt;In an asynchronous system, if one faulty exists, there is no consensus&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;CAP Theorem
+&lt;ul&gt;
+&lt;li&gt;Consistency&lt;/li&gt;
+&lt;li&gt;Availability&lt;/li&gt;
+&lt;li&gt;Partition tolerance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Example
+&lt;ul&gt;
+&lt;li&gt;Distributed hash table&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;consensus-in-bitcoin&#34;&gt;Consensus in BitCoin&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Membership (decide who can vote)
+&lt;ul&gt;
+&lt;li&gt;Hyperledger
+&lt;ul&gt;
+&lt;li&gt;Fabric&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Vote by computing power (based on puzzle friendly)&lt;/li&gt;
+&lt;li&gt;Increasing concern
+&lt;ul&gt;
+&lt;li&gt;Win
+&lt;ul&gt;
+&lt;li&gt;Longest valid chain&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Lose
+&lt;ul&gt;
+&lt;li&gt;Orphan block&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 </description>
       
     </item>
@@ -2853,6 +2474,537 @@ no prior requirement of knowing the object when writing or compiling code&lt;/li
 &lt;li&gt;Randomly select another peers and send chunks (for new peers)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Blockchain Learning Plan</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/18/blockchain-learning-plan/</link>
+      <pubDate>Sun, 18 Oct 2020 09:20:31 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/18/blockchain-learning-plan/</guid>
+      
+        <description>&lt;h1 id=&#34;区块链学习计划&#34;&gt;区块链学习计划&lt;/h1&gt;
+&lt;h2 id=&#34;学习路径&#34;&gt;学习路径&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_path.svg&#34; alt=&#34;blockchain_path&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;10月&#34;&gt;10月&lt;/h2&gt;
+&lt;h3 id=&#34;学习java基础&#34;&gt;学习Java基础&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;CS61B - UC Berkley&lt;/li&gt;
+&lt;li&gt;Java笔记 - GitHub&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;学习区块链基础&#34;&gt;学习区块链基础&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;区块链原理
+&lt;ul&gt;
+&lt;li&gt;区块链技术与应用 - 肖臻
+&lt;ul&gt;
+&lt;li&gt;整理知识体系&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Bitcoin and Cryptocurrency Technology - Coursera
+&lt;ul&gt;
+&lt;li&gt;完成Assignment（Java）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;搭建区块链
+&lt;ul&gt;
+&lt;li&gt;Let&amp;rsquo;s build a blockchain - YouTube （Ruby）
+&lt;ul&gt;
+&lt;li&gt;用Java重写&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;搭建区块链 - B站落拓（Node.js）
+&lt;ul&gt;
+&lt;li&gt;用Java重写&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;case-study调研&#34;&gt;Case Study调研&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;结合市场需求
+&lt;ul&gt;
+&lt;li&gt;数据隐私（待定）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;解决方案
+&lt;ul&gt;
+&lt;li&gt;产品形态&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;mini-project调研&#34;&gt;Mini Project调研&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;数据隐私&lt;/li&gt;
+&lt;li&gt;未来区块链解决方案&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;熟悉版本控制工具&#34;&gt;熟悉版本控制工具&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Git
+&lt;ul&gt;
+&lt;li&gt;熟悉常用命令&lt;/li&gt;
+&lt;li&gt;培养工作流&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;GitHub
+&lt;ul&gt;
+&lt;li&gt;优化个人Profile&lt;/li&gt;
+&lt;li&gt;日常更新&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;刷题&#34;&gt;刷题&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;剑指Offer&lt;/li&gt;
+&lt;li&gt;LeetCode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;11月&#34;&gt;11月&lt;/h2&gt;
+&lt;h3 id=&#34;提升技术能力&#34;&gt;提升技术能力&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Web开发
+&lt;ul&gt;
+&lt;li&gt;Web Developer Bootcamp - Udemy
+&lt;ul&gt;
+&lt;li&gt;前端&lt;/li&gt;
+&lt;li&gt;后端（课程用Node.js，了解）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;数据库&lt;/li&gt;
+&lt;li&gt;Linux基础&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;学习系统相关&#34;&gt;学习系统相关&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;系统设计笔记 - GitHub
+&lt;ul&gt;
+&lt;li&gt;理解原理&lt;/li&gt;
+&lt;li&gt;了解配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Docke&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;区块链进阶与实践&#34;&gt;区块链进阶与实践&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;区块链技术原理
+&lt;ul&gt;
+&lt;li&gt;Bitcoin and Cryptocurrency Technology - Coursera
+&lt;ul&gt;
+&lt;li&gt;继续完成Assignment（Java）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;共识协议&lt;/li&gt;
+&lt;li&gt;一致性算法&lt;/li&gt;
+&lt;li&gt;智能合约虚拟机&lt;/li&gt;
+&lt;li&gt;开源系统、解决方案
+&lt;ul&gt;
+&lt;li&gt;Bitcoin
+&lt;ul&gt;
+&lt;li&gt;了解机制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Ethereum
+&lt;ul&gt;
+&lt;li&gt;项目实践&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;case-study规划及知识储备&#34;&gt;Case Study规划及知识储备&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;产品规划
+&lt;ul&gt;
+&lt;li&gt;需求文档&lt;/li&gt;
+&lt;li&gt;开发安排&lt;/li&gt;
+&lt;li&gt;产品设计
+&lt;ul&gt;
+&lt;li&gt;产品原型&lt;/li&gt;
+&lt;li&gt;技术框架&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;技术开发
+&lt;ul&gt;
+&lt;li&gt;前端&lt;/li&gt;
+&lt;li&gt;后端&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;数据相关&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;刷题-1&#34;&gt;刷题&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;剑指Offer&lt;/li&gt;
+&lt;li&gt;LeetCode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;提高英语口语&#34;&gt;提高英语口语&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Presentation&lt;/li&gt;
+&lt;li&gt;面试&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;12月&#34;&gt;12月&lt;/h2&gt;
+&lt;h3 id=&#34;case-study开发&#34;&gt;Case Study开发&lt;/h3&gt;
+&lt;h3 id=&#34;学习了解主流开源框架架构&#34;&gt;学习了解主流开源框架/架构&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;微服务架构&lt;/li&gt;
+&lt;li&gt;开源框架应用场景&lt;/li&gt;
+&lt;li&gt;SOA框架&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;了解云计算&#34;&gt;了解云计算&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;阿里云&lt;/li&gt;
+&lt;li&gt;AWS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;刷题-2&#34;&gt;刷题&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;剑指Offer&lt;/li&gt;
+&lt;li&gt;LeetCode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;提高英语口语-1&#34;&gt;提高英语口语&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Presentation&lt;/li&gt;
+&lt;li&gt;面试&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;1月&#34;&gt;1月&lt;/h2&gt;
+&lt;h3 id=&#34;case-study开发-1&#34;&gt;Case Study开发&lt;/h3&gt;
+&lt;h3 id=&#34;区块链开源项目实践&#34;&gt;区块链开源项目实践&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;了解主流项目&lt;/li&gt;
+&lt;li&gt;实践小型项目&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;个人信息完善&#34;&gt;个人信息完善&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;整理项目及展示&lt;/li&gt;
+&lt;li&gt;简历&lt;/li&gt;
+&lt;li&gt;LinkedIn&lt;/li&gt;
+&lt;li&gt;GitHub&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;刷题-3&#34;&gt;刷题&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;剑指Offer&lt;/li&gt;
+&lt;li&gt;LeetCode&lt;/li&gt;
+&lt;li&gt;公司笔试/面试真题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;提高英语口语-2&#34;&gt;提高英语口语&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;面试&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2月&#34;&gt;2月&lt;/h2&gt;
+&lt;h3 id=&#34;投递及笔试面试准备&#34;&gt;投递及笔试/面试准备&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;香港
+&lt;ul&gt;
+&lt;li&gt;学校就业资源
+&lt;ul&gt;
+&lt;li&gt;宣讲会&lt;/li&gt;
+&lt;li&gt;网站&lt;/li&gt;
+&lt;li&gt;相关教授&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;外部就业资源
+&lt;ul&gt;
+&lt;li&gt;JobDB&lt;/li&gt;
+&lt;li&gt;LinkedIn&lt;/li&gt;
+&lt;li&gt;公司招聘&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;LinkedIn&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;内地
+&lt;ul&gt;
+&lt;li&gt;暑期实习提前批&lt;/li&gt;
+&lt;li&gt;日常实习&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;实习&#34;&gt;实习&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;To Be Decided&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Blockchain Learning Plan</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/18/blockchain-learning-plan/</link>
+      <pubDate>Sun, 18 Oct 2020 09:20:31 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/18/blockchain-learning-plan/</guid>
+      
+        <description>&lt;h1 id=&#34;区块链学习计划&#34;&gt;区块链学习计划&lt;/h1&gt;
+&lt;h1 id=&#34;知识结构&#34;&gt;知识结构&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_plan.svg&#34; alt=&#34;blockchain_plan&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;算法刷题&#34;&gt;算法刷题&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;剑指Offer&lt;/li&gt;
+&lt;li&gt;LeetCode&lt;/li&gt;
+&lt;li&gt;笔试面试题库&lt;/li&gt;
+&lt;li&gt;编程语言&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;java相关&#34;&gt;Java相关&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;基础
+&lt;ul&gt;
+&lt;li&gt;CS61B - UC Berkley&lt;/li&gt;
+&lt;li&gt;Java学习笔记 - GitHub&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;容器&lt;/li&gt;
+&lt;li&gt;并发
+&lt;ul&gt;
+&lt;li&gt;多线程编程（threadpool）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;JVM
+&lt;ul&gt;
+&lt;li&gt;内存模型
+&lt;ul&gt;
+&lt;li&gt;JVM内存整理&lt;/li&gt;
+&lt;li&gt;垃圾处理策略&lt;/li&gt;
+&lt;li&gt;Root链搜索引用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;I/O&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;其他&#34;&gt;其他&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Golang&lt;/li&gt;
+&lt;li&gt;C++&lt;/li&gt;
+&lt;li&gt;Node.js&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;系统设计&#34;&gt;系统设计&lt;/h2&gt;
+&lt;h3 id=&#34;基础&#34;&gt;基础&lt;/h3&gt;
+&lt;h3 id=&#34;分布式&#34;&gt;分布式&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Redius实现分布式一致的锁&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缓存&#34;&gt;缓存&lt;/h3&gt;
+&lt;h3 id=&#34;消息队列&#34;&gt;消息队列&lt;/h3&gt;
+&lt;h3 id=&#34;集群&#34;&gt;集群&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Kafka
+&lt;ul&gt;
+&lt;li&gt;工作原理&lt;/li&gt;
+&lt;li&gt;配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;攻击技术&#34;&gt;攻击技术&lt;/h3&gt;
+&lt;h2 id=&#34;主流工具框架&#34;&gt;主流工具/框架&lt;/h2&gt;
+&lt;h3 id=&#34;unixlinux系统了解&#34;&gt;Unix/Linux系统（了解）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;常用命令&lt;/li&gt;
+&lt;li&gt;Shell脚本&lt;/li&gt;
+&lt;li&gt;应用开发&lt;/li&gt;
+&lt;li&gt;性能查看工具&lt;/li&gt;
+&lt;li&gt;性能调优工具&lt;/li&gt;
+&lt;li&gt;多线程/进程&lt;/li&gt;
+&lt;li&gt;文件系统&lt;/li&gt;
+&lt;li&gt;网络编程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;docker&#34;&gt;Docker&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;技术原理&lt;/li&gt;
+&lt;li&gt;部署&lt;/li&gt;
+&lt;li&gt;使用优化&lt;/li&gt;
+&lt;li&gt;Kubernetes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;数据库&#34;&gt;数据库&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;非关系型数据库
+&lt;ul&gt;
+&lt;li&gt;KV型数据库
+&lt;ul&gt;
+&lt;li&gt;LevelDB&lt;/li&gt;
+&lt;li&gt;RocksDB&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;关系型数据库
+&lt;ul&gt;
+&lt;li&gt;悲观锁&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;版本控制&#34;&gt;版本控制&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Git
+&lt;ul&gt;
+&lt;li&gt;GitHub&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;微服务架构&#34;&gt;微服务架构&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;阿里微服务Dubbo&lt;/li&gt;
+&lt;li&gt;DDD（领域驱动设计，Domain Driven Design）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;开源框架应用场景&#34;&gt;开源框架应用场景&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Spring&lt;/li&gt;
+&lt;li&gt;Mybatis&lt;/li&gt;
+&lt;li&gt;Hibernate&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;架构&#34;&gt;架构&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;SOA架构（面向服务的架构，Service-Oriented Architecture）&lt;/li&gt;
+&lt;li&gt;OSGI架构（开放服务网关协议，Open Service Gateway Initiative）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;区块链技术&#34;&gt;区块链技术&lt;/h2&gt;
+&lt;h3 id=&#34;技术原理&#34;&gt;技术原理&lt;/h3&gt;
+&lt;h3 id=&#34;常见开源系统解决方案&#34;&gt;常见开源系统/解决方案&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Bitcoin&lt;/li&gt;
+&lt;li&gt;Ethereum&lt;/li&gt;
+&lt;li&gt;EOS&lt;/li&gt;
+&lt;li&gt;Fabric&lt;/li&gt;
+&lt;li&gt;IBM Hyperledge&lt;/li&gt;
+&lt;li&gt;R3 Corda&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;智能合约虚拟机&#34;&gt;智能合约虚拟机&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;EVM命令集&lt;/li&gt;
+&lt;li&gt;WASM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;一致性算法&#34;&gt;一致性算法&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;BFT&lt;/li&gt;
+&lt;li&gt;Paxos&lt;/li&gt;
+&lt;li&gt;Raft&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;共识协议&#34;&gt;共识协议&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;PoW&lt;/li&gt;
+&lt;li&gt;PoS&lt;/li&gt;
+&lt;li&gt;Algorand&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;其他相关背景&#34;&gt;其他相关背景&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;密码学&lt;/li&gt;
+&lt;li&gt;网络安全&lt;/li&gt;
+&lt;li&gt;分布式计算&lt;/li&gt;
+&lt;li&gt;云计算
+&lt;ul&gt;
+&lt;li&gt;阿里云&lt;/li&gt;
+&lt;li&gt;AWS&lt;/li&gt;
+&lt;li&gt;Azure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;中间件&lt;/li&gt;
+&lt;li&gt;网关或开放平台设计&lt;/li&gt;
+&lt;li&gt;可信计算技术原理与应用&lt;/li&gt;
+&lt;li&gt;软件形式化验证&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;软性技能&#34;&gt;软性技能&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;逻辑&lt;/li&gt;
+&lt;li&gt;接受新事物&lt;/li&gt;
+&lt;li&gt;自我驱动&lt;/li&gt;
+&lt;li&gt;沟通表达&lt;/li&gt;
+&lt;li&gt;团队合作&lt;/li&gt;
+&lt;li&gt;对系统质量苛刻要求&lt;/li&gt;
+&lt;li&gt;识别和设计通用框架及模块&lt;/li&gt;
+&lt;li&gt;识别业务关键需求和设计领域模型&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Blockchain Technology and Applications</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/18/blockchain-technology-and-applications/</link>
+      <pubDate>Sun, 18 Oct 2020 09:07:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/18/blockchain-technology-and-applications/</guid>
+      
+        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
+&lt;h2 id=&#34;bitcoin-system-transaction-based-ledger&#34;&gt;BitCoin System (Transaction-based ledger)&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_features.svg&#34; alt=&#34;blockchain_bitcoin_features&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;utxo-unspent-transaction-output&#34;&gt;UTXO (Unspent Transaction Output)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Total inputs = total outputs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;quantity&#34;&gt;Quantity&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;21,000,000&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;block-reward&#34;&gt;Block reward&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Coinbase transaction&lt;/li&gt;
+&lt;li&gt;Cut half every 4 year&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;transaction-fee&#34;&gt;Transaction fee&lt;/h3&gt;
+&lt;h3 id=&#34;bitcoin-network&#34;&gt;BitCoin network&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Structure
+&lt;ul&gt;
+&lt;li&gt;Application layer
+&lt;ul&gt;
+&lt;li&gt;BitCoin blockchain&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Network layer
+&lt;ul&gt;
+&lt;li&gt;P2P overlay network&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Node
+&lt;ul&gt;
+&lt;li&gt;Seed node&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Feature
+&lt;ul&gt;
+&lt;li&gt;Simple&lt;/li&gt;
+&lt;li&gt;Robust&lt;/li&gt;
+&lt;li&gt;Not efficient&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Best effort&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Message transport
+&lt;ul&gt;
+&lt;li&gt;Flooding&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;security&#34;&gt;Security&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Problem
+&lt;ul&gt;
+&lt;li&gt;Sybil attack&lt;/li&gt;
+&lt;li&gt;Forking attack&lt;/li&gt;
+&lt;li&gt;Boycott&lt;/li&gt;
+&lt;li&gt;Selfish mining
+&lt;ul&gt;
+&lt;li&gt;Reduce competition&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Solution
+&lt;ul&gt;
+&lt;li&gt;Based on computing power (large cost)&lt;/li&gt;
+&lt;li&gt;Require 6 confirmation by nodes (long time, about 1 hour)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -3736,1580 +3888,6 @@ traceroute to youtube.com &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;216.58.197
 &lt;li&gt;New protocols, a proliferation of networks (1980-1990)&lt;/li&gt;
 &lt;li&gt;Commercialization, the Web, new apps (1990&amp;rsquo;s, 2000&amp;rsquo;s)&lt;/li&gt;
 &lt;li&gt;More new applications, Internet is &amp;ldquo;everywhere&amp;rdquo; (2005-Present)&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>COMP7404 Topic 3 Adversarial Search</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/05/comp7404-topic-3-adversarial-search/</link>
-      <pubDate>Mon, 05 Oct 2020 00:30:11 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/05/comp7404-topic-3-adversarial-search/</guid>
-      
-        <description>&lt;h1 id=&#34;comp7404-computational-intelligence-and-machine-learning&#34;&gt;COMP7404 Computational Intelligence and Machine Learning&lt;/h1&gt;
-&lt;h2 id=&#34;topic-3-adversarial-search&#34;&gt;Topic 3 Adversarial Search&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;A Multi-agent Competitive Environment&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Other agents are planning against us&lt;/li&gt;
-&lt;li&gt;Goals are in conflict (not necessarily)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Game Definition&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A game can be defined as
-&lt;ul&gt;
-&lt;li&gt;s : States&lt;/li&gt;
-&lt;li&gt;s0: Initial state&lt;/li&gt;
-&lt;li&gt;Player(s) : Defines which player has the move&lt;/li&gt;
-&lt;li&gt;Actions(s) : Returns a set of legal moves&lt;/li&gt;
-&lt;li&gt;Result(s,a) : Defines the result of a move&lt;/li&gt;
-&lt;li&gt;TerminalTest(s) : True when game is over, false otherwise&lt;/li&gt;
-&lt;li&gt;Utility(s,p) : Defines the final numeric value for a game that ends in terminal state s for player p&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;A game tree can be constructed
-&lt;ul&gt;
-&lt;li&gt;Nodes are game states and edges are moves&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Tic-Tac-Toe Game Tree&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/tic_tac_toe_game_tree.png&#34; alt=&#34;tic_tac_toe_game_tree&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Minimax Search&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A state-space search tree&lt;/li&gt;
-&lt;li&gt;Players alternate turns&lt;/li&gt;
-&lt;li&gt;Compute each node’s minimax value
-&lt;ul&gt;
-&lt;li&gt;the best achievable utility against a rational (optimal) adversary&lt;/li&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/minimax.png&#34; alt=&#34;minimax&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Will lead to optimal strategy
-&lt;ul&gt;
-&lt;li&gt;Best achievable payoff against best play&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Example
-&lt;ul&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/minimax_example.png&#34; alt=&#34;minimax_example&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Implementation
-&lt;ul&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/minimax_implementation.png&#34; alt=&#34;minimax_implementation&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Properties
-&lt;ul&gt;
-&lt;li&gt;Complete - Yes, if tree is finite&lt;/li&gt;
-&lt;li&gt;Optimal - In general no, yes against an optimal opponent&lt;/li&gt;
-&lt;li&gt;Time complexity - O(b^m)&lt;/li&gt;
-&lt;li&gt;Space complexity - O(bm)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Depth-Limit Search (DLS)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A depth limit search (DLS)
-&lt;ul&gt;
-&lt;li&gt;Search only to a limited depth in the tree&lt;/li&gt;
-&lt;li&gt;Replace terminal utilities with an evaluation function for non-terminal positions&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Problems
-&lt;ul&gt;
-&lt;li&gt;Guarantee of optimal play is gone&lt;/li&gt;
-&lt;li&gt;Need to design evaluation function&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;An evaluation function
-&lt;ul&gt;
-&lt;li&gt;An evaluation function Eval(s) scores non-terminals in depth-limited search
-&lt;ul&gt;
-&lt;li&gt;An estimate of the expected utility of the game from a given position&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Ideal function
-&lt;ul&gt;
-&lt;li&gt;The actual minimax value of the position&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;The performance of a game-playing program depends strongly on the quality of its evaluation functio&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;𝛼-𝛽 Pruning Algorithm&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/pruning_algorithm.png&#34; alt=&#34;pruning_algorithm&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Min version
-&lt;ul&gt;
-&lt;li&gt;Consider Min’s value at some node n&lt;/li&gt;
-&lt;li&gt;n will decrease (or stay constant) while the descendants of n are examined&lt;/li&gt;
-&lt;li&gt;Let m be the best value that Max can get at any choice point along the current path from the root&lt;/li&gt;
-&lt;li&gt;If n becomes worse (&amp;lt;) than m
-&lt;ul&gt;
-&lt;li&gt;Max will avoid it&lt;/li&gt;
-&lt;li&gt;Stop considering n’s other children&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Max version is symmetric&lt;/li&gt;
-&lt;li&gt;Properties
-&lt;ul&gt;
-&lt;li&gt;Pruning has no effect on the minimax value at the root&lt;/li&gt;
-&lt;li&gt;Values of intermediate nodes might be wrong
-&lt;ul&gt;
-&lt;li&gt;Action selection not appropriate for this simple version of alpha-beta pruning&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Move ordering
-&lt;ul&gt;
-&lt;li&gt;The effectiveness of alpha-beta pruning is highly dependent on the order in which states are examined&lt;/li&gt;
-&lt;li&gt;It is worthwhile to try to examine first the successors that are likely best
-&lt;ul&gt;
-&lt;li&gt;Examine only O(b^(m/2)) nodes to pick the best move, instead of O(bm) for minimax&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://kartikkukreja.wordpress.com/2014/06/29/alphabetasearch/&#34;&gt;A Reference Note&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Expectimax Search&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/expectimax_search.png&#34; alt=&#34;expectimax_search&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Values reflect average case outcomes, not worst case outcomes&lt;/li&gt;
-&lt;li&gt;Expectimax search computes the expected score under optimal play
-&lt;ul&gt;
-&lt;li&gt;Max nodes as in minimax search&lt;/li&gt;
-&lt;li&gt;Chance nodes are like min nodes but the outcome is uncertain&lt;/li&gt;
-&lt;li&gt;Calculate their expected utilities
-&lt;ul&gt;
-&lt;li&gt;i.e., take weighted average of children&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Expectiminimax
-&lt;ul&gt;
-&lt;li&gt;Environment is an extra &amp;ldquo;random agent&amp;rdquo; player that moves after each min/max agent&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Multi-Agent Utilities&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/multi_agent.png&#34; alt=&#34;multi_agent&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Generalisation of minimax
-&lt;ul&gt;
-&lt;li&gt;Terminals and nodes have utility vectors&lt;/li&gt;
-&lt;li&gt;Each player maximizes its own component&lt;/li&gt;
-&lt;li&gt;Gives rise to cooperation and competition dynamically&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/46706438&#34;&gt;A Reference Note1&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://kartikkukreja.wordpress.com/2015/07/04/adversarial-search/&#34;&gt;A Reference Note2&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>COMP7404 Topic 2 Beyond Classical Search</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/04/comp7404-topic-2-beyond-classical-search/</link>
-      <pubDate>Sun, 04 Oct 2020 21:30:11 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/04/comp7404-topic-2-beyond-classical-search/</guid>
-      
-        <description>&lt;h1 id=&#34;comp7404-computational-intelligence-and-machine-learning&#34;&gt;COMP7404 Computational Intelligence and Machine Learning&lt;/h1&gt;
-&lt;h2 id=&#34;topic-2-beyond-classical-search&#34;&gt;Topic 2 Beyond Classical Search&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Planning vs Identification&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Planing: sequence of actions
-&lt;ul&gt;
-&lt;li&gt;The path to the goal is the important thing&lt;/li&gt;
-&lt;li&gt;Paths have various costs, depths&lt;/li&gt;
-&lt;li&gt;Heuristics to guide, frontier to keep backups&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Identification: assignments to variables
-&lt;ul&gt;
-&lt;li&gt;The goal itself is important, not the path&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Local Search can find solutions faster for specific types of identification problems&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Local Search&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Evaluate and modify one current state rather than systematically explore paths from an initial state&lt;/li&gt;
-&lt;li&gt;Suitable for problems were all that matters in the solution state and not the path cost to reach it&lt;/li&gt;
-&lt;li&gt;Although local search algorithms are not systematic they have two advantages
-&lt;ul&gt;
-&lt;li&gt;Require very little memory&lt;/li&gt;
-&lt;li&gt;Often find reasonable solutions in large spaces&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Local Search Algorithm&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Randomly initialize currentState
-If cost of currentState == 0 return currentState
-If min(cost(getNeighbors(currentState))) &amp;gt; cost(currentState)
-    goto step 1 (we have reached a local minimum)
-Select cheapest neighbor as currentState and goto step2
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Example: 8-Queens&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;States
-&lt;ul&gt;
-&lt;li&gt;Each state has 8 queens on board, one per column&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Successors
-&lt;ul&gt;
-&lt;li&gt;All possible states generated by moving single queen to another square in the same column&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Cost function
-&lt;ul&gt;
-&lt;li&gt;Number of pairs of queens that are attacking each other, either directly and indirectly&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Constraint Satisfaction Problems&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;CSPs use a factored representation for states&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A set of variables, each of which has a value&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Defining CSPs&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A CSP consists of three components
-&lt;ul&gt;
-&lt;li&gt;A set of variables, X = {X1,&amp;hellip;,Xn}&lt;/li&gt;
-&lt;li&gt;A set of domains, D = {D1,&amp;hellip;,Dn}, where Di = {V1,&amp;hellip;,Vk} for each variable Xi&lt;/li&gt;
-&lt;li&gt;A set of constraints C which specify allowable combinations of values&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;To solve a CSP we need to define a state space
-&lt;ul&gt;
-&lt;li&gt;Each state is defined by an assignment of values to some or all variables {Xi = Vi, Xj = Vj,&amp;hellip;}&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Solving CSPs&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;States are defined by the values assigned so far&lt;/li&gt;
-&lt;li&gt;Initial state
-&lt;ul&gt;
-&lt;li&gt;Empty assignment {}&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Successor function
-&lt;ul&gt;
-&lt;li&gt;Assign a value to an unassigned variable&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Goal test
-&lt;ul&gt;
-&lt;li&gt;Current assignment is complete and consistent&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Solutiona to CSPs&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Consistent - No constraints are violated&lt;/li&gt;
-&lt;li&gt;Complete - Every variable is assigned&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Backtracking Search (The basic algorithm for solving CSPs)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Idea&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Only consider assignments to a single variable at each point&lt;/li&gt;
-&lt;li&gt;Only allow legal assignemnts to each point&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;DFS with these two ideas is called backtracking search&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Improving Backchecking&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Idea&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Forward checking (FC)&lt;/li&gt;
-&lt;li&gt;Constraint propagation (AC-3)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Filtering: Forward Checking&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Filtering
-&lt;ul&gt;
-&lt;li&gt;Keep track of domains for unassigned variables and cross off bad options&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Forward checking
-&lt;ul&gt;
-&lt;li&gt;Cross off values that violate a constraint when added to the existing assignment&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Improving Backtracking Further&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Variable Ordering
-&lt;ul&gt;
-&lt;li&gt;Minimum remaining values (MRV)
-&lt;ul&gt;
-&lt;li&gt;Choose the variable with the fewest legal left values in its domain
-&lt;ul&gt;
-&lt;li&gt;Most constraint variable&lt;/li&gt;
-&lt;li&gt;Fail-first heuristic&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Tie-breaker among MRV variables
-&lt;ul&gt;
-&lt;li&gt;Degree Heuristic (Deg)
-&lt;ul&gt;
-&lt;li&gt;Choose the variable with the most constraints on remaining variables&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Value Ordering
-&lt;ul&gt;
-&lt;li&gt;Least constraining value (LCV)
-&lt;ul&gt;
-&lt;li&gt;Choose the value that rules out the fewest values in the remaining variables&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>区块链岗位描述</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/02/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%B2%97%E4%BD%8D%E6%8F%8F%E8%BF%B0/</link>
-      <pubDate>Fri, 02 Oct 2020 00:07:31 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/02/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%B2%97%E4%BD%8D%E6%8F%8F%E8%BF%B0/</guid>
-      
-        <description>&lt;h1 id=&#34;区块链岗位描述&#34;&gt;区块链岗位描述&lt;/h1&gt;
-&lt;h2 id=&#34;蚂蚁集团-区块链安全高级研发工程师研发专家&#34;&gt;蚂蚁集团-区块链安全高级研发工程师/研发专家&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;岗位描述&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;负责智能合约安全审计工具、合约虚拟机增强扩展等系统的研发&lt;/li&gt;
-&lt;li&gt;负责区块链相关安全解决方案的研发&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;岗位要求&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;熟练掌握至少一种编程语言（C/C++、GO等）&lt;/li&gt;
-&lt;li&gt;熟悉区块链技术原理，并熟悉至少一种业界常见的区块链开源系统或解决方案（如比特币、以太坊、EOS、Fabric等）&lt;/li&gt;
-&lt;li&gt;熟悉智能合约虚拟机（如EVM、WASM等）的原理，具备定制化开发能力&lt;/li&gt;
-&lt;li&gt;具备良好的沟通表达能力，逻辑能力，良好的团队合作意识&lt;/li&gt;
-&lt;li&gt;3年以上研发经验，如有区块链研发经历者更优先&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;蚂蚁金服-区块链研发专家&#34;&gt;蚂蚁金服-区块链研发专家&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;岗位描述&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;参与区块链核心系统的架构设计和研发工作&lt;/li&gt;
-&lt;li&gt;发展区块链技术，探索和推进区块链技术在不同场景的应用&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;岗位要求&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;精通C/C++/JAVA语言开发，重视代码质量和容错性，遵守良好的编码风格&lt;/li&gt;
-&lt;li&gt;熟悉LInux环境下多进程/线程、文件系统及网络编程&lt;/li&gt;
-&lt;li&gt;熟悉Linux的常用命令，熟悉常见的性能查看及调优工具使用&lt;/li&gt;
-&lt;li&gt;具备以下背景或经验之一者优先：
-&lt;ul&gt;
-&lt;li&gt;参与过网络框架、搜索引擎、分布式数据库、云计算平台等底层平台或组件开发&lt;/li&gt;
-&lt;li&gt;熟悉Bitcoin、Ethereum等开源区块链系统细节设计&lt;/li&gt;
-&lt;li&gt;熟悉BFT、Paxos、Raft等一致性协议之一的细节&lt;/li&gt;
-&lt;li&gt;熟悉PoW，PoS等区块链共识算法/协议细节&lt;/li&gt;
-&lt;li&gt;熟悉现代密码学或者网络安全相关技术&lt;/li&gt;
-&lt;li&gt;精通可信计算技术原理与应用&lt;/li&gt;
-&lt;li&gt;熟悉软件形式化验证技术&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;蚂蚁金服-baas-区块链平台高级研发工程师&#34;&gt;蚂蚁金服-BaaS-区块链平台高级研发工程师&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;岗位描述&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;负责基于联盟链的区块链云平台架构设计与核心代码开发&lt;/li&gt;
-&lt;li&gt;搭建开发区块链的平台和基础框架，衔接与落地区块链技术的行业应用&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;岗位要求&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;掌握区块链原理，熟悉至少一个区块链开源项目，例如 Hyperledger Fabric、Ethereum等，有区块链开发和开源贡献经验更佳&lt;/li&gt;
-&lt;li&gt;理解各类主流的共识算法，包括不限于DPoS，PBFT，Paxos，Raft等&lt;/li&gt;
-&lt;li&gt;熟练掌握Go，Java，C++等主流区块链系统开发语言至少一种，Go优先，参与过区块链开源社区并贡献源码者优先&lt;/li&gt;
-&lt;li&gt;了解一些主流NoSQL数据库的原理与使用，尤其是KV型数据库，包括不限于LevelDB，RocksDB等&lt;/li&gt;
-&lt;li&gt;熟悉Linux操作系统，熟练掌握Docker容器技术的原理，部署和使用优化&lt;/li&gt;
-&lt;li&gt;熟悉数字加密算法，安全协议，分布式计算&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;区块链研发专家&#34;&gt;区块链研发专家&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;岗位描述&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;主导全球支付区块链项目的各类业务、技术改造类项目的系统分析与设计工作，承担核心功能代码编写，开发与维护系统公用核心模块；探索实践区块链在业务中的应用场景及价值&lt;/li&gt;
-&lt;li&gt;系统性能优化，主导技术难题攻关，持续提升系统在大规模分布式系统环境下性能，解决各类潜在系统技术风险，保证系统的安全、稳定、快速运行&lt;/li&gt;
-&lt;li&gt;负责指导、培训普通开发工程师，审核开发工程师的设计与研发质量&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;岗位要求&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;扎实的java编程基础，精通Java EE、SOA、OSGI等相关技术；对各种开源的框架如Spring、Mybatis/Hibernate等有深入的了解，对框架本身有过开发或重构者可优先考虑&lt;/li&gt;
-&lt;li&gt;熟练使用主流关系/对象数据库，3年以上大规模高并发访问的Web应用系统设计和开发经验&lt;/li&gt;
-&lt;li&gt;了解区块链相关技术及概念，熟悉区块链开源项目优先，例如 IBM Hyperledge、Ethereum等&lt;/li&gt;
-&lt;li&gt;具备良好的识别和设计通用框架及模块的能力，有网关或开放平台设计经验者优先&lt;/li&gt;
-&lt;li&gt;熟练掌握unix/linux操作系统，对常用命令运用娴熟，能够根据实际需要快速编写shell脚本&lt;/li&gt;
-&lt;li&gt;较强的表达和沟通能力；工作认真、严谨、敬业，对系统质量有近乎苛刻的要求意识&lt;/li&gt;
-&lt;li&gt;具有大型电子商务网站以及银行业核心系统、电信boss系统设计与研发经验背景的优先考虑&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;蚂蚁金服-区块链应用开发工程师技术专家&#34;&gt;蚂蚁金服-区块链应用开发工程师/技术专家&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;岗位描述&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;负责蚂蚁金融科技区块链各业务产品的系统分析和架构设计，并主导完成详细设计和编码的任务，确保项目的进度和质量&lt;/li&gt;
-&lt;li&gt;维护和升级现有金融科技区块链软件产品和系统，快速定位并修复现有软件缺陷&lt;/li&gt;
-&lt;li&gt;能够有效地对新人或普通开发工程师进行辅导，帮助其快速成长&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;岗位要求&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;3年以上开发工作经验，JAVA、 C++、Golang 至少精通一种&lt;/li&gt;
-&lt;li&gt;JAVA基础扎实：精通多线程编程，熟悉分布式,缓存,消息队列等机制；熟悉JVM，包括内存模型、类加载机制以及性能优化&lt;/li&gt;
-&lt;li&gt;具备良好的识别业务关键需求和设计领域模型的能力&lt;/li&gt;
-&lt;li&gt;热爱技术，工作认真、严谨，对系统质量有高要求的意识，善于沟通与团队协作&lt;/li&gt;
-&lt;li&gt;有区块链、云产品、中间件、复杂企业软件开发经验经验者优先&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;蚂蚁金服-平台技术专家高级专家&#34;&gt;蚂蚁金服-平台技术专家/高级专家&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;岗位描述&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;负责区块链系统核心数据据结构和算法的设计和开发&lt;/li&gt;
-&lt;li&gt;负责区块链系统核心模块的设计和开发&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;岗位要求&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;5年以上工作经历，良好的计算机编程技术基础&lt;/li&gt;
-&lt;li&gt;熟悉开源的区块链系统之一，了解其架构和核心数据结构，Ethereum、Bitcoin、HyperLedger等&lt;/li&gt;
-&lt;li&gt;熟悉分布式一致性算法或区块链共识协议之一Paxos、Raft 、PBFT、PoW、PoS、Algorand等&lt;/li&gt;
-&lt;li&gt;精通C++，GoLang等编程语言之一，熟悉Linux应用开发&lt;/li&gt;
-&lt;li&gt;熟悉分布式、 多线程及高性能的设计与编码及性能调优&lt;/li&gt;
-&lt;li&gt;逻辑能力强、思维活跃，接受新事物能力强&lt;/li&gt;
-&lt;li&gt;性格开朗乐观，责任心强，积极主动，善于沟通，具有团队精神&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;蚂蚁金服-区块链云服务开发技术专家&#34;&gt;蚂蚁金服-区块链云服务开发技术专家&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;岗位描述&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;设计开发基于云平台的区块链云服务（包括BaaS、以及基于区块链的SaaS服务等），可支持面向公有云和私有云的部署&lt;/li&gt;
-&lt;li&gt;与阿里云产品技术团队合作，完成区块链云服务的管控运维体系的开发、测试、上线、升级、客户支持等工作&lt;/li&gt;
-&lt;li&gt;研究并攻克区块链技术和云服务的关键技术挑战&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;岗位要求&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;3-5年企业级软件/云服务开发工作经验，精通Golang/Java/Node.js等一种开发语言，熟悉Spring Boot和微服务架构、了解容器技术(Docker、Kubernetes)者优先&lt;/li&gt;
-&lt;li&gt;熟悉性能、可用性、伸缩性、扩展性、安全性、运维监控、集成发布等&lt;/li&gt;
-&lt;li&gt;有全栈开发能力者优先&lt;/li&gt;
-&lt;li&gt;熟悉开源区块链技术框架(如Hyperledger Fabric/Ethereum/R3 Corda)或对区块链开源技术做出代码贡献者优先&lt;/li&gt;
-&lt;li&gt;有云计算平台（阿里云/Azure/AWS等等）工作经验者优先&lt;/li&gt;
-&lt;li&gt;快速学习能力，出色的团队沟通和协作能力，较强的自我驱动能力&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Mobile Payment Systems Case Study</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/01/mobile-payment-systems-case-study/</link>
-      <pubDate>Thu, 01 Oct 2020 22:25:19 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/01/mobile-payment-systems-case-study/</guid>
-      
-        <description>&lt;h1 id=&#34;mobile-payment-systems&#34;&gt;Mobile Payment Systems&lt;/h1&gt;
-&lt;h2 id=&#34;why-has-china-been-an-ideal-environment-to-support-mobile-payment-systems&#34;&gt;Why has China been an ideal environment to support mobile payment systems?&lt;/h2&gt;
-&lt;p&gt;Politically, payment licenses are controlled by government (relative financial institutions) and under strict regulation. So, tech giants like Alibaba who are qualified can increasingly develop their payment business in the early age. Plus, in the early stage of mobile payment, laws and rules are not so completed. Payment platform can utilize smart market strategies (like very high return rate) to attract more new potential users and enhance existing users’ engagement, which is effective in market expanding stage.&lt;/p&gt;
-&lt;p&gt;Economically and socially, China’s economic development was relatively slower than major developed countries such as the U. S. or Japan. And the majority of Chinese get used to spending money they already have instead of ahead-of-time consumption. Thus, credit card payment hasn’t been so popular in the past few decades (only about 0.31 credit card per capita) compared to western countries. Since the credit card payment (mainly related to the bank) is not the dominant way for daily payment, it’s possible for a new payment method to grow and domain the payment market in a “free compete” environment.&lt;/p&gt;
-&lt;p&gt;Technically, E-Commerce and internet technology has been developing rapidly in China recently. As a country with huge population and strong consumption ability, the market urgently needs a new way of payment. With the new utilization of established technologies (4G, mobile phone development, cyber security, etc.) and emerging technologies (QR-Code, information system architecture, etc.), payment platform can integrate various functions into the existing system and provide a more powerful and advantageous platform.&lt;/p&gt;
-&lt;p&gt;To sum up, China has been an ideal environment to support mobile payment systems.&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>ECOM6013 Topic 7 E-Payment Systems</title>
-      <link>https://www.pseudoyu.com/zh/2020/09/27/ecom6013-topic-7-e-payment-systems/</link>
-      <pubDate>Sun, 27 Sep 2020 11:30:28 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/09/27/ecom6013-topic-7-e-payment-systems/</guid>
-      
-        <description>&lt;h1 id=&#34;ecom6013-e-commerce-technologies&#34;&gt;ECOM6013 E-Commerce Technologies&lt;/h1&gt;
-&lt;h2 id=&#34;topic-7-e-payment-systems&#34;&gt;Topic 7 E-Payment Systems&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Payment System Stakeholders&amp;rsquo; Priorities&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Customer
-&lt;ol&gt;
-&lt;li&gt;Low-risk&lt;/li&gt;
-&lt;li&gt;Low-cost&lt;/li&gt;
-&lt;li&gt;Refutable&lt;/li&gt;
-&lt;li&gt;Convenience&lt;/li&gt;
-&lt;li&gt;Reliable&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;Merchants
-&lt;ol&gt;
-&lt;li&gt;Low-risks&lt;/li&gt;
-&lt;li&gt;Low-cost&lt;/li&gt;
-&lt;li&gt;Irrefutable&lt;/li&gt;
-&lt;li&gt;Secure&lt;/li&gt;
-&lt;li&gt;Reliable&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;Financial intermediaries
-&lt;ol&gt;
-&lt;li&gt;Secure&lt;/li&gt;
-&lt;li&gt;Low-risk&lt;/li&gt;
-&lt;li&gt;Maximizing profit&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;Government regulators
-&lt;ol&gt;
-&lt;li&gt;Secure&lt;/li&gt;
-&lt;li&gt;Trust&lt;/li&gt;
-&lt;li&gt;Protecting participants and enforcing reporting&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Type of Payment Systems&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Cash&lt;/li&gt;
-&lt;li&gt;Cheque transfer&lt;/li&gt;
-&lt;li&gt;Credit card&lt;/li&gt;
-&lt;li&gt;Stored value&lt;/li&gt;
-&lt;li&gt;Accumulating balance&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;B2C Payment System&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Credit cards&lt;/li&gt;
-&lt;li&gt;Financial cybermediaries&lt;/li&gt;
-&lt;li&gt;Electronic bill presentment and payment&lt;/li&gt;
-&lt;li&gt;Smart cards&lt;/li&gt;
-&lt;li&gt;Mobile payment&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Features&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Make large purchases&lt;/li&gt;
-&lt;li&gt;Will not pay with credit card or financial cybermediary&lt;/li&gt;
-&lt;li&gt;Use financial EDI (Electronic Data Interchange)&lt;/li&gt;
-&lt;li&gt;Pay for many purchases at once&lt;/li&gt;
-&lt;li&gt;Likely that cloud-based payment gateway (or other Internet-based technology) will eventually take over completely!&lt;/li&gt;
-&lt;li&gt;FPS - HKMA &amp;amp; HKICL Payment Gateway Faster Payment System (FPS)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;E-Commere Payment Systems&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/online_credit_transaction.png&#34; alt=&#34;online_credit_transaction&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Credit cards&lt;/li&gt;
-&lt;li&gt;Debit cards&lt;/li&gt;
-&lt;li&gt;Digital wallets&lt;/li&gt;
-&lt;li&gt;Digital cash&lt;/li&gt;
-&lt;li&gt;Digital checking&lt;/li&gt;
-&lt;li&gt;Online stored value systems
-&lt;ul&gt;
-&lt;li&gt;PayPal, AliPay, WeChat Pay&lt;/li&gt;
-&lt;li&gt;Smart cards
-&lt;ul&gt;
-&lt;li&gt;Contact&lt;/li&gt;
-&lt;li&gt;Contactless
-&lt;ul&gt;
-&lt;li&gt;EZPass, Octopus card&lt;/li&gt;
-&lt;li&gt;Radio Frequency ID (RFID)&lt;/li&gt;
-&lt;li&gt;Near Field Communications (NFC)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Future Payment System&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Exporting existing payment systems that work in traditional commerce to E-Commerce causes problems&lt;/li&gt;
-&lt;li&gt;Need a payment/financial system designed for the online world
-&lt;ul&gt;
-&lt;li&gt;Cybercurrencies / digital currency&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>ECOM6013 Topic 6 E-Commerce Security</title>
-      <link>https://www.pseudoyu.com/zh/2020/09/26/ecom6013-topic-6-e-commerce-security/</link>
-      <pubDate>Sat, 26 Sep 2020 15:46:28 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/09/26/ecom6013-topic-6-e-commerce-security/</guid>
-      
-        <description>&lt;h1 id=&#34;ecom6013-e-commerce-technologies&#34;&gt;ECOM6013 E-Commerce Technologies&lt;/h1&gt;
-&lt;h2 id=&#34;topic-6-e-commerce-security&#34;&gt;Topic 6 E-Commerce Security&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Good E-Commerce Security&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Highest degree of security
-&lt;ul&gt;
-&lt;li&gt;New technologies&lt;/li&gt;
-&lt;li&gt;Organizational policies and procedures&lt;/li&gt;
-&lt;li&gt;Industry standards and government law&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Other factors
-&lt;ul&gt;
-&lt;li&gt;Cost of security vs. potential loss&lt;/li&gt;
-&lt;li&gt;Security often breaks at weakest link&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;The Tense Between Security and Other Values&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Security vs. Easy of use
-&lt;ul&gt;
-&lt;li&gt;More Secure -&amp;gt; More difficult to use + slower&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Security vs. Desire of individuals to act anonmously&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Basic E-Commerce Security Issues and Landscape&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;E-Commerce security requirements
-&lt;ul&gt;
-&lt;li&gt;Authentication (verify the real identity)&lt;/li&gt;
-&lt;li&gt;Authorization (determine the entity&amp;rsquo;s access)&lt;/li&gt;
-&lt;li&gt;Auditing&lt;/li&gt;
-&lt;li&gt;Availability&lt;/li&gt;
-&lt;li&gt;Nonrepudiation (assurance that trading partners can&amp;rsquo;t falsely deny their purchase or transaction)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Risk (a vulnerability will be known and used)&lt;/li&gt;
-&lt;li&gt;Social engineering (non-technical attack, trick users to do some certain actions)&lt;/li&gt;
-&lt;li&gt;Spam&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;E-Commerce of Today&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Threats
-&lt;ul&gt;
-&lt;li&gt;Money thefts&lt;/li&gt;
-&lt;li&gt;Identity thefts&lt;/li&gt;
-&lt;li&gt;Malware&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Solutions
-&lt;ul&gt;
-&lt;li&gt;Authentication&lt;/li&gt;
-&lt;li&gt;Intrusion checking&lt;/li&gt;
-&lt;li&gt;Firewalls&lt;/li&gt;
-&lt;li&gt;Education&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Security Threats in the E-Commerce Environment&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Three key points of vulnerability
-&lt;ul&gt;
-&lt;li&gt;Client&lt;/li&gt;
-&lt;li&gt;Server&lt;/li&gt;
-&lt;li&gt;Communication pipeline (network channels)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/vulnerable_points_in_ecommerce.png&#34; alt=&#34;vulnerable_points_in_ecommerce&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Most Common Security Threats&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Malicious code
-&lt;ul&gt;
-&lt;li&gt;Viruses&lt;/li&gt;
-&lt;li&gt;Worms&lt;/li&gt;
-&lt;li&gt;Ransomeware&lt;/li&gt;
-&lt;li&gt;Trojan horses&lt;/li&gt;
-&lt;li&gt;Backdoors&lt;/li&gt;
-&lt;li&gt;Bots, botnets&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Unwanted programs
-&lt;ul&gt;
-&lt;li&gt;Browser parasites&lt;/li&gt;
-&lt;li&gt;Adware&lt;/li&gt;
-&lt;li&gt;Spyware&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Phishing
-&lt;ul&gt;
-&lt;li&gt;Deceptive online attack to obtain confidential information&lt;/li&gt;
-&lt;li&gt;Social engineering, e-mail scams, spoofing legitimate websites&lt;/li&gt;
-&lt;li&gt;Used for identity fraud and theft&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Hacking and cybervandalism
-&lt;ul&gt;
-&lt;li&gt;Hackers vs. Crackers&lt;/li&gt;
-&lt;li&gt;Cybervandalism (intentionally disrupting, defacing, destroying websites)&lt;/li&gt;
-&lt;li&gt;Hacktivism&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Data breach&lt;/li&gt;
-&lt;li&gt;Credit card fraud/theft&lt;/li&gt;
-&lt;li&gt;Spoofing&lt;/li&gt;
-&lt;li&gt;Pharming&lt;/li&gt;
-&lt;li&gt;Spam / junk websites&lt;/li&gt;
-&lt;li&gt;Denial of sevices (DoS) attack (useless traffic to overwhelm network)&lt;/li&gt;
-&lt;li&gt;Distributed denial of service (DDoS) attack (multiple computers to attack target network)&lt;/li&gt;
-&lt;li&gt;Sniffing (eavesdropping program that monitors information traveling over a network)&lt;/li&gt;
-&lt;li&gt;Insider jobs
-&lt;ul&gt;
-&lt;li&gt;Single financial threats&lt;/li&gt;
-&lt;li&gt;Poorly designed security policy and server / client software&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Social network issues&lt;/li&gt;
-&lt;li&gt;Mobile platform issues&lt;/li&gt;
-&lt;li&gt;Cloud security issues&lt;/li&gt;
-&lt;li&gt;IoT security issues&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;The Information Assurance Model and Defense Objectives&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;CIA security triad
-&lt;ul&gt;
-&lt;li&gt;Confidentiality&lt;/li&gt;
-&lt;li&gt;Integrity&lt;/li&gt;
-&lt;li&gt;Availability&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Three Dimensions in Internet Security&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Integrity&lt;/li&gt;
-&lt;li&gt;Nonrepudiation&lt;/li&gt;
-&lt;li&gt;Authenticity&lt;/li&gt;
-&lt;li&gt;Confidentiality&lt;/li&gt;
-&lt;li&gt;Privacy&lt;/li&gt;
-&lt;li&gt;Availability&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Technology Solutions&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Protecting internet communications
-&lt;ul&gt;
-&lt;li&gt;Cryptography&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Securing channels of communication
-&lt;ul&gt;
-&lt;li&gt;SSL, TLS
-&lt;ul&gt;
-&lt;li&gt;Establishes a secure, negotiated client-server session in which URL of requested document, along with contents, is encrypted&lt;/li&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ssl_protect.png&#34; alt=&#34;ssl_protect&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;S-HTTP
-&lt;ul&gt;
-&lt;li&gt;Provides a secure message-oriented communications protocol designed for use in conjunction with HTTP&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;VPNs
-&lt;ul&gt;
-&lt;li&gt;Allows remote users to securely access internal network via the Internet, using Point-to-Point Tunneling Protocol (PPTP)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Wi-Fi&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Protecting networks
-&lt;ul&gt;
-&lt;li&gt;Firewalls&lt;/li&gt;
-&lt;li&gt;Proxy servers&lt;/li&gt;
-&lt;li&gt;Intrusion Detection System (IDS)&lt;/li&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/firewall.png&#34; alt=&#34;firewall&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Protecting servers and clients
-&lt;ul&gt;
-&lt;li&gt;OS security
-&lt;ul&gt;
-&lt;li&gt;Upgrades&lt;/li&gt;
-&lt;li&gt;Patches&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Anti-virus software
-&lt;ul&gt;
-&lt;li&gt;Easiest and least expensive way to prevent threats to system integrity&lt;/li&gt;
-&lt;li&gt;Requires daily updates&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Managing Risks&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Technology&lt;/li&gt;
-&lt;li&gt;Effective management policies&lt;/li&gt;
-&lt;li&gt;Public laws and active enforcement&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;A Security Plan: Management Policies&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Risk assessment&lt;/li&gt;
-&lt;li&gt;Security policy&lt;/li&gt;
-&lt;li&gt;Implementation plan
-&lt;ul&gt;
-&lt;li&gt;Security organization&lt;/li&gt;
-&lt;li&gt;Access controls&lt;/li&gt;
-&lt;li&gt;Authentication procedures, including biometrics&lt;/li&gt;
-&lt;li&gt;Authorization policies, authorization management systems&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Security audit&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/security_plan.png&#34; alt=&#34;security_plan&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Basic Concepts of User Authentication&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Something you know
-&lt;ul&gt;
-&lt;li&gt;Password&lt;/li&gt;
-&lt;li&gt;PIN&lt;/li&gt;
-&lt;li&gt;OTP&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Something you have
-&lt;ul&gt;
-&lt;li&gt;Physical key&lt;/li&gt;
-&lt;li&gt;Token&lt;/li&gt;
-&lt;li&gt;Magnetic card&lt;/li&gt;
-&lt;li&gt;Smartcard&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Something you are
-&lt;ul&gt;
-&lt;li&gt;Fingerprint&lt;/li&gt;
-&lt;li&gt;Voice&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Best use 2 Factors Authentication (2FA)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Encryption&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Transfer data into cipher text readable only by sender and receiver&lt;/li&gt;
-&lt;li&gt;Secures stored information and information transmission&lt;/li&gt;
-&lt;li&gt;Provide 4/6 key dimensions of E-Commerce security
-&lt;ul&gt;
-&lt;li&gt;authentication&lt;/li&gt;
-&lt;li&gt;Confidentiality&lt;/li&gt;
-&lt;li&gt;Message Integrity&lt;/li&gt;
-&lt;li&gt;Nonrepudiation&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Symmetric Key Cryptography&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Sender and receiver use same digital key to encrypt and decrypt message&lt;/li&gt;
-&lt;li&gt;Requires different set of keys for each transaction&lt;/li&gt;
-&lt;li&gt;Strength of encryption
-&lt;ul&gt;
-&lt;li&gt;Length of binary key used to encrypt data&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Standards
-&lt;ul&gt;
-&lt;li&gt;Data Encryption Standard (DES, 1977)&lt;/li&gt;
-&lt;li&gt;Advanced Encryption Standard (AES, 2000)&lt;/li&gt;
-&lt;li&gt;Other standards use keys with up to 2,048 bits&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Public Key Cryptography&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Uses two mathematically related digital keys
-&lt;ul&gt;
-&lt;li&gt;Public key (widely disseminated)&lt;/li&gt;
-&lt;li&gt;Private key (kept secret by owner)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Both keys used to encrypt and decrypt message
-&lt;ul&gt;
-&lt;li&gt;Once key used to encrypt message, same key cannot be used to decrypt message&lt;/li&gt;
-&lt;li&gt;Sender uses recipient’s public key to encrypt message&lt;/li&gt;
-&lt;li&gt;Recipient uses his/her private key to decrypt it&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/public_key_cryptography.png&#34; alt=&#34;public_key_cryptography&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Public Key Encryption Using Digital Signatures and Hash Digests&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Hash function
-&lt;ul&gt;
-&lt;li&gt;Mathematical algorithm (e.g. MD5 and SHA-1) that produces fixed-length number called message or hash digest&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Sender applies hash function to the message and then encrypts the message AND the hash digest with recipient’s public key&lt;/li&gt;
-&lt;li&gt;Sender then encrypts the whole package with sender’s private key, creating digital signature for authenticity, nonrepudiation&lt;/li&gt;
-&lt;li&gt;Recipient first uses sender’s public key to authenticate the message and then the recipient’s private key to decrypt the hash digest and the message&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/public_key_cryptography_digital_signature.png&#34; alt=&#34;public_key_cryptography_digital_signature&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digital Envelop&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Addresses weaknesses of
-&lt;ul&gt;
-&lt;li&gt;Public key encryption (computationally slow)&lt;/li&gt;
-&lt;li&gt;Symmetric key encryption (insecure transmission lines)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Uses symmetric key encryption to encrypt document&lt;/li&gt;
-&lt;li&gt;Uses public key encryption to encrypt and send symmetric key&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/digital_envelop.png&#34; alt=&#34;digital_envelop&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digital Certificates and Public Key Infrastructure (PKI)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Digital certificate
-&lt;ul&gt;
-&lt;li&gt;Name of subjects/company&lt;/li&gt;
-&lt;li&gt;Subject&amp;rsquo;s public key&lt;/li&gt;
-&lt;li&gt;Digital certificate serial number&lt;/li&gt;
-&lt;li&gt;Expiration date, issuance date&lt;/li&gt;
-&lt;li&gt;Digital signature of certification authority (trusted third party institution) that issues certificate&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Public Key Infrastructure (PKI)
-&lt;ul&gt;
-&lt;li&gt;CAs and digital certificate procedures that are accepted by all parties&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/digital_certificate.png&#34; alt=&#34;digital_certificate&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Limits to Encryption Solutions&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Doesn’t protect storage of private key&lt;/li&gt;
-&lt;li&gt;No guarantee that verifying computer of merchant is secure&lt;/li&gt;
-&lt;li&gt;CAs are unregulated, self-selecting organizations&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Introduction to Crypto and Cryptocurrencies</title>
-      <link>https://www.pseudoyu.com/zh/2020/09/23/introduction-to-crypto-and-cryptocurrencies/</link>
-      <pubDate>Wed, 23 Sep 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/09/23/introduction-to-crypto-and-cryptocurrencies/</guid>
-      
-        <description>&lt;h1 id=&#34;bitcoin-and-cryptocurrency-technologies&#34;&gt;Bitcoin and Cryptocurrency Technologies&lt;/h1&gt;
-&lt;h2 id=&#34;lecture-1-introduction-to-crypto-and-cryptocurrencies&#34;&gt;Lecture 1 Introduction to Crypto and Cryptocurrencies&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Hash Function&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Takes any string as input&lt;/li&gt;
-&lt;li&gt;Fixed-size output&lt;/li&gt;
-&lt;li&gt;Efficiently computable&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Security Properties&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Collision-free
-&lt;ul&gt;
-&lt;li&gt;Nobody can find x and y such as &lt;em&gt;&amp;ldquo;x!=y and H(x)=H(y)&amp;quot;&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Hiding
-&lt;ul&gt;
-&lt;li&gt;Given H(x), it&amp;rsquo;s infeasible to find x&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Puzzle-friendly
-&lt;ul&gt;
-&lt;li&gt;For every possible output value y, if k is chosen from a distribution with high min-entropy, then it&amp;rsquo;s infeasible to find x such as &lt;em&gt;H(k|x)=y&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;SHA-256 Hash Function&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/sha256_hash_function.png&#34; alt=&#34;sha256_hash_function&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Theorem: If c is collision-free, then SHA-256 is collision-free&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Hash Pointer&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Where some info is stored&lt;/li&gt;
-&lt;li&gt;Cryptographic hash of the info&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/hash_pointer.png&#34; alt=&#34;hash_pointer&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Merkle Trees&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The root hash can verify membership in O(log n) time/space&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/merkle_trees.png&#34; alt=&#34;merkle_trees&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digital Signature&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Only you can sign, but anyone can verify&lt;/li&gt;
-&lt;li&gt;Signature is tied to a particular document
-&lt;ul&gt;
-&lt;li&gt;verify(public key, message, sign(secret key, message)) == true&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&amp;ldquo;can&amp;rsquo;t forge signatures&amp;rdquo;
-&lt;ul&gt;
-&lt;li&gt;knows public key&lt;/li&gt;
-&lt;li&gt;knows signature&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Relies on hairy math&lt;/li&gt;
-&lt;li&gt;Good randomness is essential&lt;/li&gt;
-&lt;li&gt;Bitcoin use ECDSA(Elliptic Curve Digital Signature Algorithm) standard&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Public Key As An Identity&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Create a new, random key-pair (secret key, public key)
-&lt;ul&gt;
-&lt;li&gt;Public key is the public &amp;ldquo;name&amp;rdquo; you can use&lt;/li&gt;
-&lt;li&gt;Secret key lets you &amp;ldquo;speak for&amp;rdquo; the identity&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Privacy&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Addresses not directly connected to real-world identity&lt;/li&gt;
-&lt;li&gt;Observer can link together an address&amp;rsquo;s activity over time, make inferences&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;A Simple Cryptocurrency - Scrooge Coin&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Create Coins
-&lt;ul&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/create_coins.png&#34; alt=&#34;create_coins&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Pay Coins
-&lt;ul&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/pay_coins.png&#34; alt=&#34;pay_coins&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>ECOM6013 Topic 5 Mobile Commerce</title>
-      <link>https://www.pseudoyu.com/zh/2020/09/21/ecom6013-topic-5-mobile-commerce/</link>
-      <pubDate>Mon, 21 Sep 2020 10:44:28 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/09/21/ecom6013-topic-5-mobile-commerce/</guid>
-      
-        <description>&lt;h1 id=&#34;ecom6013-e-commerce-technologies&#34;&gt;ECOM6013 E-Commerce Technologies&lt;/h1&gt;
-&lt;h2 id=&#34;topic-5-mobile-commerce&#34;&gt;Topic 5 Mobile Commerce&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Basic Principle of Mobile Technology&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;FDMA (Frequency Division Multiple Access)&lt;/li&gt;
-&lt;li&gt;TDMA (Time Division Multiple Access)&lt;/li&gt;
-&lt;li&gt;CDMA (Code Division Multiple Access)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Fundamental Mobility: Cellphones&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/cellphones.png&#34; alt=&#34;cellphones&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Cell Handover&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/cell_handover.png&#34; alt=&#34;cell_handover&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;4G vs. 5G&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;4G
-&lt;ul&gt;
-&lt;li&gt;10 ms&lt;/li&gt;
-&lt;li&gt;100 Thousand Connections / km^2&lt;/li&gt;
-&lt;li&gt;1 Gbps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;5G
-&lt;ul&gt;
-&lt;li&gt;&amp;lt; 1ms&lt;/li&gt;
-&lt;li&gt;1 Million Connections / km^2&lt;/li&gt;
-&lt;li&gt;20 Gbps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;E-Commerce vs. M-Commerce&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;E-Commerce
-&lt;ul&gt;
-&lt;li&gt;Device: PC&lt;/li&gt;
-&lt;li&gt;Network: Internet (HTTP)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;M-Commerce
-&lt;ul&gt;
-&lt;li&gt;Device: Mobile devices&lt;/li&gt;
-&lt;li&gt;Network
-&lt;ul&gt;
-&lt;li&gt;Mobile carrier network&lt;/li&gt;
-&lt;li&gt;WiFi&lt;/li&gt;
-&lt;li&gt;Local frequency (RFID/NFC)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Definition of M-Commerce&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Buying and Selling via mobile devices&lt;/li&gt;
-&lt;li&gt;Paying via mobile devices&lt;/li&gt;
-&lt;li&gt;Use of any technologies to support the above&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Mobile Devices&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Devices
-&lt;ul&gt;
-&lt;li&gt;Mobile phone/smart phone&lt;/li&gt;
-&lt;li&gt;Tablet computer&lt;/li&gt;
-&lt;li&gt;Wearable technology&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Usages
-&lt;ul&gt;
-&lt;li&gt;Transact&lt;/li&gt;
-&lt;li&gt;Communicate&lt;/li&gt;
-&lt;li&gt;Entertain&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Roles in M-Commerce&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Users
-&lt;ul&gt;
-&lt;li&gt;End users/system users&lt;/li&gt;
-&lt;li&gt;Suppliers&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Network operators (offer transport facility and network infrastructure)&lt;/li&gt;
-&lt;li&gt;Service providers (develop new devices)&lt;/li&gt;
-&lt;li&gt;Content providers (aggregate contents)&lt;/li&gt;
-&lt;li&gt;Commerce mediators (provide solutions and services)&lt;/li&gt;
-&lt;li&gt;Finance organizations (provide framework and infrasture for payment)&lt;/li&gt;
-&lt;li&gt;Mobile device (interacting with all roles)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;M-Commerce Services and Applications&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Sevices
-&lt;ul&gt;
-&lt;li&gt;Mobile ticketing&lt;/li&gt;
-&lt;li&gt;Mobile money transfer&lt;/li&gt;
-&lt;li&gt;Conetent purchase and delivery&lt;/li&gt;
-&lt;li&gt;Information services&lt;/li&gt;
-&lt;li&gt;Mobile banking&lt;/li&gt;
-&lt;li&gt;Mobile browsing&lt;/li&gt;
-&lt;li&gt;Mobile purchase&lt;/li&gt;
-&lt;li&gt;Mobile marketing and advertising&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Applications
-&lt;ul&gt;
-&lt;li&gt;Entertainment
-&lt;ul&gt;
-&lt;li&gt;Music&lt;/li&gt;
-&lt;li&gt;Games&lt;/li&gt;
-&lt;li&gt;graphics&lt;/li&gt;
-&lt;li&gt;Video&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Communications
-&lt;ul&gt;
-&lt;li&gt;Short messaging&lt;/li&gt;
-&lt;li&gt;Multi-media messaging&lt;/li&gt;
-&lt;li&gt;Unified messaging&lt;/li&gt;
-&lt;li&gt;E-mail&lt;/li&gt;
-&lt;li&gt;Social&lt;/li&gt;
-&lt;li&gt;Video conferencing&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Transactions
-&lt;ul&gt;
-&lt;li&gt;Banking&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.merriam-webster.com/dictionary/broking&#34;&gt;Broking&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Shopping&lt;/li&gt;
-&lt;li&gt;Auctions&lt;/li&gt;
-&lt;li&gt;Betting&lt;/li&gt;
-&lt;li&gt;Booking &amp;amp; reservations&lt;/li&gt;
-&lt;li&gt;Mobile wallet&lt;/li&gt;
-&lt;li&gt;Mobile purse&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Information
-&lt;ul&gt;
-&lt;li&gt;News&lt;/li&gt;
-&lt;li&gt;City guides&lt;/li&gt;
-&lt;li&gt;Directory services&lt;/li&gt;
-&lt;li&gt;Maps&lt;/li&gt;
-&lt;li&gt;Traffic and weather&lt;/li&gt;
-&lt;li&gt;Corporate information&lt;/li&gt;
-&lt;li&gt;Market data&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;PTDs (Personal Trusted Devices)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Location and orientation&lt;/li&gt;
-&lt;li&gt;Multiple types of networking (NFC/Bluetooth)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.merriam-webster.com/dictionary/accelerometers&#34;&gt;Accelerometers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Camera&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;QR Code (Quick Response Code)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Originally designed as a two-dimensional barcode (not for mobile)&lt;/li&gt;
-&lt;li&gt;Standardized (ISO/IEC 18004:2006)&lt;/li&gt;
-&lt;li&gt;Oatented (but free license)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Other Enabling Technologies&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;GPS
-&lt;ul&gt;
-&lt;li&gt;Widely available on most devices&lt;/li&gt;
-&lt;li&gt;Geo-loctaion and &lt;a href=&#34;https://buildfire.com/what-is-geofencing/&#34;&gt;geo-fencing&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Doesn&amp;rsquo;t work inside buildings&lt;/li&gt;
-&lt;li&gt;High battery consumption&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;NFC/RFID
-&lt;ul&gt;
-&lt;li&gt;Great accuracy&lt;/li&gt;
-&lt;li&gt;Low cost&lt;/li&gt;
-&lt;li&gt;Not support on all devices&lt;/li&gt;
-&lt;li&gt;20cm range&lt;/li&gt;
-&lt;li&gt;High battery consumption&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Obstacles&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Mobile device power
-&lt;ul&gt;
-&lt;li&gt;GPS/network calls cost hign power&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Privacy
-&lt;ul&gt;
-&lt;li&gt;Continuous tracking&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Network
-&lt;ul&gt;
-&lt;li&gt;Bandwidth&lt;/li&gt;
-&lt;li&gt;Congestion&lt;/li&gt;
-&lt;li&gt;Processing speed&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>New iPad Air 4 (2020) Presence by Apple Inc.</title>
-      <link>https://www.pseudoyu.com/zh/2020/09/18/new-ipad-air-4-2020-presence-by-apple-inc./</link>
-      <pubDate>Fri, 18 Sep 2020 01:25:19 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/09/18/new-ipad-air-4-2020-presence-by-apple-inc./</guid>
-      
-        <description>&lt;h1 id=&#34;e-commerce-presence-look-around&#34;&gt;E-Commerce Presence Look Around&lt;/h1&gt;
-&lt;h2 id=&#34;new-ipad-air-4-2020-presence-by-apple-inc&#34;&gt;New iPad Air 4 (2020) Presence by Apple Inc.&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.apple.com/hk/en/ipad-air/&#34;&gt;&lt;strong&gt;Website Link&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The iPad Air 4 (2020) got shown off at Apple&amp;rsquo;s September event held on September 16. There is a specific designed website (mobile version included) for this product. I&amp;rsquo;d like to do an analysis towards this very impressive E-Commerce presence.&lt;/p&gt;
-&lt;p&gt;Apple iPad Air product line is mainly targeted to educators/students, staffs and kids/teenagers. So, the most premium features this new product wants to convey to customers is its fancy appearance and powerful A14 Bionic for creation, study and entertainment. Rather than directly shows all parameter, the company presents a series of beautiful pictures (with impressive animations) to catch audiences’ attention at first glance.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ipad_air_presence_1.png&#34; alt=&#34;ipad_air_presence_1&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Then potential audiences may want to get more detailed information about the appearance or performance they are interested in and scroll down to see more.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ipad_air_presence_2.png&#34; alt=&#34;ipad_air_presence_2&#34;&gt;&lt;/p&gt;
-&lt;p&gt;The most important part of this presence is the description of features. Considered major audiences are educators/students, relatively young staffs in a company and kids/teenagers in the family, every introduction part starts with an attractive header with the keywords like “work”, “working”, “class”, “together”, “leisure time” and so on. These headers help or guide audiences to think about their current status when stduying, working or entertaining and realize their needs or how this product can improve it.&lt;/p&gt;
-&lt;p&gt;Plus, after depicting magic usages in the classroom, workplace or home, the website lists some purchase links of the compatible ipad accessories, guiding audiences to know (and also buy) more related products.&lt;/p&gt;
-&lt;p&gt;However, there are some negative aspects of this presence. First, the fontsize of “Available in October” (the coming date) is really small with a light-gray color, which is not obvious. Second, the price of the product is listed on another website page by clicking a small “View pricing” button. Normally, when audiences view some products on the internet, they always want to know how much it costs and how they can buy it immediately. If this information is not easy or convienient to find, lots of them will lose patience.&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>COMP7103 Topic 1 Introduction</title>
-      <link>https://www.pseudoyu.com/zh/2020/09/18/comp7103-topic-1-introduction/</link>
-      <pubDate>Fri, 18 Sep 2020 01:18:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/09/18/comp7103-topic-1-introduction/</guid>
-      
-        <description>&lt;h1 id=&#34;comp7103-data-mining&#34;&gt;COMP7103 Data Mining&lt;/h1&gt;
-&lt;h2 id=&#34;topic-1-introduction&#34;&gt;Topic 1 Introduction&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Decision-Support System (DSS)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A decision-support system (DSS) is a system that assists decision makers to make important decisions for an organization or business&lt;/li&gt;
-&lt;li&gt;KDD and data mining are important components in many DSS&amp;rsquo;s&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Data and Knowledge&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Data
-&lt;ul&gt;
-&lt;li&gt;A collecion of facts about certain group of objects&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Pattern
-&lt;ul&gt;
-&lt;li&gt;Certain characteristics of data that are frequently observed&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Knowledge
-&lt;ul&gt;
-&lt;li&gt;Some general rules about the objects&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Data Warehouse&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;An integration of various departmental databases (organization-wide data)&lt;/li&gt;
-&lt;li&gt;Avoids overloading local operational databases&lt;/li&gt;
-&lt;li&gt;A convenient place where KDD and data mining applications are performed&lt;/li&gt;
-&lt;li&gt;Provide data mining algorithms an easy access to the required data&lt;/li&gt;
-&lt;li&gt;Wrappers
-&lt;ul&gt;
-&lt;li&gt;Extract&lt;/li&gt;
-&lt;li&gt;Transform&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Can also be used to support other DSS tools, e.g. On-Line Analytical Processing (OLAP) - analyze large amount of data, Online Transaction Processing (OLTP)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Data Mining and KDD&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;KDD (Knowledge Discovery in Databases)
-&lt;ul&gt;
-&lt;li&gt;A process of discovering useful knowledge from big collection of data&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Data Mining
-&lt;ul&gt;
-&lt;li&gt;A step within the KDD process in which interesting patterns are found. Some of these patterns are then interpreted and transformed into useful knowledge.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Data Mining is a step in the whole KDD process&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;KDD is a process of identifying patterns in data and deriving knowledge from them&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;valid&lt;/li&gt;
-&lt;li&gt;novel&lt;/li&gt;
-&lt;li&gt;potentially useful&lt;/li&gt;
-&lt;li&gt;understandable&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Data Mining&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/data_mining_system.png&#34; alt=&#34;data_mining_system&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Databases&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Bottom layer of the architecture&lt;/li&gt;
-&lt;li&gt;Contains data sources (raw data)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Traditional Database usually only provides the functions of storing and retrieving facts&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;The knowledge resulting from data mining should carry certain degree of predictive ability or descriptive (explanatory) ability (or both)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Data Mining Engine&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Applies data mining algorithms on data&lt;/li&gt;
-&lt;li&gt;Provides multiple functionality&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Evaluation Module&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Allow users to specify what is/isn&amp;rsquo;t interesting&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Knowledge Base&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Capture domain specific knowledge&lt;/li&gt;
-&lt;li&gt;Stores the rules generated by data mining&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Graphical User Interface&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Presents mined patterns and rules to users in an easy-to-visualize way&lt;/li&gt;
-&lt;li&gt;Provides feedback mechanisms for the users to specify the criteria of interestingness&lt;/li&gt;
-&lt;li&gt;Provides a query language or query interface for users to select and retrieve&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Challenges of Data Mining&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Technical
-&lt;ul&gt;
-&lt;li&gt;Scalability&lt;/li&gt;
-&lt;li&gt;Dimensionality&lt;/li&gt;
-&lt;li&gt;Data stream&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Data
-&lt;ul&gt;
-&lt;li&gt;Complex and heterogeneous data&lt;/li&gt;
-&lt;li&gt;Data quality&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Privacy
-&lt;ul&gt;
-&lt;li&gt;Data ownership and distribution&lt;/li&gt;
-&lt;li&gt;Privacy preservation&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Results
-&lt;ul&gt;
-&lt;li&gt;Interpretation of patterns&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;The KDD Process&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/kdd_process.png&#34; alt=&#34;kdd_process&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Step 1: Goal Setting
-&lt;ul&gt;
-&lt;li&gt;Understand your application domain&lt;/li&gt;
-&lt;li&gt;Obtain prior known knowledge&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Step 2: Data Collection
-&lt;ul&gt;
-&lt;li&gt;Characteristics&lt;/li&gt;
-&lt;li&gt;Where to find&lt;/li&gt;
-&lt;li&gt;How to store&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Step 3: Data Cleaning and Preprocessing
-&lt;ul&gt;
-&lt;li&gt;Missing data&lt;/li&gt;
-&lt;li&gt;Incorrect data (noise)&lt;/li&gt;
-&lt;li&gt;Outliers&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Step 4: Data Reduction and Transformation (or Preparation)
-&lt;ul&gt;
-&lt;li&gt;Compact data into a form&lt;/li&gt;
-&lt;li&gt;Improve data mining algorithms&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Step 5: Data Mining
-&lt;ul&gt;
-&lt;li&gt;Pick a data mining model&lt;/li&gt;
-&lt;li&gt;Pick a data mining algorithm&lt;/li&gt;
-&lt;li&gt;Apply the algorithm to the data&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Step 6: Result Evaluation
-&lt;ul&gt;
-&lt;li&gt;Check the results and goals&lt;/li&gt;
-&lt;li&gt;Refine and re-run (if not)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Step 7: Knowledge Consolidation
-&lt;ul&gt;
-&lt;li&gt;Document&lt;/li&gt;
-&lt;li&gt;Report&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Iterative and Interactive&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Some steps of the process need to be refined, and the whole process be repeated&lt;/li&gt;
-&lt;li&gt;Certain amount of human involvement is needed to monitor and to fine tune the steps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Prediction&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Uses database records that describe information about past behavior to automatically generate a model (or rule) that can predict future behavior&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Derive patterns that summarize the underlying relationships in data and to describe the characteristics of data&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;OLAP (On-Line Analytical Processing)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;View data in a multi-dimensional model (a data cube)&lt;/li&gt;
-&lt;li&gt;Fast aggregation&lt;/li&gt;
-&lt;li&gt;Summarization&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Example&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Selection -&amp;gt; Group-by -&amp;gt; Summarization&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Classification&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Supervised learning&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Goal
-&lt;ul&gt;
-&lt;li&gt;Unseen records should be assigned a class (accuracy)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Approach
-&lt;ul&gt;
-&lt;li&gt;Given a training set&lt;/li&gt;
-&lt;li&gt;Learn classifier&lt;/li&gt;
-&lt;li&gt;Find a model&lt;/li&gt;
-&lt;li&gt;Test the model using test set&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Example&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Direct Marketing
-&lt;ul&gt;
-&lt;li&gt;Reduce cost of mailing by targeting a set of consumers likely to buy a new cell-phone product&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Regression&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Goal
-&lt;ul&gt;
-&lt;li&gt;Preduct a value of numerical variable based on the values of other variables&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Example&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Predicting sales amounts of new product based on advertising expenditure&lt;/li&gt;
-&lt;li&gt;Predicting wind velocities as a function of temperature, humidity, air pressure, etc.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Clustering&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Given a set of data objects with a set of attributes and similarity measure&lt;/li&gt;
-&lt;li&gt;Find clusters (e.g. distance-based clustering)
-&lt;ul&gt;
-&lt;li&gt;Maximize the intra-cluster similarity&lt;/li&gt;
-&lt;li&gt;Minimize the inter-cluster similarity&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Objects in one cluster are more similiar to one another&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/illustrating_cluster.png&#34; alt=&#34;illustrating_cluster&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Example&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Document Clustering
-&lt;ul&gt;
-&lt;li&gt;To find groups of documents that are similar to each other based on the important terms they contain&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Association Rule Discovery&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Given a set of records each of which contains some items from a given collection&lt;/li&gt;
-&lt;li&gt;Goal
-&lt;ul&gt;
-&lt;li&gt;Produce dependency rules which predict occurrence of an item based on occurrences of other items&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Example&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Marketing and Sales Promotion&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Sequence Analysis&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Given a sequence database contains sequences of events&lt;/li&gt;
-&lt;li&gt;Find sequences
-&lt;ul&gt;
-&lt;li&gt;Interesting&lt;/li&gt;
-&lt;li&gt;Frequently occurring&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Predict future behavior.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Example&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Renting movies&lt;/li&gt;
-&lt;li&gt;Buying habits&lt;/li&gt;
-&lt;li&gt;Web serving behavior&lt;/li&gt;
-&lt;li&gt;Web log analysis&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       

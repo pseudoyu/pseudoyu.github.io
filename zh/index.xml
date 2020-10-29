@@ -257,395 +257,6 @@
     </item>
     
     <item>
-      <title>ICOM6012 Topic 4 Transport Layer</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/28/icom6012-topic-4-transport-layer/</link>
-      <pubDate>Wed, 28 Oct 2020 09:37:44 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/28/icom6012-topic-4-transport-layer/</guid>
-      
-        <description>&lt;h1 id=&#34;icom6012-internet-infrastructure-technologies&#34;&gt;ICOM6012 Internet Infrastructure Technologies&lt;/h1&gt;
-&lt;h2 id=&#34;topic-4-transport-layer&#34;&gt;Topic 4 Transport Layer&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/transport_layer.svg&#34; alt=&#34;transport_layer.svg&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;actions&#34;&gt;Actions&lt;/h2&gt;
-&lt;h3 id=&#34;sender&#34;&gt;Sender&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Get application layer message&lt;/li&gt;
-&lt;li&gt;Determine segment header fields values&lt;/li&gt;
-&lt;li&gt;Create segment&lt;/li&gt;
-&lt;li&gt;Pass segment to IP&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;receiver&#34;&gt;Receiver&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Receive segment from IP&lt;/li&gt;
-&lt;li&gt;Check header values&lt;/li&gt;
-&lt;li&gt;Extract application layer message&lt;/li&gt;
-&lt;li&gt;Demultiplexes message up to application via socket&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;services&#34;&gt;Services&lt;/h2&gt;
-&lt;h3 id=&#34;provide-logical-communication-between-processes&#34;&gt;Provide logical communication between processes&lt;/h3&gt;
-&lt;h3 id=&#34;run-in-end-system&#34;&gt;Run in end system&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Send side
-&lt;ul&gt;
-&lt;li&gt;Break app messages into segment&lt;/li&gt;
-&lt;li&gt;Pass to network layer&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Receive side
-&lt;ul&gt;
-&lt;li&gt;Reassembles segments into messages&lt;/li&gt;
-&lt;li&gt;Pass to application layer&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;protocols&#34;&gt;Protocols&lt;/h2&gt;
-&lt;h3 id=&#34;tcp&#34;&gt;TCP&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Features
-&lt;ul&gt;
-&lt;li&gt;Point-to-point
-&lt;ul&gt;
-&lt;li&gt;One sender, one receiver&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Reliable, in-order byte system
-&lt;ul&gt;
-&lt;li&gt;No message boundaries&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Full duplex data
-&lt;ul&gt;
-&lt;li&gt;Bi-directional data flow in same connection&lt;/li&gt;
-&lt;li&gt;MSS: maximum segment size (excluding header)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Cumulative ACKs&lt;/li&gt;
-&lt;li&gt;Pipelining
-&lt;ul&gt;
-&lt;li&gt;TCP congestion and flow control set window size&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Flow Control
-&lt;ul&gt;
-&lt;li&gt;Sender will not overwhelm receiver&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Congestion control&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Concepts
-&lt;ul&gt;
-&lt;li&gt;Segment structure&lt;/li&gt;
-&lt;li&gt;Sequence numbers
-&lt;ul&gt;
-&lt;li&gt;Byte stream &amp;ldquo;number&amp;rdquo; of first byte in segment&amp;rsquo;s data&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Acknowledgements (ACKs)
-&lt;ul&gt;
-&lt;li&gt;Seq # of next byte expected from other side&lt;/li&gt;
-&lt;li&gt;Cumulative ACKs&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Procedure
-&lt;ul&gt;
-&lt;li&gt;Connection-oriented
-&lt;ul&gt;
-&lt;li&gt;Handshaking initializes sender, receiver state before data exchange&lt;/li&gt;
-&lt;li&gt;TCP socket identified by 4-tuple
-&lt;ul&gt;
-&lt;li&gt;Source IP&lt;/li&gt;
-&lt;li&gt;Source Port #&lt;/li&gt;
-&lt;li&gt;Dest IP&lt;/li&gt;
-&lt;li&gt;Dest Port #&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Server host may support many simultaneous TCP sockets&lt;/li&gt;
-&lt;li&gt;Web servers have different sockets for each connecting client
-(Non-persistent HTTP will have different socket for each request)&lt;/li&gt;
-&lt;li&gt;Demux
-&lt;ul&gt;
-&lt;li&gt;Receiver uses all four values to direct segment to appropriate socket&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;3-way handshake
-&lt;ul&gt;
-&lt;li&gt;Connection setup&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Connection management
-&lt;ul&gt;
-&lt;li&gt;Handshake
-&lt;ul&gt;
-&lt;li&gt;Agree to establish connection&lt;/li&gt;
-&lt;li&gt;Agree on connection parameters&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Retransmission&lt;/li&gt;
-&lt;li&gt;Closing a connection&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Events
-&lt;ul&gt;
-&lt;li&gt;Data received from application
-&lt;ul&gt;
-&lt;li&gt;Create segment with seq # (a byte-stream number of first data byte in segment)&lt;/li&gt;
-&lt;li&gt;Start timer if not already running
-&lt;ul&gt;
-&lt;li&gt;Think of timer as for oldest unACKed segment&lt;/li&gt;
-&lt;li&gt;Expiration interval: TimeOutInterval&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Timeout
-&lt;ul&gt;
-&lt;li&gt;Retransmit segment that caused timeout&lt;/li&gt;
-&lt;li&gt;Restart timer&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;ACK received
-&lt;ul&gt;
-&lt;li&gt;Update what is known to ACKed&lt;/li&gt;
-&lt;li&gt;Start timer if there are still unACKed segment&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Shortcomings
-&lt;ul&gt;
-&lt;li&gt;SYN DoS Attack
-&lt;ul&gt;
-&lt;li&gt;Half-open TCP connections consume all the TCP connection resources&lt;/li&gt;
-&lt;li&gt;SYN packet with a spoofed source address&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;udp&#34;&gt;UDP&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Features&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;No frills&lt;/li&gt;
-&lt;li&gt;Bare bones&lt;/li&gt;
-&lt;li&gt;&amp;ldquo;Best effort&amp;rdquo;
-&lt;ul&gt;
-&lt;li&gt;Lost&lt;/li&gt;
-&lt;li&gt;Delivered out-of-order to app&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;No handshaking&lt;/li&gt;
-&lt;li&gt;Handle independently&lt;/li&gt;
-&lt;li&gt;Services not available
-&lt;ul&gt;
-&lt;li&gt;Delay guarantee&lt;/li&gt;
-&lt;li&gt;Bandwidth guarantee&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Concepts&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Segment format
-&lt;ul&gt;
-&lt;li&gt;Source port #&lt;/li&gt;
-&lt;li&gt;Dest port #&lt;/li&gt;
-&lt;li&gt;Length&lt;/li&gt;
-&lt;li&gt;Checksum
-&lt;ul&gt;
-&lt;li&gt;Detect errors
-&lt;ul&gt;
-&lt;li&gt;Sender
-&lt;ul&gt;
-&lt;li&gt;Treat segement contents&lt;/li&gt;
-&lt;li&gt;Checksum: 1&amp;rsquo;s complement sum&lt;/li&gt;
-&lt;li&gt;Put checksum into UDP field value&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Receiver
-&lt;ul&gt;
-&lt;li&gt;Compute checksum of received segment&lt;/li&gt;
-&lt;li&gt;Check equality
-&lt;ul&gt;
-&lt;li&gt;No: error detected&lt;/li&gt;
-&lt;li&gt;Yes: no error detected (not sure)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Checksum calculation may be disabled in order to speed up the processing&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Procedure&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Connectionless demux
-&lt;ul&gt;
-&lt;li&gt;Create socket with unique local port #&lt;/li&gt;
-&lt;li&gt;Sender side: create datagram to send into UDP socket
-&lt;ul&gt;
-&lt;li&gt;Dest IP&lt;/li&gt;
-&lt;li&gt;Dest port #&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Receive side: receive UDP segment
-(IP datagrams with same dest port #, but different source will be directed to same socket)
-&lt;ul&gt;
-&lt;li&gt;Check dest port #&lt;/li&gt;
-&lt;li&gt;Direct UDP segment to socket with that port #&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Utilization&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Streaming multimedia apps
-&lt;ul&gt;
-&lt;li&gt;Loss tolerant&lt;/li&gt;
-&lt;li&gt;Rate sensitive&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;DNS&lt;/li&gt;
-&lt;li&gt;SNMP&lt;/li&gt;
-&lt;li&gt;HTTP/3&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Shortcomings&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Need reliability at application layer&lt;/li&gt;
-&lt;li&gt;Congestion control&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;sctp&#34;&gt;SCTP&lt;/h3&gt;
-&lt;h3 id=&#34;dccp&#34;&gt;DCCP&lt;/h3&gt;
-&lt;h2 id=&#34;multiplexing-and-demultiplexing&#34;&gt;Multiplexing and Demultiplexing&lt;/h2&gt;
-&lt;h3 id=&#34;multiplexing-at-sender&#34;&gt;Multiplexing at sender&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Handle data from multiple sockets, add transport header&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;demultiplexing-at-receiver&#34;&gt;Demultiplexing at receiver&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Handle data info to deliver received segments to correct socket&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;host-receivers-ip-datagram-host-uses-ip--port--to-redirect-segment&#34;&gt;Host receivers IP datagram (Host uses IP &amp;amp; port # to redirect segment)&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Source IP&lt;/li&gt;
-&lt;li&gt;Dest IP&lt;/li&gt;
-&lt;li&gt;One transport layer segment
-&lt;ul&gt;
-&lt;li&gt;Source port #&lt;/li&gt;
-&lt;li&gt;Dest port #&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;congestion-control&#34;&gt;Congestion Control&lt;/h2&gt;
-&lt;h3 id=&#34;cause&#34;&gt;Cause&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Too many sources sending too much data too fast for network to handle&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;manifestations&#34;&gt;Manifestations&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Long delay
-&lt;ul&gt;
-&lt;li&gt;Queueing in router buffers&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Packet loss
-&lt;ul&gt;
-&lt;li&gt;Buffer overflow at network&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;approaches&#34;&gt;Approaches&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;End-end congestion control
-&lt;ul&gt;
-&lt;li&gt;Features
-&lt;ul&gt;
-&lt;li&gt;No explicit feedback from network&lt;/li&gt;
-&lt;li&gt;Congestion inferred from observed loss, delay&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Network-assisted congestion control
-&lt;ul&gt;
-&lt;li&gt;Features
-&lt;ul&gt;
-&lt;li&gt;Routers provide direct feedback to hosts with flow passing through congested router&lt;/li&gt;
-&lt;li&gt;May indicate congestion level or explicit set sending rate&lt;/li&gt;
-&lt;li&gt;TCP ECN ATM DECbit protocols&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;tcp-congestion-control&#34;&gt;TCP Congestion Control&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;AIMD
-&lt;ul&gt;
-&lt;li&gt;Sender can increase sending rate until packet loss occurs, then decrease&lt;/li&gt;
-&lt;li&gt;Additive increase
-&lt;ul&gt;
-&lt;li&gt;1 MSS (maximum segment size) until loss detected&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Multiplicative decrease
-&lt;ul&gt;
-&lt;li&gt;Cut sending rate in half at each loss event&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Detecting, reacting to loss
-&lt;ul&gt;
-&lt;li&gt;ACKs problem
-&lt;ul&gt;
-&lt;li&gt;cwnd is cut in half&lt;/li&gt;
-&lt;li&gt;Window grow linearly&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Timeout event
-&lt;ul&gt;
-&lt;li&gt;cwnd is set to 1 MSS&lt;/li&gt;
-&lt;li&gt;Window grow exponentially to threshold, then linearly&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;TCP slow start
-&lt;ul&gt;
-&lt;li&gt;Initially cwnd = 1 MSS&lt;/li&gt;
-&lt;li&gt;Double cwnd every RTT&lt;/li&gt;
-&lt;li&gt;Done by incrementing cwnd for every ACK received&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
       <title>Blockchain BitCoin Scripts</title>
       <link>https://www.pseudoyu.com/zh/2020/10/24/blockchain-bitcoin-scripts/</link>
       <pubDate>Sat, 24 Oct 2020 09:07:17 +0800</pubDate>
@@ -2100,6 +1711,91 @@ change won&amp;rsquo;t affect the original object&amp;rsquo;s value (different o
 &lt;li&gt;Application
 &lt;ul&gt;
 &lt;li&gt;Signature (used in bitcoin)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Java Data Type</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/21/java-data-type/</link>
+      <pubDate>Wed, 21 Oct 2020 08:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/21/java-data-type/</guid>
+      
+        <description>&lt;h1 id=&#34;java-basics&#34;&gt;Java Basics&lt;/h1&gt;
+&lt;h2 id=&#34;data-type&#34;&gt;Data Type&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/java_data_type.svg&#34; alt=&#34;java_data_type&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;primitive-type&#34;&gt;Primitive type&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;byte/8&lt;/li&gt;
+&lt;li&gt;char/16&lt;/li&gt;
+&lt;li&gt;short/16&lt;/li&gt;
+&lt;li&gt;int/32&lt;/li&gt;
+&lt;li&gt;float/32&lt;/li&gt;
+&lt;li&gt;long/64&lt;/li&gt;
+&lt;li&gt;double/64&lt;/li&gt;
+&lt;li&gt;boolean/~
+&lt;ul&gt;
+&lt;li&gt;Value
+&lt;ul&gt;
+&lt;li&gt;true(1)&lt;/li&gt;
+&lt;li&gt;false(0)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;JVM will convert it to int when compiling&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;types---warpper-class&#34;&gt;Types &amp;lt;-&amp;gt; Warpper class&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;boolean - Boolean&lt;/li&gt;
+&lt;li&gt;byte - Byte&lt;/li&gt;
+&lt;li&gt;char - Character&lt;/li&gt;
+&lt;li&gt;float - Float&lt;/li&gt;
+&lt;li&gt;int - Integer&lt;/li&gt;
+&lt;li&gt;long - Long&lt;/li&gt;
+&lt;li&gt;short - Short&lt;/li&gt;
+&lt;li&gt;double - Double&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;autoboxing&#34;&gt;Autoboxing&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Use valueOf() method&lt;/li&gt;
+&lt;li&gt;primitive types -&amp;gt; corresponding object wrapper classes
+(e.g. int -&amp;gt; Integer, double -&amp;gt; Double)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;unboxing&#34;&gt;Unboxing&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Object wrapper classes -&amp;gt; corresponding primitive types
+(e.g. Integer -&amp;gt; int, Double -&amp;gt; double)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;cache&#34;&gt;Cache&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Primitive data type and corresponding cache
+(If the data is in the range of cache, we can use the objects in the cache)
+&lt;ul&gt;
+&lt;li&gt;boolean value | true and false&lt;/li&gt;
+&lt;li&gt;byte values | all&lt;/li&gt;
+&lt;li&gt;short values | between -128 and 127&lt;/li&gt;
+&lt;li&gt;int values | between -128 and 127&lt;/li&gt;
+&lt;li&gt;char | in range of \u0000 to \u007F&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Compare
+&lt;ul&gt;
+&lt;li&gt;Integer.valueOf(123)
+&lt;ul&gt;
+&lt;li&gt;Use objet in the cache,
+multiple call will invoke the same object&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;new Integer(123)
+&lt;ul&gt;
+&lt;li&gt;Create a new object every call&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;

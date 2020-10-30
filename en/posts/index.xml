@@ -12,11 +12,11 @@
     
     
     <item>
-      <title>Blockchain Ethereum Features</title>
-      <link>https://www.pseudoyu.com/en/2020/10/30/blockchain-ethereum-features/</link>
+      <title>Blockchain Ethereum State tree</title>
+      <link>https://www.pseudoyu.com/en/2020/10/30/blockchain-ethereum-state-tree/</link>
       <pubDate>Fri, 30 Oct 2020 10:21:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2020/10/30/blockchain-ethereum-features/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/10/30/blockchain-ethereum-state-tree/</guid>
       <description>Blockchain Technology and Applications Ethereum System (Account-based ledger) State tree  addr -&amp;gt; state  Hash  Construct merkle tree cost too much   Unsorted merkle tree  No search and update method   Sorted merkle tree  Cost too much when inserting     (Key, Value)  RLP (Recursive Length Prefix)  Nested array of bytes   Compared: protocol buffer (protocolbuf)   Trie (Retrieval)  Pros  Branching factor Efficiency of trie depends on the length of key Avoid collision resistence Fixed input -&amp;gt; fixed output Update operation locally   Cons  Storage cost     Patricia tree (trie)  Compact the path, less memory cost When the distribution is sparse   Merkle Patricia Tree  Pointer -&amp;gt; Hash pointer  Merkle tree vs.</description>
     </item>
     

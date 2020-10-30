@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 29 Oct 2020 09:07:17 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2020 10:21:17 +0800</lastBuildDate>
     
     <atom:link href="https://www.pseudoyu.com/zh/index.xml" rel="self" type="application/rss+xml" />
     
@@ -58,6 +58,97 @@
 &lt;li&gt;&lt;a href=&#34;https://medium.com/@pseudoyu&#34;&gt;Medium&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCR0O0s303tGBi3P02hstQPA/&#34;&gt;Youtube&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.reddit.com/user/pseudo_yu&#34;&gt;Reddit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Blockchain Ethereum Features</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/30/blockchain-ethereum-features/</link>
+      <pubDate>Fri, 30 Oct 2020 10:21:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/30/blockchain-ethereum-features/</guid>
+      
+        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
+&lt;h2 id=&#34;ethereum-system-account-based-ledger&#34;&gt;Ethereum System (Account-based ledger)&lt;/h2&gt;
+&lt;h3 id=&#34;state-tree&#34;&gt;State tree&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_ethereum_state_tree.svg&#34; alt=&#34;blockchain_ethereum_state_tree&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;addr -&amp;gt; state
+&lt;ul&gt;
+&lt;li&gt;Hash
+&lt;ul&gt;
+&lt;li&gt;Construct merkle tree cost too much&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Unsorted merkle tree
+&lt;ul&gt;
+&lt;li&gt;No search and update method&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Sorted merkle tree
+&lt;ul&gt;
+&lt;li&gt;Cost too much when inserting&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;(Key, Value)
+&lt;ul&gt;
+&lt;li&gt;RLP (Recursive Length Prefix)
+&lt;ul&gt;
+&lt;li&gt;Nested array of bytes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Compared: protocol buffer (protocolbuf)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Trie (Retrieval)
+&lt;ul&gt;
+&lt;li&gt;Pros
+&lt;ul&gt;
+&lt;li&gt;Branching factor&lt;/li&gt;
+&lt;li&gt;Efficiency of trie depends on the length of key&lt;/li&gt;
+&lt;li&gt;Avoid collision resistence&lt;/li&gt;
+&lt;li&gt;Fixed input -&amp;gt; fixed output&lt;/li&gt;
+&lt;li&gt;Update operation locally&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Cons
+&lt;ul&gt;
+&lt;li&gt;Storage cost&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Patricia tree (trie)
+&lt;ul&gt;
+&lt;li&gt;Compact the path, less memory cost&lt;/li&gt;
+&lt;li&gt;When the distribution is sparse&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Merkle Patricia Tree
+&lt;ul&gt;
+&lt;li&gt;Pointer -&amp;gt; Hash pointer
+&lt;ul&gt;
+&lt;li&gt;Merkle tree vs. Binary tree&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Root hash value
+&lt;ul&gt;
+&lt;li&gt;Protect the whole tree&lt;/li&gt;
+&lt;li&gt;Merkle proof&lt;/li&gt;
+&lt;li&gt;Check the existence of an account&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Keep history records
+&lt;ul&gt;
+&lt;li&gt;Rollback&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       
@@ -1711,91 +1802,6 @@ change won&amp;rsquo;t affect the original object&amp;rsquo;s value (different o
 &lt;li&gt;Application
 &lt;ul&gt;
 &lt;li&gt;Signature (used in bitcoin)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Java Data Type</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/21/java-data-type/</link>
-      <pubDate>Wed, 21 Oct 2020 08:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/21/java-data-type/</guid>
-      
-        <description>&lt;h1 id=&#34;java-basics&#34;&gt;Java Basics&lt;/h1&gt;
-&lt;h2 id=&#34;data-type&#34;&gt;Data Type&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/java_data_type.svg&#34; alt=&#34;java_data_type&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;primitive-type&#34;&gt;Primitive type&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;byte/8&lt;/li&gt;
-&lt;li&gt;char/16&lt;/li&gt;
-&lt;li&gt;short/16&lt;/li&gt;
-&lt;li&gt;int/32&lt;/li&gt;
-&lt;li&gt;float/32&lt;/li&gt;
-&lt;li&gt;long/64&lt;/li&gt;
-&lt;li&gt;double/64&lt;/li&gt;
-&lt;li&gt;boolean/~
-&lt;ul&gt;
-&lt;li&gt;Value
-&lt;ul&gt;
-&lt;li&gt;true(1)&lt;/li&gt;
-&lt;li&gt;false(0)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;JVM will convert it to int when compiling&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;types---warpper-class&#34;&gt;Types &amp;lt;-&amp;gt; Warpper class&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;boolean - Boolean&lt;/li&gt;
-&lt;li&gt;byte - Byte&lt;/li&gt;
-&lt;li&gt;char - Character&lt;/li&gt;
-&lt;li&gt;float - Float&lt;/li&gt;
-&lt;li&gt;int - Integer&lt;/li&gt;
-&lt;li&gt;long - Long&lt;/li&gt;
-&lt;li&gt;short - Short&lt;/li&gt;
-&lt;li&gt;double - Double&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;autoboxing&#34;&gt;Autoboxing&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Use valueOf() method&lt;/li&gt;
-&lt;li&gt;primitive types -&amp;gt; corresponding object wrapper classes
-(e.g. int -&amp;gt; Integer, double -&amp;gt; Double)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;unboxing&#34;&gt;Unboxing&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Object wrapper classes -&amp;gt; corresponding primitive types
-(e.g. Integer -&amp;gt; int, Double -&amp;gt; double)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;cache&#34;&gt;Cache&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Primitive data type and corresponding cache
-(If the data is in the range of cache, we can use the objects in the cache)
-&lt;ul&gt;
-&lt;li&gt;boolean value | true and false&lt;/li&gt;
-&lt;li&gt;byte values | all&lt;/li&gt;
-&lt;li&gt;short values | between -128 and 127&lt;/li&gt;
-&lt;li&gt;int values | between -128 and 127&lt;/li&gt;
-&lt;li&gt;char | in range of \u0000 to \u007F&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Compare
-&lt;ul&gt;
-&lt;li&gt;Integer.valueOf(123)
-&lt;ul&gt;
-&lt;li&gt;Use objet in the cache,
-multiple call will invoke the same object&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;new Integer(123)
-&lt;ul&gt;
-&lt;li&gt;Create a new object every call&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;

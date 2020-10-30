@@ -6,10 +6,19 @@
     <description>Recent content in technology on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 29 Oct 2020 09:07:17 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2020 10:21:17 +0800</lastBuildDate>
     
 	<atom:link href="https://www.pseudoyu.com/zh/tag/technology/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Blockchain Ethereum Features</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/30/blockchain-ethereum-features/</link>
+      <pubDate>Fri, 30 Oct 2020 10:21:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/30/blockchain-ethereum-features/</guid>
+      <description>Blockchain Technology and Applications Ethereum System (Account-based ledger) State tree  addr -&amp;gt; state  Hash  Construct merkle tree cost too much   Unsorted merkle tree  No search and update method   Sorted merkle tree  Cost too much when inserting     (Key, Value)  RLP (Recursive Length Prefix)  Nested array of bytes   Compared: protocol buffer (protocolbuf)   Trie (Retrieval)  Pros  Branching factor Efficiency of trie depends on the length of key Avoid collision resistence Fixed input -&amp;gt; fixed output Update operation locally   Cons  Storage cost     Patricia tree (trie)  Compact the path, less memory cost When the distribution is sparse   Merkle Patricia Tree  Pointer -&amp;gt; Hash pointer  Merkle tree vs.</description>
+    </item>
     
     <item>
       <title>Blockchain Ethereum Features</title>
@@ -185,15 +194,6 @@
       
       <guid>https://www.pseudoyu.com/zh/2020/10/21/java-data-type/</guid>
       <description>Java Basics Data Type Primitive type  byte/8 char/16 short/16 int/32 float/32 long/64 double/64 boolean/~  Value  true(1) false(0)   JVM will convert it to int when compiling    Types &amp;lt;-&amp;gt; Warpper class  boolean - Boolean byte - Byte char - Character float - Float int - Integer long - Long short - Short double - Double  Autoboxing  Use valueOf() method primitive types -&amp;gt; corresponding object wrapper classes (e.</description>
-    </item>
-    
-    <item>
-      <title>ICOM6012 Topic 4 Transport Layer</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/20/icom6012-topic-4-transport-layer/</link>
-      <pubDate>Tue, 20 Oct 2020 09:37:44 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/20/icom6012-topic-4-transport-layer/</guid>
-      <description>ICOM6012 Internet Infrastructure Technologies Topic 4 Transport Layer Actions Sender  Get application layer message Determine segment header fields values Create segment Pass segment to IP  Receiver  Receive segment from IP Check header values Extract application layer message Demultiplexes message up to application via socket  Services Provide logical communication between processes Run in end system  Send side  Break app messages into segment Pass to network layer   Receive side  Reassembles segments into messages Pass to application layer    Protocols TCP  Features  Point-to-point  One sender, one receiver   Reliable, in-order byte system  No message boundaries   Full duplex data  Bi-directional data flow in same connection MSS: maximum segment size (excluding header)   Cumulative ACKs Pipelining  TCP congestion and flow control set window size   Flow Control  Sender will not overwhelm receiver   Congestion control   Concepts  Segment structure Sequence numbers  Byte stream &amp;ldquo;number&amp;rdquo; of first byte in segment&amp;rsquo;s data   Acknowledgements (ACKs)  Seq # of next byte expected from other side Cumulative ACKs     Procedure  Connection-oriented  Handshaking initializes sender, receiver state before data exchange TCP socket identified by 4-tuple  Source IP Source Port # Dest IP Dest Port #   Server host may support many simultaneous TCP sockets Web servers have different sockets for each connecting client (Non-persistent HTTP will have different socket for each request) Demux  Receiver uses all four values to direct segment to appropriate socket     3-way handshake  Connection setup   Connection management  Handshake  Agree to establish connection Agree on connection parameters     Retransmission Closing a connection   Events  Data received from application  Create segment with seq # (a byte-stream number of first data byte in segment) Start timer if not already running  Think of timer as for oldest unACKed segment Expiration interval: TimeOutInterval     Timeout  Retransmit segment that caused timeout Restart timer   ACK received  Update what is known to ACKed Start timer if there are still unACKed segment     Shortcomings  SYN DoS Attack  Half-open TCP connections consume all the TCP connection resources SYN packet with a spoofed source address      UDP   Features</description>
     </item>
     
   </channel>

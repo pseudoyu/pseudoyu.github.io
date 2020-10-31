@@ -6,10 +6,19 @@
     <description>Recent content in cryptocurrency on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 30 Oct 2020 10:21:17 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2020 19:36:17 +0800</lastBuildDate>
     
 	<atom:link href="https://www.pseudoyu.com/en/tag/cryptocurrency/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Blockchain Ethereum Transaction tree and Receipt tree</title>
+      <link>https://www.pseudoyu.com/en/2020/10/31/blockchain-ethereum-transaction-tree-and-receipt-tree/</link>
+      <pubDate>Sat, 31 Oct 2020 19:36:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/10/31/blockchain-ethereum-transaction-tree-and-receipt-tree/</guid>
+      <description>Blockchain Technology and Applications Ethereum System (Account-based ledger) Transaction tree and Receipt tree  Merkle proof Bloom filter  Search whether an element is in a collection Filter useless blocks False postive No false negative Can&amp;rsquo;t do delete operation   Transaction-driven state machine  </description>
+    </item>
     
     <item>
       <title>Blockchain Ethereum State tree</title>

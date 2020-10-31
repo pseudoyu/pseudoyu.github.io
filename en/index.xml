@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 30 Oct 2020 10:21:17 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2020 19:36:17 +0800</lastBuildDate>
     
     <atom:link href="https://www.pseudoyu.com/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -58,6 +58,34 @@
 &lt;li&gt;&lt;a href=&#34;https://medium.com/@pseudoyu&#34;&gt;Medium&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCR0O0s303tGBi3P02hstQPA/&#34;&gt;Youtube&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.reddit.com/user/pseudo_yu&#34;&gt;Reddit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Blockchain Ethereum Transaction tree and Receipt tree</title>
+      <link>https://www.pseudoyu.com/en/2020/10/31/blockchain-ethereum-transaction-tree-and-receipt-tree/</link>
+      <pubDate>Sat, 31 Oct 2020 19:36:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/10/31/blockchain-ethereum-transaction-tree-and-receipt-tree/</guid>
+      
+        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
+&lt;h2 id=&#34;ethereum-system-account-based-ledger&#34;&gt;Ethereum System (Account-based ledger)&lt;/h2&gt;
+&lt;h3 id=&#34;transaction-tree-and-receipt-tree&#34;&gt;Transaction tree and Receipt tree&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_ethereum_transaction_and_receipt_tree.svg&#34; alt=&#34;blockchain_ethereum_transaction_and_receipt_tree&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Merkle proof&lt;/li&gt;
+&lt;li&gt;Bloom filter
+&lt;ul&gt;
+&lt;li&gt;Search whether an element is in a collection&lt;/li&gt;
+&lt;li&gt;Filter useless blocks&lt;/li&gt;
+&lt;li&gt;False postive&lt;/li&gt;
+&lt;li&gt;No false negative&lt;/li&gt;
+&lt;li&gt;Can&amp;rsquo;t do delete operation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Transaction-driven state machine&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       
@@ -1728,86 +1756,6 @@ change won&amp;rsquo;t affect the original object&amp;rsquo;s value (different o
 &lt;li&gt;String s = &amp;quot;&amp;rdquo;
 &lt;ul&gt;
 &lt;li&gt;Automatically put into String Pool&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Blockchain Cryptography</title>
-      <link>https://www.pseudoyu.com/en/2020/10/21/blockchain-cryptography/</link>
-      <pubDate>Wed, 21 Oct 2020 09:07:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/21/blockchain-cryptography/</guid>
-      
-        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
-&lt;h2 id=&#34;cryptography&#34;&gt;Cryptography&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_cryptography.svg&#34; alt=&#34;blockchain_cryptography&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;cryptographic-hash-function&#34;&gt;Cryptographic hash function&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Application
-&lt;ul&gt;
-&lt;li&gt;Digital commitment
-(digital equivalent of a sealed envelop)
-&lt;ul&gt;
-&lt;li&gt;H(x || nonce)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;SHA-256
-(used in bitcoin)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Features
-&lt;ul&gt;
-&lt;li&gt;Collision resistance
-&lt;ul&gt;
-&lt;li&gt;x != y, H(x) = H(y)&lt;/li&gt;
-&lt;li&gt;MD5 (proved bad)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Hiding
-&lt;ul&gt;
-&lt;li&gt;x -&amp;gt; H(x), H(x) !-&amp;gt; x&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Puzzle friendly
-&lt;ul&gt;
-&lt;li&gt;H(block header) &amp;lt;= target&lt;/li&gt;
-&lt;li&gt;Keep trying nonce, no shortcuts&lt;/li&gt;
-&lt;li&gt;Difficult to solve, but easy to verify&lt;/li&gt;
-&lt;li&gt;Application
-&lt;ul&gt;
-&lt;li&gt;PoW (Proof of Work)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;encryption&#34;&gt;Encryption&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Symmetric encryption
-&lt;ul&gt;
-&lt;li&gt;Use the same one key&lt;/li&gt;
-&lt;li&gt;Not secure to transport encryption key&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Asymmetric encryption
-(public key encryption)
-&lt;ul&gt;
-&lt;li&gt;Use two keys
-(one for encryption, another for decryption)&lt;/li&gt;
-&lt;li&gt;A good source of randomness
-(assume)&lt;/li&gt;
-&lt;li&gt;Application
-&lt;ul&gt;
-&lt;li&gt;Signature
-(used in bitcoin)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;

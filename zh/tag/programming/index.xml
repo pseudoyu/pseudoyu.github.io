@@ -46,8 +46,7 @@
       <pubDate>Thu, 22 Oct 2020 09:50:17 +0800</pubDate>
       
       <guid>https://www.pseudoyu.com/zh/2020/10/22/java-reflect/</guid>
-      <description>Java Basics Reflect Core concept  Load classes, methods/fields when JVM is running, no prior requirement of knowing the object when writing or compiling code  Functions (runtime)
- Enables java code to discover information about the fields, methods and constructors of loaded classes Operate on their underlying counterparts within security restructions  Usage  Develop universal frameworks  java.lang.reflect  Field Method Constructor  Advantages  Extensibility Help with development (IDE) Help with debugging and testing  Disadvantages  Cost/Optimization Security restructions Exposing inner elements (private attributes or methods)  </description>
+      <description>Java Basics Reflect Core concept  Load classes, methods/fields when JVM is running, no prior requirement of knowing the object when writing or compiling code  Functions (runtime)  Enables java code to discover information about the fields, methods and constructors of loaded classes Operate on their underlying counterparts within security restructions  Usage  Develop universal frameworks  java.lang.reflect  Field Method Constructor  Advantages  Extensibility Help with development (IDE) Help with debugging and testing  Disadvantages  Cost/Optimization Security restructions Exposing inner elements (private attributes or methods)  </description>
     </item>
     
     <item>

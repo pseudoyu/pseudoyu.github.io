@@ -833,8 +833,7 @@ but abstract class have multiple accesses&lt;/li&gt;
 &lt;li&gt;Load classes, methods/fields when JVM is running,
 no prior requirement of knowing the object when writing or compiling code&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;functions&#34;&gt;Functions&lt;/h3&gt;
-&lt;p&gt;(runtime)&lt;/p&gt;
+&lt;h3 id=&#34;functions-runtime&#34;&gt;Functions (runtime)&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Enables java code to discover information about the fields, methods and constructors of loaded classes&lt;/li&gt;
 &lt;li&gt;Operate on their underlying counterparts within security restructions&lt;/li&gt;

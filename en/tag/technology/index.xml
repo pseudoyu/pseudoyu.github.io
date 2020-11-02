@@ -17,7 +17,7 @@
       <pubDate>Mon, 02 Nov 2020 13:00:17 +0800</pubDate>
       
       <guid>https://www.pseudoyu.com/en/2020/11/02/java-equals-method/</guid>
-      <description>Java Basics Java equals Method 作用 判断两个对象是否相等 存在于Object类 public boolean equals(Object obj) { return (this == obj); } 使用方式 类未覆盖equals方法 (等价于&amp;quot;==&amp;rdqu</description>
+      <description>Java Basics Java equals Method equals() Features Equivalence relationship x.euqal(x); Compared to self x.equals(y) == y.equals(x); When conversed, also true if (x.equals(y) &amp;amp;&amp;amp; y.equals(z)) x.equals(z); When transited, also true x.equals(y) == x.equals(y); When repeated, always true x.equals(null) == false; When compared to null, always false (when x is not assigned null) About == For primitive data type, == measures the equivalence (there is no equals()) For reference, == measures whether</description>
     </item>
     
     <item>
@@ -154,7 +154,7 @@
       <pubDate>Wed, 21 Oct 2020 12:50:17 +0800</pubDate>
       
       <guid>https://www.pseudoyu.com/en/2020/10/21/java-object-universal-functions/</guid>
-      <description>Java Basics Object Universal Functions equals()  Equivalence relationship  x.euqal(x);  Compared to self   x.equals(y) == y.equals(x);  When conversed, also true   if (x.equals(y) &amp;amp;&amp;amp; y.equals(z)) x.equals(z);  When transited, also true   x.equals(y) == x.equals(y);  When repeated, always true   x.equals(null) == false;  When compared to null, always false (when x is not assigned null)     About ==  For primitive data type, == measures the equivalence (there is no equals()) For reference, == measures whether the variables reference to the same object or not   Mechanism  Check if it refers to the same object  Yes, return true No, continue   Check their type  No, return false Yes, continue   Convert the object Check the equivalence of every key fields    hashCode()  hashCode() returns a hash value, and use equals() to check the equivalence  equal -&amp;gt; same hash same hash can&amp;rsquo;t -&amp;gt; equal (hash generated randomly)   Cover hashCode() before equals() Add/realize hashCode() before using HashSet or HashMap class  clone()  Object protected function Shallow clone  Cloned object and the original object refer to the same object   Deep clone  Cloned object and the original object refer to different object   Alternative method  Clone constructor    toString() </description>
+      <description>Java Basics Object Universal Functions hashCode()  hashCode() returns a hash value, and use equals() to check the equivalence  equal -&amp;gt; same hash same hash can&amp;rsquo;t -&amp;gt; equal (hash generated randomly)   Cover hashCode() before equals() Add/realize hashCode() before using HashSet or HashMap class  clone()  Object protected function Shallow clone  Cloned object and the original object refer to the same object   Deep clone  Cloned object and the original object refer to different object   Alternative method  Clone constructor    </description>
     </item>
     
     <item>

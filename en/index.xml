@@ -72,6 +72,63 @@
       
         <description>&lt;h1 id=&#34;java-basics&#34;&gt;Java Basics&lt;/h1&gt;
 &lt;h2 id=&#34;java-equals-method&#34;&gt;Java equals Method&lt;/h2&gt;
+&lt;h3 id=&#34;equals-features&#34;&gt;equals() Features&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Equivalence relationship
+&lt;ul&gt;
+&lt;li&gt;x.euqal(x);
+&lt;ul&gt;
+&lt;li&gt;Compared to self&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;x.equals(y) == y.equals(x);
+&lt;ul&gt;
+&lt;li&gt;When conversed, also true&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;if (x.equals(y) &amp;amp;&amp;amp; y.equals(z))
+x.equals(z);
+&lt;ul&gt;
+&lt;li&gt;When transited, also true&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;x.equals(y) == x.equals(y);
+&lt;ul&gt;
+&lt;li&gt;When repeated, always true&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;x.equals(null) == false;
+&lt;ul&gt;
+&lt;li&gt;When compared to null, always false (when x is not assigned null)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;About ==
+&lt;ul&gt;
+&lt;li&gt;For primitive data type, == measures the equivalence (there is no equals())&lt;/li&gt;
+&lt;li&gt;For reference, == measures whether the variables reference to the same object or not&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Mechanism
+&lt;ul&gt;
+&lt;li&gt;Check if it refers to the same object
+&lt;ul&gt;
+&lt;li&gt;Yes, return true&lt;/li&gt;
+&lt;li&gt;No, continue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Check their type
+&lt;ul&gt;
+&lt;li&gt;No, return false&lt;/li&gt;
+&lt;li&gt;Yes, continue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Convert the object&lt;/li&gt;
+&lt;li&gt;Check the equivalence of every key fields&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;作用&#34;&gt;作用&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;判断两个对象是否相等&lt;/li&gt;
@@ -1475,63 +1532,6 @@ matches the distribution of letter in English)&lt;/li&gt;
         <description>&lt;h1 id=&#34;java-basics&#34;&gt;Java Basics&lt;/h1&gt;
 &lt;h2 id=&#34;object-universal-functions&#34;&gt;Object Universal Functions&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/java_object_functions.svg&#34; alt=&#34;java_object_functions&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;equals&#34;&gt;equals()&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Equivalence relationship
-&lt;ul&gt;
-&lt;li&gt;x.euqal(x);
-&lt;ul&gt;
-&lt;li&gt;Compared to self&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;x.equals(y) == y.equals(x);
-&lt;ul&gt;
-&lt;li&gt;When conversed, also true&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;if (x.equals(y) &amp;amp;&amp;amp; y.equals(z))
-x.equals(z);
-&lt;ul&gt;
-&lt;li&gt;When transited, also true&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;x.equals(y) == x.equals(y);
-&lt;ul&gt;
-&lt;li&gt;When repeated, always true&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;x.equals(null) == false;
-&lt;ul&gt;
-&lt;li&gt;When compared to null, always false (when x is not assigned null)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;About ==
-&lt;ul&gt;
-&lt;li&gt;For primitive data type, == measures the equivalence (there is no equals())&lt;/li&gt;
-&lt;li&gt;For reference, == measures whether the variables reference to the same object or not&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Mechanism
-&lt;ul&gt;
-&lt;li&gt;Check if it refers to the same object
-&lt;ul&gt;
-&lt;li&gt;Yes, return true&lt;/li&gt;
-&lt;li&gt;No, continue&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Check their type
-&lt;ul&gt;
-&lt;li&gt;No, return false&lt;/li&gt;
-&lt;li&gt;Yes, continue&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Convert the object&lt;/li&gt;
-&lt;li&gt;Check the equivalence of every key fields&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
 &lt;h3 id=&#34;hashcode&#34;&gt;hashCode()&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;hashCode() returns a hash value,
@@ -1563,7 +1563,6 @@ and use equals() to check the equivalence
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;tostring&#34;&gt;toString()&lt;/h3&gt;
 </description>
       
     </item>

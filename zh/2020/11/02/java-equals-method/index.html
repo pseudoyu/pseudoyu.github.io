@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Java equals Method · Pseudoyu</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Java Basics Java equals Method 作用 判断两个对象是否相等 存在于Object类 public boolean equals(Object obj) { return (this == obj); } 使用方式 类未覆盖equals方法 (等价于&amp;quot;==&amp;rdqu" />
+  <meta name="description" content="Java Basics Java equals Method equals() Features Equivalence relationship x.euqal(x); Compared to self x.equals(y) == y.equals(x); When conversed, also true if (x.equals(y) &amp;amp;&amp;amp; y.equals(z)) x.equals(z); When transited, also true x.equals(y) == x.equals(y); When repeated, always true x.equals(null) == false; When compared to null, always false (when x is not assigned null) About == For primitive data type, == measures the equivalence (there is no equals()) For reference, == measures whether" />
 
   <meta name="keywords" content="Hugo, theme, den" />
 
@@ -20,23 +20,23 @@
 
 
 <meta property="og:title" content="Java equals Method" />
-<meta property="og:description" content="Java Basics Java equals Method 作用 判断两个对象是否相等 存在于Object类 public boolean equals(Object obj) { return (this == obj); } 使用方式 类未覆盖equals方法 (等价于&quot;==&rdqu" />
+<meta property="og:description" content="Java Basics Java equals Method equals() Features Equivalence relationship x.euqal(x); Compared to self x.equals(y) == y.equals(x); When conversed, also true if (x.equals(y) &amp;&amp; y.equals(z)) x.equals(z); When transited, also true x.equals(y) == x.equals(y); When repeated, always true x.equals(null) == false; When compared to null, always false (when x is not assigned null) About == For primitive data type, == measures the equivalence (there is no equals()) For reference, == measures whether" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.pseudoyu.com/zh/2020/11/02/java-equals-method/" />
 <meta property="article:published_time" content="2020-11-02T13:00:17+08:00" />
 <meta property="article:modified_time" content="2020-11-02T13:00:17+08:00" />
 <meta itemprop="name" content="Java equals Method">
-<meta itemprop="description" content="Java Basics Java equals Method 作用 判断两个对象是否相等 存在于Object类 public boolean equals(Object obj) { return (this == obj); } 使用方式 类未覆盖equals方法 (等价于&quot;==&rdqu">
+<meta itemprop="description" content="Java Basics Java equals Method equals() Features Equivalence relationship x.euqal(x); Compared to self x.equals(y) == y.equals(x); When conversed, also true if (x.equals(y) &amp;&amp; y.equals(z)) x.equals(z); When transited, also true x.equals(y) == x.equals(y); When repeated, always true x.equals(null) == false; When compared to null, always false (when x is not assigned null) About == For primitive data type, == measures the equivalence (there is no equals()) For reference, == measures whether">
 <meta itemprop="datePublished" content="2020-11-02T13:00:17+08:00" />
 <meta itemprop="dateModified" content="2020-11-02T13:00:17+08:00" />
-<meta itemprop="wordCount" content="265">
+<meta itemprop="wordCount" content="371">
 
 
 
 <meta itemprop="keywords" content="notes,technology,programming,java,github,basic," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Java equals Method"/>
-<meta name="twitter:description" content="Java Basics Java equals Method 作用 判断两个对象是否相等 存在于Object类 public boolean equals(Object obj) { return (this == obj); } 使用方式 类未覆盖equals方法 (等价于&quot;==&rdqu"/>
+<meta name="twitter:description" content="Java Basics Java equals Method equals() Features Equivalence relationship x.euqal(x); Compared to self x.equals(y) == y.equals(x); When conversed, also true if (x.equals(y) &amp;&amp; y.equals(z)) x.equals(z); When transited, also true x.equals(y) == x.equals(y); When repeated, always true x.equals(null) == false; When compared to null, always false (when x is not assigned null) About == For primitive data type, == measures the equivalence (there is no equals()) For reference, == measures whether"/>
 </head>
 <body>
   
@@ -151,6 +151,63 @@
   <article>
   <h1 id="java-basics">Java Basics</h1>
 <h2 id="java-equals-method">Java equals Method</h2>
+<h3 id="equals-features">equals() Features</h3>
+<ul>
+<li>Equivalence relationship
+<ul>
+<li>x.euqal(x);
+<ul>
+<li>Compared to self</li>
+</ul>
+</li>
+<li>x.equals(y) == y.equals(x);
+<ul>
+<li>When conversed, also true</li>
+</ul>
+</li>
+<li>if (x.equals(y) &amp;&amp; y.equals(z))
+x.equals(z);
+<ul>
+<li>When transited, also true</li>
+</ul>
+</li>
+<li>x.equals(y) == x.equals(y);
+<ul>
+<li>When repeated, always true</li>
+</ul>
+</li>
+<li>x.equals(null) == false;
+<ul>
+<li>When compared to null, always false (when x is not assigned null)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>About ==
+<ul>
+<li>For primitive data type, == measures the equivalence (there is no equals())</li>
+<li>For reference, == measures whether the variables reference to the same object or not</li>
+</ul>
+</li>
+<li>Mechanism
+<ul>
+<li>Check if it refers to the same object
+<ul>
+<li>Yes, return true</li>
+<li>No, continue</li>
+</ul>
+</li>
+<li>Check their type
+<ul>
+<li>No, return false</li>
+<li>Yes, continue</li>
+</ul>
+</li>
+<li>Convert the object</li>
+<li>Check the equivalence of every key fields</li>
+</ul>
+</li>
+</ul>
 <h3 id="作用">作用</h3>
 <ul>
 <li>判断两个对象是否相等</li>

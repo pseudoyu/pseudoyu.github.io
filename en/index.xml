@@ -898,8 +898,7 @@ but abstract class have multiple accesses&lt;/li&gt;
 &lt;/li&gt;
 &lt;li&gt;Choose
 &lt;ul&gt;
-&lt;li&gt;Interface
-(higher priority)
+&lt;li&gt;Interface (higher priority)
 &lt;ul&gt;
 &lt;li&gt;Irrelevant classes need to realize the same method&lt;/li&gt;
 &lt;li&gt;need to use multiple inheritance&lt;/li&gt;
@@ -930,8 +929,7 @@ but abstract class have multiple accesses&lt;/li&gt;
 &lt;h3 id=&#34;override&#34;&gt;Override&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Child class realizes the same method as its parent class (statement)&lt;/li&gt;
-&lt;li&gt;Restrictions
-(using @override to check)
+&lt;li&gt;Restrictions (using @override to check)
 &lt;ul&gt;
 &lt;li&gt;Child class method has higher access&lt;/li&gt;
 &lt;li&gt;Child class returns the same type (or sub type)&lt;/li&gt;
@@ -942,8 +940,7 @@ but abstract class have multiple accesses&lt;/li&gt;
 &lt;h3 id=&#34;overload&#34;&gt;Overload&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Same method name&lt;/li&gt;
-&lt;li&gt;Different parameter/amount/order
-(at least one)&lt;/li&gt;
+&lt;li&gt;Different parameter/amount/order (at least one)&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       
@@ -1620,8 +1617,7 @@ matches the distribution of letter in English)&lt;/li&gt;
 &lt;ul&gt;
 &lt;li&gt;Variable
 &lt;ul&gt;
-&lt;li&gt;static variable
-(also called class variable)
+&lt;li&gt;static variable (also called class variable)
 &lt;ul&gt;
 &lt;li&gt;Belongs to the class
 and can be shared/accessed by the class name&lt;/li&gt;
@@ -1639,8 +1635,7 @@ and can be shared/accessed by the class name&lt;/li&gt;
 &lt;li&gt;It exists when loading the class&lt;/li&gt;
 &lt;li&gt;Don&amp;rsquo;t rely on any instance&lt;/li&gt;
 &lt;li&gt;Can&amp;rsquo;t be abstract&lt;/li&gt;
-&lt;li&gt;Can&amp;rsquo;t contain this, super keywords
-(they are related to specific object)&lt;/li&gt;
+&lt;li&gt;Can&amp;rsquo;t contain this, super keywords (they are related to specific object)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;static (initialization) block

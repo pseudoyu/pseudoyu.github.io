@@ -6,10 +6,19 @@
     <description>Recent content in github on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 22 Oct 2020 10:50:17 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2020 09:50:17 +0800</lastBuildDate>
     
 	<atom:link href="https://www.pseudoyu.com/zh/tag/github/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Java Generics</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/02/java-generics/</link>
+      <pubDate>Mon, 02 Nov 2020 09:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/02/java-generics/</guid>
+      <description>Java Basics 泛型 (Generics) 定义 提供编译时类型安全检测机制 参数化类型 Java泛型 伪泛型（类型擦除） 使用方式 泛型类 // 定义泛型类 public class Generic&amp;lt;T&amp;gt; { private T key; public class Generic(T key) { this.key = key; } public</description>
+    </item>
     
     <item>
       <title>Java Throwable</title>

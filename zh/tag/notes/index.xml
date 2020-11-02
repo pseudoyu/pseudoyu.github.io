@@ -6,10 +6,19 @@
     <description>Recent content in notes on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 31 Oct 2020 19:36:17 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2020 09:50:17 +0800</lastBuildDate>
     
 	<atom:link href="https://www.pseudoyu.com/zh/tag/notes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Java Generics</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/02/java-generics/</link>
+      <pubDate>Mon, 02 Nov 2020 09:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/02/java-generics/</guid>
+      <description>Java Basics 泛型 (Generics) 定义 提供编译时类型安全检测机制 参数化类型 Java泛型 伪泛型（类型擦除） 使用方式 泛型类 // 定义泛型类 public class Generic&amp;lt;T&amp;gt; { private T key; public class Generic(T key) { this.key = key; } public</description>
+    </item>
     
     <item>
       <title>Blockchain Ethereum Transaction tree and Receipt tree</title>
@@ -185,15 +194,6 @@
       
       <guid>https://www.pseudoyu.com/zh/2020/10/21/java-string/</guid>
       <description>Java Basics String Feature  Immutable (byte, stated as final type)  Cache hash value  As the key of HashMap   Requirement of String Pool  Get reference from String Pool if it exists   Security  As parameter for many java classes  Network connection Opening files     Thread-safety  Shared among multiple threads freely      Compare  String  Immutable Thread-safe   StringBuffer  Mutable Thread-safe  Requirements of doing synchronization     StringBuilder  Mutable Not thread-safe    String Pool (stores all literal strings)  Useful to reduce memory requirements intern() method  If there is a string equals to the called one exists, return it (using equals() method) If not, create a new string and return   Create 2 &amp;ldquo;same&amp;rdquo; string  new String()  Create different strings   s.</description>
-    </item>
-    
-    <item>
-      <title>Blockchain Cryptography</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/21/blockchain-cryptography/</link>
-      <pubDate>Wed, 21 Oct 2020 09:07:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/21/blockchain-cryptography/</guid>
-      <description>Blockchain Technology and Applications Cryptography Cryptographic hash function  Application  Digital commitment (digital equivalent of a sealed envelop)  H(x || nonce)   SHA-256 (used in bitcoin)   Features  Collision resistance  x != y, H(x) = H(y) MD5 (proved bad)   Hiding  x -&amp;gt; H(x), H(x) !-&amp;gt; x   Puzzle friendly  H(block header) &amp;lt;= target Keep trying nonce, no shortcuts Difficult to solve, but easy to verify Application  PoW (Proof of Work)        Encryption  Symmetric encryption  Use the same one key Not secure to transport encryption key   Asymmetric encryption (public key encryption)  Use two keys (one for encryption, another for decryption) A good source of randomness (assume) Application  Signature (used in bitcoin)      </description>
     </item>
     
   </channel>

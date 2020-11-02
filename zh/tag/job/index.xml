@@ -6,10 +6,19 @@
     <description>Recent content in job on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 18 Oct 2020 09:20:31 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2020 20:53:17 +0800</lastBuildDate>
     
 	<atom:link href="https://www.pseudoyu.com/zh/tag/job/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LeetCode 1 Two Sum</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/02/leetcode-1-two-sum/</link>
+      <pubDate>Mon, 02 Nov 2020 20:53:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/02/leetcode-1-two-sum/</guid>
+      <description>LeetCode #1 Two Sum Brute Force Solution 第一种就是暴力解法，两层循环嵌套遍历所有结果，满足条件即返回，思路简单但运行会比较慢 class Solution { public int[] twoSum(int[] nums, int target) { //初始化存储结果的数</description>
+    </item>
     
     <item>
       <title>区块链学习计划</title>

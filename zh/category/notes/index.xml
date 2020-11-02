@@ -6,10 +6,19 @@
     <description>Recent content in Notes on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 02 Nov 2020 14:00:17 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2020 20:53:17 +0800</lastBuildDate>
     
 	<atom:link href="https://www.pseudoyu.com/zh/category/notes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LeetCode 1 Two Sum</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/02/leetcode-1-two-sum/</link>
+      <pubDate>Mon, 02 Nov 2020 20:53:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/02/leetcode-1-two-sum/</guid>
+      <description>LeetCode #1 Two Sum Brute Force Solution 第一种就是暴力解法，两层循环嵌套遍历所有结果，满足条件即返回，思路简单但运行会比较慢 class Solution { public int[] twoSum(int[] nums, int target) { //初始化存储结果的数</description>
+    </item>
     
     <item>
       <title>Java Methods</title>
@@ -183,16 +192,6 @@
       <guid>https://www.pseudoyu.com/zh/2020/10/21/java-operation/</guid>
       <description>Java Basics Operation Compare  Pass by value (Java use pass-by-value to pass parameters)  Change object&amp;rsquo;s value in a function will affect the original object&amp;rsquo;s value (same object) When referencing to a new object, change won&amp;rsquo;t affect the original object&amp;rsquo;s value (different object)   Pass by reference  Casting (compiler force to convert types using (type of))
  += -= *= /=  switch  Use string object in switch conditional statements  </description>
-    </item>
-    
-    <item>
-      <title>Blockchain Data Structure</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/21/blockchain-data-structure/</link>
-      <pubDate>Wed, 21 Oct 2020 10:07:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/21/blockchain-data-structure/</guid>
-      <description>Blockchain Technology and Applications Data Structure Hash pointer (blockchain is a linked list using hash pointers)
- Genesis block &amp;lt;- block1 &amp;lt;- block2 &amp;lt;-&amp;hellip;&amp;lt;- recent block (every block has a hash pointer) Tamper-event log  Merkle tree (using hash pointer instead of pointer)  Merkle proof (proof of membership/inclusion)  O(log(n))   Think: proof of non-membership  O(n) Sorted merkle tree: O(log(n))    Application (blockchain)  Node  Full node (fully validating node)  Block header  Version Hash of previous block header Merkle root hash (protect all nodes) Target Nonce   Block body  Transaction lists     Light node (light weight node)  Only store block headers     Problem  Double spending    </description>
     </item>
     
   </channel>

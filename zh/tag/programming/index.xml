@@ -59,15 +59,6 @@
     </item>
     
     <item>
-      <title>Java Object Universal Functions</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/21/java-object-universal-functions/</link>
-      <pubDate>Wed, 21 Oct 2020 12:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/21/java-object-universal-functions/</guid>
-      <description>Java Basics Object Universal Functions hashCode()  hashCode() returns a hash value, and use equals() to check the equivalence  equal -&amp;gt; same hash same hash can&amp;rsquo;t -&amp;gt; equal (hash generated randomly)   Cover hashCode() before equals() Add/realize hashCode() before using HashSet or HashMap class  clone()  Object protected function Shallow clone  Cloned object and the original object refer to the same object   Deep clone  Cloned object and the original object refer to different object   Alternative method  Clone constructor    </description>
-    </item>
-    
-    <item>
       <title>Java Keywords</title>
       <link>https://www.pseudoyu.com/zh/2020/10/21/java-keywords/</link>
       <pubDate>Wed, 21 Oct 2020 11:50:17 +0800</pubDate>

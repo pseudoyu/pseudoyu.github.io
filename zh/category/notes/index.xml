@@ -149,15 +149,6 @@
     </item>
     
     <item>
-      <title>Java Object Universal Functions</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/21/java-object-universal-functions/</link>
-      <pubDate>Wed, 21 Oct 2020 12:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/21/java-object-universal-functions/</guid>
-      <description>Java Basics Object Universal Functions hashCode()  hashCode() returns a hash value, and use equals() to check the equivalence  equal -&amp;gt; same hash same hash can&amp;rsquo;t -&amp;gt; equal (hash generated randomly)   Cover hashCode() before equals() Add/realize hashCode() before using HashSet or HashMap class  clone()  Object protected function Shallow clone  Cloned object and the original object refer to the same object   Deep clone  Cloned object and the original object refer to different object   Alternative method  Clone constructor    </description>
-    </item>
-    
-    <item>
       <title>Blockchain Protocol</title>
       <link>https://www.pseudoyu.com/zh/2020/10/21/blockchain-protocol/</link>
       <pubDate>Wed, 21 Oct 2020 12:07:17 +0800</pubDate>
@@ -193,6 +184,15 @@
       <guid>https://www.pseudoyu.com/zh/2020/10/21/blockchain-data-structure/</guid>
       <description>Blockchain Technology and Applications Data Structure Hash pointer (blockchain is a linked list using hash pointers)
  Genesis block &amp;lt;- block1 &amp;lt;- block2 &amp;lt;-&amp;hellip;&amp;lt;- recent block (every block has a hash pointer) Tamper-event log  Merkle tree (using hash pointer instead of pointer)  Merkle proof (proof of membership/inclusion)  O(log(n))   Think: proof of non-membership  O(n) Sorted merkle tree: O(log(n))    Application (blockchain)  Node  Full node (fully validating node)  Block header  Version Hash of previous block header Merkle root hash (protect all nodes) Target Nonce   Block body  Transaction lists     Light node (light weight node)  Only store block headers     Problem  Double spending    </description>
+    </item>
+    
+    <item>
+      <title>Java String</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/21/java-string/</link>
+      <pubDate>Wed, 21 Oct 2020 09:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/21/java-string/</guid>
+      <description>Java Basics String Feature  Immutable (byte, stated as final type)  Cache hash value  As the key of HashMap   Requirement of String Pool  Get reference from String Pool if it exists   Security  As parameter for many java classes  Network connection Opening files     Thread-safety  Shared among multiple threads freely      Compare  String  Immutable Thread-safe   StringBuffer  Mutable Thread-safe  Requirements of doing synchronization     StringBuilder  Mutable Not thread-safe    String Pool (stores all literal strings)  Useful to reduce memory requirements intern() method  If there is a string equals to the called one exists, return it (using equals() method) If not, create a new string and return   Create 2 &amp;ldquo;same&amp;rdquo; string  new String()  Create different strings   s.</description>
     </item>
     
   </channel>

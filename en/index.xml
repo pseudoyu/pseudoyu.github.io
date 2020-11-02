@@ -1523,51 +1523,6 @@ matches the distribution of letter in English)&lt;/li&gt;
     </item>
     
     <item>
-      <title>Java Object Universal Functions</title>
-      <link>https://www.pseudoyu.com/en/2020/10/21/java-object-universal-functions/</link>
-      <pubDate>Wed, 21 Oct 2020 12:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/21/java-object-universal-functions/</guid>
-      
-        <description>&lt;h1 id=&#34;java-basics&#34;&gt;Java Basics&lt;/h1&gt;
-&lt;h2 id=&#34;object-universal-functions&#34;&gt;Object Universal Functions&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/java_object_functions.svg&#34; alt=&#34;java_object_functions&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;hashcode&#34;&gt;hashCode()&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;hashCode() returns a hash value,
-and use equals() to check the equivalence
-&lt;ul&gt;
-&lt;li&gt;equal -&amp;gt; same hash&lt;/li&gt;
-&lt;li&gt;same hash can&amp;rsquo;t -&amp;gt; equal (hash generated randomly)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Cover hashCode() before equals()&lt;/li&gt;
-&lt;li&gt;Add/realize hashCode() before using HashSet or HashMap class&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;clone&#34;&gt;clone()&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Object protected function&lt;/li&gt;
-&lt;li&gt;Shallow clone
-&lt;ul&gt;
-&lt;li&gt;Cloned object and the original object refer to the same object&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Deep clone
-&lt;ul&gt;
-&lt;li&gt;Cloned object and the original object refer to different object&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Alternative method
-&lt;ul&gt;
-&lt;li&gt;Clone constructor&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
       <title>Blockchain Protocol</title>
       <link>https://www.pseudoyu.com/en/2020/10/21/blockchain-protocol/</link>
       <pubDate>Wed, 21 Oct 2020 12:07:17 +0800</pubDate>
@@ -1758,6 +1713,75 @@ change won&amp;rsquo;t affect the original object&amp;rsquo;s value (different o
 &lt;h3 id=&#34;switch&#34;&gt;switch&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Use string object in switch conditional statements&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Blockchain Data Structure</title>
+      <link>https://www.pseudoyu.com/en/2020/10/21/blockchain-data-structure/</link>
+      <pubDate>Wed, 21 Oct 2020 10:07:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/10/21/blockchain-data-structure/</guid>
+      
+        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
+&lt;h2 id=&#34;data-structure&#34;&gt;Data Structure&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_data_structure.svg&#34; alt=&#34;blockchain_data_structure&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;hash-pointer-blockchain-is-a-linked-list&#34;&gt;Hash pointer (blockchain is a linked list&lt;/h3&gt;
+&lt;p&gt;using hash pointers)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Genesis block &amp;lt;- block1 &amp;lt;- block2 &amp;lt;-&amp;hellip;&amp;lt;- recent block (every block has a hash pointer)&lt;/li&gt;
+&lt;li&gt;Tamper-event log&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;merkle-tree-using-hash-pointer-instead-of-pointer&#34;&gt;Merkle tree (using hash pointer instead of pointer)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Merkle proof (proof of membership/inclusion)
+&lt;ul&gt;
+&lt;li&gt;O(log(n))&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Think: proof of non-membership
+&lt;ul&gt;
+&lt;li&gt;O(n)&lt;/li&gt;
+&lt;li&gt;Sorted merkle tree: O(log(n))&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;application-blockchain&#34;&gt;Application (blockchain)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Node
+&lt;ul&gt;
+&lt;li&gt;Full node (fully validating node)
+&lt;ul&gt;
+&lt;li&gt;Block header
+&lt;ul&gt;
+&lt;li&gt;Version&lt;/li&gt;
+&lt;li&gt;Hash of previous block header&lt;/li&gt;
+&lt;li&gt;Merkle root hash (protect all nodes)&lt;/li&gt;
+&lt;li&gt;Target&lt;/li&gt;
+&lt;li&gt;Nonce&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Block body
+&lt;ul&gt;
+&lt;li&gt;Transaction lists&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Light node (light weight node)
+&lt;ul&gt;
+&lt;li&gt;Only store block headers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Problem
+&lt;ul&gt;
+&lt;li&gt;Double spending&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       

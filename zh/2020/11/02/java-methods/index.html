@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta name="generator" content="Hugo 0.74.3" />
+  <meta charset="utf-8">
+  <title>Java Methods · Pseudoyu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Java Basics Java 方法 (Methods) Java程序设计语言总是采用按值调用 // Example public class methodTest { public static void main(String[] args) { // TODO Auto-generated method stub Student s1 = new Student(&amp;#34;Misty&amp;#34;); Student s2 = new Student(&amp;#34;Marshal&amp;#34;); Test.swap(s1, s2); System.out.println(&amp;#34;s1:&amp;#34; &#43; s1.getName()); System.out.println(&amp;#34;s2:&amp;#34; &#43; s2.getName()); } public static void swap(Student x, Student y) { Student temp" />
+
+  <meta name="keywords" content="Hugo, theme, den" />
+
+<link rel="canonical" href="https://www.pseudoyu.com/zh/2020/11/02/java-methods/" />
+<link rel="alternate" href="https://www.pseudoyu.com/en/2020/11/02/java-methods/" hreflang="en">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.pseudoyu.com/css/den.css">
+
+
+
+
+<meta property="og:title" content="Java Methods" />
+<meta property="og:description" content="Java Basics Java 方法 (Methods) Java程序设计语言总是采用按值调用 // Example public class methodTest { public static void main(String[] args) { // TODO Auto-generated method stub Student s1 = new Student(&#34;Misty&#34;); Student s2 = new Student(&#34;Marshal&#34;); Test.swap(s1, s2); System.out.println(&#34;s1:&#34; &#43; s1.getName()); System.out.println(&#34;s2:&#34; &#43; s2.getName()); } public static void swap(Student x, Student y) { Student temp" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.pseudoyu.com/zh/2020/11/02/java-methods/" />
+<meta property="article:published_time" content="2020-11-02T13:00:17+08:00" />
+<meta property="article:modified_time" content="2020-11-02T13:00:17+08:00" />
+<meta itemprop="name" content="Java Methods">
+<meta itemprop="description" content="Java Basics Java 方法 (Methods) Java程序设计语言总是采用按值调用 // Example public class methodTest { public static void main(String[] args) { // TODO Auto-generated method stub Student s1 = new Student(&#34;Misty&#34;); Student s2 = new Student(&#34;Marshal&#34;); Test.swap(s1, s2); System.out.println(&#34;s1:&#34; &#43; s1.getName()); System.out.println(&#34;s2:&#34; &#43; s2.getName()); } public static void swap(Student x, Student y) { Student temp">
+<meta itemprop="datePublished" content="2020-11-02T13:00:17+08:00" />
+<meta itemprop="dateModified" content="2020-11-02T13:00:17+08:00" />
+<meta itemprop="wordCount" content="273">
+
+
+
+<meta itemprop="keywords" content="notes,technology,programming,java,github,basic," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Java Methods"/>
+<meta name="twitter:description" content="Java Basics Java 方法 (Methods) Java程序设计语言总是采用按值调用 // Example public class methodTest { public static void main(String[] args) { // TODO Auto-generated method stub Student s1 = new Student(&#34;Misty&#34;); Student s2 = new Student(&#34;Marshal&#34;); Test.swap(s1, s2); System.out.println(&#34;s1:&#34; &#43; s1.getName()); System.out.println(&#34;s2:&#34; &#43; s2.getName()); } public static void swap(Student x, Student y) { Student temp"/>
+</head>
+<body>
+  
+  <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://www.pseudoyu.com/images/background.jpg'); background-position: center; background-size: cover;">
+  <div class="container">
+  <nav class="header-nav navbar navbar-expand-md navbar-dark light-dark">
+    <div class="header-logo navbar-brand">
+      
+        <a class="float-left" href="https://www.pseudoyu.com/zh/">
+      
+        
+        <img class="mr20 header-logo-image" src="https://www.pseudoyu.com/images/fly.png" alt="logo">
+        
+        
+          Pseudoyu
+         
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav-menu collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/ideas/">思考</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/notes/">笔记</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/projects/">项目</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              <a class="nav-link" href="https://www.pseudoyu.com/zh/about/">关于</a>
+            
+          </li>
+        
+        
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.pseudoyu.com/en/"><i class="fas fa-globe"></i> English</a>
+            </li>
+          
+          
+        
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container header-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="header-content">
+        <h1 class="header-title">Java Methods</h1>
+        <p class="header-date">作者：
+          pseudoyu /
+        
+        2020-11-02
+          / 分类：
+          <a href="https://www.pseudoyu.com/zh/category/notes/">Notes</a>
+        </p>
+        
+        <div class="header-underline"></div>
+        
+          <div class="clearfix"></div>
+          <p class="float-right header-tags">
+              <i class="fas fa-tags" aria-hidden="true"></i>
+              <a href="https://www.pseudoyu.com/zh/tag/basic/">basic</a>, 
+                <a href="https://www.pseudoyu.com/zh/tag/github/">github</a>, 
+                <a href="https://www.pseudoyu.com/zh/tag/java/">java</a>, 
+                <a href="https://www.pseudoyu.com/zh/tag/notes/">notes</a>, 
+                <a href="https://www.pseudoyu.com/zh/tag/programming/">programming</a>, 
+                <a href="https://www.pseudoyu.com/zh/tag/technology/">technology</a>
+          </p>
+        
+        <div class="clearfix"></div>
+<p class="float-right translations">
+    <i class="fas fa-language" aria-hidden="true"></i>
+    翻译： 
+    <a href="https://www.pseudoyu.com/en/2020/11/02/java-methods/">EN</a>
+</p>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <main>
+<div class="container content">
+  <article>
+  <h1 id="java-basics">Java Basics</h1>
+<h2 id="java-方法-methods">Java 方法 (Methods)</h2>
+<ul>
+<li>Java程序设计语言总是采用按值调用</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// Example
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">methodTest</span> <span class="o">{</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="c1">// TODO Auto-generated method stub
+</span><span class="c1"></span>		<span class="n">Student</span> <span class="n">s1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Student</span><span class="o">(</span><span class="s">&#34;Misty&#34;</span><span class="o">);</span>
+		<span class="n">Student</span> <span class="n">s2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Student</span><span class="o">(</span><span class="s">&#34;Marshal&#34;</span><span class="o">);</span>
+		<span class="n">Test</span><span class="o">.</span><span class="na">swap</span><span class="o">(</span><span class="n">s1</span><span class="o">,</span> <span class="n">s2</span><span class="o">);</span>
+		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;s1:&#34;</span> <span class="o">+</span> <span class="n">s1</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
+		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;s2:&#34;</span> <span class="o">+</span> <span class="n">s2</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">swap</span><span class="o">(</span><span class="n">Student</span> <span class="n">x</span><span class="o">,</span> <span class="n">Student</span> <span class="n">y</span><span class="o">)</span> <span class="o">{</span>
+		<span class="n">Student</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">x</span><span class="o">;</span>
+		<span class="n">x</span> <span class="o">=</span> <span class="n">y</span><span class="o">;</span>
+		<span class="n">y</span> <span class="o">=</span> <span class="n">temp</span><span class="o">;</span>
+		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;x:&#34;</span> <span class="o">+</span> <span class="n">x</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
+		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;y:&#34;</span> <span class="o">+</span> <span class="n">y</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">//Results
+</span><span class="c1"></span><span class="nl">
+</span><span class="nl">x:</span><span class="n">Marshal</span>
+<span class="nl">y:</span><span class="n">Misty</span>
+<span class="nl">s1:</span><span class="n">Misty</span>
+<span class="nl">s2:</span><span class="n">Marshal</span>
+</code></pre></div><ul>
+<li>方法得到的是所有参数值的一个拷贝</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">//Example
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="n">10</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="n">num2</span> <span class="o">=</span> <span class="n">20</span><span class="o">;</span>
+
+    <span class="n">swap</span><span class="o">(</span><span class="n">num1</span><span class="o">,</span> <span class="n">num2</span><span class="o">);</span>
+
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;num1 = &#34;</span> <span class="o">+</span> <span class="n">num1</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;num2 = &#34;</span> <span class="o">+</span> <span class="n">num2</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">swap</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">a</span><span class="o">;</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">b</span><span class="o">;</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">temp</span><span class="o">;</span>
+
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;a = &#34;</span> <span class="o">+</span> <span class="n">a</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;b = &#34;</span> <span class="o">+</span> <span class="n">b</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="c1">//Results
+</span><span class="c1"></span><span class="n">a</span> <span class="o">=</span> <span class="n">20</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">10</span>
+<span class="n">num1</span> <span class="o">=</span> <span class="n">10</span>
+<span class="n">num2</span> <span class="o">=</span> <span class="n">20</span>
+</code></pre></div><ul>
+<li>方法不能修改一个基本数据类型的参数</li>
+<li>方法可以改变一个对象参数的状态</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">//Example
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="o">{</span> <span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">,</span> <span class="n">3</span><span class="o">,</span> <span class="n">4</span><span class="o">,</span> <span class="n">5</span> <span class="o">};</span>
+		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">arr</span><span class="o">[</span><span class="n">0</span><span class="o">]);</span>
+		<span class="n">change</span><span class="o">(</span><span class="n">arr</span><span class="o">);</span>
+		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">arr</span><span class="o">[</span><span class="n">0</span><span class="o">]);</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">change</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">array</span><span class="o">)</span> <span class="o">{</span>
+	<span class="c1">// 将数组的第一个元素变为0
+</span><span class="c1"></span>	<span class="n">array</span><span class="o">[</span><span class="n">0</span><span class="o">]</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="c1">//Results
+</span><span class="c1"></span><span class="n">1</span>
+<span class="n">0</span>
+</code></pre></div><ul>
+<li>方法不能让对象参数引用一个新的对象</li>
+</ul>
+
+  </article>
+
+  
+  
+  
+
+
+</div>
+
+  </main><div class="footer gradient-2">
+  <div class="container footer-container ">
+    <div class="row">
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        <div class="footer-title">网站地图</div>
+        <ul class="list-unstyled">
+            
+              
+                <li><a href="https://www.pseudoyu.com/zh/tags/">标签</a></li>
+              
+              
+                <li><a href="https://www.pseudoyu.com/zh/categories/">分类</a></li>
+              
+            
+            
+            
+            <li><a rel="alternate" type="application/rss&#43;xml" href="https://www.pseudoyu.com/zh/index.xml"><i class="fas fa-rss-square"></i> RSS订阅</a></li>
+            
+            
+            
+        </ul>
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">社群</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://space.bilibili.com/5374948/" rel="noopener" target="_blank">BiliBili</a></li>
+          
+          <li><a href="https://www.facebook.com/pseudoyuzhang" rel="noopener" target="_blank">Facebook</a></li>
+          
+          <li><a href="https://www.instagram.com/pseudo.yu/" rel="noopener" target="_blank">Instagram</a></li>
+          
+          <li><a href="https://medium.com/@pseudoyu" rel="noopener" target="_blank">Medium</a></li>
+          
+          <li><a href="https://www.reddit.com/user/pseudo_yu" rel="noopener" target="_blank">Reddit</a></li>
+          
+          <li><a href="https://twitter.com/pseudo_yu" rel="noopener" target="_blank">Twitter</a></li>
+          
+          <li><a href="https://www.youtube.com/channel/UCR0O0s303tGBi3P02hstQPA/" rel="noopener" target="_blank">Youtube</a></li>
+          
+        </ul>
+        
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">友链</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://www.coursera.org/user/ffe947f087d1f63b161c3fcb310a6578" rel="noopener" target="_blank">Coursera</a></li>
+          
+          <li><a href="https://github.com/pseudoyu" rel="noopener" target="_blank">GitHub</a></li>
+          
+          <li><a href="https://www.goodreads.com/user/show/121369734-yu-zhang" rel="noopener" target="_blank">Goodreads</a></li>
+          
+          <li><a href="https://www.hackerrank.com/pseudoyu" rel="noopener" target="_blank">HackerRank</a></li>
+          
+          <li><a href="https://leetcode.com/pseudoyu/" rel="noopener" target="_blank">LeetCode</a></li>
+          
+          <li><a href="https://www.linkedin.com/in/pseudoyu/" rel="noopener" target="_blank">LinkedIn</a></li>
+          
+          <li><a href="https://acm.timus.ru/author.aspx?id=300324" rel="noopener" target="_blank">Timus OJ</a></li>
+          
+        </ul>
+        
+      </div> 
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <p class="pull-right text-right">
+          <small><em>Team Rocket: <a href="https://www.marshalgao.com" rel="noopener" target="_blank">Marshal</a> | <a href="https://www.m1sty.com" rel="noopener" target="_blank">Misty</a></em></small><br/>
+          <small><em>The University of Hong Kong - <a href="https://www.cs.hku.hk" rel="noopener" target="_blank">CS</a></em></small><br/>
+          <small>
+            &copy; 
+            pseudoyu
+            2020
+          </small>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

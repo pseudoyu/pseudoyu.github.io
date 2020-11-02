@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>Java Methods</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/02/java-methods/</link>
+      <pubDate>Mon, 02 Nov 2020 13:00:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/02/java-methods/</guid>
+      <description>Java Basics Java 方法 (Methods) Java程序设计语言总是采用按值调用 // Example public class methodTest { public static void main(String[] args) { // TODO Auto-generated method stub Student s1 = new Student(&amp;#34;Misty&amp;#34;); Student s2 = new Student(&amp;#34;Marshal&amp;#34;); Test.swap(s1, s2); System.out.println(&amp;#34;s1:&amp;#34; + s1.getName()); System.out.println(&amp;#34;s2:&amp;#34; + s2.getName()); } public static void swap(Student x, Student y) { Student temp</description>
+    </item>
+    
+    <item>
       <title>Java Generics</title>
       <link>https://www.pseudoyu.com/zh/2020/11/02/java-generics/</link>
       <pubDate>Mon, 02 Nov 2020 09:50:17 +0800</pubDate>

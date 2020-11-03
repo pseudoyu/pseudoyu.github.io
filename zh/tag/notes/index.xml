@@ -30,6 +30,76 @@
     </item>
     
     <item>
+      <title>Timus 2012 About Grisha N</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/03/timus-2012-about-grisha-n/</link>
+      <pubDate>Tue, 03 Nov 2020 02:00:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/03/timus-2012-about-grisha-n/</guid>
+      <description>Timus 2012 About Grisha N Problem Description Grisha N. told his two teammates that he was going to solve all given problems at the subregional contest, even if the teammates wouldn’t show up at the competition. The teammates didn’t believe Grisha so he told them the plan how he was going to do this.
+During the first hour he wants to solve f problems. If there is still some time left to the end of the first hour, Grisha will simply walk along the hall.</description>
+    </item>
+    
+    <item>
+      <title>Timus 1877 Bicycle Codes</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/03/timus-1877-bicycle-codes/</link>
+      <pubDate>Tue, 03 Nov 2020 01:30:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/03/timus-1877-bicycle-codes/</guid>
+      <description>Timus 1877 Bicycle Codes Problem Description Den has two four-digit combination locks for protecting his bicycle from thieves. Every evening he arms the bicycle antitheft alarm and fastens the bicycle to a special stand with one of the locks. Den never uses the same lock two evenings in a row. One night a thief tried to open the lock using the code 0000. The alarm went off and the thief hurried away.</description>
+    </item>
+    
+    <item>
+      <title>Timus 1785 Lost in Localization</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/03/timus-1785-lost-in-localization/</link>
+      <pubDate>Tue, 03 Nov 2020 01:10:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/03/timus-1785-lost-in-localization/</guid>
+      <description>Timus 1785 Lost in Localization Problem Description The Lavin Interactive Company, which has developed the turn-based strategy Losers-V, is constantly extending its target market by localizing the game to as many languages as it can. In particular, they are interested in creating a version of the game in Anindilyakwa, which is one of the languages spoken by indigenous Australians.
+However, the localization is complicated by the fact that Anindilyakwa has no numerals.</description>
+    </item>
+    
+    <item>
+      <title>Timus 1409 Two Gangsters</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/03/timus-1409-two-gangsters/</link>
+      <pubDate>Tue, 03 Nov 2020 00:40:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/03/timus-1409-two-gangsters/</guid>
+      <description>Timus 1409 Two Gangsters Problem Description Two gangsters Harry and Larry had a rest at countryside. They decided to spend some time shooting, so they put several beer cans (no more than 10) on a log. Harry started to shoot cans one after another from the leftmost to the right and Larry – from the rightmost to the left. At some moment it happened so that they shot one and the same can.</description>
+    </item>
+    
+    <item>
+      <title>Timus 1293 Eniya</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/03/timus-1293-eniya/</link>
+      <pubDate>Tue, 03 Nov 2020 00:10:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/03/timus-1293-eniya/</guid>
+      <description>Timus 1293 Eniya Problem Description It’s restless now on the slips of the intergalactic port’s sixth dock of planet of Torn. No longer then in a month the reconstruction of the small ironclad corvette “Eniya” will be finished. And again this battle ship and its brave team would have to struggle for the control over plutonium mines of Sibelius. The work cannot be stopped even for a second, self-powered laser welders work round the clock.</description>
+    </item>
+    
+    <item>
+      <title>Timus 1001 Reverse Root</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/02/timus-1001-reverse-root/</link>
+      <pubDate>Mon, 02 Nov 2020 23:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/02/timus-1001-reverse-root/</guid>
+      <description>Timus 1001 Reverse Root Problem Description The problem is so easy, that the authors were lazy to write a statement for it!
+Input: The input stream contains a set of integer numbers Ai. The numbers are separated by any number of spaces and line breaks. A size of the input stream does not exceed 256 KB.
+Output: For each number Ai from the last one till the first one you should output its square root.</description>
+    </item>
+    
+    <item>
+      <title>Timus 1000 A&#43;B Problem</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/02/timus-1000-a-b-problem/</link>
+      <pubDate>Mon, 02 Nov 2020 22:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/02/timus-1000-a-b-problem/</guid>
+      <description>Timus 1000 A+B Problem Problem Description Calculate a + b
+Input: a and b
+Output: a+b
+My Solution import java.util.*; public class problem1000 { public static void main(String[] args) { Scanner in = new Scanner(System.in); int a = in.nextInt(); int b = in.nextInt(); in.close(); System.out.println(a + b); } } </description>
+    </item>
+    
+    <item>
       <title>LeetCode 1 Two Sum</title>
       <link>https://www.pseudoyu.com/zh/2020/11/02/leetcode-1-two-sum/</link>
       <pubDate>Mon, 02 Nov 2020 20:53:17 +0800</pubDate>
@@ -126,71 +196,6 @@
       
       <guid>https://www.pseudoyu.com/zh/2020/10/23/blockchain-bitcoin-fork/</guid>
       <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Fork  State fork  Forking attack (deliberate fork)   Protocol fork  Hard fork (permanent)  Block size limit (1M -&amp;gt; 4M)   Soft fork (&amp;gt; 50%, temporary)  Block size limit (1M -&amp;gt; 0.5M) coinbase  As extra nonce 2^32 -&amp;gt; 2^96 (adding 8 bytes) As root hash of UTXO   P2SH(Pay to Script Hash)      </description>
-    </item>
-    
-    <item>
-      <title>Java Throwable</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/22/java-throwable/</link>
-      <pubDate>Thu, 22 Oct 2020 10:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/22/java-throwable/</guid>
-      <description>Java Basics Throwable Error (JVM can&amp;rsquo;t handle with)
- VirtualMachineError  StackOverFlowError OutOfMemoryError   AWTError  Exception (Can be deal with by program)
- IOException  EOFException FileNotFoundException   RuntimeException  ArrithmeticException MissingResourceException ClassNotFoundException NullPointerException IllegalArgumentException ArrayIndexOutOfBoundsException UnknownTypeException    Basic syntax  try-catch throw throws finally  </description>
-    </item>
-    
-    <item>
-      <title>Java Inheritance</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/22/java-inheritance/</link>
-      <pubDate>Thu, 22 Oct 2020 09:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/22/java-inheritance/</guid>
-      <description>Java Basics Inheritance Access  Modifiers  protected  Visible to child class   private public   Encapsulation  Using API to communicate Class or members can be least accessed by external   Child class rewrites the parent class  Methods in child class must have higher access level   Field can&amp;rsquo;t be public  getter setter    Abstract class and Interface  Abstract class  abstract keyword  abstract method -&amp;gt; abstract class   Can&amp;rsquo;t be instanced Can be inherited   Interface  public field  static final   Members(field and method)  public     Difference  Abstract class provide a IS-A relationship while Interface provides a LIKE-A relationship One class can applied several interfaces but can&amp;rsquo;t inherit more than one abstract class Fields of interface must be static/final but abstract class has no restriction Members of interface must be public but abstract class have multiple accesses   Choose  Interface (higher priority)  Irrelevant classes need to realize the same method need to use multiple inheritance   Abstract class  Relevant classes need to share same code block Need to control members&amp;rsquo; access Need to inherit non-static or no-constant field      Super  Access parent classes&amp;rsquo; constructor Access members of parent classes  Method priority  this.</description>
-    </item>
-    
-    <item>
-      <title>Java Reflect</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/22/java-reflect/</link>
-      <pubDate>Thu, 22 Oct 2020 09:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/22/java-reflect/</guid>
-      <description>Java Basics Reflect Core concept  Load classes, methods/fields when JVM is running, no prior requirement of knowing the object when writing or compiling code  Functions (runtime)  Enables java code to discover information about the fields, methods and constructors of loaded classes Operate on their underlying counterparts within security restructions  Usage  Develop universal frameworks  java.lang.reflect  Field Method Constructor  Advantages  Extensibility Help with development (IDE) Help with debugging and testing  Disadvantages  Cost/Optimization Security restructions Exposing inner elements (private attributes or methods)  </description>
-    </item>
-    
-    <item>
-      <title>Blockchain BitCoin Mining</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/22/blockchain-bitcoin-mining/</link>
-      <pubDate>Thu, 22 Oct 2020 09:07:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/22/blockchain-bitcoin-mining/</guid>
-      <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Mining  Solve puzzles  Average block time  10 minutes   Difficulty  Target = target * (actual time / expected time) Adjust every 2 weeks Ar most 4 times, at least 1/4     Bernoulli process (nearly poisson process in BitCoin mining)  Bernoulli trial  A random experiment with binary outcome   A sequence of independent Bernoulli trial   Feature  Memoryless Progress free  Ensure the fairness of mining   Exponential distribution   Device (Universal -&amp;gt; Specific)  CPU GPU ASIC (Application Specific Integrated Circuit)) Mining pool (on demand mining)  Pool manager (risks of 51% attack) miners      </description>
-    </item>
-    
-    <item>
-      <title>Blockchain BitCoin Features</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/21/blockchain-bitcoin-features/</link>
-      <pubDate>Wed, 21 Oct 2020 22:07:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/21/blockchain-bitcoin-features/</guid>
-      <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) UTXO (Unspent Transaction Output)  Total inputs = total outputs  Quantity  21,000,000  Block reward  Coinbase transaction Cut half every 4 year  Transaction fee BitCoin network  Structure  Application layer  BitCoin blockchain   Network layer  P2P overlay network     Node  Seed node   Feature  Simple Robust Not efficient &amp;ldquo;Best effort&amp;rdquo;   Message transport  Flooding    Security  Problem  Sybil attack Forking attack Boycott Selfish mining  Reduce competition     Solution  Based on computing power (large cost) Require 6 confirmation by nodes (long time, about 1 hour)    </description>
-    </item>
-    
-    <item>
-      <title>ICOM6045 Topic 1 Cryptography</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/21/icom6045-topic-1-cryptography/</link>
-      <pubDate>Wed, 21 Oct 2020 19:53:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/21/icom6045-topic-1-cryptography/</guid>
-      <description>ICOM6045 Fundamentals of E-Commerce Security Topic 1 Cryptography Definition  Process of transforming information to make it unreadable to anyone except those possessing the key  Purpose  Data confidentiality  Transpositions/Permutations  An encryption in which the letters of the message are rearranged Function  Try to break established patterns   Example  Columnar transposition  Rearrangement of the characters of the plaintext into columns Based on characteristic patterns of pairs of adjacent letters, called digrams Analysis  Compute the letter frequencies  Break the text into columns by compare a block of ciphertext characters against characters successively farther away in the ciphertext.</description>
-    </item>
-    
-    <item>
-      <title>Blockchain Protocol</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/21/blockchain-protocol/</link>
-      <pubDate>Wed, 21 Oct 2020 12:07:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/21/blockchain-protocol/</guid>
-      <description>Blockchain Technology and Applications Protocol Distributed consensus  &amp;ldquo;Impossibility result&amp;rdquo;  FLP  In an asynchronous system, if one faulty exists, there is no consensus   CAP Theorem  Consistency Availability Partition tolerance     Example  Distributed hash table    Consensus in BitCoin  Membership (decide who can vote)  Hyperledger  Fabric     Vote by computing power (based on puzzle friendly) Increasing concern  Win  Longest valid chain   Lose  Orphan block      </description>
     </item>
     
   </channel>

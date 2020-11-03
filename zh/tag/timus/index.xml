@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>timus on Pseudoyu</title>
+    <link>https://www.pseudoyu.com/zh/tag/timus/</link>
+    <description>Recent content in timus on Pseudoyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 03 Nov 2020 02:00:17 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.pseudoyu.com/zh/tag/timus/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Timus 2012 About Grisha N</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/03/timus-2012-about-grisha-n/</link>
+      <pubDate>Tue, 03 Nov 2020 02:00:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/03/timus-2012-about-grisha-n/</guid>
+      <description>Timus 2012 About Grisha N Problem Description Grisha N. told his two teammates that he was going to solve all given problems at the subregional contest, even if the teammates wouldn’t show up at the competition. The teammates didn’t believe Grisha so he told them the plan how he was going to do this.
+During the first hour he wants to solve f problems. If there is still some time left to the end of the first hour, Grisha will simply walk along the hall.</description>
+    </item>
+    
+    <item>
+      <title>Timus 1877 Bicycle Codes</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/03/timus-1877-bicycle-codes/</link>
+      <pubDate>Tue, 03 Nov 2020 01:30:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/03/timus-1877-bicycle-codes/</guid>
+      <description>Timus 1877 Bicycle Codes Problem Description Den has two four-digit combination locks for protecting his bicycle from thieves. Every evening he arms the bicycle antitheft alarm and fastens the bicycle to a special stand with one of the locks. Den never uses the same lock two evenings in a row. One night a thief tried to open the lock using the code 0000. The alarm went off and the thief hurried away.</description>
+    </item>
+    
+    <item>
+      <title>Timus 1785 Lost in Localization</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/03/timus-1785-lost-in-localization/</link>
+      <pubDate>Tue, 03 Nov 2020 01:10:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/03/timus-1785-lost-in-localization/</guid>
+      <description>Timus 1785 Lost in Localization Problem Description The Lavin Interactive Company, which has developed the turn-based strategy Losers-V, is constantly extending its target market by localizing the game to as many languages as it can. In particular, they are interested in creating a version of the game in Anindilyakwa, which is one of the languages spoken by indigenous Australians.
+However, the localization is complicated by the fact that Anindilyakwa has no numerals.</description>
+    </item>
+    
+    <item>
+      <title>Timus 1409 Two Gangsters</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/03/timus-1409-two-gangsters/</link>
+      <pubDate>Tue, 03 Nov 2020 00:40:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/03/timus-1409-two-gangsters/</guid>
+      <description>Timus 1409 Two Gangsters Problem Description Two gangsters Harry and Larry had a rest at countryside. They decided to spend some time shooting, so they put several beer cans (no more than 10) on a log. Harry started to shoot cans one after another from the leftmost to the right and Larry – from the rightmost to the left. At some moment it happened so that they shot one and the same can.</description>
+    </item>
+    
+    <item>
+      <title>Timus 1293 Eniya</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/03/timus-1293-eniya/</link>
+      <pubDate>Tue, 03 Nov 2020 00:10:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/03/timus-1293-eniya/</guid>
+      <description>Timus 1293 Eniya Problem Description It’s restless now on the slips of the intergalactic port’s sixth dock of planet of Torn. No longer then in a month the reconstruction of the small ironclad corvette “Eniya” will be finished. And again this battle ship and its brave team would have to struggle for the control over plutonium mines of Sibelius. The work cannot be stopped even for a second, self-powered laser welders work round the clock.</description>
+    </item>
+    
+    <item>
+      <title>Timus 1001 Reverse Root</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/02/timus-1001-reverse-root/</link>
+      <pubDate>Mon, 02 Nov 2020 23:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/02/timus-1001-reverse-root/</guid>
+      <description>Timus 1001 Reverse Root Problem Description The problem is so easy, that the authors were lazy to write a statement for it!
+Input: The input stream contains a set of integer numbers Ai. The numbers are separated by any number of spaces and line breaks. A size of the input stream does not exceed 256 KB.
+Output: For each number Ai from the last one till the first one you should output its square root.</description>
+    </item>
+    
+    <item>
+      <title>Timus 1000 A&#43;B Problem</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/02/timus-1000-a-b-problem/</link>
+      <pubDate>Mon, 02 Nov 2020 22:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/02/timus-1000-a-b-problem/</guid>
+      <description>Timus 1000 A+B Problem Problem Description Calculate a + b
+Input: a and b
+Output: a+b
+My Solution import java.util.*; public class problem1000 { public static void main(String[] args) { Scanner in = new Scanner(System.in); int a = in.nextInt(); int b = in.nextInt(); in.close(); System.out.println(a + b); } } </description>
+    </item>
+    
+  </channel>
+</rss>

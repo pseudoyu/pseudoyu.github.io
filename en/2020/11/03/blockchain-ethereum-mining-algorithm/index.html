@@ -217,13 +217,13 @@
 </li>
 </ul>
 <h3 id="ethereum-mining-algorithm-implementation">Ethereum Mining Algorithm Implementation</h3>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">//</span> <span class="err">通过</span><span class="n">seed生成cache</span><span class="err">，每隔</span><span class="mi">30000</span><span class="err">个区块会发生变化，重新生成</span><span class="n">cache并增加原始大小的1</span><span class="o">/</span><span class="mi">128</span> <span class="err">（</span><span class="mi">128</span><span class="n">K</span><span class="err">）</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 通过seed生成cache，每隔30000个区块会发生变化，重新生成cache并增加原始大小的1/128 （128K）</span>
 <span class="k">def</span> <span class="nf">mkcache</span><span class="p">(</span><span class="n">cache_size</span><span class="p">,</span> <span class="n">seed</span><span class="p">):</span>
     <span class="n">o</span> <span class="o">=</span> <span class="p">[</span><span class="nb">hash</span><span class="p">(</span><span class="n">seed</span><span class="p">)]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">cache_size</span><span class="p">):</span>
         <span class="n">o</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">hash</span><span class="p">(</span><span class="n">o</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
 
-<span class="o">//</span> <span class="err">通过</span><span class="n">Cache生成大数据集</span><span class="err">，读取</span><span class="n">cache中的256个数</span><span class="err">（每个数的位置由上一个数计算生成），最终返回</span><span class="n">mix的哈希值</span><span class="err">，得到大数据集的第</span><span class="n">i的元素</span>
+<span class="c1"># 通过Cache生成大数据集，读取cache中的256个数（每个数的位置由上一个数计算生成），最终返回mix的哈希值，得到大数据集的第i的元素</span>
 <span class="k">def</span> <span class="nf">calc_dataset_item</span><span class="p">(</span><span class="n">cache</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
     <span class="n">cache_size</span> <span class="o">=</span> <span class="n">cache</span><span class="o">.</span><span class="n">size</span>
     <span class="n">mix</span> <span class="o">=</span> <span class="nb">hash</span><span class="p">(</span><span class="n">cache</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="n">cache_size</span><span class="p">]</span> <span class="o">^</span> <span class="n">i</span><span class="p">)</span>
@@ -232,14 +232,14 @@
         <span class="n">mix</span> <span class="o">=</span> <span class="n">make_item</span><span class="p">(</span><span class="n">mix</span><span class="p">,</span> <span class="n">cache</span><span class="p">[</span><span class="n">cache_index</span> <span class="o">%</span> <span class="n">cache_size</span><span class="p">])</span>
     <span class="k">return</span> <span class="nb">hash</span><span class="p">(</span><span class="n">mix</span><span class="p">)</span>
 
-<span class="o">//</span> <span class="err">不断调用</span><span class="n">calc_dataset_item函数生成大数据集中的每个元素</span>
+<span class="c1"># 不断调用calc_dataset_item函数生成大数据集中的每个元素</span>
 <span class="k">def</span> <span class="nf">calc_dataset</span><span class="p">(</span><span class="n">full_size</span><span class="p">,</span> <span class="n">cache</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">[</span><span class="n">calc_dataset_item</span><span class="p">(</span><span class="n">cache</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">full_size</span><span class="p">)]</span>
 
-<span class="o">//</span> <span class="err">矿工挖矿函数</span>
-<span class="o">//</span> <span class="err">根据</span><span class="n">header信息和当前nonce算出初始哈希值</span><span class="err">，经过</span><span class="mi">64</span><span class="err">轮循环（读取两个相邻位置），更新哈希值，返回并与目标值比较</span>
-<span class="o">//</span> <span class="err">挖矿只用到</span><span class="n">header信息是为了轻节点验证</span>
-<span class="o">//</span> <span class="err">矿工会保存大数据集以避免不断重新生成</span>
+<span class="c1"># 矿工挖矿函数</span>
+<span class="c1"># 根据header信息和当前nonce算出初始哈希值，经过64轮循环（读取两个相邻位置），更新哈希值，返回并与目标值比较</span>
+<span class="c1"># 挖矿只用到header信息是为了轻节点验证</span>
+<span class="c1"># 矿工会保存大数据集以避免不断重新生成</span>
 <span class="k">def</span> <span class="nf">hashimoto_full</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">nonce</span><span class="p">,</span> <span class="n">full_size</span><span class="p">,</span> <span class="n">dataset</span><span class="p">):</span>
     <span class="n">mix</span> <span class="o">=</span> <span class="nb">hash</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">nonce</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">64</span><span class="p">):</span>
@@ -248,9 +248,9 @@
         <span class="n">mix</span> <span class="o">=</span> <span class="n">make_item</span><span class="p">(</span><span class="n">mix</span><span class="p">,</span> <span class="n">dataset</span><span class="p">[</span><span class="n">dataset_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span>
     <span class="k">return</span> <span class="nb">hash</span><span class="p">(</span><span class="n">mix</span><span class="p">)</span>
 
-<span class="o">//</span> <span class="err">轻节点验证函数</span>
-<span class="o">//</span> <span class="err">每次从</span><span class="n">cache中重新生成大数据集中相应位置的元素</span>
-<span class="o">//</span> <span class="err">也要进行</span><span class="mi">64</span><span class="err">轮循环</span>
+<span class="c1"># 轻节点验证函数</span>
+<span class="c1"># 每次从cache中重新生成大数据集中相应位置的元素</span>
+<span class="c1"># 也要进行64轮循环</span>
 <span class="k">def</span> <span class="nf">hashimoto_light</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">nonce</span><span class="p">,</span> <span class="n">full_size</span><span class="p">,</span> <span class="n">cache</span><span class="p">):</span>
     <span class="n">mix</span> <span class="o">=</span> <span class="nb">hash</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">nonce</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">64</span><span class="p">):</span>
@@ -259,8 +259,8 @@
         <span class="n">mix</span> <span class="o">=</span> <span class="n">make_item</span><span class="p">(</span><span class="n">mix</span><span class="p">,</span> <span class="n">calc_dataset_item</span><span class="p">(</span><span class="n">cache</span><span class="p">,</span> <span class="n">dataset_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
     <span class="k">return</span> <span class="nb">hash</span><span class="p">(</span><span class="n">mix</span><span class="p">)</span>
 
-<span class="o">//</span> <span class="err">挖矿函数</span>
-<span class="o">//</span> <span class="err">不断尝试</span><span class="n">nonce</span><span class="err">（可动态调节）</span>
+<span class="c1"># 挖矿函数</span>
+<span class="c1"># 不断尝试nonce（可动态调节）</span>
 <span class="k">def</span> <span class="nf">mine</span><span class="p">(</span><span class="n">full_size</span><span class="p">,</span> <span class="n">dataset</span><span class="p">,</span> <span class="n">header</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
     <span class="n">nonce</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">**</span><span class="mi">64</span><span class="p">)</span>
     <span class="k">while</span> <span class="n">hashimoto_full</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">nonce</span><span class="p">,</span><span class="n">full_size</span><span class="p">,</span> <span class="n">dataset</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">target</span><span class="p">:</span>

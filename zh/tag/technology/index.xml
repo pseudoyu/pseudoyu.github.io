@@ -6,10 +6,19 @@
     <description>Recent content in technology on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 02 Nov 2020 14:00:17 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2020 09:00:17 +0800</lastBuildDate>
     
 	<atom:link href="https://www.pseudoyu.com/zh/tag/technology/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Blockchain Ethereum GHOST Protocol</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/03/blockchain-ethereum-ghost-protocol/</link>
+      <pubDate>Tue, 03 Nov 2020 09:00:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/03/blockchain-ethereum-ghost-protocol/</guid>
+      <description>Blockchain Technology and Applications Ethereum System (Account-based ledger) GHOST Protocol  Problem  Less confirmation time Temporary fork Mining centralization (Centralization bias)   Uncle block  Only first blcok after forking Same ancestor Within 7 generation Decreasing Block reward  7/8 for branch -&amp;gt; 6/8 -&amp;gt; 5/8 -&amp;gt; &amp;hellip; -&amp;gt; 2/8 1/32 for main (fixed)   No gas fee Main blocks don&amp;rsquo;t check or execute the uncle block transaction    </description>
+    </item>
     
     <item>
       <title>Java Methods</title>
@@ -183,16 +192,6 @@
       <guid>https://www.pseudoyu.com/zh/2020/10/21/java-operation/</guid>
       <description>Java Basics Operation Compare  Pass by value (Java use pass-by-value to pass parameters)  Change object&amp;rsquo;s value in a function will affect the original object&amp;rsquo;s value (same object) When referencing to a new object, change won&amp;rsquo;t affect the original object&amp;rsquo;s value (different object)   Pass by reference  Casting (compiler force to convert types using (type of))
  += -= *= /=  switch  Use string object in switch conditional statements  </description>
-    </item>
-    
-    <item>
-      <title>Blockchain Data Structure</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/21/blockchain-data-structure/</link>
-      <pubDate>Wed, 21 Oct 2020 10:07:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/21/blockchain-data-structure/</guid>
-      <description>Blockchain Technology and Applications Data Structure Hash pointer (blockchain is a linked list using hash pointers)
- Genesis block &amp;lt;- block1 &amp;lt;- block2 &amp;lt;-&amp;hellip;&amp;lt;- recent block (every block has a hash pointer) Tamper-event log  Merkle tree (using hash pointer instead of pointer)  Merkle proof (proof of membership/inclusion)  O(log(n))   Think: proof of non-membership  O(n) Sorted merkle tree: O(log(n))    Application (blockchain)  Node  Full node (fully validating node)  Block header  Version Hash of previous block header Merkle root hash (protect all nodes) Target Nonce   Block body  Transaction lists     Light node (light weight node)  Only store block headers     Problem  Double spending    </description>
     </item>
     
   </channel>

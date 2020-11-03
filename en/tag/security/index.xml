@@ -6,10 +6,19 @@
     <description>Recent content in security on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 31 Oct 2020 19:36:17 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2020 09:00:17 +0800</lastBuildDate>
     
 	<atom:link href="https://www.pseudoyu.com/en/tag/security/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Blockchain Ethereum GHOST Protocol</title>
+      <link>https://www.pseudoyu.com/en/2020/11/03/blockchain-ethereum-ghost-protocol/</link>
+      <pubDate>Tue, 03 Nov 2020 09:00:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/03/blockchain-ethereum-ghost-protocol/</guid>
+      <description>Blockchain Technology and Applications Ethereum System (Account-based ledger) GHOST Protocol  Problem  Less confirmation time Temporary fork Mining centralization (Centralization bias)   Uncle block  Only first blcok after forking Same ancestor Within 7 generation Decreasing Block reward  7/8 for branch -&amp;gt; 6/8 -&amp;gt; 5/8 -&amp;gt; &amp;hellip; -&amp;gt; 2/8 1/32 for main (fixed)   No gas fee Main blocks don&amp;rsquo;t check or execute the uncle block transaction    </description>
+    </item>
     
     <item>
       <title>Blockchain Ethereum Transaction tree and Receipt tree</title>

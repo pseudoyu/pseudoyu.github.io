@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 03 Nov 2020 09:00:17 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2020 10:30:17 +0800</lastBuildDate>
     
 	<atom:link href="https://www.pseudoyu.com/en/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Blockchain Ethereum Mining Algorithm</title>
+      <link>https://www.pseudoyu.com/en/2020/11/03/blockchain-ethereum-mining-algorithm/</link>
+      <pubDate>Tue, 03 Nov 2020 10:30:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/03/blockchain-ethereum-mining-algorithm/</guid>
+      <description>Blockchain Technology and Applications Ethereum System (Account-based ledger) Mining Algorithm Compared to LiteCoin Scrypt Hard for light node to verify 128K 2 minutes and a half Trend ASIC resistance Memory hard Design 2 datasets 16M cache For verification 1G dataset -&amp;gt; 2.5G now Generate Read 256 times of cache Put into a large list Solve Read 128 times of large list Neighboring 64 * 2 Ethash 1G Memory + 16M</description>
+    </item>
     
     <item>
       <title>Blockchain Ethereum GHOST Protocol</title>
@@ -182,15 +191,6 @@
       
       <guid>https://www.pseudoyu.com/en/2020/10/21/blockchain-protocol/</guid>
       <description>Blockchain Technology and Applications Protocol Distributed consensus  &amp;ldquo;Impossibility result&amp;rdquo;  FLP  In an asynchronous system, if one faulty exists, there is no consensus   CAP Theorem  Consistency Availability Partition tolerance     Example  Distributed hash table    Consensus in BitCoin  Membership (decide who can vote)  Hyperledger  Fabric     Vote by computing power (based on puzzle friendly) Increasing concern  Win  Longest valid chain   Lose  Orphan block      </description>
-    </item>
-    
-    <item>
-      <title>Java Keywords</title>
-      <link>https://www.pseudoyu.com/en/2020/10/21/java-keywords/</link>
-      <pubDate>Wed, 21 Oct 2020 11:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/21/java-keywords/</guid>
-      <description>Java Basics Keywords final  Data  As for primitive data type, final make its value immutable As for reference, it can&amp;rsquo;t reference other objects but can modify itself   Method  Methods stated can&amp;rsquo;t be rewrite by its child class   Class  Can&amp;rsquo;t be inherited    static  Variable  static variable (also called class variable)  Belongs to the class and can be shared/accessed by the class name   instance variable  When creating an instance there will be an instance variable     static method  It exists when loading the class Don&amp;rsquo;t rely on any instance Can&amp;rsquo;t be abstract Can&amp;rsquo;t contain this, super keywords (they are related to specific object)   static (initialization) block  Operate once when doing the class initialization   static inner class  Don&amp;rsquo;t rely on external instance Can&amp;rsquo;t access non-static variables or methods of external class   static import  No need to refer to the ClassName  Simplify Hard to read     Initialization order  static variable, static block (Parent class) static variable, static block (Child class) instance variable, block (Parent class) Constructor (Parent class) instance variable, block (Child class) Constructor (Child class)    </description>
     </item>
     
   </channel>

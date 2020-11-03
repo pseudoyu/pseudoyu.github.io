@@ -6,10 +6,19 @@
     <description>Recent content in decentralization on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 03 Nov 2020 09:00:17 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2020 10:30:17 +0800</lastBuildDate>
     
 	<atom:link href="https://www.pseudoyu.com/en/tag/decentralization/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Blockchain Ethereum Mining Algorithm</title>
+      <link>https://www.pseudoyu.com/en/2020/11/03/blockchain-ethereum-mining-algorithm/</link>
+      <pubDate>Tue, 03 Nov 2020 10:30:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/03/blockchain-ethereum-mining-algorithm/</guid>
+      <description>Blockchain Technology and Applications Ethereum System (Account-based ledger) Mining Algorithm Compared to LiteCoin Scrypt Hard for light node to verify 128K 2 minutes and a half Trend ASIC resistance Memory hard Design 2 datasets 16M cache For verification 1G dataset -&amp;gt; 2.5G now Generate Read 256 times of cache Put into a large list Solve Read 128 times of large list Neighboring 64 * 2 Ethash 1G Memory + 16M</description>
+    </item>
     
     <item>
       <title>Blockchain Ethereum GHOST Protocol</title>

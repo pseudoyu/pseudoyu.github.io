@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta name="generator" content="Hugo 0.74.3" />
+  <meta charset="utf-8">
+  <title>Blockchain Ethereum Mining Algorithm · Pseudoyu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Blockchain Technology and Applications Ethereum System (Account-based ledger) Mining Algorithm Compared to LiteCoin Scrypt Hard for light node to verify 128K 2 minutes and a half Trend ASIC resistance Memory hard Design 2 datasets 16M cache For verification 1G dataset -&amp;gt; 2.5G now Generate Read 256 times of cache Put into a large list Solve Read 128 times of large list Neighboring 64 * 2 Ethash 1G Memory &#43; 16M" />
+
+  <meta name="keywords" content="Hugo, theme, den" />
+
+<link rel="canonical" href="https://www.pseudoyu.com/en/2020/11/03/blockchain-ethereum-mining-algorithm/" />
+<link rel="alternate" href="https://www.pseudoyu.com/zh/2020/11/03/blockchain-ethereum-mining-algorithm/" hreflang="zh">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.pseudoyu.com/css/den.css">
+
+
+
+
+<meta property="og:title" content="Blockchain Ethereum Mining Algorithm" />
+<meta property="og:description" content="Blockchain Technology and Applications Ethereum System (Account-based ledger) Mining Algorithm Compared to LiteCoin Scrypt Hard for light node to verify 128K 2 minutes and a half Trend ASIC resistance Memory hard Design 2 datasets 16M cache For verification 1G dataset -&gt; 2.5G now Generate Read 256 times of cache Put into a large list Solve Read 128 times of large list Neighboring 64 * 2 Ethash 1G Memory &#43; 16M" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.pseudoyu.com/en/2020/11/03/blockchain-ethereum-mining-algorithm/" />
+<meta property="article:published_time" content="2020-11-03T10:30:17+08:00" />
+<meta property="article:modified_time" content="2020-11-03T10:30:17+08:00" />
+<meta itemprop="name" content="Blockchain Ethereum Mining Algorithm">
+<meta itemprop="description" content="Blockchain Technology and Applications Ethereum System (Account-based ledger) Mining Algorithm Compared to LiteCoin Scrypt Hard for light node to verify 128K 2 minutes and a half Trend ASIC resistance Memory hard Design 2 datasets 16M cache For verification 1G dataset -&gt; 2.5G now Generate Read 256 times of cache Put into a large list Solve Read 128 times of large list Neighboring 64 * 2 Ethash 1G Memory &#43; 16M">
+<meta itemprop="datePublished" content="2020-11-03T10:30:17+08:00" />
+<meta itemprop="dateModified" content="2020-11-03T10:30:17+08:00" />
+<meta itemprop="wordCount" content="555">
+
+
+
+<meta itemprop="keywords" content="notes,bitcoin,ethereum,blockchain,cryptocurrency,security,technology,decentralization,pku,bilibili," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Blockchain Ethereum Mining Algorithm"/>
+<meta name="twitter:description" content="Blockchain Technology and Applications Ethereum System (Account-based ledger) Mining Algorithm Compared to LiteCoin Scrypt Hard for light node to verify 128K 2 minutes and a half Trend ASIC resistance Memory hard Design 2 datasets 16M cache For verification 1G dataset -&gt; 2.5G now Generate Read 256 times of cache Put into a large list Solve Read 128 times of large list Neighboring 64 * 2 Ethash 1G Memory &#43; 16M"/>
+</head>
+<body>
+  
+  <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://www.pseudoyu.com/images/background.jpg'); background-position: center; background-size: cover;">
+  <div class="container">
+  <nav class="header-nav navbar navbar-expand-md navbar-dark light-dark">
+    <div class="header-logo navbar-brand">
+      
+        <a class="float-left" href="https://www.pseudoyu.com/en/">
+      
+        
+        <img class="mr20 header-logo-image" src="https://www.pseudoyu.com/images/fly.png" alt="logo">
+        
+        
+          Pseudoyu
+         
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav-menu collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/en/category/ideas/">Ideas</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/en/category/notes/">Notes</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/en/category/projects/">Projects</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              <a class="nav-link" href="https://www.pseudoyu.com/en/about/">About</a>
+            
+          </li>
+        
+        
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.pseudoyu.com/zh/"><i class="fas fa-globe"></i> 中文</a>
+            </li>
+          
+          
+          
+          
+        
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container header-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="header-content">
+        <h1 class="header-title">Blockchain Ethereum Mining Algorithm</h1>
+        <p class="header-date">By
+          pseudoyu /
+        
+        2020-11-03
+          / In categories
+          <a href="https://www.pseudoyu.com/en/category/notes/">Notes</a>
+        </p>
+        
+        <div class="header-underline"></div>
+        
+          <div class="clearfix"></div>
+          <p class="float-right header-tags">
+              <i class="fas fa-tags" aria-hidden="true"></i>
+              <a href="https://www.pseudoyu.com/en/tag/bilibili/">bilibili</a>, 
+                <a href="https://www.pseudoyu.com/en/tag/bitcoin/">bitcoin</a>, 
+                <a href="https://www.pseudoyu.com/en/tag/blockchain/">blockchain</a>, 
+                <a href="https://www.pseudoyu.com/en/tag/cryptocurrency/">cryptocurrency</a>, 
+                <a href="https://www.pseudoyu.com/en/tag/decentralization/">decentralization</a>, 
+                <a href="https://www.pseudoyu.com/en/tag/ethereum/">ethereum</a>, 
+                <a href="https://www.pseudoyu.com/en/tag/notes/">notes</a>, 
+                <a href="https://www.pseudoyu.com/en/tag/pku/">pku</a>, 
+                <a href="https://www.pseudoyu.com/en/tag/security/">security</a>, 
+                <a href="https://www.pseudoyu.com/en/tag/technology/">technology</a>
+          </p>
+        
+        <div class="clearfix"></div>
+<p class="float-right translations">
+    <i class="fas fa-language" aria-hidden="true"></i>
+    Translations: 
+    <a href="https://www.pseudoyu.com/zh/2020/11/03/blockchain-ethereum-mining-algorithm/">ZH</a>
+</p>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <main>
+<div class="container content">
+  <article>
+  <h1 id="blockchain-technology-and-applications">Blockchain Technology and Applications</h1>
+<h2 id="ethereum-system-account-based-ledger">Ethereum System (Account-based ledger)</h2>
+<h3 id="mining-algorithm">Mining Algorithm</h3>
+<p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_ethereum_mining_algorithm.svg" alt="blockchain_ethereum_mining_algorithm"></p>
+<ul>
+<li>Compared to LiteCoin
+<ul>
+<li>Scrypt</li>
+<li>Hard for light node to verify
+<ul>
+<li>128K</li>
+</ul>
+</li>
+<li>2 minutes and a half</li>
+</ul>
+</li>
+<li>Trend
+<ul>
+<li>ASIC resistance</li>
+<li>Memory hard</li>
+</ul>
+</li>
+<li>Design
+<ul>
+<li>2 datasets
+<ul>
+<li>16M cache
+<ul>
+<li>For verification</li>
+</ul>
+</li>
+<li>1G dataset -&gt; 2.5G now</li>
+</ul>
+</li>
+<li>Generate
+<ul>
+<li>Read 256 times of cache
+<ul>
+<li>Put into a large list</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Solve
+<ul>
+<li>Read 128 times of large list
+<ul>
+<li>Neighboring 64 * 2</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ethash
+<ul>
+<li>1G Memory + 16M</li>
+<li>PoW -&gt; PoS</li>
+<li>Pre-mining</li>
+<li>Pre-sale</li>
+</ul>
+</li>
+</ul>
+<h3 id="ethereum-mining-algorithm-implementation">Ethereum Mining Algorithm Implementation</h3>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">//</span> <span class="err">通过</span><span class="n">seed生成cache</span><span class="err">，每隔</span><span class="mi">30000</span><span class="err">个区块会发生变化，重新生成</span><span class="n">cache并增加原始大小的1</span><span class="o">/</span><span class="mi">128</span> <span class="err">（</span><span class="mi">128</span><span class="n">K</span><span class="err">）</span>
+<span class="k">def</span> <span class="nf">mkcache</span><span class="p">(</span><span class="n">cache_size</span><span class="p">,</span> <span class="n">seed</span><span class="p">):</span>
+    <span class="n">o</span> <span class="o">=</span> <span class="p">[</span><span class="nb">hash</span><span class="p">(</span><span class="n">seed</span><span class="p">)]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">cache_size</span><span class="p">):</span>
+        <span class="n">o</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">hash</span><span class="p">(</span><span class="n">o</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+
+<span class="o">//</span> <span class="err">通过</span><span class="n">Cache生成大数据集</span><span class="err">，读取</span><span class="n">cache中的256个数</span><span class="err">（每个数的位置由上一个数计算生成），最终返回</span><span class="n">mix的哈希值</span><span class="err">，得到大数据集的第</span><span class="n">i的元素</span>
+<span class="k">def</span> <span class="nf">calc_dataset_item</span><span class="p">(</span><span class="n">cache</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+    <span class="n">cache_size</span> <span class="o">=</span> <span class="n">cache</span><span class="o">.</span><span class="n">size</span>
+    <span class="n">mix</span> <span class="o">=</span> <span class="nb">hash</span><span class="p">(</span><span class="n">cache</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="n">cache_size</span><span class="p">]</span> <span class="o">^</span> <span class="n">i</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">256</span><span class="p">):</span>
+        <span class="n">cache_index</span> <span class="o">=</span> <span class="n">get_int_from_item</span><span class="p">(</span><span class="n">mix</span><span class="p">)</span>
+        <span class="n">mix</span> <span class="o">=</span> <span class="n">make_item</span><span class="p">(</span><span class="n">mix</span><span class="p">,</span> <span class="n">cache</span><span class="p">[</span><span class="n">cache_index</span> <span class="o">%</span> <span class="n">cache_size</span><span class="p">])</span>
+    <span class="k">return</span> <span class="nb">hash</span><span class="p">(</span><span class="n">mix</span><span class="p">)</span>
+
+<span class="o">//</span> <span class="err">不断调用</span><span class="n">calc_dataset_item函数生成大数据集中的每个元素</span>
+<span class="k">def</span> <span class="nf">calc_dataset</span><span class="p">(</span><span class="n">full_size</span><span class="p">,</span> <span class="n">cache</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">calc_dataset_item</span><span class="p">(</span><span class="n">cache</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">full_size</span><span class="p">)]</span>
+
+<span class="o">//</span> <span class="err">矿工挖矿函数</span>
+<span class="o">//</span> <span class="err">根据</span><span class="n">header信息和当前nonce算出初始哈希值</span><span class="err">，经过</span><span class="mi">64</span><span class="err">轮循环（读取两个相邻位置），更新哈希值，返回并与目标值比较</span>
+<span class="o">//</span> <span class="err">挖矿只用到</span><span class="n">header信息是为了轻节点验证</span>
+<span class="o">//</span> <span class="err">矿工会保存大数据集以避免不断重新生成</span>
+<span class="k">def</span> <span class="nf">hashimoto_full</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">nonce</span><span class="p">,</span> <span class="n">full_size</span><span class="p">,</span> <span class="n">dataset</span><span class="p">):</span>
+    <span class="n">mix</span> <span class="o">=</span> <span class="nb">hash</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">nonce</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">64</span><span class="p">):</span>
+        <span class="n">dataset_index</span> <span class="o">=</span> <span class="n">get_int_from_item</span><span class="p">(</span><span class="n">mix</span><span class="p">)</span> <span class="o">%</span> <span class="n">full_size</span>
+        <span class="n">mix</span> <span class="o">=</span> <span class="n">make_item</span><span class="p">(</span><span class="n">mix</span><span class="p">,</span> <span class="n">dataset</span><span class="p">[</span><span class="n">dataset_index</span><span class="p">])</span>
+        <span class="n">mix</span> <span class="o">=</span> <span class="n">make_item</span><span class="p">(</span><span class="n">mix</span><span class="p">,</span> <span class="n">dataset</span><span class="p">[</span><span class="n">dataset_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span>
+    <span class="k">return</span> <span class="nb">hash</span><span class="p">(</span><span class="n">mix</span><span class="p">)</span>
+
+<span class="o">//</span> <span class="err">轻节点验证函数</span>
+<span class="o">//</span> <span class="err">每次从</span><span class="n">cache中重新生成大数据集中相应位置的元素</span>
+<span class="o">//</span> <span class="err">也要进行</span><span class="mi">64</span><span class="err">轮循环</span>
+<span class="k">def</span> <span class="nf">hashimoto_light</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">nonce</span><span class="p">,</span> <span class="n">full_size</span><span class="p">,</span> <span class="n">cache</span><span class="p">):</span>
+    <span class="n">mix</span> <span class="o">=</span> <span class="nb">hash</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">nonce</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">64</span><span class="p">):</span>
+        <span class="n">dataset_index</span> <span class="o">=</span> <span class="n">get_int_from_item</span><span class="p">(</span><span class="n">mix</span><span class="p">)</span> <span class="o">%</span> <span class="n">full_size</span>
+        <span class="n">mix</span> <span class="o">=</span> <span class="n">make_item</span><span class="p">(</span><span class="n">mix</span><span class="p">,</span> <span class="n">calc_dataset_item</span><span class="p">(</span><span class="n">cache</span><span class="p">,</span> <span class="n">dataset_index</span><span class="p">))</span>
+        <span class="n">mix</span> <span class="o">=</span> <span class="n">make_item</span><span class="p">(</span><span class="n">mix</span><span class="p">,</span> <span class="n">calc_dataset_item</span><span class="p">(</span><span class="n">cache</span><span class="p">,</span> <span class="n">dataset_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="k">return</span> <span class="nb">hash</span><span class="p">(</span><span class="n">mix</span><span class="p">)</span>
+
+<span class="o">//</span> <span class="err">挖矿函数</span>
+<span class="o">//</span> <span class="err">不断尝试</span><span class="n">nonce</span><span class="err">（可动态调节）</span>
+<span class="k">def</span> <span class="nf">mine</span><span class="p">(</span><span class="n">full_size</span><span class="p">,</span> <span class="n">dataset</span><span class="p">,</span> <span class="n">header</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+    <span class="n">nonce</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">**</span><span class="mi">64</span><span class="p">)</span>
+    <span class="k">while</span> <span class="n">hashimoto_full</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">nonce</span><span class="p">,</span><span class="n">full_size</span><span class="p">,</span> <span class="n">dataset</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">target</span><span class="p">:</span>
+        <span class="n">nonce</span> <span class="o">=</span> <span class="p">(</span><span class="n">nonce</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span><span class="o">**</span><span class="mi">64</span>
+    <span class="k">return</span> <span class="n">nonce</span>
+</code></pre></div>
+  </article>
+
+  
+  
+  
+
+
+</div>
+
+  </main><div class="footer gradient-2">
+  <div class="container footer-container ">
+    <div class="row">
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        <div class="footer-title">Sitemap</div>
+        <ul class="list-unstyled">
+            
+              
+                <li><a href="https://www.pseudoyu.com/en/tags/">Tags</a></li>
+              
+              
+                <li><a href="https://www.pseudoyu.com/en/categories/">Categories</a></li>
+              
+            
+            
+            
+            <li><a rel="alternate" type="application/rss&#43;xml" href="https://www.pseudoyu.com/en/index.xml"><i class="fas fa-rss-square"></i> RSS Feed</a></li>
+            
+            
+            
+        </ul>
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">Social</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://space.bilibili.com/5374948/" rel="noopener" target="_blank">BiliBili</a></li>
+          
+          <li><a href="https://www.facebook.com/pseudoyuzhang" rel="noopener" target="_blank">Facebook</a></li>
+          
+          <li><a href="https://www.instagram.com/pseudo.yu/" rel="noopener" target="_blank">Instagram</a></li>
+          
+          <li><a href="https://medium.com/@pseudoyu" rel="noopener" target="_blank">Medium</a></li>
+          
+          <li><a href="https://www.reddit.com/user/pseudo_yu" rel="noopener" target="_blank">Reddit</a></li>
+          
+          <li><a href="https://twitter.com/pseudo_yu" rel="noopener" target="_blank">Twitter</a></li>
+          
+          <li><a href="https://www.youtube.com/channel/UCR0O0s303tGBi3P02hstQPA/" rel="noopener" target="_blank">Youtube</a></li>
+          
+        </ul>
+        
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">Links</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://www.coursera.org/user/ffe947f087d1f63b161c3fcb310a6578" rel="noopener" target="_blank">Coursera</a></li>
+          
+          <li><a href="https://github.com/pseudoyu" rel="noopener" target="_blank">GitHub</a></li>
+          
+          <li><a href="https://www.goodreads.com/user/show/121369734-yu-zhang" rel="noopener" target="_blank">Goodreads</a></li>
+          
+          <li><a href="https://www.hackerrank.com/pseudoyu" rel="noopener" target="_blank">HackerRank</a></li>
+          
+          <li><a href="https://leetcode.com/pseudoyu/" rel="noopener" target="_blank">LeetCode</a></li>
+          
+          <li><a href="https://www.linkedin.com/in/pseudoyu/" rel="noopener" target="_blank">LinkedIn</a></li>
+          
+          <li><a href="https://acm.timus.ru/author.aspx?id=300324" rel="noopener" target="_blank">Timus OJ</a></li>
+          
+        </ul>
+        
+      </div> 
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <p class="pull-right text-right">
+          <small><em>Team Rocket: <a href="https://www.marshalgao.com" rel="noopener" target="_blank">Marshal</a> | <a href="https://www.m1sty.com" rel="noopener" target="_blank">Misty</a></em></small><br/>
+          <small><em>The University of Hong Kong - <a href="https://www.cs.hku.hk" rel="noopener" target="_blank">CS</a></em></small><br/>
+          <small>
+            &copy; 
+            pseudoyu
+            2020
+          </small>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

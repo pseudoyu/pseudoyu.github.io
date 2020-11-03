@@ -234,7 +234,25 @@
       <guid>https://www.pseudoyu.com/zh/2020/11/02/leetcode-1-two-sum/</guid>
       
         <description>&lt;h1 id=&#34;leetcode-1-two-sum&#34;&gt;LeetCode #1 Two Sum&lt;/h1&gt;
-&lt;h2 id=&#34;brute-force-solution&#34;&gt;Brute Force Solution&lt;/h2&gt;
+&lt;h2 id=&#34;problem-description&#34;&gt;Problem Description&lt;/h2&gt;
+&lt;p&gt;Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.&lt;/p&gt;
+&lt;p&gt;You may assume that each input would have exactly one solution, and you may not use the same element twice.&lt;/p&gt;
+&lt;p&gt;You can return the answer in any order.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Output: Because nums[0] + nums[1] == 9, we return [0, 1].
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Input: nums = [3,2,4], target = 6
+Output: [1,2]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Example 3:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Input: nums = [3,3], target = 6
+Output: [0,1]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;my-solution&#34;&gt;My Solution&lt;/h2&gt;
+&lt;h3 id=&#34;brute-force-solution&#34;&gt;Brute Force Solution&lt;/h3&gt;
 &lt;p&gt;第一种就是暴力解法，两层循环嵌套遍历所有结果，满足条件即返回，思路简单但运行会比较慢&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Solution&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
     &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;twoSum&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;target&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
@@ -256,7 +274,7 @@
         &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
     &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;hashmap-solution&#34;&gt;HashMap Solution&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;hashmap-solution&#34;&gt;HashMap Solution&lt;/h3&gt;
 &lt;p&gt;第二种就是利用HashMap来进行解答，这种解法是用了HashMap数据结构，前-&amp;gt;后遍历整个数组，将nums数组转为&amp;lt;值，索引&amp;gt;的HashMap，第一个值由遍历生成，在HashMap里使用containsKey方法找另一个值，找到后返回索引，把两个索引返回即可。因为HashMap可以直接键值配对，会大大提高效率&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Solution&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
     &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;twoSum&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;target&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;

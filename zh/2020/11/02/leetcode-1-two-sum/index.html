@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>LeetCode 1 Two Sum · Pseudoyu</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="LeetCode #1 Two Sum Brute Force Solution 第一种就是暴力解法，两层循环嵌套遍历所有结果，满足条件即返回，思路简单但运行会比较慢 class Solution { public int[] twoSum(int[] nums, int target) { //初始化存储结果的数" />
+  <meta name="description" content="LeetCode #1 Two Sum Problem Description Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order. Example 1: Input: nums = [2,7,11,15], target = 9 Output: [0,1] Output: Because" />
 
   <meta name="keywords" content="Hugo, theme, den" />
 
@@ -20,23 +20,23 @@
 
 
 <meta property="og:title" content="LeetCode 1 Two Sum" />
-<meta property="og:description" content="LeetCode #1 Two Sum Brute Force Solution 第一种就是暴力解法，两层循环嵌套遍历所有结果，满足条件即返回，思路简单但运行会比较慢 class Solution { public int[] twoSum(int[] nums, int target) { //初始化存储结果的数" />
+<meta property="og:description" content="LeetCode #1 Two Sum Problem Description Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order. Example 1: Input: nums = [2,7,11,15], target = 9 Output: [0,1] Output: Because" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.pseudoyu.com/zh/2020/11/02/leetcode-1-two-sum/" />
 <meta property="article:published_time" content="2020-11-02T20:53:17+08:00" />
 <meta property="article:modified_time" content="2020-11-02T20:53:17+08:00" />
 <meta itemprop="name" content="LeetCode 1 Two Sum">
-<meta itemprop="description" content="LeetCode #1 Two Sum Brute Force Solution 第一种就是暴力解法，两层循环嵌套遍历所有结果，满足条件即返回，思路简单但运行会比较慢 class Solution { public int[] twoSum(int[] nums, int target) { //初始化存储结果的数">
+<meta itemprop="description" content="LeetCode #1 Two Sum Problem Description Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order. Example 1: Input: nums = [2,7,11,15], target = 9 Output: [0,1] Output: Because">
 <meta itemprop="datePublished" content="2020-11-02T20:53:17+08:00" />
 <meta itemprop="dateModified" content="2020-11-02T20:53:17+08:00" />
-<meta itemprop="wordCount" content="524">
+<meta itemprop="wordCount" content="623">
 
 
 
 <meta itemprop="keywords" content="notes,programming,java,leetcode,algorithm,job,interview," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="LeetCode 1 Two Sum"/>
-<meta name="twitter:description" content="LeetCode #1 Two Sum Brute Force Solution 第一种就是暴力解法，两层循环嵌套遍历所有结果，满足条件即返回，思路简单但运行会比较慢 class Solution { public int[] twoSum(int[] nums, int target) { //初始化存储结果的数"/>
+<meta name="twitter:description" content="LeetCode #1 Two Sum Problem Description Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order. Example 1: Input: nums = [2,7,11,15], target = 9 Output: [0,1] Output: Because"/>
 </head>
 <body>
   
@@ -151,7 +151,25 @@
 <div class="container content">
   <article>
   <h1 id="leetcode-1-two-sum">LeetCode #1 Two Sum</h1>
-<h2 id="brute-force-solution">Brute Force Solution</h2>
+<h2 id="problem-description">Problem Description</h2>
+<p>Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.</p>
+<p>You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
+<p>You can return the answer in any order.</p>
+<p><strong>Example 1:</strong></p>
+<pre><code>Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Output: Because nums[0] + nums[1] == 9, we return [0, 1].
+</code></pre>
+<p><strong>Example 2:</strong></p>
+<pre><code>Input: nums = [3,2,4], target = 6
+Output: [1,2]
+</code></pre>
+<p><strong>Example 3:</strong></p>
+<pre><code>Input: nums = [3,3], target = 6
+Output: [0,1]
+</code></pre>
+<h2 id="my-solution">My Solution</h2>
+<h3 id="brute-force-solution">Brute Force Solution</h3>
 <p>第一种就是暴力解法，两层循环嵌套遍历所有结果，满足条件即返回，思路简单但运行会比较慢</p>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kt">int</span><span class="o">[]</span> <span class="nf">twoSum</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">nums</span><span class="o">,</span> <span class="kt">int</span> <span class="n">target</span><span class="o">)</span> <span class="o">{</span>
@@ -173,7 +191,7 @@
         <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
     <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div><h2 id="hashmap-solution">HashMap Solution</h2>
+</code></pre></div><h3 id="hashmap-solution">HashMap Solution</h3>
 <p>第二种就是利用HashMap来进行解答，这种解法是用了HashMap数据结构，前-&gt;后遍历整个数组，将nums数组转为&lt;值，索引&gt;的HashMap，第一个值由遍历生成，在HashMap里使用containsKey方法找另一个值，找到后返回索引，把两个索引返回即可。因为HashMap可以直接键值配对，会大大提高效率</p>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kt">int</span><span class="o">[]</span> <span class="nf">twoSum</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">nums</span><span class="o">,</span> <span class="kt">int</span> <span class="n">target</span><span class="o">)</span> <span class="o">{</span>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 <head>
-  <meta name="generator" content="Hugo 0.74.3" />
+  <meta name="generator" content="Hugo 0.78.0" />
   <meta charset="utf-8">
   <title>Java equals Method · Pseudoyu</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,7 +29,7 @@
 <meta itemprop="description" content="Java Basics Java equals Method equals() Features Equivalence relationship x.euqal(x); Compared to self x.equals(y) == y.equals(x); When conversed, also true if (x.equals(y) &amp;&amp; y.equals(z)) x.equals(z); When transited, also true x.equals(y) == x.equals(y); When repeated, always true x.equals(null) == false; When compared to null, always false (when x is not assigned null) About == For primitive data type, == measures the equivalence (there is no equals()) For reference, == measures whether">
 <meta itemprop="datePublished" content="2020-11-02T13:00:17+08:00" />
 <meta itemprop="dateModified" content="2020-11-02T13:00:17+08:00" />
-<meta itemprop="wordCount" content="371">
+<meta itemprop="wordCount" content="370">
 
 
 
@@ -218,7 +218,7 @@ x.equals(z);
 <span class="o">}</span>
 </code></pre></div><h3 id="使用方式">使用方式</h3>
 <ul>
-<li>类未覆盖equals方法 (等价于&quot;==&rdquo;:基本数据对比值，对象对比引用)</li>
+<li>类未覆盖equals方法 (等价于&quot;==&quot;:基本数据对比值，对象对比引用)</li>
 <li>类覆盖了equals方法 (对比其内容是否相等),如String</li>
 </ul>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">testEquals</span> <span class="o">{</span>

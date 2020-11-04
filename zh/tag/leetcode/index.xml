@@ -6,11 +6,7 @@
     <description>Recent content in leetcode on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 02 Nov 2020 20:53:17 +0800</lastBuildDate>
-    
-	<atom:link href="https://www.pseudoyu.com/zh/tag/leetcode/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 02 Nov 2020 20:53:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/leetcode/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LeetCode 1 Two Sum</title>
       <link>https://www.pseudoyu.com/zh/2020/11/02/leetcode-1-two-sum/</link>

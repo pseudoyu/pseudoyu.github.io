@@ -6,7 +6,16 @@
     <description>Recent content in java on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 06 Nov 2020 01:00:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Nov 2020 01:36:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Timus 1264 Workdays</title>
+      <link>https://www.pseudoyu.com/en/2020/11/06/timus-1264-workdays/</link>
+      <pubDate>Fri, 06 Nov 2020 01:36:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/06/timus-1264-workdays/</guid>
+      <description>Timus 1264 Workdays Problem Description After a success of the previous Vasechkin’s program that allowed to calculate the results of the elections in cause of two days Artemy Sidorovich was placed at the head of the department. At the moment Artemy Sidorovich prepares a task for his subordinate — programmer Petechkin. The task is to write a very useful function that would ease the life of all the department programmers. For each integer from 0 to M the function would calculate how many times this number appears in the N-element array.</description>
+    </item>
+    
     <item>
       <title>Timus 2001 Mathematicians and Berries</title>
       <link>https://www.pseudoyu.com/en/2020/11/06/timus-2001-mathematicians-and-berries/</link>
@@ -185,15 +194,6 @@ My Solution import java.util.*; public class problem1000 { public static void ma
       
       <guid>https://www.pseudoyu.com/en/2020/10/22/java-reflect/</guid>
       <description>Java Basics Reflect Core concept  Load classes, methods/fields when JVM is running, no prior requirement of knowing the object when writing or compiling code  Functions (runtime)  Enables java code to discover information about the fields, methods and constructors of loaded classes Operate on their underlying counterparts within security restructions  Usage  Develop universal frameworks  java.lang.reflect  Field Method Constructor  Advantages  Extensibility Help with development (IDE) Help with debugging and testing  Disadvantages  Cost/Optimization Security restructions Exposing inner elements (private attributes or methods)  </description>
-    </item>
-    
-    <item>
-      <title>Java Keywords</title>
-      <link>https://www.pseudoyu.com/en/2020/10/21/java-keywords/</link>
-      <pubDate>Wed, 21 Oct 2020 11:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/21/java-keywords/</guid>
-      <description>Java Basics Keywords final  Data  As for primitive data type, final make its value immutable As for reference, it can&amp;rsquo;t reference other objects but can modify itself   Method  Methods stated can&amp;rsquo;t be rewrite by its child class   Class  Can&amp;rsquo;t be inherited    static  Variable  static variable (also called class variable)  Belongs to the class and can be shared/accessed by the class name   instance variable  When creating an instance there will be an instance variable     static method  It exists when loading the class Don&amp;rsquo;t rely on any instance Can&amp;rsquo;t be abstract Can&amp;rsquo;t contain this, super keywords (they are related to specific object)   static (initialization) block  Operate once when doing the class initialization   static inner class  Don&amp;rsquo;t rely on external instance Can&amp;rsquo;t access non-static variables or methods of external class   static import  No need to refer to the ClassName  Simplify Hard to read     Initialization order  static variable, static block (Parent class) static variable, static block (Child class) instance variable, block (Parent class) Constructor (Parent class) instance variable, block (Child class) Constructor (Child class)    </description>
     </item>
     
   </channel>

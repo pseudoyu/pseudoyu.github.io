@@ -6,7 +6,16 @@
     <description>Recent content in acm on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 06 Nov 2020 01:00:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/acm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Nov 2020 01:36:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/acm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Timus 1264 Workdays</title>
+      <link>https://www.pseudoyu.com/en/2020/11/06/timus-1264-workdays/</link>
+      <pubDate>Fri, 06 Nov 2020 01:36:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/06/timus-1264-workdays/</guid>
+      <description>Timus 1264 Workdays Problem Description After a success of the previous Vasechkin’s program that allowed to calculate the results of the elections in cause of two days Artemy Sidorovich was placed at the head of the department. At the moment Artemy Sidorovich prepares a task for his subordinate — programmer Petechkin. The task is to write a very useful function that would ease the life of all the department programmers. For each integer from 0 to M the function would calculate how many times this number appears in the N-element array.</description>
+    </item>
+    
     <item>
       <title>Timus 2001 Mathematicians and Berries</title>
       <link>https://www.pseudoyu.com/en/2020/11/06/timus-2001-mathematicians-and-berries/</link>

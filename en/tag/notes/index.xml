@@ -6,7 +6,16 @@
     <description>Recent content in notes on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 04 Nov 2020 22:10:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Nov 2020 09:25:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blockchain Proof of Stake</title>
+      <link>https://www.pseudoyu.com/en/2020/11/05/blockchain-proof-of-stake/</link>
+      <pubDate>Thu, 05 Nov 2020 09:25:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/05/blockchain-proof-of-stake/</guid>
+      <description>Blockchain Technology and Applications Proof of Stake 本质 Virtual mining 作用 省去了挖矿过程 节约能耗 提升抗攻击能力 AltCoin Infanticide 问题 Nothing at stake 机制不够成熟 Bug bounty Ethereum Casper Friendly Finality Gadget (FFG) Validator Epoch 推动系统达成共识 (Two-phase commit) Prepare message 2/3 Commit message 2/3</description>
+    </item>
+    
     <item>
       <title>Blockchain Ethereum Difficulty</title>
       <link>https://www.pseudoyu.com/en/2020/11/04/blockchain-ethereum-difficulty/</link>
@@ -183,15 +192,6 @@ My Solution import java.util.*; public class problem1000 { public static void ma
       
       <guid>https://www.pseudoyu.com/en/2020/10/28/blockchain-bitcoin-anonymity/</guid>
       <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Anonymity  Pseudonymity Threats  Address generation  Analyze tx Analyze wallets (if used)   Connection to real identity  KYC (Know Your Customer)     Bad use  Silk road (eBay for illegal drugs)   Tips  TOR browser Coin mixing   Zero-knowledge proof  Signature (public key - private key)   Possible solution  Sacrifice  Performance Not absolutely secure   Zerocoin  Base coin Zero coin   Zerocash    </description>
-    </item>
-    
-    <item>
-      <title>Blockchain BitCoin Scripts</title>
-      <link>https://www.pseudoyu.com/en/2020/10/24/blockchain-bitcoin-scripts/</link>
-      <pubDate>Sat, 24 Oct 2020 09:07:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/24/blockchain-bitcoin-scripts/</guid>
-      <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Scripts (stack based language)  TX structure  txid hash version (of bitcoin) size locktime (take effect time) vin  txid vout scriptSig (input script)  asm hex     vout  value n scriptPubKey (output script) value   blockhash confirmations time (tx time) blocktime   Transaction  P2PK (Pay to Public Key)  input script  PUSHDATA (Sig) (signed by provate key)   output script  PUSHDATA (PubKey) CHECKSIG     P2PKH (Pay to Public Key Hash)  input script  PUSHDATA (Sig) (signed by provate key) PUSHDATA (PubKey)   output script  DUP (duplicate a PubKey) HASH160 (calculate the PubKey&amp;rsquo;s hash) PUSHDATA (PubKeyHash) EQUALVERIFY CHECKSIG     P2SH (Pay to Script Hash)  redeemScript  PUSHDATA (PubKey) CHECKSIG   input script  PUSHDATA (Sig) PUSHDATA (serialized redeemScript)   output script  HASH160 PUSHDATA (redeemScriptHash) EQUAL     Proof of Burn  Destroy bitcoin      </description>
     </item>
     
   </channel>

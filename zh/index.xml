@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 04 Nov 2020 22:10:17 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2020 09:25:17 +0800</lastBuildDate>
     
     <atom:link href="https://www.pseudoyu.com/zh/index.xml" rel="self" type="application/rss+xml" />
     
@@ -58,6 +58,55 @@
 &lt;li&gt;&lt;a href=&#34;https://medium.com/@pseudoyu&#34;&gt;Medium&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCR0O0s303tGBi3P02hstQPA/&#34;&gt;Youtube&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.reddit.com/user/pseudo_yu&#34;&gt;Reddit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Blockchain Proof of Stake</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/05/blockchain-proof-of-stake/</link>
+      <pubDate>Thu, 05 Nov 2020 09:25:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/05/blockchain-proof-of-stake/</guid>
+      
+        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
+&lt;h2 id=&#34;proof-of-stake&#34;&gt;Proof of Stake&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_ethereum_pos.svg&#34; alt=&#34;blockchain_ethereum_pos&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;本质&#34;&gt;本质&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Virtual mining&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;作用&#34;&gt;作用&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;省去了挖矿过程&lt;/li&gt;
+&lt;li&gt;节约能耗&lt;/li&gt;
+&lt;li&gt;提升抗攻击能力
+&lt;ul&gt;
+&lt;li&gt;AltCoin Infanticide&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;问题&#34;&gt;问题&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Nothing at stake&lt;/li&gt;
+&lt;li&gt;机制不够成熟
+&lt;ul&gt;
+&lt;li&gt;Bug bounty&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ethereum-casper&#34;&gt;Ethereum Casper&lt;/h2&gt;
+&lt;h3 id=&#34;friendly-finality-gadget-ffg&#34;&gt;Friendly Finality Gadget (FFG)&lt;/h3&gt;
+&lt;h3 id=&#34;validator&#34;&gt;Validator&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Epoch&lt;/li&gt;
+&lt;li&gt;推动系统达成共识 (Two-phase commit)
+&lt;ul&gt;
+&lt;li&gt;Prepare message 2/3&lt;/li&gt;
+&lt;li&gt;Commit message 2/3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       
@@ -1208,72 +1257,6 @@ x.equals(z);
 &lt;li&gt;Q: Will quantum computing influence Bitcoin?
 &lt;ul&gt;
 &lt;li&gt;A: Not in practical use&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Blockchain BitCoin Anonymity</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/28/blockchain-bitcoin-anonymity/</link>
-      <pubDate>Wed, 28 Oct 2020 10:07:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/28/blockchain-bitcoin-anonymity/</guid>
-      
-        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
-&lt;h2 id=&#34;bitcoin-system-transaction-based-ledger&#34;&gt;BitCoin System (Transaction-based ledger)&lt;/h2&gt;
-&lt;h3 id=&#34;anonymity&#34;&gt;Anonymity&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_anonymity.svg&#34; alt=&#34;blockchain_bitcoin_anonymity&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Pseudonymity&lt;/li&gt;
-&lt;li&gt;Threats
-&lt;ul&gt;
-&lt;li&gt;Address generation
-&lt;ul&gt;
-&lt;li&gt;Analyze tx&lt;/li&gt;
-&lt;li&gt;Analyze wallets (if used)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Connection to real identity
-&lt;ul&gt;
-&lt;li&gt;KYC (Know Your Customer)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Bad use
-&lt;ul&gt;
-&lt;li&gt;Silk road (eBay for illegal drugs)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Tips
-&lt;ul&gt;
-&lt;li&gt;TOR browser&lt;/li&gt;
-&lt;li&gt;Coin mixing&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Zero-knowledge proof
-&lt;ul&gt;
-&lt;li&gt;Signature (public key - private key)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Possible solution
-&lt;ul&gt;
-&lt;li&gt;Sacrifice
-&lt;ul&gt;
-&lt;li&gt;Performance&lt;/li&gt;
-&lt;li&gt;Not absolutely secure&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Zerocoin
-&lt;ul&gt;
-&lt;li&gt;Base coin&lt;/li&gt;
-&lt;li&gt;Zero coin&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Zerocash&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;

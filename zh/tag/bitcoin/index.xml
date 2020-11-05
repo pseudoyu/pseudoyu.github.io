@@ -6,7 +6,16 @@
     <description>Recent content in bitcoin on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 04 Nov 2020 22:10:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/bitcoin/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Nov 2020 09:25:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/bitcoin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blockchain Proof of Stake</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/05/blockchain-proof-of-stake/</link>
+      <pubDate>Thu, 05 Nov 2020 09:25:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/05/blockchain-proof-of-stake/</guid>
+      <description>Blockchain Technology and Applications Proof of Stake 本质 Virtual mining 作用 省去了挖矿过程 节约能耗 提升抗攻击能力 AltCoin Infanticide 问题 Nothing at stake 机制不够成熟 Bug bounty Ethereum Casper Friendly Finality Gadget (FFG) Validator Epoch 推动系统达成共识 (Two-phase commit) Prepare message 2/3 Commit message 2/3</description>
+    </item>
+    
     <item>
       <title>Blockchain Ethereum Difficulty</title>
       <link>https://www.pseudoyu.com/zh/2020/11/04/blockchain-ethereum-difficulty/</link>

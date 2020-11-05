@@ -6,7 +6,16 @@
     <description>Recent content in technology on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 04 Nov 2020 22:10:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/technology/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Nov 2020 09:25:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/technology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blockchain Proof of Stake</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/05/blockchain-proof-of-stake/</link>
+      <pubDate>Thu, 05 Nov 2020 09:25:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/05/blockchain-proof-of-stake/</guid>
+      <description>Blockchain Technology and Applications Proof of Stake 本质 Virtual mining 作用 省去了挖矿过程 节约能耗 提升抗攻击能力 AltCoin Infanticide 问题 Nothing at stake 机制不够成熟 Bug bounty Ethereum Casper Friendly Finality Gadget (FFG) Validator Epoch 推动系统达成共识 (Two-phase commit) Prepare message 2/3 Commit message 2/3</description>
+    </item>
+    
     <item>
       <title>Blockchain Ethereum Difficulty</title>
       <link>https://www.pseudoyu.com/zh/2020/11/04/blockchain-ethereum-difficulty/</link>
@@ -178,15 +187,6 @@
       
       <guid>https://www.pseudoyu.com/zh/2020/10/21/icom6045-topic-1-cryptography/</guid>
       <description>ICOM6045 Fundamentals of E-Commerce Security Topic 1 Cryptography Definition  Process of transforming information to make it unreadable to anyone except those possessing the key  Purpose  Data confidentiality  Transpositions/Permutations  An encryption in which the letters of the message are rearranged Function  Try to break established patterns   Example  Columnar transposition  Rearrangement of the characters of the plaintext into columns Based on characteristic patterns of pairs of adjacent letters, called digrams Analysis  Compute the letter frequencies  Break the text into columns by compare a block of ciphertext characters against characters successively farther away in the ciphertext.</description>
-    </item>
-    
-    <item>
-      <title>Blockchain Protocol</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/21/blockchain-protocol/</link>
-      <pubDate>Wed, 21 Oct 2020 12:07:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/21/blockchain-protocol/</guid>
-      <description>Blockchain Technology and Applications Protocol Distributed consensus  &amp;ldquo;Impossibility result&amp;rdquo;  FLP  In an asynchronous system, if one faulty exists, there is no consensus   CAP Theorem  Consistency Availability Partition tolerance     Example  Distributed hash table    Consensus in BitCoin  Membership (decide who can vote)  Hyperledger  Fabric     Vote by computing power (based on puzzle friendly) Increasing concern  Win  Longest valid chain   Lose  Orphan block      </description>
     </item>
     
   </channel>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta name="generator" content="Hugo 0.78.0" />
+  <meta charset="utf-8">
+  <title>LeetCode 680 Valid Palindrome 2 · Pseudoyu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="LeetCode #680 Valid Palindrome 2 Problem Description Given a non-empty string s, you may delete at most one character. Judge whether you can make it a palindrome. Example 1: Input: &amp;quot;aba&amp;quot; Output: True Example 2: Input: &amp;quot;abca&amp;quot; Output: True Explanation: You could delete the character &#39;c&#39;. My Solution 这道题是在一般的回文判断基础上增加了一个删除" />
+
+  <meta name="keywords" content="Hugo, theme, den" />
+
+<link rel="canonical" href="https://www.pseudoyu.com/zh/2020/11/05/leetcode-680-valid-palindrome-2/" />
+<link rel="alternate" href="https://www.pseudoyu.com/en/2020/11/05/leetcode-680-valid-palindrome-2/" hreflang="en">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.pseudoyu.com/css/den.css">
+
+
+
+
+<meta property="og:title" content="LeetCode 680 Valid Palindrome 2" />
+<meta property="og:description" content="LeetCode #680 Valid Palindrome 2 Problem Description Given a non-empty string s, you may delete at most one character. Judge whether you can make it a palindrome. Example 1: Input: &quot;aba&quot; Output: True Example 2: Input: &quot;abca&quot; Output: True Explanation: You could delete the character &#39;c&#39;. My Solution 这道题是在一般的回文判断基础上增加了一个删除" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.pseudoyu.com/zh/2020/11/05/leetcode-680-valid-palindrome-2/" />
+<meta property="article:published_time" content="2020-11-05T19:40:17+08:00" />
+<meta property="article:modified_time" content="2020-11-05T19:40:17+08:00" />
+<meta itemprop="name" content="LeetCode 680 Valid Palindrome 2">
+<meta itemprop="description" content="LeetCode #680 Valid Palindrome 2 Problem Description Given a non-empty string s, you may delete at most one character. Judge whether you can make it a palindrome. Example 1: Input: &quot;aba&quot; Output: True Example 2: Input: &quot;abca&quot; Output: True Explanation: You could delete the character &#39;c&#39;. My Solution 这道题是在一般的回文判断基础上增加了一个删除">
+<meta itemprop="datePublished" content="2020-11-05T19:40:17+08:00" />
+<meta itemprop="dateModified" content="2020-11-05T19:40:17+08:00" />
+<meta itemprop="wordCount" content="470">
+
+
+
+<meta itemprop="keywords" content="notes,programming,java,leetcode,algorithm,job,interview," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="LeetCode 680 Valid Palindrome 2"/>
+<meta name="twitter:description" content="LeetCode #680 Valid Palindrome 2 Problem Description Given a non-empty string s, you may delete at most one character. Judge whether you can make it a palindrome. Example 1: Input: &quot;aba&quot; Output: True Example 2: Input: &quot;abca&quot; Output: True Explanation: You could delete the character &#39;c&#39;. My Solution 这道题是在一般的回文判断基础上增加了一个删除"/>
+</head>
+<body>
+  
+  <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://www.pseudoyu.com/images/background.jpg'); background-position: center; background-size: cover;">
+  <div class="container">
+  <nav class="header-nav navbar navbar-expand-md navbar-dark light-dark">
+    <div class="header-logo navbar-brand">
+      
+        <a class="float-left" href="https://www.pseudoyu.com/zh/">
+      
+        
+        <img class="mr20 header-logo-image" src="https://www.pseudoyu.com/images/fly.png" alt="logo">
+        
+        
+          Pseudoyu
+         
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav-menu collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/ideas/">思考</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/notes/">笔记</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/projects/">项目</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              <a class="nav-link" href="https://www.pseudoyu.com/zh/about/">关于</a>
+            
+          </li>
+        
+        
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.pseudoyu.com/en/"><i class="fas fa-globe"></i> English</a>
+            </li>
+          
+          
+        
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container header-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="header-content">
+        <h1 class="header-title">LeetCode 680 Valid Palindrome 2</h1>
+        <p class="header-date">作者：
+          pseudoyu /
+        
+        2020-11-05
+          / 分类：
+          <a href="https://www.pseudoyu.com/zh/category/notes/">Notes</a>
+        </p>
+        
+        <div class="header-underline"></div>
+        
+          <div class="clearfix"></div>
+          <p class="float-right header-tags">
+              <i class="fas fa-tags" aria-hidden="true"></i>
+              <a href="https://www.pseudoyu.com/zh/tag/algorithm/">algorithm</a>, 
+                <a href="https://www.pseudoyu.com/zh/tag/interview/">interview</a>, 
+                <a href="https://www.pseudoyu.com/zh/tag/java/">java</a>, 
+                <a href="https://www.pseudoyu.com/zh/tag/job/">job</a>, 
+                <a href="https://www.pseudoyu.com/zh/tag/leetcode/">leetcode</a>, 
+                <a href="https://www.pseudoyu.com/zh/tag/notes/">notes</a>, 
+                <a href="https://www.pseudoyu.com/zh/tag/programming/">programming</a>
+          </p>
+        
+        <div class="clearfix"></div>
+<p class="float-right translations">
+    <i class="fas fa-language" aria-hidden="true"></i>
+    翻译： 
+    <a href="https://www.pseudoyu.com/en/2020/11/05/leetcode-680-valid-palindrome-2/">EN</a>
+</p>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <main>
+<div class="container content">
+  <article>
+  <h1 id="leetcode-680-valid-palindrome-2">LeetCode #680 Valid Palindrome 2</h1>
+<h2 id="problem-description">Problem Description</h2>
+<p>Given a non-empty string s, you may delete at most one character. Judge whether you can make it a palindrome.</p>
+<p><strong>Example 1:</strong></p>
+<pre><code>Input: &quot;aba&quot;
+Output: True
+</code></pre>
+<p><strong>Example 2:</strong></p>
+<pre><code>Input: &quot;abca&quot;
+Output: True
+Explanation: You could delete the character 'c'.
+</code></pre>
+<h2 id="my-solution">My Solution</h2>
+<p>这道题是在一般的回文判断基础上增加了一个删除元素的条件，又分为删除左边和右边两类来讨论，解决思路分为两步：</p>
+<ol>
+<li>先写一个判断正常回文的方法，即两边指针同时逐一遍历字符串中的元素，全部相等即为回文</li>
+<li>遍历给定的字符串，一个头-&gt;尾，一个尾-&gt;头，当遇到不相等情况时，先不判定为false，而是分两种情况来讨论：
+<ol>
+<li>左边指针右移一位，再判断剩下的是否为回文</li>
+<li>右边指针左移一位，判断剩下的字符串是否为回文</li>
+</ol>
+</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">validPalindrome</span><span class="o">(</span><span class="n">String</span> <span class="n">s</span><span class="o">)</span> <span class="o">{</span>
+		<span class="c1">//头-&gt;尾，尾-&gt;头同时遍历逐一整个字符串
+</span><span class="c1"></span>
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">0</span><span class="o">,</span> <span class="n">j</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">-</span> <span class="n">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">j</span><span class="o">;</span> <span class="n">i</span><span class="o">++,</span> <span class="n">j</span><span class="o">--)</span> <span class="o">{</span>
+			<span class="c1">//当出现不相等情况时，判断两种情况：
+</span><span class="c1"></span>			<span class="c1">//1.左指针向右移动一个，右指针不变
+</span><span class="c1"></span>			<span class="c1">//2. 右指针向左移动一个，左指针不变
+</span><span class="c1"></span>			<span class="c1">//当两种情况中任意一种为回文时，也判定为回文
+</span><span class="c1"></span>			<span class="k">if</span> <span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">!=</span> <span class="n">s</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">j</span><span class="o">))</span> <span class="o">{</span>
+				<span class="k">return</span> <span class="n">isPalindrome</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">i</span><span class="o">+</span><span class="n">1</span><span class="o">,</span> <span class="n">j</span><span class="o">)</span> <span class="o">||</span> <span class="n">isPalindrome</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">i</span><span class="o">,</span> <span class="n">j</span><span class="o">-</span><span class="n">1</span><span class="o">);</span>
+			<span class="o">}</span>
+		<span class="o">}</span>
+		<span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+	<span class="o">}</span>
+	
+	<span class="c1">//写一个判断正常回文的方法，即一个 头-&gt;尾，一个尾-&gt;头，逐一比对，全都相等即为回文
+</span><span class="c1"></span>	<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isPalindrome</span><span class="o">(</span><span class="n">String</span> <span class="n">s</span><span class="o">,</span> <span class="kt">int</span> <span class="n">i</span><span class="o">,</span> <span class="kt">int</span> <span class="n">j</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">while</span> <span class="o">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">j</span><span class="o">)</span> <span class="o">{</span>
+			<span class="k">if</span> <span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">!=</span> <span class="n">s</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">j</span><span class="o">))</span> <span class="o">{</span>
+				<span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+			<span class="o">}</span>
+			<span class="n">i</span><span class="o">++;</span>
+			<span class="n">j</span><span class="o">--;</span>
+		<span class="o">}</span>
+		<span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+  </article>
+
+  
+  
+  
+
+
+</div>
+
+  </main><div class="footer gradient-2">
+  <div class="container footer-container ">
+    <div class="row">
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        <div class="footer-title">网站地图</div>
+        <ul class="list-unstyled">
+            
+              
+                <li><a href="https://www.pseudoyu.com/zh/tags/">标签</a></li>
+              
+              
+                <li><a href="https://www.pseudoyu.com/zh/categories/">分类</a></li>
+              
+            
+            
+            
+            <li><a rel="alternate" type="application/rss&#43;xml" href="https://www.pseudoyu.com/zh/index.xml"><i class="fas fa-rss-square"></i> RSS订阅</a></li>
+            
+            
+            
+        </ul>
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">社群</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://space.bilibili.com/5374948/" rel="noopener" target="_blank">BiliBili</a></li>
+          
+          <li><a href="https://www.facebook.com/pseudoyuzhang" rel="noopener" target="_blank">Facebook</a></li>
+          
+          <li><a href="https://www.instagram.com/pseudo.yu/" rel="noopener" target="_blank">Instagram</a></li>
+          
+          <li><a href="https://medium.com/@pseudoyu" rel="noopener" target="_blank">Medium</a></li>
+          
+          <li><a href="https://www.reddit.com/user/pseudo_yu" rel="noopener" target="_blank">Reddit</a></li>
+          
+          <li><a href="https://twitter.com/pseudo_yu" rel="noopener" target="_blank">Twitter</a></li>
+          
+          <li><a href="https://www.youtube.com/channel/UCR0O0s303tGBi3P02hstQPA/" rel="noopener" target="_blank">Youtube</a></li>
+          
+        </ul>
+        
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">友链</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://www.coursera.org/user/ffe947f087d1f63b161c3fcb310a6578" rel="noopener" target="_blank">Coursera</a></li>
+          
+          <li><a href="https://github.com/pseudoyu" rel="noopener" target="_blank">GitHub</a></li>
+          
+          <li><a href="https://www.goodreads.com/user/show/121369734-yu-zhang" rel="noopener" target="_blank">Goodreads</a></li>
+          
+          <li><a href="https://www.hackerrank.com/pseudoyu" rel="noopener" target="_blank">HackerRank</a></li>
+          
+          <li><a href="https://leetcode.com/pseudoyu/" rel="noopener" target="_blank">LeetCode</a></li>
+          
+          <li><a href="https://www.linkedin.com/in/pseudoyu/" rel="noopener" target="_blank">LinkedIn</a></li>
+          
+          <li><a href="https://acm.timus.ru/author.aspx?id=300324" rel="noopener" target="_blank">Timus OJ</a></li>
+          
+        </ul>
+        
+      </div> 
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <p class="pull-right text-right">
+          <small><em>Team Rocket: <a href="https://www.marshalgao.com" rel="noopener" target="_blank">Marshal</a> | <a href="https://www.m1sty.com" rel="noopener" target="_blank">Misty</a></em></small><br/>
+          <small><em>The University of Hong Kong - <a href="https://www.cs.hku.hk" rel="noopener" target="_blank">CS</a></em></small><br/>
+          <small>
+            &copy; 
+            pseudoyu
+            2020
+          </small>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

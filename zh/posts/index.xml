@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 05 Nov 2020 18:00:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Nov 2020 19:40:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode 680 Valid Palindrome 2</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/05/leetcode-680-valid-palindrome-2/</link>
+      <pubDate>Thu, 05 Nov 2020 19:40:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/05/leetcode-680-valid-palindrome-2/</guid>
+      <description>LeetCode #680 Valid Palindrome 2 Problem Description Given a non-empty string s, you may delete at most one character. Judge whether you can make it a palindrome. Example 1: Input: &amp;quot;aba&amp;quot; Output: True Example 2: Input: &amp;quot;abca&amp;quot; Output: True Explanation: You could delete the character &#39;c&#39;. My Solution 这道题是在一般的回文判断基础上增加了一个删除</description>
+    </item>
+    
     <item>
       <title>LeetCode 345 Reverse Vowels of a String</title>
       <link>https://www.pseudoyu.com/zh/2020/11/05/leetcode-345-reverse-vowels-of-a-string/</link>
@@ -183,15 +192,6 @@ My Solution import java.util.*; public class problem1000 { public static void ma
       
       <guid>https://www.pseudoyu.com/zh/2020/10/31/blockchain-ethereum-transaction-tree-and-receipt-tree/</guid>
       <description>Blockchain Technology and Applications Ethereum System (Account-based ledger) Transaction tree and Receipt tree  Merkle proof Bloom filter  Search whether an element is in a collection Filter useless blocks False postive No false negative Can&amp;rsquo;t do delete operation   Transaction-driven state machine  </description>
-    </item>
-    
-    <item>
-      <title>Blockchain Ethereum State tree</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/30/blockchain-ethereum-state-tree/</link>
-      <pubDate>Fri, 30 Oct 2020 10:21:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/30/blockchain-ethereum-state-tree/</guid>
-      <description>Blockchain Technology and Applications Ethereum System (Account-based ledger) State tree  addr -&amp;gt; state  Hash  Construct merkle tree cost too much   Unsorted merkle tree  No search and update method   Sorted merkle tree  Cost too much when inserting     (Key, Value)  RLP (Recursive Length Prefix)  Nested array of bytes   Compared: protocol buffer (protocolbuf)   Trie (Retrieval)  Pros  Branching factor Efficiency of trie depends on the length of key Avoid collision resistence Fixed input -&amp;gt; fixed output Update operation locally   Cons  Storage cost     Patricia tree (trie)  Compact the path, less memory cost When the distribution is sparse   Merkle Patricia Tree  Pointer -&amp;gt; Hash pointer  Merkle tree vs.</description>
     </item>
     
   </channel>

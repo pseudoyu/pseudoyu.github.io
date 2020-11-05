@@ -6,7 +6,16 @@
     <description>Recent content in java on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Nov 2020 18:00:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Nov 2020 19:40:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode 680 Valid Palindrome 2</title>
+      <link>https://www.pseudoyu.com/en/2020/11/05/leetcode-680-valid-palindrome-2/</link>
+      <pubDate>Thu, 05 Nov 2020 19:40:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/05/leetcode-680-valid-palindrome-2/</guid>
+      <description>LeetCode #680 Valid Palindrome 2 Problem Description Given a non-empty string s, you may delete at most one character. Judge whether you can make it a palindrome. Example 1: Input: &amp;quot;aba&amp;quot; Output: True Example 2: Input: &amp;quot;abca&amp;quot; Output: True Explanation: You could delete the character &#39;c&#39;. My Solution 这道题是在一般的回文判断基础上增加了一个删除</description>
+    </item>
+    
     <item>
       <title>LeetCode 345 Reverse Vowels of a String</title>
       <link>https://www.pseudoyu.com/en/2020/11/05/leetcode-345-reverse-vowels-of-a-string/</link>
@@ -186,15 +195,6 @@ My Solution import java.util.*; public class problem1000 { public static void ma
       <guid>https://www.pseudoyu.com/en/2020/10/21/java-operation/</guid>
       <description>Java Basics Operation Compare  Pass by value (Java use pass-by-value to pass parameters)  Change object&amp;rsquo;s value in a function will affect the original object&amp;rsquo;s value (same object) When referencing to a new object, change won&amp;rsquo;t affect the original object&amp;rsquo;s value (different object)   Pass by reference  Casting (compiler force to convert types using (type of))
  += -= *= /=  switch  Use string object in switch conditional statements  </description>
-    </item>
-    
-    <item>
-      <title>Java String</title>
-      <link>https://www.pseudoyu.com/en/2020/10/21/java-string/</link>
-      <pubDate>Wed, 21 Oct 2020 09:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/21/java-string/</guid>
-      <description>Java Basics String Feature  Immutable (byte, stated as final type)  Cache hash value  As the key of HashMap   Requirement of String Pool  Get reference from String Pool if it exists   Security  As parameter for many java classes  Network connection Opening files     Thread-safety  Shared among multiple threads freely      Compare  String  Immutable Thread-safe   StringBuffer  Mutable Thread-safe  Requirements of doing synchronization     StringBuilder  Mutable Not thread-safe    String Pool (stores all literal strings)  Useful to reduce memory requirements intern() method  If there is a string equals to the called one exists, return it (using equals() method) If not, create a new string and return   Create 2 &amp;ldquo;same&amp;rdquo; string  new String()  Create different strings   s.</description>
     </item>
     
   </channel>

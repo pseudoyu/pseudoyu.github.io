@@ -6,7 +6,16 @@
     <description>Recent content in java on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Nov 2020 13:00:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Nov 2020 18:00:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode 345 Reverse Vowels of a String</title>
+      <link>https://www.pseudoyu.com/en/2020/11/05/leetcode-345-reverse-vowels-of-a-string/</link>
+      <pubDate>Thu, 05 Nov 2020 18:00:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/05/leetcode-345-reverse-vowels-of-a-string/</guid>
+      <description>LeetCode #345 Reverse Vowels of a String Problem Description Write a function that takes a string as input and reverse only the vowels of a string. Note: The vowels does not include the letter &amp;ldquo;y&amp;rdquo;. Example 1: Input: &amp;quot;hello&amp;quot; Output: &amp;quot;holle&amp;quot; Example 2: Input: &amp;quot;leetcode&amp;quot; Output: &amp;quot;leotcede&amp;quot; My Solution 这道题基本思路是通过两个指针判断是否是元音</description>
+    </item>
+    
     <item>
       <title>LeetCode 633 Sum of Square Numbers</title>
       <link>https://www.pseudoyu.com/en/2020/11/05/leetcode-633-sum-of-square-numbers/</link>
@@ -186,15 +195,6 @@ My Solution import java.util.*; public class problem1000 { public static void ma
       
       <guid>https://www.pseudoyu.com/en/2020/10/21/java-string/</guid>
       <description>Java Basics String Feature  Immutable (byte, stated as final type)  Cache hash value  As the key of HashMap   Requirement of String Pool  Get reference from String Pool if it exists   Security  As parameter for many java classes  Network connection Opening files     Thread-safety  Shared among multiple threads freely      Compare  String  Immutable Thread-safe   StringBuffer  Mutable Thread-safe  Requirements of doing synchronization     StringBuilder  Mutable Not thread-safe    String Pool (stores all literal strings)  Useful to reduce memory requirements intern() method  If there is a string equals to the called one exists, return it (using equals() method) If not, create a new string and return   Create 2 &amp;ldquo;same&amp;rdquo; string  new String()  Create different strings   s.</description>
-    </item>
-    
-    <item>
-      <title>Java Data Type</title>
-      <link>https://www.pseudoyu.com/en/2020/10/21/java-data-type/</link>
-      <pubDate>Wed, 21 Oct 2020 08:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/21/java-data-type/</guid>
-      <description>Java Basics Data Type Primitive type  byte/8 char/16 short/16 int/32 float/32 long/64 double/64 boolean/~  Value  true(1) false(0)   JVM will convert it to int when compiling    Types &amp;lt;-&amp;gt; Warpper class  boolean - Boolean byte - Byte char - Character float - Float int - Integer long - Long short - Short double - Double  Autoboxing  Use valueOf() method primitive types -&amp;gt; corresponding object wrapper classes (e.</description>
     </item>
     
   </channel>

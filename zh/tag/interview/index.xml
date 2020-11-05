@@ -6,7 +6,16 @@
     <description>Recent content in interview on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 05 Nov 2020 13:00:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/interview/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Nov 2020 18:00:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/interview/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode 345 Reverse Vowels of a String</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/05/leetcode-345-reverse-vowels-of-a-string/</link>
+      <pubDate>Thu, 05 Nov 2020 18:00:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/05/leetcode-345-reverse-vowels-of-a-string/</guid>
+      <description>LeetCode #345 Reverse Vowels of a String Problem Description Write a function that takes a string as input and reverse only the vowels of a string. Note: The vowels does not include the letter &amp;ldquo;y&amp;rdquo;. Example 1: Input: &amp;quot;hello&amp;quot; Output: &amp;quot;holle&amp;quot; Example 2: Input: &amp;quot;leetcode&amp;quot; Output: &amp;quot;leotcede&amp;quot; My Solution 这道题基本思路是通过两个指针判断是否是元音</description>
+    </item>
+    
     <item>
       <title>LeetCode 633 Sum of Square Numbers</title>
       <link>https://www.pseudoyu.com/zh/2020/11/05/leetcode-633-sum-of-square-numbers/</link>

@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 05 Nov 2020 11:00:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Nov 2020 13:00:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode 633 Sum of Square Numbers</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/05/leetcode-633-sum-of-square-numbers/</link>
+      <pubDate>Thu, 05 Nov 2020 13:00:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/05/leetcode-633-sum-of-square-numbers/</guid>
+      <description>LeetCode #633 Sum of Square Numbers Problem Description Given a non-negative integer c, decide whether there&amp;rsquo;re two integers a and b such that a2 + b2 = c. Example 1: Input: c = 5 Output: true Explanation: 1 * 1 + 2 * 2 = 5 Example 2: Input: c = 3 Output: false Example 3: Input: c = 4 Output: true Example 4: Input: c = 2 Output: true</description>
+    </item>
+    
     <item>
       <title>LeetCode 167 Two Sum 2</title>
       <link>https://www.pseudoyu.com/zh/2020/11/05/leetcode-167-two-sum-2/</link>
@@ -183,15 +192,6 @@ My Solution import java.util.*; public class problem1000 { public static void ma
       
       <guid>https://www.pseudoyu.com/zh/2020/10/29/blockchain-ethereum-features/</guid>
       <description>Blockchain Technology and Applications Ethereum System (Account-based ledger) Feature  Memory hard Mining puzzle ASIC resistance  Account  Threats  Double spending attack Replay attack  Solution: add a nonce to count tx     Type  Externally owned account  Balance Nonce (sequence number)   Smart contract account (can&amp;rsquo;t start a transaction)  Balance Nonce Code Storge      PoW -&amp;gt; PoS Smart contract (decentralized contract) </description>
-    </item>
-    
-    <item>
-      <title>Blockchain BitCoin Questions</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/28/blockchain-bitcoin-questions/</link>
-      <pubDate>Wed, 28 Oct 2020 14:07:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/28/blockchain-bitcoin-questions/</guid>
-      <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Additional questions  Q: In a transaction, the receiver is not connected to the bitcoin network.  A: No need online, just records   Q: Lost private key  A: No solution Exchanges: Mt. Gox   Q: Wrong address  A: No solution   Q: OP_RETURN, return mistake, why it&amp;rsquo;s still executed?  A: OP_RETURN is in the output, so it will be verified in the next TX   Q: How to judge who find the nonce first?</description>
     </item>
     
   </channel>

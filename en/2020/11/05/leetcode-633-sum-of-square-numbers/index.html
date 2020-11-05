@@ -3,14 +3,14 @@
 <head>
   <meta name="generator" content="Hugo 0.78.0" />
   <meta charset="utf-8">
-  <title>LeetCode 167 Two Sum 2 · Pseudoyu</title>
+  <title>LeetCode 633 Sum of Square Numbers · Pseudoyu</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="LeetCode #167 Two Sum 2 (Input array is sorted) Problem Description Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number. The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2. Note: Your returned answers (both index1 and index2) are" />
+  <meta name="description" content="LeetCode #633 Sum of Square Numbers Problem Description Given a non-negative integer c, decide whether there&amp;rsquo;re two integers a and b such that a2 &#43; b2 = c. Example 1: Input: c = 5 Output: true Explanation: 1 * 1 &#43; 2 * 2 = 5 Example 2: Input: c = 3 Output: false Example 3: Input: c = 4 Output: true Example 4: Input: c = 2 Output: true" />
 
   <meta name="keywords" content="Hugo, theme, den" />
 
-<link rel="canonical" href="https://www.pseudoyu.com/en/2020/11/05/leetcode-167-two-sum-2/" />
-<link rel="alternate" href="https://www.pseudoyu.com/zh/2020/11/05/leetcode-167-two-sum-2/" hreflang="zh">
+<link rel="canonical" href="https://www.pseudoyu.com/en/2020/11/05/leetcode-633-sum-of-square-numbers/" />
+<link rel="alternate" href="https://www.pseudoyu.com/zh/2020/11/05/leetcode-633-sum-of-square-numbers/" hreflang="zh">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -19,24 +19,24 @@
 
 
 
-<meta property="og:title" content="LeetCode 167 Two Sum 2" />
-<meta property="og:description" content="LeetCode #167 Two Sum 2 (Input array is sorted) Problem Description Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number. The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2. Note: Your returned answers (both index1 and index2) are" />
+<meta property="og:title" content="LeetCode 633 Sum of Square Numbers" />
+<meta property="og:description" content="LeetCode #633 Sum of Square Numbers Problem Description Given a non-negative integer c, decide whether there&rsquo;re two integers a and b such that a2 &#43; b2 = c. Example 1: Input: c = 5 Output: true Explanation: 1 * 1 &#43; 2 * 2 = 5 Example 2: Input: c = 3 Output: false Example 3: Input: c = 4 Output: true Example 4: Input: c = 2 Output: true" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.pseudoyu.com/en/2020/11/05/leetcode-167-two-sum-2/" />
-<meta property="article:published_time" content="2020-11-05T11:00:17+08:00" />
-<meta property="article:modified_time" content="2020-11-05T11:00:17+08:00" />
-<meta itemprop="name" content="LeetCode 167 Two Sum 2">
-<meta itemprop="description" content="LeetCode #167 Two Sum 2 (Input array is sorted) Problem Description Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number. The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2. Note: Your returned answers (both index1 and index2) are">
-<meta itemprop="datePublished" content="2020-11-05T11:00:17+08:00" />
-<meta itemprop="dateModified" content="2020-11-05T11:00:17+08:00" />
-<meta itemprop="wordCount" content="466">
+<meta property="og:url" content="https://www.pseudoyu.com/en/2020/11/05/leetcode-633-sum-of-square-numbers/" />
+<meta property="article:published_time" content="2020-11-05T13:00:17+08:00" />
+<meta property="article:modified_time" content="2020-11-05T13:00:17+08:00" />
+<meta itemprop="name" content="LeetCode 633 Sum of Square Numbers">
+<meta itemprop="description" content="LeetCode #633 Sum of Square Numbers Problem Description Given a non-negative integer c, decide whether there&rsquo;re two integers a and b such that a2 &#43; b2 = c. Example 1: Input: c = 5 Output: true Explanation: 1 * 1 &#43; 2 * 2 = 5 Example 2: Input: c = 3 Output: false Example 3: Input: c = 4 Output: true Example 4: Input: c = 2 Output: true">
+<meta itemprop="datePublished" content="2020-11-05T13:00:17+08:00" />
+<meta itemprop="dateModified" content="2020-11-05T13:00:17+08:00" />
+<meta itemprop="wordCount" content="310">
 
 
 
 <meta itemprop="keywords" content="notes,programming,java,leetcode,algorithm,job,interview," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="LeetCode 167 Two Sum 2"/>
-<meta name="twitter:description" content="LeetCode #167 Two Sum 2 (Input array is sorted) Problem Description Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number. The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2. Note: Your returned answers (both index1 and index2) are"/>
+<meta name="twitter:title" content="LeetCode 633 Sum of Square Numbers"/>
+<meta name="twitter:description" content="LeetCode #633 Sum of Square Numbers Problem Description Given a non-negative integer c, decide whether there&rsquo;re two integers a and b such that a2 &#43; b2 = c. Example 1: Input: c = 5 Output: true Explanation: 1 * 1 &#43; 2 * 2 = 5 Example 2: Input: c = 3 Output: false Example 3: Input: c = 4 Output: true Example 4: Input: c = 2 Output: true"/>
 </head>
 <body>
   
@@ -110,7 +110,7 @@
   <div class="row">
     <div class="col-lg-12">
       <div class="header-content">
-        <h1 class="header-title">LeetCode 167 Two Sum 2</h1>
+        <h1 class="header-title">LeetCode 633 Sum of Square Numbers</h1>
         <p class="header-date">By
           pseudoyu /
         
@@ -137,7 +137,7 @@
 <p class="float-right translations">
     <i class="fas fa-language" aria-hidden="true"></i>
     Translations: 
-    <a href="https://www.pseudoyu.com/zh/2020/11/05/leetcode-167-two-sum-2/">ZH</a>
+    <a href="https://www.pseudoyu.com/zh/2020/11/05/leetcode-633-sum-of-square-numbers/">ZH</a>
 </p>
 
 
@@ -150,54 +150,51 @@
   <main>
 <div class="container content">
   <article>
-  <h1 id="leetcode-167-two-sum-2-input-array-is-sorted">LeetCode #167 Two Sum 2 (Input array is sorted)</h1>
+  <h1 id="leetcode-633-sum-of-square-numbers">LeetCode #633 Sum of Square Numbers</h1>
 <h2 id="problem-description">Problem Description</h2>
-<p>Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number.</p>
-<p>The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2.</p>
-<p><strong>Note:</strong></p>
-<ol>
-<li>Your returned answers (both index1 and index2) are not zero-based.</li>
-<li>You may assume that each input would have exactly one solution and you may not use the same element twice.</li>
-</ol>
+<p>Given a non-negative integer c, decide whether there&rsquo;re two integers a and b such that a2 + b2 = c.</p>
 <p><strong>Example 1:</strong></p>
-<pre><code>Input: numbers = [2,7,11,15], target = 9
-Output: [1,2]
-Explanation: The sum of 2 and 7 is 9. Therefore index1 = 1, index2 = 2.
+<pre><code>Input: c = 5
+Output: true
+Explanation: 1 * 1 + 2 * 2 = 5
 </code></pre>
 <p><strong>Example 2:</strong></p>
-<pre><code>Input: numbers = [2,3,4], target = 6
-Output: [1,3]
+<pre><code>Input: c = 3
+Output: false
 </code></pre>
 <p><strong>Example 3:</strong></p>
-<pre><code>Input: numbers = [-1,0], target = -1
-Output: [1,2]
+<pre><code>Input: c = 4
+Output: true
+</code></pre>
+<p><strong>Example 4:</strong></p>
+<pre><code>Input: c = 2
+Output: true
+</code></pre>
+<p><strong>Example 5:</strong></p>
+<pre><code>Input: c = 1
+Output: true
 </code></pre>
 <h2 id="my-solution">My Solution</h2>
-<p>这道题也是找两数之和相等的位置，学习了双指针的用法，就是在遍历循环中，两个指针指向不同的元素，协同得到答案。在这道题情境下，因为整个数组是排序好的，所以 小-&gt;大 和 大-&gt;小 两个指针很容易构建，这样头尾反向遍历只需要遍历整个数组一遍，只需要根据两指针sum来跳针指针移动行为就可以，时间复杂度很低。</p>
+<p>这道题和Two Sum的第二题原理一样，也是通过两个指针来分别移动寻找答案，以0为左指针，以给定值的平方根为右指针（减少多余的运算），当两指针平方和小于给定值，左指针右移，大于时则右指针左移</p>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
-    <span class="kd">public</span> <span class="kt">int</span><span class="o">[]</span> <span class="nf">twoSum</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">numbers</span><span class="o">,</span> <span class="kt">int</span> <span class="n">target</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">judgeSquareSum</span><span class="o">(</span><span class="kt">int</span> <span class="n">c</span><span class="o">)</span> <span class="o">{</span>
+		<span class="c1">//初始化返回值为false
+</span><span class="c1"></span>		<span class="kt">boolean</span> <span class="n">result</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
 		
-		<span class="c1">//构建存储结果的数组
-</span><span class="c1"></span>		<span class="kt">int</span><span class="o">[]</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">2</span><span class="o">];</span>
-		
-		<span class="c1">//构建两个指针，一个从前往后，一个从后往前
+		<span class="c1">//构建两个指针，下界为0，上界为&lt;输入值的平方根
 </span><span class="c1"></span>		<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span>
-		<span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">numbers</span><span class="o">.</span><span class="na">length</span> <span class="o">-</span> <span class="n">1</span><span class="o">;</span>
+		<span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">Math</span><span class="o">.</span><span class="na">sqrt</span><span class="o">(</span><span class="n">c</span><span class="o">);</span>
 
-		<span class="c1">//循环直至相逢
-</span><span class="c1"></span>		<span class="k">while</span> <span class="o">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">j</span><span class="o">)</span> <span class="o">{</span>
-			<span class="c1">//两个指针数值相加
-</span><span class="c1"></span>			<span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="n">numbers</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">+</span> <span class="n">numbers</span><span class="o">[</span><span class="n">j</span><span class="o">];</span>
-
-			<span class="c1">//判断两数大小，相等则返回结果，小于目标值则小指针向右移动以为，大于目标值则大指针向左移动一位
-</span><span class="c1"></span>			<span class="k">if</span> <span class="o">(</span><span class="n">sum</span> <span class="o">==</span> <span class="n">target</span><span class="o">)</span> <span class="o">{</span>
-				<span class="n">result</span><span class="o">[</span><span class="n">0</span><span class="o">]</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="n">1</span><span class="o">;</span>
-				<span class="n">result</span><span class="o">[</span><span class="n">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">j</span> <span class="o">+</span> <span class="n">1</span><span class="o">;</span>
+		<span class="c1">//判断两指针值的平方和与给定值，小于时左指针右移，大于时右指针左移
+</span><span class="c1"></span>		<span class="k">while</span> <span class="o">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">j</span><span class="o">)</span> <span class="o">{</span>
+			<span class="kt">int</span> <span class="n">pow</span> <span class="o">=</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span> <span class="o">+</span> <span class="n">j</span><span class="o">*</span><span class="n">j</span><span class="o">;</span>
+			<span class="k">if</span> <span class="o">(</span><span class="n">pow</span> <span class="o">==</span> <span class="n">c</span><span class="o">)</span> <span class="o">{</span>
+				<span class="n">result</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
 				<span class="k">return</span> <span class="n">result</span><span class="o">;</span>
-			<span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">sum</span> <span class="o">&lt;</span> <span class="n">target</span><span class="o">)</span> <span class="o">{</span>
-				<span class="n">i</span><span class="o">++;</span>
-			<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+			<span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">pow</span> <span class="o">&gt;</span> <span class="n">c</span><span class="o">)</span> <span class="o">{</span>
 				<span class="n">j</span><span class="o">--;</span>
+			<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+				<span class="n">i</span><span class="o">++;</span>
 			<span class="o">}</span>
 		<span class="o">}</span>
 		<span class="k">return</span> <span class="n">result</span><span class="o">;</span>

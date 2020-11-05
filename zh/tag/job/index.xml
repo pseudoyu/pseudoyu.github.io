@@ -6,7 +6,16 @@
     <description>Recent content in job on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 05 Nov 2020 11:00:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/job/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Nov 2020 13:00:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/job/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode 633 Sum of Square Numbers</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/05/leetcode-633-sum-of-square-numbers/</link>
+      <pubDate>Thu, 05 Nov 2020 13:00:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/05/leetcode-633-sum-of-square-numbers/</guid>
+      <description>LeetCode #633 Sum of Square Numbers Problem Description Given a non-negative integer c, decide whether there&amp;rsquo;re two integers a and b such that a2 + b2 = c. Example 1: Input: c = 5 Output: true Explanation: 1 * 1 + 2 * 2 = 5 Example 2: Input: c = 3 Output: false Example 3: Input: c = 4 Output: true Example 4: Input: c = 2 Output: true</description>
+    </item>
+    
     <item>
       <title>LeetCode 167 Two Sum 2</title>
       <link>https://www.pseudoyu.com/zh/2020/11/05/leetcode-167-two-sum-2/</link>

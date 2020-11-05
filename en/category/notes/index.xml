@@ -6,7 +6,16 @@
     <description>Recent content in Notes on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Nov 2020 09:25:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/category/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Nov 2020 11:00:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/category/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode 167 Two Sum 2</title>
+      <link>https://www.pseudoyu.com/en/2020/11/05/leetcode-167-two-sum-2/</link>
+      <pubDate>Thu, 05 Nov 2020 11:00:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/05/leetcode-167-two-sum-2/</guid>
+      <description>LeetCode #167 Two Sum 2 (Input array is sorted) Problem Description Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number. The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2. Note: Your returned answers (both index1 and index2) are</description>
+    </item>
+    
     <item>
       <title>Blockchain Proof of Stake</title>
       <link>https://www.pseudoyu.com/en/2020/11/05/blockchain-proof-of-stake/</link>
@@ -183,15 +192,6 @@ My Solution import java.util.*; public class problem1000 { public static void ma
       
       <guid>https://www.pseudoyu.com/en/2020/10/28/blockchain-bitcoin-questions/</guid>
       <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Additional questions  Q: In a transaction, the receiver is not connected to the bitcoin network.  A: No need online, just records   Q: Lost private key  A: No solution Exchanges: Mt. Gox   Q: Wrong address  A: No solution   Q: OP_RETURN, return mistake, why it&amp;rsquo;s still executed?  A: OP_RETURN is in the output, so it will be verified in the next TX   Q: How to judge who find the nonce first?</description>
-    </item>
-    
-    <item>
-      <title>Blockchain BitCoin Anonymity</title>
-      <link>https://www.pseudoyu.com/en/2020/10/28/blockchain-bitcoin-anonymity/</link>
-      <pubDate>Wed, 28 Oct 2020 10:07:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/28/blockchain-bitcoin-anonymity/</guid>
-      <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Anonymity  Pseudonymity Threats  Address generation  Analyze tx Analyze wallets (if used)   Connection to real identity  KYC (Know Your Customer)     Bad use  Silk road (eBay for illegal drugs)   Tips  TOR browser Coin mixing   Zero-knowledge proof  Signature (public key - private key)   Possible solution  Sacrifice  Performance Not absolutely secure   Zerocoin  Base coin Zero coin   Zerocash    </description>
     </item>
     
   </channel>

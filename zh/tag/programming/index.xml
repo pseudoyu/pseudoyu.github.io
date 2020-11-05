@@ -6,7 +6,16 @@
     <description>Recent content in programming on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 05 Nov 2020 19:40:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Nov 2020 01:00:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Timus 2001 Mathematicians and Berries</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/06/timus-2001-mathematicians-and-berries/</link>
+      <pubDate>Fri, 06 Nov 2020 01:00:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/06/timus-2001-mathematicians-and-berries/</guid>
+      <description>Timus 2001 Mathematicians and Berries Problem Description One day, two mathematicians were walking in the forest and picking berries. They’d been walking for two hours, and then they stopped and decided to see who’s got more berries. They took out the scales (can you imagine a mathematician going to the forest without any scales?) and they weighed their baskets with berries. They wrote the resulting numbers a1 and b1 down on a piece of paper.</description>
+    </item>
+    
     <item>
       <title>LeetCode 680 Valid Palindrome 2</title>
       <link>https://www.pseudoyu.com/zh/2020/11/05/leetcode-680-valid-palindrome-2/</link>
@@ -185,16 +194,6 @@ My Solution import java.util.*; public class problem1000 { public static void ma
       
       <guid>https://www.pseudoyu.com/zh/2020/10/21/java-keywords/</guid>
       <description>Java Basics Keywords final  Data  As for primitive data type, final make its value immutable As for reference, it can&amp;rsquo;t reference other objects but can modify itself   Method  Methods stated can&amp;rsquo;t be rewrite by its child class   Class  Can&amp;rsquo;t be inherited    static  Variable  static variable (also called class variable)  Belongs to the class and can be shared/accessed by the class name   instance variable  When creating an instance there will be an instance variable     static method  It exists when loading the class Don&amp;rsquo;t rely on any instance Can&amp;rsquo;t be abstract Can&amp;rsquo;t contain this, super keywords (they are related to specific object)   static (initialization) block  Operate once when doing the class initialization   static inner class  Don&amp;rsquo;t rely on external instance Can&amp;rsquo;t access non-static variables or methods of external class   static import  No need to refer to the ClassName  Simplify Hard to read     Initialization order  static variable, static block (Parent class) static variable, static block (Child class) instance variable, block (Parent class) Constructor (Parent class) instance variable, block (Child class) Constructor (Child class)    </description>
-    </item>
-    
-    <item>
-      <title>Java Operation</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/21/java-operation/</link>
-      <pubDate>Wed, 21 Oct 2020 10:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/21/java-operation/</guid>
-      <description>Java Basics Operation Compare  Pass by value (Java use pass-by-value to pass parameters)  Change object&amp;rsquo;s value in a function will affect the original object&amp;rsquo;s value (same object) When referencing to a new object, change won&amp;rsquo;t affect the original object&amp;rsquo;s value (different object)   Pass by reference  Casting (compiler force to convert types using (type of))
- += -= *= /=  switch  Use string object in switch conditional statements  </description>
     </item>
     
   </channel>

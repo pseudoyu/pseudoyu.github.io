@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 05 Nov 2020 19:40:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Nov 2020 01:00:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Timus 2001 Mathematicians and Berries</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/06/timus-2001-mathematicians-and-berries/</link>
+      <pubDate>Fri, 06 Nov 2020 01:00:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/06/timus-2001-mathematicians-and-berries/</guid>
+      <description>Timus 2001 Mathematicians and Berries Problem Description One day, two mathematicians were walking in the forest and picking berries. They’d been walking for two hours, and then they stopped and decided to see who’s got more berries. They took out the scales (can you imagine a mathematician going to the forest without any scales?) and they weighed their baskets with berries. They wrote the resulting numbers a1 and b1 down on a piece of paper.</description>
+    </item>
+    
     <item>
       <title>LeetCode 680 Valid Palindrome 2</title>
       <link>https://www.pseudoyu.com/zh/2020/11/05/leetcode-680-valid-palindrome-2/</link>
@@ -183,15 +192,6 @@ My Solution import java.util.*; public class problem1000 { public static void ma
       
       <guid>https://www.pseudoyu.com/zh/2020/11/02/java-generics/</guid>
       <description>Java Basics 泛型 (Generics) 定义 提供编译时类型安全检测机制 参数化类型 Java泛型 伪泛型（类型擦除） 使用方式 泛型类 // 定义泛型类 public class Generic&amp;lt;T&amp;gt; { private T key; public class Generic(T key) { this.key = key; } public</description>
-    </item>
-    
-    <item>
-      <title>Blockchain Ethereum Transaction tree and Receipt tree</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/31/blockchain-ethereum-transaction-tree-and-receipt-tree/</link>
-      <pubDate>Sat, 31 Oct 2020 19:36:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/31/blockchain-ethereum-transaction-tree-and-receipt-tree/</guid>
-      <description>Blockchain Technology and Applications Ethereum System (Account-based ledger) Transaction tree and Receipt tree  Merkle proof Bloom filter  Search whether an element is in a collection Filter useless blocks False postive No false negative Can&amp;rsquo;t do delete operation   Transaction-driven state machine  </description>
     </item>
     
   </channel>

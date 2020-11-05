@@ -6,61 +6,7 @@
     <description>Recent content in Notes on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 06 Nov 2020 01:36:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/category/notes/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Timus 1264 Workdays</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/06/timus-1264-workdays/</link>
-      <pubDate>Fri, 06 Nov 2020 01:36:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/06/timus-1264-workdays/</guid>
-      <description>Timus 1264 Workdays Problem Description After a success of the previous Vasechkin’s program that allowed to calculate the results of the elections in cause of two days Artemy Sidorovich was placed at the head of the department. At the moment Artemy Sidorovich prepares a task for his subordinate — programmer Petechkin. The task is to write a very useful function that would ease the life of all the department programmers. For each integer from 0 to M the function would calculate how many times this number appears in the N-element array.</description>
-    </item>
-    
-    <item>
-      <title>Timus 2001 Mathematicians and Berries</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/06/timus-2001-mathematicians-and-berries/</link>
-      <pubDate>Fri, 06 Nov 2020 01:00:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/06/timus-2001-mathematicians-and-berries/</guid>
-      <description>Timus 2001 Mathematicians and Berries Problem Description One day, two mathematicians were walking in the forest and picking berries. They’d been walking for two hours, and then they stopped and decided to see who’s got more berries. They took out the scales (can you imagine a mathematician going to the forest without any scales?) and they weighed their baskets with berries. They wrote the resulting numbers a1 and b1 down on a piece of paper.</description>
-    </item>
-    
-    <item>
-      <title>LeetCode 680 Valid Palindrome 2</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/05/leetcode-680-valid-palindrome-2/</link>
-      <pubDate>Thu, 05 Nov 2020 19:40:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/05/leetcode-680-valid-palindrome-2/</guid>
-      <description>LeetCode #680 Valid Palindrome 2 Problem Description Given a non-empty string s, you may delete at most one character. Judge whether you can make it a palindrome. Example 1: Input: &amp;quot;aba&amp;quot; Output: True Example 2: Input: &amp;quot;abca&amp;quot; Output: True Explanation: You could delete the character &#39;c&#39;. My Solution 这道题是在一般的回文判断基础上增加了一个删除</description>
-    </item>
-    
-    <item>
-      <title>LeetCode 345 Reverse Vowels of a String</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/05/leetcode-345-reverse-vowels-of-a-string/</link>
-      <pubDate>Thu, 05 Nov 2020 18:00:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/05/leetcode-345-reverse-vowels-of-a-string/</guid>
-      <description>LeetCode #345 Reverse Vowels of a String Problem Description Write a function that takes a string as input and reverse only the vowels of a string. Note: The vowels does not include the letter &amp;ldquo;y&amp;rdquo;. Example 1: Input: &amp;quot;hello&amp;quot; Output: &amp;quot;holle&amp;quot; Example 2: Input: &amp;quot;leetcode&amp;quot; Output: &amp;quot;leotcede&amp;quot; My Solution 这道题基本思路是通过两个指针判断是否是元音</description>
-    </item>
-    
-    <item>
-      <title>LeetCode 633 Sum of Square Numbers</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/05/leetcode-633-sum-of-square-numbers/</link>
-      <pubDate>Thu, 05 Nov 2020 13:00:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/05/leetcode-633-sum-of-square-numbers/</guid>
-      <description>LeetCode #633 Sum of Square Numbers Problem Description Given a non-negative integer c, decide whether there&amp;rsquo;re two integers a and b such that a2 + b2 = c. Example 1: Input: c = 5 Output: true Explanation: 1 * 1 + 2 * 2 = 5 Example 2: Input: c = 3 Output: false Example 3: Input: c = 4 Output: true Example 4: Input: c = 2 Output: true</description>
-    </item>
-    
-    <item>
-      <title>LeetCode 167 Two Sum 2</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/05/leetcode-167-two-sum-2/</link>
-      <pubDate>Thu, 05 Nov 2020 11:00:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/05/leetcode-167-two-sum-2/</guid>
-      <description>LeetCode #167 Two Sum 2 (Input array is sorted) Problem Description Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number. The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2. Note: Your returned answers (both index1 and index2) are</description>
-    </item>
-    
+    <lastBuildDate>Thu, 05 Nov 2020 09:25:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/category/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blockchain Proof of Stake</title>
       <link>https://www.pseudoyu.com/zh/2020/11/05/blockchain-proof-of-stake/</link>
@@ -98,85 +44,6 @@
     </item>
     
     <item>
-      <title>Timus 2012 About Grisha N</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/03/timus-2012-about-grisha-n/</link>
-      <pubDate>Tue, 03 Nov 2020 02:00:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/03/timus-2012-about-grisha-n/</guid>
-      <description>Timus 2012 About Grisha N Problem Description Grisha N. told his two teammates that he was going to solve all given problems at the subregional contest, even if the teammates wouldn’t show up at the competition. The teammates didn’t believe Grisha so he told them the plan how he was going to do this.
-During the first hour he wants to solve f problems. If there is still some time left to the end of the first hour, Grisha will simply walk along the hall.</description>
-    </item>
-    
-    <item>
-      <title>Timus 1877 Bicycle Codes</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/03/timus-1877-bicycle-codes/</link>
-      <pubDate>Tue, 03 Nov 2020 01:30:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/03/timus-1877-bicycle-codes/</guid>
-      <description>Timus 1877 Bicycle Codes Problem Description Den has two four-digit combination locks for protecting his bicycle from thieves. Every evening he arms the bicycle antitheft alarm and fastens the bicycle to a special stand with one of the locks. Den never uses the same lock two evenings in a row. One night a thief tried to open the lock using the code 0000. The alarm went off and the thief hurried away.</description>
-    </item>
-    
-    <item>
-      <title>Timus 1785 Lost in Localization</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/03/timus-1785-lost-in-localization/</link>
-      <pubDate>Tue, 03 Nov 2020 01:10:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/03/timus-1785-lost-in-localization/</guid>
-      <description>Timus 1785 Lost in Localization Problem Description The Lavin Interactive Company, which has developed the turn-based strategy Losers-V, is constantly extending its target market by localizing the game to as many languages as it can. In particular, they are interested in creating a version of the game in Anindilyakwa, which is one of the languages spoken by indigenous Australians.
-However, the localization is complicated by the fact that Anindilyakwa has no numerals.</description>
-    </item>
-    
-    <item>
-      <title>Timus 1409 Two Gangsters</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/03/timus-1409-two-gangsters/</link>
-      <pubDate>Tue, 03 Nov 2020 00:40:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/03/timus-1409-two-gangsters/</guid>
-      <description>Timus 1409 Two Gangsters Problem Description Two gangsters Harry and Larry had a rest at countryside. They decided to spend some time shooting, so they put several beer cans (no more than 10) on a log. Harry started to shoot cans one after another from the leftmost to the right and Larry – from the rightmost to the left. At some moment it happened so that they shot one and the same can.</description>
-    </item>
-    
-    <item>
-      <title>Timus 1293 Eniya</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/03/timus-1293-eniya/</link>
-      <pubDate>Tue, 03 Nov 2020 00:10:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/03/timus-1293-eniya/</guid>
-      <description>Timus 1293 Eniya Problem Description It’s restless now on the slips of the intergalactic port’s sixth dock of planet of Torn. No longer then in a month the reconstruction of the small ironclad corvette “Eniya” will be finished. And again this battle ship and its brave team would have to struggle for the control over plutonium mines of Sibelius. The work cannot be stopped even for a second, self-powered laser welders work round the clock.</description>
-    </item>
-    
-    <item>
-      <title>Timus 1001 Reverse Root</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/02/timus-1001-reverse-root/</link>
-      <pubDate>Mon, 02 Nov 2020 23:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/02/timus-1001-reverse-root/</guid>
-      <description>Timus 1001 Reverse Root Problem Description The problem is so easy, that the authors were lazy to write a statement for it!
-Input: The input stream contains a set of integer numbers Ai. The numbers are separated by any number of spaces and line breaks. A size of the input stream does not exceed 256 KB.
-Output: For each number Ai from the last one till the first one you should output its square root.</description>
-    </item>
-    
-    <item>
-      <title>Timus 1000 A&#43;B Problem</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/02/timus-1000-a-b-problem/</link>
-      <pubDate>Mon, 02 Nov 2020 22:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/02/timus-1000-a-b-problem/</guid>
-      <description>Timus 1000 A+B Problem Problem Description Calculate a + b
-Input: a and b
-Output: a+b
-My Solution import java.util.*; public class problem1000 { public static void main(String[] args) { Scanner in = new Scanner(System.in); int a = in.nextInt(); int b = in.nextInt(); in.close(); System.out.println(a + b); } } </description>
-    </item>
-    
-    <item>
-      <title>LeetCode 1 Two Sum</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/02/leetcode-1-two-sum/</link>
-      <pubDate>Mon, 02 Nov 2020 20:53:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/02/leetcode-1-two-sum/</guid>
-      <description>LeetCode #1 Two Sum Problem Description Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order. Example 1: Input: nums = [2,7,11,15], target = 9 Output: [0,1] Output: Because</description>
-    </item>
-    
-    <item>
       <title>Java Methods</title>
       <link>https://www.pseudoyu.com/zh/2020/11/02/java-methods/</link>
       <pubDate>Mon, 02 Nov 2020 14:00:17 +0800</pubDate>
@@ -192,6 +59,134 @@ My Solution import java.util.*; public class problem1000 { public static void ma
       
       <guid>https://www.pseudoyu.com/zh/2020/11/02/java-equals-method/</guid>
       <description>Java Basics Java equals Method equals() Features Equivalence relationship x.euqal(x); Compared to self x.equals(y) == y.equals(x); When conversed, also true if (x.equals(y) &amp;amp;&amp;amp; y.equals(z)) x.equals(z); When transited, also true x.equals(y) == x.equals(y); When repeated, always true x.equals(null) == false; When compared to null, always false (when x is not assigned null) About == For primitive data type, == measures the equivalence (there is no equals()) For reference, == measures whether</description>
+    </item>
+    
+    <item>
+      <title>Java Generics</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/02/java-generics/</link>
+      <pubDate>Mon, 02 Nov 2020 09:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/02/java-generics/</guid>
+      <description>Java Basics 泛型 (Generics) 定义 提供编译时类型安全检测机制 参数化类型 Java泛型 伪泛型（类型擦除） 使用方式 泛型类 // 定义泛型类 public class Generic&amp;lt;T&amp;gt; { private T key; public class Generic(T key) { this.key = key; } public</description>
+    </item>
+    
+    <item>
+      <title>Blockchain Ethereum Transaction tree and Receipt tree</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/31/blockchain-ethereum-transaction-tree-and-receipt-tree/</link>
+      <pubDate>Sat, 31 Oct 2020 19:36:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/31/blockchain-ethereum-transaction-tree-and-receipt-tree/</guid>
+      <description>Blockchain Technology and Applications Ethereum System (Account-based ledger) Transaction tree and Receipt tree  Merkle proof Bloom filter  Search whether an element is in a collection Filter useless blocks False postive No false negative Can&amp;rsquo;t do delete operation   Transaction-driven state machine  </description>
+    </item>
+    
+    <item>
+      <title>Blockchain Ethereum State tree</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/30/blockchain-ethereum-state-tree/</link>
+      <pubDate>Fri, 30 Oct 2020 10:21:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/30/blockchain-ethereum-state-tree/</guid>
+      <description>Blockchain Technology and Applications Ethereum System (Account-based ledger) State tree  addr -&amp;gt; state  Hash  Construct merkle tree cost too much   Unsorted merkle tree  No search and update method   Sorted merkle tree  Cost too much when inserting     (Key, Value)  RLP (Recursive Length Prefix)  Nested array of bytes   Compared: protocol buffer (protocolbuf)   Trie (Retrieval)  Pros  Branching factor Efficiency of trie depends on the length of key Avoid collision resistence Fixed input -&amp;gt; fixed output Update operation locally   Cons  Storage cost     Patricia tree (trie)  Compact the path, less memory cost When the distribution is sparse   Merkle Patricia Tree  Pointer -&amp;gt; Hash pointer  Merkle tree vs.</description>
+    </item>
+    
+    <item>
+      <title>Blockchain Ethereum Features</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/29/blockchain-ethereum-features/</link>
+      <pubDate>Thu, 29 Oct 2020 09:07:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/29/blockchain-ethereum-features/</guid>
+      <description>Blockchain Technology and Applications Ethereum System (Account-based ledger) Feature  Memory hard Mining puzzle ASIC resistance  Account  Threats  Double spending attack Replay attack  Solution: add a nonce to count tx     Type  Externally owned account  Balance Nonce (sequence number)   Smart contract account (can&amp;rsquo;t start a transaction)  Balance Nonce Code Storge      PoW -&amp;gt; PoS Smart contract (decentralized contract) </description>
+    </item>
+    
+    <item>
+      <title>Blockchain BitCoin Questions</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/28/blockchain-bitcoin-questions/</link>
+      <pubDate>Wed, 28 Oct 2020 14:07:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/28/blockchain-bitcoin-questions/</guid>
+      <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Additional questions  Q: In a transaction, the receiver is not connected to the bitcoin network.  A: No need online, just records   Q: Lost private key  A: No solution Exchanges: Mt. Gox   Q: Wrong address  A: No solution   Q: OP_RETURN, return mistake, why it&amp;rsquo;s still executed?  A: OP_RETURN is in the output, so it will be verified in the next TX   Q: How to judge who find the nonce first?</description>
+    </item>
+    
+    <item>
+      <title>Blockchain BitCoin Anonymity</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/28/blockchain-bitcoin-anonymity/</link>
+      <pubDate>Wed, 28 Oct 2020 10:07:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/28/blockchain-bitcoin-anonymity/</guid>
+      <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Anonymity  Pseudonymity Threats  Address generation  Analyze tx Analyze wallets (if used)   Connection to real identity  KYC (Know Your Customer)     Bad use  Silk road (eBay for illegal drugs)   Tips  TOR browser Coin mixing   Zero-knowledge proof  Signature (public key - private key)   Possible solution  Sacrifice  Performance Not absolutely secure   Zerocoin  Base coin Zero coin   Zerocash    </description>
+    </item>
+    
+    <item>
+      <title>Blockchain BitCoin Scripts</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/24/blockchain-bitcoin-scripts/</link>
+      <pubDate>Sat, 24 Oct 2020 09:07:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/24/blockchain-bitcoin-scripts/</guid>
+      <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Scripts (stack based language)  TX structure  txid hash version (of bitcoin) size locktime (take effect time) vin  txid vout scriptSig (input script)  asm hex     vout  value n scriptPubKey (output script) value   blockhash confirmations time (tx time) blocktime   Transaction  P2PK (Pay to Public Key)  input script  PUSHDATA (Sig) (signed by provate key)   output script  PUSHDATA (PubKey) CHECKSIG     P2PKH (Pay to Public Key Hash)  input script  PUSHDATA (Sig) (signed by provate key) PUSHDATA (PubKey)   output script  DUP (duplicate a PubKey) HASH160 (calculate the PubKey&amp;rsquo;s hash) PUSHDATA (PubKeyHash) EQUALVERIFY CHECKSIG     P2SH (Pay to Script Hash)  redeemScript  PUSHDATA (PubKey) CHECKSIG   input script  PUSHDATA (Sig) PUSHDATA (serialized redeemScript)   output script  HASH160 PUSHDATA (redeemScriptHash) EQUAL     Proof of Burn  Destroy bitcoin      </description>
+    </item>
+    
+    <item>
+      <title>Blockchain BitCoin Fork</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/23/blockchain-bitcoin-fork/</link>
+      <pubDate>Fri, 23 Oct 2020 09:07:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/23/blockchain-bitcoin-fork/</guid>
+      <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Fork  State fork  Forking attack (deliberate fork)   Protocol fork  Hard fork (permanent)  Block size limit (1M -&amp;gt; 4M)   Soft fork (&amp;gt; 50%, temporary)  Block size limit (1M -&amp;gt; 0.5M) coinbase  As extra nonce 2^32 -&amp;gt; 2^96 (adding 8 bytes) As root hash of UTXO   P2SH(Pay to Script Hash)      </description>
+    </item>
+    
+    <item>
+      <title>Java Throwable</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/22/java-throwable/</link>
+      <pubDate>Thu, 22 Oct 2020 10:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/22/java-throwable/</guid>
+      <description>Java Basics Throwable Error (JVM can&amp;rsquo;t handle with)
+ VirtualMachineError  StackOverFlowError OutOfMemoryError   AWTError  Exception (Can be deal with by program)
+ IOException  EOFException FileNotFoundException   RuntimeException  ArrithmeticException MissingResourceException ClassNotFoundException NullPointerException IllegalArgumentException ArrayIndexOutOfBoundsException UnknownTypeException    Basic syntax  try-catch throw throws finally  </description>
+    </item>
+    
+    <item>
+      <title>Java Inheritance</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/22/java-inheritance/</link>
+      <pubDate>Thu, 22 Oct 2020 09:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/22/java-inheritance/</guid>
+      <description>Java Basics Inheritance Access  Modifiers  protected  Visible to child class   private public   Encapsulation  Using API to communicate Class or members can be least accessed by external   Child class rewrites the parent class  Methods in child class must have higher access level   Field can&amp;rsquo;t be public  getter setter    Abstract class and Interface  Abstract class  abstract keyword  abstract method -&amp;gt; abstract class   Can&amp;rsquo;t be instanced Can be inherited   Interface  public field  static final   Members(field and method)  public     Difference  Abstract class provide a IS-A relationship while Interface provides a LIKE-A relationship One class can applied several interfaces but can&amp;rsquo;t inherit more than one abstract class Fields of interface must be static/final but abstract class has no restriction Members of interface must be public but abstract class have multiple accesses   Choose  Interface (higher priority)  Irrelevant classes need to realize the same method need to use multiple inheritance   Abstract class  Relevant classes need to share same code block Need to control members&#39; access Need to inherit non-static or no-constant field      Super  Access parent classes&#39; constructor Access members of parent classes  Method priority  this.</description>
+    </item>
+    
+    <item>
+      <title>Java Reflect</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/22/java-reflect/</link>
+      <pubDate>Thu, 22 Oct 2020 09:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/22/java-reflect/</guid>
+      <description>Java Basics Reflect Core concept  Load classes, methods/fields when JVM is running, no prior requirement of knowing the object when writing or compiling code  Functions (runtime)  Enables java code to discover information about the fields, methods and constructors of loaded classes Operate on their underlying counterparts within security restructions  Usage  Develop universal frameworks  java.lang.reflect  Field Method Constructor  Advantages  Extensibility Help with development (IDE) Help with debugging and testing  Disadvantages  Cost/Optimization Security restructions Exposing inner elements (private attributes or methods)  </description>
+    </item>
+    
+    <item>
+      <title>Blockchain BitCoin Mining</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/22/blockchain-bitcoin-mining/</link>
+      <pubDate>Thu, 22 Oct 2020 09:07:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/22/blockchain-bitcoin-mining/</guid>
+      <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Mining  Solve puzzles  Average block time  10 minutes   Difficulty  Target = target * (actual time / expected time) Adjust every 2 weeks Ar most 4 times, at least 1/4     Bernoulli process (nearly poisson process in BitCoin mining)  Bernoulli trial  A random experiment with binary outcome   A sequence of independent Bernoulli trial   Feature  Memoryless Progress free  Ensure the fairness of mining   Exponential distribution   Device (Universal -&amp;gt; Specific)  CPU GPU ASIC (Application Specific Integrated Circuit)) Mining pool (on demand mining)  Pool manager (risks of 51% attack) miners      </description>
+    </item>
+    
+    <item>
+      <title>Blockchain BitCoin Features</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/21/blockchain-bitcoin-features/</link>
+      <pubDate>Wed, 21 Oct 2020 22:07:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/21/blockchain-bitcoin-features/</guid>
+      <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) UTXO (Unspent Transaction Output)  Total inputs = total outputs  Quantity  21,000,000  Block reward  Coinbase transaction Cut half every 4 year  Transaction fee BitCoin network  Structure  Application layer  BitCoin blockchain   Network layer  P2P overlay network     Node  Seed node   Feature  Simple Robust Not efficient &amp;ldquo;Best effort&amp;rdquo;   Message transport  Flooding    Security  Problem  Sybil attack Forking attack Boycott Selfish mining  Reduce competition     Solution  Based on computing power (large cost) Require 6 confirmation by nodes (long time, about 1 hour)    </description>
+    </item>
+    
+    <item>
+      <title>ICOM6045 Topic 1 Cryptography</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/21/icom6045-topic-1-cryptography/</link>
+      <pubDate>Wed, 21 Oct 2020 19:53:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/21/icom6045-topic-1-cryptography/</guid>
+      <description>ICOM6045 Fundamentals of E-Commerce Security Topic 1 Cryptography Definition  Process of transforming information to make it unreadable to anyone except those possessing the key  Purpose  Data confidentiality  Transpositions/Permutations  An encryption in which the letters of the message are rearranged Function  Try to break established patterns   Example  Columnar transposition  Rearrangement of the characters of the plaintext into columns Based on characteristic patterns of pairs of adjacent letters, called digrams Analysis  Compute the letter frequencies  Break the text into columns by compare a block of ciphertext characters against characters successively farther away in the ciphertext.</description>
     </item>
     
   </channel>

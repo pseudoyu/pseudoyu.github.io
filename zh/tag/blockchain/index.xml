@@ -6,7 +6,16 @@
     <description>Recent content in blockchain on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 05 Nov 2020 09:25:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/blockchain/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Nov 2020 00:09:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/blockchain/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blockchain Proof of Stake</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/07/blockchain-proof-of-stake/</link>
+      <pubDate>Sat, 07 Nov 2020 00:09:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/07/blockchain-proof-of-stake/</guid>
+      <description>Blockchain Technology and Applications Ethereum Smart Contract 定义 运行在区块链上的一段代码 代码逻辑定义了合约的内容 智能合约账户保存了合约的当前运行状态 余额 交易次数 合约代码 存储, MPT 不支持多线</description>
+    </item>
+    
     <item>
       <title>Blockchain Proof of Stake</title>
       <link>https://www.pseudoyu.com/zh/2020/11/05/blockchain-proof-of-stake/</link>
@@ -177,15 +186,6 @@
       
       <guid>https://www.pseudoyu.com/zh/2020/10/18/%E5%8C%BA%E5%9D%97%E9%93%BE%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/</guid>
       <description>区块链学习计划 知识结构 算法刷题 剑指Offer LeetCode 笔试面试题库 编程语言 Java相关 基础 CS61B - UC Berkley Java学习笔记 - GitHub 容器 并发 多线程编程（threa</description>
-    </item>
-    
-    <item>
-      <title>区块链岗位描述</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/02/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%B2%97%E4%BD%8D%E6%8F%8F%E8%BF%B0/</link>
-      <pubDate>Fri, 02 Oct 2020 00:07:31 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/02/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%B2%97%E4%BD%8D%E6%8F%8F%E8%BF%B0/</guid>
-      <description>区块链岗位描述 蚂蚁集团-区块链安全高级研发工程师/研发专家 岗位描述 负责智能合约安全审计工具、合约虚拟机增强扩展等系统的研发 负责区块链相关安全</description>
     </item>
     
   </channel>

@@ -6,7 +6,16 @@
     <description>Recent content in security on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Nov 2020 09:25:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/security/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Nov 2020 00:09:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blockchain Proof of Stake</title>
+      <link>https://www.pseudoyu.com/en/2020/11/07/blockchain-proof-of-stake/</link>
+      <pubDate>Sat, 07 Nov 2020 00:09:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/07/blockchain-proof-of-stake/</guid>
+      <description>Blockchain Technology and Applications Ethereum Smart Contract 定义 运行在区块链上的一段代码 代码逻辑定义了合约的内容 智能合约账户保存了合约的当前运行状态 余额 交易次数 合约代码 存储, MPT 不支持多线</description>
+    </item>
+    
     <item>
       <title>Blockchain Proof of Stake</title>
       <link>https://www.pseudoyu.com/en/2020/11/05/blockchain-proof-of-stake/</link>

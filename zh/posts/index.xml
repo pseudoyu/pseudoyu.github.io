@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 06 Nov 2020 01:36:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Nov 2020 00:09:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blockchain Proof of Stake</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/07/blockchain-proof-of-stake/</link>
+      <pubDate>Sat, 07 Nov 2020 00:09:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/07/blockchain-proof-of-stake/</guid>
+      <description>Blockchain Technology and Applications Ethereum Smart Contract 定义 运行在区块链上的一段代码 代码逻辑定义了合约的内容 智能合约账户保存了合约的当前运行状态 余额 交易次数 合约代码 存储, MPT 不支持多线</description>
+    </item>
+    
     <item>
       <title>Timus 1264 Workdays</title>
       <link>https://www.pseudoyu.com/zh/2020/11/06/timus-1264-workdays/</link>
@@ -183,15 +192,6 @@ My Solution import java.util.*; public class problem1000 { public static void ma
       
       <guid>https://www.pseudoyu.com/zh/2020/11/02/java-methods/</guid>
       <description>Java Basics Java 方法 (Methods) Java程序设计语言总是采用按值调用 // Example public class methodTest { public static void main(String[] args) { // TODO Auto-generated method stub Student s1 = new Student(&amp;#34;Misty&amp;#34;); Student s2 = new Student(&amp;#34;Marshal&amp;#34;); Test.swap(s1, s2); System.out.println(&amp;#34;s1:&amp;#34; + s1.getName()); System.out.println(&amp;#34;s2:&amp;#34; + s2.getName()); } public static void swap(Student x, Student y) { Student temp</description>
-    </item>
-    
-    <item>
-      <title>Java equals Method</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/02/java-equals-method/</link>
-      <pubDate>Mon, 02 Nov 2020 13:00:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/02/java-equals-method/</guid>
-      <description>Java Basics Java equals Method equals() Features Equivalence relationship x.euqal(x); Compared to self x.equals(y) == y.equals(x); When conversed, also true if (x.equals(y) &amp;amp;&amp;amp; y.equals(z)) x.equals(z); When transited, also true x.equals(y) == x.equals(y); When repeated, always true x.equals(null) == false; When compared to null, always false (when x is not assigned null) About == For primitive data type, == measures the equivalence (there is no equals()) For reference, == measures whether</description>
     </item>
     
   </channel>

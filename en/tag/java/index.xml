@@ -6,7 +6,16 @@
     <description>Recent content in java on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 06 Nov 2020 01:36:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Nov 2020 00:50:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode 141 Linked List Cycle</title>
+      <link>https://www.pseudoyu.com/en/2020/11/07/leetcode-141-linked-list-cycle/</link>
+      <pubDate>Sat, 07 Nov 2020 00:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/07/leetcode-141-linked-list-cycle/</guid>
+      <description>LeetCode #141 Linked List Cycle Problem Description Given head, the head of a linked list, determine if the linked list has a cycle in it. There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer. Internally, pos is used to denote the index of the node that tail&amp;rsquo;s next pointer is connected to.</description>
+    </item>
+    
     <item>
       <title>Timus 1264 Workdays</title>
       <link>https://www.pseudoyu.com/en/2020/11/06/timus-1264-workdays/</link>
@@ -185,15 +194,6 @@ My Solution import java.util.*; public class problem1000 { public static void ma
       
       <guid>https://www.pseudoyu.com/en/2020/10/22/java-inheritance/</guid>
       <description>Java Basics Inheritance Access  Modifiers  protected  Visible to child class   private public   Encapsulation  Using API to communicate Class or members can be least accessed by external   Child class rewrites the parent class  Methods in child class must have higher access level   Field can&amp;rsquo;t be public  getter setter    Abstract class and Interface  Abstract class  abstract keyword  abstract method -&amp;gt; abstract class   Can&amp;rsquo;t be instanced Can be inherited   Interface  public field  static final   Members(field and method)  public     Difference  Abstract class provide a IS-A relationship while Interface provides a LIKE-A relationship One class can applied several interfaces but can&amp;rsquo;t inherit more than one abstract class Fields of interface must be static/final but abstract class has no restriction Members of interface must be public but abstract class have multiple accesses   Choose  Interface (higher priority)  Irrelevant classes need to realize the same method need to use multiple inheritance   Abstract class  Relevant classes need to share same code block Need to control members&#39; access Need to inherit non-static or no-constant field      Super  Access parent classes&#39; constructor Access members of parent classes  Method priority  this.</description>
-    </item>
-    
-    <item>
-      <title>Java Reflect</title>
-      <link>https://www.pseudoyu.com/en/2020/10/22/java-reflect/</link>
-      <pubDate>Thu, 22 Oct 2020 09:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/22/java-reflect/</guid>
-      <description>Java Basics Reflect Core concept  Load classes, methods/fields when JVM is running, no prior requirement of knowing the object when writing or compiling code  Functions (runtime)  Enables java code to discover information about the fields, methods and constructors of loaded classes Operate on their underlying counterparts within security restructions  Usage  Develop universal frameworks  java.lang.reflect  Field Method Constructor  Advantages  Extensibility Help with development (IDE) Help with debugging and testing  Disadvantages  Cost/Optimization Security restructions Exposing inner elements (private attributes or methods)  </description>
     </item>
     
   </channel>

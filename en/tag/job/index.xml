@@ -6,7 +6,16 @@
     <description>Recent content in job on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 06 Nov 2020 01:36:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/job/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Nov 2020 00:50:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/job/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode 141 Linked List Cycle</title>
+      <link>https://www.pseudoyu.com/en/2020/11/07/leetcode-141-linked-list-cycle/</link>
+      <pubDate>Sat, 07 Nov 2020 00:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/07/leetcode-141-linked-list-cycle/</guid>
+      <description>LeetCode #141 Linked List Cycle Problem Description Given head, the head of a linked list, determine if the linked list has a cycle in it. There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer. Internally, pos is used to denote the index of the node that tail&amp;rsquo;s next pointer is connected to.</description>
+    </item>
+    
     <item>
       <title>Timus 1264 Workdays</title>
       <link>https://www.pseudoyu.com/en/2020/11/06/timus-1264-workdays/</link>

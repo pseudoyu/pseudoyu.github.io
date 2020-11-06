@@ -6,7 +6,16 @@
     <description>Recent content in notes on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 07 Nov 2020 00:09:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Nov 2020 00:50:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode 141 Linked List Cycle</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/07/leetcode-141-linked-list-cycle/</link>
+      <pubDate>Sat, 07 Nov 2020 00:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/07/leetcode-141-linked-list-cycle/</guid>
+      <description>LeetCode #141 Linked List Cycle Problem Description Given head, the head of a linked list, determine if the linked list has a cycle in it. There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer. Internally, pos is used to denote the index of the node that tail&amp;rsquo;s next pointer is connected to.</description>
+    </item>
+    
     <item>
       <title>Blockchain Ethereum Smart Contract</title>
       <link>https://www.pseudoyu.com/zh/2020/11/07/blockchain-ethereum-smart-contract/</link>
@@ -183,15 +192,6 @@ My Solution import java.util.*; public class problem1000 { public static void ma
       
       <guid>https://www.pseudoyu.com/zh/2020/11/02/leetcode-1-two-sum/</guid>
       <description>LeetCode #1 Two Sum Problem Description Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order. Example 1: Input: nums = [2,7,11,15], target = 9 Output: [0,1] Output: Because</description>
-    </item>
-    
-    <item>
-      <title>Java Methods</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/02/java-methods/</link>
-      <pubDate>Mon, 02 Nov 2020 14:00:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/02/java-methods/</guid>
-      <description>Java Basics Java 方法 (Methods) Java程序设计语言总是采用按值调用 // Example public class methodTest { public static void main(String[] args) { // TODO Auto-generated method stub Student s1 = new Student(&amp;#34;Misty&amp;#34;); Student s2 = new Student(&amp;#34;Marshal&amp;#34;); Test.swap(s1, s2); System.out.println(&amp;#34;s1:&amp;#34; + s1.getName()); System.out.println(&amp;#34;s2:&amp;#34; + s2.getName()); } public static void swap(Student x, Student y) { Student temp</description>
     </item>
     
   </channel>

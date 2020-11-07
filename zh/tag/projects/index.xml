@@ -6,7 +6,20 @@
     <description>Recent content in projects on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 16 Oct 2020 09:19:19 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Nov 2020 00:40:25 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>xDeepFM for Recommender Systems</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/08/xdeepfm-for-recommender-systems/</link>
+      <pubDate>Sun, 08 Nov 2020 00:40:25 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/08/xdeepfm-for-recommender-systems/</guid>
+      <description>COMP7404 Group Project - xDeepFM for Recommender Systems eXtreme Deep Factorization Machine (xDeepFM)
+This paper propose a novel Compressed Interaction Network (CIN), which aims to generate feature interactions in an explicit fashion and at the vector-wise level.
+Github Repository GitHub: xDeepFM_for_Recommender_Systems
+Video Demo Video Demo: xDeepFM_for_Recommender_Systems
+Datasets  Criteo Dataset. It is a famous industry benchmarking dataset for developing models predicting ad click-through rate, and is publicly accessible. Given a user and the page he is visiting, the goal is to predict the probability that he will clik on a given ad  Running Environment I strongly recommmend that you use Anaconda to implement this project.</description>
+    </item>
+    
     <item>
       <title>A Look at Tik-Tok</title>
       <link>https://www.pseudoyu.com/zh/2020/10/16/a-look-at-tik-tok/</link>

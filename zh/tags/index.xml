@@ -6,13 +6,94 @@
     <description>Recent content in Tags on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 07 Nov 2020 00:50:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Nov 2020 00:40:25 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ai</title>
+      <link>https://www.pseudoyu.com/zh/tag/ai/</link>
+      <pubDate>Sun, 08 Nov 2020 00:40:25 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/tag/ai/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>algorithm</title>
       <link>https://www.pseudoyu.com/zh/tag/algorithm/</link>
-      <pubDate>Sat, 07 Nov 2020 00:50:17 +0800</pubDate>
+      <pubDate>Sun, 08 Nov 2020 00:40:25 +0800</pubDate>
       
       <guid>https://www.pseudoyu.com/zh/tag/algorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>comp</title>
+      <link>https://www.pseudoyu.com/zh/tag/comp/</link>
+      <pubDate>Sun, 08 Nov 2020 00:40:25 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/tag/comp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>comp7404</title>
+      <link>https://www.pseudoyu.com/zh/tag/comp7404/</link>
+      <pubDate>Sun, 08 Nov 2020 00:40:25 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/tag/comp7404/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ecic</title>
+      <link>https://www.pseudoyu.com/zh/tag/ecic/</link>
+      <pubDate>Sun, 08 Nov 2020 00:40:25 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/tag/ecic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hku</title>
+      <link>https://www.pseudoyu.com/zh/tag/hku/</link>
+      <pubDate>Sun, 08 Nov 2020 00:40:25 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/tag/hku/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ml</title>
+      <link>https://www.pseudoyu.com/zh/tag/ml/</link>
+      <pubDate>Sun, 08 Nov 2020 00:40:25 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/tag/ml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programming</title>
+      <link>https://www.pseudoyu.com/zh/tag/programming/</link>
+      <pubDate>Sun, 08 Nov 2020 00:40:25 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/tag/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>projects</title>
+      <link>https://www.pseudoyu.com/zh/tag/projects/</link>
+      <pubDate>Sun, 08 Nov 2020 00:40:25 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/tag/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://www.pseudoyu.com/zh/tag/python/</link>
+      <pubDate>Sun, 08 Nov 2020 00:40:25 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/tag/python/</guid>
       <description></description>
     </item>
     
@@ -62,15 +143,6 @@
     </item>
     
     <item>
-      <title>programming</title>
-      <link>https://www.pseudoyu.com/zh/tag/programming/</link>
-      <pubDate>Sat, 07 Nov 2020 00:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/tag/programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>bilibili</title>
       <link>https://www.pseudoyu.com/zh/tag/bilibili/</link>
       <pubDate>Sat, 07 Nov 2020 00:09:17 +0800</pubDate>
@@ -112,78 +184,6 @@
       <pubDate>Sat, 07 Nov 2020 00:09:17 +0800</pubDate>
       
       <guid>https://www.pseudoyu.com/zh/tag/decentralization/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ethereum</title>
-      <link>https://www.pseudoyu.com/zh/tag/ethereum/</link>
-      <pubDate>Sat, 07 Nov 2020 00:09:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/tag/ethereum/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>pku</title>
-      <link>https://www.pseudoyu.com/zh/tag/pku/</link>
-      <pubDate>Sat, 07 Nov 2020 00:09:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/tag/pku/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>security</title>
-      <link>https://www.pseudoyu.com/zh/tag/security/</link>
-      <pubDate>Sat, 07 Nov 2020 00:09:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/tag/security/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>technology</title>
-      <link>https://www.pseudoyu.com/zh/tag/technology/</link>
-      <pubDate>Sat, 07 Nov 2020 00:09:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/tag/technology/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>acm</title>
-      <link>https://www.pseudoyu.com/zh/tag/acm/</link>
-      <pubDate>Fri, 06 Nov 2020 01:36:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/tag/acm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>timus</title>
-      <link>https://www.pseudoyu.com/zh/tag/timus/</link>
-      <pubDate>Fri, 06 Nov 2020 01:36:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/tag/timus/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>basic</title>
-      <link>https://www.pseudoyu.com/zh/tag/basic/</link>
-      <pubDate>Mon, 02 Nov 2020 14:00:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/tag/basic/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>github</title>
-      <link>https://www.pseudoyu.com/zh/tag/github/</link>
-      <pubDate>Mon, 02 Nov 2020 14:00:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/tag/github/</guid>
       <description></description>
     </item>
     

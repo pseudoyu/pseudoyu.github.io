@@ -6,7 +6,20 @@
     <description>Recent content in programming on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 07 Nov 2020 00:50:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Nov 2020 00:40:25 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>xDeepFM for Recommender Systems</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/08/xdeepfm-for-recommender-systems/</link>
+      <pubDate>Sun, 08 Nov 2020 00:40:25 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/08/xdeepfm-for-recommender-systems/</guid>
+      <description>COMP7404 Group Project - xDeepFM for Recommender Systems eXtreme Deep Factorization Machine (xDeepFM)
+This paper propose a novel Compressed Interaction Network (CIN), which aims to generate feature interactions in an explicit fashion and at the vector-wise level.
+Github Repository GitHub: xDeepFM_for_Recommender_Systems
+Video Demo Video Demo: xDeepFM_for_Recommender_Systems
+Datasets  Criteo Dataset. It is a famous industry benchmarking dataset for developing models predicting ad click-through rate, and is publicly accessible. Given a user and the page he is visiting, the goal is to predict the probability that he will clik on a given ad  Running Environment I strongly recommmend that you use Anaconda to implement this project.</description>
+    </item>
+    
     <item>
       <title>LeetCode 141 Linked List Cycle</title>
       <link>https://www.pseudoyu.com/zh/2020/11/07/leetcode-141-linked-list-cycle/</link>
@@ -185,15 +198,6 @@ My Solution import java.util.*; public class problem1000 { public static void ma
       <description>Java Basics Throwable Error (JVM can&amp;rsquo;t handle with)
  VirtualMachineError  StackOverFlowError OutOfMemoryError   AWTError  Exception (Can be deal with by program)
  IOException  EOFException FileNotFoundException   RuntimeException  ArrithmeticException MissingResourceException ClassNotFoundException NullPointerException IllegalArgumentException ArrayIndexOutOfBoundsException UnknownTypeException    Basic syntax  try-catch throw throws finally  </description>
-    </item>
-    
-    <item>
-      <title>Java Inheritance</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/22/java-inheritance/</link>
-      <pubDate>Thu, 22 Oct 2020 09:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/22/java-inheritance/</guid>
-      <description>Java Basics Inheritance Access  Modifiers  protected  Visible to child class   private public   Encapsulation  Using API to communicate Class or members can be least accessed by external   Child class rewrites the parent class  Methods in child class must have higher access level   Field can&amp;rsquo;t be public  getter setter    Abstract class and Interface  Abstract class  abstract keyword  abstract method -&amp;gt; abstract class   Can&amp;rsquo;t be instanced Can be inherited   Interface  public field  static final   Members(field and method)  public     Difference  Abstract class provide a IS-A relationship while Interface provides a LIKE-A relationship One class can applied several interfaces but can&amp;rsquo;t inherit more than one abstract class Fields of interface must be static/final but abstract class has no restriction Members of interface must be public but abstract class have multiple accesses   Choose  Interface (higher priority)  Irrelevant classes need to realize the same method need to use multiple inheritance   Abstract class  Relevant classes need to share same code block Need to control members&#39; access Need to inherit non-static or no-constant field      Super  Access parent classes&#39; constructor Access members of parent classes  Method priority  this.</description>
     </item>
     
   </channel>

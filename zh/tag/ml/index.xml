@@ -13,7 +13,7 @@
       <pubDate>Sun, 08 Nov 2020 00:40:25 +0800</pubDate>
       
       <guid>https://www.pseudoyu.com/zh/2020/11/08/xdeepfm-for-recommender-systems/</guid>
-      <description>COMP7404 Group Project - xDeepFM for Recommender Systems eXtreme Deep Factorization Machine (xDeepFM)
+      <description>xDeepFM for Recommender Systems eXtreme Deep Factorization Machine (xDeepFM)
 This paper propose a novel Compressed Interaction Network (CIN), which aims to generate feature interactions in an explicit fashion and at the vector-wise level.
 Github Repository GitHub: xDeepFM_for_Recommender_Systems
 Video Demo Video Demo: xDeepFM_for_Recommender_Systems

@@ -70,7 +70,7 @@
       
       <guid>https://www.pseudoyu.com/zh/2020/11/08/xdeepfm-for-recommender-systems/</guid>
       
-        <description>&lt;h1 id=&#34;comp7404-group-project---xdeepfm-for-recommender-systems&#34;&gt;COMP7404 Group Project - xDeepFM for Recommender Systems&lt;/h1&gt;
+        <description>&lt;h1 id=&#34;xdeepfm-for-recommender-systems&#34;&gt;xDeepFM for Recommender Systems&lt;/h1&gt;
 &lt;p&gt;eXtreme Deep Factorization Machine (&lt;a href=&#34;https://arxiv.org/abs/1803.05170&#34;&gt;xDeepFM&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;This paper propose a novel Compressed Interaction Network (CIN), which aims to generate feature interactions in an explicit fashion and at the vector-wise level.&lt;/p&gt;
 &lt;h2 id=&#34;github-repository&#34;&gt;Github Repository&lt;/h2&gt;

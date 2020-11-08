@@ -41,7 +41,7 @@ Video Demo Video Demo: xDeepFM_for_Recommender_Systems
 Datasets  Criteo Dataset. It is a famous industry benchmarking dataset for developing models predicting ad click-through rate, and is publicly accessible. Given a user and the page he is visiting, the goal is to predict the probability that he will clik on a given ad  Running Environment I strongly recommmend that you use Anaconda to implement this project.">
 <meta itemprop="datePublished" content="2020-11-08T00:40:25+08:00" />
 <meta itemprop="dateModified" content="2020-11-08T00:40:25+08:00" />
-<meta itemprop="wordCount" content="254">
+<meta itemprop="wordCount" content="272">
 
 
 
@@ -214,7 +214,13 @@ Datasets  Criteo Dataset. It is a famous industry benchmarking dataset for devel
 <li>Run <code>pip install -r requirements.txt</code> to install the package dependencies</li>
 <li>Now you can run the code simply through <code>python main.py</code></li>
 </ol>
-<h3 id="dependencies">Dependencies</h3>
+<div class="highlight"><pre class="chroma"><code class="language-zsh" data-lang="zsh"><span class="nb">cd</span> YouPath/xDeepFM_for_Recommender_Systems/exdeepfm
+bash ./.Anaconda3-2020.07-Linux-x86_64.sh
+conda create -n xdeepfm <span class="nv">python</span><span class="o">=</span>3.6
+conda activate xdeepfm
+pip install -r requirements.txt
+python main.py
+</code></pre></div><h3 id="dependencies">Dependencies</h3>
 <ul>
 <li>absl-py==0.8.1</li>
 <li>astor==0.8.0</li>

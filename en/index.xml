@@ -82,7 +82,7 @@
 &lt;li&gt;&lt;strong&gt;&lt;a href=&#34;http://labs.criteo.com/2014/02/kaggle-display-advertising-challenge-dataset/&#34;&gt;Criteo Dataset&lt;/a&gt;.&lt;/strong&gt; It is a famous industry benchmarking dataset for developing models predicting ad click-through rate, and is publicly accessible. Given a user and the page he is visiting, the goal is to predict the probability that he will clik on a given ad&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;running-environment&#34;&gt;Running Environment&lt;/h2&gt;
-&lt;p&gt;I strongly recommmend that you use &lt;a href=&#34;https://www.anaconda.com&#34;&gt;Anaconda&lt;/a&gt; to implement this project. Here is some simple instructions:&lt;/p&gt;
+&lt;p&gt;I strongly recommmend that you use &lt;a href=&#34;https://www.anaconda.com&#34;&gt;Anaconda&lt;/a&gt; to implement this project. Here are some simple instructions:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Download a suitable version (&lt;a href=&#34;https://repo.anaconda.com/archive/Anaconda3-2020.07-Windows-x86_64.exe&#34;&gt;Windows&lt;/a&gt;/&lt;a href=&#34;https://repo.anaconda.com/archive/Anaconda3-2020.07-MacOSX-x86_64.pkg&#34;&gt;MacOS&lt;/a&gt;/&lt;a href=&#34;https://repo.anaconda.com/archive/Anaconda3-2020.07-Linux-x86_64.sh&#34;&gt;Linux&lt;/a&gt;)  for your OS and install it (check for latest version from &lt;a href=&#34;https://www.anaconda.com&#34;&gt;Anaconda&lt;/a&gt;)
 &lt;ol&gt;

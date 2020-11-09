@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 08 Nov 2020 00:40:25 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Nov 2020 00:25:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blockchain Ethereum theDAO</title>
+      <link>https://www.pseudoyu.com/en/2020/11/10/blockchain-ethereum-thedao/</link>
+      <pubDate>Tue, 10 Nov 2020 00:25:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/10/blockchain-ethereum-thedao/</guid>
+      <description>Blockchain Technology and Applications Blockchain Ethereum theDAO Ethereum DAO Decentralized Autonomous Organization Example: TheDAO 没有实现withdraw函数 splitDAO 7天辩论期 28天锁定期 childDAO 黑客攻击 5000万美元/1.5亿美元 Too big to fail DAC Decentralized Autonomous Corporation</description>
+    </item>
+    
     <item>
       <title>xDeepFM for Recommender Systems</title>
       <link>https://www.pseudoyu.com/en/2020/11/08/xdeepfm-for-recommender-systems/</link>
@@ -184,18 +193,6 @@ However, the localization is complicated by the fact that Anindilyakwa has no nu
       <description>Timus 1001 Reverse Root Problem Description The problem is so easy, that the authors were lazy to write a statement for it!
 Input: The input stream contains a set of integer numbers Ai. The numbers are separated by any number of spaces and line breaks. A size of the input stream does not exceed 256 KB.
 Output: For each number Ai from the last one till the first one you should output its square root.</description>
-    </item>
-    
-    <item>
-      <title>Timus 1000 A&#43;B Problem</title>
-      <link>https://www.pseudoyu.com/en/2020/11/02/timus-1000-a-b-problem/</link>
-      <pubDate>Mon, 02 Nov 2020 22:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/11/02/timus-1000-a-b-problem/</guid>
-      <description>Timus 1000 A+B Problem Problem Description Calculate a + b
-Input: a and b
-Output: a+b
-My Solution import java.util.*; public class problem1000 { public static void main(String[] args) { Scanner in = new Scanner(System.in); int a = in.nextInt(); int b = in.nextInt(); in.close(); System.out.println(a + b); } } </description>
     </item>
     
   </channel>

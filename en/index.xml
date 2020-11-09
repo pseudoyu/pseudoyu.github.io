@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 08 Nov 2020 00:40:25 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2020 00:25:17 +0800</lastBuildDate>
     
     <atom:link href="https://www.pseudoyu.com/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -58,6 +58,47 @@
 &lt;li&gt;&lt;a href=&#34;https://medium.com/@pseudoyu&#34;&gt;Medium&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCR0O0s303tGBi3P02hstQPA/&#34;&gt;Youtube&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.reddit.com/user/pseudo_yu&#34;&gt;Reddit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Blockchain Ethereum theDAO</title>
+      <link>https://www.pseudoyu.com/en/2020/11/10/blockchain-ethereum-thedao/</link>
+      <pubDate>Tue, 10 Nov 2020 00:25:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/10/blockchain-ethereum-thedao/</guid>
+      
+        <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
+&lt;h2 id=&#34;blockchain-ethereum-thedao&#34;&gt;Blockchain Ethereum theDAO&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_ethereum_theDAO.svg&#34; alt=&#34;blockchain_ethereum_theDAO&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ethereum&#34;&gt;Ethereum&lt;/h2&gt;
+&lt;h3 id=&#34;dao&#34;&gt;DAO&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Decentralized Autonomous Organization&lt;/li&gt;
+&lt;li&gt;Example: TheDAO
+&lt;ul&gt;
+&lt;li&gt;没有实现withdraw函数&lt;/li&gt;
+&lt;li&gt;splitDAO
+&lt;ul&gt;
+&lt;li&gt;7天辩论期&lt;/li&gt;
+&lt;li&gt;28天锁定期&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;childDAO&lt;/li&gt;
+&lt;li&gt;黑客攻击
+&lt;ul&gt;
+&lt;li&gt;5000万美元/1.5亿美元&lt;/li&gt;
+&lt;li&gt;Too big to fail&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;dac&#34;&gt;DAC&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Decentralized Autonomous Corporation&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       
@@ -1163,40 +1204,6 @@ Output: [1,2]
 	  &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;in&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;nextInt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
 	  &lt;span class=&#34;n&#34;&gt;in&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
 	  &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-   &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Timus 1001 Reverse Root</title>
-      <link>https://www.pseudoyu.com/en/2020/11/02/timus-1001-reverse-root/</link>
-      <pubDate>Mon, 02 Nov 2020 23:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/11/02/timus-1001-reverse-root/</guid>
-      
-        <description>&lt;h1 id=&#34;timus-1001-reverse-root&#34;&gt;Timus 1001 Reverse Root&lt;/h1&gt;
-&lt;h2 id=&#34;problem-description&#34;&gt;Problem Description&lt;/h2&gt;
-&lt;p&gt;The problem is so easy, that the authors were lazy to write a statement for it!&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Input:&lt;/strong&gt; The input stream contains a set of integer numbers Ai. The numbers are separated by any number of spaces and line breaks. A size of the input stream does not exceed 256 KB.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Output:&lt;/strong&gt; For each number Ai from the last one till the first one you should output its square root. Each square root should be printed in a separate line with at least four digits after decimal point.&lt;/p&gt;
-&lt;h2 id=&#34;my-solution&#34;&gt;My Solution&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;java.util.*&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-
-&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;problem1001&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-   &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-       &lt;span class=&#34;n&#34;&gt;ArrayList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Long&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ArrayList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
-       &lt;span class=&#34;n&#34;&gt;Scanner&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Scanner&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;in&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-       &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;in&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;hasNextLong&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;())&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-           &lt;span class=&#34;kt&#34;&gt;long&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;in&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;nextLong&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-           &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-       &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-       &lt;span class=&#34;n&#34;&gt;in&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-
-       &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;--)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-           &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%.4f%n&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Math&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;sqrt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;double&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)));&lt;/span&gt;
-       &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>

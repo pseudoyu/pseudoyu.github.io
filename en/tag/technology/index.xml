@@ -6,7 +6,16 @@
     <description>Recent content in technology on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 07 Nov 2020 00:09:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/technology/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Nov 2020 00:25:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/technology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blockchain Ethereum theDAO</title>
+      <link>https://www.pseudoyu.com/en/2020/11/10/blockchain-ethereum-thedao/</link>
+      <pubDate>Tue, 10 Nov 2020 00:25:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/10/blockchain-ethereum-thedao/</guid>
+      <description>Blockchain Technology and Applications Blockchain Ethereum theDAO Ethereum DAO Decentralized Autonomous Organization Example: TheDAO 没有实现withdraw函数 splitDAO 7天辩论期 28天锁定期 childDAO 黑客攻击 5000万美元/1.5亿美元 Too big to fail DAC Decentralized Autonomous Corporation</description>
+    </item>
+    
     <item>
       <title>Blockchain Ethereum Smart Contract</title>
       <link>https://www.pseudoyu.com/en/2020/11/07/blockchain-ethereum-smart-contract/</link>
@@ -178,15 +187,6 @@
       
       <guid>https://www.pseudoyu.com/en/2020/10/22/blockchain-bitcoin-mining/</guid>
       <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Mining  Solve puzzles  Average block time  10 minutes   Difficulty  Target = target * (actual time / expected time) Adjust every 2 weeks Ar most 4 times, at least 1/4     Bernoulli process (nearly poisson process in BitCoin mining)  Bernoulli trial  A random experiment with binary outcome   A sequence of independent Bernoulli trial   Feature  Memoryless Progress free  Ensure the fairness of mining   Exponential distribution   Device (Universal -&amp;gt; Specific)  CPU GPU ASIC (Application Specific Integrated Circuit)) Mining pool (on demand mining)  Pool manager (risks of 51% attack) miners      </description>
-    </item>
-    
-    <item>
-      <title>Blockchain BitCoin Features</title>
-      <link>https://www.pseudoyu.com/en/2020/10/21/blockchain-bitcoin-features/</link>
-      <pubDate>Wed, 21 Oct 2020 22:07:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/21/blockchain-bitcoin-features/</guid>
-      <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) UTXO (Unspent Transaction Output)  Total inputs = total outputs  Quantity  21,000,000  Block reward  Coinbase transaction Cut half every 4 year  Transaction fee BitCoin network  Structure  Application layer  BitCoin blockchain   Network layer  P2P overlay network     Node  Seed node   Feature  Simple Robust Not efficient &amp;ldquo;Best effort&amp;rdquo;   Message transport  Flooding    Security  Problem  Sybil attack Forking attack Boycott Selfish mining  Reduce competition     Solution  Based on computing power (large cost) Require 6 confirmation by nodes (long time, about 1 hour)    </description>
     </item>
     
   </channel>

@@ -6,7 +6,16 @@
     <description>Recent content in bitcoin on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 07 Nov 2020 00:09:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/bitcoin/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Nov 2020 00:25:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/bitcoin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blockchain Ethereum theDAO</title>
+      <link>https://www.pseudoyu.com/en/2020/11/10/blockchain-ethereum-thedao/</link>
+      <pubDate>Tue, 10 Nov 2020 00:25:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/10/blockchain-ethereum-thedao/</guid>
+      <description>Blockchain Technology and Applications Blockchain Ethereum theDAO Ethereum DAO Decentralized Autonomous Organization Example: TheDAO 没有实现withdraw函数 splitDAO 7天辩论期 28天锁定期 childDAO 黑客攻击 5000万美元/1.5亿美元 Too big to fail DAC Decentralized Autonomous Corporation</description>
+    </item>
+    
     <item>
       <title>Blockchain Ethereum Smart Contract</title>
       <link>https://www.pseudoyu.com/en/2020/11/07/blockchain-ethereum-smart-contract/</link>

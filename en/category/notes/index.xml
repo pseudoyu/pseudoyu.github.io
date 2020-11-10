@@ -157,9 +157,7 @@
       <pubDate>Thu, 22 Oct 2020 10:50:17 +0800</pubDate>
       
       <guid>https://www.pseudoyu.com/en/2020/10/22/java-throwable/</guid>
-      <description>Java Basics Throwable Error (JVM can&amp;rsquo;t handle with)
- VirtualMachineError  StackOverFlowError OutOfMemoryError   AWTError  Exception (Can be deal with by program)
- IOException  EOFException FileNotFoundException   RuntimeException  ArrithmeticException MissingResourceException ClassNotFoundException NullPointerException IllegalArgumentException ArrayIndexOutOfBoundsException UnknownTypeException    Basic syntax  try-catch throw throws finally  </description>
+      <description>Java Basics Throwable Error (JVM can&amp;rsquo;t handle with)  VirtualMachineError  StackOverFlowError OutOfMemoryError   AWTError  Exception (Can be deal with by program)  IOException  EOFException FileNotFoundException   RuntimeException  ArrithmeticException MissingResourceException ClassNotFoundException NullPointerException IllegalArgumentException ArrayIndexOutOfBoundsException UnknownTypeException    Basic syntax  try-catch throw throws finally  </description>
     </item>
     
     <item>

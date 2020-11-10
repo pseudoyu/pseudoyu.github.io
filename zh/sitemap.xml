@@ -9,6 +9,118 @@
   </url>
   
   <url>
+    <loc>https://www.pseudoyu.com/zh/tag/ai/</loc>
+    <lastmod>2020-11-11T00:01:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/zh/tag/algorithm/</loc>
+    <lastmod>2020-11-11T00:01:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/zh/categories/</loc>
+    <lastmod>2020-11-11T00:01:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/zh/tag/comp/</loc>
+    <lastmod>2020-11-11T00:01:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/zh/tag/comp7404/</loc>
+    <lastmod>2020-11-11T00:01:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/zh/tag/ecic/</loc>
+    <lastmod>2020-11-11T00:01:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/zh/tag/hku/</loc>
+    <lastmod>2020-11-11T00:01:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/zh/tag/ml/</loc>
+    <lastmod>2020-11-11T00:01:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/zh/posts/</loc>
+    <lastmod>2020-11-11T00:01:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/zh/tag/programming/</loc>
+    <lastmod>2020-11-11T00:01:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/zh/category/projects/</loc>
+    <lastmod>2020-11-11T00:01:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/zh/tag/projects/</loc>
+    <lastmod>2020-11-11T00:01:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/zh/</loc>
+    <lastmod>2020-11-11T00:01:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/zh/tag/python/</loc>
+    <lastmod>2020-11-11T00:01:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/zh/tags/</loc>
+    <lastmod>2020-11-11T00:01:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/zh/2020/11/11/xdeepfm-for-recommender-systems/</loc>
+    <lastmod>2020-11-11T00:01:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.pseudoyu.com/zh/tag/bilibili/</loc>
     <lastmod>2020-11-10T11:30:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -31,13 +143,6 @@
   
   <url>
     <loc>https://www.pseudoyu.com/zh/2020/11/10/blockchain-ethereum-thoughts/</loc>
-    <lastmod>2020-11-10T11:30:17+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pseudoyu.com/zh/categories/</loc>
     <lastmod>2020-11-10T11:30:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -86,28 +191,7 @@
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/posts/</loc>
-    <lastmod>2020-11-10T11:30:17+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pseudoyu.com/zh/</loc>
-    <lastmod>2020-11-10T11:30:17+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://www.pseudoyu.com/zh/tag/security/</loc>
-    <lastmod>2020-11-10T11:30:17+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pseudoyu.com/zh/tags/</loc>
     <lastmod>2020-11-10T11:30:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -116,90 +200,6 @@
   <url>
     <loc>https://www.pseudoyu.com/zh/tag/technology/</loc>
     <lastmod>2020-11-10T11:30:17+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pseudoyu.com/zh/tag/ai/</loc>
-    <lastmod>2020-11-08T00:40:25+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pseudoyu.com/zh/tag/algorithm/</loc>
-    <lastmod>2020-11-08T00:40:25+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pseudoyu.com/zh/tag/comp/</loc>
-    <lastmod>2020-11-08T00:40:25+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pseudoyu.com/zh/tag/comp7404/</loc>
-    <lastmod>2020-11-08T00:40:25+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pseudoyu.com/zh/tag/ecic/</loc>
-    <lastmod>2020-11-08T00:40:25+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pseudoyu.com/zh/tag/hku/</loc>
-    <lastmod>2020-11-08T00:40:25+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pseudoyu.com/zh/tag/ml/</loc>
-    <lastmod>2020-11-08T00:40:25+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pseudoyu.com/zh/tag/programming/</loc>
-    <lastmod>2020-11-08T00:40:25+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pseudoyu.com/zh/category/projects/</loc>
-    <lastmod>2020-11-08T00:40:25+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pseudoyu.com/zh/tag/projects/</loc>
-    <lastmod>2020-11-08T00:40:25+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pseudoyu.com/zh/tag/python/</loc>
-    <lastmod>2020-11-08T00:40:25+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pseudoyu.com/zh/2020/11/08/xdeepfm-for-recommender-systems/</loc>
-    <lastmod>2020-11-08T00:40:25+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

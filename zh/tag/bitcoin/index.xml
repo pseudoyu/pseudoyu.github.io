@@ -6,14 +6,14 @@
     <description>Recent content in bitcoin on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 10 Nov 2020 00:25:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/bitcoin/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Nov 2020 11:30:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/bitcoin/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Blockchain Ethereum theDAO</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/10/blockchain-ethereum-thedao/</link>
-      <pubDate>Tue, 10 Nov 2020 00:25:17 +0800</pubDate>
+      <title>Blockchain Ethereum Thoughts</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/10/blockchain-ethereum-thoughts/</link>
+      <pubDate>Tue, 10 Nov 2020 11:30:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2020/11/10/blockchain-ethereum-thedao/</guid>
-      <description>Blockchain Technology and Applications Blockchain Ethereum theDAO Ethereum DAO Decentralized Autonomous Organization Example: TheDAO 没有实现withdraw函数 splitDAO 7天辩论期 28天锁定期 childDAO 黑客攻击 5000万美元/1.5亿美元 Too big to fail DAC Decentralized Autonomous Corporation</description>
+      <guid>https://www.pseudoyu.com/zh/2020/11/10/blockchain-ethereum-thoughts/</guid>
+      <description>Blockchain Technology and Applications Blockchain Ethereum Thoughts  ERC20  Ethereum Request For Comments   Smart contract  Smart contract is anything but smart Just automated contract For control logic   Irrevocability  Double edged sword  Hard to fix the bug Can not stop the smart contract   Nothing is irrevocability   Solidity  Formal verification Template   Open source  Security  &amp;ldquo;Many eyeball fallacy&amp;rdquo;   Credibility   Decentralization  Can be changed Should in decentralized way (voting) Not equals to distributed   Fork  Democracy   State machine  Mission critical application  Air traffic control Stock exchange Space shuttle      Cases  DAO  Decentralized Autonomous Organization Example: TheDAO  No withdraw function splitDAO  7-day for debate 28-day for lock   childDAO Attacker  $50,000,000/$150,000,000 Too big to fail       DAC  Decentralized Autonomous Corporation   Beauty Chain  SafeMath  Overflow      </description>
     </item>
     
     <item>

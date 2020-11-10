@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 10 Nov 2020 00:25:17 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2020 11:30:17 +0800</lastBuildDate>
     
     <atom:link href="https://www.pseudoyu.com/zh/index.xml" rel="self" type="application/rss+xml" />
     
@@ -64,41 +64,118 @@
     </item>
     
     <item>
-      <title>Blockchain Ethereum theDAO</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/10/blockchain-ethereum-thedao/</link>
-      <pubDate>Tue, 10 Nov 2020 00:25:17 +0800</pubDate>
+      <title>Blockchain Ethereum Thoughts</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/10/blockchain-ethereum-thoughts/</link>
+      <pubDate>Tue, 10 Nov 2020 11:30:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2020/11/10/blockchain-ethereum-thedao/</guid>
+      <guid>https://www.pseudoyu.com/zh/2020/11/10/blockchain-ethereum-thoughts/</guid>
       
         <description>&lt;h1 id=&#34;blockchain-technology-and-applications&#34;&gt;Blockchain Technology and Applications&lt;/h1&gt;
-&lt;h2 id=&#34;blockchain-ethereum-thedao&#34;&gt;Blockchain Ethereum theDAO&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_ethereum_theDAO.svg&#34; alt=&#34;blockchain_ethereum_theDAO&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;ethereum&#34;&gt;Ethereum&lt;/h2&gt;
-&lt;h3 id=&#34;dao&#34;&gt;DAO&lt;/h3&gt;
+&lt;h2 id=&#34;blockchain-ethereum-thoughts&#34;&gt;Blockchain Ethereum Thoughts&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_ethereum_thoughts.svg&#34; alt=&#34;blockchain_ethereum_thoughts&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ERC20
+&lt;ul&gt;
+&lt;li&gt;Ethereum Request For Comments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Smart contract
+&lt;ul&gt;
+&lt;li&gt;Smart contract is anything but smart&lt;/li&gt;
+&lt;li&gt;Just automated contract&lt;/li&gt;
+&lt;li&gt;For control logic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Irrevocability
+&lt;ul&gt;
+&lt;li&gt;Double edged sword
+&lt;ul&gt;
+&lt;li&gt;Hard to fix the bug&lt;/li&gt;
+&lt;li&gt;Can not stop the smart contract&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Nothing is irrevocability&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Solidity
+&lt;ul&gt;
+&lt;li&gt;Formal verification&lt;/li&gt;
+&lt;li&gt;Template&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Open source
+&lt;ul&gt;
+&lt;li&gt;Security
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;Many eyeball fallacy&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Credibility&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Decentralization
+&lt;ul&gt;
+&lt;li&gt;Can be changed&lt;/li&gt;
+&lt;li&gt;Should in decentralized way (voting)&lt;/li&gt;
+&lt;li&gt;Not equals to distributed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Fork
+&lt;ul&gt;
+&lt;li&gt;Democracy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;State machine
+&lt;ul&gt;
+&lt;li&gt;Mission critical application
+&lt;ul&gt;
+&lt;li&gt;Air traffic control&lt;/li&gt;
+&lt;li&gt;Stock exchange&lt;/li&gt;
+&lt;li&gt;Space shuttle&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;cases&#34;&gt;Cases&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;DAO
 &lt;ul&gt;
 &lt;li&gt;Decentralized Autonomous Organization&lt;/li&gt;
 &lt;li&gt;Example: TheDAO
 &lt;ul&gt;
-&lt;li&gt;没有实现withdraw函数&lt;/li&gt;
+&lt;li&gt;No withdraw function&lt;/li&gt;
 &lt;li&gt;splitDAO
 &lt;ul&gt;
-&lt;li&gt;7天辩论期&lt;/li&gt;
-&lt;li&gt;28天锁定期&lt;/li&gt;
+&lt;li&gt;7-day for debate&lt;/li&gt;
+&lt;li&gt;28-day for lock&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;childDAO&lt;/li&gt;
-&lt;li&gt;黑客攻击
+&lt;li&gt;Attacker
 &lt;ul&gt;
-&lt;li&gt;5000万美元/1.5亿美元&lt;/li&gt;
+&lt;li&gt;$50,000,000/$150,000,000&lt;/li&gt;
 &lt;li&gt;Too big to fail&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;dac&#34;&gt;DAC&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;DAC
 &lt;ul&gt;
 &lt;li&gt;Decentralized Autonomous Corporation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Beauty Chain
+&lt;ul&gt;
+&lt;li&gt;SafeMath
+&lt;ul&gt;
+&lt;li&gt;Overflow&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       

@@ -6,7 +6,16 @@
     <description>Recent content in programming on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Nov 2020 00:01:25 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Nov 2020 01:30:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode 88 Merge Sorted Array</title>
+      <link>https://www.pseudoyu.com/en/2020/11/11/leetcode-88-merge-sorted-array/</link>
+      <pubDate>Wed, 11 Nov 2020 01:30:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/11/leetcode-88-merge-sorted-array/</guid>
+      <description>LeetCode #88 Merge Sorted Array Problem Description Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array. Note: The number of elements initialized in nums1 and nums2 are m and n respectively. You may assume that nums1 has enough space (size that is equal to m + n) to hold additional elements from nums2. Example 1: Input: nums1 = [1,2,3,0,0,0], m = 3 nums2</description>
+    </item>
+    
     <item>
       <title>xDeepFM for Recommender Systems</title>
       <link>https://www.pseudoyu.com/en/2020/11/11/xdeepfm-for-recommender-systems/</link>
@@ -187,15 +196,6 @@ My Solution import java.util.*; public class problem1000 { public static void ma
       
       <guid>https://www.pseudoyu.com/en/2020/11/02/java-generics/</guid>
       <description>Java Basics 泛型 (Generics) 定义 提供编译时类型安全检测机制 参数化类型 Java泛型 伪泛型（类型擦除） 使用方式 泛型类 // 定义泛型类 public class Generic&amp;lt;T&amp;gt; { private T key; public class Generic(T key) { this.key = key; } public</description>
-    </item>
-    
-    <item>
-      <title>Java Throwable</title>
-      <link>https://www.pseudoyu.com/en/2020/10/22/java-throwable/</link>
-      <pubDate>Thu, 22 Oct 2020 10:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/22/java-throwable/</guid>
-      <description>Java Basics Throwable Error (JVM can&amp;rsquo;t handle with)  VirtualMachineError  StackOverFlowError OutOfMemoryError   AWTError  Exception (Can be deal with by program)  IOException  EOFException FileNotFoundException   RuntimeException  ArrithmeticException MissingResourceException ClassNotFoundException NullPointerException IllegalArgumentException ArrayIndexOutOfBoundsException UnknownTypeException    Basic syntax  try-catch throw throws finally  </description>
     </item>
     
   </channel>

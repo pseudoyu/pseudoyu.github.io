@@ -6,7 +6,16 @@
     <description>Recent content in java on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 07 Nov 2020 00:50:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Nov 2020 01:30:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode 88 Merge Sorted Array</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/11/leetcode-88-merge-sorted-array/</link>
+      <pubDate>Wed, 11 Nov 2020 01:30:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/11/leetcode-88-merge-sorted-array/</guid>
+      <description>LeetCode #88 Merge Sorted Array Problem Description Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array. Note: The number of elements initialized in nums1 and nums2 are m and n respectively. You may assume that nums1 has enough space (size that is equal to m + n) to hold additional elements from nums2. Example 1: Input: nums1 = [1,2,3,0,0,0], m = 3 nums2</description>
+    </item>
+    
     <item>
       <title>LeetCode 141 Linked List Cycle</title>
       <link>https://www.pseudoyu.com/zh/2020/11/07/leetcode-141-linked-list-cycle/</link>
@@ -185,15 +194,6 @@ My Solution import java.util.*; public class problem1000 { public static void ma
       <description>Java Basics Throwable Error (JVM can&amp;rsquo;t handle with)
  VirtualMachineError  StackOverFlowError OutOfMemoryError   AWTError  Exception (Can be deal with by program)
  IOException  EOFException FileNotFoundException   RuntimeException  ArrithmeticException MissingResourceException ClassNotFoundException NullPointerException IllegalArgumentException ArrayIndexOutOfBoundsException UnknownTypeException    Basic syntax  try-catch throw throws finally  </description>
-    </item>
-    
-    <item>
-      <title>Java Inheritance</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/22/java-inheritance/</link>
-      <pubDate>Thu, 22 Oct 2020 09:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/22/java-inheritance/</guid>
-      <description>Java Basics Inheritance Access  Modifiers  protected  Visible to child class   private public   Encapsulation  Using API to communicate Class or members can be least accessed by external   Child class rewrites the parent class  Methods in child class must have higher access level   Field can&amp;rsquo;t be public  getter setter    Abstract class and Interface  Abstract class  abstract keyword  abstract method -&amp;gt; abstract class   Can&amp;rsquo;t be instanced Can be inherited   Interface  public field  static final   Members(field and method)  public     Difference  Abstract class provide a IS-A relationship while Interface provides a LIKE-A relationship One class can applied several interfaces but can&amp;rsquo;t inherit more than one abstract class Fields of interface must be static/final but abstract class has no restriction Members of interface must be public but abstract class have multiple accesses   Choose  Interface (higher priority)  Irrelevant classes need to realize the same method need to use multiple inheritance   Abstract class  Relevant classes need to share same code block Need to control members&#39; access Need to inherit non-static or no-constant field      Super  Access parent classes&#39; constructor Access members of parent classes  Method priority  this.</description>
     </item>
     
   </channel>

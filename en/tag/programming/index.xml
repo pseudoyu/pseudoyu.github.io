@@ -6,7 +6,20 @@
     <description>Recent content in programming on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Nov 2020 11:11:11 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Nov 2020 16:30:25 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>xDeepFM for Recommender Systems</title>
+      <link>https://www.pseudoyu.com/en/2020/11/11/xdeepfm-for-recommender-systems/</link>
+      <pubDate>Wed, 11 Nov 2020 16:30:25 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/11/xdeepfm-for-recommender-systems/</guid>
+      <description>xDeepFM for Recommender Systems eXtreme Deep Factorization Machine (xDeepFM)
+This paper proposes a novel Compressed Interaction Network (CIN), which aims to generate feature interactions in an explicit fashion and at the vector-wise level.
+Github Repository GitHub: xDeepFM_for_Recommender_Systems
+Video Demo YouTube | Google Drive
+Datasets  Criteo Dataset. It is a famous industry benchmarking dataset for developing models predicting ad click-through rate, and is publicly accessible. Given a user and the page he is visiting, the goal is to predict the probability that he will clik on a given ad  Running Environment I strongly recommmend that you use Anaconda to implement this project.</description>
+    </item>
+    
     <item>
       <title>LeetCode 524 Longest Word in Dictionary through Deleting</title>
       <link>https://www.pseudoyu.com/en/2020/11/11/leetcode-524-longest-word-in-dictionary-through-deleting/</link>
@@ -23,19 +36,6 @@
       
       <guid>https://www.pseudoyu.com/en/2020/11/11/leetcode-88-merge-sorted-array/</guid>
       <description>LeetCode #88 Merge Sorted Array Problem Description Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array. Note: The number of elements initialized in nums1 and nums2 are m and n respectively. You may assume that nums1 has enough space (size that is equal to m + n) to hold additional elements from nums2. Example 1: Input: nums1 = [1,2,3,0,0,0], m = 3 nums2</description>
-    </item>
-    
-    <item>
-      <title>xDeepFM for Recommender Systems</title>
-      <link>https://www.pseudoyu.com/en/2020/11/11/xdeepfm-for-recommender-systems/</link>
-      <pubDate>Wed, 11 Nov 2020 00:01:25 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/11/11/xdeepfm-for-recommender-systems/</guid>
-      <description>xDeepFM for Recommender Systems eXtreme Deep Factorization Machine (xDeepFM)
-This paper propose a novel Compressed Interaction Network (CIN), which aims to generate feature interactions in an explicit fashion and at the vector-wise level.
-Github Repository GitHub: xDeepFM_for_Recommender_Systems
-Video Demo Video Demo: xDeepFM_for_Recommender_Systems
-Datasets  Criteo Dataset. It is a famous industry benchmarking dataset for developing models predicting ad click-through rate, and is publicly accessible. Given a user and the page he is visiting, the goal is to predict the probability that he will clik on a given ad  Running Environment I strongly recommmend that you use Anaconda to implement this project.</description>
     </item>
     
     <item>

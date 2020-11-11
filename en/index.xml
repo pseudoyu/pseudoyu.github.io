@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Nov 2020 11:11:11 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2020 16:30:25 +0800</lastBuildDate>
     
     <atom:link href="https://www.pseudoyu.com/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -59,6 +59,84 @@
 &lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCR0O0s303tGBi3P02hstQPA/&#34;&gt;Youtube&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.reddit.com/user/pseudo_yu&#34;&gt;Reddit&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>xDeepFM for Recommender Systems</title>
+      <link>https://www.pseudoyu.com/en/2020/11/11/xdeepfm-for-recommender-systems/</link>
+      <pubDate>Wed, 11 Nov 2020 16:30:25 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/11/xdeepfm-for-recommender-systems/</guid>
+      
+        <description>&lt;h1 id=&#34;xdeepfm-for-recommender-systems&#34;&gt;xDeepFM for Recommender Systems&lt;/h1&gt;
+&lt;p&gt;eXtreme Deep Factorization Machine (&lt;a href=&#34;https://arxiv.org/abs/1803.05170&#34;&gt;xDeepFM&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;This paper proposes a novel Compressed Interaction Network (CIN), which aims to generate feature interactions in an explicit fashion and at the vector-wise level.&lt;/p&gt;
+&lt;h2 id=&#34;github-repository&#34;&gt;Github Repository&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/pseudoyu/xDeepFM_for_Recommender_Systems&#34;&gt;GitHub: xDeepFM_for_Recommender_Systems&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;video-demo&#34;&gt;Video Demo&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=rFEGAtTZLyQ&#34;&gt;YouTube&lt;/a&gt; | &lt;a href=&#34;https://drive.google.com/file/d/1qPx6H9R1b-EDP7HZpAg5bDjkzR8QEHnR/view?usp=sharing&#34;&gt;Google Drive&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;datasets&#34;&gt;Datasets&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;http://labs.criteo.com/2014/02/kaggle-display-advertising-challenge-dataset/&#34;&gt;Criteo Dataset&lt;/a&gt;.&lt;/strong&gt; It is a famous industry benchmarking dataset for developing models predicting ad click-through rate, and is publicly accessible. Given a user and the page he is visiting, the goal is to predict the probability that he will clik on a given ad&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;running-environment&#34;&gt;Running Environment&lt;/h2&gt;
+&lt;p&gt;I strongly recommmend that you use &lt;a href=&#34;https://www.anaconda.com&#34;&gt;Anaconda&lt;/a&gt; to implement this project. Here are some simple instructions:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Download a suitable version (&lt;a href=&#34;https://repo.anaconda.com/archive/Anaconda3-2020.07-Windows-x86_64.exe&#34;&gt;Windows&lt;/a&gt;/&lt;a href=&#34;https://repo.anaconda.com/archive/Anaconda3-2020.07-MacOSX-x86_64.pkg&#34;&gt;MacOS&lt;/a&gt;/&lt;a href=&#34;https://repo.anaconda.com/archive/Anaconda3-2020.07-Linux-x86_64.sh&#34;&gt;Linux&lt;/a&gt;)  for your OS and install it (check for latest version from &lt;a href=&#34;https://www.anaconda.com&#34;&gt;Anaconda&lt;/a&gt;)
+&lt;ol&gt;
+&lt;li&gt;On Windows or MacOS, you can just use the &lt;em&gt;.exe&lt;/em&gt; or &lt;em&gt;.pkg&lt;/em&gt; installer and follow the instructions&lt;/li&gt;
+&lt;li&gt;On Linux, you may need to run &lt;code&gt;bash ./.Anaconda3-2020.07-Linux-x86_64.sh&lt;/code&gt; in the same directory of the downloaded &lt;em&gt;.sh&lt;/em&gt; file to allow the installer to initialize Anaconda3 in your .bashrc&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Create a dedicated Conda environment for this project (strongly recommended)
+&lt;ol&gt;
+&lt;li&gt;Run &lt;code&gt;conda create -n xdeepfm python=3.6&lt;/code&gt; and enter &lt;code&gt;y&lt;/code&gt; to create the conda environment&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;conda activate xdeepfm&lt;/code&gt; to activate the project environment&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;pip install -r requirements.txt&lt;/code&gt; to install the package dependencies&lt;/li&gt;
+&lt;li&gt;Now you can run the code simply through &lt;code&gt;python main.py&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; YouPath/xDeepFM_for_Recommender_Systems/exdeepfm
+bash ./.Anaconda3-2020.07-Linux-x86_64.sh
+conda create -n xdeepfm &lt;span class=&#34;nv&#34;&gt;python&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;3.6
+conda activate xdeepfm
+pip install -r requirements.txt
+python main.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;dependencies&#34;&gt;Dependencies&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;absl-py==0.8.1&lt;/li&gt;
+&lt;li&gt;astor==0.8.0&lt;/li&gt;
+&lt;li&gt;gast==0.3.2&lt;/li&gt;
+&lt;li&gt;google-pasta==0.1.7&lt;/li&gt;
+&lt;li&gt;grpcio==1.24.3&lt;/li&gt;
+&lt;li&gt;h5py==2.10.0&lt;/li&gt;
+&lt;li&gt;joblib==0.14.0&lt;/li&gt;
+&lt;li&gt;Keras-Applications==1.0.8&lt;/li&gt;
+&lt;li&gt;Keras-Preprocessing==1.1.0&lt;/li&gt;
+&lt;li&gt;Markdown==3.1.1&lt;/li&gt;
+&lt;li&gt;numpy==1.17.3&lt;/li&gt;
+&lt;li&gt;packaging==19.2&lt;/li&gt;
+&lt;li&gt;protobuf==3.10.0&lt;/li&gt;
+&lt;li&gt;pyparsing==2.4.2&lt;/li&gt;
+&lt;li&gt;PyYAML==5.1.2&lt;/li&gt;
+&lt;li&gt;scikit-learn==0.21.3&lt;/li&gt;
+&lt;li&gt;scipy==1.3.1&lt;/li&gt;
+&lt;li&gt;six==1.12.0&lt;/li&gt;
+&lt;li&gt;sklearn==0.0&lt;/li&gt;
+&lt;li&gt;tensorboard==1.14.0&lt;/li&gt;
+&lt;li&gt;tensorflow==1.14.0&lt;/li&gt;
+&lt;li&gt;tensorflow-estimator==1.14.0&lt;/li&gt;
+&lt;li&gt;termcolor==1.1.0&lt;/li&gt;
+&lt;li&gt;Werkzeug==0.16.0&lt;/li&gt;
+&lt;li&gt;wrapt==1.11.2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;running-results&#34;&gt;Running Results&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/comp7404_screenshot1.png&#34; alt=&#34;comp7404_screenshot1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;hellip;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/comp7404_screenshot2.png&#34; alt=&#34;comp7404_screenshot2&#34;&gt;&lt;/p&gt;
 </description>
       
     </item>
@@ -187,84 +265,6 @@ Output: [1,2,2,3,5,6]
     &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>xDeepFM for Recommender Systems</title>
-      <link>https://www.pseudoyu.com/en/2020/11/11/xdeepfm-for-recommender-systems/</link>
-      <pubDate>Wed, 11 Nov 2020 00:01:25 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/11/11/xdeepfm-for-recommender-systems/</guid>
-      
-        <description>&lt;h1 id=&#34;xdeepfm-for-recommender-systems&#34;&gt;xDeepFM for Recommender Systems&lt;/h1&gt;
-&lt;p&gt;eXtreme Deep Factorization Machine (&lt;a href=&#34;https://arxiv.org/abs/1803.05170&#34;&gt;xDeepFM&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;This paper propose a novel Compressed Interaction Network (CIN), which aims to generate feature interactions in an explicit fashion and at the vector-wise level.&lt;/p&gt;
-&lt;h2 id=&#34;github-repository&#34;&gt;Github Repository&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/pseudoyu/xDeepFM_for_Recommender_Systems&#34;&gt;GitHub: xDeepFM_for_Recommender_Systems&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;video-demo&#34;&gt;Video Demo&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;&#34;&gt;Video Demo: xDeepFM_for_Recommender_Systems&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;datasets&#34;&gt;Datasets&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;http://labs.criteo.com/2014/02/kaggle-display-advertising-challenge-dataset/&#34;&gt;Criteo Dataset&lt;/a&gt;.&lt;/strong&gt; It is a famous industry benchmarking dataset for developing models predicting ad click-through rate, and is publicly accessible. Given a user and the page he is visiting, the goal is to predict the probability that he will clik on a given ad&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;running-environment&#34;&gt;Running Environment&lt;/h2&gt;
-&lt;p&gt;I strongly recommmend that you use &lt;a href=&#34;https://www.anaconda.com&#34;&gt;Anaconda&lt;/a&gt; to implement this project. Here are some simple instructions:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Download a suitable version (&lt;a href=&#34;https://repo.anaconda.com/archive/Anaconda3-2020.07-Windows-x86_64.exe&#34;&gt;Windows&lt;/a&gt;/&lt;a href=&#34;https://repo.anaconda.com/archive/Anaconda3-2020.07-MacOSX-x86_64.pkg&#34;&gt;MacOS&lt;/a&gt;/&lt;a href=&#34;https://repo.anaconda.com/archive/Anaconda3-2020.07-Linux-x86_64.sh&#34;&gt;Linux&lt;/a&gt;)  for your OS and install it (check for latest version from &lt;a href=&#34;https://www.anaconda.com&#34;&gt;Anaconda&lt;/a&gt;)
-&lt;ol&gt;
-&lt;li&gt;On Windows or MacOS, you can just use the &lt;em&gt;.exe&lt;/em&gt; or &lt;em&gt;.pkg&lt;/em&gt; installer and follow the instructions&lt;/li&gt;
-&lt;li&gt;On Linux, you may need to run &lt;code&gt;bash ./.Anaconda3-2020.07-Linux-x86_64.sh&lt;/code&gt; in the same directory of the downloaded &lt;em&gt;.sh&lt;/em&gt; file to allow the installer to initialize Anaconda3 in your .bashrc&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;Create a dedicated Conda environment for this project (strongly recommended)
-&lt;ol&gt;
-&lt;li&gt;Run &lt;code&gt;conda create -n xdeepfm python=3.6&lt;/code&gt; and enter &lt;code&gt;y&lt;/code&gt; to create the conda environment&lt;/li&gt;
-&lt;li&gt;Run &lt;code&gt;conda activate xdeepfm&lt;/code&gt; to activate the project environment&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;Run &lt;code&gt;pip install -r requirements.txt&lt;/code&gt; to install the package dependencies&lt;/li&gt;
-&lt;li&gt;Now you can run the code simply through &lt;code&gt;python main.py&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; YouPath/xDeepFM_for_Recommender_Systems/exdeepfm
-bash ./.Anaconda3-2020.07-Linux-x86_64.sh
-conda create -n xdeepfm &lt;span class=&#34;nv&#34;&gt;python&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;3.6
-conda activate xdeepfm
-pip install -r requirements.txt
-python main.py
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;dependencies&#34;&gt;Dependencies&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;absl-py==0.8.1&lt;/li&gt;
-&lt;li&gt;astor==0.8.0&lt;/li&gt;
-&lt;li&gt;gast==0.3.2&lt;/li&gt;
-&lt;li&gt;google-pasta==0.1.7&lt;/li&gt;
-&lt;li&gt;grpcio==1.24.3&lt;/li&gt;
-&lt;li&gt;h5py==2.10.0&lt;/li&gt;
-&lt;li&gt;joblib==0.14.0&lt;/li&gt;
-&lt;li&gt;Keras-Applications==1.0.8&lt;/li&gt;
-&lt;li&gt;Keras-Preprocessing==1.1.0&lt;/li&gt;
-&lt;li&gt;Markdown==3.1.1&lt;/li&gt;
-&lt;li&gt;numpy==1.17.3&lt;/li&gt;
-&lt;li&gt;packaging==19.2&lt;/li&gt;
-&lt;li&gt;protobuf==3.10.0&lt;/li&gt;
-&lt;li&gt;pyparsing==2.4.2&lt;/li&gt;
-&lt;li&gt;PyYAML==5.1.2&lt;/li&gt;
-&lt;li&gt;scikit-learn==0.21.3&lt;/li&gt;
-&lt;li&gt;scipy==1.3.1&lt;/li&gt;
-&lt;li&gt;six==1.12.0&lt;/li&gt;
-&lt;li&gt;sklearn==0.0&lt;/li&gt;
-&lt;li&gt;tensorboard==1.14.0&lt;/li&gt;
-&lt;li&gt;tensorflow==1.14.0&lt;/li&gt;
-&lt;li&gt;tensorflow-estimator==1.14.0&lt;/li&gt;
-&lt;li&gt;termcolor==1.1.0&lt;/li&gt;
-&lt;li&gt;Werkzeug==0.16.0&lt;/li&gt;
-&lt;li&gt;wrapt==1.11.2&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;running-results&#34;&gt;Running Results&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/comp7404_screenshot1.png&#34; alt=&#34;comp7404_screenshot1&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&amp;hellip;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/comp7404_screenshot2.png&#34; alt=&#34;comp7404_screenshot2&#34;&gt;&lt;/p&gt;
-</description>
       
     </item>
     

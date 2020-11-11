@@ -6,7 +6,16 @@
     <description>Recent content in programming on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 11 Nov 2020 01:30:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Nov 2020 11:11:11 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode 524 Longest Word in Dictionary through Deleting</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/11/leetcode-524-longest-word-in-dictionary-through-deleting/</link>
+      <pubDate>Wed, 11 Nov 2020 11:11:11 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/11/leetcode-524-longest-word-in-dictionary-through-deleting/</guid>
+      <description>LeetCode #524 Longest Word in Dictionary through Deleting Problem Description Given a string and a string dictionary, find the longest string in the dictionary that can be formed by deleting some characters of the given string. If there are more than one possible results, return the longest word with the smallest lexicographical order. If there is no possible result, return the empty string. Example 1: Input: s = &amp;quot;abpcplea&amp;quot;, d</description>
+    </item>
+    
     <item>
       <title>LeetCode 88 Merge Sorted Array</title>
       <link>https://www.pseudoyu.com/zh/2020/11/11/leetcode-88-merge-sorted-array/</link>
@@ -187,15 +196,6 @@ My Solution import java.util.*; public class problem1000 { public static void ma
       
       <guid>https://www.pseudoyu.com/zh/2020/11/02/java-equals-method/</guid>
       <description>Java Basics Java equals Method equals() Features Equivalence relationship x.euqal(x); Compared to self x.equals(y) == y.equals(x); When conversed, also true if (x.equals(y) &amp;amp;&amp;amp; y.equals(z)) x.equals(z); When transited, also true x.equals(y) == x.equals(y); When repeated, always true x.equals(null) == false; When compared to null, always false (when x is not assigned null) About == For primitive data type, == measures the equivalence (there is no equals()) For reference, == measures whether</description>
-    </item>
-    
-    <item>
-      <title>Java Generics</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/02/java-generics/</link>
-      <pubDate>Mon, 02 Nov 2020 09:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/02/java-generics/</guid>
-      <description>Java Basics 泛型 (Generics) 定义 提供编译时类型安全检测机制 参数化类型 Java泛型 伪泛型（类型擦除） 使用方式 泛型类 // 定义泛型类 public class Generic&amp;lt;T&amp;gt; { private T key; public class Generic(T key) { this.key = key; } public</description>
     </item>
     
   </channel>

@@ -6,7 +6,16 @@
     <description>Recent content in notes on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Nov 2020 01:30:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Nov 2020 11:11:11 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode 524 Longest Word in Dictionary through Deleting</title>
+      <link>https://www.pseudoyu.com/en/2020/11/11/leetcode-524-longest-word-in-dictionary-through-deleting/</link>
+      <pubDate>Wed, 11 Nov 2020 11:11:11 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/11/leetcode-524-longest-word-in-dictionary-through-deleting/</guid>
+      <description>LeetCode #524 Longest Word in Dictionary through Deleting Problem Description Given a string and a string dictionary, find the longest string in the dictionary that can be formed by deleting some characters of the given string. If there are more than one possible results, return the longest word with the smallest lexicographical order. If there is no possible result, return the empty string. Example 1: Input: s = &amp;quot;abpcplea&amp;quot;, d</description>
+    </item>
+    
     <item>
       <title>LeetCode 88 Merge Sorted Array</title>
       <link>https://www.pseudoyu.com/en/2020/11/11/leetcode-88-merge-sorted-array/</link>
@@ -178,17 +187,6 @@ However, the localization is complicated by the fact that Anindilyakwa has no nu
       
       <guid>https://www.pseudoyu.com/en/2020/11/03/timus-1293-eniya/</guid>
       <description>Timus 1293 Eniya Problem Description It’s restless now on the slips of the intergalactic port’s sixth dock of planet of Torn. No longer then in a month the reconstruction of the small ironclad corvette “Eniya” will be finished. And again this battle ship and its brave team would have to struggle for the control over plutonium mines of Sibelius. The work cannot be stopped even for a second, self-powered laser welders work round the clock.</description>
-    </item>
-    
-    <item>
-      <title>Timus 1001 Reverse Root</title>
-      <link>https://www.pseudoyu.com/en/2020/11/02/timus-1001-reverse-root/</link>
-      <pubDate>Mon, 02 Nov 2020 23:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/11/02/timus-1001-reverse-root/</guid>
-      <description>Timus 1001 Reverse Root Problem Description The problem is so easy, that the authors were lazy to write a statement for it!
-Input: The input stream contains a set of integer numbers Ai. The numbers are separated by any number of spaces and line breaks. A size of the input stream does not exceed 256 KB.
-Output: For each number Ai from the last one till the first one you should output its square root.</description>
     </item>
     
   </channel>

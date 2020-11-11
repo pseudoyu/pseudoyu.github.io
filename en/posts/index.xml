@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Nov 2020 01:30:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Nov 2020 11:11:11 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode 524 Longest Word in Dictionary through Deleting</title>
+      <link>https://www.pseudoyu.com/en/2020/11/11/leetcode-524-longest-word-in-dictionary-through-deleting/</link>
+      <pubDate>Wed, 11 Nov 2020 11:11:11 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/11/leetcode-524-longest-word-in-dictionary-through-deleting/</guid>
+      <description>LeetCode #524 Longest Word in Dictionary through Deleting Problem Description Given a string and a string dictionary, find the longest string in the dictionary that can be formed by deleting some characters of the given string. If there are more than one possible results, return the longest word with the smallest lexicographical order. If there is no possible result, return the empty string. Example 1: Input: s = &amp;quot;abpcplea&amp;quot;, d</description>
+    </item>
+    
     <item>
       <title>LeetCode 88 Merge Sorted Array</title>
       <link>https://www.pseudoyu.com/en/2020/11/11/leetcode-88-merge-sorted-array/</link>
@@ -182,15 +191,6 @@ However, the localization is complicated by the fact that Anindilyakwa has no nu
       
       <guid>https://www.pseudoyu.com/en/2020/11/03/timus-1409-two-gangsters/</guid>
       <description>Timus 1409 Two Gangsters Problem Description Two gangsters Harry and Larry had a rest at countryside. They decided to spend some time shooting, so they put several beer cans (no more than 10) on a log. Harry started to shoot cans one after another from the leftmost to the right and Larry – from the rightmost to the left. At some moment it happened so that they shot one and the same can.</description>
-    </item>
-    
-    <item>
-      <title>Timus 1293 Eniya</title>
-      <link>https://www.pseudoyu.com/en/2020/11/03/timus-1293-eniya/</link>
-      <pubDate>Tue, 03 Nov 2020 00:10:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/11/03/timus-1293-eniya/</guid>
-      <description>Timus 1293 Eniya Problem Description It’s restless now on the slips of the intergalactic port’s sixth dock of planet of Torn. No longer then in a month the reconstruction of the small ironclad corvette “Eniya” will be finished. And again this battle ship and its brave team would have to struggle for the control over plutonium mines of Sibelius. The work cannot be stopped even for a second, self-powered laser welders work round the clock.</description>
     </item>
     
   </channel>

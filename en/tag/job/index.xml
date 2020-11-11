@@ -6,7 +6,16 @@
     <description>Recent content in job on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Nov 2020 01:30:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/job/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Nov 2020 11:11:11 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/job/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode 524 Longest Word in Dictionary through Deleting</title>
+      <link>https://www.pseudoyu.com/en/2020/11/11/leetcode-524-longest-word-in-dictionary-through-deleting/</link>
+      <pubDate>Wed, 11 Nov 2020 11:11:11 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/11/leetcode-524-longest-word-in-dictionary-through-deleting/</guid>
+      <description>LeetCode #524 Longest Word in Dictionary through Deleting Problem Description Given a string and a string dictionary, find the longest string in the dictionary that can be formed by deleting some characters of the given string. If there are more than one possible results, return the longest word with the smallest lexicographical order. If there is no possible result, return the empty string. Example 1: Input: s = &amp;quot;abpcplea&amp;quot;, d</description>
+    </item>
+    
     <item>
       <title>LeetCode 88 Merge Sorted Array</title>
       <link>https://www.pseudoyu.com/en/2020/11/11/leetcode-88-merge-sorted-array/</link>

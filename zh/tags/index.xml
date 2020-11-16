@@ -6,7 +6,61 @@
     <description>Recent content in Tags on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 11 Nov 2020 16:30:25 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Nov 2020 20:27:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>basic</title>
+      <link>https://www.pseudoyu.com/zh/tag/basic/</link>
+      <pubDate>Mon, 16 Nov 2020 20:27:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/tag/basic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>https://www.pseudoyu.com/zh/tag/github/</link>
+      <pubDate>Mon, 16 Nov 2020 20:27:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/tag/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>java</title>
+      <link>https://www.pseudoyu.com/zh/tag/java/</link>
+      <pubDate>Mon, 16 Nov 2020 20:27:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/tag/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>notes</title>
+      <link>https://www.pseudoyu.com/zh/tag/notes/</link>
+      <pubDate>Mon, 16 Nov 2020 20:27:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/tag/notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programming</title>
+      <link>https://www.pseudoyu.com/zh/tag/programming/</link>
+      <pubDate>Mon, 16 Nov 2020 20:27:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/tag/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>technology</title>
+      <link>https://www.pseudoyu.com/zh/tag/technology/</link>
+      <pubDate>Mon, 16 Nov 2020 20:27:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/tag/technology/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>ai</title>
       <link>https://www.pseudoyu.com/zh/tag/ai/</link>
@@ -71,15 +125,6 @@
     </item>
     
     <item>
-      <title>programming</title>
-      <link>https://www.pseudoyu.com/zh/tag/programming/</link>
-      <pubDate>Wed, 11 Nov 2020 16:30:25 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/tag/programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>projects</title>
       <link>https://www.pseudoyu.com/zh/tag/projects/</link>
       <pubDate>Wed, 11 Nov 2020 16:30:25 +0800</pubDate>
@@ -107,15 +152,6 @@
     </item>
     
     <item>
-      <title>java</title>
-      <link>https://www.pseudoyu.com/zh/tag/java/</link>
-      <pubDate>Wed, 11 Nov 2020 11:11:11 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/tag/java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>job</title>
       <link>https://www.pseudoyu.com/zh/tag/job/</link>
       <pubDate>Wed, 11 Nov 2020 11:11:11 +0800</pubDate>
@@ -134,15 +170,6 @@
     </item>
     
     <item>
-      <title>notes</title>
-      <link>https://www.pseudoyu.com/zh/tag/notes/</link>
-      <pubDate>Wed, 11 Nov 2020 11:11:11 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/tag/notes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>bilibili</title>
       <link>https://www.pseudoyu.com/zh/tag/bilibili/</link>
       <pubDate>Tue, 10 Nov 2020 11:30:17 +0800</pubDate>
@@ -157,33 +184,6 @@
       <pubDate>Tue, 10 Nov 2020 11:30:17 +0800</pubDate>
       
       <guid>https://www.pseudoyu.com/zh/tag/bitcoin/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>blockchain</title>
-      <link>https://www.pseudoyu.com/zh/tag/blockchain/</link>
-      <pubDate>Tue, 10 Nov 2020 11:30:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/tag/blockchain/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cryptocurrency</title>
-      <link>https://www.pseudoyu.com/zh/tag/cryptocurrency/</link>
-      <pubDate>Tue, 10 Nov 2020 11:30:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/tag/cryptocurrency/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>decentralization</title>
-      <link>https://www.pseudoyu.com/zh/tag/decentralization/</link>
-      <pubDate>Tue, 10 Nov 2020 11:30:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/tag/decentralization/</guid>
       <description></description>
     </item>
     

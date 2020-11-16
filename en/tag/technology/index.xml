@@ -6,7 +6,25 @@
     <description>Recent content in technology on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Nov 2020 11:30:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/technology/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Nov 2020 20:27:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/technology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java IO</title>
+      <link>https://www.pseudoyu.com/en/2020/11/16/java-io/</link>
+      <pubDate>Mon, 16 Nov 2020 20:27:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/16/java-io/</guid>
+      <description>Java Basics File and I/O I/O流类型 流向 输入流 输出流 操作单元 字节流 字符流 角色 节点流 处理流 操作方式 Reader - 字符读取 节点流 FileReader PipedReader CharArrayReader 处理流 BufferedReader InputStreamReader Writer - 字符写出 节点流 FileWriter PipedWriter CharArrayWriter</description>
+    </item>
+    
+    <item>
+      <title>Java Threading</title>
+      <link>https://www.pseudoyu.com/en/2020/11/16/java-threading/</link>
+      <pubDate>Mon, 16 Nov 2020 20:20:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/16/java-threading/</guid>
+      <description>Java Basics 线程 (Threading) 程序 含有指令和数据的文件 静态代码 进程 系统运行程序的基本单位 程序的一次执行过程 动态过程 线程 比进程更小的执行单位 轻量级进程 同类多个线程</description>
+    </item>
+    
     <item>
       <title>Blockchain Ethereum Thoughts</title>
       <link>https://www.pseudoyu.com/en/2020/11/10/blockchain-ethereum-thoughts/</link>
@@ -167,24 +185,6 @@
       
       <guid>https://www.pseudoyu.com/en/2020/10/22/java-inheritance/</guid>
       <description>Java Basics Inheritance Access  Modifiers  protected  Visible to child class   private public   Encapsulation  Using API to communicate Class or members can be least accessed by external   Child class rewrites the parent class  Methods in child class must have higher access level   Field can&amp;rsquo;t be public  getter setter    Abstract class and Interface  Abstract class  abstract keyword  abstract method -&amp;gt; abstract class   Can&amp;rsquo;t be instanced Can be inherited   Interface  public field  static final   Members(field and method)  public     Difference  Abstract class provide a IS-A relationship while Interface provides a LIKE-A relationship One class can applied several interfaces but can&amp;rsquo;t inherit more than one abstract class Fields of interface must be static/final but abstract class has no restriction Members of interface must be public but abstract class have multiple accesses   Choose  Interface (higher priority)  Irrelevant classes need to realize the same method need to use multiple inheritance   Abstract class  Relevant classes need to share same code block Need to control members&#39; access Need to inherit non-static or no-constant field      Super  Access parent classes&#39; constructor Access members of parent classes  Method priority  this.</description>
-    </item>
-    
-    <item>
-      <title>Java Reflect</title>
-      <link>https://www.pseudoyu.com/en/2020/10/22/java-reflect/</link>
-      <pubDate>Thu, 22 Oct 2020 09:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/22/java-reflect/</guid>
-      <description>Java Basics Reflect Core concept  Load classes, methods/fields when JVM is running, no prior requirement of knowing the object when writing or compiling code  Functions (runtime)  Enables java code to discover information about the fields, methods and constructors of loaded classes Operate on their underlying counterparts within security restructions  Usage  Develop universal frameworks  java.lang.reflect  Field Method Constructor  Advantages  Extensibility Help with development (IDE) Help with debugging and testing  Disadvantages  Cost/Optimization Security restructions Exposing inner elements (private attributes or methods)  </description>
-    </item>
-    
-    <item>
-      <title>Blockchain BitCoin Mining</title>
-      <link>https://www.pseudoyu.com/en/2020/10/22/blockchain-bitcoin-mining/</link>
-      <pubDate>Thu, 22 Oct 2020 09:07:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/22/blockchain-bitcoin-mining/</guid>
-      <description>Blockchain Technology and Applications BitCoin System (Transaction-based ledger) Mining  Solve puzzles  Average block time  10 minutes   Difficulty  Target = target * (actual time / expected time) Adjust every 2 weeks Ar most 4 times, at least 1/4     Bernoulli process (nearly poisson process in BitCoin mining)  Bernoulli trial  A random experiment with binary outcome   A sequence of independent Bernoulli trial   Feature  Memoryless Progress free  Ensure the fairness of mining   Exponential distribution   Device (Universal -&amp;gt; Specific)  CPU GPU ASIC (Application Specific Integrated Circuit)) Mining pool (on demand mining)  Pool manager (risks of 51% attack) miners      </description>
     </item>
     
   </channel>

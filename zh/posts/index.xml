@@ -6,7 +6,25 @@
     <description>Recent content in Posts on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 11 Nov 2020 16:30:25 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Nov 2020 20:27:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java IO</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/16/java-io/</link>
+      <pubDate>Mon, 16 Nov 2020 20:27:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/16/java-io/</guid>
+      <description>Java Basics File and I/O I/O流类型 流向 输入流 输出流 操作单元 字节流 字符流 角色 节点流 处理流 操作方式 Reader - 字符读取 节点流 FileReader PipedReader CharArrayReader 处理流 BufferedReader InputStreamReader Writer - 字符写出 节点流 FileWriter PipedWriter CharArrayWriter</description>
+    </item>
+    
+    <item>
+      <title>Java Threading</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/16/java-threading/</link>
+      <pubDate>Mon, 16 Nov 2020 20:20:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/16/java-threading/</guid>
+      <description>Java Basics 线程 (Threading) 程序 含有指令和数据的文件 静态代码 进程 系统运行程序的基本单位 程序的一次执行过程 动态过程 线程 比进程更小的执行单位 轻量级进程 同类多个线程</description>
+    </item>
+    
     <item>
       <title>xDeepFM for Recommender Systems</title>
       <link>https://www.pseudoyu.com/zh/2020/11/11/xdeepfm-for-recommender-systems/</link>
@@ -172,25 +190,6 @@ During the first hour he wants to solve f problems. If there is still some time 
       
       <guid>https://www.pseudoyu.com/zh/2020/11/03/timus-1877-bicycle-codes/</guid>
       <description>Timus 1877 Bicycle Codes Problem Description Den has two four-digit combination locks for protecting his bicycle from thieves. Every evening he arms the bicycle antitheft alarm and fastens the bicycle to a special stand with one of the locks. Den never uses the same lock two evenings in a row. One night a thief tried to open the lock using the code 0000. The alarm went off and the thief hurried away.</description>
-    </item>
-    
-    <item>
-      <title>Timus 1785 Lost in Localization</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/03/timus-1785-lost-in-localization/</link>
-      <pubDate>Tue, 03 Nov 2020 01:10:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/03/timus-1785-lost-in-localization/</guid>
-      <description>Timus 1785 Lost in Localization Problem Description The Lavin Interactive Company, which has developed the turn-based strategy Losers-V, is constantly extending its target market by localizing the game to as many languages as it can. In particular, they are interested in creating a version of the game in Anindilyakwa, which is one of the languages spoken by indigenous Australians.
-However, the localization is complicated by the fact that Anindilyakwa has no numerals.</description>
-    </item>
-    
-    <item>
-      <title>Timus 1409 Two Gangsters</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/03/timus-1409-two-gangsters/</link>
-      <pubDate>Tue, 03 Nov 2020 00:40:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/03/timus-1409-two-gangsters/</guid>
-      <description>Timus 1409 Two Gangsters Problem Description Two gangsters Harry and Larry had a rest at countryside. They decided to spend some time shooting, so they put several beer cans (no more than 10) on a log. Harry started to shoot cans one after another from the leftmost to the right and Larry – from the rightmost to the left. At some moment it happened so that they shot one and the same can.</description>
     </item>
     
   </channel>

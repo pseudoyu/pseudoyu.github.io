@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Nov 2020 16:30:25 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2020 20:27:17 +0800</lastBuildDate>
     
     <atom:link href="https://www.pseudoyu.com/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -58,6 +58,246 @@
 &lt;li&gt;&lt;a href=&#34;https://medium.com/@pseudoyu&#34;&gt;Medium&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCR0O0s303tGBi3P02hstQPA/&#34;&gt;Youtube&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.reddit.com/user/pseudo_yu&#34;&gt;Reddit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Java IO</title>
+      <link>https://www.pseudoyu.com/en/2020/11/16/java-io/</link>
+      <pubDate>Mon, 16 Nov 2020 20:27:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/16/java-io/</guid>
+      
+        <description>&lt;h1 id=&#34;java-basics&#34;&gt;Java Basics&lt;/h1&gt;
+&lt;h2 id=&#34;file-and-io&#34;&gt;File and I/O&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/java_io.svg&#34; alt=&#34;java_io&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;io流类型&#34;&gt;I/O流类型&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;流向
+&lt;ul&gt;
+&lt;li&gt;输入流&lt;/li&gt;
+&lt;li&gt;输出流&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;操作单元
+&lt;ul&gt;
+&lt;li&gt;字节流&lt;/li&gt;
+&lt;li&gt;字符流&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;角色
+&lt;ul&gt;
+&lt;li&gt;节点流&lt;/li&gt;
+&lt;li&gt;处理流&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;操作方式&#34;&gt;操作方式&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Reader - 字符读取
+&lt;ul&gt;
+&lt;li&gt;节点流
+&lt;ul&gt;
+&lt;li&gt;FileReader&lt;/li&gt;
+&lt;li&gt;PipedReader&lt;/li&gt;
+&lt;li&gt;CharArrayReader&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;处理流
+&lt;ul&gt;
+&lt;li&gt;BufferedReader&lt;/li&gt;
+&lt;li&gt;InputStreamReader&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Writer - 字符写出
+&lt;ul&gt;
+&lt;li&gt;节点流
+&lt;ul&gt;
+&lt;li&gt;FileWriter&lt;/li&gt;
+&lt;li&gt;PipedWriter&lt;/li&gt;
+&lt;li&gt;CharArrayWriter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;处理流
+&lt;ul&gt;
+&lt;li&gt;BufferedWriter&lt;/li&gt;
+&lt;li&gt;OutputStreamWriter&lt;/li&gt;
+&lt;li&gt;printWriter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;InputStream - 字节读取
+&lt;ul&gt;
+&lt;li&gt;节点流
+&lt;ul&gt;
+&lt;li&gt;FileInputStream&lt;/li&gt;
+&lt;li&gt;PipeInputStream&lt;/li&gt;
+&lt;li&gt;ByteArrayInputStream&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;处理流
+&lt;ul&gt;
+&lt;li&gt;BufferedInputStream&lt;/li&gt;
+&lt;li&gt;DataInputStream&lt;/li&gt;
+&lt;li&gt;ObjectInputStream&lt;/li&gt;
+&lt;li&gt;SequenceInputStream&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;OutputStream - 字节写出
+&lt;ul&gt;
+&lt;li&gt;节点流
+&lt;ul&gt;
+&lt;li&gt;FileOutputStream&lt;/li&gt;
+&lt;li&gt;PipedOutputStream&lt;/li&gt;
+&lt;li&gt;ByteArrayOutputStream&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;处理流
+&lt;ul&gt;
+&lt;li&gt;BufferedOutputStream&lt;/li&gt;
+&lt;li&gt;DataOutputStream&lt;/li&gt;
+&lt;li&gt;ObjectOutputStream&lt;/li&gt;
+&lt;li&gt;PrintStream&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;操作对象&#34;&gt;操作对象&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;文件操作
+&lt;ul&gt;
+&lt;li&gt;FileInputStream&lt;/li&gt;
+&lt;li&gt;FileOutputStream&lt;/li&gt;
+&lt;li&gt;FileReader&lt;/li&gt;
+&lt;li&gt;FileWriter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;管道操作
+&lt;ul&gt;
+&lt;li&gt;PipedReader&lt;/li&gt;
+&lt;li&gt;PipedWriter&lt;/li&gt;
+&lt;li&gt;PipeInputStream&lt;/li&gt;
+&lt;li&gt;PipedOutputStream&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;数组操作
+&lt;ul&gt;
+&lt;li&gt;CharArrayReader&lt;/li&gt;
+&lt;li&gt;CharArrayWriter&lt;/li&gt;
+&lt;li&gt;ByteArrayInputStream&lt;/li&gt;
+&lt;li&gt;ByteArrayOutputStream&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;缓冲操作
+&lt;ul&gt;
+&lt;li&gt;BufferedReader&lt;/li&gt;
+&lt;li&gt;BufferedWriter&lt;/li&gt;
+&lt;li&gt;BufferedInputStream&lt;/li&gt;
+&lt;li&gt;BufferedOutputStream&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;基本数据类型操作
+&lt;ul&gt;
+&lt;li&gt;DataInputStream&lt;/li&gt;
+&lt;li&gt;DataOutputStream&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;对象序列化操作
+&lt;ul&gt;
+&lt;li&gt;ObjectInputStream&lt;/li&gt;
+&lt;li&gt;ObjectOutputStream&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;转化控制
+&lt;ul&gt;
+&lt;li&gt;InputStreamReader&lt;/li&gt;
+&lt;li&gt;OutputStreamWriter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;打印控制
+&lt;ul&gt;
+&lt;li&gt;printWriter&lt;/li&gt;
+&lt;li&gt;PrintStream&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Java Threading</title>
+      <link>https://www.pseudoyu.com/en/2020/11/16/java-threading/</link>
+      <pubDate>Mon, 16 Nov 2020 20:20:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/16/java-threading/</guid>
+      
+        <description>&lt;h1 id=&#34;java-basics&#34;&gt;Java Basics&lt;/h1&gt;
+&lt;h2 id=&#34;线程-threading&#34;&gt;线程 (Threading)&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/java_threading.svg&#34; alt=&#34;java_threading&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;程序&#34;&gt;程序&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;含有指令和数据的文件&lt;/li&gt;
+&lt;li&gt;静态代码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;进程&#34;&gt;进程&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;系统运行程序的基本单位&lt;/li&gt;
+&lt;li&gt;程序的一次执行过程&lt;/li&gt;
+&lt;li&gt;动态过程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;线程&#34;&gt;线程&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;比进程更小的执行单位&lt;/li&gt;
+&lt;li&gt;轻量级进程&lt;/li&gt;
+&lt;li&gt;同类多个线程共享
+&lt;ul&gt;
+&lt;li&gt;内存空间&lt;/li&gt;
+&lt;li&gt;系统资源&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;基本状态
+&lt;ul&gt;
+&lt;li&gt;NEW
+&lt;ul&gt;
+&lt;li&gt;初始状态，已构建但未调用start()&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;RUNNABLE
+&lt;ul&gt;
+&lt;li&gt;运行状态&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;BLOCKED
+&lt;ul&gt;
+&lt;li&gt;阻塞状态，线程阻塞于锁&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;WAITING
+&lt;ul&gt;
+&lt;li&gt;等待状态，需要等其他线程通知或中断&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;TIME_WAITING
+&lt;ul&gt;
+&lt;li&gt;超时等待状态，可在指定时间自行返回&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;TERMINATED
+&lt;ul&gt;
+&lt;li&gt;终止状态&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       
@@ -1215,137 +1455,6 @@ Output: [1,2]
 	  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 	  
 	  &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-   &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Timus 1877 Bicycle Codes</title>
-      <link>https://www.pseudoyu.com/en/2020/11/03/timus-1877-bicycle-codes/</link>
-      <pubDate>Tue, 03 Nov 2020 01:30:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/11/03/timus-1877-bicycle-codes/</guid>
-      
-        <description>&lt;h1 id=&#34;timus-1877-bicycle-codes&#34;&gt;Timus 1877 Bicycle Codes&lt;/h1&gt;
-&lt;h2 id=&#34;problem-description&#34;&gt;Problem Description&lt;/h2&gt;
-&lt;p&gt;Den has two four-digit combination locks for protecting his bicycle from thieves. Every evening he arms the bicycle antitheft alarm and fastens the bicycle to a special stand with one of the locks. Den never uses the same lock two evenings in a row. One night a thief tried to open the lock using the code 0000. The alarm went off and the thief hurried away. The next night the thief decided to try the code 0001, then 0002, and so on in ascending order of the number.&lt;/p&gt;
-&lt;p&gt;Den never changes the codes of his locks. On the night when the thief came for the first time the bicycle was fastened with the first lock.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Input:&lt;/strong&gt; The first line contains the combination that opens the first lock and the second line contains the combination that opens the second lock. Both combinations are strings consisting of four digits from 0 to 9.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Output:&lt;/strong&gt; Output “yes” if the thief will open the lock sooner or later and “no” otherwise.&lt;/p&gt;
-&lt;h2 id=&#34;my-solution&#34;&gt;My Solution&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;java.util.*&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-
-&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;problem1877&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-   &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-      &lt;span class=&#34;n&#34;&gt;Scanner&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Scanner&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;in&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-      &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;in&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;nextInt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-	  &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;in&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;nextInt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-	  &lt;span class=&#34;n&#34;&gt;in&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-	  &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-	  &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-		  &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;no&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-	  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-		  &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;yes&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-	  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-
-	  &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-   &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Timus 1785 Lost in Localization</title>
-      <link>https://www.pseudoyu.com/en/2020/11/03/timus-1785-lost-in-localization/</link>
-      <pubDate>Tue, 03 Nov 2020 01:10:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/11/03/timus-1785-lost-in-localization/</guid>
-      
-        <description>&lt;h1 id=&#34;timus-1785-lost-in-localization&#34;&gt;Timus 1785 Lost in Localization&lt;/h1&gt;
-&lt;h2 id=&#34;problem-description&#34;&gt;Problem Description&lt;/h2&gt;
-&lt;p&gt;The Lavin Interactive Company, which has developed the turn-based strategy Losers-V, is constantly extending its target market by localizing the game to as many languages as it can. In particular, they are interested in creating a version of the game in Anindilyakwa, which is one of the languages spoken by indigenous Australians.&lt;/p&gt;
-&lt;p&gt;However, the localization is complicated by the fact that Anindilyakwa has no numerals. How can a phrase such as “You have seven black dragons and your enemy has forty black dragons” be translated into this language? The localizers have decided to translate it as follows: “You have few black dragons and your enemy has lots of black dragons.” They have compiled a table showing the rule of replacing numbers of monsters by Anindilyakwa words.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Number&lt;/th&gt;
-&lt;th&gt;Designation in Anindilyakwa&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;from 1 to 4&lt;/td&gt;
-&lt;td&gt;few&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;from 5 to 9&lt;/td&gt;
-&lt;td&gt;several&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;from 10 to 19&lt;/td&gt;
-&lt;td&gt;pack&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;from 20 to 49&lt;/td&gt;
-&lt;td&gt;lots&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;from 50 to 99&lt;/td&gt;
-&lt;td&gt;horde&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;from 100 to 249&lt;/td&gt;
-&lt;td&gt;throng&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;from 250 to 499&lt;/td&gt;
-&lt;td&gt;swarm&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;from 500 to 999&lt;/td&gt;
-&lt;td&gt;zounds&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;from 1000&lt;/td&gt;
-&lt;td&gt;legion&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;Help the localizers automatize the process. Write a program that would output the appropriate word given the number of monsters.&lt;/p&gt;
-&lt;h2 id=&#34;my-solution&#34;&gt;My Solution&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;java.util.*&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-
-&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;problem1785&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-   &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-      &lt;span class=&#34;n&#34;&gt;Scanner&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Scanner&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;in&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-      &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;in&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;nextInt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-	  &lt;span class=&#34;n&#34;&gt;in&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-	  
-	  &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-	  &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;1000&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-		  &lt;span class=&#34;n&#34;&gt;len&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;legion&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-	  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;500&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;999&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-		  &lt;span class=&#34;n&#34;&gt;len&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;zounds&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-	  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;250&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;499&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-		  &lt;span class=&#34;n&#34;&gt;len&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;swarm&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-	  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;100&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;249&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-		  &lt;span class=&#34;n&#34;&gt;len&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;throng&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-	  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;50&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;99&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-		  &lt;span class=&#34;n&#34;&gt;len&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;horde&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-	  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;20&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;49&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-		  &lt;span class=&#34;n&#34;&gt;len&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;lots&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-	  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;10&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;19&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-		  &lt;span class=&#34;n&#34;&gt;len&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;pack&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-	  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-		  &lt;span class=&#34;n&#34;&gt;len&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;several&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-	  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-		  &lt;span class=&#34;n&#34;&gt;len&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;few&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-	  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-	  
-	  &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>

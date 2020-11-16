@@ -6,7 +6,25 @@
     <description>Recent content in java on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Nov 2020 11:11:11 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Nov 2020 20:27:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java IO</title>
+      <link>https://www.pseudoyu.com/en/2020/11/16/java-io/</link>
+      <pubDate>Mon, 16 Nov 2020 20:27:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/16/java-io/</guid>
+      <description>Java Basics File and I/O I/O流类型 流向 输入流 输出流 操作单元 字节流 字符流 角色 节点流 处理流 操作方式 Reader - 字符读取 节点流 FileReader PipedReader CharArrayReader 处理流 BufferedReader InputStreamReader Writer - 字符写出 节点流 FileWriter PipedWriter CharArrayWriter</description>
+    </item>
+    
+    <item>
+      <title>Java Threading</title>
+      <link>https://www.pseudoyu.com/en/2020/11/16/java-threading/</link>
+      <pubDate>Mon, 16 Nov 2020 20:20:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/16/java-threading/</guid>
+      <description>Java Basics 线程 (Threading) 程序 含有指令和数据的文件 静态代码 进程 系统运行程序的基本单位 程序的一次执行过程 动态过程 线程 比进程更小的执行单位 轻量级进程 同类多个线程</description>
+    </item>
+    
     <item>
       <title>LeetCode 524 Longest Word in Dictionary through Deleting</title>
       <link>https://www.pseudoyu.com/en/2020/11/11/leetcode-524-longest-word-in-dictionary-through-deleting/</link>
@@ -174,24 +192,6 @@ My Solution import java.util.*; public class problem1000 { public static void ma
       
       <guid>https://www.pseudoyu.com/en/2020/11/02/java-methods/</guid>
       <description>Java Basics Java 方法 (Methods) Java程序设计语言总是采用按值调用 // Example public class methodTest { public static void main(String[] args) { // TODO Auto-generated method stub Student s1 = new Student(&amp;#34;Misty&amp;#34;); Student s2 = new Student(&amp;#34;Marshal&amp;#34;); Test.swap(s1, s2); System.out.println(&amp;#34;s1:&amp;#34; + s1.getName()); System.out.println(&amp;#34;s2:&amp;#34; + s2.getName()); } public static void swap(Student x, Student y) { Student temp</description>
-    </item>
-    
-    <item>
-      <title>Java equals Method</title>
-      <link>https://www.pseudoyu.com/en/2020/11/02/java-equals-method/</link>
-      <pubDate>Mon, 02 Nov 2020 13:00:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/11/02/java-equals-method/</guid>
-      <description>Java Basics Java equals Method equals() Features Equivalence relationship x.euqal(x); Compared to self x.equals(y) == y.equals(x); When conversed, also true if (x.equals(y) &amp;amp;&amp;amp; y.equals(z)) x.equals(z); When transited, also true x.equals(y) == x.equals(y); When repeated, always true x.equals(null) == false; When compared to null, always false (when x is not assigned null) About == For primitive data type, == measures the equivalence (there is no equals()) For reference, == measures whether</description>
-    </item>
-    
-    <item>
-      <title>Java Generics</title>
-      <link>https://www.pseudoyu.com/en/2020/11/02/java-generics/</link>
-      <pubDate>Mon, 02 Nov 2020 09:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/11/02/java-generics/</guid>
-      <description>Java Basics 泛型 (Generics) 定义 提供编译时类型安全检测机制 参数化类型 Java泛型 伪泛型（类型擦除） 使用方式 泛型类 // 定义泛型类 public class Generic&amp;lt;T&amp;gt; { private T key; public class Generic(T key) { this.key = key; } public</description>
     </item>
     
   </channel>

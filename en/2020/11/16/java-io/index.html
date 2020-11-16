@@ -3,13 +3,14 @@
 <head>
   <meta name="generator" content="Hugo 0.78.0" />
   <meta charset="utf-8">
-  <title>Pseudoyu</title>
+  <title>Java IO · Pseudoyu</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Entrepreneur | Technology lover | Faster learner" />
+  <meta name="description" content="Java Basics File and I/O I/O流类型 流向 输入流 输出流 操作单元 字节流 字符流 角色 节点流 处理流 操作方式 Reader - 字符读取 节点流 FileReader PipedReader CharArrayReader 处理流 BufferedReader InputStreamReader Writer - 字符写出 节点流 FileWriter PipedWriter CharArrayWriter" />
+
   <meta name="keywords" content="Hugo, theme, den" />
 
-<link rel="canonical" href="https://www.pseudoyu.com/en/" />
-<link rel="alternate" href="https://www.pseudoyu.com/zh/" hreflang="zh">
+<link rel="canonical" href="https://www.pseudoyu.com/en/2020/11/16/java-io/" />
+<link rel="alternate" href="https://www.pseudoyu.com/zh/2020/11/16/java-io/" hreflang="zh">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -17,19 +18,25 @@
 
 
 
-<link href="/en/index.xml" rel="alternate" type="application/rss+xml" title="Pseudoyu" />
+
+<meta property="og:title" content="Java IO" />
+<meta property="og:description" content="Java Basics File and I/O I/O流类型 流向 输入流 输出流 操作单元 字节流 字符流 角色 节点流 处理流 操作方式 Reader - 字符读取 节点流 FileReader PipedReader CharArrayReader 处理流 BufferedReader InputStreamReader Writer - 字符写出 节点流 FileWriter PipedWriter CharArrayWriter" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.pseudoyu.com/en/2020/11/16/java-io/" />
+<meta property="article:published_time" content="2020-11-16T20:27:17+08:00" />
+<meta property="article:modified_time" content="2020-11-16T20:27:17+08:00" />
+<meta itemprop="name" content="Java IO">
+<meta itemprop="description" content="Java Basics File and I/O I/O流类型 流向 输入流 输出流 操作单元 字节流 字符流 角色 节点流 处理流 操作方式 Reader - 字符读取 节点流 FileReader PipedReader CharArrayReader 处理流 BufferedReader InputStreamReader Writer - 字符写出 节点流 FileWriter PipedWriter CharArrayWriter">
+<meta itemprop="datePublished" content="2020-11-16T20:27:17+08:00" />
+<meta itemprop="dateModified" content="2020-11-16T20:27:17+08:00" />
+<meta itemprop="wordCount" content="181">
 
 
-<meta property="og:title" content="Pseudoyu" />
-<meta property="og:description" content="Entrepreneur | Technology lover | Faster learner" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.pseudoyu.com/en/" />
-<meta property="og:updated_time" content="2020-11-16T20:27:17+08:00" />
-<meta itemprop="name" content="Pseudoyu">
-<meta itemprop="description" content="Entrepreneur | Technology lover | Faster learner">
+
+<meta itemprop="keywords" content="notes,technology,programming,java,github,basic," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Pseudoyu"/>
-<meta name="twitter:description" content="Entrepreneur | Technology lover | Faster learner"/>
+<meta name="twitter:title" content="Java IO"/>
+<meta name="twitter:description" content="Java Basics File and I/O I/O流类型 流向 输入流 输出流 操作单元 字节流 字符流 角色 节点流 处理流 操作方式 Reader - 字符读取 节点流 FileReader PipedReader CharArrayReader 处理流 BufferedReader InputStreamReader Writer - 字符写出 节点流 FileWriter PipedWriter CharArrayWriter"/>
 </head>
 <body>
   
@@ -119,110 +126,213 @@
   <div class="row">
     <div class="col-lg-12">
       <div class="header-content">
-        <h1 class="header-title">
-          
-            Pseudoyu
-          
-        </h1>
+        <h1 class="header-title">Java IO</h1>
+        <p class="header-date">By
+          pseudoyu /
+        
+        2020-11-16
+          / In categories
+          <a href="https://www.pseudoyu.com/en/category/notes/">Notes</a>
+        </p>
+        
         <div class="header-underline"></div>
         
-        <p class="header-subtitle header-subtitle-homepage">Entrepreneur | Technology lover | Faster learner</p>
+          <div class="clearfix"></div>
+          <p class="float-right header-tags">
+              <i class="fas fa-tags" aria-hidden="true"></i>
+              <a href="https://www.pseudoyu.com/en/tag/basic/">basic</a>, 
+                <a href="https://www.pseudoyu.com/en/tag/github/">github</a>, 
+                <a href="https://www.pseudoyu.com/en/tag/java/">java</a>, 
+                <a href="https://www.pseudoyu.com/en/tag/notes/">notes</a>, 
+                <a href="https://www.pseudoyu.com/en/tag/programming/">programming</a>, 
+                <a href="https://www.pseudoyu.com/en/tag/technology/">technology</a>
+          </p>
         
+        <div class="clearfix"></div>
+<p class="float-right translations">
+    <i class="fas fa-language" aria-hidden="true"></i>
+    Translations: 
+    <a href="https://www.pseudoyu.com/zh/2020/11/16/java-io/">ZH</a>
+</p>
+
+
       </div>
     </div>
   </div>
 </div>
 
   </div>
-  <main><div class="archive-container">
-    <div class="container content archive">
-      <h2>Latest Posts <small>- Page 3</small></h2>
-        <dl class="row">
-            <dt class="col-md-3">2020-10-21</dt>
-            <dd class="col-md-9"><a href="https://www.pseudoyu.com/en/2020/10/21/blockchain-bitcoin-features/">Blockchain BitCoin Features</a></dd>
-            <dt class="col-md-3">2020-10-21</dt>
-            <dd class="col-md-9"><a href="https://www.pseudoyu.com/en/2020/10/21/icom6045-topic-1-cryptography/">ICOM6045 Topic 1 Cryptography</a></dd>
-            <dt class="col-md-3">2020-10-21</dt>
-            <dd class="col-md-9"><a href="https://www.pseudoyu.com/en/2020/10/21/blockchain-protocol/">Blockchain Protocol</a></dd>
-            <dt class="col-md-3">2020-10-21</dt>
-            <dd class="col-md-9"><a href="https://www.pseudoyu.com/en/2020/10/21/java-keywords/">Java Keywords</a></dd>
-            <dt class="col-md-3">2020-10-21</dt>
-            <dd class="col-md-9"><a href="https://www.pseudoyu.com/en/2020/10/21/java-operation/">Java Operation</a></dd>
-            <dt class="col-md-3">2020-10-21</dt>
-            <dd class="col-md-9"><a href="https://www.pseudoyu.com/en/2020/10/21/blockchain-data-structure/">Blockchain Data Structure</a></dd>
-            <dt class="col-md-3">2020-10-21</dt>
-            <dd class="col-md-9"><a href="https://www.pseudoyu.com/en/2020/10/21/java-string/">Java String</a></dd>
-            <dt class="col-md-3">2020-10-21</dt>
-            <dd class="col-md-9"><a href="https://www.pseudoyu.com/en/2020/10/21/blockchain-cryptography/">Blockchain Cryptography</a></dd>
-            <dt class="col-md-3">2020-10-21</dt>
-            <dd class="col-md-9"><a href="https://www.pseudoyu.com/en/2020/10/21/java-data-type/">Java Data Type</a></dd>
-            <dt class="col-md-3">2020-10-20</dt>
-            <dd class="col-md-9"><a href="https://www.pseudoyu.com/en/2020/10/20/icom6012-topic-4-transport-layer/">ICOM6012 Topic 4 Transport Layer</a></dd>
-            <dt class="col-md-3">2020-10-19</dt>
-            <dd class="col-md-9"><a href="https://www.pseudoyu.com/en/2020/10/19/icom6012-topic-3-application-layer/">ICOM6012 Topic 3 Application Layer</a></dd>
-            <dt class="col-md-3">2020-10-18</dt>
-            <dd class="col-md-9"><a href="https://www.pseudoyu.com/en/2020/10/18/blockchain-learning-plan/">Blockchain Learning Plan</a></dd>
-            <dt class="col-md-3">2020-10-18</dt>
-            <dd class="col-md-9"><a href="https://www.pseudoyu.com/en/2020/10/18/blockchain-learning-structure/">Blockchain Learning Structure</a></dd>
-            <dt class="col-md-3">2020-10-16</dt>
-            <dd class="col-md-9"><a href="https://www.pseudoyu.com/en/2020/10/16/a-look-at-tik-tok/">A Look at Tik-Tok</a></dd>
-            <dt class="col-md-3">2020-10-09</dt>
-            <dd class="col-md-9"><a href="https://www.pseudoyu.com/en/2020/10/09/ecom6013-topic-8-blockchain-and-cybercurrency/">ECOM6013 Topic 8 Blockchain and Cybercurrency</a></dd>
-            <dt class="col-md-3">2020-10-05</dt>
-            <dd class="col-md-9"><a href="https://www.pseudoyu.com/en/2020/10/05/icom6012-topic-2-the-big-picture/">ICOM6012 Topic 2 The Big Picture</a></dd>
-            <dt class="col-md-3">2020-10-05</dt>
-            <dd class="col-md-9"><a href="https://www.pseudoyu.com/en/2020/10/05/comp7404-topic-3-adversarial-search/">COMP7404 Topic 3 Adversarial Search</a></dd>
-            <dt class="col-md-3">2020-10-04</dt>
-            <dd class="col-md-9"><a href="https://www.pseudoyu.com/en/2020/10/04/comp7404-topic-2-beyond-classical-search/">COMP7404 Topic 2 Beyond Classical Search</a></dd>
-            <dt class="col-md-3">2020-10-02</dt>
-            <dd class="col-md-9"><a href="https://www.pseudoyu.com/en/2020/10/02/blockchain-job-description/">Blockchain Job Description</a></dd>
-            <dt class="col-md-3">2020-10-01</dt>
-            <dd class="col-md-9"><a href="https://www.pseudoyu.com/en/2020/10/01/mobile-payment-systems-case-study/">Mobile Payment Systems Case Study</a></dd>
-            
-        </dl>
-    </div>
+  <main>
+<div class="container content">
+  <article>
+  <h1 id="java-basics">Java Basics</h1>
+<h2 id="file-and-io">File and I/O</h2>
+<p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/java_io.svg" alt="java_io"></p>
+<h3 id="io流类型">I/O流类型</h3>
+<ul>
+<li>流向
+<ul>
+<li>输入流</li>
+<li>输出流</li>
+</ul>
+</li>
+<li>操作单元
+<ul>
+<li>字节流</li>
+<li>字符流</li>
+</ul>
+</li>
+<li>角色
+<ul>
+<li>节点流</li>
+<li>处理流</li>
+</ul>
+</li>
+</ul>
+<h3 id="操作方式">操作方式</h3>
+<ul>
+<li>Reader - 字符读取
+<ul>
+<li>节点流
+<ul>
+<li>FileReader</li>
+<li>PipedReader</li>
+<li>CharArrayReader</li>
+</ul>
+</li>
+<li>处理流
+<ul>
+<li>BufferedReader</li>
+<li>InputStreamReader</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Writer - 字符写出
+<ul>
+<li>节点流
+<ul>
+<li>FileWriter</li>
+<li>PipedWriter</li>
+<li>CharArrayWriter</li>
+</ul>
+</li>
+<li>处理流
+<ul>
+<li>BufferedWriter</li>
+<li>OutputStreamWriter</li>
+<li>printWriter</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>InputStream - 字节读取
+<ul>
+<li>节点流
+<ul>
+<li>FileInputStream</li>
+<li>PipeInputStream</li>
+<li>ByteArrayInputStream</li>
+</ul>
+</li>
+<li>处理流
+<ul>
+<li>BufferedInputStream</li>
+<li>DataInputStream</li>
+<li>ObjectInputStream</li>
+<li>SequenceInputStream</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>OutputStream - 字节写出
+<ul>
+<li>节点流
+<ul>
+<li>FileOutputStream</li>
+<li>PipedOutputStream</li>
+<li>ByteArrayOutputStream</li>
+</ul>
+</li>
+<li>处理流
+<ul>
+<li>BufferedOutputStream</li>
+<li>DataOutputStream</li>
+<li>ObjectOutputStream</li>
+<li>PrintStream</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="操作对象">操作对象</h3>
+<ul>
+<li>文件操作
+<ul>
+<li>FileInputStream</li>
+<li>FileOutputStream</li>
+<li>FileReader</li>
+<li>FileWriter</li>
+</ul>
+</li>
+<li>管道操作
+<ul>
+<li>PipedReader</li>
+<li>PipedWriter</li>
+<li>PipeInputStream</li>
+<li>PipedOutputStream</li>
+</ul>
+</li>
+<li>数组操作
+<ul>
+<li>CharArrayReader</li>
+<li>CharArrayWriter</li>
+<li>ByteArrayInputStream</li>
+<li>ByteArrayOutputStream</li>
+</ul>
+</li>
+<li>缓冲操作
+<ul>
+<li>BufferedReader</li>
+<li>BufferedWriter</li>
+<li>BufferedInputStream</li>
+<li>BufferedOutputStream</li>
+</ul>
+</li>
+<li>基本数据类型操作
+<ul>
+<li>DataInputStream</li>
+<li>DataOutputStream</li>
+</ul>
+</li>
+<li>对象序列化操作
+<ul>
+<li>ObjectInputStream</li>
+<li>ObjectOutputStream</li>
+</ul>
+</li>
+<li>转化控制
+<ul>
+<li>InputStreamReader</li>
+<li>OutputStreamWriter</li>
+</ul>
+</li>
+<li>打印控制
+<ul>
+<li>printWriter</li>
+<li>PrintStream</li>
+</ul>
+</li>
+</ul>
+
+  </article>
+
+  
+  
+  
+
+
 </div>
-
-
-<nav class="container navigation">
-  
-    
-    
-    
-    
-    <ul class="pagination justify-content-center">
-      
-        
-          
-          <li class="page-item">
-            <a href="/en/" class="page-link">1</a>
-          </li>
-          
-        
-          
-          <li class="page-item">
-            <a href="/en/page/2/" class="page-link">2</a>
-          </li>
-          
-        
-          
-          <li class="page-item active">
-            <a href="#" class="page-link">3</a>
-          </li>
-          
-        
-          
-          <li class="page-item">
-            <a href="/en/page/4/" class="page-link">4</a>
-          </li>
-          
-        
-      
-    </ul>
-  
-</nav>
-
-
 
   </main><div class="footer gradient-2">
   <div class="container footer-container ">

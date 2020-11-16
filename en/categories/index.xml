@@ -6,7 +6,16 @@
     <description>Recent content in Categories on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Nov 2020 16:30:25 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Nov 2020 20:27:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes</title>
+      <link>https://www.pseudoyu.com/en/category/notes/</link>
+      <pubDate>Mon, 16 Nov 2020 20:27:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/category/notes/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Projects</title>
       <link>https://www.pseudoyu.com/en/category/projects/</link>
@@ -22,15 +31,6 @@
       <pubDate>Wed, 11 Nov 2020 11:11:11 +0800</pubDate>
       
       <guid>https://www.pseudoyu.com/en/category/leetcode/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Notes</title>
-      <link>https://www.pseudoyu.com/en/category/notes/</link>
-      <pubDate>Tue, 10 Nov 2020 11:30:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/category/notes/</guid>
       <description></description>
     </item>
     

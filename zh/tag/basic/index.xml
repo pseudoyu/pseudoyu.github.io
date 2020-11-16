@@ -6,7 +6,25 @@
     <description>Recent content in basic on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 02 Nov 2020 14:00:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/basic/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Nov 2020 20:27:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/basic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java IO</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/16/java-io/</link>
+      <pubDate>Mon, 16 Nov 2020 20:27:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/16/java-io/</guid>
+      <description>Java Basics File and I/O I/O流类型 流向 输入流 输出流 操作单元 字节流 字符流 角色 节点流 处理流 操作方式 Reader - 字符读取 节点流 FileReader PipedReader CharArrayReader 处理流 BufferedReader InputStreamReader Writer - 字符写出 节点流 FileWriter PipedWriter CharArrayWriter</description>
+    </item>
+    
+    <item>
+      <title>Java Threading</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/16/java-threading/</link>
+      <pubDate>Mon, 16 Nov 2020 20:20:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/16/java-threading/</guid>
+      <description>Java Basics 线程 (Threading) 程序 含有指令和数据的文件 静态代码 进程 系统运行程序的基本单位 程序的一次执行过程 动态过程 线程 比进程更小的执行单位 轻量级进程 同类多个线程</description>
+    </item>
+    
     <item>
       <title>Java Methods</title>
       <link>https://www.pseudoyu.com/zh/2020/11/02/java-methods/</link>

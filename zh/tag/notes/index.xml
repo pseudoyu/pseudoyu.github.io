@@ -6,25 +6,7 @@
     <description>Recent content in notes on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 16 Nov 2020 20:27:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/notes/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Java IO</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/16/java-io/</link>
-      <pubDate>Mon, 16 Nov 2020 20:27:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/16/java-io/</guid>
-      <description>Java Basics File and I/O I/O流类型 流向 输入流 输出流 操作单元 字节流 字符流 角色 节点流 处理流 操作方式 Reader - 字符读取 节点流 FileReader PipedReader CharArrayReader 处理流 BufferedReader InputStreamReader Writer - 字符写出 节点流 FileWriter PipedWriter CharArrayWriter</description>
-    </item>
-    
-    <item>
-      <title>Java Threading</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/16/java-threading/</link>
-      <pubDate>Mon, 16 Nov 2020 20:20:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/16/java-threading/</guid>
-      <description>Java Basics 线程 (Threading) 程序 含有指令和数据的文件 静态代码 进程 系统运行程序的基本单位 程序的一次执行过程 动态过程 线程 比进程更小的执行单位 轻量级进程 同类多个线程</description>
-    </item>
-    
+    <lastBuildDate>Wed, 11 Nov 2020 11:11:11 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LeetCode 524 Longest Word in Dictionary through Deleting</title>
       <link>https://www.pseudoyu.com/zh/2020/11/11/leetcode-524-longest-word-in-dictionary-through-deleting/</link>
@@ -44,30 +26,12 @@
     </item>
     
     <item>
-      <title>Blockchain Ethereum Thoughts</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/10/blockchain-ethereum-thoughts/</link>
-      <pubDate>Tue, 10 Nov 2020 11:30:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/10/blockchain-ethereum-thoughts/</guid>
-      <description>Blockchain Technology and Applications Blockchain Ethereum Thoughts  ERC20  Ethereum Request For Comments   Smart contract  Smart contract is anything but smart Just automated contract For control logic   Irrevocability  Double edged sword  Hard to fix the bug Can not stop the smart contract   Nothing is irrevocability   Solidity  Formal verification Template   Open source  Security  &amp;ldquo;Many eyeball fallacy&amp;rdquo;   Credibility   Decentralization  Can be changed Should in decentralized way (voting) Not equals to distributed   Fork  Democracy   State machine  Mission critical application  Air traffic control Stock exchange Space shuttle      Cases  DAO  Decentralized Autonomous Organization Example: TheDAO  No withdraw function splitDAO  7-day for debate 28-day for lock   childDAO Attacker  $50,000,000/$150,000,000 Too big to fail       DAC  Decentralized Autonomous Corporation   Beauty Chain  SafeMath  Overflow      </description>
-    </item>
-    
-    <item>
       <title>LeetCode 141 Linked List Cycle</title>
       <link>https://www.pseudoyu.com/zh/2020/11/07/leetcode-141-linked-list-cycle/</link>
       <pubDate>Sat, 07 Nov 2020 00:50:17 +0800</pubDate>
       
       <guid>https://www.pseudoyu.com/zh/2020/11/07/leetcode-141-linked-list-cycle/</guid>
       <description>LeetCode #141 Linked List Cycle Problem Description Given head, the head of a linked list, determine if the linked list has a cycle in it. There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer. Internally, pos is used to denote the index of the node that tail&amp;rsquo;s next pointer is connected to.</description>
-    </item>
-    
-    <item>
-      <title>Blockchain Ethereum Smart Contract</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/07/blockchain-ethereum-smart-contract/</link>
-      <pubDate>Sat, 07 Nov 2020 00:09:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/07/blockchain-ethereum-smart-contract/</guid>
-      <description>Blockchain Technology and Applications Ethereum Smart Contract 定义 运行在区块链上的一段代码 代码逻辑定义了合约的内容 智能合约账户保存了合约的当前运行状态 余额 交易次数 合约代码 存储, MPT 不支持多线</description>
     </item>
     
     <item>
@@ -125,42 +89,6 @@
     </item>
     
     <item>
-      <title>Blockchain Proof of Stake</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/05/blockchain-proof-of-stake/</link>
-      <pubDate>Thu, 05 Nov 2020 09:25:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/05/blockchain-proof-of-stake/</guid>
-      <description>Blockchain Technology and Applications Proof of Stake 本质 Virtual mining 作用 省去了挖矿过程 节约能耗 提升抗攻击能力 AltCoin Infanticide 问题 Nothing at stake 机制不够成熟 Bug bounty Ethereum Casper Friendly Finality Gadget (FFG) Validator Epoch 推动系统达成共识 (Two-phase commit) Prepare message 2/3 Commit message 2/3</description>
-    </item>
-    
-    <item>
-      <title>Blockchain Ethereum Difficulty</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/04/blockchain-ethereum-difficulty/</link>
-      <pubDate>Wed, 04 Nov 2020 22:10:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/04/blockchain-ethereum-difficulty/</guid>
-      <description>Blockchain Technology and Applications Ethereum System (Account-based ledger) 难度调整 发展阶段 Frontier Homestead Metropolis Byzantium (拜占庭) Constantinople Serenity 难度D(H) D(0) - 131072 基础部分 难度炸弹 为了向PoS迁移，降低分叉风险 实际：迁移进度慢，但是</description>
-    </item>
-    
-    <item>
-      <title>Blockchain Ethereum Mining Algorithm</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/03/blockchain-ethereum-mining-algorithm/</link>
-      <pubDate>Tue, 03 Nov 2020 10:30:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/03/blockchain-ethereum-mining-algorithm/</guid>
-      <description>Blockchain Technology and Applications Ethereum System (Account-based ledger) Mining Algorithm Compared to LiteCoin Scrypt Hard for light node to verify 128K 2 minutes and a half Trend ASIC resistance Memory hard Design 2 datasets 16M cache For verification 1G dataset -&amp;gt; 2.5G now Generate Read 256 times of cache Put into a large list Solve Read 128 times of large list Neighboring 64 * 2 Ethash 1G Memory + 16M</description>
-    </item>
-    
-    <item>
-      <title>Blockchain Ethereum GHOST Protocol</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/03/blockchain-ethereum-ghost-protocol/</link>
-      <pubDate>Tue, 03 Nov 2020 09:00:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/03/blockchain-ethereum-ghost-protocol/</guid>
-      <description>Blockchain Technology and Applications Ethereum System (Account-based ledger) GHOST Protocol  Problem  Less confirmation time Temporary fork Mining centralization (Centralization bias)   Uncle block  Only first blcok after forking Same ancestor Within 7 generation Decreasing Block reward  7/8 for branch -&amp;gt; 6/8 -&amp;gt; 5/8 -&amp;gt; &amp;hellip; -&amp;gt; 2/8 1/32 for main (fixed)   No gas fee Main blocks don&amp;rsquo;t check or execute the uncle block transaction    </description>
-    </item>
-    
-    <item>
       <title>Timus 2012 About Grisha N</title>
       <link>https://www.pseudoyu.com/zh/2020/11/03/timus-2012-about-grisha-n/</link>
       <pubDate>Tue, 03 Nov 2020 02:00:17 +0800</pubDate>
@@ -187,6 +115,83 @@ During the first hour he wants to solve f problems. If there is still some time 
       <guid>https://www.pseudoyu.com/zh/2020/11/03/timus-1785-lost-in-localization/</guid>
       <description>Timus 1785 Lost in Localization Problem Description The Lavin Interactive Company, which has developed the turn-based strategy Losers-V, is constantly extending its target market by localizing the game to as many languages as it can. In particular, they are interested in creating a version of the game in Anindilyakwa, which is one of the languages spoken by indigenous Australians.
 However, the localization is complicated by the fact that Anindilyakwa has no numerals.</description>
+    </item>
+    
+    <item>
+      <title>Timus 1409 Two Gangsters</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/03/timus-1409-two-gangsters/</link>
+      <pubDate>Tue, 03 Nov 2020 00:40:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/03/timus-1409-two-gangsters/</guid>
+      <description>Timus 1409 Two Gangsters Problem Description Two gangsters Harry and Larry had a rest at countryside. They decided to spend some time shooting, so they put several beer cans (no more than 10) on a log. Harry started to shoot cans one after another from the leftmost to the right and Larry – from the rightmost to the left. At some moment it happened so that they shot one and the same can.</description>
+    </item>
+    
+    <item>
+      <title>Timus 1293 Eniya</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/03/timus-1293-eniya/</link>
+      <pubDate>Tue, 03 Nov 2020 00:10:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/03/timus-1293-eniya/</guid>
+      <description>Timus 1293 Eniya Problem Description It’s restless now on the slips of the intergalactic port’s sixth dock of planet of Torn. No longer then in a month the reconstruction of the small ironclad corvette “Eniya” will be finished. And again this battle ship and its brave team would have to struggle for the control over plutonium mines of Sibelius. The work cannot be stopped even for a second, self-powered laser welders work round the clock.</description>
+    </item>
+    
+    <item>
+      <title>Timus 1001 Reverse Root</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/02/timus-1001-reverse-root/</link>
+      <pubDate>Mon, 02 Nov 2020 23:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/02/timus-1001-reverse-root/</guid>
+      <description>Timus 1001 Reverse Root Problem Description The problem is so easy, that the authors were lazy to write a statement for it!
+Input: The input stream contains a set of integer numbers Ai. The numbers are separated by any number of spaces and line breaks. A size of the input stream does not exceed 256 KB.
+Output: For each number Ai from the last one till the first one you should output its square root.</description>
+    </item>
+    
+    <item>
+      <title>Timus 1000 A&#43;B Problem</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/02/timus-1000-a-b-problem/</link>
+      <pubDate>Mon, 02 Nov 2020 22:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/02/timus-1000-a-b-problem/</guid>
+      <description>Timus 1000 A+B Problem Problem Description Calculate a + b
+Input: a and b
+Output: a+b
+My Solution import java.util.*; public class problem1000 { public static void main(String[] args) { Scanner in = new Scanner(System.in); int a = in.nextInt(); int b = in.nextInt(); in.close(); System.out.println(a + b); } } </description>
+    </item>
+    
+    <item>
+      <title>LeetCode 1 Two Sum</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/02/leetcode-1-two-sum/</link>
+      <pubDate>Mon, 02 Nov 2020 20:53:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/02/leetcode-1-two-sum/</guid>
+      <description>LeetCode #1 Two Sum Problem Description Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order. Example 1: Input: nums = [2,7,11,15], target = 9 Output: [0,1] Output: Because</description>
+    </item>
+    
+    <item>
+      <title>ICOM6045 Topic 1 Cryptography</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/21/icom6045-topic-1-cryptography/</link>
+      <pubDate>Wed, 21 Oct 2020 19:53:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/21/icom6045-topic-1-cryptography/</guid>
+      <description>ICOM6045 Fundamentals of E-Commerce Security Topic 1 Cryptography Definition  Process of transforming information to make it unreadable to anyone except those possessing the key  Purpose  Data confidentiality  Transpositions/Permutations  An encryption in which the letters of the message are rearranged Function  Try to break established patterns   Example  Columnar transposition  Rearrangement of the characters of the plaintext into columns Based on characteristic patterns of pairs of adjacent letters, called digrams Analysis  Compute the letter frequencies  Break the text into columns by compare a block of ciphertext characters against characters successively farther away in the ciphertext.</description>
+    </item>
+    
+    <item>
+      <title>ICOM6012 Topic 4 Transport Layer</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/20/icom6012-topic-4-transport-layer/</link>
+      <pubDate>Tue, 20 Oct 2020 09:37:44 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/20/icom6012-topic-4-transport-layer/</guid>
+      <description>ICOM6012 Internet Infrastructure Technologies Topic 4 Transport Layer Actions Sender  Get application layer message Determine segment header fields values Create segment Pass segment to IP  Receiver  Receive segment from IP Check header values Extract application layer message Demultiplexes message up to application via socket  Services Provide logical communication between processes Run in end system  Send side  Break app messages into segment Pass to network layer   Receive side  Reassembles segments into messages Pass to application layer    Protocols TCP  Features  Point-to-point  One sender, one receiver   Reliable, in-order byte system  No message boundaries   Full duplex data  Bi-directional data flow in same connection MSS: maximum segment size (excluding header)   Cumulative ACKs Pipelining  TCP congestion and flow control set window size   Flow Control  Sender will not overwhelm receiver   Congestion control   Concepts  Segment structure Sequence numbers  Byte stream &amp;ldquo;number&amp;rdquo; of first byte in segment&amp;rsquo;s data   Acknowledgements (ACKs)  Seq # of next byte expected from other side Cumulative ACKs     Procedure  Connection-oriented  Handshaking initializes sender, receiver state before data exchange TCP socket identified by 4-tuple  Source IP Source Port # Dest IP Dest Port #   Server host may support many simultaneous TCP sockets Web servers have different sockets for each connecting client (Non-persistent HTTP will have different socket for each request) Demux  Receiver uses all four values to direct segment to appropriate socket     3-way handshake  Connection setup   Connection management  Handshake  Agree to establish connection Agree on connection parameters     Retransmission Closing a connection   Events  Data received from application  Create segment with seq # (a byte-stream number of first data byte in segment) Start timer if not already running  Think of timer as for oldest unACKed segment Expiration interval: TimeOutInterval     Timeout  Retransmit segment that caused timeout Restart timer   ACK received  Update what is known to ACKed Start timer if there are still unACKed segment     Shortcomings  SYN DoS Attack  Half-open TCP connections consume all the TCP connection resources SYN packet with a spoofed source address      UDP   Features</description>
+    </item>
+    
+    <item>
+      <title>ICOM6012 Topic 3 Application Layer</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/19/icom6012-topic-3-application-layer/</link>
+      <pubDate>Mon, 19 Oct 2020 17:50:44 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/19/icom6012-topic-3-application-layer/</guid>
+      <description>ICOM6012 Internet Infrastructure Technologies Topic 3 Application Layer Creating a Network App Run on different end systems Communication over network No need to write for network-core devices Client-Server Architecture (The Centralized Internet) Server Always-on host Permanent IP address Often in data centers (for scaling) Clients Contact, communicate with server May be intermittently connected May have dynamic IP addresses Don&amp;rsquo;t communicate directly with each other Peer-to-Peer (P2P) Architecture No always-on server</description>
     </item>
     
   </channel>

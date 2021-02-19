@@ -6,25 +6,7 @@
     <description>Recent content in programming on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 16 Nov 2020 20:27:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/programming/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Java IO</title>
-      <link>https://www.pseudoyu.com/en/2020/11/16/java-io/</link>
-      <pubDate>Mon, 16 Nov 2020 20:27:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/11/16/java-io/</guid>
-      <description>Java Basics File and I/O I/O流类型 流向 输入流 输出流 操作单元 字节流 字符流 角色 节点流 处理流 操作方式 Reader - 字符读取 节点流 FileReader PipedReader CharArrayReader 处理流 BufferedReader InputStreamReader Writer - 字符写出 节点流 FileWriter PipedWriter CharArrayWriter</description>
-    </item>
-    
-    <item>
-      <title>Java Threading</title>
-      <link>https://www.pseudoyu.com/en/2020/11/16/java-threading/</link>
-      <pubDate>Mon, 16 Nov 2020 20:20:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/11/16/java-threading/</guid>
-      <description>Java Basics 线程 (Threading) 程序 含有指令和数据的文件 静态代码 进程 系统运行程序的基本单位 程序的一次执行过程 动态过程 线程 比进程更小的执行单位 轻量级进程 同类多个线程</description>
-    </item>
-    
+    <lastBuildDate>Wed, 11 Nov 2020 16:30:25 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>xDeepFM for Recommender Systems</title>
       <link>https://www.pseudoyu.com/en/2020/11/11/xdeepfm-for-recommender-systems/</link>
@@ -196,6 +178,27 @@ My Solution import java.util.*; public class problem1000 { public static void ma
       
       <guid>https://www.pseudoyu.com/en/2020/11/02/leetcode-1-two-sum/</guid>
       <description>LeetCode #1 Two Sum Problem Description Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order. Example 1: Input: nums = [2,7,11,15], target = 9 Output: [0,1] Output: Because</description>
+    </item>
+    
+    <item>
+      <title>COMP7404 Topic 3 Adversarial Search</title>
+      <link>https://www.pseudoyu.com/en/2020/10/05/comp7404-topic-3-adversarial-search/</link>
+      <pubDate>Mon, 05 Oct 2020 00:30:11 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/10/05/comp7404-topic-3-adversarial-search/</guid>
+      <description>COMP7404 Computational Intelligence and Machine Learning Topic 3 Adversarial Search A Multi-agent Competitive Environment
+ Other agents are planning against us Goals are in conflict (not necessarily)  Game Definition
+ A game can be defined as  s : States s0: Initial state Player(s) : Defines which player has the move Actions(s) : Returns a set of legal moves Result(s,a) : Defines the result of a move TerminalTest(s) : True when game is over, false otherwise Utility(s,p) : Defines the final numeric value for a game that ends in terminal state s for player p   A game tree can be constructed  Nodes are game states and edges are moves    Tic-Tac-Toe Game Tree</description>
+    </item>
+    
+    <item>
+      <title>COMP7404 Topic 2 Beyond Classical Search</title>
+      <link>https://www.pseudoyu.com/en/2020/10/04/comp7404-topic-2-beyond-classical-search/</link>
+      <pubDate>Sun, 04 Oct 2020 21:30:11 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/10/04/comp7404-topic-2-beyond-classical-search/</guid>
+      <description>COMP7404 Computational Intelligence and Machine Learning Topic 2 Beyond Classical Search Planning vs Identification
+ Planing: sequence of actions  The path to the goal is the important thing Paths have various costs, depths Heuristics to guide, frontier to keep backups   Identification: assignments to variables  The goal itself is important, not the path    Local Search can find solutions faster for specific types of identification problems</description>
     </item>
     
   </channel>

@@ -35,6 +35,15 @@
     </item>
     
     <item>
+      <title>A Look at Tik-Tok</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/16/a-look-at-tik-tok/</link>
+      <pubDate>Fri, 16 Oct 2020 09:19:19 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/16/a-look-at-tik-tok/</guid>
+      <description>A Look at Tik-Tok Given there are many social media platforms already existing in US, what makes Tik-Tok so successful that it becomes a big enough threat to cause the US Government to act the way it did towards a commercial company (ignore political factors)? Economically, at about 2016, US tech giants such as Facebook or Google mainly focused on long video platform instead of the short video platform. A company called Musical.</description>
+    </item>
+    
+    <item>
       <title>ECOM6013 Topic 8 Blockchain and Cybercurrency</title>
       <link>https://www.pseudoyu.com/zh/2020/10/09/ecom6013-topic-8-blockchain-and-cybercurrency/</link>
       <pubDate>Fri, 09 Oct 2020 11:01:28 +0800</pubDate>
@@ -76,6 +85,15 @@
     </item>
     
     <item>
+      <title>Mobile Payment Systems Case Study</title>
+      <link>https://www.pseudoyu.com/zh/2020/10/01/mobile-payment-systems-case-study/</link>
+      <pubDate>Thu, 01 Oct 2020 22:25:19 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/10/01/mobile-payment-systems-case-study/</guid>
+      <description>Mobile Payment Systems Why has China been an ideal environment to support mobile payment systems? Politically, payment licenses are controlled by government (relative financial institutions) and under strict regulation. So, tech giants like Alibaba who are qualified can increasingly develop their payment business in the early age. Plus, in the early stage of mobile payment, laws and rules are not so completed. Payment platform can utilize smart market strategies (like very high return rate) to attract more new potential users and enhance existing users’ engagement, which is effective in market expanding stage.</description>
+    </item>
+    
+    <item>
       <title>ECOM6013 Topic 7 E-Payment Systems</title>
       <link>https://www.pseudoyu.com/zh/2020/09/27/ecom6013-topic-7-e-payment-systems/</link>
       <pubDate>Sun, 27 Sep 2020 11:30:28 +0800</pubDate>
@@ -98,17 +116,6 @@
     </item>
     
     <item>
-      <title>Introduction to Crypto and Cryptocurrencies</title>
-      <link>https://www.pseudoyu.com/zh/2020/09/23/introduction-to-crypto-and-cryptocurrencies/</link>
-      <pubDate>Wed, 23 Sep 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/09/23/introduction-to-crypto-and-cryptocurrencies/</guid>
-      <description>Bitcoin and Cryptocurrency Technologies Lecture 1 Introduction to Crypto and Cryptocurrencies Hash Function
- Takes any string as input Fixed-size output Efficiently computable  Security Properties
- Collision-free  Nobody can find x and y such as &amp;ldquo;x!=y and H(x)=H(y)&amp;quot;   Hiding  Given H(x), it&amp;rsquo;s infeasible to find x   Puzzle-friendly  For every possible output value y, if k is chosen from a distribution with high min-entropy, then it&amp;rsquo;s infeasible to find x such as H(k|x)=y    SHA-256 Hash Function</description>
-    </item>
-    
-    <item>
       <title>ECOM6013 Topic 5 Mobile Commerce</title>
       <link>https://www.pseudoyu.com/zh/2020/09/21/ecom6013-topic-5-mobile-commerce/</link>
       <pubDate>Mon, 21 Sep 2020 10:44:28 +0800</pubDate>
@@ -120,6 +127,17 @@ Cell Handover
 4G vs. 5G
  4G  10 ms 100 Thousand Connections / km^2 1 Gbps   5G  &amp;lt; 1ms 1 Million Connections / km^2 20 Gbps    E-Commerce vs. M-Commerce
  E-Commerce  Device: PC Network: Internet (HTTP)   M-Commerce  Device: Mobile devices Network  Mobile carrier network WiFi Local frequency (RFID/NFC)      Definition of M-Commerce</description>
+    </item>
+    
+    <item>
+      <title>New iPad Air 4 (2020) Presence by Apple Inc.</title>
+      <link>https://www.pseudoyu.com/zh/2020/09/18/new-ipad-air-4-2020-presence-by-apple-inc./</link>
+      <pubDate>Fri, 18 Sep 2020 01:25:19 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/09/18/new-ipad-air-4-2020-presence-by-apple-inc./</guid>
+      <description>E-Commerce Presence Look Around New iPad Air 4 (2020) Presence by Apple Inc. Website Link
+The iPad Air 4 (2020) got shown off at Apple&amp;rsquo;s September event held on September 16. There is a specific designed website (mobile version included) for this product. I&amp;rsquo;d like to do an analysis towards this very impressive E-Commerce presence.
+Apple iPad Air product line is mainly targeted to educators/students, staffs and kids/teenagers. So, the most premium features this new product wants to convey to customers is its fancy appearance and powerful A14 Bionic for creation, study and entertainment.</description>
     </item>
     
     <item>
@@ -189,15 +207,19 @@ Cell Handover
     </item>
     
     <item>
-      <title>ECOM6013 Topic 1 Introduction to E-Commerce Technology</title>
-      <link>https://www.pseudoyu.com/zh/2020/09/06/ecom6013-topic-1-introduction-to-e-commerce-technology/</link>
-      <pubDate>Sun, 06 Sep 2020 04:28:28 +0800</pubDate>
+      <title>Puma Goes Omni Case Study</title>
+      <link>https://www.pseudoyu.com/zh/2020/09/08/puma-goes-omni-case-study/</link>
+      <pubDate>Tue, 08 Sep 2020 23:30:19 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2020/09/06/ecom6013-topic-1-introduction-to-e-commerce-technology/</guid>
-      <description>ECOM6013 E-Commerce Technologies Topic 1 Introduction to E-Commerce Technology Discussion Topic #1: Puma Goes Omni
- What is the purpose of Puma&amp;rsquo;s content management systems? Why did Puma build a single centralized website rather than continue with multiple websites serving different countries and regions? [choosen] What social media sites does Puma use, and what do they contribute to Puma&amp;rsquo;s marketing effort?  Case Study
-Alibaba Singles&#39; Day 2019
-Core E-Commerce Technologies  Introduction to E-Commerce Technology Internet and E-Commerce Infrasture E-Commerce Presence and Development Life Circle Web Design, Implementation and Testing Introduction to Mobile Commerce Internet and E-Commerce Commerce Electronic Payment Systems Cybercurrency, Bitcoin and Blockchain Emerging Technology &amp;amp; Cloud Computing and IoT Artificial Intelligence, Machine Learning and E-Commerce Trends  E-Commerce and Data Science</description>
+      <guid>https://www.pseudoyu.com/zh/2020/09/08/puma-goes-omni-case-study/</guid>
+      <description>Puma Goes Omni About Puma Puma Official Website
+A Fancy Presentation
+Slogan: &amp;ldquo;Run The Streets. Do You.&amp;rdquo;
+The third largest sportswear manufacture in the world. (2018)
+The company was founded in 1948 by Rudolf Dassler.
+Building a Centralize Website Restructuring Strategy
+ Replacing multiple e-commerce sites on different platform Unifying content and product strategies Building multiple teams in different regions, separate tasks  Content Management System (CMS)
+&amp;ldquo;Database software program specifically designed to manage structures, unstructured data and objects in a Website environment.</description>
     </item>
     
   </channel>

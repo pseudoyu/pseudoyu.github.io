@@ -21,166 +21,6 @@ Datasets  Criteo Dataset. It is a famous industry benchmarking dataset for devel
     </item>
     
     <item>
-      <title>LeetCode 524 Longest Word in Dictionary through Deleting</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/11/leetcode-524-longest-word-in-dictionary-through-deleting/</link>
-      <pubDate>Wed, 11 Nov 2020 11:11:11 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/11/leetcode-524-longest-word-in-dictionary-through-deleting/</guid>
-      <description>LeetCode #524 Longest Word in Dictionary through Deleting Problem Description Given a string and a string dictionary, find the longest string in the dictionary that can be formed by deleting some characters of the given string. If there are more than one possible results, return the longest word with the smallest lexicographical order. If there is no possible result, return the empty string. Example 1: Input: s = &amp;quot;abpcplea&amp;quot;, d</description>
-    </item>
-    
-    <item>
-      <title>LeetCode 88 Merge Sorted Array</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/11/leetcode-88-merge-sorted-array/</link>
-      <pubDate>Wed, 11 Nov 2020 01:30:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/11/leetcode-88-merge-sorted-array/</guid>
-      <description>LeetCode #88 Merge Sorted Array Problem Description Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array. Note: The number of elements initialized in nums1 and nums2 are m and n respectively. You may assume that nums1 has enough space (size that is equal to m + n) to hold additional elements from nums2. Example 1: Input: nums1 = [1,2,3,0,0,0], m = 3 nums2</description>
-    </item>
-    
-    <item>
-      <title>LeetCode 141 Linked List Cycle</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/07/leetcode-141-linked-list-cycle/</link>
-      <pubDate>Sat, 07 Nov 2020 00:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/07/leetcode-141-linked-list-cycle/</guid>
-      <description>LeetCode #141 Linked List Cycle Problem Description Given head, the head of a linked list, determine if the linked list has a cycle in it. There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer. Internally, pos is used to denote the index of the node that tail&amp;rsquo;s next pointer is connected to.</description>
-    </item>
-    
-    <item>
-      <title>Timus 1264 Workdays</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/06/timus-1264-workdays/</link>
-      <pubDate>Fri, 06 Nov 2020 01:36:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/06/timus-1264-workdays/</guid>
-      <description>Timus 1264 Workdays Problem Description After a success of the previous Vasechkin’s program that allowed to calculate the results of the elections in cause of two days Artemy Sidorovich was placed at the head of the department. At the moment Artemy Sidorovich prepares a task for his subordinate — programmer Petechkin. The task is to write a very useful function that would ease the life of all the department programmers. For each integer from 0 to M the function would calculate how many times this number appears in the N-element array.</description>
-    </item>
-    
-    <item>
-      <title>Timus 2001 Mathematicians and Berries</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/06/timus-2001-mathematicians-and-berries/</link>
-      <pubDate>Fri, 06 Nov 2020 01:00:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/06/timus-2001-mathematicians-and-berries/</guid>
-      <description>Timus 2001 Mathematicians and Berries Problem Description One day, two mathematicians were walking in the forest and picking berries. They’d been walking for two hours, and then they stopped and decided to see who’s got more berries. They took out the scales (can you imagine a mathematician going to the forest without any scales?) and they weighed their baskets with berries. They wrote the resulting numbers a1 and b1 down on a piece of paper.</description>
-    </item>
-    
-    <item>
-      <title>LeetCode 680 Valid Palindrome 2</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/05/leetcode-680-valid-palindrome-2/</link>
-      <pubDate>Thu, 05 Nov 2020 19:40:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/05/leetcode-680-valid-palindrome-2/</guid>
-      <description>LeetCode #680 Valid Palindrome 2 Problem Description Given a non-empty string s, you may delete at most one character. Judge whether you can make it a palindrome. Example 1: Input: &amp;quot;aba&amp;quot; Output: True Example 2: Input: &amp;quot;abca&amp;quot; Output: True Explanation: You could delete the character &#39;c&#39;. My Solution 这道题是在一般的回文判断基础上增加了一个删除</description>
-    </item>
-    
-    <item>
-      <title>LeetCode 345 Reverse Vowels of a String</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/05/leetcode-345-reverse-vowels-of-a-string/</link>
-      <pubDate>Thu, 05 Nov 2020 18:00:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/05/leetcode-345-reverse-vowels-of-a-string/</guid>
-      <description>LeetCode #345 Reverse Vowels of a String Problem Description Write a function that takes a string as input and reverse only the vowels of a string. Note: The vowels does not include the letter &amp;ldquo;y&amp;rdquo;. Example 1: Input: &amp;quot;hello&amp;quot; Output: &amp;quot;holle&amp;quot; Example 2: Input: &amp;quot;leetcode&amp;quot; Output: &amp;quot;leotcede&amp;quot; My Solution 这道题基本思路是通过两个指针判断是否是元音</description>
-    </item>
-    
-    <item>
-      <title>LeetCode 633 Sum of Square Numbers</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/05/leetcode-633-sum-of-square-numbers/</link>
-      <pubDate>Thu, 05 Nov 2020 13:00:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/05/leetcode-633-sum-of-square-numbers/</guid>
-      <description>LeetCode #633 Sum of Square Numbers Problem Description Given a non-negative integer c, decide whether there&amp;rsquo;re two integers a and b such that a2 + b2 = c. Example 1: Input: c = 5 Output: true Explanation: 1 * 1 + 2 * 2 = 5 Example 2: Input: c = 3 Output: false Example 3: Input: c = 4 Output: true Example 4: Input: c = 2 Output: true</description>
-    </item>
-    
-    <item>
-      <title>LeetCode 167 Two Sum 2</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/05/leetcode-167-two-sum-2/</link>
-      <pubDate>Thu, 05 Nov 2020 11:00:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/05/leetcode-167-two-sum-2/</guid>
-      <description>LeetCode #167 Two Sum 2 (Input array is sorted) Problem Description Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number. The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2. Note: Your returned answers (both index1 and index2) are</description>
-    </item>
-    
-    <item>
-      <title>Timus 2012 About Grisha N</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/03/timus-2012-about-grisha-n/</link>
-      <pubDate>Tue, 03 Nov 2020 02:00:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/03/timus-2012-about-grisha-n/</guid>
-      <description>Timus 2012 About Grisha N Problem Description Grisha N. told his two teammates that he was going to solve all given problems at the subregional contest, even if the teammates wouldn’t show up at the competition. The teammates didn’t believe Grisha so he told them the plan how he was going to do this.
-During the first hour he wants to solve f problems. If there is still some time left to the end of the first hour, Grisha will simply walk along the hall.</description>
-    </item>
-    
-    <item>
-      <title>Timus 1877 Bicycle Codes</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/03/timus-1877-bicycle-codes/</link>
-      <pubDate>Tue, 03 Nov 2020 01:30:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/03/timus-1877-bicycle-codes/</guid>
-      <description>Timus 1877 Bicycle Codes Problem Description Den has two four-digit combination locks for protecting his bicycle from thieves. Every evening he arms the bicycle antitheft alarm and fastens the bicycle to a special stand with one of the locks. Den never uses the same lock two evenings in a row. One night a thief tried to open the lock using the code 0000. The alarm went off and the thief hurried away.</description>
-    </item>
-    
-    <item>
-      <title>Timus 1785 Lost in Localization</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/03/timus-1785-lost-in-localization/</link>
-      <pubDate>Tue, 03 Nov 2020 01:10:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/03/timus-1785-lost-in-localization/</guid>
-      <description>Timus 1785 Lost in Localization Problem Description The Lavin Interactive Company, which has developed the turn-based strategy Losers-V, is constantly extending its target market by localizing the game to as many languages as it can. In particular, they are interested in creating a version of the game in Anindilyakwa, which is one of the languages spoken by indigenous Australians.
-However, the localization is complicated by the fact that Anindilyakwa has no numerals.</description>
-    </item>
-    
-    <item>
-      <title>Timus 1409 Two Gangsters</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/03/timus-1409-two-gangsters/</link>
-      <pubDate>Tue, 03 Nov 2020 00:40:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/03/timus-1409-two-gangsters/</guid>
-      <description>Timus 1409 Two Gangsters Problem Description Two gangsters Harry and Larry had a rest at countryside. They decided to spend some time shooting, so they put several beer cans (no more than 10) on a log. Harry started to shoot cans one after another from the leftmost to the right and Larry – from the rightmost to the left. At some moment it happened so that they shot one and the same can.</description>
-    </item>
-    
-    <item>
-      <title>Timus 1293 Eniya</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/03/timus-1293-eniya/</link>
-      <pubDate>Tue, 03 Nov 2020 00:10:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/03/timus-1293-eniya/</guid>
-      <description>Timus 1293 Eniya Problem Description It’s restless now on the slips of the intergalactic port’s sixth dock of planet of Torn. No longer then in a month the reconstruction of the small ironclad corvette “Eniya” will be finished. And again this battle ship and its brave team would have to struggle for the control over plutonium mines of Sibelius. The work cannot be stopped even for a second, self-powered laser welders work round the clock.</description>
-    </item>
-    
-    <item>
-      <title>Timus 1001 Reverse Root</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/02/timus-1001-reverse-root/</link>
-      <pubDate>Mon, 02 Nov 2020 23:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/02/timus-1001-reverse-root/</guid>
-      <description>Timus 1001 Reverse Root Problem Description The problem is so easy, that the authors were lazy to write a statement for it!
-Input: The input stream contains a set of integer numbers Ai. The numbers are separated by any number of spaces and line breaks. A size of the input stream does not exceed 256 KB.
-Output: For each number Ai from the last one till the first one you should output its square root.</description>
-    </item>
-    
-    <item>
-      <title>Timus 1000 A&#43;B Problem</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/02/timus-1000-a-b-problem/</link>
-      <pubDate>Mon, 02 Nov 2020 22:50:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/02/timus-1000-a-b-problem/</guid>
-      <description>Timus 1000 A+B Problem Problem Description Calculate a + b
-Input: a and b
-Output: a+b
-My Solution import java.util.*; public class problem1000 { public static void main(String[] args) { Scanner in = new Scanner(System.in); int a = in.nextInt(); int b = in.nextInt(); in.close(); System.out.println(a + b); } } </description>
-    </item>
-    
-    <item>
-      <title>LeetCode 1 Two Sum</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/02/leetcode-1-two-sum/</link>
-      <pubDate>Mon, 02 Nov 2020 20:53:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/02/leetcode-1-two-sum/</guid>
-      <description>LeetCode #1 Two Sum Problem Description Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order. Example 1: Input: nums = [2,7,11,15], target = 9 Output: [0,1] Output: Because</description>
-    </item>
-    
-    <item>
       <title>COMP7404 Topic 3 Adversarial Search</title>
       <link>https://www.pseudoyu.com/zh/2020/10/05/comp7404-topic-3-adversarial-search/</link>
       <pubDate>Mon, 05 Oct 2020 00:30:11 +0800</pubDate>
@@ -199,6 +39,16 @@ My Solution import java.util.*; public class problem1000 { public static void ma
       <guid>https://www.pseudoyu.com/zh/2020/10/04/comp7404-topic-2-beyond-classical-search/</guid>
       <description>COMP7404 Computational Intelligence and Machine Learning Topic 2 Beyond Classical Search Planning vs Identification
  Planing: sequence of actions  The path to the goal is the important thing Paths have various costs, depths Heuristics to guide, frontier to keep backups   Identification: assignments to variables  The goal itself is important, not the path    Local Search can find solutions faster for specific types of identification problems</description>
+    </item>
+    
+    <item>
+      <title>COMP7404 Topic 1 Solving Problems by Searching</title>
+      <link>https://www.pseudoyu.com/zh/2020/09/16/comp7404-topic-1-solving-problems-by-searching/</link>
+      <pubDate>Wed, 16 Sep 2020 00:28:11 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/09/16/comp7404-topic-1-solving-problems-by-searching/</guid>
+      <description>COMP7404 Computational Intelligence and Machine Learning Topic 1 Solving Problems by Searching Types of Search
+ Uninformed Search (Know nothing about the problem except definition) Informed Search (know something more like how close to the goal) Local Search (Randomly initilize a state and make it better, e.g. Deep Learning) Constraint Satisfaction Problems (Know more about the problem) Adversarial Search (have an opponent, e.g. chess, star craft game)  Is Search the same as Unsupervised/Supervised Learning?</description>
     </item>
     
   </channel>

@@ -376,19 +376,18 @@
 </span><span class="c1"></span><span class="o">}</span>
 </code></pre></div><p>throws关键字</p>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">修饰符</span> <span class="n">返回值类型</span> <span class="nf">方法名</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">异常类型1</span><span class="o">,</span> <span class="n">异常类型2</span> <span class="o">{</span>
-	<span class="c1">// 定义方法
+  <span class="c1">// 定义方法
 </span><span class="c1"></span><span class="o">}</span>
 </code></pre></div><p>自定义异常</p>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// 自定义异常类
 </span><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CustomerException</span> <span class="kd">extends</span> <span class="n">RuntimeException</span> <span class="o">{</span>
-	<span class="c1">// 继承构造函数
-</span><span class="c1"></span>	<span class="kd">public</span> <span class="nf">CustomerException</span><span class="o">()</span> <span class="o">{</span>
-		<span class="kd">super</span><span class="o">();</span>
-	<span class="o">}</span>
+  <span class="c1">// 继承构造函数
+</span><span class="c1"></span>  <span class="kd">public</span> <span class="nf">CustomerException</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">super</span><span class="o">();</span>
+  <span class="o">}</span>
 
-	<span class="c1">// 自定义异常方法
-</span><span class="c1"></span> 
-<span class="o">}</span>
+  <span class="c1">// 自定义异常方法
+</span><span class="c1"></span><span class="o">}</span>
 
 <span class="c1">// 调用自定义异常类
 </span><span class="c1"></span><span class="kd">throws</span> <span class="n">Exception</span> <span class="n">异常对象</span>

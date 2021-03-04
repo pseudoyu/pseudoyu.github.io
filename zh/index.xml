@@ -293,19 +293,18 @@
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;throws关键字&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;修饰符&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;返回值类型&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;方法名&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;throws&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;异常类型1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;异常类型2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-	&lt;span class=&#34;c1&#34;&gt;// 定义方法
+  &lt;span class=&#34;c1&#34;&gt;// 定义方法
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;自定义异常&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 自定义异常类
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;CustomerException&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;RuntimeException&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-	&lt;span class=&#34;c1&#34;&gt;// 继承构造函数
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;CustomerException&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-		&lt;span class=&#34;kd&#34;&gt;super&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-	&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;c1&#34;&gt;// 继承构造函数
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;CustomerException&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;super&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 
-	&lt;span class=&#34;c1&#34;&gt;// 自定义异常方法
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt; 
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;c1&#34;&gt;// 自定义异常方法
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 
 &lt;span class=&#34;c1&#34;&gt;// 调用自定义异常类
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;throws&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Exception&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;异常对象&lt;/span&gt;

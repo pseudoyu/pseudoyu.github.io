@@ -14,51 +14,25 @@
     <item>
       <title>About</title>
       <link>https://www.pseudoyu.com/en/about/</link>
-      <pubDate>Sun, 13 Sep 2020 16:03:46 +0800</pubDate>
+      <pubDate>Thu, 04 Mar 2021 16:03:46 +0800</pubDate>
       
       <guid>https://www.pseudoyu.com/en/about/</guid>
       
-        <description>&lt;h2 id=&#34;about-pseudoyu&#34;&gt;About Pseudoyu&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mtr_wait_people.jpeg&#34; alt=&#34;mtr_wait_people&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Pseudoyu&lt;/strong&gt; is my first website. I mainly write about my daily life, study and thoughts here. This blog was initially created on my personal web server using WordPress, and I moved to WeChat Official Account (the same name). Due to the consideration of stability and customization need, I decided to build a new site on GitHub Page with the domain name &lt;a href=&#34;https://www.pseudoyu.com/en&#34;&gt;pseudoyu.com&lt;/a&gt; and use a static site generator (Hugo) to generate the content.&lt;/p&gt;
-&lt;p&gt;I named &lt;strong&gt;Pseudoyu&lt;/strong&gt; as my blog name quite by chance. I&amp;rsquo;m stuck for the choice of my HKU uid because my name is really common(but I still want a special one for my further use). Inspired by Rachel, I found a prefix &lt;a href=&#34;https://www.oxfordlearnersdictionaries.com/definition/english/pseudo&#34;&gt;&lt;em&gt;pseudo&lt;/em&gt;&lt;/a&gt;, the word &lt;a href=&#34;https://www.oxfordlearnersdictionaries.com/definition/english/pseudonym&#34;&gt;pseudonym&lt;/a&gt; means a name that is not real, the item &lt;a href=&#34;https://www.lexico.com/definition/pseudocode&#34;&gt;pseudocode&lt;/a&gt; means a notation resembling a simplified programming language in Computer Science world. And one of my favorite cartoons &lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%81%BD%E7%89%A9%E8%AA%9E&#34;&gt;&lt;em&gt;Nisemonogatari&lt;/em&gt;&lt;/a&gt; also focuses on the concept of &lt;em&gt;&lt;strong&gt;pseudo&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;real&lt;/strong&gt;&lt;/em&gt;. So, why there can&amp;rsquo;t be a pseudo - yu (me)?&lt;/p&gt;
-&lt;p&gt;I always fall into self-doubt. Whenever I&amp;rsquo;m talking with my best friend, if the topics are about &lt;em&gt;initials&lt;/em&gt; or &lt;em&gt;meanings&lt;/em&gt;, I&amp;rsquo;ll choose to escape. It&amp;rsquo;s difficult for me to feel the simple joy or satisfaction emotions even if I made some achievements and praised by others. I used to regard everything in my life is meaningless. As time goes by, I begin to understand more about it. I wrote a paragh in my another article &lt;a href=&#34;https://www.pseudoyu.com/en/2020/06/06/23%E5%B2%81%E7%9A%84%E8%87%AA%E7%99%BD%E5%8E%BB%E8%BF%BD%E5%AF%BB%E6%84%8F%E4%B9%89/&#34;&gt;&lt;em&gt;Dear Yu, Are you ready for 23?&lt;/em&gt;&lt;/a&gt;, &lt;em&gt;&lt;strong&gt;&amp;ldquo;Perhaps, thinking about meaning itself is also a process of constructing meanings. I decide to give up the previous illusion of an &amp;lsquo;Aha moment&amp;rsquo; and just continue moving forward to experience my own life.&amp;quot;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;The name &lt;strong&gt;Pseudoyu&lt;/strong&gt; also tells myself that I should never constantly struggle with what meaning is anymore. Instead, I will continue to learn, experience and challenge new things. And I can finally accept other&amp;rsquo;s judgement or complain about me like &amp;ldquo;&lt;strong&gt;You changed&lt;/strong&gt;&amp;rdquo; with pressure.&lt;/p&gt;
-&lt;p&gt;I hope I can acquire more inputs like new knowledge and ideas, and write more short articles as outputs.&lt;/p&gt;
-&lt;h2 id=&#34;about-me&#34;&gt;About Me&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mtr_window_me.jpeg&#34; alt=&#34;mtr_window_me&#34;&gt;&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;m humble and have a sensitive mind. I want to learn things and become a better person. I enjoy reading, thinking and writing in my leisure time.&lt;/p&gt;
+        <description>&lt;h2 id=&#34;img-srchttpsqpluspictureoss-cn-beijingaliyuncscom6ljjqahigif-althi-width24-hi我是-yu-zhanghttpswwwpseudoyucom&#34;&gt;&lt;!-- raw HTML omitted --&gt; Hi，我是 &lt;a href=&#34;https://www.pseudoyu.com&#34;&gt;Yu Zhang&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I am currently studying my master degree in Department of Computer Science @ The University of Hong Kong (HKU).&lt;/p&gt;
+&lt;p&gt;I want to learn things and become a better person. I enjoy reading, thinking and writing in my leisure time.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/dino.gif&#34; alt=&#34;picture&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;my-goals&#34;&gt;My Goals&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;About my life&lt;/strong&gt;&lt;/em&gt;, I hope I can establish a life-long friendship with my best friends, keep close relationship with my families, and face future challenges with my beloved. Also, I hope to meet interesting friends of diverse background.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;About my career&lt;/strong&gt;&lt;/em&gt;, I hope I could always be learning and growing during my life and play an active role in the open source software movement.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Economically&lt;/strong&gt;&lt;/em&gt;, I hope to be able to choose what to do and shape my own the lifestyle freely.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;About the society&lt;/strong&gt;&lt;/em&gt;, I hope to have the opportunity to participate in some public welfare or other form of kindness to contribute to the world.&lt;/p&gt;
-&lt;h3 id=&#34;my-experiences&#34;&gt;My Experiences&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Master of Science&lt;/strong&gt;，Department of Computer Science @ &lt;em&gt;&lt;strong&gt;The University of Hong Kong (HKU)&lt;/strong&gt;&lt;/em&gt; | 2020/2021&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Bachelor of Arts&lt;/strong&gt;, School of Foreign Languages @ &lt;em&gt;&lt;strong&gt;Wuhan University of Technology (WHUT)&lt;/strong&gt;&lt;/em&gt; | 2015/2019&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;If there is anything worth mentioning about me, it may be the experience how I turn from a literature enthusiast majoring in English and accompanied by Shakespeare to a Geek who studies Computer Science now. I will also share some of the thoughts and actual preparations later.&lt;/p&gt;
-&lt;h3 id=&#34;my-records&#34;&gt;My Records&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.linkedin.com/in/pseudoyu/&#34;&gt;LinkedIn&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/pseudoyu&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.coursera.org/user/ffe947f087d1f63b161c3fcb310a6578&#34;&gt;Coursera&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.goodreads.com/user/show/121369734-yu-zhang&#34;&gt;Goodreads&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://leetcode.com/pseudoyu/&#34;&gt;LeetCode&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://acm.timus.ru/author.aspx?id=300324&#34;&gt;Timus&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.hackerrank.com/pseudoyu&#34;&gt;HackerRank&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;my-social-networks&#34;&gt;My Social Networks&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://space.bilibili.com/5374948/&#34;&gt;BiliBili&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/pseudoyuzhang&#34;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.instagram.com/pseudo.yu/&#34;&gt;Instagram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://twitter.com/pseudo_yu&#34;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://medium.com/@pseudoyu&#34;&gt;Medium&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCR0O0s303tGBi3P02hstQPA/&#34;&gt;Youtube&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/user/pseudo_yu&#34;&gt;Reddit&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h2 id=&#34;about-pseudoyu&#34;&gt;About Pseudoyu&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Pseudoyu&lt;/strong&gt; is my first website. I mainly write about my daily life, study and thoughts here. This blog was initially created on my personal web server using WordPress, and I moved to WeChat Official Account (the same name). Due to the consideration of stability and customization need, I decided to build a new site on GitHub Page with the domain name &lt;a href=&#34;https://www.pseudoyu.com/en&#34;&gt;pseudoyu.com&lt;/a&gt; and use a static site generator (Hugo) to generate the content.&lt;/p&gt;
+&lt;p&gt;I named &lt;strong&gt;Pseudoyu&lt;/strong&gt; as my blog name quite by chance. I&amp;rsquo;m stuck for the choice of my HKU uid because my name is really common(but I still want a special one for my further use). Inspired by Rachel, I found a prefix &lt;a href=&#34;https://www.oxfordlearnersdictionaries.com/definition/english/pseudo&#34;&gt;&lt;em&gt;pseudo&lt;/em&gt;&lt;/a&gt;, the word &lt;a href=&#34;https://www.oxfordlearnersdictionaries.com/definition/english/pseudonym&#34;&gt;pseudonym&lt;/a&gt; means a name that is not real, the item &lt;a href=&#34;https://www.lexico.com/definition/pseudocode&#34;&gt;pseudocode&lt;/a&gt; means a notation resembling a simplified programming language in Computer Science world. And one of my favorite cartoons &lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%81%BD%E7%89%A9%E8%AA%9E&#34;&gt;&lt;em&gt;Nisemonogatari&lt;/em&gt;&lt;/a&gt; also focuses on the concept of &lt;em&gt;&lt;strong&gt;pseudo&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;real&lt;/strong&gt;&lt;/em&gt;. So, why there can&amp;rsquo;t be a pseudo - yu (me)?&lt;/p&gt;
+&lt;p&gt;I always fall into self-doubt. Whenever I&amp;rsquo;m talking with my best friend, if the topics are about &lt;em&gt;initials&lt;/em&gt; or &lt;em&gt;meanings&lt;/em&gt;, I&amp;rsquo;ll choose to escape. It&amp;rsquo;s difficult for me to feel the simple joy or satisfaction emotions even if I made some achievements and praised by others. I used to regard everything in my life is meaningless. As time goes by, I begin to understand more about it. I wrote a paragh in my another article &lt;a href=&#34;https://www.pseudoyu.com/en/2020/06/06/23%E5%B2%81%E7%9A%84%E8%87%AA%E7%99%BD%E5%8E%BB%E8%BF%BD%E5%AF%BB%E6%84%8F%E4%B9%89/&#34;&gt;&lt;em&gt;Dear Yu, Are you ready for 23?&lt;/em&gt;&lt;/a&gt;, &lt;em&gt;&lt;strong&gt;&amp;ldquo;Perhaps, thinking about meaning itself is also a process of constructing meanings. I decide to give up the previous illusion of an &amp;lsquo;Aha moment&amp;rsquo; and just continue moving forward to experience my own life.&amp;quot;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The name &lt;strong&gt;Pseudoyu&lt;/strong&gt; also tells myself that I should never constantly struggle with what meaning is anymore. Instead, I will continue to learn, experience and challenge new things. And I can finally accept other&amp;rsquo;s judgement or complain about me like &amp;ldquo;&lt;strong&gt;You changed&lt;/strong&gt;&amp;rdquo; with pressure.&lt;/p&gt;
+&lt;p&gt;I hope I can acquire more inputs like new knowledge and ideas, and write more short articles as outputs.&lt;/p&gt;
 </description>
       
     </item>

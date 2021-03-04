@@ -10,7 +10,7 @@
   <meta name="keywords" content="Hugo, theme, den" />
 
 <link rel="canonical" href="https://www.pseudoyu.com/zh/2020/11/20/java_note_basic/" />
-<link rel="alternate" href="https://www.pseudoyu.com/en/2020/11/20/java_note_basic/" hreflang="en">
+<link rel="alternate" href="https://www.pseudoyu.com/2020/11/20/java_note_basic/" hreflang="en">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -104,7 +104,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="https://www.pseudoyu.com/en/"><i class="fas fa-globe"></i> English</a>
+              <a class="nav-link" href="https://www.pseudoyu.com/"><i class="fas fa-globe"></i> English</a>
             </li>
           
           
@@ -140,7 +140,7 @@
 <p class="float-right translations">
     <i class="fas fa-language" aria-hidden="true"></i>
     翻译： 
-    <a href="https://www.pseudoyu.com/en/2020/11/20/java_note_basic/">EN</a>
+    <a href="https://www.pseudoyu.com/2020/11/20/java_note_basic/">EN</a>
 </p>
 
 
@@ -204,13 +204,13 @@
 </ol>
 <h2 id="java编程基础">Java编程基础</h2>
 <h3 id="基本语法">基本语法</h3>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloWorld</span> <span class="o">{</span>
-  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-    <span class="c1">// 定义一个字符串变量
-</span><span class="c1"></span>    <span class="n">String</span> <span class="n">end</span> <span class="o">=</span> <span class="s">&#34;!&#34;</span><span class="o">;</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Hello World&#34;</span> <span class="o">+</span> <span class="n">end</span><span class="o">);</span>
-  <span class="o">}</span>
-<span class="o">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HelloWorld</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">// 定义一个字符串变量
+</span><span style="color:#75715e"></span>    String end <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;!&#34;</span><span style="color:#f92672">;</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello World&#34;</span> <span style="color:#f92672">+</span> end<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 </code></pre></div><ul>
 <li>功能性语句和结构性语句组成  结构性语句主要是为了承载功能性语句</li>
 <li>严格区分大小写的</li>
@@ -357,13 +357,13 @@
 <li>if&hellip;else</li>
 <li>if&hellip;else if&hellip;else&hellip;</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="k">if</span> <span class="o">(</span><span class="n">condition1</span><span class="o">)</span> <span class="o">{</span>
-  <span class="n">statement1</span><span class="o">;</span>
-<span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">{</span>
-  <span class="n">statement2</span><span class="o">;</span>
-<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-  <span class="n">statement3</span><span class="o">;</span>
-<span class="o">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>condition1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+  statement1<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">{</span>
+  statement2<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+  statement3<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
 </code></pre></div><p>switch</p>
 <ul>
 <li>语句类型
@@ -377,53 +377,53 @@
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="k">switch</span><span class="o">(</span><span class="n">语句</span><span class="o">)</span> <span class="o">{</span>
-  <span class="k">case</span> <span class="n">1</span><span class="o">:</span>
-  <span class="n">statement1</span><span class="o">;</span>
-  <span class="k">break</span><span class="o">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">switch</span><span style="color:#f92672">(</span>语句<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">case</span> 1<span style="color:#f92672">:</span>
+  statement1<span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
 
-  <span class="k">case</span> <span class="n">2</span><span class="o">:</span>
-  <span class="n">statement2</span><span class="o">;</span>
-  <span class="k">continue</span><span class="o">;</span>
-<span class="nl">
-</span><span class="nl">  default:</span>
-  <span class="n">statement3</span><span class="o">;</span>
-<span class="o">}</span>
+  <span style="color:#66d9ef">case</span> 2<span style="color:#f92672">:</span>
+  statement2<span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">continue</span><span style="color:#f92672">;</span>
+
+  default:
+  statement3<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
 </code></pre></div><h3 id="循环结构">循环结构</h3>
 <p>while循环</p>
 <ul>
 <li>while</li>
 <li>do&hellip;while</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// while循环
-</span><span class="c1"></span><span class="k">while</span> <span class="o">(</span><span class="n">condition</span><span class="o">)</span> <span class="o">{</span>
-  <span class="n">statement</span><span class="o">;</span>
-<span class="o">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// while循环
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>condition<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+  statement<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
 
-<span class="c1">// do...while循环
-</span><span class="c1"></span><span class="k">do</span> <span class="o">{</span>
-  <span class="n">statement</span><span class="o">;</span>
-<span class="o">}</span> <span class="k">while</span> <span class="o">(</span><span class="n">condition</span><span class="o">)</span>
+<span style="color:#75715e">// do...while循环
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">do</span> <span style="color:#f92672">{</span>
+  statement<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span> <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>condition<span style="color:#f92672">)</span>
 </code></pre></div><p>for循环</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">1</span><span class="o">(</span><span class="n">初始化</span><span class="o">);</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">10</span><span class="o">(</span><span class="n">条件</span><span class="o">);</span> <span class="n">i</span><span class="o">++(</span><span class="n">操作表达式</span><span class="o">))</span> <span class="o">{</span>
-  <span class="n">statement</span><span class="o">;</span>
-<span class="o">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1<span style="color:#f92672">(</span>初始化<span style="color:#f92672">);</span> i <span style="color:#f92672">&lt;</span> 10<span style="color:#f92672">(</span>条件<span style="color:#f92672">);</span> i<span style="color:#f92672">++(</span>操作表达式<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+  statement<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
 </code></pre></div><h3 id="方法">方法</h3>
 <ul>
 <li>声明方法</li>
 <li>重载方法：允许在一个程序中定义多个名称相同的方法，但是参数类型/个数必须不同</li>
 <li>调用方法</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// 声明方法的基本语法
-</span><span class="c1"></span><span class="n">修饰符</span> <span class="n">返回值类型</span> <span class="nf">方法名</span><span class="o">([</span><span class="n">参数类型</span><span class="o">,</span> <span class="n">参数1</span><span class="o">,</span> <span class="o">...])</span> <span class="o">{</span>
-  <span class="n">执行语句</span><span class="o">;</span>
-  <span class="k">return</span> <span class="n">返回值</span><span class="o">;</span>
-<span class="o">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// 声明方法的基本语法
+</span><span style="color:#75715e"></span>修饰符 返回值类型 <span style="color:#a6e22e">方法名</span><span style="color:#f92672">([</span>参数类型<span style="color:#f92672">,</span> 参数1<span style="color:#f92672">,</span> <span style="color:#f92672">...])</span> <span style="color:#f92672">{</span>
+  执行语句<span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">return</span> 返回值<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
 
-<span class="c1">// 示例
-</span><span class="c1"></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">printHello</span><span class="o">()</span> <span class="o">{</span>
-  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Hello World!&#34;</span><span class="o">);</span>
-<span class="o">}</span>
+<span style="color:#75715e">// 示例
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printHello</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+  System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello World!&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
 </code></pre></div><h3 id="数组">数组</h3>
 <p>一组数据的集合</p>
 <ul>
@@ -439,24 +439,24 @@
 <li>boolean - false</li>
 <li>引用数据类型 - null</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// 定义数组
-</span><span class="c1"></span><span class="kt">int</span><span class="o">[]</span> <span class="n">nums</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">100</span><span class="o">];</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// 定义数组
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>100<span style="color:#f92672">];</span>
 
-<span class="c1">// 静态初始化
-</span><span class="c1"></span><span class="kt">int</span><span class="o">[]</span> <span class="n">nums</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[]</span> <span class="o">{</span><span class="n">元素</span><span class="o">,</span> <span class="n">元素</span><span class="o">,...}</span>
+<span style="color:#75715e">// 静态初始化
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> <span style="color:#f92672">{</span>元素<span style="color:#f92672">,</span> 元素<span style="color:#f92672">,...}</span>
 
-<span class="c1">// 静态初始化简便写法（建议）
-</span><span class="c1"></span><span class="kt">int</span><span class="o">[]</span> <span class="n">nums</span> <span class="o">=</span> <span class="o">{</span><span class="n">元素</span><span class="o">,</span> <span class="n">元素</span><span class="o">,...}</span>
+<span style="color:#75715e">// 静态初始化简便写法（建议）
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums <span style="color:#f92672">=</span> <span style="color:#f92672">{</span>元素<span style="color:#f92672">,</span> 元素<span style="color:#f92672">,...}</span>
 </code></pre></div><p>遍历数组</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="o">{</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">,</span> <span class="n">3</span><span class="o">,</span> <span class="n">4</span><span class="o">};</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr <span style="color:#f92672">=</span> <span style="color:#f92672">{</span>1<span style="color:#f92672">,</span> 2<span style="color:#f92672">,</span> 3<span style="color:#f92672">,</span> 4<span style="color:#f92672">};</span>
 
-<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
-  <span class="c1">// 通过index来访问元素
-</span><span class="c1"></span>  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]);</span>
-<span class="o">}</span>
+<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+  <span style="color:#75715e">// 通过index来访问元素
+</span><span style="color:#75715e"></span>  System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
+<span style="color:#f92672">}</span>
 </code></pre></div><p>多维数组</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// 定义一个m*n的多维数组
-</span><span class="c1"></span><span class="kt">int</span><span class="o">[][]</span> <span class="n">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">m</span><span class="o">][</span><span class="n">n</span><span class="o">];</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// 定义一个m*n的多维数组
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> arr <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>m<span style="color:#f92672">][</span>n<span style="color:#f92672">];</span>
 </code></pre></div><h3 id="引用">引用</h3>
 <p>Java是按值传递参数，在将一个参数传入一个方法时，本质上是将对象的地址以值的方式传递到形参中。</p>
 <ul>

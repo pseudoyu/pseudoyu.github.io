@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="utf-8">
+  <title>COMP7404 Topic 1 Solving Problems by Searching · Pseudoyu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="COMP7404 Computational Intelligence and Machine Learning Topic 1 Solving Problems by Searching Types of Search
+ Uninformed Search (Know nothing about the problem except definition) Informed Search (know something more like how close to the goal) Local Search (Randomly initilize a state and make it better, e.g. Deep Learning) Constraint Satisfaction Problems (Know more about the problem) Adversarial Search (have an opponent, e.g. chess, star craft game)  Is Search the same as Unsupervised/Supervised Learning?" />
+
+  <meta name="keywords" content="Hugo, theme, den" />
+
+<link rel="canonical" href="https://www.pseudoyu.com/2020/09/16/comp7404_topic1/" />
+<link rel="alternate" href="https://www.pseudoyu.com/zh/2020/09/16/comp7404_topic1/" hreflang="zh">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.pseudoyu.com/css/den.css">
+
+
+
+
+<meta property="og:title" content="COMP7404 Topic 1 Solving Problems by Searching" />
+<meta property="og:description" content="COMP7404 Computational Intelligence and Machine Learning Topic 1 Solving Problems by Searching Types of Search
+ Uninformed Search (Know nothing about the problem except definition) Informed Search (know something more like how close to the goal) Local Search (Randomly initilize a state and make it better, e.g. Deep Learning) Constraint Satisfaction Problems (Know more about the problem) Adversarial Search (have an opponent, e.g. chess, star craft game)  Is Search the same as Unsupervised/Supervised Learning?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.pseudoyu.com/2020/09/16/comp7404_topic1/" />
+<meta property="article:published_time" content="2020-09-16T00:28:11+08:00" />
+<meta property="article:modified_time" content="2020-09-16T00:28:11+08:00" />
+<meta itemprop="name" content="COMP7404 Topic 1 Solving Problems by Searching">
+<meta itemprop="description" content="COMP7404 Computational Intelligence and Machine Learning Topic 1 Solving Problems by Searching Types of Search
+ Uninformed Search (Know nothing about the problem except definition) Informed Search (know something more like how close to the goal) Local Search (Randomly initilize a state and make it better, e.g. Deep Learning) Constraint Satisfaction Problems (Know more about the problem) Adversarial Search (have an opponent, e.g. chess, star craft game)  Is Search the same as Unsupervised/Supervised Learning?">
+<meta itemprop="datePublished" content="2020-09-16T00:28:11+08:00" />
+<meta itemprop="dateModified" content="2020-09-16T00:28:11+08:00" />
+<meta itemprop="wordCount" content="1401">
+
+
+
+<meta itemprop="keywords" content="notes,python,machine learning,hku,comp,comp7404," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="COMP7404 Topic 1 Solving Problems by Searching"/>
+<meta name="twitter:description" content="COMP7404 Computational Intelligence and Machine Learning Topic 1 Solving Problems by Searching Types of Search
+ Uninformed Search (Know nothing about the problem except definition) Informed Search (know something more like how close to the goal) Local Search (Randomly initilize a state and make it better, e.g. Deep Learning) Constraint Satisfaction Problems (Know more about the problem) Adversarial Search (have an opponent, e.g. chess, star craft game)  Is Search the same as Unsupervised/Supervised Learning?"/>
+</head>
+<body>
+  
+  <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://www.pseudoyu.com/images/background.jpg'); background-position: center; background-size: cover;">
+  <div class="container">
+  <nav class="header-nav navbar navbar-expand-md navbar-dark light-dark">
+    <div class="header-logo navbar-brand">
+      
+        <a class="float-left" href="https://www.pseudoyu.com/">
+      
+        
+        <img class="mr20 header-logo-image" src="https://www.pseudoyu.com/images/fly.png" alt="logo">
+        
+        
+          Pseudoyu
+         
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav-menu collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/category/ideas/">Ideas</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/category/programming/">Programming</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/category/notes/">Notes</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/category/projects/">Projects</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              <a class="nav-link" href="https://www.pseudoyu.com/about/">About</a>
+            
+          </li>
+        
+        
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.pseudoyu.com/zh/"><i class="fas fa-globe"></i> 中文</a>
+            </li>
+          
+          
+          
+          
+        
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container header-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="header-content">
+        <h1 class="header-title">COMP7404 Topic 1 Solving Problems by Searching</h1>
+        <p class="header-date">By
+          pseudoyu /
+        
+        2020-09-16
+          / In categories
+          <a href="https://www.pseudoyu.com/category/notes/">Notes</a>
+        </p>
+        
+        <div class="header-underline"></div>
+        
+          <div class="clearfix"></div>
+          <p class="float-right header-tags">
+              <i class="fas fa-tags" aria-hidden="true"></i>
+              <a href="https://www.pseudoyu.com/tag/comp/">comp</a>, 
+                <a href="https://www.pseudoyu.com/tag/comp7404/">comp7404</a>, 
+                <a href="https://www.pseudoyu.com/tag/hku/">hku</a>, 
+                <a href="https://www.pseudoyu.com/tag/machine-learning/">machine learning</a>, 
+                <a href="https://www.pseudoyu.com/tag/notes/">notes</a>, 
+                <a href="https://www.pseudoyu.com/tag/python/">python</a>
+          </p>
+        
+        <div class="clearfix"></div>
+<p class="float-right translations">
+    <i class="fas fa-language" aria-hidden="true"></i>
+    Translations: 
+    <a href="https://www.pseudoyu.com/zh/2020/09/16/comp7404_topic1/">ZH</a>
+</p>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <main>
+<div class="container content">
+  <article>
+  <h1 id="comp7404-computational-intelligence-and-machine-learning">COMP7404 Computational Intelligence and Machine Learning</h1>
+<h2 id="topic-1-solving-problems-by-searching">Topic 1 Solving Problems by Searching</h2>
+<p><strong>Types of Search</strong></p>
+<ul>
+<li>Uninformed Search (Know nothing about the problem except definition)</li>
+<li>Informed Search (know something more like how close to the goal)</li>
+<li>Local Search (Randomly initilize a state and make it better, e.g. Deep Learning)</li>
+<li>Constraint Satisfaction Problems (Know more about the problem)</li>
+<li>Adversarial Search (have an opponent, e.g. chess, star craft game)</li>
+</ul>
+<p><strong>Is Search the same as Unsupervised/Supervised Learning?</strong></p>
+<p>Search is a process that tries to explore all options and find out which one is best. Search itself isn&rsquo;t considered as Machine Learning though it&rsquo;s always combined with Machine Learning in some system to improve the performance. Machine Learning is part of Artificial Intelligence.</p>
+<p><strong>Search Applications</strong></p>
+<ul>
+<li>Vacuum World</li>
+<li>Pancake Flipping</li>
+<li>8 Puzzle</li>
+<li>Pathing</li>
+<li>TSP</li>
+<li>Game Play (chess, Go)</li>
+</ul>
+<p><em>Any problem where more than one alternative  needs to be explored may try search</em></p>
+<p><strong>Search Problem Definition</strong></p>
+<ul>
+<li>States - Agent location, dirt location</li>
+<li>Initial State</li>
+<li>Actions and Transition Model
+<ul>
+<li>available possible actions</li>
+<li>what each action does</li>
+</ul>
+</li>
+<li>Goal Test</li>
+<li>Path Cost</li>
+</ul>
+<p><em>A solution is a sequence of actions which transforms the start state to a goal state</em></p>
+<p><strong>State Space (the set of all reachable states)</strong></p>
+<ul>
+<li>Usually a graph</li>
+<li>The possible action sequences form a search tree</li>
+</ul>
+<p><strong>State Space Graph vs. Search Tree</strong></p>
+<ul>
+<li>State Space Graph (each state occurs only once)
+<ul>
+<li>Nodes - states</li>
+<li>Arcs (connections between nodes) - action results</li>
+<li>A set of goal nodes - goal test</li>
+</ul>
+</li>
+<li>Search Tree (states may occur more than once)
+<ul>
+<li>Root - start state</li>
+<li>Nodes - possible action sequences</li>
+</ul>
+</li>
+</ul>
+<p>some related concepts:</p>
+<ul>
+<li>depth of tree</li>
+<li>branching factor (max children)</li>
+</ul>
+<p><strong>States vs. State Sequence</strong></p>
+<p>A large number of state space -&gt; A huge number of state sequences (e.g. a large number of nodes in the search tree)</p>
+<p>Example: Chess (10^43 possible states and 10^120 possible state sequences)</p>
+<p><strong>Romania Problem</strong></p>
+<ul>
+<li>States
+<ul>
+<li>The cities</li>
+</ul>
+</li>
+<li>Initial State
+<ul>
+<li>Arad</li>
+</ul>
+</li>
+<li>Actions and Transition model
+<ul>
+<li>Go to neighboring city</li>
+</ul>
+</li>
+<li>Goal Test
+<ul>
+<li>In Bucharest?</li>
+</ul>
+</li>
+<li>Path Cost
+<ul>
+<li>Distance between the cities</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/romania_problem.png" alt="romania_problem"></p>
+<p>Store data in Python dictionary</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">romania <span style="color:#f92672">=</span> {
+    <span style="color:#e6db74">&#39;A&#39;</span>:[<span style="color:#e6db74">&#39;S&#39;</span>,<span style="color:#e6db74">&#39;T&#39;</span>,<span style="color:#e6db74">&#39;Z&#39;</span>],<span style="color:#e6db74">&#39;Z&#39;</span>:[<span style="color:#e6db74">&#39;A&#39;</span>,<span style="color:#e6db74">&#39;O&#39;</span>],<span style="color:#e6db74">&#39;O&#39;</span>:[<span style="color:#e6db74">&#39;S&#39;</span>,<span style="color:#e6db74">&#39;Z&#39;</span>],<span style="color:#e6db74">&#39;T&#39;</span>:[<span style="color:#e6db74">&#39;A&#39;</span>,<span style="color:#e6db74">&#39;L&#39;</span>],<span style="color:#e6db74">&#39;L&#39;</span>:[<span style="color:#e6db74">&#39;M&#39;</span>,<span style="color:#e6db74">&#39;T&#39;</span>],<span style="color:#e6db74">&#39;M&#39;</span>:[<span style="color:#e6db74">&#39;D&#39;</span>,<span style="color:#e6db74">&#39;L&#39;</span>],
+    <span style="color:#e6db74">&#39;D&#39;</span>:[<span style="color:#e6db74">&#39;C&#39;</span>,<span style="color:#e6db74">&#39;M&#39;</span>],<span style="color:#e6db74">&#39;S&#39;</span>:[<span style="color:#e6db74">&#39;A&#39;</span>,<span style="color:#e6db74">&#39;F&#39;</span>,<span style="color:#e6db74">&#39;O&#39;</span>,<span style="color:#e6db74">&#39;R&#39;</span>],<span style="color:#e6db74">&#39;R&#39;</span>:[<span style="color:#e6db74">&#39;C&#39;</span>,<span style="color:#e6db74">&#39;P&#39;</span>,<span style="color:#e6db74">&#39;S&#39;</span>],<span style="color:#e6db74">&#39;C&#39;</span>:[<span style="color:#e6db74">&#39;D&#39;</span>,<span style="color:#e6db74">&#39;P&#39;</span>,<span style="color:#e6db74">&#39;R&#39;</span>],
+    <span style="color:#e6db74">&#39;F&#39;</span>:[<span style="color:#e6db74">&#39;B&#39;</span>,<span style="color:#e6db74">&#39;S&#39;</span>],<span style="color:#e6db74">&#39;P&#39;</span>:[<span style="color:#e6db74">&#39;B&#39;</span>,<span style="color:#e6db74">&#39;C&#39;</span>,<span style="color:#e6db74">&#39;R&#39;</span>],<span style="color:#e6db74">&#39;B&#39;</span>:[]
+    }
+</code></pre></div><p>Use dictionart to store neighbors for each cities</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> romania[<span style="color:#e6db74">&#39;A&#39;</span>]
+[<span style="color:#e6db74">&#39;S&#39;</span>, <span style="color:#e6db74">&#39;T&#39;</span>, <span style="color:#e6db74">&#39;Z&#39;</span>]
+</code></pre></div><p><strong>Search Strategy</strong></p>
+<ul>
+<li>Defines the order of node expansion</li>
+<li>Evaluated along the following dimensions
+<ul>
+<li>Completeness (always find a solution if exists)</li>
+<li>Optimality (find a least-cost solution)</li>
+<li>Time complexity (number of nodes generated)</li>
+<li>Space complexity (max number of nodes in memory)</li>
+</ul>
+</li>
+</ul>
+<p><strong>Time/Space complexity</strong></p>
+<ul>
+<li>b: maximum branching factor of the search tree</li>
+<li>d: distance to root of the shadowest solution</li>
+<li>m: maximum length of any path in the state space</li>
+</ul>
+<p><strong>Search Algorithms</strong></p>
+<ul>
+<li><del>Tree search algorithm</del> (TSA)</li>
+<li><del>Graph search algorithm</del> (GSA)</li>
+</ul>
+<p><strong>Uninformed (Blind) Search Strategies</strong></p>
+<ul>
+<li>Breadth-first search (BFS)
+<ul>
+<li>BFS-TSA</li>
+<li>BFS-GSA</li>
+</ul>
+</li>
+<li>Depth-first search (DFS)
+<ul>
+<li>DFS-TSA</li>
+<li>DFS-GSA</li>
+</ul>
+</li>
+<li>Uniform-cost search (UCS)
+<ul>
+<li>UCS-TSA</li>
+<li>UCS-GSA</li>
+</ul>
+</li>
+</ul>
+<p><strong>BFS (Time and Space Complexity)</strong></p>
+<ul>
+<li>Time - O(b^(d+1))</li>
+<li>Space - O(b^(d+1))</li>
+</ul>
+<p><strong>DFS (Space Complexity)</strong></p>
+<ul>
+<li>Time - O(b^m)</li>
+<li>Space - O(m*b)</li>
+</ul>
+<p><strong>UCS (Time and Space Complexity)</strong></p>
+<ul>
+<li>O(b^(C*/epsilon))</li>
+</ul>
+<p>C*: cost of the optimal solution</p>
+<p>epsilon: smallest path cost</p>
+<p><strong>Queue</strong></p>
+<p><a href="https://docs.python.org/3.8/library/collections.html#collections.deque"><em><strong>Use deque in Python3</strong></em></a></p>
+<pre><code>class collections.deque([iterable[, maxlen]])
+Returns a new deque object initialized left-to-right (using append()) with data from iterable.
+If iterable is not specified, the new deque is empty.
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> collections
+<span style="color:#f92672">&gt;&gt;&gt;</span> queue <span style="color:#f92672">=</span> collections<span style="color:#f92672">.</span>deque([<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#e6db74">&#39;C&#39;</span>, <span style="color:#e6db74">&#39;D&#39;</span>])
+<span style="color:#f92672">&gt;&gt;&gt;</span> queue<span style="color:#f92672">.</span>popleft()
+<span style="color:#e6db74">&#39;A&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> queue
+deque([<span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#e6db74">&#39;C&#39;</span>, <span style="color:#e6db74">&#39;D&#39;</span>])
+<span style="color:#f92672">&gt;&gt;&gt;</span> queue<span style="color:#f92672">.</span>popleft()
+<span style="color:#e6db74">&#39;B&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> queue
+deque([<span style="color:#e6db74">&#39;C&#39;</span>, <span style="color:#e6db74">&#39;D&#39;</span>])
+</code></pre></div><p><strong>TSA - BFS Version</strong></p>
+<p>When it applies DFS/UCS, only need to change the <strong>data type of the frontier</strong> variable.</p>
+<p><em><strong>pseudo code</strong></em></p>
+<pre><code>function TSA(problem) returns solution
+    initialize frontier using initial state of problem
+    while frontier is not empty
+        choose a node and remove it from frontier
+        if node contains a goal state then return corresponding solution
+        explore the node, adding the resulting nodes to the frontier
+</code></pre>
+<p><em><strong>actual python code</strong></em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> collections
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">bfsTsa</span>(stateSpaceGraph, startState, goalState):
+    frontier <span style="color:#f92672">=</span> collections<span style="color:#f92672">.</span>deque([startState])
+    <span style="color:#66d9ef">while</span> frontier:
+        node <span style="color:#f92672">=</span> frontier<span style="color:#f92672">.</span>popleft()
+        <span style="color:#66d9ef">if</span> (node<span style="color:#f92672">.</span>endswith(goalState)): <span style="color:#66d9ef">return</span> node
+        <span style="color:#66d9ef">for</span> child <span style="color:#f92672">in</span> stateSpaceGraph[node[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]]: frontier<span style="color:#f92672">.</span>append(node<span style="color:#f92672">+</span>child)
+</code></pre></div><p><strong><a href="https://py3.codeskulptor.org/#user305_9vJQ4fFg1V_18.py">My demo of this bfsTsa.py</a></strong></p>
+<p><strong>GSA - BFS Version</strong></p>
+<p><em><strong>pseudo code</strong></em></p>
+<pre><code>function GSA (problem) returns solution
+    initialize frontier using initial state of problem
+    initialize explored set to be empty
+    while frontier is not empty
+        choose a node and remove it from frontier
+        if node contains a goal state then return corresponding solution
+        If node is not in explored set
+            add node to explored set
+            explore the node, adding the resulting nodes to the frontier
+</code></pre>
+<p><em><strong>actual python code</strong></em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> collections
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">bfsGsa</span>(stateSpaceGraph, startState, goalState):
+    frontier <span style="color:#f92672">=</span> collections<span style="color:#f92672">.</span>deque([startState])
+    exploredSet <span style="color:#f92672">=</span> set()
+    <span style="color:#66d9ef">while</span> frontier:
+        node <span style="color:#f92672">=</span> frontier<span style="color:#f92672">.</span>popleft()
+        <span style="color:#66d9ef">if</span> (node<span style="color:#f92672">.</span>endswith(goalState)): <span style="color:#66d9ef">return</span> node
+        <span style="color:#66d9ef">if</span> node[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> exploredSet:
+            exploredSet<span style="color:#f92672">.</span>add(node[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])
+            <span style="color:#66d9ef">for</span> child <span style="color:#f92672">in</span> stateSpaceGraph[node[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]]: frontier<span style="color:#f92672">.</span>append(node<span style="color:#f92672">+</span>child)
+</code></pre></div><p><strong><a href="https://py3.codeskulptor.org/#user305_y821hvugeL_0.py">My demo of this bfsGsa.py</a></strong></p>
+<p><strong>DFS</strong></p>
+<p>DFS explores the deepest node in the search tree</p>
+<p><strong>Stack</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> collections
+<span style="color:#f92672">&gt;&gt;&gt;</span> queue <span style="color:#f92672">=</span> collections<span style="color:#f92672">.</span>deque([<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#e6db74">&#39;C&#39;</span>, <span style="color:#e6db74">&#39;D&#39;</span>])
+<span style="color:#f92672">&gt;&gt;&gt;</span> queue<span style="color:#f92672">.</span>pop()
+<span style="color:#e6db74">&#39;D&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> queue
+deque([<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#e6db74">&#39;C&#39;</span>])
+<span style="color:#f92672">&gt;&gt;&gt;</span> queue<span style="color:#f92672">.</span>pop()
+<span style="color:#e6db74">&#39;C&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> queue
+deque([<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>])
+</code></pre></div><p><strong>TSA - DFS Version</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> collections
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dfsTsa</span>(stateSpaceGraph, startState, goalState): 
+    frontier <span style="color:#f92672">=</span> collections<span style="color:#f92672">.</span>deque([startState])
+    <span style="color:#66d9ef">while</span> frontier: 
+        node <span style="color:#f92672">=</span> frontier<span style="color:#f92672">.</span>pop()
+        <span style="color:#66d9ef">if</span> (node<span style="color:#f92672">.</span>endswith(goalState)): <span style="color:#66d9ef">return</span> node
+        <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Exploring:&#39;</span>,node[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],<span style="color:#e6db74">&#39;...&#39;</span>)
+        <span style="color:#66d9ef">for</span> child <span style="color:#f92672">in</span> stateSpaceGraph[node[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]]: frontier<span style="color:#f92672">.</span>append(node<span style="color:#f92672">+</span>child)
+</code></pre></div><p><em>No results due to revisiting already explored nodes</em></p>
+<p><strong><a href="https://py3.codeskulptor.org/#user305_EDFKe58dW9_5.py">My demo of this dfsTsa.py</a></strong></p>
+<p><strong>GSA - DFS Version</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> collections
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dfsGsa</span>(stateSpaceGraph, startState, goalState): 
+    frontier <span style="color:#f92672">=</span> collections<span style="color:#f92672">.</span>deque([startState])
+    exploredSet <span style="color:#f92672">=</span> set()
+    <span style="color:#66d9ef">while</span> frontier: 
+        node <span style="color:#f92672">=</span> frontier<span style="color:#f92672">.</span>pop()
+        <span style="color:#66d9ef">if</span> (node<span style="color:#f92672">.</span>endswith(goalState)): <span style="color:#66d9ef">return</span> node
+        <span style="color:#66d9ef">if</span> node[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> exploredSet:
+            exploredSet<span style="color:#f92672">.</span>add(node[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])
+            <span style="color:#66d9ef">for</span> child <span style="color:#f92672">in</span> stateSpaceGraph[node[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]]: frontier<span style="color:#f92672">.</span>append(node<span style="color:#f92672">+</span>child)
+</code></pre></div><p><strong><a href="https://py3.codeskulptor.org/#user305_9vJQ4fFg1V_26.py">My demo of this dfsGsa.py</a></strong></p>
+<p><strong>Choices of Search Algorithms</strong></p>
+<ul>
+<li>BFS vs DFS
+<ul>
+<li>Don&rsquo;t use BFS when b (maximum branching factor) / d (distance to root of the shadowest solution) is big</li>
+<li>Don&rsquo;t use DFS when m (maximum length of any path) is big</li>
+<li>Choose BFS is solution is close to the root of tree</li>
+<li>Choose DFS is solution is deep inside the search tree</li>
+</ul>
+</li>
+<li>TSA vs GSA
+<ul>
+<li>TSA (only frontier)
+<ul>
+<li>Could stuck in infinite loops</li>
+<li>Explore redundant loops</li>
+<li>Require less memory</li>
+<li>Easier to implement</li>
+</ul>
+</li>
+<li>GSA (froniter + explored set)
+<ul>
+<li>Avoid infinite loops</li>
+<li>Eliminate many redundant paths</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><em>Both have time complexity issue</em></p>
+<p><strong>UCS (Cheapest First Search)</strong></p>
+<p>Explores the cheapest node first</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">romania <span style="color:#f92672">=</span> {
+<span style="color:#e6db74">&#39;A&#39;</span>:[(<span style="color:#ae81ff">140</span>,<span style="color:#e6db74">&#39;S&#39;</span>),(<span style="color:#ae81ff">118</span>,<span style="color:#e6db74">&#39;T&#39;</span>),(<span style="color:#ae81ff">75</span>,<span style="color:#e6db74">&#39;Z&#39;</span>)],<span style="color:#e6db74">&#39;Z&#39;</span>:[(<span style="color:#ae81ff">75</span>,<span style="color:#e6db74">&#39;A&#39;</span>),(<span style="color:#ae81ff">71</span>,<span style="color:#e6db74">&#39;O&#39;</span>)],<span style="color:#e6db74">&#39;O&#39;</span>:[(<span style="color:#ae81ff">151</span>,<span style="color:#e6db74">&#39;S&#39;</span>),(<span style="color:#ae81ff">71</span>,<span style="color:#e6db74">&#39;Z&#39;</span>)],
+<span style="color:#e6db74">&#39;T&#39;</span>:[(<span style="color:#ae81ff">118</span>,<span style="color:#e6db74">&#39;A&#39;</span>),(<span style="color:#ae81ff">111</span>,<span style="color:#e6db74">&#39;L&#39;</span>)],<span style="color:#e6db74">&#39;L&#39;</span>:[(<span style="color:#ae81ff">70</span>,<span style="color:#e6db74">&#39;M&#39;</span>),(<span style="color:#ae81ff">111</span>,<span style="color:#e6db74">&#39;T&#39;</span>)],<span style="color:#e6db74">&#39;M&#39;</span>:[(<span style="color:#ae81ff">75</span>,<span style="color:#e6db74">&#39;D&#39;</span>),(<span style="color:#ae81ff">70</span>,<span style="color:#e6db74">&#39;L&#39;</span>)], <span style="color:#e6db74">&#39;D&#39;</span>:[(<span style="color:#ae81ff">120</span>,<span style="color:#e6db74">&#39;C&#39;</span>),(<span style="color:#ae81ff">75</span>,<span style="color:#e6db74">&#39;M&#39;</span>)],<span style="color:#e6db74">&#39;S&#39;</span>:[(<span style="color:#ae81ff">140</span>,<span style="color:#e6db74">&#39;A&#39;</span>),(<span style="color:#ae81ff">99</span>,<span style="color:#e6db74">&#39;F&#39;</span>),(<span style="color:#ae81ff">151</span>,<span style="color:#e6db74">&#39;O&#39;</span>),(<span style="color:#ae81ff">80</span>,<span style="color:#e6db74">&#39;R&#39;</span>)], <span style="color:#e6db74">&#39;R&#39;</span>:[(<span style="color:#ae81ff">146</span>,<span style="color:#e6db74">&#39;C&#39;</span>),(<span style="color:#ae81ff">97</span>,<span style="color:#e6db74">&#39;P&#39;</span>),(<span style="color:#ae81ff">80</span>,<span style="color:#e6db74">&#39;S&#39;</span>)],<span style="color:#e6db74">&#39;C&#39;</span>:[(<span style="color:#ae81ff">120</span>,<span style="color:#e6db74">&#39;D&#39;</span>),(<span style="color:#ae81ff">138</span>,<span style="color:#e6db74">&#39;P&#39;</span>),(<span style="color:#ae81ff">146</span>,<span style="color:#e6db74">&#39;R&#39;</span>)], <span style="color:#e6db74">&#39;F&#39;</span>:[(<span style="color:#ae81ff">211</span>,<span style="color:#e6db74">&#39;B&#39;</span>),(<span style="color:#ae81ff">99</span>,<span style="color:#e6db74">&#39;S&#39;</span>)],<span style="color:#e6db74">&#39;P&#39;</span>:[(<span style="color:#ae81ff">101</span>,<span style="color:#e6db74">&#39;B&#39;</span>),(<span style="color:#ae81ff">138</span>,<span style="color:#e6db74">&#39;C&#39;</span>),(<span style="color:#ae81ff">97</span>,<span style="color:#e6db74">&#39;R&#39;</span>)],<span style="color:#e6db74">&#39;B&#39;</span>:[]}
+</code></pre></div><p><strong>Priority Queue in Python (<a href="https://docs.python.org/3.8/library/heapq.html#module-heapq">Use heapq in Python3</a>)</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">frontier <span style="color:#f92672">=</span> []
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">from</span> heapq <span style="color:#f92672">import</span> heappush, heappop
+<span style="color:#f92672">import</span> random
+<span style="color:#f92672">&gt;&gt;&gt;</span> heappush(frontier, (random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10</span>), <span style="color:#e6db74">&#39;A&#39;</span>))
+<span style="color:#f92672">&gt;&gt;&gt;</span> heappush(frontier, (random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10</span>), <span style="color:#e6db74">&#39;B&#39;</span>))
+<span style="color:#f92672">&gt;&gt;&gt;</span> heappush(frontier, (random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10</span>), <span style="color:#e6db74">&#39;C&#39;</span>))
+<span style="color:#f92672">&gt;&gt;&gt;</span> frontier
+[(<span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;C&#39;</span>), (<span style="color:#ae81ff">7</span>, <span style="color:#e6db74">&#39;B&#39;</span>), (<span style="color:#ae81ff">6</span>, <span style="color:#e6db74">&#39;A&#39;</span>)]
+<span style="color:#f92672">&gt;&gt;&gt;</span> heappop(frontier)
+(<span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;C&#39;</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> heappop(frontier)
+(<span style="color:#ae81ff">6</span>, <span style="color:#e6db74">&#39;A&#39;</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> heappop(frontier)
+(<span style="color:#ae81ff">7</span>, <span style="color:#e6db74">&#39;B&#39;</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> (<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;B&#39;</span>) <span style="color:#f92672">&lt;</span> (<span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;A&#39;</span>)
+True
+<span style="color:#f92672">&gt;&gt;&gt;</span> (<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;B&#39;</span>) <span style="color:#f92672">&lt;</span> (<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;A&#39;</span>)
+False
+</code></pre></div><p><strong>TSA - UCS Version</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> heapq <span style="color:#f92672">import</span> heappush, heappop
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">ucsTsa</span>(stateSpaceGraph, startState, goalState): 
+    frontier <span style="color:#f92672">=</span> []
+    heappush(frontier, (<span style="color:#ae81ff">0</span>, startState))
+    <span style="color:#66d9ef">while</span> frontier:
+        node <span style="color:#f92672">=</span> heappop(frontier)
+        <span style="color:#66d9ef">if</span> (node[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>endswith(goalState)): <span style="color:#66d9ef">return</span> node
+        <span style="color:#66d9ef">for</span> child <span style="color:#f92672">in</span> stateSpaceGraph[node[<span style="color:#ae81ff">1</span>][<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]]:
+            heappush(frontier, (node[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">+</span>child[<span style="color:#ae81ff">0</span>], node[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">+</span>child[<span style="color:#ae81ff">1</span>]))
+</code></pre></div><p><strong>GSA - UCS Version</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> heapq <span style="color:#f92672">import</span> heappush, heappop
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">ucsGsa</span>(stateSpaceGraph, startState, goalState): 
+    frontier <span style="color:#f92672">=</span> []
+    heappush(frontier, (<span style="color:#ae81ff">0</span>, startState))
+    exploredSet <span style="color:#f92672">=</span> set()
+    <span style="color:#66d9ef">while</span> frontier:
+        node <span style="color:#f92672">=</span> heappop(frontier)
+        <span style="color:#66d9ef">if</span> (node[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>endswith(goalState)): <span style="color:#66d9ef">return</span> node
+        <span style="color:#66d9ef">if</span> node[<span style="color:#ae81ff">1</span>][<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> exploredSet:
+            exploredSet<span style="color:#f92672">.</span>add(node[<span style="color:#ae81ff">1</span>][<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])
+            <span style="color:#66d9ef">for</span> child <span style="color:#f92672">in</span> stateSpaceGraph[node[<span style="color:#ae81ff">1</span>][<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]]:
+                heappush(frontier, (node[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">+</span>child[<span style="color:#ae81ff">0</span>], node[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">+</span>child[<span style="color:#ae81ff">1</span>]))
+</code></pre></div><p><strong>Informed Search</strong></p>
+<p>Employ problem specific knowledge beyond the definition of the problem itself</p>
+<ul>
+<li>Heuristic function</li>
+</ul>
+<p>Example</p>
+<ul>
+<li>Greedy best-first search</li>
+<li>A* search</li>
+</ul>
+<p><strong>Heuristic Function (designed for a particular search problem)</strong></p>
+<p>A function that estimate how close you are to the goal</p>
+<p>h(n)</p>
+<ul>
+<li>Cost of the cheapest path from the state at node n to a goal state</li>
+<li>If n is a goal node, h(n) = 0</li>
+</ul>
+<p><strong>Greedy Search (Best-first Search)</strong></p>
+<p>Expand the node that has the lowest h(n)</p>
+<p><strong>Updated Romania Problem Definition (Add h(n))</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">romaniaH <span style="color:#f92672">=</span> {
+    <span style="color:#e6db74">&#39;A&#39;</span>:<span style="color:#ae81ff">366</span>,<span style="color:#e6db74">&#39;B&#39;</span>:<span style="color:#ae81ff">0</span>,<span style="color:#e6db74">&#39;C&#39;</span>:<span style="color:#ae81ff">160</span>,<span style="color:#e6db74">&#39;D&#39;</span>:<span style="color:#ae81ff">242</span>,<span style="color:#e6db74">&#39;E&#39;</span>:<span style="color:#ae81ff">161</span>,<span style="color:#e6db74">&#39;F&#39;</span>:<span style="color:#ae81ff">176</span>,<span style="color:#e6db74">&#39;G&#39;</span>:<span style="color:#ae81ff">77</span>,<span style="color:#e6db74">&#39;H&#39;</span>:<span style="color:#ae81ff">151</span>,<span style="color:#e6db74">&#39;I&#39;</span>:<span style="color:#ae81ff">226</span>,
+    <span style="color:#e6db74">&#39;L&#39;</span>:<span style="color:#ae81ff">244</span>,<span style="color:#e6db74">&#39;M&#39;</span>:<span style="color:#ae81ff">241</span>,<span style="color:#e6db74">&#39;N&#39;</span>:<span style="color:#ae81ff">234</span>,<span style="color:#e6db74">&#39;O&#39;</span>:<span style="color:#ae81ff">380</span>,<span style="color:#e6db74">&#39;P&#39;</span>:<span style="color:#ae81ff">100</span>,<span style="color:#e6db74">&#39;R&#39;</span>:<span style="color:#ae81ff">193</span>,<span style="color:#e6db74">&#39;S&#39;</span>:<span style="color:#ae81ff">253</span>,<span style="color:#e6db74">&#39;T&#39;</span>:<span style="color:#ae81ff">329</span>,<span style="color:#e6db74">&#39;U&#39;</span>:<span style="color:#ae81ff">80</span>,
+    <span style="color:#e6db74">&#39;V&#39;</span>:<span style="color:#ae81ff">199</span>,<span style="color:#e6db74">&#39;Z&#39;</span>:<span style="color:#ae81ff">374</span>}
+</code></pre></div><p><strong>Greedy TSA Practice</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> heapq <span style="color:#f92672">import</span> heappush, heappop
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">greedyTsa</span>(stateSpaceGraph, h, startState, goalState): 
+    frontier <span style="color:#f92672">=</span> []
+    heappush(frontier, (h[startState], startState))
+    <span style="color:#66d9ef">while</span> frontier:
+        node <span style="color:#f92672">=</span> heappop(frontier)
+        <span style="color:#66d9ef">if</span> (node[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>endswith(goalState)): <span style="color:#66d9ef">return</span> node
+        <span style="color:#66d9ef">for</span> child <span style="color:#f92672">in</span> stateSpaceGraph[node[<span style="color:#ae81ff">1</span>][<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]]:
+            heappush(frontier, (h[child[<span style="color:#ae81ff">1</span>]], node[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">+</span>child[<span style="color:#ae81ff">1</span>]))
+</code></pre></div><p><strong>A* Motivation UCS-TSA</strong></p>
+<p>orders by backward cost</p>
+<p>g(n)</p>
+<p><strong>A* Motivation Greedy-TSA</strong></p>
+<p>orders by forward cost</p>
+<p>h(n)</p>
+<p><em>* always means optimal in AI</em></p>
+<p><strong>A* Motivation A*-TSA</strong></p>
+<p>orders by backward cost + forward cost</p>
+<p>f(n) = g(n) + h(n)</p>
+<p><strong>A*-TSA Practice</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> heapq <span style="color:#f92672">import</span> heappush, heappop  
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">aStarTsa</span>(stateSpaceGraph, h, startState, goalState): 
+    frontier <span style="color:#f92672">=</span> []
+    heappush(frontier, (h[startState], startState))
+    <span style="color:#66d9ef">while</span> frontier:
+        node <span style="color:#f92672">=</span> heappop(frontier)
+        <span style="color:#66d9ef">if</span> (node[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>endswith(goalState)): <span style="color:#66d9ef">return</span> node
+        <span style="color:#66d9ef">for</span> child <span style="color:#f92672">in</span> stateSpaceGraph[node[<span style="color:#ae81ff">1</span>][<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]]:
+            heappush(frontier, (node[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">+</span>child[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">-</span>h[node[<span style="color:#ae81ff">1</span>][<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]]<span style="color:#f92672">+</span>h[child[<span style="color:#ae81ff">1</span>]], node[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">+</span>child[<span style="color:#ae81ff">1</span>]))
+aStarMotivation <span style="color:#f92672">=</span> {
+<span style="color:#e6db74">&#39;S&#39;</span>:[(<span style="color:#ae81ff">1</span>,<span style="color:#e6db74">&#39;a&#39;</span>)],<span style="color:#e6db74">&#39;a&#39;</span>:[(<span style="color:#ae81ff">1</span>,<span style="color:#e6db74">&#39;b&#39;</span>),(<span style="color:#ae81ff">3</span>,<span style="color:#e6db74">&#39;d&#39;</span>),(<span style="color:#ae81ff">8</span>,<span style="color:#e6db74">&#39;e&#39;</span>)],<span style="color:#e6db74">&#39;b&#39;</span>:[(<span style="color:#ae81ff">1</span>,<span style="color:#e6db74">&#39;c&#39;</span>)],<span style="color:#e6db74">&#39;c&#39;</span>:[],<span style="color:#e6db74">&#39;d&#39;</span>:[(<span style="color:#ae81ff">2</span>,<span style="color:#e6db74">&#39;G&#39;</span>)],<span style="color:#e6db74">&#39;e&#39;</span>:[(<span style="color:#ae81ff">1</span>,<span style="color:#e6db74">&#39;d&#39;</span>)]}
+aStarMotivationH <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;S&#39;</span>:<span style="color:#ae81ff">6</span>,<span style="color:#e6db74">&#39;a&#39;</span>:<span style="color:#ae81ff">5</span>,<span style="color:#e6db74">&#39;b&#39;</span>:<span style="color:#ae81ff">6</span>,<span style="color:#e6db74">&#39;c&#39;</span>:<span style="color:#ae81ff">7</span>,<span style="color:#e6db74">&#39;d&#39;</span>:<span style="color:#ae81ff">2</span>,<span style="color:#e6db74">&#39;e&#39;</span>:<span style="color:#ae81ff">1</span>,<span style="color:#e6db74">&#39;G&#39;</span>:<span style="color:#ae81ff">0</span>}
+</code></pre></div><p><strong>Admissibility of Heuristic</strong></p>
+<p>A heuristic h(n) is admissible (optimistic)</p>
+<p><em>1 &lt;= h(n) &lt;= h</em>(n)*</p>
+<p>where h*(n) is the true cost of the nearest goal</p>
+<p><strong>Optimality of A*</strong></p>
+<p>A* is optimal if an admissible heuristic is used</p>
+<p><strong>Consistency of Heuristic</strong></p>
+<ul>
+<li>Definition
+<ul>
+<li>Heuristic cost &lt;= actually cost for each arc
+<ul>
+<li>h(a) - h(c) &lt;= cost (a to c)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Consequence of consistency
+<ul>
+<li>The f value along a path never decrease
+<ul>
+<li>h(a) &lt;= cost(a to c) + h(c)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </article>
+
+  
+  
+  
+
+
+</div>
+
+  </main><div class="footer gradient-2">
+  <div class="container footer-container ">
+    <div class="row">
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        <div class="footer-title">Sitemap</div>
+        <ul class="list-unstyled">
+            
+              
+                <li><a href="https://www.pseudoyu.com/tags/">Tags</a></li>
+              
+              
+                <li><a href="https://www.pseudoyu.com/categories/">Categories</a></li>
+              
+            
+            
+            
+            <li><a rel="alternate" type="application/rss&#43;xml" href="https://www.pseudoyu.com/index.xml"><i class="fas fa-rss-square"></i> RSS Feed</a></li>
+            
+            
+            
+        </ul>
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">Social</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://www.facebook.com/pseudoyuzhang" rel="noopener" target="_blank">Facebook</a></li>
+          
+          <li><a href="https://www.instagram.com/pseudo.yu/" rel="noopener" target="_blank">Instagram</a></li>
+          
+          <li><a href="https://twitter.com/pseudo_yu" rel="noopener" target="_blank">Twitter</a></li>
+          
+          <li><a href="https://medium.com/@pseudoyu" rel="noopener" target="_blank">Medium</a></li>
+          
+          <li><a href="https://www.youtube.com/channel/UCR0O0s303tGBi3P02hstQPA/" rel="noopener" target="_blank">Youtube</a></li>
+          
+          <li><a href="https://space.bilibili.com/5374948/" rel="noopener" target="_blank">BiliBili</a></li>
+          
+        </ul>
+        
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">Links</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://www.linkedin.com/in/pseudoyu/" rel="noopener" target="_blank">LinkedIn</a></li>
+          
+          <li><a href="https://github.com/pseudoyu" rel="noopener" target="_blank">GitHub</a></li>
+          
+          <li><a href="https://www.coursera.org/user/ffe947f087d1f63b161c3fcb310a6578" rel="noopener" target="_blank">Coursera</a></li>
+          
+          <li><a href="https://leetcode.com/pseudoyu/" rel="noopener" target="_blank">LeetCode</a></li>
+          
+          <li><a href="https://acm.timus.ru/author.aspx?id=300324&amp;sort=difficulty" rel="noopener" target="_blank">Timus OJ</a></li>
+          
+          <li><a href="https://www.goodreads.com/user/show/121369734-yu-zhang" rel="noopener" target="_blank">Goodreads</a></li>
+          
+        </ul>
+        
+      </div> 
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <p class="pull-right text-right">
+          <small><em><a href="https://www.hku.hk" rel="noopener" target="_blank">The University of Hong Kong</a> - <a href="https://www.cs.hku.hk" rel="noopener" target="_blank">CS</a></em></small><br/>
+          <small>
+            &copy; 
+            pseudoyu
+            
+              2020 -
+            2021
+          </small>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

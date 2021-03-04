@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Pseudoyu</title>
+    <link>https://www.pseudoyu.com/category/projects/</link>
+    <description>Recent content in Projects on Pseudoyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 11 Nov 2020 16:30:25 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/category/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>xDeepFM for Recommender Systems</title>
+      <link>https://www.pseudoyu.com/2020/11/11/comp7404_group_project/</link>
+      <pubDate>Wed, 11 Nov 2020 16:30:25 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/2020/11/11/comp7404_group_project/</guid>
+      <description>xDeepFM for Recommender Systems eXtreme Deep Factorization Machine (xDeepFM)
+This paper proposes a novel Compressed Interaction Network (CIN), which aims to generate feature interactions in an explicit fashion and at the vector-wise level.
+Github Repository GitHub: xDeepFM_for_Recommender_Systems
+Video Demo YouTube | Google Drive
+Datasets  Criteo Dataset. It is a famous industry benchmarking dataset for developing models predicting ad click-through rate, and is publicly accessible. Given a user and the page he is visiting, the goal is to predict the probability that he will clik on a given ad  Running Environment I strongly recommmend that you use Anaconda to implement this project.</description>
+    </item>
+    
+    <item>
+      <title>微信小程序云开发项目: 吃什么吖</title>
+      <link>https://www.pseudoyu.com/2020/04/05/mini_program_dev/</link>
+      <pubDate>Sun, 05 Apr 2020 23:40:25 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/2020/04/05/mini_program_dev/</guid>
+      <description>微信小程序云开发项目: 吃什么吖 项目GitHub 开发细节 太懒&amp;hellip;待更新 云开发功能 尝试了微信官方的云开发功能，无需自己部署服务器，且</description>
+    </item>
+    
+  </channel>
+</rss>

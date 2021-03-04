@@ -6,7 +6,25 @@
     <description>Recent content in Tags on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Nov 2020 16:30:25 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Nov 2020 03:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>java</title>
+      <link>https://www.pseudoyu.com/en/tag/java/</link>
+      <pubDate>Fri, 20 Nov 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/tag/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programming</title>
+      <link>https://www.pseudoyu.com/en/tag/programming/</link>
+      <pubDate>Fri, 20 Nov 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/tag/programming/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>comp</title>
       <link>https://www.pseudoyu.com/en/tag/comp/</link>
@@ -143,47 +161,29 @@
     </item>
     
     <item>
-      <title>bitcoin</title>
-      <link>https://www.pseudoyu.com/en/tag/bitcoin/</link>
-      <pubDate>Wed, 23 Sep 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/tag/bitcoin/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>blockchain</title>
-      <link>https://www.pseudoyu.com/en/tag/blockchain/</link>
-      <pubDate>Wed, 23 Sep 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/tag/blockchain/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>coursera</title>
-      <link>https://www.pseudoyu.com/en/tag/coursera/</link>
-      <pubDate>Wed, 23 Sep 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/tag/coursera/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>programming</title>
-      <link>https://www.pseudoyu.com/en/tag/programming/</link>
-      <pubDate>Wed, 23 Sep 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/tag/programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>comp7103</title>
       <link>https://www.pseudoyu.com/en/tag/comp7103/</link>
       <pubDate>Fri, 18 Sep 2020 01:18:17 +0800</pubDate>
       
       <guid>https://www.pseudoyu.com/en/tag/comp7103/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data-mining</title>
+      <link>https://www.pseudoyu.com/en/tag/data-mining/</link>
+      <pubDate>Fri, 18 Sep 2020 01:18:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/tag/data-mining/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>birthday</title>
+      <link>https://www.pseudoyu.com/en/tag/birthday/</link>
+      <pubDate>Sat, 06 Jun 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/tag/birthday/</guid>
       <description></description>
     </item>
     

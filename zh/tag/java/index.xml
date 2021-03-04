@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Programming on Pseudoyu</title>
-    <link>https://www.pseudoyu.com/zh/category/programming/</link>
-    <description>Recent content in Programming on Pseudoyu</description>
+    <title>java on Pseudoyu</title>
+    <link>https://www.pseudoyu.com/zh/tag/java/</link>
+    <description>Recent content in java on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 20 Nov 2020 03:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/category/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Nov 2020 03:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/java/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java学习笔记 - 基础</title>
       <link>https://www.pseudoyu.com/zh/2020/11/20/java_note_basic/</link>

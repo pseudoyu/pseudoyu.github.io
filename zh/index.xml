@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 11 Nov 2020 16:30:25 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2020 03:12:17 +0800</lastBuildDate>
     
     <atom:link href="https://www.pseudoyu.com/zh/index.xml" rel="self" type="application/rss+xml" />
     
@@ -58,6 +58,327 @@
 &lt;li&gt;&lt;a href=&#34;https://medium.com/@pseudoyu&#34;&gt;Medium&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCR0O0s303tGBi3P02hstQPA/&#34;&gt;Youtube&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.reddit.com/user/pseudo_yu&#34;&gt;Reddit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Java学习笔记 - 基础</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/20/java_note_basic/</link>
+      <pubDate>Fri, 20 Nov 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/20/java_note_basic/</guid>
+      
+        <description>&lt;h2 id=&#34;java概述&#34;&gt;Java概述&lt;/h2&gt;
+&lt;h3 id=&#34;java特性&#34;&gt;Java特性&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;简单性
+&lt;ul&gt;
+&lt;li&gt;丢弃了C++中运算符重载、多重继承等&lt;/li&gt;
+&lt;li&gt;不使用指针而是使用引用&lt;/li&gt;
+&lt;li&gt;自动垃圾回收机制（不用开发者进行内存管理）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;面向对象
+&lt;ul&gt;
+&lt;li&gt;提供了类、接口和继承等&lt;/li&gt;
+&lt;li&gt;支持类之间的单继承&lt;/li&gt;
+&lt;li&gt;支持接口之间的多继承&lt;/li&gt;
+&lt;li&gt;全面支持动态绑定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;安全性
+&lt;ul&gt;
+&lt;li&gt;不支持指针，一切对内存的访问都必须通过实例变量来实现&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;跨平台性
+&lt;ul&gt;
+&lt;li&gt;可以运行在各种平台上&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;支持多线程
+&lt;ul&gt;
+&lt;li&gt;并发执行多个任务，提升执行效率&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;jdkjava-development-kit&#34;&gt;JDK（Java Development Kit）&lt;/h3&gt;
+&lt;p&gt;Java开发环境&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;编译器&lt;/li&gt;
+&lt;li&gt;运行工具&lt;/li&gt;
+&lt;li&gt;文档生成工具&lt;/li&gt;
+&lt;li&gt;打包工具&lt;/li&gt;
+&lt;li&gt;JRE（Java Runtime Environment）运行环境&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Java程序编译&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;javac编译源文件&lt;/li&gt;
+&lt;li&gt;生成.class字节码文件&lt;/li&gt;
+&lt;li&gt;java虚拟机解释执行&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;java编程基础&#34;&gt;Java编程基础&lt;/h2&gt;
+&lt;h3 id=&#34;基本语法&#34;&gt;基本语法&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;HelloWorld&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;// 定义一个字符串变量
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;end&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;!&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello World&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;end&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;功能性语句和结构性语句组成  结构性语句主要是为了承载功能性语句&lt;/li&gt;
+&lt;li&gt;严格区分大小写的&lt;/li&gt;
+&lt;li&gt;需要注意层次清晰规范&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;书写规范&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;包名：不使用大写的英文字母&lt;/li&gt;
+&lt;li&gt;类名和接口名：首字母大写&lt;/li&gt;
+&lt;li&gt;常量：英文字母大写 单词之间使用下划线分割&lt;/li&gt;
+&lt;li&gt;变量名和方法名：驼峰命名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注释&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;单行注释&lt;/li&gt;
+&lt;li&gt;多行注释
+&lt;ul&gt;
+&lt;li&gt;文档注释，一般写在方法或类上&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;数据类型&#34;&gt;数据类型&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;整型
+&lt;ul&gt;
+&lt;li&gt;byte 8位&lt;/li&gt;
+&lt;li&gt;short 16位&lt;/li&gt;
+&lt;li&gt;int 32位&lt;/li&gt;
+&lt;li&gt;long 64位&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;浮点数
+&lt;ul&gt;
+&lt;li&gt;float 32位 +f&lt;/li&gt;
+&lt;li&gt;double 64位 +d&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;字符
+&lt;ul&gt;
+&lt;li&gt;char&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;字符串
+&lt;ul&gt;
+&lt;li&gt;String&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;布尔常量
+&lt;ul&gt;
+&lt;li&gt;boolean
+&lt;ul&gt;
+&lt;li&gt;true&lt;/li&gt;
+&lt;li&gt;false&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;变量&#34;&gt;变量&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;程序运行期间会产生一些临时数据，保存在一些内存单元中，用一个标识符来表示，称之为变量&lt;/li&gt;
+&lt;li&gt;声明变量时候要指定变量的数据类型 赋值时候需要相互匹配&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;类型转换&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自动类型转换
+&lt;ul&gt;
+&lt;li&gt;两种数据彼此兼容&lt;/li&gt;
+&lt;li&gt;目标类型的取值范围大于源类型取值范围&lt;/li&gt;
+&lt;li&gt;例如：byte类型转换至short, int, double等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;强制类型转换
+&lt;ul&gt;
+&lt;li&gt;两种类型彼此不兼容&lt;/li&gt;
+&lt;li&gt;目标类型的取值范围小于源类型&lt;/li&gt;
+&lt;li&gt;会造成精度丢失&lt;/li&gt;
+&lt;li&gt;格式：目标类型 变量 = （目标类型）值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;作用域&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;变量需要在作用范围内才可以被使用&lt;/li&gt;
+&lt;li&gt;一般定义在某一对大括号中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;运算符&#34;&gt;运算符&lt;/h3&gt;
+&lt;p&gt;算数运算符&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;+&lt;/li&gt;
+&lt;li&gt;-&lt;/li&gt;
+&lt;li&gt;*&lt;/li&gt;
+&lt;li&gt;/ 整数相除为整,有小数参与则为小数&lt;/li&gt;
+&lt;li&gt;% 正负结果取决于左边（被模数）&lt;/li&gt;
+&lt;li&gt;++ 算数符号在前先自增&lt;/li&gt;
+&lt;li&gt;&amp;ndash; 算数符号在前先自减&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;赋值运算符（会自动完成强制类型转换）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;=&lt;/li&gt;
+&lt;li&gt;+=&lt;/li&gt;
+&lt;li&gt;-=&lt;/li&gt;
+&lt;li&gt;*=&lt;/li&gt;
+&lt;li&gt;/=&lt;/li&gt;
+&lt;li&gt;%=&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;比较运算符&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;==&lt;/li&gt;
+&lt;li&gt;!=&lt;/li&gt;
+&lt;li&gt;&amp;lt; &amp;gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;= &amp;gt;=&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;逻辑运算符（用于布尔运算，结果仍为布尔型）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;amp; 与&lt;/li&gt;
+&lt;li&gt;| 或&lt;/li&gt;
+&lt;li&gt;^ 异或&lt;/li&gt;
+&lt;li&gt;! 非&lt;/li&gt;
+&lt;li&gt;&amp;amp;&amp;amp; 短路与&lt;/li&gt;
+&lt;li&gt;|| 短路或&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;运算符优先级&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;. [] ()&lt;/li&gt;
+&lt;li&gt;++ - - ~ !&lt;/li&gt;
+&lt;li&gt;* / %&lt;/li&gt;
+&lt;li&gt;+ -&lt;/li&gt;
+&lt;li&gt;&amp;laquo; &amp;raquo; &amp;raquo;&amp;gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt; &amp;gt; &amp;lt;= &amp;gt;=&lt;/li&gt;
+&lt;li&gt;== !=&lt;/li&gt;
+&lt;li&gt;&amp;amp;&lt;/li&gt;
+&lt;li&gt;^&lt;/li&gt;
+&lt;li&gt;|&lt;/li&gt;
+&lt;li&gt;&amp;amp;&amp;amp;&lt;/li&gt;
+&lt;li&gt;||&lt;/li&gt;
+&lt;li&gt;?&lt;/li&gt;
+&lt;li&gt;赋值运算符&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;选择结构&#34;&gt;选择结构&lt;/h3&gt;
+&lt;p&gt;if&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;if&lt;/li&gt;
+&lt;li&gt;if&amp;hellip;else&lt;/li&gt;
+&lt;li&gt;if&amp;hellip;else if&amp;hellip;else&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;condition1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;statement1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;statement2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;statement3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;switch&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;语句类型
+&lt;ul&gt;
+&lt;li&gt;byte&lt;/li&gt;
+&lt;li&gt;short&lt;/li&gt;
+&lt;li&gt;char&lt;/li&gt;
+&lt;li&gt;int&lt;/li&gt;
+&lt;li&gt;枚举&lt;/li&gt;
+&lt;li&gt;String&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;k&#34;&gt;switch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;语句&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;statement1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;break&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+
+  &lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;statement2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;continue&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;nl&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;  default:&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;statement3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;循环结构&#34;&gt;循环结构&lt;/h3&gt;
+&lt;p&gt;while循环&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;while&lt;/li&gt;
+&lt;li&gt;do&amp;hellip;while&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// while循环
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;condition&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;statement&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;// do...while循环
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;statement&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;condition&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;for循环&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;初始化&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;条件&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;操作表达式&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;statement&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;方法&#34;&gt;方法&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;声明方法&lt;/li&gt;
+&lt;li&gt;重载方法：允许在一个程序中定义多个名称相同的方法，但是参数类型/个数必须不同&lt;/li&gt;
+&lt;li&gt;调用方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 声明方法的基本语法
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;修饰符&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;返回值类型&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;方法名&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;参数类型&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;参数1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;...])&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;n&#34;&gt;执行语句&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+	&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;返回值&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;// 示例
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;printHello&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello World!&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;数组&#34;&gt;数组&lt;/h3&gt;
+&lt;p&gt;一组数据的集合&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以存放任意类型的元素&lt;/li&gt;
+&lt;li&gt;同个数组类型必须一致&lt;/li&gt;
+&lt;li&gt;引用为null时会发生空指针异常&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;数组元素默认值&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;byte, short, int, long - 0&lt;/li&gt;
+&lt;li&gt;float, double - 0.0&lt;/li&gt;
+&lt;li&gt;char - 空字符&#39;\u0000&#39;&lt;/li&gt;
+&lt;li&gt;boolean - false&lt;/li&gt;
+&lt;li&gt;引用数据类型 - null&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 定义数组
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;];&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;// 静态初始化
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;元素&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;元素&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,...}&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;// 静态初始化简便写法（建议）
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;元素&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;元素&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,...}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;遍历数组&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;arr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;};&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;arr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;length&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;c1&#34;&gt;// 通过index来访问元素
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;arr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]);&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;多维数组&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 定义一个m*n的多维数组
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[][]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;arr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;];&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;引用&#34;&gt;引用&lt;/h3&gt;
+&lt;p&gt;Java是按值传递参数，在将一个参数传入一个方法时，本质上是将对象的地址以值的方式传递到形参中。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;方法中改变对象的字段值会改变原对象该字段值&lt;/li&gt;
+&lt;li&gt;但是在方法汇总将指针引用了其他对象则不会产生影像&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       
@@ -3408,102 +3729,6 @@ Select cheapest neighbor as currentState and goto step2
 &lt;li&gt;Doesn’t protect storage of private key&lt;/li&gt;
 &lt;li&gt;No guarantee that verifying computer of merchant is secure&lt;/li&gt;
 &lt;li&gt;CAs are unregulated, self-selecting organizations&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Introduction to Crypto and Cryptocurrencies</title>
-      <link>https://www.pseudoyu.com/zh/2020/09/23/bitcoin_and_cryptocurrency_technologies_lecture1/</link>
-      <pubDate>Wed, 23 Sep 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/09/23/bitcoin_and_cryptocurrency_technologies_lecture1/</guid>
-      
-        <description>&lt;h1 id=&#34;bitcoin-and-cryptocurrency-technologies&#34;&gt;Bitcoin and Cryptocurrency Technologies&lt;/h1&gt;
-&lt;h2 id=&#34;lecture-1-introduction-to-crypto-and-cryptocurrencies&#34;&gt;Lecture 1 Introduction to Crypto and Cryptocurrencies&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Hash Function&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Takes any string as input&lt;/li&gt;
-&lt;li&gt;Fixed-size output&lt;/li&gt;
-&lt;li&gt;Efficiently computable&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Security Properties&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Collision-free
-&lt;ul&gt;
-&lt;li&gt;Nobody can find x and y such as &lt;em&gt;&amp;ldquo;x!=y and H(x)=H(y)&amp;quot;&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Hiding
-&lt;ul&gt;
-&lt;li&gt;Given H(x), it&amp;rsquo;s infeasible to find x&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Puzzle-friendly
-&lt;ul&gt;
-&lt;li&gt;For every possible output value y, if k is chosen from a distribution with high min-entropy, then it&amp;rsquo;s infeasible to find x such as &lt;em&gt;H(k|x)=y&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;SHA-256 Hash Function&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/sha256_hash_function.png&#34; alt=&#34;sha256_hash_function&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Theorem: If c is collision-free, then SHA-256 is collision-free&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Hash Pointer&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Where some info is stored&lt;/li&gt;
-&lt;li&gt;Cryptographic hash of the info&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/hash_pointer.png&#34; alt=&#34;hash_pointer&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Merkle Trees&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The root hash can verify membership in O(log n) time/space&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/merkle_trees.png&#34; alt=&#34;merkle_trees&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digital Signature&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Only you can sign, but anyone can verify&lt;/li&gt;
-&lt;li&gt;Signature is tied to a particular document
-&lt;ul&gt;
-&lt;li&gt;verify(public key, message, sign(secret key, message)) == true&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&amp;ldquo;can&amp;rsquo;t forge signatures&amp;rdquo;
-&lt;ul&gt;
-&lt;li&gt;knows public key&lt;/li&gt;
-&lt;li&gt;knows signature&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Relies on hairy math&lt;/li&gt;
-&lt;li&gt;Good randomness is essential&lt;/li&gt;
-&lt;li&gt;Bitcoin use ECDSA(Elliptic Curve Digital Signature Algorithm) standard&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Public Key As An Identity&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Create a new, random key-pair (secret key, public key)
-&lt;ul&gt;
-&lt;li&gt;Public key is the public &amp;ldquo;name&amp;rdquo; you can use&lt;/li&gt;
-&lt;li&gt;Secret key lets you &amp;ldquo;speak for&amp;rdquo; the identity&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Privacy&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Addresses not directly connected to real-world identity&lt;/li&gt;
-&lt;li&gt;Observer can link together an address&amp;rsquo;s activity over time, make inferences&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;A Simple Cryptocurrency - Scrooge Coin&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Create Coins
-&lt;ul&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/create_coins.png&#34; alt=&#34;create_coins&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Pay Coins
-&lt;ul&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/pay_coins.png&#34; alt=&#34;pay_coins&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       

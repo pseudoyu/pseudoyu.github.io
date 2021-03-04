@@ -6,7 +6,16 @@
     <description>Recent content in Categories on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 11 Nov 2020 16:30:25 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Nov 2020 03:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Programming</title>
+      <link>https://www.pseudoyu.com/zh/category/programming/</link>
+      <pubDate>Fri, 20 Nov 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/category/programming/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Projects</title>
       <link>https://www.pseudoyu.com/zh/category/projects/</link>
@@ -22,15 +31,6 @@
       <pubDate>Wed, 21 Oct 2020 19:53:17 +0800</pubDate>
       
       <guid>https://www.pseudoyu.com/zh/category/notes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Programming</title>
-      <link>https://www.pseudoyu.com/zh/category/programming/</link>
-      <pubDate>Wed, 23 Sep 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/category/programming/</guid>
       <description></description>
     </item>
     

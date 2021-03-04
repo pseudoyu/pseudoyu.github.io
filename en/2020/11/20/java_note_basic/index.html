@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="utf-8">
+  <title>Java学习笔记 - 基础 · Pseudoyu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Java概述 Java特性 简单性 丢弃了C&#43;&#43;中运算符重载、多重继承等 不使用指针而是使用引用 自动垃圾回收机制（不用开发者进行内存管理） 面向对象 提" />
+
+  <meta name="keywords" content="Hugo, theme, den" />
+
+<link rel="canonical" href="https://www.pseudoyu.com/en/2020/11/20/java_note_basic/" />
+<link rel="alternate" href="https://www.pseudoyu.com/zh/2020/11/20/java_note_basic/" hreflang="zh">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.pseudoyu.com/css/den.css">
+
+
+
+
+<meta property="og:title" content="Java学习笔记 - 基础" />
+<meta property="og:description" content="Java概述 Java特性 简单性 丢弃了C&#43;&#43;中运算符重载、多重继承等 不使用指针而是使用引用 自动垃圾回收机制（不用开发者进行内存管理） 面向对象 提" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.pseudoyu.com/en/2020/11/20/java_note_basic/" />
+<meta property="article:published_time" content="2020-11-20T03:12:17+08:00" />
+<meta property="article:modified_time" content="2020-11-20T03:12:17+08:00" />
+<meta itemprop="name" content="Java学习笔记 - 基础">
+<meta itemprop="description" content="Java概述 Java特性 简单性 丢弃了C&#43;&#43;中运算符重载、多重继承等 不使用指针而是使用引用 自动垃圾回收机制（不用开发者进行内存管理） 面向对象 提">
+<meta itemprop="datePublished" content="2020-11-20T03:12:17+08:00" />
+<meta itemprop="dateModified" content="2020-11-20T03:12:17+08:00" />
+<meta itemprop="wordCount" content="1433">
+
+
+
+<meta itemprop="keywords" content="programming,java," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Java学习笔记 - 基础"/>
+<meta name="twitter:description" content="Java概述 Java特性 简单性 丢弃了C&#43;&#43;中运算符重载、多重继承等 不使用指针而是使用引用 自动垃圾回收机制（不用开发者进行内存管理） 面向对象 提"/>
+</head>
+<body>
+  
+  <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://www.pseudoyu.com/images/background.jpg'); background-position: center; background-size: cover;">
+  <div class="container">
+  <nav class="header-nav navbar navbar-expand-md navbar-dark light-dark">
+    <div class="header-logo navbar-brand">
+      
+        <a class="float-left" href="https://www.pseudoyu.com/en/">
+      
+        
+        <img class="mr20 header-logo-image" src="https://www.pseudoyu.com/images/fly.png" alt="logo">
+        
+        
+          Pseudoyu
+         
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav-menu collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/en/category/ideas/">Ideas</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/en/category/programming/">Programming</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/en/category/notes/">Notes</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/en/category/projects/">Projects</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              <a class="nav-link" href="https://www.pseudoyu.com/en/about/">About</a>
+            
+          </li>
+        
+        
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.pseudoyu.com/zh/"><i class="fas fa-globe"></i> 中文</a>
+            </li>
+          
+          
+          
+          
+        
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container header-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="header-content">
+        <h1 class="header-title">Java学习笔记 - 基础</h1>
+        <p class="header-date">By
+          pseudoyu /
+        
+        2020-11-20
+          / In categories
+          <a href="https://www.pseudoyu.com/en/category/programming/">Programming</a>
+        </p>
+        
+        <div class="header-underline"></div>
+        
+          <div class="clearfix"></div>
+          <p class="float-right header-tags">
+              <i class="fas fa-tags" aria-hidden="true"></i>
+              <a href="https://www.pseudoyu.com/en/tag/java/">java</a>, 
+                <a href="https://www.pseudoyu.com/en/tag/programming/">programming</a>
+          </p>
+        
+        <div class="clearfix"></div>
+<p class="float-right translations">
+    <i class="fas fa-language" aria-hidden="true"></i>
+    Translations: 
+    <a href="https://www.pseudoyu.com/zh/2020/11/20/java_note_basic/">ZH</a>
+</p>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <main>
+<div class="container content">
+  <article>
+  <h2 id="java概述">Java概述</h2>
+<h3 id="java特性">Java特性</h3>
+<ol>
+<li>简单性
+<ul>
+<li>丢弃了C++中运算符重载、多重继承等</li>
+<li>不使用指针而是使用引用</li>
+<li>自动垃圾回收机制（不用开发者进行内存管理）</li>
+</ul>
+</li>
+<li>面向对象
+<ul>
+<li>提供了类、接口和继承等</li>
+<li>支持类之间的单继承</li>
+<li>支持接口之间的多继承</li>
+<li>全面支持动态绑定</li>
+</ul>
+</li>
+<li>安全性
+<ul>
+<li>不支持指针，一切对内存的访问都必须通过实例变量来实现</li>
+</ul>
+</li>
+<li>跨平台性
+<ul>
+<li>可以运行在各种平台上</li>
+</ul>
+</li>
+<li>支持多线程
+<ul>
+<li>并发执行多个任务，提升执行效率</li>
+</ul>
+</li>
+</ol>
+<h3 id="jdkjava-development-kit">JDK（Java Development Kit）</h3>
+<p>Java开发环境</p>
+<ul>
+<li>编译器</li>
+<li>运行工具</li>
+<li>文档生成工具</li>
+<li>打包工具</li>
+<li>JRE（Java Runtime Environment）运行环境</li>
+</ul>
+<p>Java程序编译</p>
+<ol>
+<li>javac编译源文件</li>
+<li>生成.class字节码文件</li>
+<li>java虚拟机解释执行</li>
+</ol>
+<h2 id="java编程基础">Java编程基础</h2>
+<h3 id="基本语法">基本语法</h3>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloWorld</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// 定义一个字符串变量
+</span><span class="c1"></span>    <span class="n">String</span> <span class="n">end</span> <span class="o">=</span> <span class="s">&#34;!&#34;</span><span class="o">;</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Hello World&#34;</span> <span class="o">+</span> <span class="n">end</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><ul>
+<li>功能性语句和结构性语句组成  结构性语句主要是为了承载功能性语句</li>
+<li>严格区分大小写的</li>
+<li>需要注意层次清晰规范</li>
+</ul>
+<p>书写规范</p>
+<ul>
+<li>包名：不使用大写的英文字母</li>
+<li>类名和接口名：首字母大写</li>
+<li>常量：英文字母大写 单词之间使用下划线分割</li>
+<li>变量名和方法名：驼峰命名</li>
+</ul>
+<p>注释</p>
+<ul>
+<li>单行注释</li>
+<li>多行注释
+<ul>
+<li>文档注释，一般写在方法或类上</li>
+</ul>
+</li>
+</ul>
+<h3 id="数据类型">数据类型</h3>
+<ul>
+<li>整型
+<ul>
+<li>byte 8位</li>
+<li>short 16位</li>
+<li>int 32位</li>
+<li>long 64位</li>
+</ul>
+</li>
+<li>浮点数
+<ul>
+<li>float 32位 +f</li>
+<li>double 64位 +d</li>
+</ul>
+</li>
+<li>字符
+<ul>
+<li>char</li>
+</ul>
+</li>
+<li>字符串
+<ul>
+<li>String</li>
+</ul>
+</li>
+<li>布尔常量
+<ul>
+<li>boolean
+<ul>
+<li>true</li>
+<li>false</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="变量">变量</h3>
+<ul>
+<li>程序运行期间会产生一些临时数据，保存在一些内存单元中，用一个标识符来表示，称之为变量</li>
+<li>声明变量时候要指定变量的数据类型 赋值时候需要相互匹配</li>
+</ul>
+<p>类型转换</p>
+<ul>
+<li>自动类型转换
+<ul>
+<li>两种数据彼此兼容</li>
+<li>目标类型的取值范围大于源类型取值范围</li>
+<li>例如：byte类型转换至short, int, double等</li>
+</ul>
+</li>
+<li>强制类型转换
+<ul>
+<li>两种类型彼此不兼容</li>
+<li>目标类型的取值范围小于源类型</li>
+<li>会造成精度丢失</li>
+<li>格式：目标类型 变量 = （目标类型）值</li>
+</ul>
+</li>
+</ul>
+<p>作用域</p>
+<ul>
+<li>变量需要在作用范围内才可以被使用</li>
+<li>一般定义在某一对大括号中</li>
+</ul>
+<h3 id="运算符">运算符</h3>
+<p>算数运算符</p>
+<ul>
+<li>+</li>
+<li>-</li>
+<li>*</li>
+<li>/ 整数相除为整,有小数参与则为小数</li>
+<li>% 正负结果取决于左边（被模数）</li>
+<li>++ 算数符号在前先自增</li>
+<li>&ndash; 算数符号在前先自减</li>
+</ul>
+<p>赋值运算符（会自动完成强制类型转换）</p>
+<ul>
+<li>=</li>
+<li>+=</li>
+<li>-=</li>
+<li>*=</li>
+<li>/=</li>
+<li>%=</li>
+</ul>
+<p>比较运算符</p>
+<ul>
+<li>==</li>
+<li>!=</li>
+<li>&lt; &gt;</li>
+<li>&lt;= &gt;=</li>
+</ul>
+<p>逻辑运算符（用于布尔运算，结果仍为布尔型）</p>
+<ul>
+<li>&amp; 与</li>
+<li>| 或</li>
+<li>^ 异或</li>
+<li>! 非</li>
+<li>&amp;&amp; 短路与</li>
+<li>|| 短路或</li>
+</ul>
+<p>运算符优先级</p>
+<ol>
+<li>. [] ()</li>
+<li>++ - - ~ !</li>
+<li>* / %</li>
+<li>+ -</li>
+<li>&laquo; &raquo; &raquo;&gt;</li>
+<li>&lt; &gt; &lt;= &gt;=</li>
+<li>== !=</li>
+<li>&amp;</li>
+<li>^</li>
+<li>|</li>
+<li>&amp;&amp;</li>
+<li>||</li>
+<li>?</li>
+<li>赋值运算符</li>
+</ol>
+<h3 id="选择结构">选择结构</h3>
+<p>if</p>
+<ul>
+<li>if</li>
+<li>if&hellip;else</li>
+<li>if&hellip;else if&hellip;else&hellip;</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="k">if</span> <span class="o">(</span><span class="n">condition1</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">statement1</span><span class="o">;</span>
+<span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">{</span>
+  <span class="n">statement2</span><span class="o">;</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+  <span class="n">statement3</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div><p>switch</p>
+<ul>
+<li>语句类型
+<ul>
+<li>byte</li>
+<li>short</li>
+<li>char</li>
+<li>int</li>
+<li>枚举</li>
+<li>String</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="k">switch</span><span class="o">(</span><span class="n">语句</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">case</span> <span class="n">1</span><span class="o">:</span>
+  <span class="n">statement1</span><span class="o">;</span>
+  <span class="k">break</span><span class="o">;</span>
+
+  <span class="k">case</span> <span class="n">2</span><span class="o">:</span>
+  <span class="n">statement2</span><span class="o">;</span>
+  <span class="k">continue</span><span class="o">;</span>
+<span class="nl">
+</span><span class="nl">  default:</span>
+  <span class="n">statement3</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div><h3 id="循环结构">循环结构</h3>
+<p>while循环</p>
+<ul>
+<li>while</li>
+<li>do&hellip;while</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// while循环
+</span><span class="c1"></span><span class="k">while</span> <span class="o">(</span><span class="n">condition</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">statement</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="c1">// do...while循环
+</span><span class="c1"></span><span class="k">do</span> <span class="o">{</span>
+  <span class="n">statement</span><span class="o">;</span>
+<span class="o">}</span> <span class="k">while</span> <span class="o">(</span><span class="n">condition</span><span class="o">)</span>
+</code></pre></div><p>for循环</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">1</span><span class="o">(</span><span class="n">初始化</span><span class="o">);</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">10</span><span class="o">(</span><span class="n">条件</span><span class="o">);</span> <span class="n">i</span><span class="o">++(</span><span class="n">操作表达式</span><span class="o">))</span> <span class="o">{</span>
+  <span class="n">statement</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div><h3 id="方法">方法</h3>
+<ul>
+<li>声明方法</li>
+<li>重载方法：允许在一个程序中定义多个名称相同的方法，但是参数类型/个数必须不同</li>
+<li>调用方法</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// 声明方法的基本语法
+</span><span class="c1"></span><span class="n">修饰符</span> <span class="n">返回值类型</span> <span class="nf">方法名</span><span class="o">([</span><span class="n">参数类型</span><span class="o">,</span> <span class="n">参数1</span><span class="o">,</span> <span class="o">...])</span> <span class="o">{</span>
+	<span class="n">执行语句</span><span class="o">;</span>
+	<span class="k">return</span> <span class="n">返回值</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="c1">// 示例
+</span><span class="c1"></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">printHello</span><span class="o">()</span> <span class="o">{</span>
+  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Hello World!&#34;</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div><h3 id="数组">数组</h3>
+<p>一组数据的集合</p>
+<ul>
+<li>可以存放任意类型的元素</li>
+<li>同个数组类型必须一致</li>
+<li>引用为null时会发生空指针异常</li>
+</ul>
+<p>数组元素默认值</p>
+<ul>
+<li>byte, short, int, long - 0</li>
+<li>float, double - 0.0</li>
+<li>char - 空字符'\u0000'</li>
+<li>boolean - false</li>
+<li>引用数据类型 - null</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// 定义数组
+</span><span class="c1"></span><span class="kt">int</span><span class="o">[]</span> <span class="n">nums</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">100</span><span class="o">];</span>
+
+<span class="c1">// 静态初始化
+</span><span class="c1"></span><span class="kt">int</span><span class="o">[]</span> <span class="n">nums</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[]</span> <span class="o">{</span><span class="n">元素</span><span class="o">,</span> <span class="n">元素</span><span class="o">,...}</span>
+
+<span class="c1">// 静态初始化简便写法（建议）
+</span><span class="c1"></span><span class="kt">int</span><span class="o">[]</span> <span class="n">nums</span> <span class="o">=</span> <span class="o">{</span><span class="n">元素</span><span class="o">,</span> <span class="n">元素</span><span class="o">,...}</span>
+</code></pre></div><p>遍历数组</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="o">{</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">,</span> <span class="n">3</span><span class="o">,</span> <span class="n">4</span><span class="o">};</span>
+
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+  <span class="c1">// 通过index来访问元素
+</span><span class="c1"></span>  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]);</span>
+<span class="o">}</span>
+</code></pre></div><p>多维数组</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// 定义一个m*n的多维数组
+</span><span class="c1"></span><span class="kt">int</span><span class="o">[][]</span> <span class="n">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">m</span><span class="o">][</span><span class="n">n</span><span class="o">];</span>
+</code></pre></div><h3 id="引用">引用</h3>
+<p>Java是按值传递参数，在将一个参数传入一个方法时，本质上是将对象的地址以值的方式传递到形参中。</p>
+<ul>
+<li>方法中改变对象的字段值会改变原对象该字段值</li>
+<li>但是在方法汇总将指针引用了其他对象则不会产生影像</li>
+</ul>
+
+  </article>
+
+  
+  
+  
+
+
+</div>
+
+  </main><div class="footer gradient-2">
+  <div class="container footer-container ">
+    <div class="row">
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        <div class="footer-title">Sitemap</div>
+        <ul class="list-unstyled">
+            
+              
+                <li><a href="https://www.pseudoyu.com/en/tags/">Tags</a></li>
+              
+              
+                <li><a href="https://www.pseudoyu.com/en/categories/">Categories</a></li>
+              
+            
+            
+            
+            <li><a rel="alternate" type="application/rss&#43;xml" href="https://www.pseudoyu.com/en/index.xml"><i class="fas fa-rss-square"></i> RSS Feed</a></li>
+            
+            
+            
+        </ul>
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">Social</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://www.facebook.com/pseudoyuzhang" rel="noopener" target="_blank">Facebook</a></li>
+          
+          <li><a href="https://www.instagram.com/pseudo.yu/" rel="noopener" target="_blank">Instagram</a></li>
+          
+          <li><a href="https://twitter.com/pseudo_yu" rel="noopener" target="_blank">Twitter</a></li>
+          
+          <li><a href="https://medium.com/@pseudoyu" rel="noopener" target="_blank">Medium</a></li>
+          
+          <li><a href="https://www.youtube.com/channel/UCR0O0s303tGBi3P02hstQPA/" rel="noopener" target="_blank">Youtube</a></li>
+          
+          <li><a href="https://space.bilibili.com/5374948/" rel="noopener" target="_blank">BiliBili</a></li>
+          
+        </ul>
+        
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">Links</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://www.linkedin.com/in/pseudoyu/" rel="noopener" target="_blank">LinkedIn</a></li>
+          
+          <li><a href="https://github.com/pseudoyu" rel="noopener" target="_blank">GitHub</a></li>
+          
+          <li><a href="https://www.coursera.org/user/ffe947f087d1f63b161c3fcb310a6578" rel="noopener" target="_blank">Coursera</a></li>
+          
+          <li><a href="https://leetcode.com/pseudoyu/" rel="noopener" target="_blank">LeetCode</a></li>
+          
+          <li><a href="https://acm.timus.ru/author.aspx?id=300324&amp;sort=difficulty" rel="noopener" target="_blank">Timus OJ</a></li>
+          
+          <li><a href="https://www.goodreads.com/user/show/121369734-yu-zhang" rel="noopener" target="_blank">Goodreads</a></li>
+          
+        </ul>
+        
+      </div> 
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <p class="pull-right text-right">
+          <small><em><a href="https://www.hku.hk" rel="noopener" target="_blank">The University of Hong Kong</a> - <a href="https://www.cs.hku.hk" rel="noopener" target="_blank">CS</a></em></small><br/>
+          <small>
+            &copy; 
+            pseudoyu
+            
+              2020 -
+            2021
+          </small>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

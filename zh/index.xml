@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 27 Nov 2020 03:12:17 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 17 Feb 2021 00:00:00 +0800</lastBuildDate>
     
     <atom:link href="https://www.pseudoyu.com/zh/index.xml" rel="self" type="application/rss+xml" />
     
@@ -59,6 +59,92 @@
 &lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCR0O0s303tGBi3P02hstQPA/&#34;&gt;Youtube&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.reddit.com/user/pseudo_yu&#34;&gt;Reddit&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>用OKR的方式梳理自己的学习计划</title>
+      <link>https://www.pseudoyu.com/zh/2021/02/17/learning_plan_okr/</link>
+      <pubDate>Wed, 17 Feb 2021 00:00:00 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/02/17/learning_plan_okr/</guid>
+      
+        <description>&lt;h2 id=&#34;用一句话形容理想情况下自己想要达到的状态&#34;&gt;用一句话形容理想情况下，自己想要达到的状态&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;具体目标范围&lt;/strong&gt;：提升编程技术能力&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;时间周期&lt;/strong&gt;：2个月&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;描述&lt;/strong&gt;：我想要成为一名具备过硬的编程能力的开发者，并对技术有持续学习的开放心态 &lt;em&gt;&lt;strong&gt;— 目标O&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;寻找关键词拆解状态为目标&#34;&gt;寻找关键词，拆解状态为目标&lt;/h2&gt;
+&lt;h3 id=&#34;我需要提升解决的部分&#34;&gt;我需要提升解决的部分&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;过硬的编程能力&lt;/li&gt;
+&lt;li&gt;持续学习的开放心态&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;想要达到的程度&#34;&gt;想要达到的程度&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;能够通过技术创造价值&lt;/li&gt;
+&lt;li&gt;对技术有热爱和追求&lt;/li&gt;
+&lt;li&gt;B站Up主“是落拓呀”的持续学习状态&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;制定每一个关键词目标的指标&#34;&gt;制定每一个关键词/目标的指标&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;过硬的编程能力&lt;/strong&gt;：能够满足目前香港/内地区块链公司，如蚂蚁链、腾讯区块链、杭州趣链科技等目标公司的技术面试要求，并主导完成1-2个完整的项目，深入技术细节 &lt;strong&gt;— KR1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;持续学习的开放心态&lt;/strong&gt;：提升对于热门区块链技术平台（Ethereum、Hyperledger）与Java后端技术的理解与学习，并完成多篇原创技术博客 &lt;strong&gt;— KR2&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;填充每一个关键指标的todo-list&#34;&gt;填充每一个关键指标的todo list&lt;/h2&gt;
+&lt;h3 id=&#34;过硬的编程能力&#34;&gt;过硬的编程能力&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;每天按照分类与难度刷LeetCode算法题
+&lt;ol&gt;
+&lt;li&gt;白天刷5-10题&lt;/li&gt;
+&lt;li&gt;晚上按照节奏复习之前刷过的题的思路&lt;/li&gt;
+&lt;li&gt;看关于算法框架思路的书籍，完善&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;完成区块链音乐版权项目毕业设计
+&lt;ol&gt;
+&lt;li&gt;每天至少2小时学习Ethereum智能合约编写相关&lt;/li&gt;
+&lt;li&gt;按照项目进度进行开发&lt;/li&gt;
+&lt;li&gt;与导师和同学定期交流，优化项目&lt;/li&gt;
+&lt;li&gt;调研市场上区块链产品，思考运营与商业化相关&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;完成开源项目RPC框架的学习
+&lt;ol&gt;
+&lt;li&gt;每天至少1小时学习课程并实践代码&lt;/li&gt;
+&lt;li&gt;撰写关于RPC框架原理和核心知识点的技术博文&lt;/li&gt;
+&lt;li&gt;将此作为亮点项目，添加至简历并与同学进行模拟面试&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;针对GitHub与一些书籍的面试经验，学习掌握计算机基础面试知识，和同学每周模拟面试，现场写算法题并讲解，找到问题并提出建议&lt;/li&gt;
+&lt;li&gt;参加春招面试，积攒面试经验查漏补缺，总结心得&lt;/li&gt;
+&lt;li&gt;和落拓学长交流区块链学习心得和路径，寻求建议&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;持续学习的开放心态&#34;&gt;持续学习的开放心态&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;完成学校COMP7408区块链与分布式账本课程（共计30学时，每周一节3小时的课程）
+&lt;ol&gt;
+&lt;li&gt;每周一晚上参加线下课程&lt;/li&gt;
+&lt;li&gt;课程第二天花3-6小时整理当周课程的知识点与拓展部分&lt;/li&gt;
+&lt;li&gt;每周2-3小时将课程中的理论部分通过代码实践&lt;/li&gt;
+&lt;li&gt;每天至少3天对之前所有知识点进行复习和查漏补缺（每次30分钟左右）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Udacity 区块链开发课程并整理笔记（共计约40学时）
+&lt;ol&gt;
+&lt;li&gt;每天至少2小时学习课程并实践代码&lt;/li&gt;
+&lt;li&gt;每天至少3天对之前所有知识点进行复习和查漏补缺（每次30分钟左右）&lt;/li&gt;
+&lt;li&gt;阶段性对课程里的项目进行详细整理，添加至简历并针对面试进行准备&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;每天学习间隙整理基础理论知识，并了解一些前沿技术和产品&lt;/li&gt;
+&lt;li&gt;完成CSDN关于Spring Boot和其他框架的入门视频并整理&lt;/li&gt;
+&lt;li&gt;完成Udacity关于Java开发相关框架的介绍并进行项目实践&lt;/li&gt;
+&lt;li&gt;结合自己的理解与学习笔记，撰写针对特定技术的原创博客&lt;/li&gt;
+&lt;li&gt;定期和目前从事区块链的同学进行交流讨论，补充项目经验至简历与面试准备&lt;/li&gt;
+&lt;/ol&gt;
 </description>
       
     </item>
@@ -4689,294 +4775,6 @@ Select cheapest neighbor as currentState and goto step2
 &lt;p&gt;The most important part of this presence is the description of features. Considered major audiences are educators/students, relatively young staffs in a company and kids/teenagers in the family, every introduction part starts with an attractive header with the keywords like “work”, “working”, “class”, “together”, “leisure time” and so on. These headers help or guide audiences to think about their current status when stduying, working or entertaining and realize their needs or how this product can improve it.&lt;/p&gt;
 &lt;p&gt;Plus, after depicting magic usages in the classroom, workplace or home, the website lists some purchase links of the compatible ipad accessories, guiding audiences to know (and also buy) more related products.&lt;/p&gt;
 &lt;p&gt;However, there are some negative aspects of this presence. First, the fontsize of “Available in October” (the coming date) is really small with a light-gray color, which is not obvious. Second, the price of the product is listed on another website page by clicking a small “View pricing” button. Normally, when audiences view some products on the internet, they always want to know how much it costs and how they can buy it immediately. If this information is not easy or convienient to find, lots of them will lose patience.&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>COMP7103 Topic 1 Introduction</title>
-      <link>https://www.pseudoyu.com/zh/2020/09/18/comp7103_topic1/</link>
-      <pubDate>Fri, 18 Sep 2020 01:18:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/09/18/comp7103_topic1/</guid>
-      
-        <description>&lt;h1 id=&#34;comp7103-data-mining&#34;&gt;COMP7103 Data Mining&lt;/h1&gt;
-&lt;h2 id=&#34;topic-1-introduction&#34;&gt;Topic 1 Introduction&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Decision-Support System (DSS)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A decision-support system (DSS) is a system that assists decision makers to make important decisions for an organization or business&lt;/li&gt;
-&lt;li&gt;KDD and data mining are important components in many DSS&amp;rsquo;s&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Data and Knowledge&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Data
-&lt;ul&gt;
-&lt;li&gt;A collecion of facts about certain group of objects&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Pattern
-&lt;ul&gt;
-&lt;li&gt;Certain characteristics of data that are frequently observed&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Knowledge
-&lt;ul&gt;
-&lt;li&gt;Some general rules about the objects&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Data Warehouse&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;An integration of various departmental databases (organization-wide data)&lt;/li&gt;
-&lt;li&gt;Avoids overloading local operational databases&lt;/li&gt;
-&lt;li&gt;A convenient place where KDD and data mining applications are performed&lt;/li&gt;
-&lt;li&gt;Provide data mining algorithms an easy access to the required data&lt;/li&gt;
-&lt;li&gt;Wrappers
-&lt;ul&gt;
-&lt;li&gt;Extract&lt;/li&gt;
-&lt;li&gt;Transform&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Can also be used to support other DSS tools, e.g. On-Line Analytical Processing (OLAP) - analyze large amount of data, Online Transaction Processing (OLTP)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Data Mining and KDD&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;KDD (Knowledge Discovery in Databases)
-&lt;ul&gt;
-&lt;li&gt;A process of discovering useful knowledge from big collection of data&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Data Mining
-&lt;ul&gt;
-&lt;li&gt;A step within the KDD process in which interesting patterns are found. Some of these patterns are then interpreted and transformed into useful knowledge.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Data Mining is a step in the whole KDD process&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;KDD is a process of identifying patterns in data and deriving knowledge from them&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;valid&lt;/li&gt;
-&lt;li&gt;novel&lt;/li&gt;
-&lt;li&gt;potentially useful&lt;/li&gt;
-&lt;li&gt;understandable&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Data Mining&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/data_mining_system.png&#34; alt=&#34;data_mining_system&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Databases&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Bottom layer of the architecture&lt;/li&gt;
-&lt;li&gt;Contains data sources (raw data)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Traditional Database usually only provides the functions of storing and retrieving facts&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;The knowledge resulting from data mining should carry certain degree of predictive ability or descriptive (explanatory) ability (or both)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Data Mining Engine&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Applies data mining algorithms on data&lt;/li&gt;
-&lt;li&gt;Provides multiple functionality&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Evaluation Module&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Allow users to specify what is/isn&amp;rsquo;t interesting&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Knowledge Base&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Capture domain specific knowledge&lt;/li&gt;
-&lt;li&gt;Stores the rules generated by data mining&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Graphical User Interface&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Presents mined patterns and rules to users in an easy-to-visualize way&lt;/li&gt;
-&lt;li&gt;Provides feedback mechanisms for the users to specify the criteria of interestingness&lt;/li&gt;
-&lt;li&gt;Provides a query language or query interface for users to select and retrieve&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Challenges of Data Mining&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Technical
-&lt;ul&gt;
-&lt;li&gt;Scalability&lt;/li&gt;
-&lt;li&gt;Dimensionality&lt;/li&gt;
-&lt;li&gt;Data stream&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Data
-&lt;ul&gt;
-&lt;li&gt;Complex and heterogeneous data&lt;/li&gt;
-&lt;li&gt;Data quality&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Privacy
-&lt;ul&gt;
-&lt;li&gt;Data ownership and distribution&lt;/li&gt;
-&lt;li&gt;Privacy preservation&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Results
-&lt;ul&gt;
-&lt;li&gt;Interpretation of patterns&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;The KDD Process&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/kdd_process.png&#34; alt=&#34;kdd_process&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Step 1: Goal Setting
-&lt;ul&gt;
-&lt;li&gt;Understand your application domain&lt;/li&gt;
-&lt;li&gt;Obtain prior known knowledge&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Step 2: Data Collection
-&lt;ul&gt;
-&lt;li&gt;Characteristics&lt;/li&gt;
-&lt;li&gt;Where to find&lt;/li&gt;
-&lt;li&gt;How to store&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Step 3: Data Cleaning and Preprocessing
-&lt;ul&gt;
-&lt;li&gt;Missing data&lt;/li&gt;
-&lt;li&gt;Incorrect data (noise)&lt;/li&gt;
-&lt;li&gt;Outliers&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Step 4: Data Reduction and Transformation (or Preparation)
-&lt;ul&gt;
-&lt;li&gt;Compact data into a form&lt;/li&gt;
-&lt;li&gt;Improve data mining algorithms&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Step 5: Data Mining
-&lt;ul&gt;
-&lt;li&gt;Pick a data mining model&lt;/li&gt;
-&lt;li&gt;Pick a data mining algorithm&lt;/li&gt;
-&lt;li&gt;Apply the algorithm to the data&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Step 6: Result Evaluation
-&lt;ul&gt;
-&lt;li&gt;Check the results and goals&lt;/li&gt;
-&lt;li&gt;Refine and re-run (if not)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Step 7: Knowledge Consolidation
-&lt;ul&gt;
-&lt;li&gt;Document&lt;/li&gt;
-&lt;li&gt;Report&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Iterative and Interactive&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Some steps of the process need to be refined, and the whole process be repeated&lt;/li&gt;
-&lt;li&gt;Certain amount of human involvement is needed to monitor and to fine tune the steps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Prediction&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Uses database records that describe information about past behavior to automatically generate a model (or rule) that can predict future behavior&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Derive patterns that summarize the underlying relationships in data and to describe the characteristics of data&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;OLAP (On-Line Analytical Processing)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;View data in a multi-dimensional model (a data cube)&lt;/li&gt;
-&lt;li&gt;Fast aggregation&lt;/li&gt;
-&lt;li&gt;Summarization&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Example&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Selection -&amp;gt; Group-by -&amp;gt; Summarization&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Classification&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Supervised learning&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Goal
-&lt;ul&gt;
-&lt;li&gt;Unseen records should be assigned a class (accuracy)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Approach
-&lt;ul&gt;
-&lt;li&gt;Given a training set&lt;/li&gt;
-&lt;li&gt;Learn classifier&lt;/li&gt;
-&lt;li&gt;Find a model&lt;/li&gt;
-&lt;li&gt;Test the model using test set&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Example&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Direct Marketing
-&lt;ul&gt;
-&lt;li&gt;Reduce cost of mailing by targeting a set of consumers likely to buy a new cell-phone product&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Regression&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Goal
-&lt;ul&gt;
-&lt;li&gt;Preduct a value of numerical variable based on the values of other variables&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Example&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Predicting sales amounts of new product based on advertising expenditure&lt;/li&gt;
-&lt;li&gt;Predicting wind velocities as a function of temperature, humidity, air pressure, etc.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Clustering&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Given a set of data objects with a set of attributes and similarity measure&lt;/li&gt;
-&lt;li&gt;Find clusters (e.g. distance-based clustering)
-&lt;ul&gt;
-&lt;li&gt;Maximize the intra-cluster similarity&lt;/li&gt;
-&lt;li&gt;Minimize the inter-cluster similarity&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Objects in one cluster are more similiar to one another&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/illustrating_cluster.png&#34; alt=&#34;illustrating_cluster&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Example&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Document Clustering
-&lt;ul&gt;
-&lt;li&gt;To find groups of documents that are similar to each other based on the important terms they contain&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Association Rule Discovery&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Given a set of records each of which contains some items from a given collection&lt;/li&gt;
-&lt;li&gt;Goal
-&lt;ul&gt;
-&lt;li&gt;Produce dependency rules which predict occurrence of an item based on occurrences of other items&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Example&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Marketing and Sales Promotion&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Sequence Analysis&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Given a sequence database contains sequences of events&lt;/li&gt;
-&lt;li&gt;Find sequences
-&lt;ul&gt;
-&lt;li&gt;Interesting&lt;/li&gt;
-&lt;li&gt;Frequently occurring&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Predict future behavior.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Example&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Renting movies&lt;/li&gt;
-&lt;li&gt;Buying habits&lt;/li&gt;
-&lt;li&gt;Web serving behavior&lt;/li&gt;
-&lt;li&gt;Web log analysis&lt;/li&gt;
-&lt;/ul&gt;
 </description>
       
     </item>

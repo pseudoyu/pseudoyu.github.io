@@ -10,55 +10,62 @@
   
   <url>
     <loc>https://www.pseudoyu.com/en/categories/</loc>
-    <lastmod>2020-11-20T03:12:17+08:00</lastmod>
+    <lastmod>2020-11-23T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.pseudoyu.com/en/tag/java/</loc>
-    <lastmod>2020-11-20T03:12:17+08:00</lastmod>
+    <lastmod>2020-11-23T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/en/2020/11/20/java_note_basic/</loc>
-    <lastmod>2020-11-20T03:12:17+08:00</lastmod>
+    <loc>https://www.pseudoyu.com/en/2020/11/23/java_note_oop/</loc>
+    <lastmod>2020-11-23T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.pseudoyu.com/en/posts/</loc>
-    <lastmod>2020-11-20T03:12:17+08:00</lastmod>
+    <lastmod>2020-11-23T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.pseudoyu.com/en/category/programming/</loc>
-    <lastmod>2020-11-20T03:12:17+08:00</lastmod>
+    <lastmod>2020-11-23T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.pseudoyu.com/en/tag/programming/</loc>
-    <lastmod>2020-11-20T03:12:17+08:00</lastmod>
+    <lastmod>2020-11-23T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.pseudoyu.com/en/</loc>
-    <lastmod>2020-11-20T03:12:17+08:00</lastmod>
+    <lastmod>2020-11-23T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.pseudoyu.com/en/tags/</loc>
+    <lastmod>2020-11-23T03:12:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/en/2020/11/20/java_note_basic/</loc>
     <lastmod>2020-11-20T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

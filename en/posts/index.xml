@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 20 Nov 2020 03:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Nov 2020 03:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java学习笔记 - 面向对象</title>
+      <link>https://www.pseudoyu.com/en/2020/11/23/java_note_oop/</link>
+      <pubDate>Mon, 23 Nov 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/23/java_note_oop/</guid>
+      <description>Java面向对象 特性 封装性：将对象的属性和行为封装起来，不需要让外界知道具体的实现细节 继承性：无需重新编写原有类的情况下，新类可拥有原有类的</description>
+    </item>
+    
     <item>
       <title>Java学习笔记 - 基础</title>
       <link>https://www.pseudoyu.com/en/2020/11/20/java_note_basic/</link>
@@ -205,16 +214,6 @@ Apple iPad Air product line is mainly targeted to educators/students, staffs and
  Interconnected network of thousands of networks and hundreds of millions of computers Links businesses, educational institutions, government agencies, and individuals  World Wide Web (WWW)
  One of the internet&amp;rsquo;s most popular services Provides access to billions, possibly trillions, of Web pages  Evolution of Internet
  Innovation phase (1961 - 1974) Institutionalization phase (1975 - 1995) Commercialization Phase (1995 - present)  Packet Switching</description>
-    </item>
-    
-    <item>
-      <title>COMP7404 Topic 1 Solving Problems by Searching</title>
-      <link>https://www.pseudoyu.com/en/2020/09/16/comp7404_topic1/</link>
-      <pubDate>Wed, 16 Sep 2020 00:28:11 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/09/16/comp7404_topic1/</guid>
-      <description>COMP7404 Computational Intelligence and Machine Learning Topic 1 Solving Problems by Searching Types of Search
- Uninformed Search (Know nothing about the problem except definition) Informed Search (know something more like how close to the goal) Local Search (Randomly initilize a state and make it better, e.g. Deep Learning) Constraint Satisfaction Problems (Know more about the problem) Adversarial Search (have an opponent, e.g. chess, star craft game)  Is Search the same as Unsupervised/Supervised Learning?</description>
     </item>
     
   </channel>

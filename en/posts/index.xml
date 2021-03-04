@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 25 Nov 2020 03:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 Nov 2020 03:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java学习笔记 - 集合</title>
+      <link>https://www.pseudoyu.com/en/2020/11/27/java_note_methods/</link>
+      <pubDate>Fri, 27 Nov 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/27/java_note_methods/</guid>
+      <description>String与StringBuffer String 特征 Java8中，String内部使用char数组存储数据 Java9后，String类的实现改用了b</description>
+    </item>
+    
     <item>
       <title>Java学习笔记 - 集合</title>
       <link>https://www.pseudoyu.com/en/2020/11/25/java_note_collections/</link>
@@ -201,16 +210,6 @@ Apple iPad Air product line is mainly targeted to educators/students, staffs and
  Systems analysis/planing  Busisess objectives System functionalities Information requirements   Systems design Building the system Testing Implementation  Quality Consideration
  Navigation Accessibility Scalability Reliability Maintainability Usability Compatibility and interoperability Security Readability  In-House / Outsourcing (Hiring vendors to provide services)
  Build own / outsourcing Host own / outsourcing (preferred)  Implementation, Maintenance, and Optimization</description>
-    </item>
-    
-    <item>
-      <title>ECOM6013 Topic 3 E-Commerce Presence</title>
-      <link>https://www.pseudoyu.com/en/2020/09/16/ecom6013_topic3/</link>
-      <pubDate>Wed, 16 Sep 2020 20:25:28 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/09/16/ecom6013_topic3/</guid>
-      <description>ECOM6013 E-Commerce Technologies Topic 3 E-Commerce Presence Image You E-Commerce Presence
- Idea  Mission Target audience Intended market space Strategic analysis Marketing matrix Development timeline Preliminary budget   About Money (e.g. Amazon&amp;rsquo;s e-commerce &amp;amp; Amazon&amp;rsquo;s AWS)  Business models Revenue models   About target audience  Demographics Lifestyle Consumption patterns &amp;hellip;   Marketplace Characteristics  Size Growth Demographics Structure   Content SWOT Analysis E-Commerce presence map Milestones Costs  Simple website: US$5000 Small startup: US$25,000 tp US$50,000 Large corporate website: US$100,000 + to millions    SWOT Analysis</description>
     </item>
     
   </channel>

@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 25 Nov 2020 03:12:17 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2020 03:12:17 +0800</lastBuildDate>
     
     <atom:link href="https://www.pseudoyu.com/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -58,6 +58,156 @@
 &lt;li&gt;&lt;a href=&#34;https://medium.com/@pseudoyu&#34;&gt;Medium&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCR0O0s303tGBi3P02hstQPA/&#34;&gt;Youtube&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.reddit.com/user/pseudo_yu&#34;&gt;Reddit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Java学习笔记 - 集合</title>
+      <link>https://www.pseudoyu.com/en/2020/11/27/java_note_methods/</link>
+      <pubDate>Fri, 27 Nov 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/27/java_note_methods/</guid>
+      
+        <description>&lt;h2 id=&#34;string与stringbuffer&#34;&gt;String与StringBuffer&lt;/h2&gt;
+&lt;h3 id=&#34;string&#34;&gt;String&lt;/h3&gt;
+&lt;p&gt;特征&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Java8中，String内部使用char数组存储数据&lt;/li&gt;
+&lt;li&gt;Java9后，String类的实现改用了byte数组存储字符串，并使用coder标识编码&lt;/li&gt;
+&lt;li&gt;字符串不可变
+&lt;ul&gt;
+&lt;li&gt;实现
+&lt;ul&gt;
+&lt;li&gt;value数组被声明为final&lt;/li&gt;
+&lt;li&gt;String内部没有能改变value数组的方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;作用
+&lt;ul&gt;
+&lt;li&gt;可以缓存hash值，如hashmap的key&lt;/li&gt;
+&lt;li&gt;String Pool的使用需要String不可变&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;可以通过char[]数组生成新的对象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;String Pool&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;保存着所有字符串字面量（编译时期确定）&lt;/li&gt;
+&lt;li&gt;通过String的intern()方法在运行过程中添加&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;abc&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;abc&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s3&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;intern&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s4&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;intern&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s3&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s4&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// true
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;创建方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;直接使用字符串常量&lt;/li&gt;
+&lt;li&gt;调用String类构造函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-jsx&#34; data-lang=&#34;jsx&#34;&gt;&lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Hello World!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Hello&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;World&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;访问方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;charAt(): 可以通过索引需要获取字符&lt;/li&gt;
+&lt;li&gt;indexOf(): 可以通过字符获取索引&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;常用方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;subString(): 截取子字符串&lt;/li&gt;
+&lt;li&gt;split(): 切割字符串&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;stringbuffer&#34;&gt;StringBuffer&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;可变&lt;/li&gt;
+&lt;li&gt;对StringBuffer对象本身进行操作&lt;/li&gt;
+&lt;li&gt;线程安全，内部使用synchronized进行同步&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;stringbuilder&#34;&gt;StringBuilder&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;可变&lt;/li&gt;
+&lt;li&gt;未加同步锁，线程不安全&lt;/li&gt;
+&lt;li&gt;性能比StringBuffer高10%-15%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;包装类&#34;&gt;包装类&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;和基本数据类型对应的类&lt;/li&gt;
+&lt;li&gt;类型
+&lt;ul&gt;
+&lt;li&gt;Byte&lt;/li&gt;
+&lt;li&gt;Short&lt;/li&gt;
+&lt;li&gt;Integer&lt;/li&gt;
+&lt;li&gt;Long&lt;/li&gt;
+&lt;li&gt;Float&lt;/li&gt;
+&lt;li&gt;Double&lt;/li&gt;
+&lt;li&gt;Character&lt;/li&gt;
+&lt;li&gt;Boolean&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;自动装箱与拆箱
+&lt;ul&gt;
+&lt;li&gt;Integer x = 2; 装箱，自动调用了Integer.valueOf(2）&lt;/li&gt;
+&lt;li&gt;int y = x;拆箱，调用了X.intValue()&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;缓存池
+&lt;ul&gt;
+&lt;li&gt;new Integer(123)每次都会新建一个对象&lt;/li&gt;
+&lt;li&gt;Integer.valueOf(123)会使用缓存池中的对象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;object通用方法&#34;&gt;Object通用方法&lt;/h2&gt;
+&lt;h3 id=&#34;equals&#34;&gt;equals&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;等价关系
+&lt;ul&gt;
+&lt;li&gt;自反性&lt;/li&gt;
+&lt;li&gt;对称性&lt;/li&gt;
+&lt;li&gt;传递性&lt;/li&gt;
+&lt;li&gt;一致性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;相等关系
+&lt;ul&gt;
+&lt;li&gt;基本类型，==判断两个值是否相等&lt;/li&gt;
+&lt;li&gt;引用类型，==判断两个变量是否引用同一个对象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;equals实现&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;检查是否为一个对象的引用，是则直接返回true&lt;/li&gt;
+&lt;li&gt;检查是否是同个类型，不是则返回false&lt;/li&gt;
+&lt;li&gt;将Object进行转型&lt;/li&gt;
+&lt;li&gt;判断每个关键域是否相等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;hashcode&#34;&gt;hashCode()&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;返回哈希值&lt;/li&gt;
+&lt;li&gt;equals()的两个对象哈希值一定相等，反之不一定&lt;/li&gt;
+&lt;li&gt;equals()应该覆盖hashCode()方法，保证两个对象哈希值相等&lt;/li&gt;
+&lt;li&gt;HashSet和HashMap也都需要实现hashCode()方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;clone&#34;&gt;clone()&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;是Object类的protected方法&lt;/li&gt;
+&lt;li&gt;如果没有实现Cloneable接口但是调用了clone()方法，会抛出CloneNotSupportedException&lt;/li&gt;
+&lt;li&gt;浅拷贝：拷贝对象和原始对象引用类型引用同个对象&lt;/li&gt;
+&lt;li&gt;深拷贝：拷贝对象和原始对象引用类型引用不同对象&lt;/li&gt;
+&lt;li&gt;风险与替代方案
+&lt;ul&gt;
+&lt;li&gt;会抛出异常&lt;/li&gt;
+&lt;li&gt;需要类型转换&lt;/li&gt;
+&lt;li&gt;可以用构造函数或拷贝工厂来拷贝一个对象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       
@@ -4826,305 +4976,6 @@ Select cheapest neighbor as currentState and goto step2
 &lt;li&gt;Buying habits&lt;/li&gt;
 &lt;li&gt;Web serving behavior&lt;/li&gt;
 &lt;li&gt;Web log analysis&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>ECOM6013 Topic 4 Website Design, Testing and Maintenance</title>
-      <link>https://www.pseudoyu.com/en/2020/09/16/ecom6013_topic4/</link>
-      <pubDate>Wed, 16 Sep 2020 21:25:28 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/09/16/ecom6013_topic4/</guid>
-      
-        <description>&lt;h1 id=&#34;ecom6013-e-commerce-technologies&#34;&gt;ECOM6013 E-Commerce Technologies&lt;/h1&gt;
-&lt;h2 id=&#34;topic-4-website-design-testing-and-maintenance&#34;&gt;Topic 4 Website Design, Testing and Maintenance&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Planing: The Systems Development Life Cycle&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Systems analysis/planing
-&lt;ul&gt;
-&lt;li&gt;Busisess objectives&lt;/li&gt;
-&lt;li&gt;System functionalities&lt;/li&gt;
-&lt;li&gt;Information requirements&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Systems design&lt;/li&gt;
-&lt;li&gt;Building the system&lt;/li&gt;
-&lt;li&gt;Testing&lt;/li&gt;
-&lt;li&gt;Implementation&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/website_life_cycle.png&#34; alt=&#34;website_life_cycle&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Quality Consideration&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Navigation&lt;/li&gt;
-&lt;li&gt;Accessibility&lt;/li&gt;
-&lt;li&gt;Scalability&lt;/li&gt;
-&lt;li&gt;Reliability&lt;/li&gt;
-&lt;li&gt;Maintainability&lt;/li&gt;
-&lt;li&gt;Usability&lt;/li&gt;
-&lt;li&gt;Compatibility and interoperability&lt;/li&gt;
-&lt;li&gt;Security&lt;/li&gt;
-&lt;li&gt;Readability&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;In-House / Outsourcing (Hiring vendors to provide services)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Build own / outsourcing&lt;/li&gt;
-&lt;li&gt;Host own / outsourcing (preferred)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Implementation, Maintenance, and Optimization&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Systems break down unpredictably&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Ongoing maintenance&lt;/li&gt;
-&lt;li&gt;Benchmarking&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Website Optimization&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Page generation&lt;/li&gt;
-&lt;li&gt;Page delivery&lt;/li&gt;
-&lt;li&gt;Page Content&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Simple vs. Multi-tier Website Architecture&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;System architecture: Arrangement of software, machinery, and tasks in an information system&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Two-tier&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Web server&lt;/li&gt;
-&lt;li&gt;Database server&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/two_tier_architecture.png&#34; alt=&#34;two_tier_architecture&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Three-tier&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Web application servers&lt;/li&gt;
-&lt;li&gt;Backend, legacy databases&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/three_tier_architecture.png&#34; alt=&#34;three_tier_architecture&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Web Server Software&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Appache
-&lt;ul&gt;
-&lt;li&gt;Leading web server software&lt;/li&gt;
-&lt;li&gt;works on UNIX, Linux OS&lt;/li&gt;
-&lt;li&gt;Reliable&lt;/li&gt;
-&lt;li&gt;Stable&lt;/li&gt;
-&lt;li&gt;Open source&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Microsoft&amp;rsquo;s Internet Information Server (IIS)
-&lt;ul&gt;
-&lt;li&gt;Second major web server software&lt;/li&gt;
-&lt;li&gt;works on Windows OS&lt;/li&gt;
-&lt;li&gt;Integrated&lt;/li&gt;
-&lt;li&gt;Easy to use&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Basic Functionality Provided by Web Servers&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Processing of HTTP requests&lt;/li&gt;
-&lt;li&gt;Security services (Secure Sockets Layer) / Transport Layer Security&lt;/li&gt;
-&lt;li&gt;File transfer protocol&lt;/li&gt;
-&lt;li&gt;Search engine&lt;/li&gt;
-&lt;li&gt;Data capture&lt;/li&gt;
-&lt;li&gt;E-mail&lt;/li&gt;
-&lt;li&gt;Site management tools
-&lt;ul&gt;
-&lt;li&gt;Verify links&lt;/li&gt;
-&lt;li&gt;Identify files&lt;/li&gt;
-&lt;li&gt;Monitor customer purchases&lt;/li&gt;
-&lt;li&gt;Marketing campign effictiveness&lt;/li&gt;
-&lt;li&gt;Track hits and other statistics&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Dynamic Page Generation Tools&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Contents stored in database and fetched when needed&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;CGI&lt;/li&gt;
-&lt;li&gt;ASP&lt;/li&gt;
-&lt;li&gt;JSP&lt;/li&gt;
-&lt;li&gt;ODBC&lt;/li&gt;
-&lt;li&gt;JDBC&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Advantages&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Lower menu costs&lt;/li&gt;
-&lt;li&gt;Permits easy online market segmentation&lt;/li&gt;
-&lt;li&gt;Enables cost-free price discrimination&lt;/li&gt;
-&lt;li&gt;Enable content management system (CMS)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Application Servers&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Provide specific business functionality required for a website&lt;/li&gt;
-&lt;li&gt;Isolate business applictaions from Web servers and databases (middleware)&lt;/li&gt;
-&lt;li&gt;Sigle-function applictaions being replaced by integrated software tools that combine all functionality needed for e-commerce site&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;E-Commerce Merchants Server Software&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Provides basic functions for sales
-&lt;ul&gt;
-&lt;li&gt;Online catalog&lt;/li&gt;
-&lt;li&gt;Shopping cart&lt;/li&gt;
-&lt;li&gt;Credit card processing&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Packages&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Integrated environment that includes most of functionality needed
-&lt;ul&gt;
-&lt;li&gt;Shopping cart&lt;/li&gt;
-&lt;li&gt;Merchandises display&lt;/li&gt;
-&lt;li&gt;Order management&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Different options for different-sized businesses
-&lt;ul&gt;
-&lt;li&gt;Small, Medium - Yahoo Small Business, open-source solutions&lt;/li&gt;
-&lt;li&gt;Mid-range - IBM Wbsphere Commerce Express,&amp;hellip;&lt;/li&gt;
-&lt;li&gt;Hign-end - IBM WebSphere Professional/Enterprise,&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Cloud-based SaaS solutions&lt;/li&gt;
-&lt;li&gt;Key factors
-&lt;ul&gt;
-&lt;li&gt;Functionality&lt;/li&gt;
-&lt;li&gt;Support for different models (e.g. m-commerce)&lt;/li&gt;
-&lt;li&gt;Business process modeling tools&lt;/li&gt;
-&lt;li&gt;Visual site management and reporting&lt;/li&gt;
-&lt;li&gt;Performance and scalability&lt;/li&gt;
-&lt;li&gt;Connectivity to existing business systems&lt;/li&gt;
-&lt;li&gt;Compliance with standards&lt;/li&gt;
-&lt;li&gt;Global and multicultural capability&lt;/li&gt;
-&lt;li&gt;Local sales tax and shipping rules&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Hardware Platform&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Demand Side (overall customer demand)
-&lt;ul&gt;
-&lt;li&gt;Number of simultaneous users in peak periods&lt;/li&gt;
-&lt;li&gt;User profile&lt;/li&gt;
-&lt;li&gt;Type of content (dynamic/static)&lt;/li&gt;
-&lt;li&gt;Required security&lt;/li&gt;
-&lt;li&gt;Number of items in inventory&lt;/li&gt;
-&lt;li&gt;Number of page requests&lt;/li&gt;
-&lt;li&gt;Speed of legacy application&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Supply Side
-&lt;ul&gt;
-&lt;li&gt;Scalability
-&lt;ul&gt;
-&lt;li&gt;Vertically (increase processing power of individual components)&lt;/li&gt;
-&lt;li&gt;Horizontally (multiple computers to share workload)&lt;/li&gt;
-&lt;li&gt;Improve processing architecture&lt;/li&gt;
-&lt;li&gt;Outsource hosting&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Eight Most Important Factors in Successful E-Commerce Site Design&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Functionality&lt;/li&gt;
-&lt;li&gt;Informational&lt;/li&gt;
-&lt;li&gt;Ease of use&lt;/li&gt;
-&lt;li&gt;Redundant navigation&lt;/li&gt;
-&lt;li&gt;Ease of purchase&lt;/li&gt;
-&lt;li&gt;Multi-browser functionality&lt;/li&gt;
-&lt;li&gt;Simple graphics&lt;/li&gt;
-&lt;li&gt;Legible text&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Personalization Tools&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Persinalization (personal preference, prior history)&lt;/li&gt;
-&lt;li&gt;Customization (better fit the needs)&lt;/li&gt;
-&lt;li&gt;Cookies (primary method to achieve personalization)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Policy Set&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Privacy policy&lt;/li&gt;
-&lt;li&gt;Accessibility (mainly for the disabled)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Mobile Website/Applications&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Type of m-commerce software
-&lt;ul&gt;
-&lt;li&gt;Moble website&lt;/li&gt;
-&lt;li&gt;Mobile web app&lt;/li&gt;
-&lt;li&gt;Native app&lt;/li&gt;
-&lt;li&gt;Hybrid app&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Mobile Presence&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Identify business objectives, system functionality, and information requirements
-&lt;ul&gt;
-&lt;li&gt;Driving sales&lt;/li&gt;
-&lt;li&gt;Branding&lt;/li&gt;
-&lt;li&gt;Building customer community&lt;/li&gt;
-&lt;li&gt;Advertising and promotion&lt;/li&gt;
-&lt;li&gt;Gathering customer feedback&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Choices
-&lt;ul&gt;
-&lt;li&gt;Mobile first design (most efficient)&lt;/li&gt;
-&lt;li&gt;Mobile website (least expensive)
-&lt;ul&gt;
-&lt;li&gt;Responsive web design (RWD) - for different screen resolution
-&lt;ul&gt;
-&lt;li&gt;Automates the inclusion of content based on profiles&lt;/li&gt;
-&lt;li&gt;Fluid design&lt;/li&gt;
-&lt;li&gt;Optimized performance&lt;/li&gt;
-&lt;li&gt;Technically complex (implement, maintain and test)&lt;/li&gt;
-&lt;li&gt;Higher cost, larger database&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Adaptive web design (AWD) - for different devices&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Mobile web app (can utilize browser API)&lt;/li&gt;
-&lt;li&gt;Native app (most expensive)
-&lt;ul&gt;
-&lt;li&gt;Use device hardware (usually better performance)&lt;/li&gt;
-&lt;li&gt;Offline&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://web.dev/what-are-pwas/&#34;&gt;Progressive Web App (PWA)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Platform constraints
-&lt;ul&gt;
-&lt;li&gt;Graphics&lt;/li&gt;
-&lt;li&gt;File size&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Features needed to be considered
-&lt;ul&gt;
-&lt;li&gt;Hardware&lt;/li&gt;
-&lt;li&gt;Connectivity&lt;/li&gt;
-&lt;li&gt;Displays&lt;/li&gt;
-&lt;li&gt;Interface&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Useful Resources&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.w3schools.com/whatis/&#34;&gt;W3School&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/en-US/&#34;&gt;Mozilla Development Network (MDN)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://developers.google.com/web&#34;&gt;Google Web Dev&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Build Own Websites&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://wix.com&#34;&gt;Wix Free Website Builder&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://shopify.com&#34;&gt;Shopify Site Builder&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://wordpress.com&#34;&gt;WordPress&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       

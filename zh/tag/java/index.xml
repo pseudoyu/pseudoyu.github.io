@@ -6,7 +6,16 @@
     <description>Recent content in java on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 25 Nov 2020 03:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 Nov 2020 03:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java学习笔记 - 集合</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/27/java_note_methods/</link>
+      <pubDate>Fri, 27 Nov 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/27/java_note_methods/</guid>
+      <description>String与StringBuffer String 特征 Java8中，String内部使用char数组存储数据 Java9后，String类的实现改用了b</description>
+    </item>
+    
     <item>
       <title>Java学习笔记 - 集合</title>
       <link>https://www.pseudoyu.com/zh/2020/11/25/java_note_collections/</link>

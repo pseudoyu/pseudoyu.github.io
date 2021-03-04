@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 23 Nov 2020 03:12:17 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2020 03:12:17 +0800</lastBuildDate>
     
     <atom:link href="https://www.pseudoyu.com/zh/index.xml" rel="self" type="application/rss+xml" />
     
@@ -58,6 +58,308 @@
 &lt;li&gt;&lt;a href=&#34;https://medium.com/@pseudoyu&#34;&gt;Medium&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCR0O0s303tGBi3P02hstQPA/&#34;&gt;Youtube&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.reddit.com/user/pseudo_yu&#34;&gt;Reddit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Java学习笔记 - 集合</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/25/java_note_collections/</link>
+      <pubDate>Wed, 25 Nov 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/25/java_note_collections/</guid>
+      
+        <description>&lt;h2 id=&#34;集合类&#34;&gt;集合类&lt;/h2&gt;
+&lt;h3 id=&#34;概述&#34;&gt;概述&lt;/h3&gt;
+&lt;p&gt;为了在程序中保存数目不确定的对象，JDK中提供了一系列特殊的类，这些类可以存储任意类型的对象且长度可变，称为集合，位于java.util包中&lt;/p&gt;
+&lt;p&gt;按存储结构分类&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Collection
+&lt;ul&gt;
+&lt;li&gt;List
+&lt;ul&gt;
+&lt;li&gt;ArrayList：基于动态数组实现，支持随机访问
+&lt;ul&gt;
+&lt;li&gt;CopyOnWriteArrayList
+&lt;ul&gt;
+&lt;li&gt;读写分离，读在原数组，写则是复制到新数组（加锁）&lt;/li&gt;
+&lt;li&gt;内存为两倍左右&lt;/li&gt;
+&lt;li&gt;数据不同步&lt;/li&gt;
+&lt;li&gt;不适合对内存敏感或是实时性要求较高的数组&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;LinkedList：基于双向链表实现，只能顺序访问，但是可以快速地在链表中间插入和删除元素，也可以用作栈、队列和双向队列&lt;/li&gt;
+&lt;li&gt;Vector：与ArrayList类似，但是是线程安全的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Set
+&lt;ul&gt;
+&lt;li&gt;HashSet：基于哈希表实现，支持快速查找，但不支持有序性操作，并且没有插入顺序信息（用Iterator遍历的结果不确定）
+&lt;ul&gt;
+&lt;li&gt;LinkedHashSet：具有HashSet的查找效率，并且内部使用双向链表来维护元素的插入顺序。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;TreeSet：基于红黑树实现，支持有序性操作，查找效率不如HashSet（O(1)），为O(Log N)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Queue
+&lt;ul&gt;
+&lt;li&gt;LinkedList：可用来实现双向队列&lt;/li&gt;
+&lt;li&gt;PriorityQueue：基于堆结构实现，可以用它来实现有限队列&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Map
+&lt;ul&gt;
+&lt;li&gt;Hashtable：类似于HashMap，但是是线程安全的
+&lt;ul&gt;
+&lt;li&gt;Properties&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;HashMap：基于哈希表实现
+&lt;ul&gt;
+&lt;li&gt;存储结构
+&lt;ul&gt;
+&lt;li&gt;包含一个Entry类型的数组table，存放键值对（hashCode，K，V，next）&lt;/li&gt;
+&lt;li&gt;Entry是一个链表，通过拉链法解决冲突&lt;/li&gt;
+&lt;li&gt;头插式进行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;JDK1.8开始，桶的链表长度大于8时会转换为红黑树&lt;/li&gt;
+&lt;li&gt;查找
+&lt;ul&gt;
+&lt;li&gt;计算键值所在的桶&lt;/li&gt;
+&lt;li&gt;在链表上顺序查找，时间复杂度取决于链表长度&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;允许插入null的键值对，使用第0个桶存放&lt;/li&gt;
+&lt;li&gt;ConcurrentHashMap
+&lt;ul&gt;
+&lt;li&gt;使用了分段锁segment，维护着多个HashEntry，因此可以多线程访问&lt;/li&gt;
+&lt;li&gt;分段锁继承自重入锁ReentrantLock&lt;/li&gt;
+&lt;li&gt;每个segment维护了一个count变量来统计键值对个数&lt;/li&gt;
+&lt;li&gt;JDK1.8采用了CAS操作来支持更高的并发度，在CAS操作失败时使用内置锁synchronized&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;LinkedHashMap&lt;/li&gt;
+&lt;li&gt;WeakHashMap
+&lt;ul&gt;
+&lt;li&gt;继承自WeakReference，被关联的对象在下一次垃圾回收时会被回收&lt;/li&gt;
+&lt;li&gt;主要用来实现缓存，通过WeakHashMap引用缓存对象，JVM进行回收&lt;/li&gt;
+&lt;li&gt;Tomcat中的ConcurrentCache使用了缓存功能，分代缓存
+&lt;ul&gt;
+&lt;li&gt;常用对象放入eden中，ConcurrentHashMap&lt;/li&gt;
+&lt;li&gt;不常用对象放入longterm，使用WeakHashMap&lt;/li&gt;
+&lt;li&gt;调用get时，优先从eden中获取，没找到则在longterm中获取&lt;/li&gt;
+&lt;li&gt;调用put时，如果大小超过了size，则全部放入longterm，JVM回收掉一部分&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;TreeMap：基于红黑树实现&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;collection接口&#34;&gt;Collection接口&lt;/h3&gt;
+&lt;p&gt;通用方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;boolean add(Object o) 向集合中添加一个元素&lt;/li&gt;
+&lt;li&gt;boolean addAll(Collection c) 将指定集合中所有元素添加到该集合中&lt;/li&gt;
+&lt;li&gt;void clear() 删除该集合所有元素&lt;/li&gt;
+&lt;li&gt;boolean remove(Object o) 删除该集合指定元素&lt;/li&gt;
+&lt;li&gt;boolean removeAll(Collection c) 删除该集合所有元素&lt;/li&gt;
+&lt;li&gt;boolean isEmpty() 判断是否为空&lt;/li&gt;
+&lt;li&gt;boolean contains(Object o) 判断该集合是否包含某个元素&lt;/li&gt;
+&lt;li&gt;boolean containsAll(Collection c) 判断集合中是否包含指定集合中的所有元素&lt;/li&gt;
+&lt;li&gt;Iterator iterator(Collection c) 返回在该集合的算俗尚进行迭代的迭代起（用于遍历）&lt;/li&gt;
+&lt;li&gt;int size() 获取该集合元素个数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;list接口&#34;&gt;List接口&lt;/h4&gt;
+&lt;p&gt;继承自Collection接口&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;允许出现重复的元素&lt;/li&gt;
+&lt;li&gt;线性存储，可通过索引访问集合中的指定元素&lt;/li&gt;
+&lt;li&gt;元素有序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;增加了根据元素索引进行操作的方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;boolean add(int index, Object e) 插入元素至指定位置&lt;/li&gt;
+&lt;li&gt;boolean addAll(int index, Collection c) 插入集合至指定位置&lt;/li&gt;
+&lt;li&gt;Object get(int index) 返回指定索引元素&lt;/li&gt;
+&lt;li&gt;Object remove(int index) 删除指定索引元素&lt;/li&gt;
+&lt;li&gt;Object set(int index, Object e) 将索引处元素替换，并返回替换后的元素&lt;/li&gt;
+&lt;li&gt;int indexOf(Object o) 返回元素在List集合中的位置&lt;/li&gt;
+&lt;li&gt;int lastIndexOf(Object o) 返回元素在List集合中最后出现的位置&lt;/li&gt;
+&lt;li&gt;List subList(int fromIndex, int toIndex) 两个索引之间集合组成的子集合，包含头不包含尾&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ArrayList&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;是List接口的一个实现类，底层的存储结构式数组&lt;/li&gt;
+&lt;li&gt;大部分方法从接口中继承，其中add()方法和get()方法主要用于元素存取&lt;/li&gt;
+&lt;li&gt;查询元素时效率高，但增删元素时效率低&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;LinkedList&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;内部维护了一个双向循环链表&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对于元素的增删具有很高的效率&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;void add(int index, E e) 在列表指定位置插入指定元素&lt;/li&gt;
+&lt;li&gt;void addFirst(Object o) 将指定元素插入列表开头&lt;/li&gt;
+&lt;li&gt;void addLast(Object o) 将指定元素插入列表结尾&lt;/li&gt;
+&lt;li&gt;Object getFirst() 返回列表第一个元素&lt;/li&gt;
+&lt;li&gt;Object getLast() 返回列表最后一个元素&lt;/li&gt;
+&lt;li&gt;Object removeFirst() 移除并返回列表第一个元素&lt;/li&gt;
+&lt;li&gt;Object removeLast() 移除并返回列表最后一个元素&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;LinkedList&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LinkedList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+
+  &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;removeFirst&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;removeLast&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;iterator接口&#34;&gt;Iterator接口&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;用于遍历集合中的所有元素&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;迭代器获取ArrayList集合中的元素时，会当作Object看待，如想得到特定元素则需要强制类型转换&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;hasNext()&lt;/li&gt;
+&lt;li&gt;next()&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 构建一个迭代器
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Iterator&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;iterator&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;iterator&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;// 通过hasNext()方法来循环遍历
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;iterator&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;hasNext&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()){&lt;/span&gt;
+  &lt;span class=&#34;c1&#34;&gt;// 通过next()来访问下一个元素
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;Object&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;iterator&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;next&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;foreach循环&#34;&gt;foreach循环&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;容器内元素类型&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;临时变量&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;容器变量&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;执行语句&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;List&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ArrayList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;123&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;234&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;abc&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+  
+  &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;){&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;999&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+  
+  &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Object&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;){&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;set接口&#34;&gt;Set接口&lt;/h4&gt;
+&lt;p&gt;继承自Collection接口，Collection接口中的方法一致但更加严格&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;元素无序&lt;/li&gt;
+&lt;li&gt;保证存入的程序不出现重复&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;HashSet&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;根据对象的哈希值来确定元素在集合中的存储位置
+&lt;ul&gt;
+&lt;li&gt;向HashSet添加一个对象时，首先调用那个hashCode方法计算对象的哈希值，确定元素的存储位置&lt;/li&gt;
+&lt;li&gt;如果哈希值相同，调用对象的equals方法确保该位置没有重复元素&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;具有良好的存取和查找功能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;TreeSet&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;以二叉树的方式来存储元素&lt;/li&gt;
+&lt;li&gt;可以实现对集合中元素进行排序&lt;/li&gt;
+&lt;li&gt;TreeSet有序指的是元素会按照大小关系进行排序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;map接口&#34;&gt;Map接口&lt;/h3&gt;
+&lt;p&gt;存储具有对应关系的数据&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;双列集合&lt;/li&gt;
+&lt;li&gt;Key和Value进行对应&lt;/li&gt;
+&lt;li&gt;Key不能重复&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;常用方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;void put(Object key, Object value) 存入键值对&lt;/li&gt;
+&lt;li&gt;Object get(Object key) 获取值&lt;/li&gt;
+&lt;li&gt;boolean containsKey(Object key) 是否包含key&lt;/li&gt;
+&lt;li&gt;boolean containsValue(Object value) 是否包含值&lt;/li&gt;
+&lt;li&gt;Set keySet 返回键的Set&lt;/li&gt;
+&lt;li&gt;Collection&lt;!-- raw HTML omitted --&gt; values() 返回值的Collection&lt;/li&gt;
+&lt;li&gt;Set&amp;lt;Map.Entry,&amp;lt;K, V&amp;raquo;entrySet() 返回映射关系的Set&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;HashMap&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;判断key是否重复和HashSet一样 跟hashCode和equals方法相关&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;LinkedHashMap&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;维持元素读取和存储的顺序一致&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Properties&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hashtable是线程安全的 性能比较低&lt;/li&gt;
+&lt;li&gt;Properties是Hashtable的子类&lt;/li&gt;
+&lt;li&gt;应用场景：多线程安全的需求 往往对应到系统属性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;容器中的设计模式&#34;&gt;容器中的设计模式&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;迭代器模式
+&lt;ul&gt;
+&lt;li&gt;继承了Iterable接口，iterator()方法能够产生一个iterator对象&lt;/li&gt;
+&lt;li&gt;JDK1.5 之后可以通过foreach来遍历实现了Iterable接口的对象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;适配器模式
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Arrays.asList可以把数组类型转换为List类型&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;arr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;};&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;List&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Arrays&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;asList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;arr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;// 另一种方式
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;List&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Arrays&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;asList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;泛型&#34;&gt;泛型&lt;/h3&gt;
+&lt;p&gt;功能&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;和集合联合使用的时候&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;限制往集合添加的数据类型&lt;/li&gt;
+&lt;li&gt;保证获取元素的时候 使用具体的数据类型 而不是Object 从而避免不必要的强制类型转换&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 创建集合并指定泛型为String
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ArrayList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ArrayList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       
@@ -4824,98 +5126,6 @@ Select cheapest neighbor as currentState and goto step2
 &lt;li&gt;&lt;a href=&#34;https://wordpress.com&#34;&gt;WordPress&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>ECOM6013 Topic 3 E-Commerce Presence</title>
-      <link>https://www.pseudoyu.com/zh/2020/09/16/ecom6013_topic3/</link>
-      <pubDate>Wed, 16 Sep 2020 20:25:28 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/09/16/ecom6013_topic3/</guid>
-      
-        <description>&lt;h1 id=&#34;ecom6013-e-commerce-technologies&#34;&gt;ECOM6013 E-Commerce Technologies&lt;/h1&gt;
-&lt;h2 id=&#34;topic-3-e-commerce-presence&#34;&gt;Topic 3 E-Commerce Presence&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Image You E-Commerce Presence&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Idea
-&lt;ul&gt;
-&lt;li&gt;Mission&lt;/li&gt;
-&lt;li&gt;Target audience&lt;/li&gt;
-&lt;li&gt;Intended market space&lt;/li&gt;
-&lt;li&gt;Strategic analysis&lt;/li&gt;
-&lt;li&gt;Marketing matrix&lt;/li&gt;
-&lt;li&gt;Development timeline&lt;/li&gt;
-&lt;li&gt;Preliminary budget&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;About Money (e.g. Amazon&amp;rsquo;s e-commerce &amp;amp; Amazon&amp;rsquo;s AWS)
-&lt;ul&gt;
-&lt;li&gt;Business models&lt;/li&gt;
-&lt;li&gt;Revenue models&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;About target audience
-&lt;ul&gt;
-&lt;li&gt;Demographics&lt;/li&gt;
-&lt;li&gt;Lifestyle&lt;/li&gt;
-&lt;li&gt;Consumption patterns&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Marketplace Characteristics
-&lt;ul&gt;
-&lt;li&gt;Size&lt;/li&gt;
-&lt;li&gt;Growth&lt;/li&gt;
-&lt;li&gt;Demographics&lt;/li&gt;
-&lt;li&gt;Structure&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Content&lt;/li&gt;
-&lt;li&gt;SWOT Analysis&lt;/li&gt;
-&lt;li&gt;E-Commerce presence map&lt;/li&gt;
-&lt;li&gt;Milestones&lt;/li&gt;
-&lt;li&gt;Costs
-&lt;ul&gt;
-&lt;li&gt;Simple website: US$5000&lt;/li&gt;
-&lt;li&gt;Small startup: US$25,000 tp US$50,000&lt;/li&gt;
-&lt;li&gt;Large corporate website: US$100,000 + to millions&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;SWOT Analysis&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ecommerce_swot_analysis.png&#34; alt=&#34;ecommerce_swot_analysis&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;E-Commerce Presence Map&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ecommerce_presence.png&#34; alt=&#34;ecommerce_presence&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Building an E-Commerce Site: A Systematic Approach&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Challenges
-&lt;ul&gt;
-&lt;li&gt;Developing a clear understanding of business objectives&lt;/li&gt;
-&lt;li&gt;Knowing how to choose the right technology to achieve those objectives&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Main factors
-&lt;ul&gt;
-&lt;li&gt;Management&lt;/li&gt;
-&lt;li&gt;Hardware architecture&lt;/li&gt;
-&lt;li&gt;Software&lt;/li&gt;
-&lt;li&gt;Design&lt;/li&gt;
-&lt;li&gt;Telecommunications&lt;/li&gt;
-&lt;li&gt;Human resources&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;E-Commerce Presence Timeline&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Planing&lt;/li&gt;
-&lt;li&gt;Website development&lt;/li&gt;
-&lt;li&gt;Web implementation&lt;/li&gt;
-&lt;li&gt;Social media plan&lt;/li&gt;
-&lt;li&gt;Social media implementation&lt;/li&gt;
-&lt;li&gt;Mobile plan&lt;/li&gt;
-&lt;/ol&gt;
 </description>
       
     </item>

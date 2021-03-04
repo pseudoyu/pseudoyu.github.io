@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="zh" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="utf-8">
+  <title>Java学习笔记 - 集合 · Pseudoyu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="集合类 概述 为了在程序中保存数目不确定的对象，JDK中提供了一系列特殊的类，这些类可以存储任意类型的对象且长度可变，称为集合，位于java.u" />
+
+  <meta name="keywords" content="Hugo, theme, den" />
+
+<link rel="canonical" href="https://www.pseudoyu.com/zh/2020/11/25/java_note_collections/" />
+<link rel="alternate" href="https://www.pseudoyu.com/en/2020/11/25/java_note_collections/" hreflang="en">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.pseudoyu.com/css/den.css">
+
+
+
+
+<meta property="og:title" content="Java学习笔记 - 集合" />
+<meta property="og:description" content="集合类 概述 为了在程序中保存数目不确定的对象，JDK中提供了一系列特殊的类，这些类可以存储任意类型的对象且长度可变，称为集合，位于java.u" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.pseudoyu.com/zh/2020/11/25/java_note_collections/" />
+<meta property="article:published_time" content="2020-11-25T03:12:17+08:00" />
+<meta property="article:modified_time" content="2020-11-25T03:12:17+08:00" />
+<meta itemprop="name" content="Java学习笔记 - 集合">
+<meta itemprop="description" content="集合类 概述 为了在程序中保存数目不确定的对象，JDK中提供了一系列特殊的类，这些类可以存储任意类型的对象且长度可变，称为集合，位于java.u">
+<meta itemprop="datePublished" content="2020-11-25T03:12:17+08:00" />
+<meta itemprop="dateModified" content="2020-11-25T03:12:17+08:00" />
+<meta itemprop="wordCount" content="2537">
+
+
+
+<meta itemprop="keywords" content="programming,java," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Java学习笔记 - 集合"/>
+<meta name="twitter:description" content="集合类 概述 为了在程序中保存数目不确定的对象，JDK中提供了一系列特殊的类，这些类可以存储任意类型的对象且长度可变，称为集合，位于java.u"/>
+</head>
+<body>
+  
+  <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://www.pseudoyu.com/images/background.jpg'); background-position: center; background-size: cover;">
+  <div class="container">
+  <nav class="header-nav navbar navbar-expand-md navbar-dark light-dark">
+    <div class="header-logo navbar-brand">
+      
+        <a class="float-left" href="https://www.pseudoyu.com/zh/">
+      
+        
+        <img class="mr20 header-logo-image" src="https://www.pseudoyu.com/images/fly.png" alt="logo">
+        
+        
+          Pseudoyu
+         
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav-menu collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/ideas/">思考</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/programming/">编程</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/notes/">笔记</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/projects/">项目</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              <a class="nav-link" href="https://www.pseudoyu.com/zh/about/">关于</a>
+            
+          </li>
+        
+        
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.pseudoyu.com/en/"><i class="fas fa-globe"></i> English</a>
+            </li>
+          
+          
+        
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container header-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="header-content">
+        <h1 class="header-title">Java学习笔记 - 集合</h1>
+        <p class="header-date">作者：
+          pseudoyu /
+        
+        2020-11-25
+          / 分类：
+          <a href="https://www.pseudoyu.com/zh/category/programming/">Programming</a>
+        </p>
+        
+        <div class="header-underline"></div>
+        
+          <div class="clearfix"></div>
+          <p class="float-right header-tags">
+              <i class="fas fa-tags" aria-hidden="true"></i>
+              <a href="https://www.pseudoyu.com/zh/tag/java/">java</a>, 
+                <a href="https://www.pseudoyu.com/zh/tag/programming/">programming</a>
+          </p>
+        
+        <div class="clearfix"></div>
+<p class="float-right translations">
+    <i class="fas fa-language" aria-hidden="true"></i>
+    翻译： 
+    <a href="https://www.pseudoyu.com/en/2020/11/25/java_note_collections/">EN</a>
+</p>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <main>
+<div class="container content">
+  <article>
+  <h2 id="集合类">集合类</h2>
+<h3 id="概述">概述</h3>
+<p>为了在程序中保存数目不确定的对象，JDK中提供了一系列特殊的类，这些类可以存储任意类型的对象且长度可变，称为集合，位于java.util包中</p>
+<p>按存储结构分类</p>
+<ul>
+<li>Collection
+<ul>
+<li>List
+<ul>
+<li>ArrayList：基于动态数组实现，支持随机访问
+<ul>
+<li>CopyOnWriteArrayList
+<ul>
+<li>读写分离，读在原数组，写则是复制到新数组（加锁）</li>
+<li>内存为两倍左右</li>
+<li>数据不同步</li>
+<li>不适合对内存敏感或是实时性要求较高的数组</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>LinkedList：基于双向链表实现，只能顺序访问，但是可以快速地在链表中间插入和删除元素，也可以用作栈、队列和双向队列</li>
+<li>Vector：与ArrayList类似，但是是线程安全的</li>
+</ul>
+</li>
+<li>Set
+<ul>
+<li>HashSet：基于哈希表实现，支持快速查找，但不支持有序性操作，并且没有插入顺序信息（用Iterator遍历的结果不确定）
+<ul>
+<li>LinkedHashSet：具有HashSet的查找效率，并且内部使用双向链表来维护元素的插入顺序。</li>
+</ul>
+</li>
+<li>TreeSet：基于红黑树实现，支持有序性操作，查找效率不如HashSet（O(1)），为O(Log N)</li>
+</ul>
+</li>
+<li>Queue
+<ul>
+<li>LinkedList：可用来实现双向队列</li>
+<li>PriorityQueue：基于堆结构实现，可以用它来实现有限队列</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Map
+<ul>
+<li>Hashtable：类似于HashMap，但是是线程安全的
+<ul>
+<li>Properties</li>
+</ul>
+</li>
+<li>HashMap：基于哈希表实现
+<ul>
+<li>存储结构
+<ul>
+<li>包含一个Entry类型的数组table，存放键值对（hashCode，K，V，next）</li>
+<li>Entry是一个链表，通过拉链法解决冲突</li>
+<li>头插式进行</li>
+</ul>
+</li>
+<li>JDK1.8开始，桶的链表长度大于8时会转换为红黑树</li>
+<li>查找
+<ul>
+<li>计算键值所在的桶</li>
+<li>在链表上顺序查找，时间复杂度取决于链表长度</li>
+</ul>
+</li>
+<li>允许插入null的键值对，使用第0个桶存放</li>
+<li>ConcurrentHashMap
+<ul>
+<li>使用了分段锁segment，维护着多个HashEntry，因此可以多线程访问</li>
+<li>分段锁继承自重入锁ReentrantLock</li>
+<li>每个segment维护了一个count变量来统计键值对个数</li>
+<li>JDK1.8采用了CAS操作来支持更高的并发度，在CAS操作失败时使用内置锁synchronized</li>
+</ul>
+</li>
+<li>LinkedHashMap</li>
+<li>WeakHashMap
+<ul>
+<li>继承自WeakReference，被关联的对象在下一次垃圾回收时会被回收</li>
+<li>主要用来实现缓存，通过WeakHashMap引用缓存对象，JVM进行回收</li>
+<li>Tomcat中的ConcurrentCache使用了缓存功能，分代缓存
+<ul>
+<li>常用对象放入eden中，ConcurrentHashMap</li>
+<li>不常用对象放入longterm，使用WeakHashMap</li>
+<li>调用get时，优先从eden中获取，没找到则在longterm中获取</li>
+<li>调用put时，如果大小超过了size，则全部放入longterm，JVM回收掉一部分</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>TreeMap：基于红黑树实现</li>
+</ul>
+</li>
+</ul>
+<h3 id="collection接口">Collection接口</h3>
+<p>通用方法</p>
+<ul>
+<li>boolean add(Object o) 向集合中添加一个元素</li>
+<li>boolean addAll(Collection c) 将指定集合中所有元素添加到该集合中</li>
+<li>void clear() 删除该集合所有元素</li>
+<li>boolean remove(Object o) 删除该集合指定元素</li>
+<li>boolean removeAll(Collection c) 删除该集合所有元素</li>
+<li>boolean isEmpty() 判断是否为空</li>
+<li>boolean contains(Object o) 判断该集合是否包含某个元素</li>
+<li>boolean containsAll(Collection c) 判断集合中是否包含指定集合中的所有元素</li>
+<li>Iterator iterator(Collection c) 返回在该集合的算俗尚进行迭代的迭代起（用于遍历）</li>
+<li>int size() 获取该集合元素个数</li>
+</ul>
+<h4 id="list接口">List接口</h4>
+<p>继承自Collection接口</p>
+<ul>
+<li>允许出现重复的元素</li>
+<li>线性存储，可通过索引访问集合中的指定元素</li>
+<li>元素有序</li>
+</ul>
+<p>增加了根据元素索引进行操作的方法</p>
+<ul>
+<li>boolean add(int index, Object e) 插入元素至指定位置</li>
+<li>boolean addAll(int index, Collection c) 插入集合至指定位置</li>
+<li>Object get(int index) 返回指定索引元素</li>
+<li>Object remove(int index) 删除指定索引元素</li>
+<li>Object set(int index, Object e) 将索引处元素替换，并返回替换后的元素</li>
+<li>int indexOf(Object o) 返回元素在List集合中的位置</li>
+<li>int lastIndexOf(Object o) 返回元素在List集合中最后出现的位置</li>
+<li>List subList(int fromIndex, int toIndex) 两个索引之间集合组成的子集合，包含头不包含尾</li>
+</ul>
+<p>ArrayList</p>
+<ul>
+<li>是List接口的一个实现类，底层的存储结构式数组</li>
+<li>大部分方法从接口中继承，其中add()方法和get()方法主要用于元素存取</li>
+<li>查询元素时效率高，但增删元素时效率低</li>
+</ul>
+<p>LinkedList</p>
+<ul>
+<li>
+<p>内部维护了一个双向循环链表</p>
+</li>
+<li>
+<p>对于元素的增删具有很高的效率</p>
+</li>
+<li>
+<p>方法</p>
+<ul>
+<li>void add(int index, E e) 在列表指定位置插入指定元素</li>
+<li>void addFirst(Object o) 将指定元素插入列表开头</li>
+<li>void addLast(Object o) 将指定元素插入列表结尾</li>
+<li>Object getFirst() 返回列表第一个元素</li>
+<li>Object getLast() 返回列表最后一个元素</li>
+<li>Object removeFirst() 移除并返回列表第一个元素</li>
+<li>Object removeLast() 移除并返回列表最后一个元素</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">LinkedList</span> <span class="n">list</span><span class="o">=</span><span class="k">new</span> <span class="n">LinkedList</span><span class="o">();</span>
+
+  <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">9</span><span class="o">);</span>
+  <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">10</span><span class="o">);</span>
+  <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">11</span><span class="o">);</span>
+  <span class="n">list</span><span class="o">.</span><span class="na">removeFirst</span><span class="o">();</span>
+  <span class="n">list</span><span class="o">.</span><span class="na">removeLast</span><span class="o">();</span>
+</code></pre></div></li>
+</ul>
+<h4 id="iterator接口">Iterator接口</h4>
+<ul>
+<li>
+<p>用于遍历集合中的所有元素</p>
+</li>
+<li>
+<p>迭代器获取ArrayList集合中的元素时，会当作Object看待，如想得到特定元素则需要强制类型转换</p>
+</li>
+<li>
+<p>方法</p>
+<ul>
+<li>hasNext()</li>
+<li>next()</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// 构建一个迭代器
+</span><span class="c1"></span><span class="n">Iterator</span> <span class="n">iterator</span><span class="o">=</span><span class="n">list</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span>
+
+<span class="c1">// 通过hasNext()方法来循环遍历
+</span><span class="c1"></span><span class="k">while</span> <span class="o">(</span><span class="n">iterator</span><span class="o">.</span><span class="na">hasNext</span><span class="o">()){</span>
+  <span class="c1">// 通过next()来访问下一个元素
+</span><span class="c1"></span>  <span class="n">Object</span> <span class="n">o</span><span class="o">=</span><span class="n">iterator</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
+  <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">o</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></li>
+</ul>
+<h4 id="foreach循环">foreach循环</h4>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="k">for</span> <span class="o">(</span><span class="n">容器内元素类型</span> <span class="n">临时变量</span><span class="o">:</span><span class="n">容器变量</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">执行语句</span>
+<span class="o">}</span>
+
+<span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">=</span><span class="k">new</span> <span class="n">ArrayList</span><span class="o">();</span>
+  <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&#34;123&#34;</span><span class="o">);</span>
+  <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&#34;234&#34;</span><span class="o">);</span>
+  <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&#34;abc&#34;</span><span class="o">);</span>
+  
+  <span class="k">for</span><span class="o">(</span><span class="n">String</span> <span class="n">p</span><span class="o">:</span><span class="n">list</span><span class="o">){</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">p</span><span class="o">);</span>
+    <span class="n">p</span><span class="o">=</span><span class="s">&#34;999&#34;</span><span class="o">;</span>
+  <span class="o">}</span>
+  
+  <span class="k">for</span><span class="o">(</span><span class="n">Object</span> <span class="n">p</span><span class="o">:</span><span class="n">list</span><span class="o">){</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">p</span><span class="o">);</span>
+  <span class="o">}</span>
+</code></pre></div><h4 id="set接口">Set接口</h4>
+<p>继承自Collection接口，Collection接口中的方法一致但更加严格</p>
+<ul>
+<li>元素无序</li>
+<li>保证存入的程序不出现重复</li>
+</ul>
+<p>HashSet</p>
+<ul>
+<li>根据对象的哈希值来确定元素在集合中的存储位置
+<ul>
+<li>向HashSet添加一个对象时，首先调用那个hashCode方法计算对象的哈希值，确定元素的存储位置</li>
+<li>如果哈希值相同，调用对象的equals方法确保该位置没有重复元素</li>
+</ul>
+</li>
+<li>具有良好的存取和查找功能</li>
+</ul>
+<p>TreeSet</p>
+<ul>
+<li>以二叉树的方式来存储元素</li>
+<li>可以实现对集合中元素进行排序</li>
+<li>TreeSet有序指的是元素会按照大小关系进行排序</li>
+</ul>
+<h3 id="map接口">Map接口</h3>
+<p>存储具有对应关系的数据</p>
+<ul>
+<li>双列集合</li>
+<li>Key和Value进行对应</li>
+<li>Key不能重复</li>
+</ul>
+<p>常用方法</p>
+<ul>
+<li>void put(Object key, Object value) 存入键值对</li>
+<li>Object get(Object key) 获取值</li>
+<li>boolean containsKey(Object key) 是否包含key</li>
+<li>boolean containsValue(Object value) 是否包含值</li>
+<li>Set keySet 返回键的Set</li>
+<li>Collection<!-- raw HTML omitted --> values() 返回值的Collection</li>
+<li>Set&lt;Map.Entry,&lt;K, V&raquo;entrySet() 返回映射关系的Set</li>
+</ul>
+<p>HashMap</p>
+<ul>
+<li>判断key是否重复和HashSet一样 跟hashCode和equals方法相关</li>
+</ul>
+<p>LinkedHashMap</p>
+<ul>
+<li>维持元素读取和存储的顺序一致</li>
+</ul>
+<p>Properties</p>
+<ul>
+<li>Hashtable是线程安全的 性能比较低</li>
+<li>Properties是Hashtable的子类</li>
+<li>应用场景：多线程安全的需求 往往对应到系统属性</li>
+</ul>
+<h3 id="容器中的设计模式">容器中的设计模式</h3>
+<ul>
+<li>迭代器模式
+<ul>
+<li>继承了Iterable接口，iterator()方法能够产生一个iterator对象</li>
+<li>JDK1.5 之后可以通过foreach来遍历实现了Iterable接口的对象</li>
+</ul>
+</li>
+<li>适配器模式
+<ul>
+<li>
+<p>Arrays.asList可以把数组类型转换为List类型</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">Integer</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="o">{</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">,</span> <span class="n">3</span><span class="o">};</span>
+<span class="n">List</span> <span class="n">list</span> <span class="o">=</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">arr</span><span class="o">);</span>
+<span class="c1">// 另一种方式
+</span><span class="c1"></span><span class="n">List</span> <span class="n">list</span> <span class="o">=</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">,</span> <span class="n">3</span><span class="o">);</span>
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
+<h3 id="泛型">泛型</h3>
+<p>功能</p>
+<ul>
+<li>
+<p>和集合联合使用的时候</p>
+<ul>
+<li>限制往集合添加的数据类型</li>
+<li>保证获取元素的时候 使用具体的数据类型 而不是Object 从而避免不必要的强制类型转换</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// 创建集合并指定泛型为String
+</span><span class="c1"></span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;();</span>
+</code></pre></div></li>
+</ul>
+
+  </article>
+
+  
+  
+  
+
+
+</div>
+
+  </main><div class="footer gradient-2">
+  <div class="container footer-container ">
+    <div class="row">
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        <div class="footer-title">网站地图</div>
+        <ul class="list-unstyled">
+            
+              
+                <li><a href="https://www.pseudoyu.com/zh/tags/">标签</a></li>
+              
+              
+                <li><a href="https://www.pseudoyu.com/zh/categories/">分类</a></li>
+              
+            
+            
+            
+            <li><a rel="alternate" type="application/rss&#43;xml" href="https://www.pseudoyu.com/zh/index.xml"><i class="fas fa-rss-square"></i> RSS订阅</a></li>
+            
+            
+            
+        </ul>
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">社群</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://www.facebook.com/pseudoyuzhang" rel="noopener" target="_blank">Facebook</a></li>
+          
+          <li><a href="https://www.instagram.com/pseudo.yu/" rel="noopener" target="_blank">Instagram</a></li>
+          
+          <li><a href="https://twitter.com/pseudo_yu" rel="noopener" target="_blank">Twitter</a></li>
+          
+          <li><a href="https://medium.com/@pseudoyu" rel="noopener" target="_blank">Medium</a></li>
+          
+          <li><a href="https://space.bilibili.com/5374948/" rel="noopener" target="_blank">BiliBili</a></li>
+          
+          <li><a href="https://www.youtube.com/channel/UCR0O0s303tGBi3P02hstQPA/" rel="noopener" target="_blank">Youtube</a></li>
+          
+        </ul>
+        
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">友链</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://www.linkedin.com/in/pseudoyu/" rel="noopener" target="_blank">LinkedIn</a></li>
+          
+          <li><a href="https://github.com/pseudoyu" rel="noopener" target="_blank">GitHub</a></li>
+          
+          <li><a href="https://www.coursera.org/user/ffe947f087d1f63b161c3fcb310a6578" rel="noopener" target="_blank">Coursera</a></li>
+          
+          <li><a href="https://leetcode.com/pseudoyu/" rel="noopener" target="_blank">LeetCode</a></li>
+          
+          <li><a href="https://acm.timus.ru/author.aspx?id=300324&amp;sort=difficulty" rel="noopener" target="_blank">Timus OJ</a></li>
+          
+          <li><a href="https://www.goodreads.com/user/show/121369734-yu-zhang" rel="noopener" target="_blank">Goodreads</a></li>
+          
+        </ul>
+        
+      </div> 
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <p class="pull-right text-right">
+          <small><em><a href="https://www.hku.hk" rel="noopener" target="_blank">The University of Hong Kong</a> - <a href="https://www.cs.hku.hk" rel="noopener" target="_blank">CS</a></em></small><br/>
+          <small>
+            &copy; 
+            pseudoyu
+            
+              2020 -
+            2021
+          </small>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

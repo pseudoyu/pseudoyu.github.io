@@ -6,7 +6,16 @@
     <description>Recent content in java on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Nov 2020 03:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Nov 2020 03:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java学习笔记 - 集合</title>
+      <link>https://www.pseudoyu.com/en/2020/11/25/java_note_collections/</link>
+      <pubDate>Wed, 25 Nov 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/25/java_note_collections/</guid>
+      <description>集合类 概述 为了在程序中保存数目不确定的对象，JDK中提供了一系列特殊的类，这些类可以存储任意类型的对象且长度可变，称为集合，位于java.u</description>
+    </item>
+    
     <item>
       <title>Java学习笔记 - 面向对象</title>
       <link>https://www.pseudoyu.com/en/2020/11/23/java_note_oop/</link>

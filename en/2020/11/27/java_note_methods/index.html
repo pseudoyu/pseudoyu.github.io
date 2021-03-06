@@ -29,7 +29,7 @@
 <meta itemprop="description" content="String与StringBuffer String 特征 Java8中，String内部使用char数组存储数据 Java9后，String类的实现改用了b">
 <meta itemprop="datePublished" content="2020-11-27T03:12:17+08:00" />
 <meta itemprop="dateModified" content="2020-11-27T03:12:17+08:00" />
-<meta itemprop="wordCount" content="987">
+<meta itemprop="wordCount" content="1687">
 
 
 
@@ -194,8 +194,8 @@
 <li>直接使用字符串常量</li>
 <li>调用String类构造函数</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="nb">String</span> <span class="nx">string</span> <span class="o">=</span> <span class="s2">&#34;Hello World!&#34;</span><span class="p">;</span>
-<span class="nb">String</span> <span class="nx">string</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">String</span><span class="p">(</span><span class="err">&#34;</span><span class="nx">Hello</span> <span class="nx">World</span><span class="o">!</span><span class="p">);</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">string</span> <span class="o">=</span> <span class="s">&#34;Hello World!&#34;</span><span class="o">;</span>
+<span class="n">String</span> <span class="n">string</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="err">&#34;</span><span class="n">Hello</span> <span class="n">World</span><span class="o">!);</span>
 </code></pre></div><p>访问方法</p>
 <ul>
 <li>charAt(): 可以通过索引需要获取字符</li>
@@ -218,6 +218,12 @@
 <li>未加同步锁，线程不安全</li>
 <li>性能比StringBuffer高10%-15%</li>
 </ul>
+<p>使用总结</p>
+<ul>
+<li>操作少量数据用String</li>
+<li>单线程下操作字符串缓冲区下操作大量数据，适用StringBuilder</li>
+<li>多线程下操作字符串缓冲区下操作大量数据，使用StringBuffer</li>
+</ul>
 <h2 id="包装类">包装类</h2>
 <ul>
 <li>和基本数据类型对应的类</li>
@@ -239,7 +245,7 @@
 <li>int y = x;拆箱，调用了X.intValue()</li>
 </ul>
 </li>
-<li>缓存池
+<li>常量池技术，缓存数据 Character[0,127]，Boolean[True,False]，Float、Double没有实现常量池技术，其他[-128,127]，超出范围则仍然创建新对象
 <ul>
 <li>new Integer(123)每次都会新建一个对象</li>
 <li>Integer.valueOf(123)会使用缓存池中的对象</li>
@@ -271,12 +277,24 @@
 <li>将Object进行转型</li>
 <li>判断每个关键域是否相等</li>
 </ul>
+<p>equals与==的区别</p>
+<ul>
+<li>==是判断两个对象地址是不是相等（因为Java只有按值传递，所以本质比较的都是值），即判断是不是同一个对象（基本数据类型比较值、引用数据类型比较内存地址）</li>
+<li>equals不能比较基本数据类型的变量，equals方法存在Object类中</li>
+<li>类没有覆盖equals方法的话等价于==，类覆盖了equals方法的话可以用来比较两个对象的内容相等</li>
+</ul>
 <h3 id="hashcode">hashCode()</h3>
 <ul>
-<li>返回哈希值</li>
+<li>确定对象在哈希表中的索引位置</li>
+<li>是个本地方法，返回哈希值，将对象的内存地址转换为整数之后返回</li>
 <li>equals()的两个对象哈希值一定相等，反之不一定</li>
 <li>equals()应该覆盖hashCode()方法，保证两个对象哈希值相等</li>
-<li>HashSet和HashMap也都需要实现hashCode()方法</li>
+<li>hashCode默认对堆上的对象产生独特值，如果没有重写hashCode，则无论如何也不会相等</li>
+<li>HashSet和HashMap也都需要实现hashCode()方法
+<ul>
+<li>当对象加入HashSet值时，会先计算对象的hashcode来判断对象加入的位置，同时比较其他已加入对象的hashcode值，如果没有符合，则没重复出现，但是如果发现有相同的hashcode值的对象，会调用equals方法来检查是否真的相同，相同则不会加入，不同则加入到其他位置</li>
+</ul>
+</li>
 </ul>
 <h3 id="clone">clone()</h3>
 <ul>
@@ -291,6 +309,28 @@
 <li>可以用构造函数或拷贝工厂来拷贝一个对象</li>
 </ul>
 </li>
+</ul>
+<h3 id="java组织序列化">Java组织序列化</h3>
+<ul>
+<li>对于不想序列化的变量使用transient关键词修饰
+<ul>
+<li>阻止实例中那些用此关键字修饰的变量序列化</li>
+<li>当对象被反序列化时，其不会被持久化和恢复</li>
+<li>智能修饰变量，不能修饰类和方法</li>
+</ul>
+</li>
+</ul>
+<h3 id="获取键盘输入的方法">获取键盘输入的方法</h3>
+<ul>
+<li>Scanner
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">Scanner</span> <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+<span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="n">input</span><span class="o">.</span><span class="na">nextLine</span><span class="o">();</span>
+<span class="n">input</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+</code></pre></div></li>
+<li>BufferedReader
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">BufferedReader</span> <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="n">InputStreamReader</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">in</span><span class="o">));</span>
+<span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="n">input</span><span class="o">.</span><span class="na">readLine</span><span class="o">();</span>
+</code></pre></div></li>
 </ul>
 
   </article>

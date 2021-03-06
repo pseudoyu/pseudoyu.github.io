@@ -171,8 +171,8 @@
 &lt;li&gt;直接使用字符串常量&lt;/li&gt;
 &lt;li&gt;调用String类构造函数&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-jsx&#34; data-lang=&#34;jsx&#34;&gt;&lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Hello World!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Hello&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;World&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Hello World!&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Hello&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;World&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;访问方法&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;charAt(): 可以通过索引需要获取字符&lt;/li&gt;
@@ -195,6 +195,12 @@
 &lt;li&gt;未加同步锁，线程不安全&lt;/li&gt;
 &lt;li&gt;性能比StringBuffer高10%-15%&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;使用总结&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;操作少量数据用String&lt;/li&gt;
+&lt;li&gt;单线程下操作字符串缓冲区下操作大量数据，适用StringBuilder&lt;/li&gt;
+&lt;li&gt;多线程下操作字符串缓冲区下操作大量数据，使用StringBuffer&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;包装类&#34;&gt;包装类&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;和基本数据类型对应的类&lt;/li&gt;
@@ -216,7 +222,7 @@
 &lt;li&gt;int y = x;拆箱，调用了X.intValue()&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;缓存池
+&lt;li&gt;常量池技术，缓存数据 Character[0,127]，Boolean[True,False]，Float、Double没有实现常量池技术，其他[-128,127]，超出范围则仍然创建新对象
 &lt;ul&gt;
 &lt;li&gt;new Integer(123)每次都会新建一个对象&lt;/li&gt;
 &lt;li&gt;Integer.valueOf(123)会使用缓存池中的对象&lt;/li&gt;
@@ -248,12 +254,24 @@
 &lt;li&gt;将Object进行转型&lt;/li&gt;
 &lt;li&gt;判断每个关键域是否相等&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;equals与==的区别&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;==是判断两个对象地址是不是相等（因为Java只有按值传递，所以本质比较的都是值），即判断是不是同一个对象（基本数据类型比较值、引用数据类型比较内存地址）&lt;/li&gt;
+&lt;li&gt;equals不能比较基本数据类型的变量，equals方法存在Object类中&lt;/li&gt;
+&lt;li&gt;类没有覆盖equals方法的话等价于==，类覆盖了equals方法的话可以用来比较两个对象的内容相等&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;hashcode&#34;&gt;hashCode()&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;返回哈希值&lt;/li&gt;
+&lt;li&gt;确定对象在哈希表中的索引位置&lt;/li&gt;
+&lt;li&gt;是个本地方法，返回哈希值，将对象的内存地址转换为整数之后返回&lt;/li&gt;
 &lt;li&gt;equals()的两个对象哈希值一定相等，反之不一定&lt;/li&gt;
 &lt;li&gt;equals()应该覆盖hashCode()方法，保证两个对象哈希值相等&lt;/li&gt;
-&lt;li&gt;HashSet和HashMap也都需要实现hashCode()方法&lt;/li&gt;
+&lt;li&gt;hashCode默认对堆上的对象产生独特值，如果没有重写hashCode，则无论如何也不会相等&lt;/li&gt;
+&lt;li&gt;HashSet和HashMap也都需要实现hashCode()方法
+&lt;ul&gt;
+&lt;li&gt;当对象加入HashSet值时，会先计算对象的hashcode来判断对象加入的位置，同时比较其他已加入对象的hashcode值，如果没有符合，则没重复出现，但是如果发现有相同的hashcode值的对象，会调用equals方法来检查是否真的相同，相同则不会加入，不同则加入到其他位置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;clone&#34;&gt;clone()&lt;/h3&gt;
 &lt;ul&gt;
@@ -268,6 +286,28 @@
 &lt;li&gt;可以用构造函数或拷贝工厂来拷贝一个对象&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;java组织序列化&#34;&gt;Java组织序列化&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;对于不想序列化的变量使用transient关键词修饰
+&lt;ul&gt;
+&lt;li&gt;阻止实例中那些用此关键字修饰的变量序列化&lt;/li&gt;
+&lt;li&gt;当对象被反序列化时，其不会被持久化和恢复&lt;/li&gt;
+&lt;li&gt;智能修饰变量，不能修饰类和方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;获取键盘输入的方法&#34;&gt;获取键盘输入的方法&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Scanner
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;Scanner&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;input&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Scanner&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;in&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;nextLine&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;BufferedReader
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;BufferedReader&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;input&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BufferedReader&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;InputStreamReader&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;in&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;readLine&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       
@@ -589,10 +629,18 @@
 &lt;li&gt;继承性：无需重新编写原有类的情况下，新类可拥有原有类的功能&lt;/li&gt;
 &lt;li&gt;多态性：一个类中定义的属性和方法被继承后，可以具有不同的数据类型和表现出不同的行为&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;类与对象&#34;&gt;类与对象&lt;/h3&gt;
+&lt;p&gt;面向对象与面向过程的区别&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;成员变量：定义在类中的变量&lt;/li&gt;
-&lt;li&gt;局部变量：定义在方法中的变量&lt;/li&gt;
+&lt;li&gt;面向过程的性能比面向对象高，类的调用需要实例化、开销比较大，比较消耗资源。非根本原因，面向过程也需要分配内存，计算内存偏移量，Java性能差主要原因是它是半编译语言，最终的执行代码并不是可以直接被CPU执行的二进制机器码，而面向过程语言大多是直接编译成机器码在电脑上执行&lt;/li&gt;
+&lt;li&gt;面向对象易维护、易复用、易拓展，可以设计出低耦合的系统，使系统更灵活、更加易于维护&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;类与对象&#34;&gt;类与对象&lt;/h3&gt;
+&lt;p&gt;成员变量与局部变量的区别&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;语法形式：成员变量是定义在类中的变量，可以被public、private、static等修饰符修饰，而局部变量是定义在代码块或方法中的变量，不能被访问修饰符修饰，但都可以被final修饰&lt;/li&gt;
+&lt;li&gt;变量在内存中的存储方式：成员变量如果使用static则属于类，没有则属于实例；对象存在于堆内存，局部变量存在于栈内存&lt;/li&gt;
+&lt;li&gt;变量在内存中的生存时间：成员变量是对象的一部分，随着对象创建而存在，而局部变量随着方法调用自动消失&lt;/li&gt;
+&lt;li&gt;成员变量如果没有初始值则自动以类型默认值赋值（除非被final修饰），而局部变量不会自动赋值&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Person&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;c1&#34;&gt;// 定义成员变量
@@ -605,10 +653,15 @@
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;类的构造方法&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;完成对类对象的初始化工作&lt;/li&gt;
+&lt;li&gt;如果自己添加了构造方法，则不会添加默认的无参数构造方法了，因此需要自己添加一下&lt;/li&gt;
+&lt;li&gt;调用子类构造方法前先调用父类无参数的构造方法是为了帮助子类做初始化工作&lt;/li&gt;
+&lt;li&gt;一般需要在父类中加上一个不做事且没有参数的构造方法，因为程序在执行子类的构造方法之前，如果父类只定义了有参数的构造方法，子类没有super()调用父类特定的构造方法，则会编译错误&lt;/li&gt;
 &lt;li&gt;方法名与类名相同&lt;/li&gt;
 &lt;li&gt;方法名前没有返回值声明&lt;/li&gt;
 &lt;li&gt;不能使用return返回值&lt;/li&gt;
 &lt;li&gt;使用this来访问成员变量以解决命名冲突&lt;/li&gt;
+&lt;li&gt;构造方法不能被重写，但可以被重载，所以可以有多个构造函数&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 无参数默认
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;Person&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
@@ -620,6 +673,10 @@
   &lt;span class=&#34;c1&#34;&gt;// 新的构造函数
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;创建对象&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;new运算符创建对象实例（在堆内存中），对象引用指向对象实例（在栈内存中），一个对象引用可以指向0或1个对象，一个对象可以有n个引用指向它&lt;/li&gt;
+&lt;li&gt;对象的相等是比较内存中存放的内容，引用相等比较的是指向的内存地址是否相等&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 类名 对象名 = new 类名();
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Person&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Person&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;垃圾回收机制&lt;/p&gt;
@@ -632,7 +689,7 @@
 &lt;h3 id=&#34;封装方法&#34;&gt;封装方法&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;private修饰成员变量&lt;/li&gt;
-&lt;li&gt;为外界提供set和get方法&lt;/li&gt;
+&lt;li&gt;把一个对象的状态信息隐藏在对象内部，不允许外部对象直接访问，但是为外界提供一些操作方法，如set和get方法&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;static关键字&#34;&gt;static关键字&lt;/h3&gt;
 &lt;ul&gt;
@@ -689,20 +746,31 @@
 &lt;/ul&gt;
 &lt;h3 id=&#34;类的继承&#34;&gt;类的继承&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;在一个类的基础上构建新的类&lt;/li&gt;
-&lt;li&gt;子类会自动拥有父类所有可继承的属性和方法&lt;/li&gt;
+&lt;li&gt;不同类型对象经常有一定数量的共同点，因此可以在一个类的基础上构建新的类&lt;/li&gt;
+&lt;li&gt;子类会自动拥有父类所有可继承的属性和方法，不可选择性继承&lt;/li&gt;
+&lt;li&gt;父类中的私有属性和方法子类是无法访问的，只是拥有&lt;/li&gt;
+&lt;li&gt;可以快速创建新的类，提高代码的重用、程序的可维持性，节省创建新类的时间，提高开发效率&lt;/li&gt;
+&lt;li&gt;子类可以拥有自己的属性和方法，进行拓展，也可以用自己的方式实现父类方法（即重写）&lt;/li&gt;
 &lt;li&gt;使用extends关键字&lt;/li&gt;
 &lt;li&gt;不允许多重继承&lt;/li&gt;
 &lt;li&gt;多个类可以继承自同一个父类&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;方法重写&#34;&gt;方法重写&lt;/h3&gt;
+&lt;h3 id=&#34;重写&#34;&gt;重写&lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;发生在运行期&lt;/li&gt;
 &lt;li&gt;子类会自动继承父类中定义的方法&lt;/li&gt;
 &lt;li&gt;可以对方法进行修改，即重写&lt;/li&gt;
 &lt;li&gt;重写方法需要和父类方法具有相同的方法名、参数列表及返回类型&lt;/li&gt;
 &lt;li&gt;使用super方法访问父类成员&lt;/li&gt;
 &lt;li&gt;使用super方法访问父类构造方法，第一行&lt;/li&gt;
 &lt;li&gt;使用this关键字调用子类构造方法，第一行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;重载&#34;&gt;重载&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;发生在编译期&lt;/li&gt;
+&lt;li&gt;同一个方法能够根据输入数据不同做出不同的处理&lt;/li&gt;
+&lt;li&gt;方法名必须相同&lt;/li&gt;
+&lt;li&gt;参数类型不同、个数不同、顺序不同、方法返回值和访问修饰符可以不同&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;final关键字&#34;&gt;final关键字&lt;/h3&gt;
 &lt;ul&gt;
@@ -769,6 +837,10 @@
 &lt;ul&gt;
 &lt;li&gt;多态的基础是继承和重写&lt;/li&gt;
 &lt;li&gt;多态仅限于实例方法&lt;/li&gt;
+&lt;li&gt;对象类型和引用类型之间具有继承/实现的关系&lt;/li&gt;
+&lt;li&gt;引用类型变量发出的方法调用哪个类中的方法必须在程序运行期间才能确定&lt;/li&gt;
+&lt;li&gt;多态不能调用只在子类存在但父类不存在的方法&lt;/li&gt;
+&lt;li&gt;如果子类重写了父类的方法，真正执行的是子类覆盖的方法&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;对象的类型转换&lt;/p&gt;
 &lt;ul&gt;
@@ -783,14 +855,16 @@
 &lt;ul&gt;
 &lt;li&gt;Throwable
 &lt;ul&gt;
-&lt;li&gt;Error 一般是Java运行时产生的系统内部错误或者资源耗尽的错误，仅靠修改程序本身不能恢复执行&lt;/li&gt;
+&lt;li&gt;Error 一般是Java运行时产生的系统内部错误或者资源耗尽的错误，仅靠修改程序本身不能恢复执行，例如虚拟机运行错误Virtual MachineError，虚拟机内存不够错误OutOfMemoryError，类定义错误NoClassDefFoundError，虚拟机一般选择线程终止&lt;/li&gt;
 &lt;li&gt;Exception 异常 RuntimeException用于运行时异常，其他用于编译时异常&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Throwable类常用方法
 &lt;ul&gt;
-&lt;li&gt;String getMessage()&lt;/li&gt;
-&lt;li&gt;void printStackTrace()&lt;/li&gt;
+&lt;li&gt;String getMessage()返回异常发生时的简要描述&lt;/li&gt;
+&lt;li&gt;string toString()返回异常发生时的详细信息&lt;/li&gt;
+&lt;li&gt;string getLocalizedMessage()返回异常对象的本地化信息，使用Throwable子类覆盖这个方法，生成本地化信息，没覆盖的话则与getMessage()相同&lt;/li&gt;
+&lt;li&gt;void printStackTrace()在控制台上打印Throwable对象封装的异常信息&lt;/li&gt;
 &lt;li&gt;void printStackTrace(PrintStream s)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -803,6 +877,36 @@
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;finally&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;c1&#34;&gt;// 一定执行的语句
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;finally不执行的情况&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;try或finally中用了System.exit(int)退出程序，但如果在异常语句之后还是会被执行&lt;/li&gt;
+&lt;li&gt;程序所在的线程死亡&lt;/li&gt;
+&lt;li&gt;关闭CPU&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当try语句和finally语句中都有return语句时，在方法返回之前，finally语句的内容将被执行，并且finally语句的返回值将会覆盖原始的返回值&lt;/p&gt;
+&lt;p&gt;try-with-resources代替try-catch-finally&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;适用范围（资源的定义）：任何实现java.lang.AutoCloseable或者java.io.Closeable的对象&lt;/li&gt;
+&lt;li&gt;关闭资源和final的执行顺序：在try-with-resources语句中，任何catch或finally块在声明的资源关闭后运行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Scanner&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;scanner&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Scanner&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;File&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;test.txt&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;scanner&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;hasNext&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;())&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;scanner&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;nextLine&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;catch&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;FileNotFoundException&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fnfe&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;fnfe&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;printStackTrace&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;多个资源&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;BufferedInputStream&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bin&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BufferedInputStream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FileInputStream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;File&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;test.txt&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)));&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;BufferedOutputStream&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BufferedOutputStream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FileOutputStream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;File&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;out.txt&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bin&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;())&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;bout&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;write&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;catch&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;IOException&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;printStackTrace&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;throws关键字&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;修饰符&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;返回值类型&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;方法名&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;throws&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;异常类型1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;异常类型2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;c1&#34;&gt;// 定义方法
@@ -823,19 +927,67 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;代理&#34;&gt;代理&lt;/h2&gt;
 &lt;p&gt;代理关系模型，A想要调用B类的方法，A不直接调用，A会在自己的类中创建一个B对象的代理，再由代理调用B的方法&lt;/p&gt;
 &lt;h2 id=&#34;泛型&#34;&gt;泛型&lt;/h2&gt;
+&lt;p&gt;提供了编译时类型安全检测机制，允许在编译时检测到非法的类型，本质是参数化类型。Java的泛型是伪泛型，也就是在编译期间，所有的泛型信息会被擦除，Java编译器会在编译时尽可能发现出错的地方，但没办法发现运行时类型转换异常的问题，类型擦除是Java泛型与C++模板机制实现方式之间的重要区别。类型擦除后只保留Object或者Comparable这样的原始类型。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Java编译器先检查泛型类型，进行类型擦除，再进行编译&lt;/li&gt;
+&lt;li&gt;类型检查是编译时就完成的，类型检查针对引用，引用调用泛型方法则会对这个引用调用的方法进行类型检测，无关真正引用的对象&lt;/li&gt;
+&lt;li&gt;泛型不允许继承关系&lt;/li&gt;
+&lt;li&gt;泛型信息虽然会被擦除，但是当存取一个泛型域时会自动插入强制类型转换&lt;/li&gt;
+&lt;li&gt;子类在继承时只能将父类类型擦除为原始类型，目的为重写却变为了重载，要解决多态与泛型的冲突，JVM编译生成桥方法&lt;/li&gt;
+&lt;li&gt;泛型类型变量不能使基本数据类型&lt;/li&gt;
+&lt;li&gt;编译时用instanceof是错误的（因为类型擦除了）&lt;/li&gt;
+&lt;li&gt;泛型类中的静态方法和静态变量不可以使用泛型类所声明的泛型类型参数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;使用方式&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;用泛型表示类&lt;/li&gt;
 &lt;li&gt;用泛型表示接口&lt;/li&gt;
 &lt;li&gt;泛型方法&lt;/li&gt;
-&lt;li&gt;泛型通配符&lt;/li&gt;
+&lt;li&gt;泛型通配符
+&lt;ul&gt;
+&lt;li&gt;？表示不确定的java类型&lt;/li&gt;
+&lt;li&gt;T表示具体的一个java类型&lt;/li&gt;
+&lt;li&gt;K V表示Key Value&lt;/li&gt;
+&lt;li&gt;E表示Element&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;反射&#34;&gt;反射&lt;/h2&gt;
-&lt;p&gt;Java反射机制是在程序运行的过程中，对于任何一个类，都能够知道它的所有属性和方法；对于任意一个对象，都能够知道调用它的任意属性和方法。&lt;/p&gt;
+&lt;p&gt;Java反射机制是在程序运行的过程中，对于任何一个类，都能够知道它的所有属性和方法；对于任意一个对象，都能够知道调用它的任意属性和方法；动态获取信息及动态调用对象。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;在运行时判断一个对象所属的类&lt;/li&gt;
 &lt;li&gt;在运行是构造任意一个类的对象&lt;/li&gt;
 &lt;li&gt;在运行时判断任意一个类所有的成员变量和方法&lt;/li&gt;
 &lt;li&gt;在运行时调用任意一个对象的方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;静态编译和动态编译&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;静态编译：在编译时确定类型，绑定对象&lt;/li&gt;
+&lt;li&gt;动态编译：在运行时确定对象，绑定对象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;优缺点&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;优点：运行期类型的判断，动态加载类，提高代码的灵活度&lt;/li&gt;
+&lt;li&gt;缺点
+&lt;ul&gt;
+&lt;li&gt;JVM需要做一系列解释操作，性能比直接的java代码要慢很多，造成性能瓶颈&lt;/li&gt;
+&lt;li&gt;让我们可以动态操作改变类的属性同时也增加了其安全隐患&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;应用场景&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;主要用于框架设计&lt;/li&gt;
+&lt;li&gt;模块化开发，通过反射去调用对应的字节码&lt;/li&gt;
+&lt;li&gt;动态代理设计模式采用了反射机制&lt;/li&gt;
+&lt;li&gt;Spring/Hibernate框架也大量使用到了反射机制&lt;/li&gt;
+&lt;li&gt;例如
+&lt;ul&gt;
+&lt;li&gt;JDBC连接数据库时使用Class.forName()通过反射加载数据库的驱动程序&lt;/li&gt;
+&lt;li&gt;Spring框架的IOC（动态加载管理Bean）创建对象及AOP动态代理功能和反射都有联系&lt;/li&gt;
+&lt;li&gt;动态配置实例的属性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       
@@ -871,6 +1023,7 @@
 &lt;li&gt;不支持指针，一切对内存的访问都必须通过实例变量来实现&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;可靠性&lt;/li&gt;
 &lt;li&gt;跨平台性
 &lt;ul&gt;
 &lt;li&gt;可以运行在各种平台上&lt;/li&gt;
@@ -881,7 +1034,21 @@
 &lt;li&gt;并发执行多个任务，提升执行效率&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;支持网络编程（Java语言诞生就是为了简化网络编程而设计的）&lt;/li&gt;
+&lt;li&gt;编译与解释并存&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;与C++的区别&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;都面向对象，实现了封装、继承和多态，但是Java是类不能多重继承（接口可以），C++可以&lt;/li&gt;
+&lt;li&gt;Java不提供指针访问内存，程序内存更加安全&lt;/li&gt;
+&lt;li&gt;Java提供了自动内存管理垃圾回收机制，程序员不需要手动释放&lt;/li&gt;
+&lt;li&gt;Java中没有结束符&#39;\0&amp;rsquo;而C语言有&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;import java 和 javax区别&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;以前javaAPI必需的是java开头的包，javax只是拓展API&lt;/li&gt;
+&lt;li&gt;后来javax逐渐拓展为javaAPI的组成部分，但移植麻烦，最终成为标准API的一部分&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;jdkjava-development-kit&#34;&gt;JDK（Java Development Kit）&lt;/h3&gt;
 &lt;p&gt;Java开发环境&lt;/p&gt;
 &lt;ul&gt;
@@ -897,6 +1064,22 @@
 &lt;li&gt;生成.class字节码文件&lt;/li&gt;
 &lt;li&gt;java虚拟机解释执行&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;JVM虚拟机&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;针对不同的操作系统有特定的实现，使用相同的字节码，给出相应的结果&lt;/li&gt;
+&lt;li&gt;解决了传统解释型语言执行效率低的问题，又保留了其可移植的特性&lt;/li&gt;
+&lt;li&gt;引进了JIT编译器，运行时编译，完成第一次编译后，将机器码保存下来，下次直接使用（解决解释器逐行解释执行效率低与热点代码经常被调用的问题）&lt;/li&gt;
+&lt;li&gt;根据代码每次执行情况做一些优化，执行次数越多，速度越快&lt;/li&gt;
+&lt;li&gt;JDK9引入了AOT编译模式，将字节吗直接编译成机器码，避免了JIT预热等方面的开销（但编译质量相对较差），JDK支持分层编译和AOT协同使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Oracle JDK 与 Open JDK区别&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Open JDK是一个参考模型，完全开源，而Oracle JDK是Open JDK的一个实现，并不完全开源&lt;/li&gt;
+&lt;li&gt;Oracle JDK相对更稳定，有更多的类和错误修复&lt;/li&gt;
+&lt;li&gt;Oracle JDK提供了更好的性能&lt;/li&gt;
+&lt;li&gt;Oracle不会为即将发布的版本提供长期支持&lt;/li&gt;
+&lt;li&gt;Oracle JDK根据二进制代码许可协议获得许可，Open JDK根据GPL v2获得许可&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;java编程基础&#34;&gt;Java编程基础&lt;/h2&gt;
 &lt;h3 id=&#34;基本语法&#34;&gt;基本语法&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;HelloWorld&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
@@ -928,6 +1111,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;数据类型&#34;&gt;数据类型&lt;/h3&gt;
+&lt;p&gt;Java要确定每种基本类型所占存储空间的大小，并不随着机器硬件架构的变化而变化，因此更具备可移植性。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;整型
 &lt;ul&gt;
@@ -943,12 +1127,12 @@
 &lt;li&gt;double 64位 +d&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;字符
+&lt;li&gt;字符（相当于一个整型ASCII值，可参加表达式运算）
 &lt;ul&gt;
-&lt;li&gt;char&lt;/li&gt;
+&lt;li&gt;char 16位，2个字节&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;字符串
+&lt;li&gt;字符串（代表一个地址值）
 &lt;ul&gt;
 &lt;li&gt;String&lt;/li&gt;
 &lt;/ul&gt;
@@ -1153,10 +1337,12 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 定义一个m*n的多维数组
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[][]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;arr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;];&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;引用&#34;&gt;引用&lt;/h3&gt;
-&lt;p&gt;Java是按值传递参数，在将一个参数传入一个方法时，本质上是将对象的地址以值的方式传递到形参中。&lt;/p&gt;
+&lt;p&gt;Java是按值传递参数，在将一个参数传入一个方法时，本质上是将对象的地址以值的方式传递到形参中&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;方法中改变对象的字段值会改变原对象该字段值&lt;/li&gt;
-&lt;li&gt;但是在方法中将指针引用了其他对象则不会产生影响&lt;/li&gt;
+&lt;li&gt;方法得到的是所有参数值的一个拷贝，不能修改传递给它的任何参数变量内容&lt;/li&gt;
+&lt;li&gt;对象引用作为参数则指向通过同一个对象（如数组），外部引用对象的改变会反映到所对应的对象上&lt;/li&gt;
+&lt;li&gt;一个方法可以改变一个对象参数的状态&lt;/li&gt;
+&lt;li&gt;一个方法不能让对象参数引用一个新的对象&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       

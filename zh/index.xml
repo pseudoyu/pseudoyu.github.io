@@ -124,6 +124,58 @@
     </item>
     
     <item>
+      <title>Java学习笔记 - 多线程</title>
+      <link>https://www.pseudoyu.com/zh/2020/11/29/java_note_concurrent/</link>
+      <pubDate>Sun, 29 Nov 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/11/29/java_note_concurrent/</guid>
+      
+        <description>&lt;h2 id=&#34;多线程&#34;&gt;多线程&lt;/h2&gt;
+&lt;h3 id=&#34;线程程序进程的基本概念&#34;&gt;线程、程序、进程的基本概念&lt;/h3&gt;
+&lt;p&gt;线程&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;比进程更小的执行单位，一个进程在执行的过程中可以产生多个线程&lt;/li&gt;
+&lt;li&gt;同类的多个线程共享同一块内存空间和一组系统资源，所以系统在产生一个线程或者在各个线程之间切换工作时，负担要比进程小得多&lt;/li&gt;
+&lt;li&gt;线程也被称为轻量级进程&lt;/li&gt;
+&lt;li&gt;同一进程中的线程极有可能相互影响&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;程序&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;含有指令和数据的文件&lt;/li&gt;
+&lt;li&gt;被存储在磁盘或其他数据存储设备中&lt;/li&gt;
+&lt;li&gt;静态的代码&lt;/li&gt;
+&lt;li&gt;程序执行时会被操作系统载入内存中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;进程&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;程序的一次执行过程，系统运行程序的基本单位，动态的&lt;/li&gt;
+&lt;li&gt;运行一个程序即进程从创建、运行到消亡的过程&lt;/li&gt;
+&lt;li&gt;一个进程就是一个执行中的程序&lt;/li&gt;
+&lt;li&gt;每个进程占有某些系统资源，如CPU时间、内存空间、文件、输入输出设备使用权等&lt;/li&gt;
+&lt;li&gt;各进程基本上是独立的&lt;/li&gt;
+&lt;li&gt;进程属于操作系统的范畴&lt;/li&gt;
+&lt;li&gt;同一时间段内，可以执行一个以上的程序&lt;/li&gt;
+&lt;li&gt;线程是在同一程序内几乎同时执行一个以上的程序段&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;基本状态&#34;&gt;基本状态&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;NEW：初始状态，被构建但是没有调用start()方法&lt;/li&gt;
+&lt;li&gt;RUNNABLE
+&lt;ul&gt;
+&lt;li&gt;READY：调用start()方法后&lt;/li&gt;
+&lt;li&gt;RUNNING：获得cpu时间片time slice后&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;BLOCKED：调用同步方法时没有获取到锁&lt;/li&gt;
+&lt;li&gt;WAITING：执行wait()方法后&lt;/li&gt;
+&lt;li&gt;TIME_WAITING：在WAITING状态基础上增加了超时限制，如sleep()或wait()，时间达成后返回到RUNNABLE状态&lt;/li&gt;
+&lt;li&gt;TERMINATED：执行RUNNABLE的run()方法后&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>Java学习笔记 - 常用方法</title>
       <link>https://www.pseudoyu.com/zh/2020/11/27/java_note_methods/</link>
       <pubDate>Fri, 27 Nov 2020 03:12:17 +0800</pubDate>
@@ -4913,28 +4965,6 @@ Select cheapest neighbor as currentState and goto step2
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>New iPad Air 4 (2020) Presence by Apple Inc.</title>
-      <link>https://www.pseudoyu.com/zh/2020/09/18/ecom6013_discussion_topic2/</link>
-      <pubDate>Fri, 18 Sep 2020 01:25:19 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/09/18/ecom6013_discussion_topic2/</guid>
-      
-        <description>&lt;h1 id=&#34;e-commerce-presence-look-around&#34;&gt;E-Commerce Presence Look Around&lt;/h1&gt;
-&lt;h2 id=&#34;new-ipad-air-4-2020-presence-by-apple-inc&#34;&gt;New iPad Air 4 (2020) Presence by Apple Inc.&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.apple.com/hk/en/ipad-air/&#34;&gt;&lt;strong&gt;Website Link&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The iPad Air 4 (2020) got shown off at Apple&amp;rsquo;s September event held on September 16. There is a specific designed website (mobile version included) for this product. I&amp;rsquo;d like to do an analysis towards this very impressive E-Commerce presence.&lt;/p&gt;
-&lt;p&gt;Apple iPad Air product line is mainly targeted to educators/students, staffs and kids/teenagers. So, the most premium features this new product wants to convey to customers is its fancy appearance and powerful A14 Bionic for creation, study and entertainment. Rather than directly shows all parameter, the company presents a series of beautiful pictures (with impressive animations) to catch audiences’ attention at first glance.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ipad_air_presence_1.png&#34; alt=&#34;ipad_air_presence_1&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Then potential audiences may want to get more detailed information about the appearance or performance they are interested in and scroll down to see more.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ipad_air_presence_2.png&#34; alt=&#34;ipad_air_presence_2&#34;&gt;&lt;/p&gt;
-&lt;p&gt;The most important part of this presence is the description of features. Considered major audiences are educators/students, relatively young staffs in a company and kids/teenagers in the family, every introduction part starts with an attractive header with the keywords like “work”, “working”, “class”, “together”, “leisure time” and so on. These headers help or guide audiences to think about their current status when stduying, working or entertaining and realize their needs or how this product can improve it.&lt;/p&gt;
-&lt;p&gt;Plus, after depicting magic usages in the classroom, workplace or home, the website lists some purchase links of the compatible ipad accessories, guiding audiences to know (and also buy) more related products.&lt;/p&gt;
-&lt;p&gt;However, there are some negative aspects of this presence. First, the fontsize of “Available in October” (the coming date) is really small with a light-gray color, which is not obvious. Second, the price of the product is listed on another website page by clicking a small “View pricing” button. Normally, when audiences view some products on the internet, they always want to know how much it costs and how they can buy it immediately. If this information is not easy or convienient to find, lots of them will lose patience.&lt;/p&gt;
 </description>
       
     </item>

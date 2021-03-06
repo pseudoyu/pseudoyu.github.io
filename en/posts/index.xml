@@ -17,6 +17,15 @@
     </item>
     
     <item>
+      <title>Java学习笔记 - 多线程</title>
+      <link>https://www.pseudoyu.com/en/2020/11/29/java_note_concurrent/</link>
+      <pubDate>Sun, 29 Nov 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/29/java_note_concurrent/</guid>
+      <description>多线程 线程、程序、进程的基本概念 线程 比进程更小的执行单位，一个进程在执行的过程中可以产生多个线程 同类的多个线程共享同一块内存空间和一组系统资</description>
+    </item>
+    
+    <item>
       <title>Java学习笔记 - 常用方法</title>
       <link>https://www.pseudoyu.com/en/2020/11/27/java_note_methods/</link>
       <pubDate>Fri, 27 Nov 2020 03:12:17 +0800</pubDate>
@@ -196,17 +205,6 @@ Cell Handover
       <description>E-Commerce Presence Look Around New iPad Air 4 (2020) Presence by Apple Inc. Website Link
 The iPad Air 4 (2020) got shown off at Apple&amp;rsquo;s September event held on September 16. There is a specific designed website (mobile version included) for this product. I&amp;rsquo;d like to do an analysis towards this very impressive E-Commerce presence.
 Apple iPad Air product line is mainly targeted to educators/students, staffs and kids/teenagers. So, the most premium features this new product wants to convey to customers is its fancy appearance and powerful A14 Bionic for creation, study and entertainment.</description>
-    </item>
-    
-    <item>
-      <title>COMP7103 Topic 1 Introduction</title>
-      <link>https://www.pseudoyu.com/en/2020/09/18/comp7103_topic1/</link>
-      <pubDate>Fri, 18 Sep 2020 01:18:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/09/18/comp7103_topic1/</guid>
-      <description>COMP7103 Data Mining Topic 1 Introduction Decision-Support System (DSS)
- A decision-support system (DSS) is a system that assists decision makers to make important decisions for an organization or business KDD and data mining are important components in many DSS&amp;rsquo;s  Data and Knowledge
- Data  A collecion of facts about certain group of objects   Pattern  Certain characteristics of data that are frequently observed   Knowledge  Some general rules about the objects    Data Warehouse</description>
     </item>
     
   </channel>

@@ -3,13 +3,14 @@
 <head>
   <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="utf-8">
-  <title>java · Pseudoyu</title>
+  <title>Java学习笔记 - 多线程 · Pseudoyu</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Entrepreneur | Technology lover | Faster learner" />
+  <meta name="description" content="多线程 线程、程序、进程的基本概念 线程 比进程更小的执行单位，一个进程在执行的过程中可以产生多个线程 同类的多个线程共享同一块内存空间和一组系统资" />
+
   <meta name="keywords" content="Hugo, theme, den" />
 
-<link rel="canonical" href="https://www.pseudoyu.com/en/tag/java/" />
-<link rel="alternate" href="https://www.pseudoyu.com/zh/tag/java/" hreflang="zh">
+<link rel="canonical" href="https://www.pseudoyu.com/en/2020/11/29/java_note_concurrent/" />
+<link rel="alternate" href="https://www.pseudoyu.com/zh/2020/11/29/java_note_concurrent/" hreflang="zh">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -17,19 +18,25 @@
 
 
 
-<link href="/en/tag/java/index.xml" rel="alternate" type="application/rss+xml" title="Pseudoyu" />
+
+<meta property="og:title" content="Java学习笔记 - 多线程" />
+<meta property="og:description" content="多线程 线程、程序、进程的基本概念 线程 比进程更小的执行单位，一个进程在执行的过程中可以产生多个线程 同类的多个线程共享同一块内存空间和一组系统资" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.pseudoyu.com/en/2020/11/29/java_note_concurrent/" />
+<meta property="article:published_time" content="2020-11-29T03:12:17+08:00" />
+<meta property="article:modified_time" content="2020-11-29T03:12:17+08:00" />
+<meta itemprop="name" content="Java学习笔记 - 多线程">
+<meta itemprop="description" content="多线程 线程、程序、进程的基本概念 线程 比进程更小的执行单位，一个进程在执行的过程中可以产生多个线程 同类的多个线程共享同一块内存空间和一组系统资">
+<meta itemprop="datePublished" content="2020-11-29T03:12:17+08:00" />
+<meta itemprop="dateModified" content="2020-11-29T03:12:17+08:00" />
+<meta itemprop="wordCount" content="559">
 
 
-<meta property="og:title" content="java" />
-<meta property="og:description" content="Entrepreneur | Technology lover | Faster learner" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.pseudoyu.com/en/tag/java/" />
-<meta property="og:updated_time" content="2020-11-29T03:12:17+08:00" />
-<meta itemprop="name" content="java">
-<meta itemprop="description" content="Entrepreneur | Technology lover | Faster learner">
+
+<meta itemprop="keywords" content="programming,java," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="java"/>
-<meta name="twitter:description" content="Entrepreneur | Technology lover | Faster learner"/>
+<meta name="twitter:title" content="Java学习笔记 - 多线程"/>
+<meta name="twitter:description" content="多线程 线程、程序、进程的基本概念 线程 比进程更小的执行单位，一个进程在执行的过程中可以产生多个线程 同类的多个线程共享同一块内存空间和一组系统资"/>
 </head>
 <body>
   
@@ -111,13 +118,32 @@
   <div class="row">
     <div class="col-lg-12">
       <div class="header-content">
-        <h1 class="header-title text-uppercase">
-          Tag : java
-        </h1>
-        <div class="header-underline"></div>
-        <p class="header-subtitle header-subtitle-homepage">
-        Archives Listed by Tag "java"
+        <h1 class="header-title">Java学习笔记 - 多线程</h1>
+        <p class="header-date">By
+          pseudoyu /
+        
+        2020-11-29
+          / In categories
+          <a href="https://www.pseudoyu.com/en/category/programming/">Programming</a>
         </p>
+        
+        <div class="header-underline"></div>
+        
+          <div class="clearfix"></div>
+          <p class="float-right header-tags">
+              <i class="fas fa-tags" aria-hidden="true"></i>
+              <a href="https://www.pseudoyu.com/en/tag/java/">java</a>, 
+                <a href="https://www.pseudoyu.com/en/tag/programming/">programming</a>
+          </p>
+        
+        <div class="clearfix"></div>
+<p class="float-right translations">
+    <i class="fas fa-language" aria-hidden="true"></i>
+    Translations: 
+    <a href="https://www.pseudoyu.com/zh/2020/11/29/java_note_concurrent/">ZH</a>
+</p>
+
+
       </div>
     </div>
   </div>
@@ -125,27 +151,58 @@
 
   </div>
   <main>
-<div class="archive-container">
-    <div class="container content archive">
-      <h2>java</h2>
-        <dl class="row">
-            <dt class="col-md-3">2020-11-29</dt>
-            <dd class="col-md-9"><a href="https://www.pseudoyu.com/en/2020/11/29/java_note_concurrent/">Java学习笔记 - 多线程</a></dd>
-            <dt class="col-md-3">2020-11-27</dt>
-            <dd class="col-md-9"><a href="https://www.pseudoyu.com/en/2020/11/27/java_note_methods/">Java学习笔记 - 常用方法</a></dd>
-            <dt class="col-md-3">2020-11-25</dt>
-            <dd class="col-md-9"><a href="https://www.pseudoyu.com/en/2020/11/25/java_note_collections/">Java学习笔记 - 集合</a></dd>
-            <dt class="col-md-3">2020-11-23</dt>
-            <dd class="col-md-9"><a href="https://www.pseudoyu.com/en/2020/11/23/java_note_oop/">Java学习笔记 - 面向对象</a></dd>
-            <dt class="col-md-3">2020-11-20</dt>
-            <dd class="col-md-9"><a href="https://www.pseudoyu.com/en/2020/11/20/java_note_basic/">Java学习笔记 - 基础</a></dd>
-            
-        </dl>
-    </div>
+<div class="container content">
+  <article>
+  <h2 id="多线程">多线程</h2>
+<h3 id="线程程序进程的基本概念">线程、程序、进程的基本概念</h3>
+<p>线程</p>
+<ul>
+<li>比进程更小的执行单位，一个进程在执行的过程中可以产生多个线程</li>
+<li>同类的多个线程共享同一块内存空间和一组系统资源，所以系统在产生一个线程或者在各个线程之间切换工作时，负担要比进程小得多</li>
+<li>线程也被称为轻量级进程</li>
+<li>同一进程中的线程极有可能相互影响</li>
+</ul>
+<p>程序</p>
+<ul>
+<li>含有指令和数据的文件</li>
+<li>被存储在磁盘或其他数据存储设备中</li>
+<li>静态的代码</li>
+<li>程序执行时会被操作系统载入内存中</li>
+</ul>
+<p>进程</p>
+<ul>
+<li>程序的一次执行过程，系统运行程序的基本单位，动态的</li>
+<li>运行一个程序即进程从创建、运行到消亡的过程</li>
+<li>一个进程就是一个执行中的程序</li>
+<li>每个进程占有某些系统资源，如CPU时间、内存空间、文件、输入输出设备使用权等</li>
+<li>各进程基本上是独立的</li>
+<li>进程属于操作系统的范畴</li>
+<li>同一时间段内，可以执行一个以上的程序</li>
+<li>线程是在同一程序内几乎同时执行一个以上的程序段</li>
+</ul>
+<h3 id="基本状态">基本状态</h3>
+<ul>
+<li>NEW：初始状态，被构建但是没有调用start()方法</li>
+<li>RUNNABLE
+<ul>
+<li>READY：调用start()方法后</li>
+<li>RUNNING：获得cpu时间片time slice后</li>
+</ul>
+</li>
+<li>BLOCKED：调用同步方法时没有获取到锁</li>
+<li>WAITING：执行wait()方法后</li>
+<li>TIME_WAITING：在WAITING状态基础上增加了超时限制，如sleep()或wait()，时间达成后返回到RUNNABLE状态</li>
+<li>TERMINATED：执行RUNNABLE的run()方法后</li>
+</ul>
+
+  </article>
+
+  
+  
+  
+
+
 </div>
-
-
-
 
   </main><div class="footer gradient-2">
   <div class="container footer-container ">

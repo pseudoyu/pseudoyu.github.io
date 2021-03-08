@@ -124,6 +124,52 @@
     </item>
     
     <item>
+      <title>Java学习笔记 - 文件与I/O流</title>
+      <link>https://www.pseudoyu.com/zh/2020/12/02/java_note_io/</link>
+      <pubDate>Wed, 02 Dec 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/12/02/java_note_io/</guid>
+      
+        <description>&lt;h2 id=&#34;io流&#34;&gt;IO流&lt;/h2&gt;
+&lt;h3 id=&#34;分类&#34;&gt;分类&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;流的流向
+&lt;ul&gt;
+&lt;li&gt;输入流&lt;/li&gt;
+&lt;li&gt;输出流&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;操作单元
+&lt;ul&gt;
+&lt;li&gt;字节流&lt;/li&gt;
+&lt;li&gt;字符流&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;角色
+&lt;ul&gt;
+&lt;li&gt;节点流&lt;/li&gt;
+&lt;li&gt;处理流&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;抽象类基类&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;InputStream（字节流）/Reader（字符流）&lt;/li&gt;
+&lt;li&gt;OutputStream（字节流）/Writer（字符流）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;为什么有了字节流还需要字符流？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;字符流是由虚拟机将字节转换得到的，过程耗时且容易出现编码问题，所以，提供一个直接操作字符的接口方便我们对字符进行流操作，如果音频文件、图片等媒体文件则用字节流比较好，而如果涉及到字符则使用字符流比较好，Socket, ServerSocket。&lt;/p&gt;
+&lt;h3 id=&#34;bio-nio-aio&#34;&gt;BIO, NIO, AIO&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;BIO是同步阻塞I/O模式，数据的读取写入必须阻塞在一个线程内等待其完成。在活动连接数较低（小于单机1000）的情况下比较适用，模型简单，不需要考虑系统过载、限流等问题。但是面对较高并发量的时候不适用。&lt;/li&gt;
+&lt;li&gt;NIO是同步非阻塞模型，对应java.nio包，提供Channel, Selector, Buffer等抽象。支持面向缓冲、基于通道的I/O方法。提供了SocketChannel，ServerSocketChannel量中国套接字通道实现，都支持阻塞和非阻塞。因此，对于低负载和并发的应用程序，可以使用同步阻塞I/O来提升开发效率和更好的维护性；对于高负载和并发的应用（网络程序），可以使用NIO的非阻塞模式来开发。NIO的IO行为是同步的，对于NIO来说，业务线程是在IO操作准备好时，得到通知，接着由这个线程自行进行IO操作。&lt;/li&gt;
+&lt;li&gt;AIO是异步非阻塞的I/O模型，基于事件和回调机制，应用操作后会直接返回，不会阻塞，当后台处理完成，操作系统会通知相应线程进行后续操作。AIO应用不广泛，Netty尝试过但是放弃了。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>Java学习笔记 - 多线程</title>
       <link>https://www.pseudoyu.com/zh/2020/11/29/java_note_concurrent/</link>
       <pubDate>Sun, 29 Nov 2020 03:12:17 +0800</pubDate>
@@ -4745,225 +4791,6 @@ Select cheapest neighbor as currentState and goto step2
 &lt;li&gt;Doesn’t protect storage of private key&lt;/li&gt;
 &lt;li&gt;No guarantee that verifying computer of merchant is secure&lt;/li&gt;
 &lt;li&gt;CAs are unregulated, self-selecting organizations&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>ECOM6013 Topic 5 Mobile Commerce</title>
-      <link>https://www.pseudoyu.com/zh/2020/09/21/ecom6013_topic5/</link>
-      <pubDate>Mon, 21 Sep 2020 10:44:28 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/09/21/ecom6013_topic5/</guid>
-      
-        <description>&lt;h1 id=&#34;ecom6013-e-commerce-technologies&#34;&gt;ECOM6013 E-Commerce Technologies&lt;/h1&gt;
-&lt;h2 id=&#34;topic-5-mobile-commerce&#34;&gt;Topic 5 Mobile Commerce&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Basic Principle of Mobile Technology&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;FDMA (Frequency Division Multiple Access)&lt;/li&gt;
-&lt;li&gt;TDMA (Time Division Multiple Access)&lt;/li&gt;
-&lt;li&gt;CDMA (Code Division Multiple Access)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Fundamental Mobility: Cellphones&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/cellphones.png&#34; alt=&#34;cellphones&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Cell Handover&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/cell_handover.png&#34; alt=&#34;cell_handover&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;4G vs. 5G&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;4G
-&lt;ul&gt;
-&lt;li&gt;10 ms&lt;/li&gt;
-&lt;li&gt;100 Thousand Connections / km^2&lt;/li&gt;
-&lt;li&gt;1 Gbps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;5G
-&lt;ul&gt;
-&lt;li&gt;&amp;lt; 1ms&lt;/li&gt;
-&lt;li&gt;1 Million Connections / km^2&lt;/li&gt;
-&lt;li&gt;20 Gbps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;E-Commerce vs. M-Commerce&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;E-Commerce
-&lt;ul&gt;
-&lt;li&gt;Device: PC&lt;/li&gt;
-&lt;li&gt;Network: Internet (HTTP)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;M-Commerce
-&lt;ul&gt;
-&lt;li&gt;Device: Mobile devices&lt;/li&gt;
-&lt;li&gt;Network
-&lt;ul&gt;
-&lt;li&gt;Mobile carrier network&lt;/li&gt;
-&lt;li&gt;WiFi&lt;/li&gt;
-&lt;li&gt;Local frequency (RFID/NFC)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Definition of M-Commerce&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Buying and Selling via mobile devices&lt;/li&gt;
-&lt;li&gt;Paying via mobile devices&lt;/li&gt;
-&lt;li&gt;Use of any technologies to support the above&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Mobile Devices&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Devices
-&lt;ul&gt;
-&lt;li&gt;Mobile phone/smart phone&lt;/li&gt;
-&lt;li&gt;Tablet computer&lt;/li&gt;
-&lt;li&gt;Wearable technology&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Usages
-&lt;ul&gt;
-&lt;li&gt;Transact&lt;/li&gt;
-&lt;li&gt;Communicate&lt;/li&gt;
-&lt;li&gt;Entertain&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Roles in M-Commerce&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Users
-&lt;ul&gt;
-&lt;li&gt;End users/system users&lt;/li&gt;
-&lt;li&gt;Suppliers&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Network operators (offer transport facility and network infrastructure)&lt;/li&gt;
-&lt;li&gt;Service providers (develop new devices)&lt;/li&gt;
-&lt;li&gt;Content providers (aggregate contents)&lt;/li&gt;
-&lt;li&gt;Commerce mediators (provide solutions and services)&lt;/li&gt;
-&lt;li&gt;Finance organizations (provide framework and infrasture for payment)&lt;/li&gt;
-&lt;li&gt;Mobile device (interacting with all roles)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;M-Commerce Services and Applications&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Sevices
-&lt;ul&gt;
-&lt;li&gt;Mobile ticketing&lt;/li&gt;
-&lt;li&gt;Mobile money transfer&lt;/li&gt;
-&lt;li&gt;Conetent purchase and delivery&lt;/li&gt;
-&lt;li&gt;Information services&lt;/li&gt;
-&lt;li&gt;Mobile banking&lt;/li&gt;
-&lt;li&gt;Mobile browsing&lt;/li&gt;
-&lt;li&gt;Mobile purchase&lt;/li&gt;
-&lt;li&gt;Mobile marketing and advertising&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Applications
-&lt;ul&gt;
-&lt;li&gt;Entertainment
-&lt;ul&gt;
-&lt;li&gt;Music&lt;/li&gt;
-&lt;li&gt;Games&lt;/li&gt;
-&lt;li&gt;graphics&lt;/li&gt;
-&lt;li&gt;Video&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Communications
-&lt;ul&gt;
-&lt;li&gt;Short messaging&lt;/li&gt;
-&lt;li&gt;Multi-media messaging&lt;/li&gt;
-&lt;li&gt;Unified messaging&lt;/li&gt;
-&lt;li&gt;E-mail&lt;/li&gt;
-&lt;li&gt;Social&lt;/li&gt;
-&lt;li&gt;Video conferencing&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Transactions
-&lt;ul&gt;
-&lt;li&gt;Banking&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.merriam-webster.com/dictionary/broking&#34;&gt;Broking&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Shopping&lt;/li&gt;
-&lt;li&gt;Auctions&lt;/li&gt;
-&lt;li&gt;Betting&lt;/li&gt;
-&lt;li&gt;Booking &amp;amp; reservations&lt;/li&gt;
-&lt;li&gt;Mobile wallet&lt;/li&gt;
-&lt;li&gt;Mobile purse&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Information
-&lt;ul&gt;
-&lt;li&gt;News&lt;/li&gt;
-&lt;li&gt;City guides&lt;/li&gt;
-&lt;li&gt;Directory services&lt;/li&gt;
-&lt;li&gt;Maps&lt;/li&gt;
-&lt;li&gt;Traffic and weather&lt;/li&gt;
-&lt;li&gt;Corporate information&lt;/li&gt;
-&lt;li&gt;Market data&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;PTDs (Personal Trusted Devices)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Location and orientation&lt;/li&gt;
-&lt;li&gt;Multiple types of networking (NFC/Bluetooth)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.merriam-webster.com/dictionary/accelerometers&#34;&gt;Accelerometers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Camera&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;QR Code (Quick Response Code)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Originally designed as a two-dimensional barcode (not for mobile)&lt;/li&gt;
-&lt;li&gt;Standardized (ISO/IEC 18004:2006)&lt;/li&gt;
-&lt;li&gt;Oatented (but free license)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Other Enabling Technologies&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;GPS
-&lt;ul&gt;
-&lt;li&gt;Widely available on most devices&lt;/li&gt;
-&lt;li&gt;Geo-loctaion and &lt;a href=&#34;https://buildfire.com/what-is-geofencing/&#34;&gt;geo-fencing&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Doesn&amp;rsquo;t work inside buildings&lt;/li&gt;
-&lt;li&gt;High battery consumption&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;NFC/RFID
-&lt;ul&gt;
-&lt;li&gt;Great accuracy&lt;/li&gt;
-&lt;li&gt;Low cost&lt;/li&gt;
-&lt;li&gt;Not support on all devices&lt;/li&gt;
-&lt;li&gt;20cm range&lt;/li&gt;
-&lt;li&gt;High battery consumption&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Obstacles&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Mobile device power
-&lt;ul&gt;
-&lt;li&gt;GPS/network calls cost hign power&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Privacy
-&lt;ul&gt;
-&lt;li&gt;Continuous tracking&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Network
-&lt;ul&gt;
-&lt;li&gt;Bandwidth&lt;/li&gt;
-&lt;li&gt;Congestion&lt;/li&gt;
-&lt;li&gt;Processing speed&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       

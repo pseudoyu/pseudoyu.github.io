@@ -80,27 +80,34 @@
   
   <url>
     <loc>https://www.pseudoyu.com/zh/tag/java/</loc>
-    <lastmod>2020-11-29T03:12:17+08:00</lastmod>
+    <lastmod>2020-12-02T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/11/29/java_note_concurrent/</loc>
-    <lastmod>2020-11-29T03:12:17+08:00</lastmod>
+    <loc>https://www.pseudoyu.com/zh/2020/12/02/java_note_io/</loc>
+    <lastmod>2020-12-02T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.pseudoyu.com/zh/category/programming/</loc>
-    <lastmod>2020-11-29T03:12:17+08:00</lastmod>
+    <lastmod>2020-12-02T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.pseudoyu.com/zh/tag/programming/</loc>
+    <lastmod>2020-12-02T03:12:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/zh/2020/11/29/java_note_concurrent/</loc>
     <lastmod>2020-11-29T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

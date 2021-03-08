@@ -17,6 +17,15 @@
     </item>
     
     <item>
+      <title>Java学习笔记 - 文件与I/O流</title>
+      <link>https://www.pseudoyu.com/en/2020/12/02/java_note_io/</link>
+      <pubDate>Wed, 02 Dec 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/12/02/java_note_io/</guid>
+      <description>IO流 分类 流的流向 输入流 输出流 操作单元 字节流 字符流 角色 节点流 处理流 抽象类基类 InputStream（字节流）/Reader（字符流） Outp</description>
+    </item>
+    
+    <item>
       <title>Java学习笔记 - 多线程</title>
       <link>https://www.pseudoyu.com/en/2020/11/29/java_note_concurrent/</link>
       <pubDate>Sun, 29 Nov 2020 03:12:17 +0800</pubDate>
@@ -194,17 +203,6 @@ Cell Handover
 4G vs. 5G
  4G  10 ms 100 Thousand Connections / km^2 1 Gbps   5G  &amp;lt; 1ms 1 Million Connections / km^2 20 Gbps    E-Commerce vs. M-Commerce
  E-Commerce  Device: PC Network: Internet (HTTP)   M-Commerce  Device: Mobile devices Network  Mobile carrier network WiFi Local frequency (RFID/NFC)      Definition of M-Commerce</description>
-    </item>
-    
-    <item>
-      <title>New iPad Air 4 (2020) Presence by Apple Inc.</title>
-      <link>https://www.pseudoyu.com/en/2020/09/18/ecom6013_discussion_topic2/</link>
-      <pubDate>Fri, 18 Sep 2020 01:25:19 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/09/18/ecom6013_discussion_topic2/</guid>
-      <description>E-Commerce Presence Look Around New iPad Air 4 (2020) Presence by Apple Inc. Website Link
-The iPad Air 4 (2020) got shown off at Apple&amp;rsquo;s September event held on September 16. There is a specific designed website (mobile version included) for this product. I&amp;rsquo;d like to do an analysis towards this very impressive E-Commerce presence.
-Apple iPad Air product line is mainly targeted to educators/students, staffs and kids/teenagers. So, the most premium features this new product wants to convey to customers is its fancy appearance and powerful A14 Bionic for creation, study and entertainment.</description>
     </item>
     
   </channel>

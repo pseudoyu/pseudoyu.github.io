@@ -29,7 +29,7 @@
 <meta itemprop="description" content="集合类 概述 为了在程序中保存数目不确定的对象，JDK中提供了一系列特殊的类，这些类可以存储任意类型的对象且长度可变，称为集合，位于java.u">
 <meta itemprop="datePublished" content="2020-11-25T03:12:17+08:00" />
 <meta itemprop="dateModified" content="2020-11-25T03:12:17+08:00" />
-<meta itemprop="wordCount" content="5264">
+<meta itemprop="wordCount" content="5005">
 
 
 
@@ -336,48 +336,13 @@
 </li>
 <li>ConcurrentHashMap和HashTable的区别
 <ul>
-<li>
-<p>HashTable采取数组+链表，而JDK1.8之后的ConcurrentHashMap采取分段的数组+链表/红黑树</p>
-</li>
-<li>
-<p>HashTable使用synchronized来保证线程安全，效率比较低（同一把锁，存在竞争）</p>
-</li>
-<li>
-<p>ConcurrentHashMap采用segment分段锁，每一把锁只锁容器其中一部分数据，多线程访问容器中不同数据段的数据，就不会存在锁竞争；JDK1.8之后摒弃了Segment分段锁，而是直接使用Node数组+链表+红黑树的形式，并发控制使用了synchronized和CAS（CompareAndSet，先进行比较再修改，对应着一条硬件指令，虽然有多个步骤，但是操作系统保证其原子性）来操作</p>
+<li>HashTable采取数组+链表，而JDK1.8之后的ConcurrentHashMap采取分段的数组+链表/红黑树</li>
+<li>HashTable使用synchronized来保证线程安全，效率比较低（同一把锁，存在竞争）</li>
+<li>ConcurrentHashMap采用segment分段锁，每一把锁只锁容器其中一部分数据，多线程访问容器中不同数据段的数据，就不会存在锁竞争；JDK1.8之后摒弃了Segment分段锁，而是直接使用Node数组+链表+红黑树的形式，并发控制使用了synchronized和CAS（CompareAndSet，先进行比较再修改，对应着一条硬件指令，虽然有多个步骤，但是操作系统保证其原子性）来操作
 <ul>
 <li>synchronized只锁定当前链表或红黑书的首节点，只要哈希不冲突，就不会产生并发，提升效率</li>
 </ul>
 </li>
-<li>
-<p>CAS</p>
-<ul>
-<li>由于采用这种 CAS 机制是没有对方法进行加锁的，所以，所有的线程都可以进入 increment() 这个方法，假如进入这个方法的线程太多，就会出现一个问题：每次有线程要执行第三个步骤的时候，i 的值老是被修改了，所以线程又到回到第一步继续重头再来</li>
-<li>为了解决这个问题，Java8 引入了一个 cell[] 数组，如果有 100 个线程要对 i 进行自增操作的话，这个时候，冲突就会大大增加，系统就会把这些线程分配到不同的 cell 数组元素去</li>
-<li>在 Java 中，也是提供了这种 CAS 的原子类，例如
-<ul>
-<li>AtomicBoolean</li>
-<li>AtomicInteger</li>
-<li>AtomicLong</li>
-<li>AtomicReference</li>
-</ul>
-</li>
-</ul>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">increment</span><span class="o">()</span> <span class="o">{</span>
-    <span class="k">do</span><span class="o">{</span>
-        <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">i</span><span class="o">;</span>
-        <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="n">1</span><span class="o">;</span>
-    <span class="o">}</span><span class="k">while</span> <span class="o">(</span><span class="n">compareAndSet</span><span class="o">(</span><span class="n">i</span><span class="o">,</span> <span class="n">k</span><span class="o">,</span> <span class="n">j</span><span class="o">))</span>
-<span class="o">}</span>
-
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CASTest</span> <span class="o">{</span>
-    <span class="kd">static</span> <span class="n">AtomicInteger</span> <span class="n">i</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AtomicInteger</span><span class="o">(</span><span class="n">0</span><span class="o">);</span>
-
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">increment</span><span class="o">()</span> <span class="o">{</span>
-        <span class="c1">// 自增 1并返回之后的结果
-</span><span class="c1"></span>        <span class="n">i</span><span class="o">.</span><span class="na">incrementAndGet</span><span class="o">();</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></li>
 </ul>
 </li>
 </ul>

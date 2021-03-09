@@ -29,7 +29,7 @@
 <meta itemprop="description" content="集合类 概述 为了在程序中保存数目不确定的对象，JDK中提供了一系列特殊的类，这些类可以存储任意类型的对象且长度可变，称为集合，位于java.u">
 <meta itemprop="datePublished" content="2020-11-25T03:12:17+08:00" />
 <meta itemprop="dateModified" content="2020-11-25T03:12:17+08:00" />
-<meta itemprop="wordCount" content="2537">
+<meta itemprop="wordCount" content="2865">
 
 
 
@@ -421,15 +421,51 @@
 </li>
 <li>适配器模式
 <ul>
+<li>Arrays.asList可以把数组类型转换为List类型</li>
+</ul>
+</li>
+</ul>
+<h4 id="arraysaslist使用指南">Arrays.asList()使用指南</h4>
+<ul>
 <li>
-<p>Arrays.asList可以把数组类型转换为List类型</p>
+<p>可以将一个数组转换为一个List集合</p>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">Integer</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="o">{</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">,</span> <span class="n">3</span><span class="o">};</span>
 <span class="n">List</span> <span class="n">list</span> <span class="o">=</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">arr</span><span class="o">);</span>
 <span class="c1">// 另一种方式
 </span><span class="c1"></span><span class="n">List</span> <span class="n">list</span> <span class="o">=</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">,</span> <span class="n">3</span><span class="o">);</span>
 </code></pre></div></li>
-</ul>
+<li>
+<p>将数组转换为集合后，底层还是数组</p>
 </li>
+<li>
+<p>传递的数组必须是数组对象而不是基本类型（泛型方法），因此要使用包装类型数组</p>
+</li>
+<li>
+<p>使用集合的修改方法add()，remove()和clear()会抛出异常，因为返回的是java.util.Arrays的一个内部类，并没有实现（重写）集合的修改方法，只重写了get, set, indexOf, contains, forEach, replaceAll, sort</p>
+</li>
+</ul>
+<h4 id="正确地将数组转为arraylist">正确地将数组转为ArrayList</h4>
+<ul>
+<li>
+<p>简便方法</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">List</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;(</span><span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="s">&#34;a&#34;</span><span class="o">,</span> <span class="s">&#34;b&#34;</span><span class="o">,</span> <span class="s">&#34;c&#34;</span><span class="o">));</span>
+</code></pre></div></li>
+<li>
+<p>使用Java8的Stream</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">Integer</span> <span class="o">[]</span> <span class="n">myArray</span> <span class="o">=</span> <span class="o">{</span> <span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">,</span> <span class="n">3</span> <span class="o">};</span>
+<span class="n">List</span> <span class="n">myList</span> <span class="o">=</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">stream</span><span class="o">(</span><span class="n">myArray</span><span class="o">).</span><span class="na">collect</span><span class="o">(</span><span class="n">Collectors</span><span class="o">.</span><span class="na">toList</span><span class="o">());</span>
+
+<span class="c1">//基本类型也可以实现转换（依赖boxed的装箱操作）
+</span><span class="c1"></span><span class="kt">int</span> <span class="o">[]</span> <span class="n">myArray2</span> <span class="o">=</span> <span class="o">{</span> <span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">,</span> <span class="n">3</span> <span class="o">};</span>
+<span class="n">List</span> <span class="n">myList</span> <span class="o">=</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">stream</span><span class="o">(</span><span class="n">myArray2</span><span class="o">).</span><span class="na">boxed</span><span class="o">().</span><span class="na">collect</span><span class="o">(</span><span class="n">Collectors</span><span class="o">.</span><span class="na">toList</span><span class="o">());</span>
+</code></pre></div></li>
+<li>
+<p>使用Java9的List.of()方法</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">Integer</span><span class="o">[]</span> <span class="n">array</span> <span class="o">=</span> <span class="o">{</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">,</span> <span class="n">3</span><span class="o">};</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="n">List</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">array</span><span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">list</span><span class="o">);</span> <span class="cm">/* [1, 2, 3] */</span>
+<span class="cm">/* 不支持基本数据类型 */</span>
+</code></pre></div></li>
 </ul>
 <h3 id="泛型">泛型</h3>
 <p>功能</p>

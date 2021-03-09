@@ -29,7 +29,7 @@
 <meta itemprop="description" content="String与StringBuffer String 特征 Java8中，String内部使用char数组存储数据 Java9后，String类的实现改用了b">
 <meta itemprop="datePublished" content="2020-11-27T03:12:17+08:00" />
 <meta itemprop="dateModified" content="2020-11-27T03:12:17+08:00" />
-<meta itemprop="wordCount" content="1687">
+<meta itemprop="wordCount" content="1877">
 
 
 
@@ -282,6 +282,19 @@
 <li>==是判断两个对象地址是不是相等（因为Java只有按值传递，所以本质比较的都是值），即判断是不是同一个对象（基本数据类型比较值、引用数据类型比较内存地址）</li>
 <li>equals不能比较基本数据类型的变量，equals方法存在Object类中</li>
 <li>类没有覆盖equals方法的话等价于==，类覆盖了equals方法的话可以用来比较两个对象的内容相等</li>
+</ul>
+<p>equals方法造成空指针异常的原因及解决方案</p>
+<ul>
+<li>用值为null的引用类型变量调用equals方法（非静态方法）会抛出异常</li>
+<li>应该使用常量或确认有值的量来调用equals</li>
+<li>或者使用java.util.Objects#equals来进行比较
+<ul>
+<li>Objects.equals(null, &ldquo;Test&rdquo;);</li>
+<li>如果a == null的话a.equals(b)就不会执行，避免空指针异常</li>
+</ul>
+</li>
+<li>null是所有引用类型（Object类型）的默认值</li>
+<li>可以用 == 或 != 操作比较null值</li>
 </ul>
 <h3 id="hashcode">hashCode()</h3>
 <ul>

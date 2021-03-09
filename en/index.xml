@@ -358,6 +358,19 @@
 &lt;li&gt;equals不能比较基本数据类型的变量，equals方法存在Object类中&lt;/li&gt;
 &lt;li&gt;类没有覆盖equals方法的话等价于==，类覆盖了equals方法的话可以用来比较两个对象的内容相等&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;equals方法造成空指针异常的原因及解决方案&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用值为null的引用类型变量调用equals方法（非静态方法）会抛出异常&lt;/li&gt;
+&lt;li&gt;应该使用常量或确认有值的量来调用equals&lt;/li&gt;
+&lt;li&gt;或者使用java.util.Objects#equals来进行比较
+&lt;ul&gt;
+&lt;li&gt;Objects.equals(null, &amp;ldquo;Test&amp;rdquo;);&lt;/li&gt;
+&lt;li&gt;如果a == null的话a.equals(b)就不会执行，避免空指针异常&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;null是所有引用类型（Object类型）的默认值&lt;/li&gt;
+&lt;li&gt;可以用 == 或 != 操作比较null值&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;hashcode&#34;&gt;hashCode()&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;确定对象在哈希表中的索引位置&lt;/li&gt;

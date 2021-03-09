@@ -326,6 +326,21 @@
 &lt;li&gt;Integer.valueOf(123)会使用缓存池中的对象&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;浮点数之间的等值判断，基本数据类型不能用==来比较，包装数据类型不能用equals来判断&lt;/li&gt;
+&lt;li&gt;使用BigDecimal来定义浮点数的值，再进行浮点数的运算操作，主要用于操作大浮点数
+&lt;ul&gt;
+&lt;li&gt;大小比较：a.compareTo(b)&lt;/li&gt;
+&lt;li&gt;保留小数：setScale(n, BigDecimal.ROUND_HALF_DOWN)&lt;/li&gt;
+&lt;li&gt;创建对象：BigDecimal(String)防止精度丢失&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;使用标准
+&lt;ul&gt;
+&lt;li&gt;所有的POJO类属性必须使用包装数据类型&lt;/li&gt;
+&lt;li&gt;RPC方法的返回值和参数必须使用包装数据类型&lt;/li&gt;
+&lt;li&gt;所有的局部变量使用基本数据类型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;object通用方法&#34;&gt;Object通用方法&lt;/h2&gt;
 &lt;h3 id=&#34;equals&#34;&gt;equals&lt;/h3&gt;

@@ -29,7 +29,7 @@
 <meta itemprop="description" content="集合类 概述 为了在程序中保存数目不确定的对象，JDK中提供了一系列特殊的类，这些类可以存储任意类型的对象且长度可变，称为集合，位于java.u">
 <meta itemprop="datePublished" content="2020-11-25T03:12:17+08:00" />
 <meta itemprop="dateModified" content="2020-11-25T03:12:17+08:00" />
-<meta itemprop="wordCount" content="2865">
+<meta itemprop="wordCount" content="3298">
 
 
 
@@ -358,7 +358,21 @@
   <span class="k">for</span><span class="o">(</span><span class="n">Object</span> <span class="n">p</span><span class="o">:</span><span class="n">list</span><span class="o">){</span>
     <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">p</span><span class="o">);</span>
   <span class="o">}</span>
-</code></pre></div><h4 id="set接口">Set接口</h4>
+</code></pre></div><ul>
+<li>
+<p>如果要进行remove操作，可以调用迭代器的remove方法而不是集合类的reomve方法，因为如果列表在任何时间从结构上修改创建迭代器之后，以任何方式除非通过迭代器自身remove/add方法，都会抛出一个ConcurrentModificationException，这就是单线程状态下的fail-fast机制</p>
+</li>
+<li>
+<p>Java8开始，可以使用Collection#removeIf()方法删除满足特定条件的元素</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">    <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">10</span><span class="o">;</span> <span class="o">++</span><span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">removeIf</span><span class="o">(</span><span class="n">filter</span> <span class="o">-&gt;</span> <span class="n">filter</span> <span class="o">%</span> <span class="n">2</span> <span class="o">==</span> <span class="n">0</span><span class="o">);</span> <span class="cm">/* 删除list中的所有偶数 */</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">list</span><span class="o">);</span> <span class="cm">/* [1, 3, 5, 7, 9] */</span>
+</code></pre></div></li>
+</ul>
+<h4 id="set接口">Set接口</h4>
 <p>继承自Collection接口，Collection接口中的方法一致但更加严格</p>
 <ul>
 <li>元素无序</li>
@@ -466,6 +480,21 @@
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">list</span><span class="o">);</span> <span class="cm">/* [1, 2, 3] */</span>
 <span class="cm">/* 不支持基本数据类型 */</span>
 </code></pre></div></li>
+</ul>
+<h4 id="collectiontoarray方法使用">Collection.toArray()方法使用</h4>
+<ul>
+<li>
+<p>泛型方法，如果toArray方法没有传递任何参数则返回Object类型数组</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">String</span> <span class="o">[]</span> <span class="n">s</span><span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[]{</span>
+    <span class="s">&#34;dog&#34;</span><span class="o">,</span> <span class="s">&#34;lazy&#34;</span><span class="o">,</span> <span class="s">&#34;a&#34;</span><span class="o">,</span> <span class="s">&#34;over&#34;</span><span class="o">,</span> <span class="s">&#34;jumps&#34;</span><span class="o">,</span> <span class="s">&#34;fox&#34;</span><span class="o">,</span> <span class="s">&#34;brown&#34;</span><span class="o">,</span> <span class="s">&#34;quick&#34;</span><span class="o">,</span> <span class="s">&#34;A&#34;</span>
+<span class="o">};</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">s</span><span class="o">);</span>
+<span class="n">Collections</span><span class="o">.</span><span class="na">reverse</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
+<span class="n">s</span><span class="o">=</span><span class="n">list</span><span class="o">.</span><span class="na">toArray</span><span class="o">(</span><span class="k">new</span> <span class="n">String</span><span class="o">[</span><span class="n">0</span><span class="o">]);</span><span class="c1">//没有指定类型的话会报错
+</span></code></pre></div></li>
+<li>
+<p>由于JVM优化，new String[0]作为Collection.toArray()方法的参数使用，是作为一个模板作用，指定了返回数组的类型，0为了节省空间</p>
+</li>
 </ul>
 <h3 id="泛型">泛型</h3>
 <p>功能</p>

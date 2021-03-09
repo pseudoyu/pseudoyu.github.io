@@ -29,7 +29,7 @@
 <meta itemprop="description" content="集合类 概述 为了在程序中保存数目不确定的对象，JDK中提供了一系列特殊的类，这些类可以存储任意类型的对象且长度可变，称为集合，位于java.u">
 <meta itemprop="datePublished" content="2020-11-25T03:12:17+08:00" />
 <meta itemprop="dateModified" content="2020-11-25T03:12:17+08:00" />
-<meta itemprop="wordCount" content="3298">
+<meta itemprop="wordCount" content="5264">
 
 
 
@@ -174,18 +174,77 @@
 </li>
 </ul>
 </li>
-<li>LinkedList：基于双向链表实现，只能顺序访问，但是可以快速地在链表中间插入和删除元素，也可以用作栈、队列和双向队列</li>
+<li>LinkedList：基于双向链表实现（JDK1.6之前为循环链表，JDK1.7取消了循环），只能顺序访问，但是可以快速地在链表中间插入和删除元素，也可以用作栈、队列和双向队列</li>
+<li>ArrayList和LinkedList区别
+<ul>
+<li>都不同步，不保证线程安全</li>
+<li>ArrayList底层使用Object数组，LinkedList使用双向链表
+<ul>
+<li>双向链表包含两个指针，一个prev指向前一个节点，一个next指向后一个节点</li>
+<li>双向循环链表最后一个节点的next指向head，而head的prev指向最后一个节点，构成一个环</li>
+</ul>
+</li>
+<li>LinkedList不支持高效随机元素访问，ArrayList支持</li>
+<li>ArrayList空间浪费在list列表结尾会预留一些空间，而LinkedList每一个元素都需要消耗币ArrayList更多的空间</li>
+</ul>
+</li>
 <li>Vector：与ArrayList类似，但是是线程安全的</li>
+<li>RandomAccess接口：标识实现这个接口的类具有随机访问功能，如ArrayList</li>
 </ul>
 </li>
 <li>Set
 <ul>
-<li>HashSet：基于哈希表实现，支持快速查找，但不支持有序性操作，并且没有插入顺序信息（用Iterator遍历的结果不确定）
+<li>HashSet：基于HashMap实现，支持快速查找，但不支持有序性操作，并且没有插入顺序信息（用Iterator遍历的结果不确定）
 <ul>
+<li>实现Set接口，仅存储对象，调用add()方法向Set中添加元素</li>
+<li>使用成员对象来计算hashcode值</li>
 <li>LinkedHashSet：具有HashSet的查找效率，并且内部使用双向链表来维护元素的插入顺序。</li>
 </ul>
 </li>
 <li>TreeSet：基于红黑树实现，支持有序性操作，查找效率不如HashSet（O(1)），为O(Log N)</li>
+<li>无序性是指存储的数据在底层数组中并非按照数组索引的顺序添加，而是根据数据的哈希值决定的</li>
+<li>不可重复性是指添加到元素按照equals判断时返回false</li>
+<li>Comparable和Comparator
+<ul>
+<li>
+<p>一般需要对一个集合使用自定义排序时，需要重写compareTo或compare方法</p>
+</li>
+<li>
+<p>如果需要对一个集合使用两种排序，可以重写compareTo，使用自制的Comparator方法或者以两个Comparator来实现</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// 定制排序的用法
+</span><span class="c1"></span><span class="n">Collections</span><span class="o">.</span><span class="na">sort</span><span class="o">(</span><span class="n">arrayList</span><span class="o">,</span> <span class="k">new</span> <span class="n">Comparator</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;()</span> <span class="o">{</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">compare</span><span class="o">(</span><span class="n">Integer</span> <span class="n">o1</span><span class="o">,</span> <span class="n">Integer</span> <span class="n">o2</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">o2</span><span class="o">.</span><span class="na">compareTo</span><span class="o">(</span><span class="n">o1</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">});</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;定制排序后：&#34;</span><span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">arrayList</span><span class="o">);</span>
+</code></pre></div></li>
+<li>
+<p>重写compareTo方法实现按年龄来排序</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// person对象没有实现Comparable接口，所以必须实现，这样才不会出错，才可以使treemap中的数据按顺序排列
+</span><span class="c1">// 前面一个例子的String类已经默认实现了Comparable接口，详细可以查看String类的API文档，另外其他
+</span><span class="c1">// 像Integer类等都已经实现了Comparable接口，所以不需要另外实现了
+</span><span class="c1"></span><span class="kd">public</span>  <span class="kd">class</span> <span class="nc">Person</span> <span class="kd">implements</span> <span class="n">Comparable</span><span class="o">&lt;</span><span class="n">Person</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="cm">/**
+</span><span class="cm">    * T重写compareTo方法实现按年龄来排序
+</span><span class="cm">    */</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">compareTo</span><span class="o">(</span><span class="n">Person</span> <span class="n">o</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">age</span> <span class="o">&gt;</span> <span class="n">o</span><span class="o">.</span><span class="na">getAge</span><span class="o">())</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="n">1</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">age</span> <span class="o">&lt;</span> <span class="n">o</span><span class="o">.</span><span class="na">getAge</span><span class="o">())</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="o">-</span><span class="n">1</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">0</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Queue
@@ -205,6 +264,7 @@
 </li>
 <li>HashMap：基于哈希表实现
 <ul>
+<li>多线程下使用容易造成数据丢失等问题</li>
 <li>存储结构
 <ul>
 <li>包含一个Entry类型的数组table，存放键值对（hashCode，K，V，next）</li>
@@ -212,7 +272,7 @@
 <li>头插式进行</li>
 </ul>
 </li>
-<li>JDK1.8开始，桶的链表长度大于8时会转换为红黑树</li>
+<li>JDK1.8开始，桶的链表长度大于8时会转换为红黑树，但如果当前数据长度小于64则会优先选择数组扩容</li>
 <li>查找
 <ul>
 <li>计算键值所在的桶</li>
@@ -245,7 +305,81 @@
 </li>
 </ul>
 </li>
-<li>TreeMap：基于红黑树实现</li>
+<li>TreeMap
+<ul>
+<li>基于红黑树实现</li>
+<li>实现了NavigableMap接口和SortedMap接口
+<ul>
+<li>Navigable接口让TreeMap有了对集合中的元素搜索的能力</li>
+<li>SortMap接口让TreeMap有了对集合中的元素根据键排序的能力，默认是按照key的升序排序</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>HashMap和HashTable的区别
+<ul>
+<li>HashMap线程不安全，HashTable线程安全（经过synchronized修饰）</li>
+<li>HashMap效率高一点</li>
+<li>HashMap可以拥有一个null键和多个null值，而HashTable不允许，不然会抛出NullPointerException</li>
+<li>初始值
+<ul>
+<li>HashTable创建默认大小为11，每次扩充为2n+1；HashMap默认大小为12，每次扩充为两倍</li>
+<li>创建时如果给了初始值，HashTable直接使用，而HashMap则扩充为2的幂次方大小</li>
+</ul>
+</li>
+<li>底层数据结构
+<ul>
+<li>HashMap在JDK1.8之后解决哈希冲突有了较大变化，当链表长度大于8时，将链表转为红黑树以减少搜索时间</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>ConcurrentHashMap和HashTable的区别
+<ul>
+<li>
+<p>HashTable采取数组+链表，而JDK1.8之后的ConcurrentHashMap采取分段的数组+链表/红黑树</p>
+</li>
+<li>
+<p>HashTable使用synchronized来保证线程安全，效率比较低（同一把锁，存在竞争）</p>
+</li>
+<li>
+<p>ConcurrentHashMap采用segment分段锁，每一把锁只锁容器其中一部分数据，多线程访问容器中不同数据段的数据，就不会存在锁竞争；JDK1.8之后摒弃了Segment分段锁，而是直接使用Node数组+链表+红黑树的形式，并发控制使用了synchronized和CAS（CompareAndSet，先进行比较再修改，对应着一条硬件指令，虽然有多个步骤，但是操作系统保证其原子性）来操作</p>
+<ul>
+<li>synchronized只锁定当前链表或红黑书的首节点，只要哈希不冲突，就不会产生并发，提升效率</li>
+</ul>
+</li>
+<li>
+<p>CAS</p>
+<ul>
+<li>由于采用这种 CAS 机制是没有对方法进行加锁的，所以，所有的线程都可以进入 increment() 这个方法，假如进入这个方法的线程太多，就会出现一个问题：每次有线程要执行第三个步骤的时候，i 的值老是被修改了，所以线程又到回到第一步继续重头再来</li>
+<li>为了解决这个问题，Java8 引入了一个 cell[] 数组，如果有 100 个线程要对 i 进行自增操作的话，这个时候，冲突就会大大增加，系统就会把这些线程分配到不同的 cell 数组元素去</li>
+<li>在 Java 中，也是提供了这种 CAS 的原子类，例如
+<ul>
+<li>AtomicBoolean</li>
+<li>AtomicInteger</li>
+<li>AtomicLong</li>
+<li>AtomicReference</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">increment</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">do</span><span class="o">{</span>
+        <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">i</span><span class="o">;</span>
+        <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="n">1</span><span class="o">;</span>
+    <span class="o">}</span><span class="k">while</span> <span class="o">(</span><span class="n">compareAndSet</span><span class="o">(</span><span class="n">i</span><span class="o">,</span> <span class="n">k</span><span class="o">,</span> <span class="n">j</span><span class="o">))</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CASTest</span> <span class="o">{</span>
+    <span class="kd">static</span> <span class="n">AtomicInteger</span> <span class="n">i</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AtomicInteger</span><span class="o">(</span><span class="n">0</span><span class="o">);</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">increment</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// 自增 1并返回之后的结果
+</span><span class="c1"></span>        <span class="n">i</span><span class="o">.</span><span class="na">incrementAndGet</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

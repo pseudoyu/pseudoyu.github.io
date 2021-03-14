@@ -26,6 +26,15 @@
     </item>
     
     <item>
+      <title>Java学习笔记 - 多线程</title>
+      <link>https://www.pseudoyu.com/en/2020/11/29/java_note_concurrent_practice/</link>
+      <pubDate>Sun, 29 Nov 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/11/29/java_note_concurrent_practice/</guid>
+      <description>多线程 线程、程序、进程的基本概念 线程 比进程更小的执行单位，一个进程在执行的过程中可以产生多个线程 同类的多个线程共享同一块内存空间和一组系统资</description>
+    </item>
+    
+    <item>
       <title>Java学习笔记 - 常用方法</title>
       <link>https://www.pseudoyu.com/en/2020/11/27/java_note_methods/</link>
       <pubDate>Fri, 27 Nov 2020 03:12:17 +0800</pubDate>

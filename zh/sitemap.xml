@@ -491,4 +491,10 @@
     <priority>0.5</priority>
   </url>
   
+  <url>
+    <loc>https://www.pseudoyu.com/zh/1/01/01/java_note_concurrent_practice/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
 </urlset>

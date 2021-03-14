@@ -6,7 +6,16 @@
     <description>Recent content in Programming on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 05 Dec 2020 03:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/category/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Dec 2020 03:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/category/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java学习笔记 - 线程组和线程优先级</title>
+      <link>https://www.pseudoyu.com/en/2020/12/07/java_note_concurrent_threadgroup/</link>
+      <pubDate>Mon, 07 Dec 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/12/07/java_note_concurrent_threadgroup/</guid>
+      <description>线程组和线程优先级 线程组 Java中的ThreadGroup表示线程组，可使用线程组对线程进行批量控制；每个线程必须存在于一个线程组中，不能独</description>
+    </item>
+    
     <item>
       <title>Java学习笔记 - 多线程入门类和接口</title>
       <link>https://www.pseudoyu.com/en/2020/12/05/java_note_concurrent_practice/</link>

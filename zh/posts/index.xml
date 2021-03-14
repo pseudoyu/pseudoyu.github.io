@@ -17,6 +17,15 @@
     </item>
     
     <item>
+      <title>Java学习笔记 - 线程组和线程优先级</title>
+      <link>https://www.pseudoyu.com/zh/2020/12/07/java_note_concurrent_threadgroup/</link>
+      <pubDate>Mon, 07 Dec 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/12/07/java_note_concurrent_threadgroup/</guid>
+      <description>线程组和线程优先级 线程组 Java中的ThreadGroup表示线程组，可使用线程组对线程进行批量控制；每个线程必须存在于一个线程组中，不能独</description>
+    </item>
+    
+    <item>
       <title>Java学习笔记 - 多线程入门类和接口</title>
       <link>https://www.pseudoyu.com/zh/2020/12/05/java_note_concurrent_practice/</link>
       <pubDate>Sat, 05 Dec 2020 03:12:17 +0800</pubDate>
@@ -187,17 +196,6 @@ Datasets  Criteo Dataset. It is a famous industry benchmarking dataset for devel
       <description>ECOM6013 E-Commerce Technologies Topic 7 E-Payment Systems Payment System Stakeholders&#39; Priorities
  Customer  Low-risk Low-cost Refutable Convenience Reliable   Merchants  Low-risks Low-cost Irrefutable Secure Reliable   Financial intermediaries  Secure Low-risk Maximizing profit   Government regulators  Secure Trust Protecting participants and enforcing reporting    Type of Payment Systems
  Cash Cheque transfer Credit card Stored value Accumulating balance  B2C Payment System</description>
-    </item>
-    
-    <item>
-      <title>ECOM6013 Topic 6 E-Commerce Security</title>
-      <link>https://www.pseudoyu.com/zh/2020/09/26/ecom6013_topic6/</link>
-      <pubDate>Sat, 26 Sep 2020 15:46:28 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/09/26/ecom6013_topic6/</guid>
-      <description>ECOM6013 E-Commerce Technologies Topic 6 E-Commerce Security Good E-Commerce Security
- Highest degree of security  New technologies Organizational policies and procedures Industry standards and government law   Other factors  Cost of security vs. potential loss Security often breaks at weakest link    The Tense Between Security and Other Values
- Security vs. Easy of use  More Secure -&amp;gt; More difficult to use + slower   Security vs.</description>
     </item>
     
   </channel>

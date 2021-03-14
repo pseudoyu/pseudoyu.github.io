@@ -124,6 +124,164 @@
     </item>
     
     <item>
+      <title>Java学习笔记 - 多线程入门类和接口</title>
+      <link>https://www.pseudoyu.com/en/2020/12/05/java_note_concurrent_practice/</link>
+      <pubDate>Sat, 05 Dec 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/12/05/java_note_concurrent_practice/</guid>
+      
+        <description>&lt;h2 id=&#34;多线程入门类和接口&#34;&gt;多线程入门类和接口&lt;/h2&gt;
+&lt;h3 id=&#34;java中使用多线程的方法&#34;&gt;Java中使用多线程的方法&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;由于Java单继承多实现的特性，Runnable接口用起来比Thread更灵活&lt;/li&gt;
+&lt;li&gt;Runnable接口更符合面向对象，将线程单独进行对象的封装&lt;/li&gt;
+&lt;li&gt;Runnable接口降低了线程对象和线程任务的耦合性&lt;/li&gt;
+&lt;li&gt;如果使用线程时不需要使用Thread类的诸多方法，Runnable接口更加轻量&lt;/li&gt;
+&lt;li&gt;Thread类和Runnable接口创建新线程的run方法是没有返回值的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;继承thread类并重写run方法&#34;&gt;继承Thread类，并重写run方法&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Demo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;MyThread&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Thread&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+        &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;MyThread&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;Thread&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;myThread&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MyThread&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;myThread&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;构造方法是简单调用一个私有的init方法来实现私有化&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;g：线程组&lt;/li&gt;
+&lt;li&gt;target：指定要执行的任务&lt;/li&gt;
+&lt;li&gt;name：线程的名字&lt;/li&gt;
+&lt;li&gt;acc：初始化私有变量&lt;/li&gt;
+&lt;li&gt;inheritThreadLocals：可继承的ThreadLocal&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;大多数情况下直接调用下面方法&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;Thread&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Runnable&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;target&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;Thread&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Runnable&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;target&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;常用方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;currentThread()：返回正在执行的线程对象的引用&lt;/li&gt;
+&lt;li&gt;start()：开始执行线程的方法（JVM调用线程内的run()方法）&lt;/li&gt;
+&lt;li&gt;yield()：当前线程愿意让出对当前处理器的占用（但调度时可能继续运行）&lt;/li&gt;
+&lt;li&gt;sleep()：使当前线程睡眠一段时间&lt;/li&gt;
+&lt;li&gt;join()：使当前线程等待另一个线程执行完毕之后再继续执行，调用了Object类的wait方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;实现runnable接口的run方法&#34;&gt;实现Runnable接口的run方法&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@FunctionalInterface&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;interface&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Runnable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;abstract&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Demo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;MyThread&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;implements&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Runnable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+        &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;MyThread&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+
+        &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Thread&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MyThread&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+
+        &lt;span class=&#34;c1&#34;&gt;// Java 8 函数式编程，可以省略MyThread类
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Thread&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Java 8 匿名内部类&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;}).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;callable接口&#34;&gt;Callable接口&lt;/h4&gt;
+&lt;p&gt;与Runnable类似，是只有一个抽象方法的函数式接口，但是提供返回值并且支持泛型&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@FunctionalInterface&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;interface&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Callable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;V&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;V&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;call&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;throws&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Exception&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Callable一般配合线程池工具ExecutorService使用，ExecutorService可以使用submit方法来让一个Callable接口执行，会返回一个Future，后续可以通过Future的get方法得到结果&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 自定义Callable
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Task&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;implements&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Callable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;{&lt;/span&gt;
+    &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;call&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;throws&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Exception&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;// 模拟计算需要一秒
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;Thread&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;sleep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;1000&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[])&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;throws&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Exception&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;// 使用
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;ExecutorService&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;executor&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Executors&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;newCachedThreadPool&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;Task&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;task&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Task&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;Future&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;executor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;submit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;task&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;// 注意调用get方法会阻塞当前线程，直到得到结果。
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;c1&#34;&gt;// 所以实际编码中建议使用可以设置超时时间的重载get方法。
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt; 
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;// 输出结果：2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;future接口&#34;&gt;Future接口&lt;/h4&gt;
+&lt;p&gt;只有几个比较简单的方法&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;abstract&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;interface&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Future&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;V&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;abstract&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;boolean&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;cancel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;boolean&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;paramBoolean&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;abstract&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;boolean&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;isCancelled&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;abstract&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;boolean&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;isDone&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;abstract&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;V&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;throws&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;InterruptedException&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ExecutionException&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;abstract&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;V&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;long&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;paramLong&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TimeUnit&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;paramTimeUnit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+            &lt;span class=&#34;kd&#34;&gt;throws&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;InterruptedException&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ExecutionException&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TimeoutException&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;cancel方法试图取消一个线程的执行&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;任务可能已完成、已取消或不可取消，因此有可能失败&lt;/li&gt;
+&lt;li&gt;返回的是是否取消成功的状态&lt;/li&gt;
+&lt;li&gt;参数paramBoolean表示是否采用中断的方式取消线程执行&lt;/li&gt;
+&lt;li&gt;如果为了可取消性但是又不提供可用的结果，则可以声明&lt;code&gt;Future&amp;lt;?&amp;gt;&lt;/code&gt;形式类型，并返回null作为底层任务的结果&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;futuretask类&#34;&gt;FutureTask类&lt;/h4&gt;
+&lt;p&gt;实现了RunnableFuture接口（同时继承了Runnable接口和Future接口），实现了cancel，get，isDone等方法&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 自定义Callable，与上面一样
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Task&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;implements&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Callable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;{&lt;/span&gt;
+    &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;call&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;throws&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Exception&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;// 模拟计算需要一秒
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;Thread&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;sleep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;1000&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[])&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;throws&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Exception&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;// 使用
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;ExecutorService&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;executor&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Executors&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;newCachedThreadPool&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;FutureTask&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;futureTask&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FutureTask&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Task&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;executor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;submit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;futureTask&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;futureTask&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;调用submit方法是没有返回值的，实际上调用的是submit(Runnable task)方法；这里使用FutureTask直接用get取值。&lt;/p&gt;
+&lt;p&gt;很多高并发的环境下，有可能Callable和FutureTask会创建多次，FutureTask能够在高并发环境下确保任务只执行一次。&lt;/p&gt;
+&lt;p&gt;状态&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;cm&#34;&gt;/**
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;  *
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;  * state可能的状态转变路径如下：
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;  * NEW -&amp;gt; COMPLETING -&amp;gt; NORMAL
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;  * NEW -&amp;gt; COMPLETING -&amp;gt; EXCEPTIONAL
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;  * NEW -&amp;gt; CANCELLED
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;  * NEW -&amp;gt; INTERRUPTING -&amp;gt; INTERRUPTED
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;  */&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;volatile&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;state&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;NEW&lt;/span&gt;          &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;COMPLETING&lt;/span&gt;   &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;NORMAL&lt;/span&gt;       &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;EXCEPTIONAL&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CANCELLED&lt;/span&gt;    &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;INTERRUPTING&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;INTERRUPTED&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      
+    </item>
+    
+    <item>
       <title>Java学习笔记 - 文件与I/O流</title>
       <link>https://www.pseudoyu.com/en/2020/12/02/java_note_io/</link>
       <pubDate>Wed, 02 Dec 2020 03:12:17 +0800</pubDate>
@@ -4795,356 +4953,6 @@ Select cheapest neighbor as currentState and goto step2
 &lt;li&gt;Cybercurrencies / digital currency&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>ECOM6013 Topic 6 E-Commerce Security</title>
-      <link>https://www.pseudoyu.com/en/2020/09/26/ecom6013_topic6/</link>
-      <pubDate>Sat, 26 Sep 2020 15:46:28 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/09/26/ecom6013_topic6/</guid>
-      
-        <description>&lt;h1 id=&#34;ecom6013-e-commerce-technologies&#34;&gt;ECOM6013 E-Commerce Technologies&lt;/h1&gt;
-&lt;h2 id=&#34;topic-6-e-commerce-security&#34;&gt;Topic 6 E-Commerce Security&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Good E-Commerce Security&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Highest degree of security
-&lt;ul&gt;
-&lt;li&gt;New technologies&lt;/li&gt;
-&lt;li&gt;Organizational policies and procedures&lt;/li&gt;
-&lt;li&gt;Industry standards and government law&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Other factors
-&lt;ul&gt;
-&lt;li&gt;Cost of security vs. potential loss&lt;/li&gt;
-&lt;li&gt;Security often breaks at weakest link&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;The Tense Between Security and Other Values&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Security vs. Easy of use
-&lt;ul&gt;
-&lt;li&gt;More Secure -&amp;gt; More difficult to use + slower&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Security vs. Desire of individuals to act anonmously&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Basic E-Commerce Security Issues and Landscape&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;E-Commerce security requirements
-&lt;ul&gt;
-&lt;li&gt;Authentication (verify the real identity)&lt;/li&gt;
-&lt;li&gt;Authorization (determine the entity&amp;rsquo;s access)&lt;/li&gt;
-&lt;li&gt;Auditing&lt;/li&gt;
-&lt;li&gt;Availability&lt;/li&gt;
-&lt;li&gt;Nonrepudiation (assurance that trading partners can&amp;rsquo;t falsely deny their purchase or transaction)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Risk (a vulnerability will be known and used)&lt;/li&gt;
-&lt;li&gt;Social engineering (non-technical attack, trick users to do some certain actions)&lt;/li&gt;
-&lt;li&gt;Spam&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;E-Commerce of Today&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Threats
-&lt;ul&gt;
-&lt;li&gt;Money thefts&lt;/li&gt;
-&lt;li&gt;Identity thefts&lt;/li&gt;
-&lt;li&gt;Malware&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Solutions
-&lt;ul&gt;
-&lt;li&gt;Authentication&lt;/li&gt;
-&lt;li&gt;Intrusion checking&lt;/li&gt;
-&lt;li&gt;Firewalls&lt;/li&gt;
-&lt;li&gt;Education&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Security Threats in the E-Commerce Environment&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Three key points of vulnerability
-&lt;ul&gt;
-&lt;li&gt;Client&lt;/li&gt;
-&lt;li&gt;Server&lt;/li&gt;
-&lt;li&gt;Communication pipeline (network channels)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/vulnerable_points_in_ecommerce.png&#34; alt=&#34;vulnerable_points_in_ecommerce&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Most Common Security Threats&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Malicious code
-&lt;ul&gt;
-&lt;li&gt;Viruses&lt;/li&gt;
-&lt;li&gt;Worms&lt;/li&gt;
-&lt;li&gt;Ransomeware&lt;/li&gt;
-&lt;li&gt;Trojan horses&lt;/li&gt;
-&lt;li&gt;Backdoors&lt;/li&gt;
-&lt;li&gt;Bots, botnets&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Unwanted programs
-&lt;ul&gt;
-&lt;li&gt;Browser parasites&lt;/li&gt;
-&lt;li&gt;Adware&lt;/li&gt;
-&lt;li&gt;Spyware&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Phishing
-&lt;ul&gt;
-&lt;li&gt;Deceptive online attack to obtain confidential information&lt;/li&gt;
-&lt;li&gt;Social engineering, e-mail scams, spoofing legitimate websites&lt;/li&gt;
-&lt;li&gt;Used for identity fraud and theft&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Hacking and cybervandalism
-&lt;ul&gt;
-&lt;li&gt;Hackers vs. Crackers&lt;/li&gt;
-&lt;li&gt;Cybervandalism (intentionally disrupting, defacing, destroying websites)&lt;/li&gt;
-&lt;li&gt;Hacktivism&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Data breach&lt;/li&gt;
-&lt;li&gt;Credit card fraud/theft&lt;/li&gt;
-&lt;li&gt;Spoofing&lt;/li&gt;
-&lt;li&gt;Pharming&lt;/li&gt;
-&lt;li&gt;Spam / junk websites&lt;/li&gt;
-&lt;li&gt;Denial of sevices (DoS) attack (useless traffic to overwhelm network)&lt;/li&gt;
-&lt;li&gt;Distributed denial of service (DDoS) attack (multiple computers to attack target network)&lt;/li&gt;
-&lt;li&gt;Sniffing (eavesdropping program that monitors information traveling over a network)&lt;/li&gt;
-&lt;li&gt;Insider jobs
-&lt;ul&gt;
-&lt;li&gt;Single financial threats&lt;/li&gt;
-&lt;li&gt;Poorly designed security policy and server / client software&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Social network issues&lt;/li&gt;
-&lt;li&gt;Mobile platform issues&lt;/li&gt;
-&lt;li&gt;Cloud security issues&lt;/li&gt;
-&lt;li&gt;IoT security issues&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;The Information Assurance Model and Defense Objectives&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;CIA security triad
-&lt;ul&gt;
-&lt;li&gt;Confidentiality&lt;/li&gt;
-&lt;li&gt;Integrity&lt;/li&gt;
-&lt;li&gt;Availability&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Three Dimensions in Internet Security&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Integrity&lt;/li&gt;
-&lt;li&gt;Nonrepudiation&lt;/li&gt;
-&lt;li&gt;Authenticity&lt;/li&gt;
-&lt;li&gt;Confidentiality&lt;/li&gt;
-&lt;li&gt;Privacy&lt;/li&gt;
-&lt;li&gt;Availability&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Technology Solutions&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Protecting internet communications
-&lt;ul&gt;
-&lt;li&gt;Cryptography&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Securing channels of communication
-&lt;ul&gt;
-&lt;li&gt;SSL, TLS
-&lt;ul&gt;
-&lt;li&gt;Establishes a secure, negotiated client-server session in which URL of requested document, along with contents, is encrypted&lt;/li&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ssl_protect.png&#34; alt=&#34;ssl_protect&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;S-HTTP
-&lt;ul&gt;
-&lt;li&gt;Provides a secure message-oriented communications protocol designed for use in conjunction with HTTP&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;VPNs
-&lt;ul&gt;
-&lt;li&gt;Allows remote users to securely access internal network via the Internet, using Point-to-Point Tunneling Protocol (PPTP)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Wi-Fi&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Protecting networks
-&lt;ul&gt;
-&lt;li&gt;Firewalls&lt;/li&gt;
-&lt;li&gt;Proxy servers&lt;/li&gt;
-&lt;li&gt;Intrusion Detection System (IDS)&lt;/li&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/firewall.png&#34; alt=&#34;firewall&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Protecting servers and clients
-&lt;ul&gt;
-&lt;li&gt;OS security
-&lt;ul&gt;
-&lt;li&gt;Upgrades&lt;/li&gt;
-&lt;li&gt;Patches&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Anti-virus software
-&lt;ul&gt;
-&lt;li&gt;Easiest and least expensive way to prevent threats to system integrity&lt;/li&gt;
-&lt;li&gt;Requires daily updates&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Managing Risks&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Technology&lt;/li&gt;
-&lt;li&gt;Effective management policies&lt;/li&gt;
-&lt;li&gt;Public laws and active enforcement&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;A Security Plan: Management Policies&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Risk assessment&lt;/li&gt;
-&lt;li&gt;Security policy&lt;/li&gt;
-&lt;li&gt;Implementation plan
-&lt;ul&gt;
-&lt;li&gt;Security organization&lt;/li&gt;
-&lt;li&gt;Access controls&lt;/li&gt;
-&lt;li&gt;Authentication procedures, including biometrics&lt;/li&gt;
-&lt;li&gt;Authorization policies, authorization management systems&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Security audit&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/security_plan.png&#34; alt=&#34;security_plan&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Basic Concepts of User Authentication&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Something you know
-&lt;ul&gt;
-&lt;li&gt;Password&lt;/li&gt;
-&lt;li&gt;PIN&lt;/li&gt;
-&lt;li&gt;OTP&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Something you have
-&lt;ul&gt;
-&lt;li&gt;Physical key&lt;/li&gt;
-&lt;li&gt;Token&lt;/li&gt;
-&lt;li&gt;Magnetic card&lt;/li&gt;
-&lt;li&gt;Smartcard&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Something you are
-&lt;ul&gt;
-&lt;li&gt;Fingerprint&lt;/li&gt;
-&lt;li&gt;Voice&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Best use 2 Factors Authentication (2FA)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Encryption&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Transfer data into cipher text readable only by sender and receiver&lt;/li&gt;
-&lt;li&gt;Secures stored information and information transmission&lt;/li&gt;
-&lt;li&gt;Provide 4/6 key dimensions of E-Commerce security
-&lt;ul&gt;
-&lt;li&gt;authentication&lt;/li&gt;
-&lt;li&gt;Confidentiality&lt;/li&gt;
-&lt;li&gt;Message Integrity&lt;/li&gt;
-&lt;li&gt;Nonrepudiation&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Symmetric Key Cryptography&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Sender and receiver use same digital key to encrypt and decrypt message&lt;/li&gt;
-&lt;li&gt;Requires different set of keys for each transaction&lt;/li&gt;
-&lt;li&gt;Strength of encryption
-&lt;ul&gt;
-&lt;li&gt;Length of binary key used to encrypt data&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Standards
-&lt;ul&gt;
-&lt;li&gt;Data Encryption Standard (DES, 1977)&lt;/li&gt;
-&lt;li&gt;Advanced Encryption Standard (AES, 2000)&lt;/li&gt;
-&lt;li&gt;Other standards use keys with up to 2,048 bits&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Public Key Cryptography&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Uses two mathematically related digital keys
-&lt;ul&gt;
-&lt;li&gt;Public key (widely disseminated)&lt;/li&gt;
-&lt;li&gt;Private key (kept secret by owner)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Both keys used to encrypt and decrypt message
-&lt;ul&gt;
-&lt;li&gt;Once key used to encrypt message, same key cannot be used to decrypt message&lt;/li&gt;
-&lt;li&gt;Sender uses recipient’s public key to encrypt message&lt;/li&gt;
-&lt;li&gt;Recipient uses his/her private key to decrypt it&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/public_key_cryptography.png&#34; alt=&#34;public_key_cryptography&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Public Key Encryption Using Digital Signatures and Hash Digests&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Hash function
-&lt;ul&gt;
-&lt;li&gt;Mathematical algorithm (e.g. MD5 and SHA-1) that produces fixed-length number called message or hash digest&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Sender applies hash function to the message and then encrypts the message AND the hash digest with recipient’s public key&lt;/li&gt;
-&lt;li&gt;Sender then encrypts the whole package with sender’s private key, creating digital signature for authenticity, nonrepudiation&lt;/li&gt;
-&lt;li&gt;Recipient first uses sender’s public key to authenticate the message and then the recipient’s private key to decrypt the hash digest and the message&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/public_key_cryptography_digital_signature.png&#34; alt=&#34;public_key_cryptography_digital_signature&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digital Envelop&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Addresses weaknesses of
-&lt;ul&gt;
-&lt;li&gt;Public key encryption (computationally slow)&lt;/li&gt;
-&lt;li&gt;Symmetric key encryption (insecure transmission lines)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Uses symmetric key encryption to encrypt document&lt;/li&gt;
-&lt;li&gt;Uses public key encryption to encrypt and send symmetric key&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/digital_envelop.png&#34; alt=&#34;digital_envelop&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digital Certificates and Public Key Infrastructure (PKI)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Digital certificate
-&lt;ul&gt;
-&lt;li&gt;Name of subjects/company&lt;/li&gt;
-&lt;li&gt;Subject&amp;rsquo;s public key&lt;/li&gt;
-&lt;li&gt;Digital certificate serial number&lt;/li&gt;
-&lt;li&gt;Expiration date, issuance date&lt;/li&gt;
-&lt;li&gt;Digital signature of certification authority (trusted third party institution) that issues certificate&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Public Key Infrastructure (PKI)
-&lt;ul&gt;
-&lt;li&gt;CAs and digital certificate procedures that are accepted by all parties&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/digital_certificate.png&#34; alt=&#34;digital_certificate&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Limits to Encryption Solutions&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Doesn’t protect storage of private key&lt;/li&gt;
-&lt;li&gt;No guarantee that verifying computer of merchant is secure&lt;/li&gt;
-&lt;li&gt;CAs are unregulated, self-selecting organizations&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       

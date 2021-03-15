@@ -17,6 +17,15 @@
     </item>
     
     <item>
+      <title>Java学习笔记 - 线程状态及转化方法</title>
+      <link>https://www.pseudoyu.com/zh/2020/12/09/java_note_concurrent_state/</link>
+      <pubDate>Wed, 09 Dec 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/12/09/java_note_concurrent_state/</guid>
+      <description>线程状态及转化方法 操作系统中的线程状态转换 操作系统线程主要有以下三个状态 就绪状态 READY：线程正在等待使用CPU，经调度程序调用之后可进入</description>
+    </item>
+    
+    <item>
       <title>Java学习笔记 - 线程组和线程优先级</title>
       <link>https://www.pseudoyu.com/zh/2020/12/07/java_note_concurrent_threadgroup/</link>
       <pubDate>Mon, 07 Dec 2020 03:12:17 +0800</pubDate>
@@ -185,17 +194,6 @@ Datasets  Criteo Dataset. It is a famous industry benchmarking dataset for devel
       
       <guid>https://www.pseudoyu.com/zh/2020/10/01/ecom6013_discussion_topic3/</guid>
       <description>Mobile Payment Systems Why has China been an ideal environment to support mobile payment systems? Politically, payment licenses are controlled by government (relative financial institutions) and under strict regulation. So, tech giants like Alibaba who are qualified can increasingly develop their payment business in the early age. Plus, in the early stage of mobile payment, laws and rules are not so completed. Payment platform can utilize smart market strategies (like very high return rate) to attract more new potential users and enhance existing users’ engagement, which is effective in market expanding stage.</description>
-    </item>
-    
-    <item>
-      <title>ECOM6013 Topic 7 E-Payment Systems</title>
-      <link>https://www.pseudoyu.com/zh/2020/09/27/ecom6013_topic7/</link>
-      <pubDate>Sun, 27 Sep 2020 11:30:28 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/09/27/ecom6013_topic7/</guid>
-      <description>ECOM6013 E-Commerce Technologies Topic 7 E-Payment Systems Payment System Stakeholders&#39; Priorities
- Customer  Low-risk Low-cost Refutable Convenience Reliable   Merchants  Low-risks Low-cost Irrefutable Secure Reliable   Financial intermediaries  Secure Low-risk Maximizing profit   Government regulators  Secure Trust Protecting participants and enforcing reporting    Type of Payment Systems
- Cash Cheque transfer Credit card Stored value Accumulating balance  B2C Payment System</description>
     </item>
     
   </channel>

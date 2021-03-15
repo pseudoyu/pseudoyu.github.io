@@ -6,7 +6,16 @@
     <description>Recent content in Programming on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 07 Dec 2020 03:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/category/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Dec 2020 03:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/category/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java学习笔记 - 线程状态及转化方法</title>
+      <link>https://www.pseudoyu.com/en/2020/12/09/java_note_concurrent_state/</link>
+      <pubDate>Wed, 09 Dec 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/12/09/java_note_concurrent_state/</guid>
+      <description>线程状态及转化方法 操作系统中的线程状态转换 操作系统线程主要有以下三个状态 就绪状态 READY：线程正在等待使用CPU，经调度程序调用之后可进入</description>
+    </item>
+    
     <item>
       <title>Java学习笔记 - 线程组和线程优先级</title>
       <link>https://www.pseudoyu.com/en/2020/12/07/java_note_concurrent_threadgroup/</link>

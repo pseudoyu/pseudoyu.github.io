@@ -3,14 +3,13 @@
 <head>
   <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="utf-8">
-  <title>Blockchain学习 - 密码学原理 · Pseudoyu</title>
+  <title>blockchain · Pseudoyu</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="密码学原理 哈希 重要特征 collision resistance 抗碰撞性 哈希碰撞是指当x≠y时，存在H(x)=H(y)，不同的输入映射到哈希表的同一个位置 很难人工创造哈希碰撞 常用" />
-
+  <meta name="description" content="Entrepreneur | Technology lover | Faster learner" />
   <meta name="keywords" content="Hugo, theme, den" />
 
-<link rel="canonical" href="https://www.pseudoyu.com/en/2020/12/12/blockchain_note_cryptography/" />
-<link rel="alternate" href="https://www.pseudoyu.com/zh/2020/12/12/blockchain_note_cryptography/" hreflang="zh">
+<link rel="canonical" href="https://www.pseudoyu.com/en/tag/blockchain/" />
+<link rel="alternate" href="https://www.pseudoyu.com/zh/tag/blockchain/" hreflang="zh">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -18,25 +17,19 @@
 
 
 
-
-<meta property="og:title" content="Blockchain学习 - 密码学原理" />
-<meta property="og:description" content="密码学原理 哈希 重要特征 collision resistance 抗碰撞性 哈希碰撞是指当x≠y时，存在H(x)=H(y)，不同的输入映射到哈希表的同一个位置 很难人工创造哈希碰撞 常用" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.pseudoyu.com/en/2020/12/12/blockchain_note_cryptography/" />
-<meta property="article:published_time" content="2020-12-12T03:12:17+08:00" />
-<meta property="article:modified_time" content="2020-12-12T03:12:17+08:00" />
-<meta itemprop="name" content="Blockchain学习 - 密码学原理">
-<meta itemprop="description" content="密码学原理 哈希 重要特征 collision resistance 抗碰撞性 哈希碰撞是指当x≠y时，存在H(x)=H(y)，不同的输入映射到哈希表的同一个位置 很难人工创造哈希碰撞 常用">
-<meta itemprop="datePublished" content="2020-12-12T03:12:17+08:00" />
-<meta itemprop="dateModified" content="2020-12-12T03:12:17+08:00" />
-<meta itemprop="wordCount" content="420">
+<link href="/en/tag/blockchain/index.xml" rel="alternate" type="application/rss+xml" title="Pseudoyu" />
 
 
-
-<meta itemprop="keywords" content="programming,blockchain," />
+<meta property="og:title" content="blockchain" />
+<meta property="og:description" content="Entrepreneur | Technology lover | Faster learner" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.pseudoyu.com/en/tag/blockchain/" />
+<meta property="og:updated_time" content="2020-12-13T03:12:17+08:00" />
+<meta itemprop="name" content="blockchain">
+<meta itemprop="description" content="Entrepreneur | Technology lover | Faster learner">
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Blockchain学习 - 密码学原理"/>
-<meta name="twitter:description" content="密码学原理 哈希 重要特征 collision resistance 抗碰撞性 哈希碰撞是指当x≠y时，存在H(x)=H(y)，不同的输入映射到哈希表的同一个位置 很难人工创造哈希碰撞 常用"/>
+<meta name="twitter:title" content="blockchain"/>
+<meta name="twitter:description" content="Entrepreneur | Technology lover | Faster learner"/>
 </head>
 <body>
   
@@ -118,32 +111,13 @@
   <div class="row">
     <div class="col-lg-12">
       <div class="header-content">
-        <h1 class="header-title">Blockchain学习 - 密码学原理</h1>
-        <p class="header-date">By
-          pseudoyu /
-        
-        2020-12-12
-          / In categories
-          <a href="https://www.pseudoyu.com/en/category/programming/">Programming</a>
-        </p>
-        
+        <h1 class="header-title text-uppercase">
+          Tag : blockchain
+        </h1>
         <div class="header-underline"></div>
-        
-          <div class="clearfix"></div>
-          <p class="float-right header-tags">
-              <i class="fas fa-tags" aria-hidden="true"></i>
-              <a href="https://www.pseudoyu.com/en/tag/blockchain/">blockchain</a>, 
-                <a href="https://www.pseudoyu.com/en/tag/programming/">programming</a>
-          </p>
-        
-        <div class="clearfix"></div>
-<p class="float-right translations">
-    <i class="fas fa-language" aria-hidden="true"></i>
-    Translations: 
-    <a href="https://www.pseudoyu.com/zh/2020/12/12/blockchain_note_cryptography/">ZH</a>
-</p>
-
-
+        <p class="header-subtitle header-subtitle-homepage">
+        Archives Listed by Tag "blockchain"
+        </p>
       </div>
     </div>
   </div>
@@ -151,71 +125,21 @@
 
   </div>
   <main>
-<div class="container content">
-  <article>
-  <h2 id="密码学原理">密码学原理</h2>
-<h3 id="哈希">哈希</h3>
-<p>重要特征</p>
-<ol>
-<li>collision resistance 抗碰撞性
-<ul>
-<li>哈希碰撞是指当x≠y时，存在H(x)=H(y)，不同的输入映射到哈希表的同一个位置</li>
-<li>很难人工创造哈希碰撞</li>
-<li>常用于文件校验</li>
-<li>MD5是一个流行的哈希函数，但目前已经知道如何制造哈希碰撞</li>
-</ul>
-</li>
-<li>hiding 单向不可逆性
-<ul>
-<li>x → H(x), H(x)很难逆推出x</li>
-<li>条件
-<ul>
-<li>输入空间足够大</li>
-<li>分布尽可能均匀</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>puzzle friendly 哈希值计算不可预测
-<ul>
-<li>很难解决哈希值推导</li>
-<li>易于验证结果正确性</li>
-<li>如POW工作量证明，挖矿试随机数nonce，使得H(block header) ≤ target</li>
-</ul>
-</li>
-</ol>
-<h3 id="加密">加密</h3>
-<p>对称加密</p>
-<ul>
-<li>A使用私钥加密，B使用同一个私钥解密</li>
-<li>私钥的分发存在风险</li>
-</ul>
-<p>非对称加密</p>
-<ul>
-<li>A使用B的公钥进行加密，B使用自己的私钥进行解密</li>
-<li>C也可以使用B的公钥进行加密</li>
-</ul>
-<p>数字签名</p>
-<ul>
-<li>A使用自己的私钥给信息加密</li>
-<li>大家都可以用A的公钥进行验证，防止其他人假冒A</li>
-</ul>
-<p>应用（比特币区块链）</p>
-<ul>
-<li>私钥代表了对比特币的控制权</li>
-<li>交易发起方用私钥对交易（包括转账金额和转账地址）签名，并将签名后的交易和公钥广播</li>
-<li>各节点接收到交易后可以用公钥验证交易是否合法</li>
-<li>整个过程中无需暴露私钥，实现保密</li>
-</ul>
-
-  </article>
-
-  
-  
-  
-
-
+<div class="archive-container">
+    <div class="container content archive">
+      <h2>blockchain</h2>
+        <dl class="row">
+            <dt class="col-md-3">2020-12-13</dt>
+            <dd class="col-md-9"><a href="https://www.pseudoyu.com/en/2020/12/13/blockchain_note_bitcoin/">Blockchain学习 - 比特币</a></dd>
+            <dt class="col-md-3">2020-12-12</dt>
+            <dd class="col-md-9"><a href="https://www.pseudoyu.com/en/2020/12/12/blockchain_note_cryptography/">Blockchain学习 - 密码学原理</a></dd>
+            
+        </dl>
+    </div>
 </div>
+
+
+
 
   </main><div class="footer gradient-2">
   <div class="container footer-container ">

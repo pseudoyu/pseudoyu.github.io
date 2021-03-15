@@ -128,14 +128,14 @@
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/en/2020/12/13/blockchain_note_bitcoin/</loc>
+    <loc>https://www.pseudoyu.com/en/tag/blockchain/</loc>
     <lastmod>2020-12-13T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/en/tag/java/</loc>
+    <loc>https://www.pseudoyu.com/en/2020/12/13/blockchain_note_bitcoin/</loc>
     <lastmod>2020-12-13T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -158,6 +158,13 @@
   <url>
     <loc>https://www.pseudoyu.com/en/2020/12/12/blockchain_note_cryptography/</loc>
     <lastmod>2020-12-12T03:12:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/en/tag/java/</loc>
+    <lastmod>2020-12-09T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

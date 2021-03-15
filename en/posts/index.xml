@@ -28,6 +28,24 @@
     </item>
     
     <item>
+      <title>Blockchain学习 - 比特币</title>
+      <link>https://www.pseudoyu.com/en/2020/12/13/blockchain_note_bitcoin/</link>
+      <pubDate>Sun, 13 Dec 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/12/13/blockchain_note_bitcoin/</guid>
+      <description>比特币的数据结构 哈希指针 Hash Pointers 哈希指针指向一个结构体的哈希值（整个区块+其H()一起算出下一个值） 特征 tamper-evident log 如果这个区块被篡改，则会影响后续所有</description>
+    </item>
+    
+    <item>
+      <title>Blockchain学习 - 密码学原理</title>
+      <link>https://www.pseudoyu.com/en/2020/12/12/blockchain_note_cryptography/</link>
+      <pubDate>Sat, 12 Dec 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/12/12/blockchain_note_cryptography/</guid>
+      <description>密码学原理 哈希 重要特征 collision resistance 抗碰撞性 哈希碰撞是指当x≠y时，存在H(x)=H(y)，不同的输入映射到哈希表的同一个位置 很难人工创造哈希碰撞 常用</description>
+    </item>
+    
+    <item>
       <title>Java学习 - 线程状态及转化方法</title>
       <link>https://www.pseudoyu.com/en/2020/12/09/java_note_concurrent_state/</link>
       <pubDate>Wed, 09 Dec 2020 03:12:17 +0800</pubDate>
@@ -175,27 +193,6 @@ Datasets  Criteo Dataset. It is a famous industry benchmarking dataset for devel
       <guid>https://www.pseudoyu.com/en/2020/10/05/icom6012_topic2/</guid>
       <description>ICOM6012 Internet Infrastructure Technologies Topic 2 The Big Picture The Internet: &amp;ldquo;nuts and bolts&amp;rdquo; view
  Billions of connected computing devices  Host = end system Running network apps Internet of things (IoT)   Packet switches  routers switchers   Communication links  Fiber, copper, radio, satellite Transmission rate: bandwidth   Networks  Collection of devices, routers, switches, links Managed by an organization   Internet: &amp;ldquo;network of networks&amp;rdquo;  Interconnected ISPs   Protocols  Control sending, receiving of messages   Internet standards  RFC: Requests for Comments IETF: Internet Engineering Task Force IEEE: Institute of Electronical &amp;amp; Electronic Engineering    The Internet: a &amp;ldquo;service&amp;rdquo; view</description>
-    </item>
-    
-    <item>
-      <title>COMP7404 Topic 3 Adversarial Search</title>
-      <link>https://www.pseudoyu.com/en/2020/10/05/comp7404_topic3/</link>
-      <pubDate>Mon, 05 Oct 2020 00:30:11 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/05/comp7404_topic3/</guid>
-      <description>COMP7404 Computational Intelligence and Machine Learning Topic 3 Adversarial Search A Multi-agent Competitive Environment
- Other agents are planning against us Goals are in conflict (not necessarily)  Game Definition
- A game can be defined as  s : States s0: Initial state Player(s) : Defines which player has the move Actions(s) : Returns a set of legal moves Result(s,a) : Defines the result of a move TerminalTest(s) : True when game is over, false otherwise Utility(s,p) : Defines the final numeric value for a game that ends in terminal state s for player p   A game tree can be constructed  Nodes are game states and edges are moves    Tic-Tac-Toe Game Tree</description>
-    </item>
-    
-    <item>
-      <title>COMP7404 Topic 2 Beyond Classical Search</title>
-      <link>https://www.pseudoyu.com/en/2020/10/04/comp7404_topic2/</link>
-      <pubDate>Sun, 04 Oct 2020 21:30:11 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/04/comp7404_topic2/</guid>
-      <description>COMP7404 Computational Intelligence and Machine Learning Topic 2 Beyond Classical Search Planning vs Identification
- Planing: sequence of actions  The path to the goal is the important thing Paths have various costs, depths Heuristics to guide, frontier to keep backups   Identification: assignments to variables  The goal itself is important, not the path    Local Search can find solutions faster for specific types of identification problems</description>
     </item>
     
   </channel>

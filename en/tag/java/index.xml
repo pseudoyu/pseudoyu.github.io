@@ -6,7 +6,25 @@
     <description>Recent content in java on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 09 Dec 2020 03:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Dec 2020 03:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blockchain学习 - 比特币</title>
+      <link>https://www.pseudoyu.com/en/2020/12/13/blockchain_note_bitcoin/</link>
+      <pubDate>Sun, 13 Dec 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/12/13/blockchain_note_bitcoin/</guid>
+      <description>比特币的数据结构 哈希指针 Hash Pointers 哈希指针指向一个结构体的哈希值（整个区块+其H()一起算出下一个值） 特征 tamper-evident log 如果这个区块被篡改，则会影响后续所有</description>
+    </item>
+    
+    <item>
+      <title>Blockchain学习 - 密码学原理</title>
+      <link>https://www.pseudoyu.com/en/2020/12/12/blockchain_note_cryptography/</link>
+      <pubDate>Sat, 12 Dec 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/12/12/blockchain_note_cryptography/</guid>
+      <description>密码学原理 哈希 重要特征 collision resistance 抗碰撞性 哈希碰撞是指当x≠y时，存在H(x)=H(y)，不同的输入映射到哈希表的同一个位置 很难人工创造哈希碰撞 常用</description>
+    </item>
+    
     <item>
       <title>Java学习 - 线程状态及转化方法</title>
       <link>https://www.pseudoyu.com/en/2020/12/09/java_note_concurrent_state/</link>

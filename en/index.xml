@@ -412,6 +412,350 @@
     </item>
     
     <item>
+      <title>Blockchain学习 - 比特币</title>
+      <link>https://www.pseudoyu.com/en/2020/12/13/blockchain_note_bitcoin/</link>
+      <pubDate>Sun, 13 Dec 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/12/13/blockchain_note_bitcoin/</guid>
+      
+        <description>&lt;h2 id=&#34;比特币的数据结构&#34;&gt;比特币的数据结构&lt;/h2&gt;
+&lt;h3 id=&#34;哈希指针-hash-pointers&#34;&gt;哈希指针 Hash Pointers&lt;/h3&gt;
+&lt;p&gt;哈希指针指向一个结构体的哈希值（整个区块+其H()一起算出下一个值）&lt;/p&gt;
+&lt;p&gt;特征&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;tamper-evident log&lt;/li&gt;
+&lt;li&gt;如果这个区块被篡改，则会影响后续所有区块，最终导致和本地存储的哈希指针对不上&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;默克尔树-merkle-tree&#34;&gt;默克尔树 Merkle Tree&lt;/h3&gt;
+&lt;p&gt;比特币中，每个数据块其实是一种交易transaction&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;区块
+&lt;ul&gt;
+&lt;li&gt;Block header 块头：有根哈希值，没有交易具体内容&lt;/li&gt;
+&lt;li&gt;Block body 块身：有交易列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Merkle Tree&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;节点类型
+&lt;ul&gt;
+&lt;li&gt;Full Node 全节点：保存Block header和Block body&lt;/li&gt;
+&lt;li&gt;Light Node 轻节点：只保存Block Header，如手机上的比特币钱包&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;只要存放root hash，就能检测出树中任意节点的修改&lt;/li&gt;
+&lt;li&gt;Merkle proof：如何向轻节点证明某个交易写入区块链（复杂度为O(logN)，Proof of Membership）&lt;/li&gt;
+&lt;li&gt;Proof of non-membership
+&lt;ul&gt;
+&lt;li&gt;遍历验证，复杂度为O(n)&lt;/li&gt;
+&lt;li&gt;可以对叶节点按哈希值大小进行排序，用二分法对相邻的数据块分别向上取哈希值，直到root hash验证，复杂度为O(logN)，称为sorted merkle tree，比特币没有采用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;问题央行如何发行数字货币&#34;&gt;问题：央行如何发行数字货币&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;谁有权力发行&lt;/li&gt;
+&lt;li&gt;怎么验证交易有效性，防止双花攻击
+&lt;ul&gt;
+&lt;li&gt;数字货币交易
+&lt;ul&gt;
+&lt;li&gt;Input：说明币的来源和支付人的公钥&lt;/li&gt;
+&lt;li&gt;Output：说明接收者的公钥Hash（即地址）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;交易信息写进区块链
+&lt;ul&gt;
+&lt;li&gt;账本的内容需要取得分布式共识（Distributed consensus）&lt;/li&gt;
+&lt;li&gt;分布式哈希表，即系统里许多节点共同维护&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;FLP Impossibility：在一个异步系统里，网络传输延迟没有上限，哪怕系统中有一个进程失败，无法达成共识&lt;/p&gt;
+&lt;p&gt;CAP Theorem，三个要素最多只能同时实现两点&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一致性 Consistency&lt;/li&gt;
+&lt;li&gt;可用性 Availability&lt;/li&gt;
+&lt;li&gt;分区容错性 Partition tolerance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;比特币共识协议&#34;&gt;比特币共识协议&lt;/h3&gt;
+&lt;p&gt;解决系统中有部分节点是恶意的，解决思路为过半数同意，其中谁有投票权&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;风险：Sybil attack 女巫攻击，利用少数节点控制多个虚假身份&lt;/li&gt;
+&lt;li&gt;比特币解决方案：工作量证明机制（算力投票机制）
+&lt;ul&gt;
+&lt;li&gt;全网广播新的数据记录&lt;/li&gt;
+&lt;li&gt;全网执行共识算法，即暴力求解数学难题&lt;/li&gt;
+&lt;li&gt;率先解出难题的矿工获得记账权，产生新区块&lt;/li&gt;
+&lt;li&gt;对外广播新区块，其他节点验证通过后加至主链&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;最长合法链
+&lt;ul&gt;
+&lt;li&gt;分叉攻击&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;同时挖到矿，出现两个等长区块，则会维持一段时间，看哪个区块先被接上&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;比特币系统的实现&#34;&gt;比特币系统的实现&lt;/h2&gt;
+&lt;p&gt;基于交易的账本模式&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;UTXO: Unspent Transaction Outputs，未花费交易输出&lt;/li&gt;
+&lt;li&gt;比特币系统中，要确认一个地址的余额需要回顾以前所有的交易，并且找到所有给自己的比特币并相加&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;预防双花的机制&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;假设Alice收了了两笔交易，共计5 BTC（2+3）&lt;/li&gt;
+&lt;li&gt;Alice拥有了两笔UTXO，可作为未来转钱给别人的input&lt;/li&gt;
+&lt;li&gt;当Alice想要转账给别人，矿工需要验证的是有没有在其他交易在先前的区块中已经使用过这笔Unspent Output&lt;/li&gt;
+&lt;li&gt;如果同一笔输出已经被发送过，就不是Unspent了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;区块链是不可篡改的账本的特性只是概率上的保证，刚写入block的区块是容易篡改的，比特币采用6个confirmation来保障。&lt;/p&gt;
+&lt;h2 id=&#34;比特币网络工作原理&#34;&gt;比特币网络工作原理&lt;/h2&gt;
+&lt;h3 id=&#34;设计原则&#34;&gt;设计原则&lt;/h3&gt;
+&lt;p&gt;simple, robust but not efficient&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;应用层 - 运行Bitcoin Blockchain&lt;/li&gt;
+&lt;li&gt;网络层 - 运行P2P Overlay Network&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;节点工作流程&#34;&gt;节点工作流程&lt;/h3&gt;
+&lt;p&gt;每个节点都要维护一个等待上链的交易的集合，一个区块大小为1M，需要几秒才能传到大多数节点&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;监听到A→B的交易，就将其写入集合&lt;/li&gt;
+&lt;li&gt;如果同时有A→C的双花攻击，该节点不会再写入&lt;/li&gt;
+&lt;li&gt;如果监听到有同样一笔A→B交易，会将该集合中的该笔交易删除&lt;/li&gt;
+&lt;li&gt;如果监听到有一笔A→C的交易（同一个币来源），也会将该集合中A→这笔交易删除&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;比特币挖矿&#34;&gt;比特币挖矿&lt;/h2&gt;
+&lt;p&gt;为什么要挖矿&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Block reward 出块奖励：coinbase tx是唯一一个产生新币的途径&lt;/li&gt;
+&lt;li&gt;矿工费&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;挖矿：不断尝试nonce值，是Block header立德hash值≤给定的目标阈值&lt;/p&gt;
+&lt;p&gt;H(block header) ≤ target （target是难度为1的时候所对应的阈值，target越小，挖矿难度越大）&lt;/p&gt;
+&lt;p&gt;difficulty = (difficulty - 1 - target) / target&lt;/p&gt;
+&lt;p&gt;挖矿过程&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每一次挖矿过程都是随机测试&lt;/li&gt;
+&lt;li&gt;每次试nonce构成了无记忆性&lt;/li&gt;
+&lt;li&gt;次数很多，但是成功率很低&lt;/li&gt;
+&lt;li&gt;出块时间服从指数分布&lt;/li&gt;
+&lt;li&gt;从任何一点开始，成功概率不变，所以给予算力成比例优势&lt;/li&gt;
+&lt;li&gt;挖矿并不是解数学题，挖矿难度是人为设定的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;为什么要调整难度&#34;&gt;为什么要调整难度&lt;/h3&gt;
+&lt;p&gt;出块时间太短容易出现分叉，分叉过多则会影响系统达成共识，危害系统安全性&lt;/p&gt;
+&lt;p&gt;BTC的储廥速度是10分钟，ETH出块速度是15秒（意味着ETH需要新的协议，ghost → orphan block不能简单丢弃，而是要给奖励，uncle reward）&lt;/p&gt;
+&lt;h3 id=&#34;如何调整挖矿难度&#34;&gt;如何调整挖矿难度&lt;/h3&gt;
+&lt;p&gt;每2016个区块（约两周）调整一次目标阈值，存在Block header中，有个nbits，是编码的版本&lt;/p&gt;
+&lt;p&gt;target = target * (actual time / expected time)&lt;/p&gt;
+&lt;p&gt;actual time → 系统中产生2016个区块花费的时间&lt;/p&gt;
+&lt;p&gt;expected time → 产生2016个区块预计花费的时间（约14天）&lt;/p&gt;
+&lt;p&gt;恶意节点不调整代码中的target的话，诚实的矿工则不会认可&lt;/p&gt;
+&lt;p&gt;全节点&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一直在线&lt;/li&gt;
+&lt;li&gt;在本地硬盘上维护完整的区块链信息&lt;/li&gt;
+&lt;li&gt;在内存里维护UTXO集合，以便于快速检验交易的正确性&lt;/li&gt;
+&lt;li&gt;监听比特币网络上的交易信息，验证每个交易的合法性&lt;/li&gt;
+&lt;li&gt;决定哪些交易会被打包到区块里&lt;/li&gt;
+&lt;li&gt;监听别的矿工挖出来的区块，验证其合法性&lt;/li&gt;
+&lt;li&gt;挖矿
+&lt;ul&gt;
+&lt;li&gt;决定沿着哪条链挖下去&lt;/li&gt;
+&lt;li&gt;当出现等长的分叉时，选择哪一个分叉&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;轻节点&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不是一直在线&lt;/li&gt;
+&lt;li&gt;不用保存整个区块链，只需要保存每个区块的块头&lt;/li&gt;
+&lt;li&gt;不用保存全部交易，只需要保存与自己有关的交易&lt;/li&gt;
+&lt;li&gt;无法检验大多交易的合法性，只能检验与自己相关的那些交易的合法性&lt;/li&gt;
+&lt;li&gt;无法检测网上发布区块的正确性&lt;/li&gt;
+&lt;li&gt;可以验证挖矿的难度&lt;/li&gt;
+&lt;li&gt;只能检测哪个是最长链，不知道哪个是最长合法链&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;挖矿设备&#34;&gt;挖矿设备&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;CPU&lt;/li&gt;
+&lt;li&gt;GPU → 主要用于通用并行计算&lt;/li&gt;
+&lt;li&gt;ASIC → Application Specific Integrated circuit&lt;/li&gt;
+&lt;li&gt;大型矿池
+&lt;ul&gt;
+&lt;li&gt;Pool Manager：负责全节点要做的事&lt;/li&gt;
+&lt;li&gt;Miner：计算hash值，通过POW分配收益&lt;/li&gt;
+&lt;li&gt;如矿池达到51%以上算力
+&lt;ul&gt;
+&lt;li&gt;Forking attack，回滚交易&lt;/li&gt;
+&lt;li&gt;Boycott，全网抵制与B有关的任何交易&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;比特币分叉&#34;&gt;比特币分叉&lt;/h2&gt;
+&lt;h3 id=&#34;分叉类型&#34;&gt;分叉类型&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;state fork
+&lt;ul&gt;
+&lt;li&gt;forking attack (deliberate fork)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;protocol fork（因为对BTC协议产生分歧而造成的分叉）
+&lt;ul&gt;
+&lt;li&gt;hard fork
+&lt;ul&gt;
+&lt;li&gt;例如对block size limit的变化 1M  → 4M&lt;/li&gt;
+&lt;li&gt;产生了永久性分叉&lt;/li&gt;
+&lt;li&gt;两条链平行发展，各挖各的，互不认可，形成两种币&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;soft fork
+&lt;ul&gt;
+&lt;li&gt;例如对block size limit的变化 1M  → 0.5M&lt;/li&gt;
+&lt;li&gt;新节点挖小区块，即使旧节点挖出了大区块，也会被放弃，再次出现分叉&lt;/li&gt;
+&lt;li&gt;旧节点挖大区块&lt;/li&gt;
+&lt;li&gt;出现软分叉的情况
+&lt;ul&gt;
+&lt;li&gt;coinbase内容修改&lt;/li&gt;
+&lt;li&gt;P2SH: Pay to Script Hash&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;比特币的匿名性&#34;&gt;比特币的匿名性&lt;/h2&gt;
+&lt;h3 id=&#34;破坏匿名性的方法&#34;&gt;破坏匿名性的方法&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;即使一笔交易生成多个inputs和outputs，这些inputs和outputs的地址也可能被人关联&lt;/li&gt;
+&lt;li&gt;地址账户和现实世界中的真实身份也可能产生关联
+&lt;ul&gt;
+&lt;li&gt;防范比特币洗钱：盯住资金转入转出链&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;提高匿名性的方法&#34;&gt;提高匿名性的方法&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Application Layer: coin mixing 把各种人混在一起&lt;/li&gt;
+&lt;li&gt;Network Layer: 多路径转发以避免从节点的ip地址推算出真实身份&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;零知识证明&#34;&gt;零知识证明&lt;/h3&gt;
+&lt;p&gt;一方（证明者）向另一方（验证者）证明一个陈述是正确的，而无需透露除该陈述是正确的以外的人和信息&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;同态隐藏
+&lt;ul&gt;
+&lt;li&gt;给定E(x)和E(y)，可以很容易计算出某些关于x,y的加密函数值（同态运算）
+&lt;ul&gt;
+&lt;li&gt;Alice把E(x)和E(y)发给Bob&lt;/li&gt;
+&lt;li&gt;Bob通过收到的E(x)和E(y)计算出E(x+y)的值&lt;/li&gt;
+&lt;li&gt;Bob同时计算E(7)的值，如果E(x+y)和E(7)相等，验证通过&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;盲签
+&lt;ul&gt;
+&lt;li&gt;用户提供SerialNum（暗文），银行在不知道SerialNum的情况下返回签名Token，减少A的存款&lt;/li&gt;
+&lt;li&gt;用户A把SerialNum和Token交给B完成交易&lt;/li&gt;
+&lt;li&gt;用户B拿SerialNum和Token给银行验证，银行验证通过，增加B的存款&lt;/li&gt;
+&lt;li&gt;银行无法把A和B联系起来&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;例如：证明某个比特币账户是我的（不泄露私钥） - 由私钥产生一个签名来证明所有权&lt;/li&gt;
+&lt;li&gt;BTC的每一笔转账交易都要说明币的来源&lt;/li&gt;
+&lt;li&gt;Zerocoin可以证明花的币是合法存在的，但不知道具体是哪一个&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;总结思考&#34;&gt;总结思考&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;转账交易不需要接收者在线&lt;/li&gt;
+&lt;li&gt;私钥丢失则失去对币的所有权，除非存在交易所中，但交易所有风险&lt;/li&gt;
+&lt;li&gt;私钥泄漏需要立即将账户中的钱转到另外的账户&lt;/li&gt;
+&lt;li&gt;转账时写错地址无法取消交易，也没办法追回&lt;/li&gt;
+&lt;li&gt;既然所有要写入区块链的交易都需要被验证正确性，为什么proof of burn中OP_RETURN会被区块接收：
+&lt;ul&gt;
+&lt;li&gt;对于某个交易，我们需要验证输入脚本和输出脚本，而OP_RETURN是写在当前交易的输出脚本的，因此在本次验证中不会被检查到&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;在coinbase transaction中有收款人的地址，矿工如果想要偷答案则需要修改地址，会导致merkle tree发生改变，从而改变root hash，block header会发生改变，nonce也作废了&lt;/li&gt;
+&lt;li&gt;比特币系统里并没有取得严格意义上的共识，如分叉&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Blockchain学习 - 密码学原理</title>
+      <link>https://www.pseudoyu.com/en/2020/12/12/blockchain_note_cryptography/</link>
+      <pubDate>Sat, 12 Dec 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/12/12/blockchain_note_cryptography/</guid>
+      
+        <description>&lt;h2 id=&#34;密码学原理&#34;&gt;密码学原理&lt;/h2&gt;
+&lt;h3 id=&#34;哈希&#34;&gt;哈希&lt;/h3&gt;
+&lt;p&gt;重要特征&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;collision resistance 抗碰撞性
+&lt;ul&gt;
+&lt;li&gt;哈希碰撞是指当x≠y时，存在H(x)=H(y)，不同的输入映射到哈希表的同一个位置&lt;/li&gt;
+&lt;li&gt;很难人工创造哈希碰撞&lt;/li&gt;
+&lt;li&gt;常用于文件校验&lt;/li&gt;
+&lt;li&gt;MD5是一个流行的哈希函数，但目前已经知道如何制造哈希碰撞&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;hiding 单向不可逆性
+&lt;ul&gt;
+&lt;li&gt;x → H(x), H(x)很难逆推出x&lt;/li&gt;
+&lt;li&gt;条件
+&lt;ul&gt;
+&lt;li&gt;输入空间足够大&lt;/li&gt;
+&lt;li&gt;分布尽可能均匀&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;puzzle friendly 哈希值计算不可预测
+&lt;ul&gt;
+&lt;li&gt;很难解决哈希值推导&lt;/li&gt;
+&lt;li&gt;易于验证结果正确性&lt;/li&gt;
+&lt;li&gt;如POW工作量证明，挖矿试随机数nonce，使得H(block header) ≤ target&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;加密&#34;&gt;加密&lt;/h3&gt;
+&lt;p&gt;对称加密&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A使用私钥加密，B使用同一个私钥解密&lt;/li&gt;
+&lt;li&gt;私钥的分发存在风险&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;非对称加密&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A使用B的公钥进行加密，B使用自己的私钥进行解密&lt;/li&gt;
+&lt;li&gt;C也可以使用B的公钥进行加密&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;数字签名&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A使用自己的私钥给信息加密&lt;/li&gt;
+&lt;li&gt;大家都可以用A的公钥进行验证，防止其他人假冒A&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;应用（比特币区块链）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;私钥代表了对比特币的控制权&lt;/li&gt;
+&lt;li&gt;交易发起方用私钥对交易（包括转账金额和转账地址）签名，并将签名后的交易和公钥广播&lt;/li&gt;
+&lt;li&gt;各节点接收到交易后可以用公钥验证交易是否合法&lt;/li&gt;
+&lt;li&gt;整个过程中无需暴露私钥，实现保密&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>Java学习 - 线程状态及转化方法</title>
       <link>https://www.pseudoyu.com/en/2020/12/09/java_note_concurrent_state/</link>
       <pubDate>Wed, 09 Dec 2020 03:12:17 +0800</pubDate>
@@ -4461,816 +4805,6 @@ matches the distribution of letter in English)&lt;/li&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/retail_money.png&#34; alt=&#34;retail_money&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Different Degrees of Responsibilities for the Central Bank&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/central_bank.png&#34; alt=&#34;central_bank&#34;&gt;&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>ICOM6012 Topic 2 The Big Picture</title>
-      <link>https://www.pseudoyu.com/en/2020/10/05/icom6012_topic2/</link>
-      <pubDate>Mon, 05 Oct 2020 09:06:09 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/05/icom6012_topic2/</guid>
-      
-        <description>&lt;h1 id=&#34;icom6012-internet-infrastructure-technologies&#34;&gt;ICOM6012 Internet Infrastructure Technologies&lt;/h1&gt;
-&lt;h2 id=&#34;topic-2-the-big-picture&#34;&gt;Topic 2 The Big Picture&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;The Internet: &amp;ldquo;nuts and bolts&amp;rdquo; view&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Billions of connected computing devices
-&lt;ul&gt;
-&lt;li&gt;Host = end system&lt;/li&gt;
-&lt;li&gt;Running network apps&lt;/li&gt;
-&lt;li&gt;Internet of things (IoT)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Packet switches
-&lt;ul&gt;
-&lt;li&gt;routers&lt;/li&gt;
-&lt;li&gt;switchers&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Communication links
-&lt;ul&gt;
-&lt;li&gt;Fiber, copper, radio, satellite&lt;/li&gt;
-&lt;li&gt;Transmission rate: bandwidth&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Networks
-&lt;ul&gt;
-&lt;li&gt;Collection of devices, routers, switches, links&lt;/li&gt;
-&lt;li&gt;Managed by an organization&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Internet: &amp;ldquo;network of networks&amp;rdquo;
-&lt;ul&gt;
-&lt;li&gt;Interconnected ISPs&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Protocols
-&lt;ul&gt;
-&lt;li&gt;Control sending, receiving of messages&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Internet standards
-&lt;ul&gt;
-&lt;li&gt;RFC: Requests for Comments&lt;/li&gt;
-&lt;li&gt;IETF: Internet Engineering Task Force&lt;/li&gt;
-&lt;li&gt;IEEE: Institute of Electronical &amp;amp; Electronic Engineering&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;The Internet: a &amp;ldquo;service&amp;rdquo; view&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Infrastructure
-&lt;ul&gt;
-&lt;li&gt;Web&lt;/li&gt;
-&lt;li&gt;Streaming video&lt;/li&gt;
-&lt;li&gt;Multimedia teleconferencing&lt;/li&gt;
-&lt;li&gt;Email&lt;/li&gt;
-&lt;li&gt;Games&lt;/li&gt;
-&lt;li&gt;E‐Commerce&lt;/li&gt;
-&lt;li&gt;Social media&lt;/li&gt;
-&lt;li&gt;Inter‐connected appliances&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Programming interface
-&lt;ul&gt;
-&lt;li&gt;Sending/receiving apps&lt;/li&gt;
-&lt;li&gt;Service options&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Protocol&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Activities in the Internet involving two or more remote entities are governed by a protocol&lt;/li&gt;
-&lt;li&gt;Protocols are running everywhere in the Internet&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;A protocol defines the format and the order of messages exchanged between two or more communicating entities, as well as the actions taken on the transmission and/or receipt of a message or other event.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Network Standards&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://ietf.org/standards/&#34;&gt;IETF&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;Application&lt;/li&gt;
-&lt;li&gt;Transport&lt;/li&gt;
-&lt;li&gt;Network&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://ieeexplore.ieee.org/browse/standards/collection/ieee&#34;&gt;IEEE&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;Data link&lt;/li&gt;
-&lt;li&gt;Physical&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Network Edge&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Hosts
-&lt;ul&gt;
-&lt;li&gt;Clients&lt;/li&gt;
-&lt;li&gt;Servers (always in data centers)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Access Networks, Physical Media&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Residential access networks (cable-based)
-&lt;ul&gt;
-&lt;li&gt;Frequency Division Multiplexing (FDM)
-&lt;ul&gt;
-&lt;li&gt;Different channels transmitted in different frequency bands&lt;/li&gt;
-&lt;li&gt;Modem = Modulator + Demodulator
-&lt;ul&gt;
-&lt;li&gt;A device that converts data from digital format into one suitable for a transmission medium&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;HFC: hybrid fiber coax
-&lt;ul&gt;
-&lt;li&gt;Asymmetric: up to 40 Mbps – 1.2 Gbs downstream transmission rate, 30‐100 Mbps upstream transmission rate&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Network of cable, fiber attaches homes to ISP router
-&lt;ul&gt;
-&lt;li&gt;Homes share access network to cable headend&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Residential access networks: digital subscriber line (DSL)
-&lt;ul&gt;
-&lt;li&gt;Use existing telephone line to central office DSLAM
-&lt;ul&gt;
-&lt;li&gt;Data over DSL phone line goes to Internet&lt;/li&gt;
-&lt;li&gt;Voice over DSL phone line goes to telephone network&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Wireless access networks
-&lt;ul&gt;
-&lt;li&gt;Wireless local area networks (WLANs)
-&lt;ul&gt;
-&lt;li&gt;Within or around building (~100ft)&lt;/li&gt;
-&lt;li&gt;802.11b/g/n (WiFi) - 11,54,450 Mbps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Wide-area cellular access networks
-&lt;ul&gt;
-&lt;li&gt;Mobile (10km)&lt;/li&gt;
-&lt;li&gt;4G/5G cellular networks - 10 Mbps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;IoT
-&lt;ul&gt;
-&lt;li&gt;BLE&lt;/li&gt;
-&lt;li&gt;ZigBee&lt;/li&gt;
-&lt;li&gt;LoRa&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Remote areas
-&lt;ul&gt;
-&lt;li&gt;Satellite network: Geosynchronous Equatorial Orbit (GEO)
-&lt;ul&gt;
-&lt;li&gt;35,786 km above equator&lt;/li&gt;
-&lt;li&gt;Large RTT (Round trip time): 0.5s&lt;/li&gt;
-&lt;li&gt;Expensive&lt;/li&gt;
-&lt;li&gt;Slow&lt;/li&gt;
-&lt;li&gt;Examples
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=OFGW2sZsUiQ&#34;&gt;&amp;ldquo;Project Loon&amp;rdquo; &amp;ndash; Google&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=giQ8xEWjnBs&amp;amp;t=13s&#34;&gt;Starlink ‐‐ SpaceX&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Enterprise access networks (school, company)
-&lt;ul&gt;
-&lt;li&gt;Mix of wired, wireless link technologies
-&lt;ul&gt;
-&lt;li&gt;Ethernet
-&lt;ul&gt;
-&lt;li&gt;Wired access at 100Mbps, 1Gbps, 10Gbps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;WiFi
-&lt;ul&gt;
-&lt;li&gt;Wireless access points at 11, 54, 450 Mbps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;History of IEEE 802.11 (Use CSMA/CA)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Unlicensed ISM - 1985&lt;/li&gt;
-&lt;li&gt;802.11 - 1997
-&lt;ul&gt;
-&lt;li&gt;2.4GHz&lt;/li&gt;
-&lt;li&gt;DSSS &amp;amp; FHSS&lt;/li&gt;
-&lt;li&gt;1,2Mbps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;802.11b - 1999 (WiFi-1)
-&lt;ul&gt;
-&lt;li&gt;2.4GHz&lt;/li&gt;
-&lt;li&gt;DSSS&lt;/li&gt;
-&lt;li&gt;11Mbps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;802.11a - 1999 (WiFi-2)
-&lt;ul&gt;
-&lt;li&gt;5GHz&lt;/li&gt;
-&lt;li&gt;OFDM&lt;/li&gt;
-&lt;li&gt;54Mbps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;WiFi Alliance - 1999&lt;/li&gt;
-&lt;li&gt;802.11g - 2003 (WiFi-3)
-&lt;ul&gt;
-&lt;li&gt;2.4GHz&lt;/li&gt;
-&lt;li&gt;54Mbps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;802.11-2007 - 2007
-&lt;ul&gt;
-&lt;li&gt;Combined 802.11a/b/g&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;802.11n - 2009 (WiFi-4)
-&lt;ul&gt;
-&lt;li&gt;MIMO, 2.4 or 5GHz&lt;/li&gt;
-&lt;li&gt;600Mbps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;802.11-2012
-&lt;ul&gt;
-&lt;li&gt;Combined 802.11a/b/g/n&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;802.11ac - 2013 (WiFi-5)
-&lt;ul&gt;
-&lt;li&gt;5GHz&lt;/li&gt;
-&lt;li&gt;7Gbps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;802.11ah - 2017&lt;/li&gt;
-&lt;li&gt;802.11ax - 2020 (WiFi-6)
-&lt;ul&gt;
-&lt;li&gt;5GHz&lt;/li&gt;
-&lt;li&gt;OFDMA&lt;/li&gt;
-&lt;li&gt;9.6Gbps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Links: Physical Media&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Twisted pair (TP)
-&lt;ul&gt;
-&lt;li&gt;Two insulated copper wires
-&lt;ul&gt;
-&lt;li&gt;Category 5: 100Mbos, 1Gbps Ethernet&lt;/li&gt;
-&lt;li&gt;Category 6: 10Gbps Ethernet&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Coaxial cable
-&lt;ul&gt;
-&lt;li&gt;Two concentric copper conductors&lt;/li&gt;
-&lt;li&gt;Bidiretional&lt;/li&gt;
-&lt;li&gt;Broadband
-&lt;ul&gt;
-&lt;li&gt;Multiple frequency channels on cable&lt;/li&gt;
-&lt;li&gt;100 Mbps per channel&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://youtu.be/jZOg39v73c4&#34;&gt;Fiber optic cable&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;Glass fiber carrying light pulse a bit (each pulse a bit)&lt;/li&gt;
-&lt;li&gt;High-speed point-to-point transmission (10-100Gbps)&lt;/li&gt;
-&lt;li&gt;Low error rate
-&lt;ul&gt;
-&lt;li&gt;Repeaters spaced far apart&lt;/li&gt;
-&lt;li&gt;Immune to electromagnetic noise&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Wireless radio
-&lt;ul&gt;
-&lt;li&gt;Signal carried in electromagnetic spectrum&lt;/li&gt;
-&lt;li&gt;No physical &amp;ldquo;wire&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;Propagation environment effects
-&lt;ul&gt;
-&lt;li&gt;Reflection&lt;/li&gt;
-&lt;li&gt;Obstruction by objects&lt;/li&gt;
-&lt;li&gt;Interference&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Network Core&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Mesh of interconnected routers&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Packet-switching (hosts break application-layer messages into packets)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Forward packets from one router to the next&lt;/li&gt;
-&lt;li&gt;Each packet transmitted a full link capacity&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Packet transmission delay&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/packet_switch.png&#34; alt=&#34;packet_switch&#34;&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Packet transmission delay = L (bits) / R (bits/sec)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;End-end delay&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/store_and_forward.png&#34; alt=&#34;store_and_forward&#34;&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;End-end delay = 2L (bits) / R (bits/sec)
-(Assuming zero propagation delay)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Store and forward: entire packet must arrive at router before it can be transmitted on next link&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Packet queuing and loss&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;If arrival rate &amp;gt; transmission rate, packets will queue&lt;/li&gt;
-&lt;li&gt;If memory fills up, packets can be dropped&lt;/li&gt;
-&lt;li&gt;Bigger buffer can bring lower packet loss but higher delay+buffer cost&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Two key network-core functios&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Forwarding
-&lt;ul&gt;
-&lt;li&gt;Local action: input link -&amp;gt; output link&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Routing
-&lt;ul&gt;
-&lt;li&gt;Global action: source -&amp;gt; destinatin&lt;/li&gt;
-&lt;li&gt;Routing algorithms&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Circuit switching&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;End-end resources allocated to, reserved for &amp;ldquo;call&amp;rdquo; between source&amp;amp;dest&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/circuit_switching.png&#34; alt=&#34;circuit_switching&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Frequency Division Multiplexing (FDM)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/fdm.png&#34; alt=&#34;fdm&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Time Division Multiplexing (TDM)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/tdm.png&#34; alt=&#34;tdm&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Packet Switching vs. Circuit Switching&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Packet switching is great for bursty data
-&lt;ul&gt;
-&lt;li&gt;Resource sharing&lt;/li&gt;
-&lt;li&gt;Simpler, no call setup&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Packet switching can cause excessive congestion&lt;/li&gt;
-&lt;li&gt;Combined: Virtual Circuit Packet Switching&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Internet Structure: Network of networks&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Hosts connected to internet&lt;/li&gt;
-&lt;li&gt;Access ISPs (Internet Service Providers)
-&lt;ul&gt;
-&lt;li&gt;To ensure every two hosts can send packets to each other, access ISPs must be interconnected&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/isp_tiers.png&#34; alt=&#34;isp_tiers&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Tier-1 ISP
-&lt;ul&gt;
-&lt;li&gt;Sprint, AT&amp;amp;T, NTT&lt;/li&gt;
-&lt;li&gt;National &amp;amp; international coverage&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Content provider network (private network)
-&lt;ul&gt;
-&lt;li&gt;Google&lt;/li&gt;
-&lt;li&gt;Facebook&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Delay and Loss&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Nodal processing&lt;/li&gt;
-&lt;li&gt;Queueing delay&lt;/li&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/queueing_delay.png&#34; alt=&#34;queueing_delay&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;R: link bandwidth (bps)&lt;/li&gt;
-&lt;li&gt;L: packet length (bits)&lt;/li&gt;
-&lt;li&gt;a: average packet arrival rate&lt;/li&gt;
-&lt;li&gt;Traffic intensity = La / R&lt;/li&gt;
-&lt;li&gt;E(x) = La/R / (1 - La/R)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Transmission delay
-&lt;ul&gt;
-&lt;li&gt;L(packet length) / R (link bandwidth)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Propagation delay
-&lt;ul&gt;
-&lt;li&gt;d (length of physical link) / s (propagation speed)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/packet_delay.png&#34; alt=&#34;packet_delay&#34;&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;d(nodal) = d(proc) + d(queue) + d(trans) + d(prop)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Number of hops = M
-Per-hop processing delay = d(proc)
-Link propagation delay = d(prop)
-Packet transmission delay = d(trans)
-Message size = N packets
-
-End-to-end Delay (ignoring queueing delay)
-= M * d(prop) + N * d(trans) + (M-1) * d(trans) + (M-1) * d(proc)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/timing_diagram.png&#34; alt=&#34;timing_diagram&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&amp;ldquo;Real&amp;rdquo; Internet delays and routes: traceroute &lt;a href=&#34;https://www.youtube.com&#34;&gt;YouTube&lt;/a&gt; (macOS)&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;➜  ~ traceroute youtube.com
-traceroute to youtube.com &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;216.58.197.110&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, &lt;span class=&#34;m&#34;&gt;64&lt;/span&gt; hops max, &lt;span class=&#34;m&#34;&gt;52&lt;/span&gt; byte packets
- &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;  172.24.172.1 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;172.24.172.1&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  14.211 ms  1.584 ms  1.635 ms
- &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;  118.140.125.65 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;118.140.125.65&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  13.122 ms  23.362 ms  7.402 ms
- &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;  10.30.31.17 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;10.30.31.17&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  7.024 ms  23.736 ms  54.474 ms
- &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;  10.28.21.37 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;10.28.21.37&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  5.924 ms  3.565 ms  2.954 ms
- &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;  * * *
- &lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;  * 218.188.28.165 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;218.188.28.165&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  214.507 ms  3.344 ms
- &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;  108.170.241.65 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;108.170.241.65&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  3.595 ms
-    72.14.222.9 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;72.14.222.9&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  10.840 ms  3.377 ms
- &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;  108.170.241.65 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;108.170.241.65&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  3.156 ms
-    216.239.62.59 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;216.239.62.59&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  3.495 ms
-    216.239.62.57 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;216.239.62.57&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  2.733 ms
- &lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;  216.239.62.59 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;216.239.62.59&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  4.698 ms
-    hkg12s01-in-f14.1e100.net &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;216.58.197.110&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  3.252 ms  4.355 ms
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Packet Loss&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Queen (buffer) preceding link in buffer has finite capcity&lt;/li&gt;
-&lt;li&gt;Packet arriving to full queue dropped (lost)&lt;/li&gt;
-&lt;li&gt;Lost packet may be retransmitted by previous node, end system or not at all&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/packet_loss.png&#34; alt=&#34;packet_loss&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Throughput&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Rate (bits/time) at which bits transferred from sender to receiver
-&lt;ul&gt;
-&lt;li&gt;Instantaneous: rate at given point in time&lt;/li&gt;
-&lt;li&gt;Average: rate over longer period of time&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Bottleneck link
-&lt;ul&gt;
-&lt;li&gt;link on end-end path that constrains end-end throughput&lt;/li&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/throughput.png&#34; alt=&#34;throughput&#34;&gt;&lt;/li&gt;
-&lt;li&gt;Per-connection end-end throughput
-&lt;ul&gt;
-&lt;li&gt;min(Rc, Rs, R/10)&lt;/li&gt;
-&lt;li&gt;In practice, Rc or Rs is often bottleneck&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Why Layering&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Explicit structure allows identification, relationship of complex system&amp;rsquo;s pieces&lt;/li&gt;
-&lt;li&gt;Modularization eases maintenance, updating of system&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Internet Protocol Stack&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Application - supporting network applications
-&lt;ul&gt;
-&lt;li&gt;FTP&lt;/li&gt;
-&lt;li&gt;SMTP&lt;/li&gt;
-&lt;li&gt;HTTP&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Transport - process data transfer
-&lt;ul&gt;
-&lt;li&gt;TCP&lt;/li&gt;
-&lt;li&gt;UDP&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Network - routing of datagrams from source to destination
-&lt;ul&gt;
-&lt;li&gt;IP&lt;/li&gt;
-&lt;li&gt;Routing protocol&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Link - data transfer between neighboring network elements
-&lt;ul&gt;
-&lt;li&gt;Ethernet&lt;/li&gt;
-&lt;li&gt;WiFi&lt;/li&gt;
-&lt;li&gt;PPP&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Physical - bits &amp;ldquo;on the wire&amp;rdquo;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;ISO/OSI Reference Model (Implemented in Application)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Presentation
-&lt;ul&gt;
-&lt;li&gt;Allow applications to interpret meaning of data&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Session
-&lt;ul&gt;
-&lt;li&gt;Synchronization, checkpoint, recovery of data exchange&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Encapsulation&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/encapsulation.png&#34; alt=&#34;encapsulation&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Network Security&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Fields of network security
-&lt;ul&gt;
-&lt;li&gt;How bad guys can attack computer networks&lt;/li&gt;
-&lt;li&gt;How we can defend networks against attacks&lt;/li&gt;
-&lt;li&gt;How to design architectures that are immune to attacks&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Internet not originally designed with much security in mind&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Bad Guys&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Malware
-&lt;ul&gt;
-&lt;li&gt;From
-&lt;ul&gt;
-&lt;li&gt;Virus&lt;/li&gt;
-&lt;li&gt;Worm&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Spyware malware&lt;/li&gt;
-&lt;li&gt;Usage
-&lt;ul&gt;
-&lt;li&gt;Botnet&lt;/li&gt;
-&lt;li&gt;Spam&lt;/li&gt;
-&lt;li&gt;DDos attacks&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Denial of service (DoS)
-&lt;ul&gt;
-&lt;li&gt;Make resources (server, bandwidth) unavailable to legitimate traffic by overwhelming resource with fake traffic&lt;/li&gt;
-&lt;li&gt;Procedures
-&lt;ol&gt;
-&lt;li&gt;Select target&lt;/li&gt;
-&lt;li&gt;Break into hosts around the network&lt;/li&gt;
-&lt;li&gt;Send packets to target from compromised hosts&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Packet interception
-&lt;ul&gt;
-&lt;li&gt;Packet &amp;ldquo;sniffing&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/packet_sniffing.png&#34; alt=&#34;packet_sniffing&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;Broadcast media (shared ethernet, wireless)&lt;/li&gt;
-&lt;li&gt;Promiscuous network interface reads/records all packets&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Fake identity
-&lt;ul&gt;
-&lt;li&gt;IP spoofing: send packet with false source address&lt;/li&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ip_spoffing.png&#34; alt=&#34;ip_spoffing&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Use&amp;rsquo;s View Of Internet&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Single large (global) network
-&lt;ul&gt;
-&lt;li&gt;Achieved through software that implements abstractions&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;User&amp;rsquo;s computers all attach directly&lt;/li&gt;
-&lt;li&gt;No other structure visible&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/user_view_internet.png&#34; alt=&#34;user_view_internet&#34;&gt;
-&lt;strong&gt;Internet History&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Early packet-switching principles (1961-1972)&lt;/li&gt;
-&lt;li&gt;Internetworking, new and proprietary nets (1972-1980)&lt;/li&gt;
-&lt;li&gt;New protocols, a proliferation of networks (1980-1990)&lt;/li&gt;
-&lt;li&gt;Commercialization, the Web, new apps (1990&amp;rsquo;s, 2000&amp;rsquo;s)&lt;/li&gt;
-&lt;li&gt;More new applications, Internet is &amp;ldquo;everywhere&amp;rdquo; (2005-Present)&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>COMP7404 Topic 3 Adversarial Search</title>
-      <link>https://www.pseudoyu.com/en/2020/10/05/comp7404_topic3/</link>
-      <pubDate>Mon, 05 Oct 2020 00:30:11 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/05/comp7404_topic3/</guid>
-      
-        <description>&lt;h1 id=&#34;comp7404-computational-intelligence-and-machine-learning&#34;&gt;COMP7404 Computational Intelligence and Machine Learning&lt;/h1&gt;
-&lt;h2 id=&#34;topic-3-adversarial-search&#34;&gt;Topic 3 Adversarial Search&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;A Multi-agent Competitive Environment&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Other agents are planning against us&lt;/li&gt;
-&lt;li&gt;Goals are in conflict (not necessarily)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Game Definition&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A game can be defined as
-&lt;ul&gt;
-&lt;li&gt;s : States&lt;/li&gt;
-&lt;li&gt;s0: Initial state&lt;/li&gt;
-&lt;li&gt;Player(s) : Defines which player has the move&lt;/li&gt;
-&lt;li&gt;Actions(s) : Returns a set of legal moves&lt;/li&gt;
-&lt;li&gt;Result(s,a) : Defines the result of a move&lt;/li&gt;
-&lt;li&gt;TerminalTest(s) : True when game is over, false otherwise&lt;/li&gt;
-&lt;li&gt;Utility(s,p) : Defines the final numeric value for a game that ends in terminal state s for player p&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;A game tree can be constructed
-&lt;ul&gt;
-&lt;li&gt;Nodes are game states and edges are moves&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Tic-Tac-Toe Game Tree&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/tic_tac_toe_game_tree.png&#34; alt=&#34;tic_tac_toe_game_tree&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Minimax Search&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A state-space search tree&lt;/li&gt;
-&lt;li&gt;Players alternate turns&lt;/li&gt;
-&lt;li&gt;Compute each node’s minimax value
-&lt;ul&gt;
-&lt;li&gt;the best achievable utility against a rational (optimal) adversary&lt;/li&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/minimax.png&#34; alt=&#34;minimax&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Will lead to optimal strategy
-&lt;ul&gt;
-&lt;li&gt;Best achievable payoff against best play&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Example
-&lt;ul&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/minimax_example.png&#34; alt=&#34;minimax_example&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Implementation
-&lt;ul&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/minimax_implementation.png&#34; alt=&#34;minimax_implementation&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Properties
-&lt;ul&gt;
-&lt;li&gt;Complete - Yes, if tree is finite&lt;/li&gt;
-&lt;li&gt;Optimal - In general no, yes against an optimal opponent&lt;/li&gt;
-&lt;li&gt;Time complexity - O(b^m)&lt;/li&gt;
-&lt;li&gt;Space complexity - O(bm)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Depth-Limit Search (DLS)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A depth limit search (DLS)
-&lt;ul&gt;
-&lt;li&gt;Search only to a limited depth in the tree&lt;/li&gt;
-&lt;li&gt;Replace terminal utilities with an evaluation function for non-terminal positions&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Problems
-&lt;ul&gt;
-&lt;li&gt;Guarantee of optimal play is gone&lt;/li&gt;
-&lt;li&gt;Need to design evaluation function&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;An evaluation function
-&lt;ul&gt;
-&lt;li&gt;An evaluation function Eval(s) scores non-terminals in depth-limited search
-&lt;ul&gt;
-&lt;li&gt;An estimate of the expected utility of the game from a given position&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Ideal function
-&lt;ul&gt;
-&lt;li&gt;The actual minimax value of the position&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;The performance of a game-playing program depends strongly on the quality of its evaluation functio&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;𝛼-𝛽 Pruning Algorithm&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/pruning_algorithm.png&#34; alt=&#34;pruning_algorithm&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Min version
-&lt;ul&gt;
-&lt;li&gt;Consider Min’s value at some node n&lt;/li&gt;
-&lt;li&gt;n will decrease (or stay constant) while the descendants of n are examined&lt;/li&gt;
-&lt;li&gt;Let m be the best value that Max can get at any choice point along the current path from the root&lt;/li&gt;
-&lt;li&gt;If n becomes worse (&amp;lt;) than m
-&lt;ul&gt;
-&lt;li&gt;Max will avoid it&lt;/li&gt;
-&lt;li&gt;Stop considering n’s other children&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Max version is symmetric&lt;/li&gt;
-&lt;li&gt;Properties
-&lt;ul&gt;
-&lt;li&gt;Pruning has no effect on the minimax value at the root&lt;/li&gt;
-&lt;li&gt;Values of intermediate nodes might be wrong
-&lt;ul&gt;
-&lt;li&gt;Action selection not appropriate for this simple version of alpha-beta pruning&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Move ordering
-&lt;ul&gt;
-&lt;li&gt;The effectiveness of alpha-beta pruning is highly dependent on the order in which states are examined&lt;/li&gt;
-&lt;li&gt;It is worthwhile to try to examine first the successors that are likely best
-&lt;ul&gt;
-&lt;li&gt;Examine only O(b^(m/2)) nodes to pick the best move, instead of O(bm) for minimax&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://kartikkukreja.wordpress.com/2014/06/29/alphabetasearch/&#34;&gt;A Reference Note&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Expectimax Search&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/expectimax_search.png&#34; alt=&#34;expectimax_search&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Values reflect average case outcomes, not worst case outcomes&lt;/li&gt;
-&lt;li&gt;Expectimax search computes the expected score under optimal play
-&lt;ul&gt;
-&lt;li&gt;Max nodes as in minimax search&lt;/li&gt;
-&lt;li&gt;Chance nodes are like min nodes but the outcome is uncertain&lt;/li&gt;
-&lt;li&gt;Calculate their expected utilities
-&lt;ul&gt;
-&lt;li&gt;i.e., take weighted average of children&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Expectiminimax
-&lt;ul&gt;
-&lt;li&gt;Environment is an extra &amp;ldquo;random agent&amp;rdquo; player that moves after each min/max agent&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Multi-Agent Utilities&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/multi_agent.png&#34; alt=&#34;multi_agent&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Generalisation of minimax
-&lt;ul&gt;
-&lt;li&gt;Terminals and nodes have utility vectors&lt;/li&gt;
-&lt;li&gt;Each player maximizes its own component&lt;/li&gt;
-&lt;li&gt;Gives rise to cooperation and competition dynamically&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/46706438&#34;&gt;A Reference Note1&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://kartikkukreja.wordpress.com/2015/07/04/adversarial-search/&#34;&gt;A Reference Note2&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
       
     </item>

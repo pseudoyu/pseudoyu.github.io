@@ -17,6 +17,17 @@
     </item>
     
     <item>
+      <title>COMP7103 Topic 1 Introduction</title>
+      <link>https://www.pseudoyu.com/en/2021/01/28/comp7103_topic1/</link>
+      <pubDate>Thu, 28 Jan 2021 01:18:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2021/01/28/comp7103_topic1/</guid>
+      <description>COMP7103 Data Mining Topic 1 Introduction Decision-Support System (DSS)
+ A decision-support system (DSS) is a system that assists decision makers to make important decisions for an organization or business KDD and data mining are important components in many DSS&amp;rsquo;s  Data and Knowledge
+ Data  A collecion of facts about certain group of objects   Pattern  Certain characteristics of data that are frequently observed   Knowledge  Some general rules about the objects    Data Warehouse</description>
+    </item>
+    
+    <item>
       <title>Java学习笔记 - 线程状态及转化方法</title>
       <link>https://www.pseudoyu.com/en/2020/12/09/java_note_concurrent_state/</link>
       <pubDate>Wed, 09 Dec 2020 03:12:17 +0800</pubDate>
@@ -185,15 +196,6 @@ Datasets  Criteo Dataset. It is a famous industry benchmarking dataset for devel
       <guid>https://www.pseudoyu.com/en/2020/10/04/comp7404_topic2/</guid>
       <description>COMP7404 Computational Intelligence and Machine Learning Topic 2 Beyond Classical Search Planning vs Identification
  Planing: sequence of actions  The path to the goal is the important thing Paths have various costs, depths Heuristics to guide, frontier to keep backups   Identification: assignments to variables  The goal itself is important, not the path    Local Search can find solutions faster for specific types of identification problems</description>
-    </item>
-    
-    <item>
-      <title>Mobile Payment Systems Case Study</title>
-      <link>https://www.pseudoyu.com/en/2020/10/01/ecom6013_discussion_topic3/</link>
-      <pubDate>Thu, 01 Oct 2020 22:25:19 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/01/ecom6013_discussion_topic3/</guid>
-      <description>Mobile Payment Systems Why has China been an ideal environment to support mobile payment systems? Politically, payment licenses are controlled by government (relative financial institutions) and under strict regulation. So, tech giants like Alibaba who are qualified can increasingly develop their payment business in the early age. Plus, in the early stage of mobile payment, laws and rules are not so completed. Payment platform can utilize smart market strategies (like very high return rate) to attract more new potential users and enhance existing users’ engagement, which is effective in market expanding stage.</description>
     </item>
     
   </channel>

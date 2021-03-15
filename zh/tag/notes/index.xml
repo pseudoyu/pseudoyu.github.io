@@ -6,7 +6,18 @@
     <description>Recent content in notes on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 21 Oct 2020 19:53:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Jan 2021 01:18:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>COMP7103 Topic 1 Introduction</title>
+      <link>https://www.pseudoyu.com/zh/2021/01/28/comp7103_topic1/</link>
+      <pubDate>Thu, 28 Jan 2021 01:18:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/01/28/comp7103_topic1/</guid>
+      <description>COMP7103 Data Mining Topic 1 Introduction Decision-Support System (DSS)
+ A decision-support system (DSS) is a system that assists decision makers to make important decisions for an organization or business KDD and data mining are important components in many DSS&amp;rsquo;s  Data and Knowledge
+ Data  A collecion of facts about certain group of objects   Pattern  Certain characteristics of data that are frequently observed   Knowledge  Some general rules about the objects    Data Warehouse</description>
+    </item>
+    
     <item>
       <title>ICOM6045 Topic 1 Cryptography</title>
       <link>https://www.pseudoyu.com/zh/2020/10/21/icom6045_topic1/</link>
@@ -138,17 +149,6 @@ Cell Handover
       <description>E-Commerce Presence Look Around New iPad Air 4 (2020) Presence by Apple Inc. Website Link
 The iPad Air 4 (2020) got shown off at Apple&amp;rsquo;s September event held on September 16. There is a specific designed website (mobile version included) for this product. I&amp;rsquo;d like to do an analysis towards this very impressive E-Commerce presence.
 Apple iPad Air product line is mainly targeted to educators/students, staffs and kids/teenagers. So, the most premium features this new product wants to convey to customers is its fancy appearance and powerful A14 Bionic for creation, study and entertainment.</description>
-    </item>
-    
-    <item>
-      <title>COMP7103 Topic 1 Introduction</title>
-      <link>https://www.pseudoyu.com/zh/2020/09/18/comp7103_topic1/</link>
-      <pubDate>Fri, 18 Sep 2020 01:18:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/09/18/comp7103_topic1/</guid>
-      <description>COMP7103 Data Mining Topic 1 Introduction Decision-Support System (DSS)
- A decision-support system (DSS) is a system that assists decision makers to make important decisions for an organization or business KDD and data mining are important components in many DSS&amp;rsquo;s  Data and Knowledge
- Data  A collecion of facts about certain group of objects   Pattern  Certain characteristics of data that are frequently observed   Knowledge  Some general rules about the objects    Data Warehouse</description>
     </item>
     
     <item>

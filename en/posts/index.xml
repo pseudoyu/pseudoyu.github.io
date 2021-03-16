@@ -28,6 +28,15 @@
     </item>
     
     <item>
+      <title>Java学习 - 线程间的通信</title>
+      <link>https://www.pseudoyu.com/en/2020/12/23/java_note_concurrent_communication/</link>
+      <pubDate>Wed, 23 Dec 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/12/23/java_note_concurrent_communication/</guid>
+      <description>线程间的通信 锁与同步 Java中锁是基于对象的，因此也被称为对象锁 一个锁同一时间只能被一个线程持有 线程之间的同步是指线程按照一定的顺序执行 public class</description>
+    </item>
+    
+    <item>
       <title>Blockchain学习 - 区块链安全与隐私</title>
       <link>https://www.pseudoyu.com/en/2020/12/20/blockchain_note_security_privacy/</link>
       <pubDate>Sun, 20 Dec 2020 05:12:17 +0800</pubDate>
@@ -182,15 +191,6 @@ This paper proposes a novel Compressed Interaction Network (CIN), which aims to 
 Github Repository GitHub: xDeepFM_for_Recommender_Systems
 Video Demo YouTube | Google Drive
 Datasets  Criteo Dataset. It is a famous industry benchmarking dataset for developing models predicting ad click-through rate, and is publicly accessible. Given a user and the page he is visiting, the goal is to predict the probability that he will clik on a given ad  Running Environment I strongly recommmend that you use Anaconda to implement this project.</description>
-    </item>
-    
-    <item>
-      <title>ICOM6045 Topic 1 Cryptography</title>
-      <link>https://www.pseudoyu.com/en/2020/10/21/icom6045_topic1/</link>
-      <pubDate>Wed, 21 Oct 2020 19:53:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/21/icom6045_topic1/</guid>
-      <description>ICOM6045 Fundamentals of E-Commerce Security Topic 1 Cryptography Definition  Process of transforming information to make it unreadable to anyone except those possessing the key  Purpose  Data confidentiality  Transpositions/Permutations  An encryption in which the letters of the message are rearranged Function  Try to break established patterns   Example  Columnar transposition  Rearrangement of the characters of the plaintext into columns Based on characteristic patterns of pairs of adjacent letters, called digrams Analysis  Compute the letter frequencies  Break the text into columns by compare a block of ciphertext characters against characters successively farther away in the ciphertext.</description>
     </item>
     
   </channel>

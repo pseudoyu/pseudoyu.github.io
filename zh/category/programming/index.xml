@@ -6,7 +6,16 @@
     <description>Recent content in Programming on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 20 Dec 2020 05:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/category/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Dec 2020 03:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/category/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java学习 - 线程间的通信</title>
+      <link>https://www.pseudoyu.com/zh/2020/12/23/java_note_concurrent_communication/</link>
+      <pubDate>Wed, 23 Dec 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/12/23/java_note_concurrent_communication/</guid>
+      <description>线程间的通信 锁与同步 Java中锁是基于对象的，因此也被称为对象锁 一个锁同一时间只能被一个线程持有 线程之间的同步是指线程按照一定的顺序执行 public class</description>
+    </item>
+    
     <item>
       <title>Blockchain学习 - 区块链安全与隐私</title>
       <link>https://www.pseudoyu.com/zh/2020/12/20/blockchain_note_security_privacy/</link>

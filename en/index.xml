@@ -459,8 +459,8 @@
 &lt;ul&gt;
 &lt;li&gt;Input来源&lt;/li&gt;
 &lt;li&gt;核对Input是否可用&lt;/li&gt;
-&lt;li&gt;Input info细节&lt;/li&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_data_transaction_input_info.png&#34; alt=&#34;blockchain_bitcoin_data_transaction_input_info&#34;&gt;
+&lt;li&gt;Input info细节
+&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_data_transaction_input_info.png&#34; alt=&#34;blockchain_bitcoin_data_transaction_input_info&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Previous output hash&lt;/strong&gt; - 所有输入都能追溯回一个输出(UTXO)，这指向包含将在该输入中花费的UTXO，该UTXO的哈希值在这里以相反的顺序保存&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Previous output index&lt;/strong&gt; - 一个交易可以有多个由它们的索引号引用的UTXO，第一个索引是0&lt;/li&gt;
@@ -476,8 +476,8 @@
 &lt;ul&gt;
 &lt;li&gt;输出了多少比特币&lt;/li&gt;
 &lt;li&gt;未来支出的条件&lt;/li&gt;
-&lt;li&gt;存储在输出信息中的数据&lt;/li&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_data_transaction_output_info.png&#34; alt=&#34;blockchain_bitcoin_data_transaction_output_info&#34;&gt;
+&lt;li&gt;存储在输出信息中的数据
+&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_data_transaction_output_info.png&#34; alt=&#34;blockchain_bitcoin_data_transaction_output_info&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Amount&lt;/strong&gt; - 以Satoshis(最小的比特币单位)表示的输出比特币数量，10^8 Satoshis = 1比特币&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Locking Script Size&lt;/strong&gt; - 这是Locking Script的字节大小&lt;/li&gt;

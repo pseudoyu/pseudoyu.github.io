@@ -1323,7 +1323,7 @@
       
         <description>&lt;h2 id=&#34;密码学原理&#34;&gt;密码学原理&lt;/h2&gt;
 &lt;h3 id=&#34;哈希&#34;&gt;哈希&lt;/h3&gt;
-&lt;p&gt;重要特征&lt;/p&gt;
+&lt;p&gt;特征&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;collision resistance 抗碰撞性
 &lt;ul&gt;
@@ -1352,7 +1352,23 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;哈希函数用法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;为文件D创建哈希函数H(D)，对H(D)进行数字签名
+&lt;ol&gt;
+&lt;li&gt;H(D) 可以保证D未被篡改&lt;/li&gt;
+&lt;li&gt;给H(D)进行数字签名可以确认D的归属权&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;加密&#34;&gt;加密&lt;/h3&gt;
+&lt;p&gt;公私钥对应用&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;加密（公钥加密、私钥解密）&lt;/li&gt;
+&lt;li&gt;数字签名&lt;/li&gt;
+&lt;li&gt;哈希加密 (cryptographic hash)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;em&gt;E.g. MD5, SHA1&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;对称加密&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;A使用私钥加密，B使用同一个私钥解密&lt;/li&gt;
@@ -1368,6 +1384,12 @@
 &lt;li&gt;A使用自己的私钥给信息加密&lt;/li&gt;
 &lt;li&gt;大家都可以用A的公钥进行验证，防止其他人假冒A&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;对比：数字签名和哈希加密&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;数字签名针对某个特定对象&lt;/li&gt;
+&lt;li&gt;所有人运算哈希函数可以得到相同结果&lt;/li&gt;
+&lt;li&gt;哈希函数运算结果是固定长度的&lt;/li&gt;
+&lt;/ol&gt;
 &lt;p&gt;应用（比特币区块链）&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;私钥代表了对比特币的控制权&lt;/li&gt;

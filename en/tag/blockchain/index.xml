@@ -58,7 +58,7 @@
       <pubDate>Sat, 12 Dec 2020 03:12:17 +0800</pubDate>
       
       <guid>https://www.pseudoyu.com/en/2020/12/12/blockchain_note_cryptography/</guid>
-      <description>密码学原理 哈希 重要特征 collision resistance 抗碰撞性 哈希碰撞是指当x≠y时，存在H(x)=H(y)，不同的输入映射到哈希表的同一个位置 很难人工创造哈希碰撞 常用</description>
+      <description>密码学原理 哈希 特征 collision resistance 抗碰撞性 哈希碰撞是指当x≠y时，存在H(x)=H(y)，不同的输入映射到哈希表的同一个位置 很难人工创造哈希碰撞 常用于文</description>
     </item>
     
   </channel>

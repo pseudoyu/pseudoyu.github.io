@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Blockchain学习 - 密码学原理 · Pseudoyu</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="密码学原理 哈希 重要特征 collision resistance 抗碰撞性 哈希碰撞是指当x≠y时，存在H(x)=H(y)，不同的输入映射到哈希表的同一个位置 很难人工创造哈希碰撞 常用" />
+  <meta name="description" content="密码学原理 哈希 特征 collision resistance 抗碰撞性 哈希碰撞是指当x≠y时，存在H(x)=H(y)，不同的输入映射到哈希表的同一个位置 很难人工创造哈希碰撞 常用于文" />
 
   <meta name="keywords" content="Hugo, theme, den" />
 
@@ -20,23 +20,23 @@
 
 
 <meta property="og:title" content="Blockchain学习 - 密码学原理" />
-<meta property="og:description" content="密码学原理 哈希 重要特征 collision resistance 抗碰撞性 哈希碰撞是指当x≠y时，存在H(x)=H(y)，不同的输入映射到哈希表的同一个位置 很难人工创造哈希碰撞 常用" />
+<meta property="og:description" content="密码学原理 哈希 特征 collision resistance 抗碰撞性 哈希碰撞是指当x≠y时，存在H(x)=H(y)，不同的输入映射到哈希表的同一个位置 很难人工创造哈希碰撞 常用于文" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.pseudoyu.com/en/2020/12/12/blockchain_note_cryptography/" />
 <meta property="article:published_time" content="2020-12-12T03:12:17+08:00" />
 <meta property="article:modified_time" content="2020-12-12T03:12:17+08:00" />
 <meta itemprop="name" content="Blockchain学习 - 密码学原理">
-<meta itemprop="description" content="密码学原理 哈希 重要特征 collision resistance 抗碰撞性 哈希碰撞是指当x≠y时，存在H(x)=H(y)，不同的输入映射到哈希表的同一个位置 很难人工创造哈希碰撞 常用">
+<meta itemprop="description" content="密码学原理 哈希 特征 collision resistance 抗碰撞性 哈希碰撞是指当x≠y时，存在H(x)=H(y)，不同的输入映射到哈希表的同一个位置 很难人工创造哈希碰撞 常用于文">
 <meta itemprop="datePublished" content="2020-12-12T03:12:17+08:00" />
 <meta itemprop="dateModified" content="2020-12-12T03:12:17+08:00" />
-<meta itemprop="wordCount" content="420">
+<meta itemprop="wordCount" content="567">
 
 
 
 <meta itemprop="keywords" content="programming,blockchain," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Blockchain学习 - 密码学原理"/>
-<meta name="twitter:description" content="密码学原理 哈希 重要特征 collision resistance 抗碰撞性 哈希碰撞是指当x≠y时，存在H(x)=H(y)，不同的输入映射到哈希表的同一个位置 很难人工创造哈希碰撞 常用"/>
+<meta name="twitter:description" content="密码学原理 哈希 特征 collision resistance 抗碰撞性 哈希碰撞是指当x≠y时，存在H(x)=H(y)，不同的输入映射到哈希表的同一个位置 很难人工创造哈希碰撞 常用于文"/>
 </head>
 <body>
   
@@ -155,7 +155,7 @@
   <article>
   <h2 id="密码学原理">密码学原理</h2>
 <h3 id="哈希">哈希</h3>
-<p>重要特征</p>
+<p>特征</p>
 <ol>
 <li>collision resistance 抗碰撞性
 <ul>
@@ -184,7 +184,23 @@
 </ul>
 </li>
 </ol>
+<p>哈希函数用法</p>
+<ul>
+<li>为文件D创建哈希函数H(D)，对H(D)进行数字签名
+<ol>
+<li>H(D) 可以保证D未被篡改</li>
+<li>给H(D)进行数字签名可以确认D的归属权</li>
+</ol>
+</li>
+</ul>
 <h3 id="加密">加密</h3>
+<p>公私钥对应用</p>
+<ol>
+<li>加密（公钥加密、私钥解密）</li>
+<li>数字签名</li>
+<li>哈希加密 (cryptographic hash)</li>
+</ol>
+<p><em>E.g. MD5, SHA1</em></p>
 <p>对称加密</p>
 <ul>
 <li>A使用私钥加密，B使用同一个私钥解密</li>
@@ -200,6 +216,12 @@
 <li>A使用自己的私钥给信息加密</li>
 <li>大家都可以用A的公钥进行验证，防止其他人假冒A</li>
 </ul>
+<p>对比：数字签名和哈希加密</p>
+<ol>
+<li>数字签名针对某个特定对象</li>
+<li>所有人运算哈希函数可以得到相同结果</li>
+<li>哈希函数运算结果是固定长度的</li>
+</ol>
 <p>应用（比特币区块链）</p>
 <ul>
 <li>私钥代表了对比特币的控制权</li>

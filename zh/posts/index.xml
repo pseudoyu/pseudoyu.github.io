@@ -28,6 +28,15 @@
     </item>
     
     <item>
+      <title>Blockchain学习 - Bitcoin Core客户端</title>
+      <link>https://www.pseudoyu.com/zh/2020/12/15/blockchain_note_bitcoin_core/</link>
+      <pubDate>Tue, 15 Dec 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/12/15/blockchain_note_bitcoin_core/</guid>
+      <description>Bitcoin Core客户端 比特币的实现 Bitcoin-QT Satoshi-client 特点 连接至比特币网络 可验证区块链 可以发送与接收区块链 网络 Mainnet Testnet Regnet Debug Console 与比特币区块链交互的工具 Blockchain getblockchaininfo: 返回有关区块链</description>
+    </item>
+    
+    <item>
       <title>Blockchain学习 - 比特币</title>
       <link>https://www.pseudoyu.com/zh/2020/12/13/blockchain_note_bitcoin/</link>
       <pubDate>Sun, 13 Dec 2020 03:12:17 +0800</pubDate>
@@ -182,15 +191,6 @@ Datasets  Criteo Dataset. It is a famous industry benchmarking dataset for devel
       
       <guid>https://www.pseudoyu.com/zh/2020/10/19/icom6012_topic3/</guid>
       <description>ICOM6012 Internet Infrastructure Technologies Topic 3 Application Layer Creating a Network App Run on different end systems Communication over network No need to write for network-core devices Client-Server Architecture (The Centralized Internet) Server Always-on host Permanent IP address Often in data centers (for scaling) Clients Contact, communicate with server May be intermittently connected May have dynamic IP addresses Don&amp;rsquo;t communicate directly with each other Peer-to-Peer (P2P) Architecture No always-on server</description>
-    </item>
-    
-    <item>
-      <title>A Look at Tik-Tok</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/16/ecom6013_discussion_topic4/</link>
-      <pubDate>Fri, 16 Oct 2020 09:19:19 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/16/ecom6013_discussion_topic4/</guid>
-      <description>A Look at Tik-Tok Given there are many social media platforms already existing in US, what makes Tik-Tok so successful that it becomes a big enough threat to cause the US Government to act the way it did towards a commercial company (ignore political factors)? Economically, at about 2016, US tech giants such as Facebook or Google mainly focused on long video platform instead of the short video platform. A company called Musical.</description>
     </item>
     
   </channel>

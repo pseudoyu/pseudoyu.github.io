@@ -412,6 +412,94 @@
     </item>
     
     <item>
+      <title>Blockchain学习 - Bitcoin Core客户端</title>
+      <link>https://www.pseudoyu.com/zh/2020/12/15/blockchain_note_bitcoin_core/</link>
+      <pubDate>Tue, 15 Dec 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/12/15/blockchain_note_bitcoin_core/</guid>
+      
+        <description>&lt;h3 id=&#34;bitcoin-core客户端&#34;&gt;Bitcoin Core客户端&lt;/h3&gt;
+&lt;p&gt;比特币的实现&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bitcoin-QT&lt;/li&gt;
+&lt;li&gt;Satoshi-client&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;特点&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;连接至比特币网络&lt;/li&gt;
+&lt;li&gt;可验证区块链&lt;/li&gt;
+&lt;li&gt;可以发送与接收区块链&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;网络&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mainnet&lt;/li&gt;
+&lt;li&gt;Testnet&lt;/li&gt;
+&lt;li&gt;Regnet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_core_network.png&#34; alt=&#34;blockchain_bitcoin_core_network&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_core_mainnet_testnet.png&#34; alt=&#34;blockchain_bitcoin_core_mainnet_testnet&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_core_regnet_testnet.png&#34; alt=&#34;blockchain_bitcoin_core_regnet_testnet&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;debug-console&#34;&gt;Debug Console&lt;/h3&gt;
+&lt;p&gt;与比特币区块链交互的工具&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Blockchain&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;getblockchaininfo: 返回有关区块链处理的各种状态信息&lt;/li&gt;
+&lt;li&gt;getblockcount: 返回区块链中的块数&lt;/li&gt;
+&lt;li&gt;verifychain: 验证区块链数据库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Hash&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;getblockhash: 返回所提供的区块哈希值&lt;/li&gt;
+&lt;li&gt;getnetworkhashps: 基于指定数量的最近块，返回每秒网络哈希数&lt;/li&gt;
+&lt;li&gt;getbestblockhash: 返回最佳块的哈希值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Blocks&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;getblock: 返回块信息的详细信息&lt;/li&gt;
+&lt;li&gt;getblockheader: 返回有关区块头信息&lt;/li&gt;
+&lt;li&gt;generate: 立即将指定数量的块挖矿到钱包中的一个地址&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Wallet&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;getwalletinfo: 返回一个对象，该对象包含有关钱包状态的各种信息&lt;/li&gt;
+&lt;li&gt;listwallets: 返回当前加载的钱包列表&lt;/li&gt;
+&lt;li&gt;walletpassphrasechange: 更改钱包密码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Mempool&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;getmempoolinfo: 返回内存池活动状态的详细信息&lt;/li&gt;
+&lt;li&gt;getrawmempool: 返回内存池中的所有交易详细信息&lt;/li&gt;
+&lt;li&gt;getmempoolentry: 返回给定交易的内存池数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Transaction&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;getchaintxstats: 计算关于链中交易总数和速率的统计数据&lt;/li&gt;
+&lt;li&gt;getrawtransaction: 返回原始交易数据&lt;/li&gt;
+&lt;li&gt;listtransactions: 返回给定帐户的交易列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Signature&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;signrawtransaction: 签署原始交易的输入&lt;/li&gt;
+&lt;li&gt;signmessage: 使用地址的私钥对信息进行签名&lt;/li&gt;
+&lt;li&gt;dumpprivkey: 获取私钥&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Network&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;getnetworkinfo: 返回P2P网络的状态信息&lt;/li&gt;
+&lt;li&gt;getpeerinfo: 返回每个连接网络节点的数据&lt;/li&gt;
+&lt;li&gt;getconnectioncount: 返回节点的连接数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Mining&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;getmininginfo: 返回包含挖掘相关信息的对象&lt;/li&gt;
+&lt;li&gt;getblocktemplate: 返回构造块所需的数据&lt;/li&gt;
+&lt;li&gt;prioritisetransaction: 以较高或较低的优先级接受交易进入挖掘的块&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>Blockchain学习 - 比特币</title>
       <link>https://www.pseudoyu.com/zh/2020/12/13/blockchain_note_bitcoin/</link>
       <pubDate>Sun, 13 Dec 2020 03:12:17 +0800</pubDate>
@@ -4154,812 +4242,6 @@ matches the distribution of letter in English)&lt;/li&gt;
 &lt;li&gt;Initially cwnd = 1 MSS&lt;/li&gt;
 &lt;li&gt;Double cwnd every RTT&lt;/li&gt;
 &lt;li&gt;Done by incrementing cwnd for every ACK received&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>ICOM6012 Topic 3 Application Layer</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/19/icom6012_topic3/</link>
-      <pubDate>Mon, 19 Oct 2020 17:50:44 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/19/icom6012_topic3/</guid>
-      
-        <description>&lt;h1 id=&#34;icom6012-internet-infrastructure-technologies&#34;&gt;ICOM6012 Internet Infrastructure Technologies&lt;/h1&gt;
-&lt;h2 id=&#34;topic-3-application-layer&#34;&gt;Topic 3 Application Layer&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Creating a Network App&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Run on different end systems&lt;/li&gt;
-&lt;li&gt;Communication over network&lt;/li&gt;
-&lt;li&gt;No need to write for network-core devices&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Client-Server Architecture (The Centralized Internet)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Server
-&lt;ul&gt;
-&lt;li&gt;Always-on host&lt;/li&gt;
-&lt;li&gt;Permanent IP address&lt;/li&gt;
-&lt;li&gt;Often in data centers (for scaling)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Clients
-&lt;ul&gt;
-&lt;li&gt;Contact, communicate with server&lt;/li&gt;
-&lt;li&gt;May be intermittently connected&lt;/li&gt;
-&lt;li&gt;May have dynamic IP addresses&lt;/li&gt;
-&lt;li&gt;Don&amp;rsquo;t communicate directly with each other&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Peer-to-Peer (P2P) Architecture&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;No always-on server&lt;/li&gt;
-&lt;li&gt;Arbitrary end systems directly communicate&lt;/li&gt;
-&lt;li&gt;Peers request service from other peers, providing service in return to other peers
-&lt;ul&gt;
-&lt;li&gt;Self scalability - new peers bring new service capacity, as well as new service demands&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Peers are intermittently connected with dynamic IP addresses
-&lt;ul&gt;
-&lt;li&gt;Complex management&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Processes Communicating&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Process: program running within a host
-&lt;ul&gt;
-&lt;li&gt;Same host
-&lt;ul&gt;
-&lt;li&gt;Inter-process communication (defined by OS)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Different hosts
-&lt;ul&gt;
-&lt;li&gt;Exchanging messages&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Client, servers
-&lt;ul&gt;
-&lt;li&gt;Client process: process that initiates communication&lt;/li&gt;
-&lt;li&gt;Server process: process that waits to be contacted&lt;/li&gt;
-&lt;li&gt;Applications with P2P architecture have both&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Sockets&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Process sends/receives messages to/from its socket&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/sockets.png&#34; alt=&#34;sockets&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Addressing Processes&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;To receive messages, process must have identifier
-&lt;ul&gt;
-&lt;li&gt;IP address
-&lt;ul&gt;
-&lt;li&gt;Host has unique 32-bits IP address&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Port number
-&lt;ul&gt;
-&lt;li&gt;Port 0 - 1023: Well-known
-&lt;ul&gt;
-&lt;li&gt;HTTP server: 80&lt;/li&gt;
-&lt;li&gt;Mail server: 25&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Port 1024 - 49151: Registered ports&lt;/li&gt;
-&lt;li&gt;Port &amp;gt; 49151: Dynamic/private ports&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;An Application-Layer Protocol Defines&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Types of messages exchanged
-&lt;ul&gt;
-&lt;li&gt;Request&lt;/li&gt;
-&lt;li&gt;Response&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Message syntax
-&lt;ul&gt;
-&lt;li&gt;What field&lt;/li&gt;
-&lt;li&gt;How fields are delineated&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Message semantics
-&lt;ul&gt;
-&lt;li&gt;Meaning of information in fields&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Rules
-&lt;ul&gt;
-&lt;li&gt;When and how process send &amp;amp; respond to messages&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Protocols
-&lt;ul&gt;
-&lt;li&gt;Open protocols
-&lt;ul&gt;
-&lt;li&gt;Defined in RFCs (by IETF)&lt;/li&gt;
-&lt;li&gt;Everyone has access to protocol definition&lt;/li&gt;
-&lt;li&gt;Allow for interoperability&lt;/li&gt;
-&lt;li&gt;Example
-&lt;ul&gt;
-&lt;li&gt;HTTP&lt;/li&gt;
-&lt;li&gt;SMTP&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Proprietary protocols
-&lt;ul&gt;
-&lt;li&gt;Skype&lt;/li&gt;
-&lt;li&gt;Zoom&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Transport Service&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Data integrity&lt;/li&gt;
-&lt;li&gt;Timing&lt;/li&gt;
-&lt;li&gt;Throughput&lt;/li&gt;
-&lt;li&gt;Security&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/transport_service.png&#34; alt=&#34;transport_service&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Internet Transport Protocols Services&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;TCP service
-&lt;ul&gt;
-&lt;li&gt;Connection-oriented&lt;/li&gt;
-&lt;li&gt;Reliable transport&lt;/li&gt;
-&lt;li&gt;Flow control&lt;/li&gt;
-&lt;li&gt;Congestion control&lt;/li&gt;
-&lt;li&gt;Doesn&amp;rsquo;t provide
-&lt;ul&gt;
-&lt;li&gt;Timing&lt;/li&gt;
-&lt;li&gt;Minimum throughput guarantee&lt;/li&gt;
-&lt;li&gt;Security&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;UDP service
-&lt;ul&gt;
-&lt;li&gt;Unreliable data transfer&lt;/li&gt;
-&lt;li&gt;Doesn&amp;rsquo;t provide
-&lt;ul&gt;
-&lt;li&gt;Reliability&lt;/li&gt;
-&lt;li&gt;Flow control&lt;/li&gt;
-&lt;li&gt;Congestion control&lt;/li&gt;
-&lt;li&gt;Timing&lt;/li&gt;
-&lt;li&gt;Throughput guarantee&lt;/li&gt;
-&lt;li&gt;Security&lt;/li&gt;
-&lt;li&gt;Connection setup&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/transport_protocols.png&#34; alt=&#34;transport_protocols&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Securing TCP&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;TCP &amp;amp; UDP
-&lt;ul&gt;
-&lt;li&gt;No encryption&lt;/li&gt;
-&lt;li&gt;Cleartext passwords sent into socket traverse Internet in cleartext&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;SSL (Secure Socket Layer) / TLS (Transport Layer Security)
-&lt;ul&gt;
-&lt;li&gt;Provides encrypted TCP connection&lt;/li&gt;
-&lt;li&gt;Data integrity&lt;/li&gt;
-&lt;li&gt;End-point authentication&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;SSL/TLS is at Application Layer
-&lt;ul&gt;
-&lt;li&gt;Apps use SSL/TLS libraries, which &amp;ldquo;talk&amp;rdquo; to TCP&lt;/li&gt;
-&lt;li&gt;Cleartext passwords sent into socket traverse Internet encrypted&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ssl_tls.png&#34; alt=&#34;ssl_tls&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;The IP Hourglass&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ip_hourglass.png&#34; alt=&#34;ip_hourglass&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;HTTP Overview&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;HTTP: Hypertext Transfer Protocol&lt;/li&gt;
-&lt;li&gt;Web&amp;rsquo;s application-layer protocol&lt;/li&gt;
-&lt;li&gt;Client/Server model
-&lt;ul&gt;
-&lt;li&gt;Client - browser that requests, receives and &amp;ldquo;display&amp;rdquo; web objects&lt;/li&gt;
-&lt;li&gt;Server - Web server sends objects in response to requests&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Development
-&lt;ul&gt;
-&lt;li&gt;HTTP/1.0: RFC 1945 (1996)&lt;/li&gt;
-&lt;li&gt;HTTP/1.1: RFC 2616 (1997)&lt;/li&gt;
-&lt;li&gt;HTTP/2: RFC 7540 (2015)&lt;/li&gt;
-&lt;li&gt;HTTP/3: Internet-Draft (2020)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Uses TCP
-&lt;ul&gt;
-&lt;li&gt;Client initiates TCP connection (create sockets) to server, port 80&lt;/li&gt;
-&lt;li&gt;Server accepts TCP connection from client&lt;/li&gt;
-&lt;li&gt;HTTP messages exchanged between browser and web server&lt;/li&gt;
-&lt;li&gt;TCP connection closed&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;HTTP is stateless
-&lt;ul&gt;
-&lt;li&gt;Server maintains no information about past client requests&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;HTTP Connections&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Non-persistent HTTP
-&lt;ul&gt;
-&lt;li&gt;Downloading multiple objects required multiple connections
-&lt;ul&gt;
-&lt;li&gt;Sequential&lt;/li&gt;
-&lt;li&gt;Parallel&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Procedures
-&lt;ul&gt;
-&lt;li&gt;TCP connection opened&lt;/li&gt;
-&lt;li&gt;At most one object sent over TCP connection&lt;/li&gt;
-&lt;li&gt;TCP connection closed&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;OS must work and allocate host resources for each TCP connection&lt;/li&gt;
-&lt;li&gt;Browser often open parallel TCP connections to fetch referenced objects&lt;/li&gt;
-&lt;li&gt;HTTP response time (2RTT+)
-&lt;ul&gt;
-&lt;li&gt;RTT: Time for a small packet to travel from client to server and back&lt;/li&gt;
-&lt;li&gt;1RTT to initiate TCP connection&lt;/li&gt;
-&lt;li&gt;1RTT for HTTP request and first few bytes of HTTP response to return&lt;/li&gt;
-&lt;li&gt;File transmission time&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Persistent HTTP
-&lt;ul&gt;
-&lt;li&gt;Procedures
-&lt;ul&gt;
-&lt;li&gt;TCP connection opened to a server&lt;/li&gt;
-&lt;li&gt;Multiple objects can be sent over single TCP connection between clients and that server&lt;/li&gt;
-&lt;li&gt;TCP connection closed&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Server leaves connection open after sending response&lt;/li&gt;
-&lt;li&gt;Subsequent HTTP messages between same client/server are sent over connection&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Persistent HTTP without pipelining
-&lt;ul&gt;
-&lt;li&gt;Client issues new request only when previous response has been received&lt;/li&gt;
-&lt;li&gt;1RTT for each referenced object&lt;/li&gt;
-&lt;li&gt;Head-of-line (HoL) blocking&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Persistent HTTP with pipelining
-&lt;ul&gt;
-&lt;li&gt;Client sends requests as soon as it encounters a referenced object&lt;/li&gt;
-&lt;li&gt;As little as 1RTT for all the referenced objects&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Not activated in practice&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;HTTP Message&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Request
-&lt;ul&gt;
-&lt;li&gt;In ASCII (human readable format)&lt;/li&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/http_request.png&#34; alt=&#34;http_request&#34;&gt;&lt;/li&gt;
-&lt;li&gt;Methods
-&lt;ul&gt;
-&lt;li&gt;POST&lt;/li&gt;
-&lt;li&gt;GET&lt;/li&gt;
-&lt;li&gt;HEAD&lt;/li&gt;
-&lt;li&gt;PUT&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Response
-&lt;ul&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/http_response.png&#34; alt=&#34;http_response&#34;&gt;&lt;/li&gt;
-&lt;li&gt;Statu Code
-&lt;ul&gt;
-&lt;li&gt;Informational, 1XX&lt;/li&gt;
-&lt;li&gt;Successful, 2XX, (200 OK)&lt;/li&gt;
-&lt;li&gt;Redirection, 3XX, (301 Moved Permanently)&lt;/li&gt;
-&lt;li&gt;Client Error, 4XX, (400 Bad Request, 404 Not Found)&lt;/li&gt;
-&lt;li&gt;Server Error, 5XX, (505 HTTP Version Not Support)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Cookies&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Components
-&lt;ul&gt;
-&lt;li&gt;Cookie header line of HTTP response message&lt;/li&gt;
-&lt;li&gt;Cookie header line in next HTTP request message&lt;/li&gt;
-&lt;li&gt;Cookie file kept on user&amp;rsquo;s host, managed by user&amp;rsquo;s browser&lt;/li&gt;
-&lt;li&gt;Back-end database at website&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Example
-&lt;ul&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/cookie_example.png&#34; alt=&#34;cookie_example&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;3rd-party cookies
-&lt;ul&gt;
-&lt;li&gt;Many sites use third party advertisements&lt;/li&gt;
-&lt;li&gt;The third party can set a cookie that identifies the user&lt;/li&gt;
-&lt;li&gt;This cookie is sent to the third party each time an ad is downloaded by the user’s browser along with the address of the page that contains the link to the ad&lt;/li&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/3_party_cookies.png&#34; alt=&#34;3_party_cookies&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Web Caches (Proxy Servers)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Goal
-&lt;ul&gt;
-&lt;li&gt;Satisfy client request without involving origin server&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;User configures browser to point to a web cache&lt;/li&gt;
-&lt;li&gt;Browser sends all HTTP requsets to cache
-&lt;ul&gt;
-&lt;li&gt;If object in cache: cache returns object&lt;/li&gt;
-&lt;li&gt;Else: cache requests object from origin server, then returns object to client&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Conditional GET&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Goal
-&lt;ul&gt;
-&lt;li&gt;Don&amp;rsquo;t send object if cache has up-to-date cached version
-&lt;ul&gt;
-&lt;li&gt;No object transmission delay&lt;/li&gt;
-&lt;li&gt;Lower link utilization&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Cache: specify date of cached copy in HTTP request&lt;/li&gt;
-&lt;li&gt;Server: response contains no object if cached copy is up-to-date&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/conditional_get.png&#34; alt=&#34;conditional_get&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;HTTP/2&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Goals
-&lt;ul&gt;
-&lt;li&gt;Backward compatible with HTTP 1.1&lt;/li&gt;
-&lt;li&gt;Improve page load speed
-&lt;ul&gt;
-&lt;li&gt;Data compression of HTTP headers&lt;/li&gt;
-&lt;li&gt;HTTP/2 Server Push&lt;/li&gt;
-&lt;li&gt;Pipelining of requests&lt;/li&gt;
-&lt;li&gt;Fixing the head-of-line blocking problem in HTTP 1.1&lt;/li&gt;
-&lt;li&gt;Multiplexing multiple requests over a single TCP connection&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Mitigating HOL blocking
-&lt;ul&gt;
-&lt;li&gt;Objects divided into frames, frame transmission interleaved&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;HTTP/2 to HTTP/3&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Goal
-&lt;ul&gt;
-&lt;li&gt;To further decrease delay in multi-object HTTP requests&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;HTTP/2 over single TCP connection means
-&lt;ul&gt;
-&lt;li&gt;Recovery from packet loss still stalls all object transmissions =&amp;gt; Head-of-line blocking!&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;HTTP/3 over UDP (to address the HoL blocking)
-&lt;ul&gt;
-&lt;li&gt;Adds security, per object error and congestion-control&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Email&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Components
-&lt;ul&gt;
-&lt;li&gt;User agents
-&lt;ul&gt;
-&lt;li&gt;Composing, editing, reading mail messages&lt;/li&gt;
-&lt;li&gt;Outgoing, incoming messages stored on server&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Mail server
-&lt;ul&gt;
-&lt;li&gt;Mailbox&lt;/li&gt;
-&lt;li&gt;Message queue&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;SMTP (Simple Mail Transfer Protocol)
-&lt;ul&gt;
-&lt;li&gt;Client: Sending mail server&lt;/li&gt;
-&lt;li&gt;Server: Receiving mail server&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;SMTP [RFC 5321]&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Uses TCP to reliably transfer email message from client to server, port 25 (or 587)&lt;/li&gt;
-&lt;li&gt;Direct transfer: sending server to receiving server&lt;/li&gt;
-&lt;li&gt;Three phases of transfer
-&lt;ul&gt;
-&lt;li&gt;Handshaking (greeting)&lt;/li&gt;
-&lt;li&gt;Transfer of messages&lt;/li&gt;
-&lt;li&gt;Closure&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Command/response interaction (like HTTP, FTP)
-&lt;ul&gt;
-&lt;li&gt;Commands: ASCII text&lt;/li&gt;
-&lt;li&gt;Response: status code and phrase&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Messages must be in 7-bit ASCII&lt;/li&gt;
-&lt;li&gt;Uses persistent connections&lt;/li&gt;
-&lt;li&gt;use &lt;em&gt;CRLF.CRLF&lt;/em&gt; to determine end of message&lt;/li&gt;
-&lt;li&gt;Example
-&lt;ul&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/smtp_example.png&#34; alt=&#34;smtp_example&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Mail Message Format&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;RFC 822: standard for text message format
-&lt;ul&gt;
-&lt;li&gt;Header lines (different from SMTP MAIL FROM, RCPT TO commands)
-&lt;ul&gt;
-&lt;li&gt;To&lt;/li&gt;
-&lt;li&gt;From&lt;/li&gt;
-&lt;li&gt;Subject&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Body (the message)
-&lt;ul&gt;
-&lt;li&gt;ASCII characters only&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Message Format: multimedia extensions&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;MIME (multipurpose internet mail extension): multimedia mail extension (to RFC 822), RFC 2045, 2056&lt;/li&gt;
-&lt;li&gt;Additional lines in msg header declare MIME content type&lt;/li&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mail_mime.png&#34; alt=&#34;mail_mime&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Mail Access Protocols&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mail_access_protocols.png&#34; alt=&#34;mail_access_protocols&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;SMTP
-&lt;ul&gt;
-&lt;li&gt;Delivery/storage to receiver&amp;rsquo;s server&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Mail access protocol: retrieval from server
-&lt;ul&gt;
-&lt;li&gt;POP
-&lt;ul&gt;
-&lt;li&gt;Post Office Protocol [RFC 1939]: authorization, download&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;IMAP
-&lt;ul&gt;
-&lt;li&gt;Internet Mail Access Protocol [RFC 1730]: more features, including manipulation of stored msgs on server&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;HTTP
-&lt;ul&gt;
-&lt;li&gt;Provides web-based interface on top of STMP (to send), IMAP (or POP) to retrieve e-mail messages&lt;/li&gt;
-&lt;li&gt;Gmail, Hotmail, etc.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;DNS (Domain Name System)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Why not a single centralized DNS server
-&lt;ul&gt;
-&lt;li&gt;Single point of failure&lt;/li&gt;
-&lt;li&gt;Traffic jam due to huge number of requests/queries&lt;/li&gt;
-&lt;li&gt;Long distance =&amp;gt; slow response&lt;/li&gt;
-&lt;li&gt;Maintenance issue&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;DNS services
-&lt;ul&gt;
-&lt;li&gt;Hostname to IP address translation&lt;/li&gt;
-&lt;li&gt;Host aliasing&lt;/li&gt;
-&lt;li&gt;Mail server aliasing&lt;/li&gt;
-&lt;li&gt;Load distribution&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/dns_services.png&#34; alt=&#34;dns_services&#34;&gt;&lt;/li&gt;
-&lt;li&gt;Root Name Servers
-&lt;ul&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/root_name_servers.png&#34; alt=&#34;root_name_servers&#34;&gt;&lt;/li&gt;
-&lt;li&gt;13 LOGICAL root name servers, but 1086(or more) PHYICAL servers&lt;/li&gt;
-&lt;li&gt;Reply with a referral to the DNS servers for a TLD, or indicating no such TLD exists.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;TLD &amp;amp; authoritative servers
-&lt;ul&gt;
-&lt;li&gt;Top-level domain (TLD) servers
-&lt;ul&gt;
-&lt;li&gt;gTLD (originally 7): com, net, biz, edu, org, int, mil, …&lt;/li&gt;
-&lt;li&gt;ccTLD (249): uk, cn, hk, …&lt;/li&gt;
-&lt;li&gt;IDN (internationalized top-level domains): .中国, .香港 and .台灣&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Authoritative DNS servers
-&lt;ul&gt;
-&lt;li&gt;Organization&amp;rsquo;s own DNS server(s), providing authoritative hostname to IP mappings for organization’s named hosts&lt;/li&gt;
-&lt;li&gt;Can be maintained by organization or service provider&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Local/Default DNS Server&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Does not strictly belong to hierarchy&lt;/li&gt;
-&lt;li&gt;When host makes DNS query, query is sent to its local DNS server
-&lt;ul&gt;
-&lt;li&gt;Has local cache of recent name-to-address translation&lt;/li&gt;
-&lt;li&gt;Acts as proxy, forwards query into hierarchy&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Each ISP (residential ISP, company, university) has one&lt;/li&gt;
-&lt;li&gt;Public DNS server
-&lt;ul&gt;
-&lt;li&gt;Google public DNS (with IP address 8.8.8.8)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Your home WiFi router may act as your local DNS server&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;DNS: Caching, Updating Records&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Once (any) name server learns mapping, it caches mapping
-&lt;ul&gt;
-&lt;li&gt;Cache entries timeout (disappear) after some time (TTL)&lt;/li&gt;
-&lt;li&gt;TLD servers typically cached in local name servers
-&lt;ul&gt;
-&lt;li&gt;Root name servers not often visited&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Cached entries may be out-of-date
-&lt;ul&gt;
-&lt;li&gt;If name host changes IP address, may not be known Internet-wide until all TTLs expire&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Update/notify mechanisms proposed IETF standard
-&lt;ul&gt;
-&lt;li&gt;RFC 2136&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;DNS Records&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;DNS: distributed db storing resource records (RR)
-&lt;ul&gt;
-&lt;li&gt;RR format
-&lt;ul&gt;
-&lt;li&gt;(name, value, type, ttl)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;type = A&lt;/li&gt;
-&lt;li&gt;type = CNAME&lt;/li&gt;
-&lt;li&gt;type = NS&lt;/li&gt;
-&lt;li&gt;type = MX&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;DNS Protocol, Messages&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;DNS query and reply messages, both with same message format
-&lt;ul&gt;
-&lt;li&gt;Message header
-&lt;ul&gt;
-&lt;li&gt;Identification
-&lt;ul&gt;
-&lt;li&gt;16 bit&lt;/li&gt;
-&lt;li&gt;For query, reply to query uses same&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Flags
-&lt;ul&gt;
-&lt;li&gt;Query or reply&lt;/li&gt;
-&lt;li&gt;Recursion desired&lt;/li&gt;
-&lt;li&gt;Recursion available&lt;/li&gt;
-&lt;li&gt;Reply is authoritative&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/dns_message.png&#34; alt=&#34;dns_message&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Attacking DNS&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;DDoS attacks
-&lt;ul&gt;
-&lt;li&gt;Bombard root servers with traffic
-&lt;ul&gt;
-&lt;li&gt;Not successful to date&lt;/li&gt;
-&lt;li&gt;Traffic Filtering&lt;/li&gt;
-&lt;li&gt;Local DNS servers cache IPs of TLD servers, allowing root server bypass&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Bombard TLD servers
-&lt;ul&gt;
-&lt;li&gt;Potentially more dangerous&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Redirect attacks
-&lt;ul&gt;
-&lt;li&gt;Man-in-middle
-&lt;ul&gt;
-&lt;li&gt;Intercept queries&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;DNS poisoning
-&lt;ul&gt;
-&lt;li&gt;Send bogus replies to DNS server, which caches&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Peer-to-peer File Distribution&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;P2P architecture
-&lt;ul&gt;
-&lt;li&gt;No always-on server&lt;/li&gt;
-&lt;li&gt;Arbitrary end systems directly communicate&lt;/li&gt;
-&lt;li&gt;Self scalibility&lt;/li&gt;
-&lt;li&gt;Peers are intermittently connected and change IP address&lt;/li&gt;
-&lt;li&gt;Example
-&lt;ul&gt;
-&lt;li&gt;File distribution - BitTorrent&lt;/li&gt;
-&lt;li&gt;Streaming - KanKan&lt;/li&gt;
-&lt;li&gt;Volp - Skype&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;File Distribution (Client-Server)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/client_server_file.png&#34; alt=&#34;client_server_file&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Server transmission
-&lt;ul&gt;
-&lt;li&gt;Must send/upload N file copies&lt;/li&gt;
-&lt;li&gt;Time: NF/U(s)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Client
-&lt;ul&gt;
-&lt;li&gt;Each client must download one file copy&lt;/li&gt;
-&lt;li&gt;Slowest time: F/d(min)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Time to distribute F to N
-&lt;ul&gt;
-&lt;li&gt;D(c-s) &amp;gt;= max {NF/U(s), F/d(min)}&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;File Distribution (P2P)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Server transmission
-&lt;ul&gt;
-&lt;li&gt;Must upload at least one copy&lt;/li&gt;
-&lt;li&gt;Time: F/U(s)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Client
-&lt;ul&gt;
-&lt;li&gt;Each client must download one file copy&lt;/li&gt;
-&lt;li&gt;Slowest time: F/d(min)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;All clients
-&lt;ul&gt;
-&lt;li&gt;As aggregate must download NF bits&lt;/li&gt;
-&lt;li&gt;Max upload rate: U(s)+NU(i)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Time to distribute F to N
-&lt;ul&gt;
-&lt;li&gt;D(P2P) &amp;gt;= max {F/U(s), F/d(min), NF/(U(s)+Sum(U(i)))}&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Client-Server vs. P2P&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/p2p_cs.png&#34; alt=&#34;p2p_cs&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;P2P File Distribution: BitTorrent&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Procedure
-&lt;ul&gt;
-&lt;li&gt;File divided into 256KB chunks&lt;/li&gt;
-&lt;li&gt;Peers in torrent send/receive file chucks&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Roles
-&lt;ul&gt;
-&lt;li&gt;Tracker
-&lt;ul&gt;
-&lt;li&gt;Track peers participating in torrent&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Torrent
-&lt;ul&gt;
-&lt;li&gt;Group of peers exchanging chucks of a file&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Actions
-&lt;ul&gt;
-&lt;li&gt;Requesting chunks
-&lt;ul&gt;
-&lt;li&gt;Ask each peer for chunks they have&lt;/li&gt;
-&lt;li&gt;Request missing chunks (rarest piece first)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Sending chunks (tit-for-tat)
-&lt;ul&gt;
-&lt;li&gt;Send chunks to peers who currently sending her chunks at highest rate&lt;/li&gt;
-&lt;li&gt;Randomly select another peers and send chunks (for new peers)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;

@@ -129,27 +129,34 @@
   
   <url>
     <loc>https://www.pseudoyu.com/zh/tag/blockchain/</loc>
-    <lastmod>2020-12-13T03:12:17+08:00</lastmod>
+    <lastmod>2020-12-15T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/12/13/blockchain_note_bitcoin/</loc>
-    <lastmod>2020-12-13T03:12:17+08:00</lastmod>
+    <loc>https://www.pseudoyu.com/zh/2020/12/15/blockchain_note_bitcoin_core/</loc>
+    <lastmod>2020-12-15T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.pseudoyu.com/zh/category/programming/</loc>
-    <lastmod>2020-12-13T03:12:17+08:00</lastmod>
+    <lastmod>2020-12-15T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.pseudoyu.com/zh/tag/programming/</loc>
+    <lastmod>2020-12-15T03:12:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/zh/2020/12/13/blockchain_note_bitcoin/</loc>
     <lastmod>2020-12-13T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

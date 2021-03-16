@@ -6,7 +6,16 @@
     <description>Recent content in blockchain on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 13 Dec 2020 03:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/blockchain/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Dec 2020 03:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/blockchain/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blockchain学习 - Bitcoin Core客户端</title>
+      <link>https://www.pseudoyu.com/zh/2020/12/15/blockchain_note_bitcoin_core/</link>
+      <pubDate>Tue, 15 Dec 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/12/15/blockchain_note_bitcoin_core/</guid>
+      <description>Bitcoin Core客户端 比特币的实现 Bitcoin-QT Satoshi-client 特点 连接至比特币网络 可验证区块链 可以发送与接收区块链 网络 Mainnet Testnet Regnet Debug Console 与比特币区块链交互的工具 Blockchain getblockchaininfo: 返回有关区块链</description>
+    </item>
+    
     <item>
       <title>Blockchain学习 - 比特币</title>
       <link>https://www.pseudoyu.com/zh/2020/12/13/blockchain_note_bitcoin/</link>

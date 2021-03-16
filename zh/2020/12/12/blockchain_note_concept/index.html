@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Blockchain学习 - 区块链概念 · Pseudoyu</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="区块链概念 传统数据库 vs. 区块链数据库 传统数据库 网络 中心化 功能 Create 创建 Read 读取 Update 更新 Delete 删除 可变性 可变 权限 中心化 透明度 低 区块链数据库 网络 去中心化 给予节" />
+  <meta name="description" content="区块链概念 区块链是一种分布式账本技术，由于是一群人来记账，所以修改这个账本的难度比较高。 单式记账 → 复式记账 → 数字化记账 → 分布式记账 传统中心化" />
 
   <meta name="keywords" content="Hugo, theme, den" />
 
@@ -20,23 +20,23 @@
 
 
 <meta property="og:title" content="Blockchain学习 - 区块链概念" />
-<meta property="og:description" content="区块链概念 传统数据库 vs. 区块链数据库 传统数据库 网络 中心化 功能 Create 创建 Read 读取 Update 更新 Delete 删除 可变性 可变 权限 中心化 透明度 低 区块链数据库 网络 去中心化 给予节" />
+<meta property="og:description" content="区块链概念 区块链是一种分布式账本技术，由于是一群人来记账，所以修改这个账本的难度比较高。 单式记账 → 复式记账 → 数字化记账 → 分布式记账 传统中心化" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.pseudoyu.com/zh/2020/12/12/blockchain_note_concept/" />
 <meta property="article:published_time" content="2020-12-12T05:12:17+08:00" />
 <meta property="article:modified_time" content="2020-12-12T05:12:17+08:00" />
 <meta itemprop="name" content="Blockchain学习 - 区块链概念">
-<meta itemprop="description" content="区块链概念 传统数据库 vs. 区块链数据库 传统数据库 网络 中心化 功能 Create 创建 Read 读取 Update 更新 Delete 删除 可变性 可变 权限 中心化 透明度 低 区块链数据库 网络 去中心化 给予节">
+<meta itemprop="description" content="区块链概念 区块链是一种分布式账本技术，由于是一群人来记账，所以修改这个账本的难度比较高。 单式记账 → 复式记账 → 数字化记账 → 分布式记账 传统中心化">
 <meta itemprop="datePublished" content="2020-12-12T05:12:17+08:00" />
 <meta itemprop="dateModified" content="2020-12-12T05:12:17+08:00" />
-<meta itemprop="wordCount" content="459">
+<meta itemprop="wordCount" content="1089">
 
 
 
 <meta itemprop="keywords" content="programming,blockchain," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Blockchain学习 - 区块链概念"/>
-<meta name="twitter:description" content="区块链概念 传统数据库 vs. 区块链数据库 传统数据库 网络 中心化 功能 Create 创建 Read 读取 Update 更新 Delete 删除 可变性 可变 权限 中心化 透明度 低 区块链数据库 网络 去中心化 给予节"/>
+<meta name="twitter:description" content="区块链概念 区块链是一种分布式账本技术，由于是一群人来记账，所以修改这个账本的难度比较高。 单式记账 → 复式记账 → 数字化记账 → 分布式记账 传统中心化"/>
 </head>
 <body>
   
@@ -154,6 +154,10 @@
 <div class="container content">
   <article>
   <h2 id="区块链概念">区块链概念</h2>
+<p>区块链是一种分布式账本技术，由于是一群人来记账，所以修改这个账本的难度比较高。</p>
+<p>单式记账 → 复式记账 → 数字化记账 → 分布式记账</p>
+<p>传统中心化数字记账依赖于某个组织的可信度，而区块链是通过共识机制来共同记账，由区块链技术来保障信任机制，具有去中心化、难以篡改、可追溯等特点。</p>
+<p>难以篡改是区块链主要特征，相比传统数据库（传统数据库包喊了增删改查），区块链只有增加和查询，是一种“历史记录不可篡改的数据库”。</p>
 <h3 id="传统数据库-vs-区块链数据库">传统数据库 vs. 区块链数据库</h3>
 <p><strong>传统数据库</strong></p>
 <ul>
@@ -249,54 +253,34 @@
 <li>能否脱离权限控制机制运作？</li>
 </ul>
 <h3 id="区块链类型">区块链类型</h3>
+<p>区块链分为</p>
 <ul>
 <li>公链：交易是否要公开</li>
 <li>私链：是否需要其他公司（机构）访问数据</li>
 <li>联盟链：权限控制</li>
 </ul>
-<h3 id="p2p网络-vs-client-server网络">P2P网络 vs. Client-Server网络</h3>
+<p>越靠近公有链则对节点的认证和权限管理要求越少、去中心化程度越高</p>
+<p>公有链主流共识机制有</p>
 <ul>
-<li>Client-Server
+<li>工作量证明 PoW</li>
+<li>权益证明 PoS</li>
+<li>委任权益证明 DPoS</li>
+</ul>
+<p>共识机制核心是记账权的争夺，公链的设计思路是让恶意节点的攻击成本远远大于诚实节点的受益。一般采取拜占庭容错机制，解决了节点故障和节点作恶的情况下还是能达成共识。</p>
+<h4 id="公链">公链</h4>
 <ul>
-<li>Client发出请求</li>
-<li>Server响应请求</li>
+<li>比特币：第一个成功的去中心化数字货币系统</li>
+<li>以太坊：可编程、可运算的智能合约</li>
+<li>EOS：超越货币、经济的去中心话应用操作系统</li>
 </ul>
-</li>
-<li>P2P网络
-<ul>
-<li>网络中多个节点共享信息和资源</li>
-</ul>
-</li>
-</ul>
-<h3 id="区块链数据">区块链数据</h3>
-<p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_btc_data.png" alt="blockchain_btc_data"></p>
-<p>Bitcoin Improvement Proposal (BIP)</p>
-<ul>
-<li>对Bitcoin core客户端做出改变的提案文件</li>
-</ul>
-<h3 id="分叉">分叉</h3>
-<p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_fork_type.png" alt="blockchain_fork_type"></p>
-<ul>
-<li>硬分叉：永久性改变
-<ul>
-<li>Bitcoin Cash：提升了比特币区块链大小至2M</li>
-</ul>
-</li>
-<li>软分叉：暂时性改变
-<ul>
-<li>Segregated Witness（Segwit）</li>
-</ul>
-</li>
-<li>源码分叉
-<ul>
-<li>源程序的一个副本，无关联，一般用于山寨币
-<ul>
-<li>Litecoin</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<h4 id="联盟链">联盟链</h4>
+<p>联盟链节点需要经过认证才能参与到区块链网络，交易速度更快、拓展性更高、并能很好地保护交易隐私。联盟链因为节点数有限且需要认证，为了提升效率，弱化了节点作恶，重点考虑1/3节点故障下系统共识机制的达成，且一般不需要代币作为激励机制，而是每个部门作为记账节点，实现跨部门之间的业务协同给大家带来经济效益。</p>
+<p>联盟链的代表是Hyperledger，这是首个面向企业应用场景的开源分布式账本平台，而Hyperledger Fabric是其中发展的最好的子项目。</p>
+<p>Hyperledger Fabric定位是面向企业的分布式账本平台，引入了权限管理机制，设计上支持可插拔、可拓展，具备良好的设计架构、完善的文档、清晰的代码。</p>
+<h4 id="私有链">私有链</h4>
+<p>而私有链是在某一领域、某一企业运行的区块链，一般用于解决部门间的信任问题。</p>
+<h4 id="应用场景">应用场景</h4>
+<p>长期来看，公有链和联盟链在技术上会趋于融合，界限也会越来越模糊，一般将需要信任的数据放在公有链上，而一些行业数据、私有数据放在联盟链上。</p>
 
   </article>
 

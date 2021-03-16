@@ -786,9 +786,9 @@
   &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`Block: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;JSON&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;stringify&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;}).&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;catch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)});&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;区块链&#34;&gt;区块链&lt;/h3&gt;
-&lt;p&gt;存储网络中所有交易历史记录的账本&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://andersbrownworth.com/blockchain/blockchain&#34;&gt;Demo&lt;/a&gt;
-&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_overview.png&#34; alt=&#34;blockchain_overview&#34;&gt;&lt;/p&gt;
+&lt;p&gt;存储网络中所有交易历史记录的账本
+&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_overview.png&#34; alt=&#34;blockchain_overview&#34;&gt;
+&lt;a href=&#34;https://andersbrownworth.com/blockchain/blockchain&#34;&gt;Demo&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;network&#34;&gt;Network&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;

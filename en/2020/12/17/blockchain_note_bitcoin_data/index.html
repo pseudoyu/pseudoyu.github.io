@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Blockchain学习 - 比特币数据模型 · Pseudoyu</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="比特币数据模型 区块头 前一个 时间戳 Merkle Root Nonce Block Body 交易 输入 UTXO: Unspent outputs from another Transaction 必须以整体被花费，不能划分，多余部分转回源账户 所有输入都可以追溯至输出 输出 双重" />
+  <meta name="description" content="比特币数据模型 区块头 前一个区块的哈希值 时间戳 Merkle Root Nonce Block Body 交易 输入 UTXO: Unspent outputs from another Transaction 必须以整体被花费，不能划分，多余部分转回源账户 所有输入都可以追溯至" />
 
   <meta name="keywords" content="Hugo, theme, den" />
 
@@ -20,23 +20,23 @@
 
 
 <meta property="og:title" content="Blockchain学习 - 比特币数据模型" />
-<meta property="og:description" content="比特币数据模型 区块头 前一个 时间戳 Merkle Root Nonce Block Body 交易 输入 UTXO: Unspent outputs from another Transaction 必须以整体被花费，不能划分，多余部分转回源账户 所有输入都可以追溯至输出 输出 双重" />
+<meta property="og:description" content="比特币数据模型 区块头 前一个区块的哈希值 时间戳 Merkle Root Nonce Block Body 交易 输入 UTXO: Unspent outputs from another Transaction 必须以整体被花费，不能划分，多余部分转回源账户 所有输入都可以追溯至" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.pseudoyu.com/en/2020/12/17/blockchain_note_bitcoin_data/" />
 <meta property="article:published_time" content="2020-12-17T03:12:17+08:00" />
 <meta property="article:modified_time" content="2020-12-17T03:12:17+08:00" />
 <meta itemprop="name" content="Blockchain学习 - 比特币数据模型">
-<meta itemprop="description" content="比特币数据模型 区块头 前一个 时间戳 Merkle Root Nonce Block Body 交易 输入 UTXO: Unspent outputs from another Transaction 必须以整体被花费，不能划分，多余部分转回源账户 所有输入都可以追溯至输出 输出 双重">
+<meta itemprop="description" content="比特币数据模型 区块头 前一个区块的哈希值 时间戳 Merkle Root Nonce Block Body 交易 输入 UTXO: Unspent outputs from another Transaction 必须以整体被花费，不能划分，多余部分转回源账户 所有输入都可以追溯至">
 <meta itemprop="datePublished" content="2020-12-17T03:12:17+08:00" />
 <meta itemprop="dateModified" content="2020-12-17T03:12:17+08:00" />
-<meta itemprop="wordCount" content="707">
+<meta itemprop="wordCount" content="713">
 
 
 
 <meta itemprop="keywords" content="programming,blockchain," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Blockchain学习 - 比特币数据模型"/>
-<meta name="twitter:description" content="比特币数据模型 区块头 前一个 时间戳 Merkle Root Nonce Block Body 交易 输入 UTXO: Unspent outputs from another Transaction 必须以整体被花费，不能划分，多余部分转回源账户 所有输入都可以追溯至输出 输出 双重"/>
+<meta name="twitter:description" content="比特币数据模型 区块头 前一个区块的哈希值 时间戳 Merkle Root Nonce Block Body 交易 输入 UTXO: Unspent outputs from another Transaction 必须以整体被花费，不能划分，多余部分转回源账户 所有输入都可以追溯至"/>
 </head>
 <body>
   
@@ -156,7 +156,7 @@
   <h2 id="比特币数据模型">比特币数据模型</h2>
 <h3 id="区块头">区块头</h3>
 <ul>
-<li>前一个</li>
+<li>前一个区块的哈希值</li>
 <li>时间戳</li>
 <li>Merkle Root</li>
 <li>Nonce</li>

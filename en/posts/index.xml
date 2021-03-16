@@ -33,7 +33,7 @@
       <pubDate>Thu, 17 Dec 2020 03:12:17 +0800</pubDate>
       
       <guid>https://www.pseudoyu.com/en/2020/12/17/blockchain_note_bitcoin_data/</guid>
-      <description>比特币数据模型 区块头 前一个 时间戳 Merkle Root Nonce Block Body 交易 输入 UTXO: Unspent outputs from another Transaction 必须以整体被花费，不能划分，多余部分转回源账户 所有输入都可以追溯至输出 输出 双重</description>
+      <description>比特币数据模型 区块头 前一个区块的哈希值 时间戳 Merkle Root Nonce Block Body 交易 输入 UTXO: Unspent outputs from another Transaction 必须以整体被花费，不能划分，多余部分转回源账户 所有输入都可以追溯至</description>
     </item>
     
     <item>

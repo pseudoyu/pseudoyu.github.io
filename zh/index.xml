@@ -421,7 +421,7 @@
         <description>&lt;h2 id=&#34;比特币数据模型&#34;&gt;比特币数据模型&lt;/h2&gt;
 &lt;h3 id=&#34;区块头&#34;&gt;区块头&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;前一个&lt;/li&gt;
+&lt;li&gt;前一个区块的哈希值&lt;/li&gt;
 &lt;li&gt;时间戳&lt;/li&gt;
 &lt;li&gt;Merkle Root&lt;/li&gt;
 &lt;li&gt;Nonce&lt;/li&gt;

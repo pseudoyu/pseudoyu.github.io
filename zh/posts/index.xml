@@ -46,6 +46,15 @@
     </item>
     
     <item>
+      <title>Blockchain学习 - 区块链概念</title>
+      <link>https://www.pseudoyu.com/zh/2020/12/12/blockchain_note_concept/</link>
+      <pubDate>Sat, 12 Dec 2020 05:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/12/12/blockchain_note_concept/</guid>
+      <description>区块链概念 传统数据库 vs. 区块链数据库 传统数据库 网络 中心化 功能 Create 创建 Read 读取 Update 更新 Delete 删除 可变性 可变 权限 中心化 透明度 低 区块链数据库 网络 去中心化 给予节</description>
+    </item>
+    
+    <item>
       <title>Blockchain学习 - 密码学原理</title>
       <link>https://www.pseudoyu.com/zh/2020/12/12/blockchain_note_cryptography/</link>
       <pubDate>Sat, 12 Dec 2020 03:12:17 +0800</pubDate>
@@ -182,16 +191,6 @@ Datasets  Criteo Dataset. It is a famous industry benchmarking dataset for devel
       
       <guid>https://www.pseudoyu.com/zh/2020/10/16/ecom6013_discussion_topic4/</guid>
       <description>A Look at Tik-Tok Given there are many social media platforms already existing in US, what makes Tik-Tok so successful that it becomes a big enough threat to cause the US Government to act the way it did towards a commercial company (ignore political factors)? Economically, at about 2016, US tech giants such as Facebook or Google mainly focused on long video platform instead of the short video platform. A company called Musical.</description>
-    </item>
-    
-    <item>
-      <title>ECOM6013 Topic 8 Blockchain and Cybercurrency</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/09/ecom6013_topic8/</link>
-      <pubDate>Fri, 09 Oct 2020 11:01:28 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/09/ecom6013_topic8/</guid>
-      <description>ECOM6013 E-Commerce Technologies Topic 8 Blockchain and Cybercurrency Form of Money
- Token money  Physical token Value is lost without the token No intermediary is required for spending Requires faith in the issuer (a government or a bank)   Notationary money  Notation/entry in a ledger, passbook, or database Can&amp;rsquo;t be lost Requires an intermediary Requires faith in the maintainer of the ledger   Hybrid money  Requires both a token and a ledger account Can be lost Requires an intermediary Requires faith in the issuer   Virtual money  No token/ledger Can be lost No intermediary required No issuer, no government backing   Digital money  String of bytes (data) stored on a device Value is lost/stolen when devices fail/invaded   Cybercurrency  Bitcoin is the most influential one Based on blockchain    Bitcoin</description>
     </item>
     
   </channel>

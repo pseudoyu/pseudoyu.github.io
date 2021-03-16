@@ -941,6 +941,161 @@
     </item>
     
     <item>
+      <title>Blockchain学习 - 区块链概念</title>
+      <link>https://www.pseudoyu.com/en/2020/12/12/blockchain_note_concept/</link>
+      <pubDate>Sat, 12 Dec 2020 05:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/12/12/blockchain_note_concept/</guid>
+      
+        <description>&lt;h2 id=&#34;区块链概念&#34;&gt;区块链概念&lt;/h2&gt;
+&lt;h3 id=&#34;传统数据库-vs-区块链数据库&#34;&gt;传统数据库 vs. 区块链数据库&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;传统数据库&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;网络
+&lt;ul&gt;
+&lt;li&gt;中心化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;功能
+&lt;ul&gt;
+&lt;li&gt;Create 创建&lt;/li&gt;
+&lt;li&gt;Read 读取&lt;/li&gt;
+&lt;li&gt;Update 更新&lt;/li&gt;
+&lt;li&gt;Delete 删除&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;可变性
+&lt;ul&gt;
+&lt;li&gt;可变&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;权限
+&lt;ul&gt;
+&lt;li&gt;中心化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;透明度
+&lt;ul&gt;
+&lt;li&gt;低&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;区块链数据库&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;网络
+&lt;ul&gt;
+&lt;li&gt;去中心化
+&lt;ul&gt;
+&lt;li&gt;给予节点控制权&lt;/li&gt;
+&lt;li&gt;必须达成共识&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;功能
+&lt;ul&gt;
+&lt;li&gt;Read，Append，Validate
+&lt;ul&gt;
+&lt;li&gt;具有准确的历史记录&lt;/li&gt;
+&lt;li&gt;读取和写入更快&lt;/li&gt;
+&lt;li&gt;必须达成共识&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;可变性
+&lt;ul&gt;
+&lt;li&gt;不可变
+&lt;ul&gt;
+&lt;li&gt;永久保存历史记录&lt;/li&gt;
+&lt;li&gt;占据较大存储空间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;权限
+&lt;ul&gt;
+&lt;li&gt;分布式
+&lt;ul&gt;
+&lt;li&gt;安全性高&lt;/li&gt;
+&lt;li&gt;不能撤回交易&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;透明度
+&lt;ul&gt;
+&lt;li&gt;高
+&lt;ul&gt;
+&lt;li&gt;每个人都能看到&lt;/li&gt;
+&lt;li&gt;没有权限控制机制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;是否需要区块链&#34;&gt;是否需要区块链&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;是否需要数据库？&lt;/li&gt;
+&lt;li&gt;是否需要共享写入权限？&lt;/li&gt;
+&lt;li&gt;是否需要多方达成信任？&lt;/li&gt;
+&lt;li&gt;能否脱离第三方机构运作？&lt;/li&gt;
+&lt;li&gt;能否脱离权限控制机制运作？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;区块链类型&#34;&gt;区块链类型&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;公链：交易是否要公开&lt;/li&gt;
+&lt;li&gt;私链：是否需要其他公司（机构）访问数据&lt;/li&gt;
+&lt;li&gt;联盟链：权限控制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;p2p网络-vs-client-server网络&#34;&gt;P2P网络 vs. Client-Server网络&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Client-Server
+&lt;ul&gt;
+&lt;li&gt;Client发出请求&lt;/li&gt;
+&lt;li&gt;Server响应请求&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;P2P网络
+&lt;ul&gt;
+&lt;li&gt;网络中多个节点共享信息和资源&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;区块链数据&#34;&gt;区块链数据&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_btc_data.png&#34; alt=&#34;blockchain_btc_data&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Bitcoin Improvement Proposal (BIP)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对Bitcoin core客户端做出改变的提案文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;分叉&#34;&gt;分叉&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_fork_type.png&#34; alt=&#34;blockchain_fork_type&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;硬分叉：永久性改变
+&lt;ul&gt;
+&lt;li&gt;Bitcoin Cash：提升了比特币区块链大小至2M&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;软分叉：暂时性改变
+&lt;ul&gt;
+&lt;li&gt;Segregated Witness（Segwit）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;源码分叉
+&lt;ul&gt;
+&lt;li&gt;源程序的一个副本，无关联，一般用于山寨币
+&lt;ul&gt;
+&lt;li&gt;Litecoin&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>Blockchain学习 - 密码学原理</title>
       <link>https://www.pseudoyu.com/en/2020/12/12/blockchain_note_cryptography/</link>
       <pubDate>Sat, 12 Dec 2020 03:12:17 +0800</pubDate>
@@ -4808,23 +4963,6 @@ matches the distribution of letter in English)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>A Look at Tik-Tok</title>
-      <link>https://www.pseudoyu.com/en/2020/10/16/ecom6013_discussion_topic4/</link>
-      <pubDate>Fri, 16 Oct 2020 09:19:19 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/16/ecom6013_discussion_topic4/</guid>
-      
-        <description>&lt;h1 id=&#34;a-look-at-tik-tok&#34;&gt;A Look at Tik-Tok&lt;/h1&gt;
-&lt;h2 id=&#34;given-there-are-many-social-media-platforms-already-existing-in-us-what-makes-tik-tok-so-successful-that-it-becomes-a-big-enough-threat-to-cause-the-us-government-to-act-the-way-it-did-towards-a-commercial-company-ignore-political-factors&#34;&gt;Given there are many social media platforms already existing in US, what makes Tik-Tok so successful that it becomes a big enough threat to cause the US Government to act the way it did towards a commercial company (ignore political factors)?&lt;/h2&gt;
-&lt;p&gt;Economically, at about 2016, US tech giants such as Facebook or Google mainly focused on long video platform instead of the short video platform. A company called Musical.ly (later acquired by ByteDance and became a part of Tik-Tok) grasped this opportunity to extend the US market and gained a massive amount of market share. Generally, the US market is relatively a free market that encourages new products (startups) to participate in the competition. In addition to acquiring Musical.ly, which already played an essential role in the short video market, Tik-Tok also utilized targeted strategies to fulfil the US market&amp;rsquo;s needs and fashion to gain and retain more users.&lt;/p&gt;
-&lt;p&gt;Socially, the majority of users of short video platform are young people, and they tend to follow fashions and do more social interactions. Tik-Tok carries out new creative forms of videos for users to easily create, share and connect interesting videos in their social circle, which brings the long tail influence on the spread of Tik-Tok videos. Besides, some organizations or even official medias also joined the Tik-Tok platform to please their audience or get more subscribers, which further increase the social influence of Tik-Tok.&lt;/p&gt;
-&lt;p&gt;Technically, as the rapid development of Internet and smartphone industry, short video has gradually become a mainstream form of creation and entertainment. US people especially young people get more accustomed to using their smartphones to entertain or do social interactions, like watching or shooting videos in their leisure time. What&amp;rsquo;s more, the recommendation system and mechanism applying artificial intelligence and machine learning algorithms become more powerful and smart, keeping attracting their users&#39; attention.&lt;/p&gt;
-&lt;p&gt;To sum up, Tik-Tok chose the right market expanding strategy, successfully meets the market demand and captures their users&#39; needs to get its market share. And it makes fair use of their technical benefits and most advanced innovation like machine learning algorithms to continually improve their product, making them become a very influential platform.&lt;/p&gt;
 </description>
       
     </item>

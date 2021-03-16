@@ -17,6 +17,15 @@
     </item>
     
     <item>
+      <title>Blockchain学习 - 区块链框架</title>
+      <link>https://www.pseudoyu.com/zh/2020/12/12/blockchain_note_framework/</link>
+      <pubDate>Sat, 12 Dec 2020 08:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/12/12/blockchain_note_framework/</guid>
+      <description>区块链框架 交易 钱包 签名 内存池 网络 共识机制 哈希 区块 区块链 哈希 区块链使用的是SHA256(Secure Hashing Algorithm 256 bits) var SHA256 = require(&amp;#34;crypto-js/sha256&amp;#34;); const data1 = &amp;#34;Blockchain Rock!&amp;#34;; const dataObject = { id: 1, body: &amp;#34;With</description>
+    </item>
+    
+    <item>
       <title>Blockchain学习 - 密码学原理</title>
       <link>https://www.pseudoyu.com/zh/2020/12/12/blockchain_note_cryptography/</link>
       <pubDate>Sat, 12 Dec 2020 03:12:17 +0800</pubDate>

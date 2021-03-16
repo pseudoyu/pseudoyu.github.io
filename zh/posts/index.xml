@@ -37,6 +37,15 @@
     </item>
     
     <item>
+      <title>Blockchain学习 - 区块链框架</title>
+      <link>https://www.pseudoyu.com/zh/2020/12/12/blockchain_note_framework/</link>
+      <pubDate>Sat, 12 Dec 2020 08:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2020/12/12/blockchain_note_framework/</guid>
+      <description>区块链框架 交易 钱包 签名 内存池 网络 共识机制 哈希 区块 区块链 哈希 区块链使用的是SHA256(Secure Hashing Algorithm 256 bits) var SHA256 = require(&amp;#34;crypto-js/sha256&amp;#34;); const data1 = &amp;#34;Blockchain Rock!&amp;#34;; const dataObject = { id: 1, body: &amp;#34;With</description>
+    </item>
+    
+    <item>
       <title>Blockchain学习 - 密码学原理</title>
       <link>https://www.pseudoyu.com/zh/2020/12/12/blockchain_note_cryptography/</link>
       <pubDate>Sat, 12 Dec 2020 03:12:17 +0800</pubDate>
@@ -183,16 +192,6 @@ Datasets  Criteo Dataset. It is a famous industry benchmarking dataset for devel
       <guid>https://www.pseudoyu.com/zh/2020/10/09/ecom6013_topic8/</guid>
       <description>ECOM6013 E-Commerce Technologies Topic 8 Blockchain and Cybercurrency Form of Money
  Token money  Physical token Value is lost without the token No intermediary is required for spending Requires faith in the issuer (a government or a bank)   Notationary money  Notation/entry in a ledger, passbook, or database Can&amp;rsquo;t be lost Requires an intermediary Requires faith in the maintainer of the ledger   Hybrid money  Requires both a token and a ledger account Can be lost Requires an intermediary Requires faith in the issuer   Virtual money  No token/ledger Can be lost No intermediary required No issuer, no government backing   Digital money  String of bytes (data) stored on a device Value is lost/stolen when devices fail/invaded   Cybercurrency  Bitcoin is the most influential one Based on blockchain    Bitcoin</description>
-    </item>
-    
-    <item>
-      <title>ICOM6012 Topic 2 The Big Picture</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/05/icom6012_topic2/</link>
-      <pubDate>Mon, 05 Oct 2020 09:06:09 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/05/icom6012_topic2/</guid>
-      <description>ICOM6012 Internet Infrastructure Technologies Topic 2 The Big Picture The Internet: &amp;ldquo;nuts and bolts&amp;rdquo; view
- Billions of connected computing devices  Host = end system Running network apps Internet of things (IoT)   Packet switches  routers switchers   Communication links  Fiber, copper, radio, satellite Transmission rate: bandwidth   Networks  Collection of devices, routers, switches, links Managed by an organization   Internet: &amp;ldquo;network of networks&amp;rdquo;  Interconnected ISPs   Protocols  Control sending, receiving of messages   Internet standards  RFC: Requests for Comments IETF: Internet Engineering Task Force IEEE: Institute of Electronical &amp;amp; Electronic Engineering    The Internet: a &amp;ldquo;service&amp;rdquo; view</description>
     </item>
     
   </channel>

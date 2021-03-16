@@ -691,6 +691,249 @@
     </item>
     
     <item>
+      <title>Blockchain学习 - 区块链框架</title>
+      <link>https://www.pseudoyu.com/en/2020/12/12/blockchain_note_framework/</link>
+      <pubDate>Sat, 12 Dec 2020 08:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/12/12/blockchain_note_framework/</guid>
+      
+        <description>&lt;h2 id=&#34;区块链框架&#34;&gt;区块链框架&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;交易&lt;/li&gt;
+&lt;li&gt;钱包&lt;/li&gt;
+&lt;li&gt;签名&lt;/li&gt;
+&lt;li&gt;内存池&lt;/li&gt;
+&lt;li&gt;网络&lt;/li&gt;
+&lt;li&gt;共识机制&lt;/li&gt;
+&lt;li&gt;哈希&lt;/li&gt;
+&lt;li&gt;区块&lt;/li&gt;
+&lt;li&gt;区块链&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;哈希&#34;&gt;哈希&lt;/h3&gt;
+&lt;p&gt;区块链使用的是SHA256(Secure Hashing Algorithm 256 bits)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_sha256.png&#34; alt=&#34;blockchain_sha256&#34;&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;SHA256&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;require&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;crypto-js/sha256&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+
+&lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;data1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Blockchain Rock!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;dataObject&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nx&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;nx&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;With Object Works too&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;nx&#34;&gt;time&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Date&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;getTime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;toString&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
+
+&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;generateHash&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;obj&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;SHA256&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;JSON&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;stringify&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;obj&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`SHA256 Hash: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;generateHash&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;data1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;************************************&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`SHA256 Hash: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;generateHash&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;dataObject&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;blocks&#34;&gt;Blocks&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;区块头&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;前一个区块的Hash&lt;/li&gt;
+&lt;li&gt;时间戳&lt;/li&gt;
+&lt;li&gt;Merkle Root&lt;/li&gt;
+&lt;li&gt;Nonce
+&lt;ul&gt;
+&lt;li&gt;Block Data + Nonce = Hash value&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;挖矿难度&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;000000HASHVALUE&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;区块大小&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1MB (Bitcoin)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;哈希&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;即使数据产生很微小的变化，哈希值也会截然不同，如以下Demo所示&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;SHA256&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;require&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;crypto-js/sha256&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+
+&lt;span class=&#34;kr&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Block&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;constructor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;){&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;nonce&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;144444&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;body&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;hash&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+    &lt;span class=&#34;nx&#34;&gt;generateHash&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;self&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;promise&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Promise&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;resolve&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;reject&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+          &lt;span class=&#34;nx&#34;&gt;setTimeout&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+          &lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;hash&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;SHA256&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+            &lt;span class=&#34;nx&#34;&gt;resolve&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+          &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+          &lt;span class=&#34;nx&#34;&gt;setTimeout&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;nx&#34;&gt;reject&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;SOMETHING WRONG!!!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+          &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;promise&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;nx&#34;&gt;module&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;exports&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Block&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Block&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;BlockClass&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;require&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;./block.js&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+
+&lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;block&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;BlockClass&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Block&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Test Block&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+
+&lt;span class=&#34;nx&#34;&gt;block&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;generateHash&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;then&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`Block Hash: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;hash&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`Block: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;JSON&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;stringify&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}).&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;catch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;区块链&#34;&gt;区块链&lt;/h3&gt;
+&lt;p&gt;存储网络中所有交易历史记录的账本&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://andersbrownworth.com/blockchain/blockchain&#34;&gt;Demo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_overview.png&#34; alt=&#34;blockchain_overview&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;network&#34;&gt;Network&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;P2P网络：不同用户之间共享信息和资源的一种分布式网络
+&lt;ul&gt;
+&lt;li&gt;分布式网络：分布在不同地域的网络互相连接&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_network.png&#34; alt=&#34;blockchain_network&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;中心化网络：所有人都连接至一个（或一组）中心化网络&lt;/li&gt;
+&lt;li&gt;去中心化网络：没有一个单点网络可以拥有所有的信息&lt;/li&gt;
+&lt;li&gt;分布式网络：每个人都得到一份信息备份，且都拥有访问权限&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;内存池&#34;&gt;内存池&lt;/h3&gt;
+&lt;p&gt;交易脱离内存池的原因&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;交易过期（14天）&lt;/li&gt;
+&lt;li&gt;在以交易费排序的结构中交易处于内存池底部&lt;/li&gt;
+&lt;li&gt;交易已经被一个区块包含&lt;/li&gt;
+&lt;li&gt;交易有未确认的祖先区块被区块包含&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;共识机制&#34;&gt;共识机制&lt;/h3&gt;
+&lt;p&gt;网络如何对交易达成信任/一致&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;PoW(Proof of Work)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;计算消耗大（算力），但是很容易检验正确性&lt;/li&gt;
+&lt;li&gt;比特币网络
+&lt;ul&gt;
+&lt;li&gt;10分钟左右（6个确认）&lt;/li&gt;
+&lt;li&gt;动态调整难度&lt;/li&gt;
+&lt;li&gt;消耗大量能源&lt;/li&gt;
+&lt;li&gt;如果矿工（矿池）拥有大量资源则有中心化风险&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;PoS (Proof of Stake)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通过与系统相关的用户（权益持有者）投票来达成共识&lt;/li&gt;
+&lt;li&gt;Nothing at Stake问题：在所有区块都投注
+&lt;ul&gt;
+&lt;li&gt;同时在多个链上创建区块的用户会遭到惩罚&lt;/li&gt;
+&lt;li&gt;在错误链上创建区块的用户会遭到惩罚&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;应用&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;以太坊正在向PoS转变&lt;/li&gt;
+&lt;li&gt;DASH&lt;/li&gt;
+&lt;li&gt;LISK
+&lt;ul&gt;
+&lt;li&gt;DPoS (Delegated Proof of Stake)委任权益证明&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;DBFT (Delegated Byzantine Fault Tolerance)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;通过对节点分配不同的角色来达成共识&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;降低开销&lt;/li&gt;
+&lt;li&gt;避免分叉&lt;/li&gt;
+&lt;li&gt;问题
+&lt;ul&gt;
+&lt;li&gt;不诚实的发言者&lt;/li&gt;
+&lt;li&gt;不诚实的委任者&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;钱包&#34;&gt;钱包&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;私钥&lt;/li&gt;
+&lt;li&gt;公钥&lt;/li&gt;
+&lt;li&gt;钱包地址&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;ECDSA (One-way Elliptic Curve Digital Signature Algorithm)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通过私钥生成公钥&lt;/li&gt;
+&lt;li&gt;单向，不能逆推&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;生成钱包地址&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通过SHA256和RIPEMD160来生成钱包地址&lt;/li&gt;
+&lt;li&gt;通过Base58Check来保障其可读性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;流程&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_wallet_generate1.png&#34; alt=&#34;blockchain_wallet_generate1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_wallet_generate2.png&#34; alt=&#34;blockchain_wallet_generate2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;钱包类型&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_wallet_type.png&#34; alt=&#34;blockchain_wallet_type&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Non-Deterministic Wallet&lt;/li&gt;
+&lt;li&gt;Deterministic Wallet
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Sequential Deterministic Wallet&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Hierarchical Deterministic (HD) Wallet&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_wallet_hd.png&#34; alt=&#34;blockchain_wallet_hd&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;私钥&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个256位随机数，介于1和2^256之间&lt;/li&gt;
+&lt;li&gt;格式
+&lt;ul&gt;
+&lt;li&gt;Hex&lt;/li&gt;
+&lt;li&gt;WIF(Base58Check)&lt;/li&gt;
+&lt;li&gt;WIF-Compressed(Base58Check added suffix 0x01 before encoding)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Entropy 熵&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;混乱与不可预测状态&lt;/li&gt;
+&lt;li&gt;应用
+&lt;ul&gt;
+&lt;li&gt;Python: Random&lt;/li&gt;
+&lt;li&gt;Java: SecureRandom&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;签名&#34;&gt;签名&lt;/h3&gt;
+&lt;p&gt;为区块链上每笔交易提供证明&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;私钥签名&lt;/li&gt;
+&lt;li&gt;公钥验证&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;交易周期&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Inputs&lt;/li&gt;
+&lt;li&gt;Outputs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_transaction_lifecycle.png&#34; alt=&#34;blockchain_transaction_lifecycle&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;UTXO (Unspent transaction output in bitcoin)&lt;/li&gt;
+&lt;li&gt;广播到区块链&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>Blockchain学习 - 密码学原理</title>
       <link>https://www.pseudoyu.com/en/2020/12/12/blockchain_note_cryptography/</link>
       <pubDate>Sat, 12 Dec 2020 03:12:17 +0800</pubDate>
@@ -4575,236 +4818,6 @@ matches the distribution of letter in English)&lt;/li&gt;
 &lt;p&gt;Socially, the majority of users of short video platform are young people, and they tend to follow fashions and do more social interactions. Tik-Tok carries out new creative forms of videos for users to easily create, share and connect interesting videos in their social circle, which brings the long tail influence on the spread of Tik-Tok videos. Besides, some organizations or even official medias also joined the Tik-Tok platform to please their audience or get more subscribers, which further increase the social influence of Tik-Tok.&lt;/p&gt;
 &lt;p&gt;Technically, as the rapid development of Internet and smartphone industry, short video has gradually become a mainstream form of creation and entertainment. US people especially young people get more accustomed to using their smartphones to entertain or do social interactions, like watching or shooting videos in their leisure time. What&amp;rsquo;s more, the recommendation system and mechanism applying artificial intelligence and machine learning algorithms become more powerful and smart, keeping attracting their users&#39; attention.&lt;/p&gt;
 &lt;p&gt;To sum up, Tik-Tok chose the right market expanding strategy, successfully meets the market demand and captures their users&#39; needs to get its market share. And it makes fair use of their technical benefits and most advanced innovation like machine learning algorithms to continually improve their product, making them become a very influential platform.&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>ECOM6013 Topic 8 Blockchain and Cybercurrency</title>
-      <link>https://www.pseudoyu.com/en/2020/10/09/ecom6013_topic8/</link>
-      <pubDate>Fri, 09 Oct 2020 11:01:28 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/09/ecom6013_topic8/</guid>
-      
-        <description>&lt;h1 id=&#34;ecom6013-e-commerce-technologies&#34;&gt;ECOM6013 E-Commerce Technologies&lt;/h1&gt;
-&lt;h2 id=&#34;topic-8-blockchain-and-cybercurrency&#34;&gt;Topic 8 Blockchain and Cybercurrency&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Form of Money&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Token money
-&lt;ul&gt;
-&lt;li&gt;Physical token&lt;/li&gt;
-&lt;li&gt;Value is lost without the token&lt;/li&gt;
-&lt;li&gt;No intermediary is required for spending&lt;/li&gt;
-&lt;li&gt;Requires faith in the issuer (a government or a bank)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Notationary money
-&lt;ul&gt;
-&lt;li&gt;Notation/entry in a ledger, passbook, or database&lt;/li&gt;
-&lt;li&gt;Can&amp;rsquo;t be lost&lt;/li&gt;
-&lt;li&gt;Requires an intermediary&lt;/li&gt;
-&lt;li&gt;Requires faith in the maintainer of the ledger&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Hybrid money
-&lt;ul&gt;
-&lt;li&gt;Requires both a token and a ledger account&lt;/li&gt;
-&lt;li&gt;Can be lost&lt;/li&gt;
-&lt;li&gt;Requires an intermediary&lt;/li&gt;
-&lt;li&gt;Requires faith in the issuer&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Virtual money
-&lt;ul&gt;
-&lt;li&gt;No token/ledger&lt;/li&gt;
-&lt;li&gt;Can be lost&lt;/li&gt;
-&lt;li&gt;No intermediary required&lt;/li&gt;
-&lt;li&gt;No issuer, no government backing&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Digital money
-&lt;ul&gt;
-&lt;li&gt;String of bytes (data) stored on a device&lt;/li&gt;
-&lt;li&gt;Value is lost/stolen when devices fail/invaded&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Cybercurrency
-&lt;ul&gt;
-&lt;li&gt;Bitcoin is the most influential one&lt;/li&gt;
-&lt;li&gt;Based on blockchain&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Bitcoin&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Designed for the &amp;ldquo;online society&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;An important example application of Blockchain&lt;/li&gt;
-&lt;li&gt;Relationship with national currencies
-&lt;ul&gt;
-&lt;li&gt;Decentralized and independent of national currencies&lt;/li&gt;
-&lt;li&gt;Easily convertible to national currencies&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Excellent application Scenarios
-&lt;ul&gt;
-&lt;li&gt;Anonymous transactions&lt;/li&gt;
-&lt;li&gt;E-Commerce&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Land Deeds - A Blockchain Analogy&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/land_deeds.png&#34; alt=&#34;land_deeds&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A &amp;ldquo;chain of title&amp;rdquo; (a sequence of deeds leading from the original owner to the present owner)&lt;/li&gt;
-&lt;li&gt;Deeds are recorded in the Land Registry&lt;/li&gt;
-&lt;li&gt;Ownership is established by searching the Registry&lt;/li&gt;
-&lt;li&gt;The Land Registry is ledger holder&lt;/li&gt;
-&lt;li&gt;Double-selling is prevented by timestamps&lt;/li&gt;
-&lt;li&gt;If the Registry is altered, ownership can be lost&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;5 elements of Bitcoin&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Currency
-&lt;ul&gt;
-&lt;li&gt;Send units of value&lt;/li&gt;
-&lt;li&gt;Convertible&lt;/li&gt;
-&lt;li&gt;Divisible&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Commodity
-&lt;ul&gt;
-&lt;li&gt;Scarcity stores wealth&lt;/li&gt;
-&lt;li&gt;Market fluctuates with speculation&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Brand
-&lt;ul&gt;
-&lt;li&gt;Marketing message&lt;/li&gt;
-&lt;li&gt;Commodity and sharing knowledge&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Protocol
-&lt;ul&gt;
-&lt;li&gt;Decentralized trust&lt;/li&gt;
-&lt;li&gt;Distributed ledger&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Technology
-&lt;ul&gt;
-&lt;li&gt;Blockchain&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;How to Get Bitcoin&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Sell something&lt;/li&gt;
-&lt;li&gt;Salary (some companies)&lt;/li&gt;
-&lt;li&gt;Bitcoin exchange&lt;/li&gt;
-&lt;li&gt;Mining
-&lt;ul&gt;
-&lt;li&gt;No more than 21 million BTCs&lt;/li&gt;
-&lt;li&gt;Divisible into units as small as 1/100 millionth of a BTC&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Bitcoin and Encryption Technologies&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Hash functions&lt;/li&gt;
-&lt;li&gt;Public-private key (asymmetric) encryption&lt;/li&gt;
-&lt;li&gt;Digital signatures&lt;/li&gt;
-&lt;li&gt;All of these technologies are mature and trusted&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Bitcoin Characteristics&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;No physical object (not a character string)
-&lt;ul&gt;
-&lt;li&gt;&amp;ldquo;Bitcoin&amp;rdquo; - protocol&lt;/li&gt;
-&lt;li&gt;&amp;ldquo;bitcoin&amp;rdquo; - value&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;A chain of digitally signed transaction records leading from the original owner to the current owner&lt;/li&gt;
-&lt;li&gt;Transaction records
-&lt;ul&gt;
-&lt;li&gt;Hashes&lt;/li&gt;
-&lt;li&gt;Addresses&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;No Bitcoin registry&lt;/li&gt;
-&lt;li&gt;No central authority&lt;/li&gt;
-&lt;li&gt;Broadcast to everyone
-&lt;ul&gt;
-&lt;li&gt;Everyone can verify the Bitcoin blockchain&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Bitcoin Protocol&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Invented in 2008 by Satoshi Nakamoto, &lt;a href=&#34;https://bitcoin.org/bitcoin.pdf&#34;&gt;&lt;em&gt;Bitcoin: A Peer-to-Peer Electronic Cash System&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Publicly available, Open source software&lt;/li&gt;
-&lt;li&gt;Everyone can obtain and run a Bitcoin client&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Bitcoin addresses&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;An elliptic curve public key
-&lt;ul&gt;
-&lt;li&gt;25-44 characters for users&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Send Bitcoins
-&lt;ul&gt;
-&lt;li&gt;Receiving address (public)&lt;/li&gt;
-&lt;li&gt;Amount&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Receive Bitcoins
-&lt;ul&gt;
-&lt;li&gt;Receiving address (public)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Addresses are not directly registered to users&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Possible Vulnerabilities&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;No way to reverse a transaction without the payee’s cooperation&lt;/li&gt;
-&lt;li&gt;Software bugs&lt;/li&gt;
-&lt;li&gt;Bank robbery by hackers&lt;/li&gt;
-&lt;li&gt;Malware attacks against wallets&lt;/li&gt;
-&lt;li&gt;Government attempts to control&lt;/li&gt;
-&lt;li&gt;Competing digital currencies easy to make (fork)
-&lt;ul&gt;
-&lt;li&gt;Auroracoin&lt;/li&gt;
-&lt;li&gt;Dogecoin&lt;/li&gt;
-&lt;li&gt;Namecoin&lt;/li&gt;
-&lt;li&gt;Primecoin&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Challenges for Bitcoin&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Scalability&lt;/li&gt;
-&lt;li&gt;Time to solve a block (security concerns in algorithms)&lt;/li&gt;
-&lt;li&gt;Energy consumption&lt;/li&gt;
-&lt;li&gt;Meaningless and highly inefficient&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Possible Future of Bitcoin/Virtual Currencies (Social)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;For the world’s unbanked&lt;/li&gt;
-&lt;li&gt;For small businesses, freelancers and startups&lt;/li&gt;
-&lt;li&gt;Inevitable development of &amp;ldquo;money&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;Distributed trust&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Possible Future of Bitcoin/Virtual Currencies (Economic/Political)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A future with digital currencies and decentralized stores&lt;/li&gt;
-&lt;li&gt;National adoption of decentralized currencies may bring political transparency and economic neutrality&lt;/li&gt;
-&lt;li&gt;Developing nations seeking to curb corruption and break free of economic dependence on other countries could see potential in these technologies&lt;/li&gt;
-&lt;li&gt;Central Bank Digital Currency (CBDC)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Retail Money Key Attributes&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/retail_money.png&#34; alt=&#34;retail_money&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Different Degrees of Responsibilities for the Central Bank&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/central_bank.png&#34; alt=&#34;central_bank&#34;&gt;&lt;/p&gt;
 </description>
       
     </item>

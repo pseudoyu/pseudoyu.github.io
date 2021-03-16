@@ -156,6 +156,13 @@
   </url>
   
   <url>
+    <loc>https://www.pseudoyu.com/zh/2020/12/12/blockchain_note_framework/</loc>
+    <lastmod>2020-12-12T08:12:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.pseudoyu.com/zh/2020/12/12/blockchain_note_cryptography/</loc>
     <lastmod>2020-12-12T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>

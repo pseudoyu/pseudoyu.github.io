@@ -28,6 +28,15 @@
     </item>
     
     <item>
+      <title>Blockchain学习 - 区块链安全与隐私</title>
+      <link>https://www.pseudoyu.com/en/2020/12/20/blockchain_note_security_privacy/</link>
+      <pubDate>Sun, 20 Dec 2020 05:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/12/20/blockchain_note_security_privacy/</guid>
+      <description>区块链安全 风险来源 应用层 与应用程序相关的攻击和安全问题，如数字货币交易所 智能合约层 很多潜在风险，如DAO事件 激励层 矿工付出成本 &amp;gt; 奖励，则去中</description>
+    </item>
+    
+    <item>
       <title>Blockchain学习 - 比特币数据模型</title>
       <link>https://www.pseudoyu.com/en/2020/12/17/blockchain_note_bitcoin_data/</link>
       <pubDate>Thu, 17 Dec 2020 03:12:17 +0800</pubDate>
@@ -182,15 +191,6 @@ Datasets  Criteo Dataset. It is a famous industry benchmarking dataset for devel
       
       <guid>https://www.pseudoyu.com/en/2020/10/21/icom6045_topic1/</guid>
       <description>ICOM6045 Fundamentals of E-Commerce Security Topic 1 Cryptography Definition  Process of transforming information to make it unreadable to anyone except those possessing the key  Purpose  Data confidentiality  Transpositions/Permutations  An encryption in which the letters of the message are rearranged Function  Try to break established patterns   Example  Columnar transposition  Rearrangement of the characters of the plaintext into columns Based on characteristic patterns of pairs of adjacent letters, called digrams Analysis  Compute the letter frequencies  Break the text into columns by compare a block of ciphertext characters against characters successively farther away in the ciphertext.</description>
-    </item>
-    
-    <item>
-      <title>ICOM6012 Topic 4 Transport Layer</title>
-      <link>https://www.pseudoyu.com/en/2020/10/20/icom6012_topic4/</link>
-      <pubDate>Tue, 20 Oct 2020 09:37:44 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/20/icom6012_topic4/</guid>
-      <description>ICOM6012 Internet Infrastructure Technologies Topic 4 Transport Layer Actions Sender  Get application layer message Determine segment header fields values Create segment Pass segment to IP  Receiver  Receive segment from IP Check header values Extract application layer message Demultiplexes message up to application via socket  Services Provide logical communication between processes Run in end system  Send side  Break app messages into segment Pass to network layer   Receive side  Reassembles segments into messages Pass to application layer    Protocols TCP  Features  Point-to-point  One sender, one receiver   Reliable, in-order byte system  No message boundaries   Full duplex data  Bi-directional data flow in same connection MSS: maximum segment size (excluding header)   Cumulative ACKs Pipelining  TCP congestion and flow control set window size   Flow Control  Sender will not overwhelm receiver   Congestion control   Concepts  Segment structure Sequence numbers  Byte stream &amp;ldquo;number&amp;rdquo; of first byte in segment&amp;rsquo;s data   Acknowledgements (ACKs)  Seq # of next byte expected from other side Cumulative ACKs     Procedure  Connection-oriented  Handshaking initializes sender, receiver state before data exchange TCP socket identified by 4-tuple  Source IP Source Port # Dest IP Dest Port #   Server host may support many simultaneous TCP sockets Web servers have different sockets for each connecting client (Non-persistent HTTP will have different socket for each request) Demux  Receiver uses all four values to direct segment to appropriate socket     3-way handshake  Connection setup   Connection management  Handshake  Agree to establish connection Agree on connection parameters     Retransmission Closing a connection   Events  Data received from application  Create segment with seq # (a byte-stream number of first data byte in segment) Start timer if not already running  Think of timer as for oldest unACKed segment Expiration interval: TimeOutInterval     Timeout  Retransmit segment that caused timeout Restart timer   ACK received  Update what is known to ACKed Start timer if there are still unACKed segment     Shortcomings  SYN DoS Attack  Half-open TCP connections consume all the TCP connection resources SYN packet with a spoofed source address      UDP   Features</description>
     </item>
     
   </channel>

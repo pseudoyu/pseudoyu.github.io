@@ -6,7 +6,16 @@
     <description>Recent content in blockchain on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 17 Dec 2020 03:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/blockchain/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Dec 2020 05:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/blockchain/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blockchain学习 - 区块链安全与隐私</title>
+      <link>https://www.pseudoyu.com/en/2020/12/20/blockchain_note_security_privacy/</link>
+      <pubDate>Sun, 20 Dec 2020 05:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/12/20/blockchain_note_security_privacy/</guid>
+      <description>区块链安全 风险来源 应用层 与应用程序相关的攻击和安全问题，如数字货币交易所 智能合约层 很多潜在风险，如DAO事件 激励层 矿工付出成本 &amp;gt; 奖励，则去中</description>
+    </item>
+    
     <item>
       <title>Blockchain学习 - 比特币数据模型</title>
       <link>https://www.pseudoyu.com/en/2020/12/17/blockchain_note_bitcoin_data/</link>

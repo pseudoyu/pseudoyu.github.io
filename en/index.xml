@@ -412,6 +412,137 @@
     </item>
     
     <item>
+      <title>Blockchain学习 - 比特币数据模型</title>
+      <link>https://www.pseudoyu.com/en/2020/12/17/blockchain_note_bitcoin_data/</link>
+      <pubDate>Thu, 17 Dec 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/12/17/blockchain_note_bitcoin_data/</guid>
+      
+        <description>&lt;h2 id=&#34;比特币数据模型&#34;&gt;比特币数据模型&lt;/h2&gt;
+&lt;h3 id=&#34;区块头&#34;&gt;区块头&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;前一个&lt;/li&gt;
+&lt;li&gt;时间戳&lt;/li&gt;
+&lt;li&gt;Merkle Root&lt;/li&gt;
+&lt;li&gt;Nonce&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;block-body&#34;&gt;Block Body&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_data_transaction.png&#34; alt=&#34;blockchain_bitcoin_data_transaction&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;交易
+&lt;ul&gt;
+&lt;li&gt;输入
+&lt;ul&gt;
+&lt;li&gt;UTXO: Unspent outputs from another Transaction
+&lt;ul&gt;
+&lt;li&gt;必须以整体被花费，不能划分，多余部分转回源账户&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;所有输入都可以追溯至输出&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;输出&lt;/li&gt;
+&lt;li&gt;双重Hash形式
+&lt;ul&gt;
+&lt;li&gt;SHA256(SHA256(源交易)) = Transhaction Hash&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;交易模型&#34;&gt;交易模型&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_data_transaction_detail.png&#34; alt=&#34;blockchain_bitcoin_data_transaction_detail&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Version&lt;/li&gt;
+&lt;li&gt;Input count&lt;/li&gt;
+&lt;li&gt;Input info - Unlocking Script
+&lt;ul&gt;
+&lt;li&gt;Input来源&lt;/li&gt;
+&lt;li&gt;核对Input是否可用&lt;/li&gt;
+&lt;li&gt;Input info细节&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_data_transaction_input_info.png&#34; alt=&#34;blockchain_bitcoin_data_transaction_input_info&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Previous output hash&lt;/strong&gt; - 所有输入都能追溯回一个输出(UTXO)，这指向包含将在该输入中花费的UTXO，该UTXO的哈希值在这里以相反的顺序保存&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Previous output index&lt;/strong&gt; - 一个交易可以有多个由它们的索引号引用的UTXO，第一个索引是0&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unlocking Script Size&lt;/strong&gt; - Unlocking Script的字节大小&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unlocking Script&lt;/strong&gt; - 满足UTXO Unlocking Script的哈希&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sequence Number&lt;/strong&gt; - 默认为ffffffff&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Output Count&lt;/li&gt;
+&lt;li&gt;Output Info - Locking Script
+&lt;ul&gt;
+&lt;li&gt;输出了多少比特币&lt;/li&gt;
+&lt;li&gt;未来支出的条件&lt;/li&gt;
+&lt;li&gt;存储在输出信息中的数据&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_data_transaction_output_info.png&#34; alt=&#34;blockchain_bitcoin_data_transaction_output_info&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Amount&lt;/strong&gt; - 以Satoshis(最小的比特币单位)表示的输出比特币数量，10^8 Satoshis = 1比特币&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Locking Script Size&lt;/strong&gt; - 这是Locking Script的字节大小&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Locking Script&lt;/strong&gt; - 这是Locking Script的哈希，它指定了使用此输出必须满足的条件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Locktime
+&lt;ul&gt;
+&lt;li&gt;一个交易可以被最早添加到区块链的时间/块&lt;/li&gt;
+&lt;li&gt;如果 &amp;lt;500 million，读取块高度&lt;/li&gt;
+&lt;li&gt;如果 &amp;gt;500 million，读取时间戳&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;比特币脚本&#34;&gt;比特币脚本&lt;/h2&gt;
+&lt;p&gt;记录在每个交易中的指令列表，当被执行时确定交易是否有效以及比特币是否可以使用&lt;/p&gt;
+&lt;h3 id=&#34;脚本&#34;&gt;脚本&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_script_detail.png&#34; alt=&#34;blockchain_bitcoin_script_detail&#34;&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&amp;lt;sig&amp;gt; &amp;lt;pubKey&amp;gt; OP_DUP OP_HASH160 &amp;lt;pubKeyHash&amp;gt; OP_EQUALVERIFY OP_CHECKSIG
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;基于Stack&lt;/li&gt;
+&lt;li&gt;存储常数&lt;/li&gt;
+&lt;li&gt;使用Opcodes
+&lt;ul&gt;
+&lt;li&gt;Push (Add)&lt;/li&gt;
+&lt;li&gt;Pop (Remove)&lt;/li&gt;
+&lt;li&gt;Etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;从左至右执行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;交易&#34;&gt;交易&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_script_locking_unlocking.png&#34; alt=&#34;blockchain_bitcoin_script_locking_unlocking&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_script_relationship.png&#34; alt=&#34;blockchain_bitcoin_script_relationship&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;标准脚本符号&#34;&gt;标准脚本符号&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;lt;&amp;gt;包含的是要被推入stack的数据&lt;/li&gt;
+&lt;li&gt;没有&amp;lt;&amp;gt;包含，以OP_为前缀的是操作符（OP可省略）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;脚本的特征&#34;&gt;脚本的特征&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;非图灵完备
+&lt;ul&gt;
+&lt;li&gt;没有循环或者复杂的流程控制&lt;/li&gt;
+&lt;li&gt;执行是确定性的&lt;/li&gt;
+&lt;li&gt;简单、安全&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;无状态验证
+&lt;ul&gt;
+&lt;li&gt;脚本执行之前或之后没有保存任何状态&lt;/li&gt;
+&lt;li&gt;脚本之间是独立的&lt;/li&gt;
+&lt;li&gt;无论脚本在哪里执行，都提供可预测性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;可以嵌入数据&#34;&gt;可以嵌入数据&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_bitcoin_script_embedding_data.png&#34; alt=&#34;blockchain_bitcoin_script_embedding_data&#34;&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>Blockchain学习 - Bitcoin Core客户端</title>
       <link>https://www.pseudoyu.com/en/2020/12/15/blockchain_note_bitcoin_core/</link>
       <pubDate>Tue, 15 Dec 2020 03:12:17 +0800</pubDate>
@@ -3853,395 +3984,6 @@ matches the distribution of letter in English)&lt;/li&gt;
 &lt;li&gt;Algorithms
 &lt;ul&gt;
 &lt;li&gt;RSA&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>ICOM6012 Topic 4 Transport Layer</title>
-      <link>https://www.pseudoyu.com/en/2020/10/20/icom6012_topic4/</link>
-      <pubDate>Tue, 20 Oct 2020 09:37:44 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/20/icom6012_topic4/</guid>
-      
-        <description>&lt;h1 id=&#34;icom6012-internet-infrastructure-technologies&#34;&gt;ICOM6012 Internet Infrastructure Technologies&lt;/h1&gt;
-&lt;h2 id=&#34;topic-4-transport-layer&#34;&gt;Topic 4 Transport Layer&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/transport_layer.svg&#34; alt=&#34;transport_layer.svg&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;actions&#34;&gt;Actions&lt;/h2&gt;
-&lt;h3 id=&#34;sender&#34;&gt;Sender&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Get application layer message&lt;/li&gt;
-&lt;li&gt;Determine segment header fields values&lt;/li&gt;
-&lt;li&gt;Create segment&lt;/li&gt;
-&lt;li&gt;Pass segment to IP&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;receiver&#34;&gt;Receiver&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Receive segment from IP&lt;/li&gt;
-&lt;li&gt;Check header values&lt;/li&gt;
-&lt;li&gt;Extract application layer message&lt;/li&gt;
-&lt;li&gt;Demultiplexes message up to application via socket&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;services&#34;&gt;Services&lt;/h2&gt;
-&lt;h3 id=&#34;provide-logical-communication-between-processes&#34;&gt;Provide logical communication between processes&lt;/h3&gt;
-&lt;h3 id=&#34;run-in-end-system&#34;&gt;Run in end system&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Send side
-&lt;ul&gt;
-&lt;li&gt;Break app messages into segment&lt;/li&gt;
-&lt;li&gt;Pass to network layer&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Receive side
-&lt;ul&gt;
-&lt;li&gt;Reassembles segments into messages&lt;/li&gt;
-&lt;li&gt;Pass to application layer&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;protocols&#34;&gt;Protocols&lt;/h2&gt;
-&lt;h3 id=&#34;tcp&#34;&gt;TCP&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Features
-&lt;ul&gt;
-&lt;li&gt;Point-to-point
-&lt;ul&gt;
-&lt;li&gt;One sender, one receiver&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Reliable, in-order byte system
-&lt;ul&gt;
-&lt;li&gt;No message boundaries&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Full duplex data
-&lt;ul&gt;
-&lt;li&gt;Bi-directional data flow in same connection&lt;/li&gt;
-&lt;li&gt;MSS: maximum segment size (excluding header)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Cumulative ACKs&lt;/li&gt;
-&lt;li&gt;Pipelining
-&lt;ul&gt;
-&lt;li&gt;TCP congestion and flow control set window size&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Flow Control
-&lt;ul&gt;
-&lt;li&gt;Sender will not overwhelm receiver&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Congestion control&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Concepts
-&lt;ul&gt;
-&lt;li&gt;Segment structure&lt;/li&gt;
-&lt;li&gt;Sequence numbers
-&lt;ul&gt;
-&lt;li&gt;Byte stream &amp;ldquo;number&amp;rdquo; of first byte in segment&amp;rsquo;s data&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Acknowledgements (ACKs)
-&lt;ul&gt;
-&lt;li&gt;Seq # of next byte expected from other side&lt;/li&gt;
-&lt;li&gt;Cumulative ACKs&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Procedure
-&lt;ul&gt;
-&lt;li&gt;Connection-oriented
-&lt;ul&gt;
-&lt;li&gt;Handshaking initializes sender, receiver state before data exchange&lt;/li&gt;
-&lt;li&gt;TCP socket identified by 4-tuple
-&lt;ul&gt;
-&lt;li&gt;Source IP&lt;/li&gt;
-&lt;li&gt;Source Port #&lt;/li&gt;
-&lt;li&gt;Dest IP&lt;/li&gt;
-&lt;li&gt;Dest Port #&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Server host may support many simultaneous TCP sockets&lt;/li&gt;
-&lt;li&gt;Web servers have different sockets for each connecting client
-(Non-persistent HTTP will have different socket for each request)&lt;/li&gt;
-&lt;li&gt;Demux
-&lt;ul&gt;
-&lt;li&gt;Receiver uses all four values to direct segment to appropriate socket&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;3-way handshake
-&lt;ul&gt;
-&lt;li&gt;Connection setup&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Connection management
-&lt;ul&gt;
-&lt;li&gt;Handshake
-&lt;ul&gt;
-&lt;li&gt;Agree to establish connection&lt;/li&gt;
-&lt;li&gt;Agree on connection parameters&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Retransmission&lt;/li&gt;
-&lt;li&gt;Closing a connection&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Events
-&lt;ul&gt;
-&lt;li&gt;Data received from application
-&lt;ul&gt;
-&lt;li&gt;Create segment with seq # (a byte-stream number of first data byte in segment)&lt;/li&gt;
-&lt;li&gt;Start timer if not already running
-&lt;ul&gt;
-&lt;li&gt;Think of timer as for oldest unACKed segment&lt;/li&gt;
-&lt;li&gt;Expiration interval: TimeOutInterval&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Timeout
-&lt;ul&gt;
-&lt;li&gt;Retransmit segment that caused timeout&lt;/li&gt;
-&lt;li&gt;Restart timer&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;ACK received
-&lt;ul&gt;
-&lt;li&gt;Update what is known to ACKed&lt;/li&gt;
-&lt;li&gt;Start timer if there are still unACKed segment&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Shortcomings
-&lt;ul&gt;
-&lt;li&gt;SYN DoS Attack
-&lt;ul&gt;
-&lt;li&gt;Half-open TCP connections consume all the TCP connection resources&lt;/li&gt;
-&lt;li&gt;SYN packet with a spoofed source address&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;udp&#34;&gt;UDP&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Features&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;No frills&lt;/li&gt;
-&lt;li&gt;Bare bones&lt;/li&gt;
-&lt;li&gt;&amp;ldquo;Best effort&amp;rdquo;
-&lt;ul&gt;
-&lt;li&gt;Lost&lt;/li&gt;
-&lt;li&gt;Delivered out-of-order to app&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;No handshaking&lt;/li&gt;
-&lt;li&gt;Handle independently&lt;/li&gt;
-&lt;li&gt;Services not available
-&lt;ul&gt;
-&lt;li&gt;Delay guarantee&lt;/li&gt;
-&lt;li&gt;Bandwidth guarantee&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Concepts&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Segment format
-&lt;ul&gt;
-&lt;li&gt;Source port #&lt;/li&gt;
-&lt;li&gt;Dest port #&lt;/li&gt;
-&lt;li&gt;Length&lt;/li&gt;
-&lt;li&gt;Checksum
-&lt;ul&gt;
-&lt;li&gt;Detect errors
-&lt;ul&gt;
-&lt;li&gt;Sender
-&lt;ul&gt;
-&lt;li&gt;Treat segement contents&lt;/li&gt;
-&lt;li&gt;Checksum: 1&amp;rsquo;s complement sum&lt;/li&gt;
-&lt;li&gt;Put checksum into UDP field value&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Receiver
-&lt;ul&gt;
-&lt;li&gt;Compute checksum of received segment&lt;/li&gt;
-&lt;li&gt;Check equality
-&lt;ul&gt;
-&lt;li&gt;No: error detected&lt;/li&gt;
-&lt;li&gt;Yes: no error detected (not sure)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Checksum calculation may be disabled in order to speed up the processing&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Procedure&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Connectionless demux
-&lt;ul&gt;
-&lt;li&gt;Create socket with unique local port #&lt;/li&gt;
-&lt;li&gt;Sender side: create datagram to send into UDP socket
-&lt;ul&gt;
-&lt;li&gt;Dest IP&lt;/li&gt;
-&lt;li&gt;Dest port #&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Receive side: receive UDP segment
-(IP datagrams with same dest port #, but different source will be directed to same socket)
-&lt;ul&gt;
-&lt;li&gt;Check dest port #&lt;/li&gt;
-&lt;li&gt;Direct UDP segment to socket with that port #&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Utilization&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Streaming multimedia apps
-&lt;ul&gt;
-&lt;li&gt;Loss tolerant&lt;/li&gt;
-&lt;li&gt;Rate sensitive&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;DNS&lt;/li&gt;
-&lt;li&gt;SNMP&lt;/li&gt;
-&lt;li&gt;HTTP/3&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Shortcomings&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Need reliability at application layer&lt;/li&gt;
-&lt;li&gt;Congestion control&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;sctp&#34;&gt;SCTP&lt;/h3&gt;
-&lt;h3 id=&#34;dccp&#34;&gt;DCCP&lt;/h3&gt;
-&lt;h2 id=&#34;multiplexing-and-demultiplexing&#34;&gt;Multiplexing and Demultiplexing&lt;/h2&gt;
-&lt;h3 id=&#34;multiplexing-at-sender&#34;&gt;Multiplexing at sender&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Handle data from multiple sockets, add transport header&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;demultiplexing-at-receiver&#34;&gt;Demultiplexing at receiver&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Handle data info to deliver received segments to correct socket&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;host-receivers-ip-datagram-host-uses-ip--port--to-redirect-segment&#34;&gt;Host receivers IP datagram (Host uses IP &amp;amp; port # to redirect segment)&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Source IP&lt;/li&gt;
-&lt;li&gt;Dest IP&lt;/li&gt;
-&lt;li&gt;One transport layer segment
-&lt;ul&gt;
-&lt;li&gt;Source port #&lt;/li&gt;
-&lt;li&gt;Dest port #&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;congestion-control&#34;&gt;Congestion Control&lt;/h2&gt;
-&lt;h3 id=&#34;cause&#34;&gt;Cause&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Too many sources sending too much data too fast for network to handle&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;manifestations&#34;&gt;Manifestations&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Long delay
-&lt;ul&gt;
-&lt;li&gt;Queueing in router buffers&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Packet loss
-&lt;ul&gt;
-&lt;li&gt;Buffer overflow at network&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;approaches&#34;&gt;Approaches&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;End-end congestion control
-&lt;ul&gt;
-&lt;li&gt;Features
-&lt;ul&gt;
-&lt;li&gt;No explicit feedback from network&lt;/li&gt;
-&lt;li&gt;Congestion inferred from observed loss, delay&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Network-assisted congestion control
-&lt;ul&gt;
-&lt;li&gt;Features
-&lt;ul&gt;
-&lt;li&gt;Routers provide direct feedback to hosts with flow passing through congested router&lt;/li&gt;
-&lt;li&gt;May indicate congestion level or explicit set sending rate&lt;/li&gt;
-&lt;li&gt;TCP ECN ATM DECbit protocols&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;tcp-congestion-control&#34;&gt;TCP Congestion Control&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;AIMD
-&lt;ul&gt;
-&lt;li&gt;Sender can increase sending rate until packet loss occurs, then decrease&lt;/li&gt;
-&lt;li&gt;Additive increase
-&lt;ul&gt;
-&lt;li&gt;1 MSS (maximum segment size) until loss detected&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Multiplicative decrease
-&lt;ul&gt;
-&lt;li&gt;Cut sending rate in half at each loss event&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Detecting, reacting to loss
-&lt;ul&gt;
-&lt;li&gt;ACKs problem
-&lt;ul&gt;
-&lt;li&gt;cwnd is cut in half&lt;/li&gt;
-&lt;li&gt;Window grow linearly&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Timeout event
-&lt;ul&gt;
-&lt;li&gt;cwnd is set to 1 MSS&lt;/li&gt;
-&lt;li&gt;Window grow exponentially to threshold, then linearly&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;TCP slow start
-&lt;ul&gt;
-&lt;li&gt;Initially cwnd = 1 MSS&lt;/li&gt;
-&lt;li&gt;Double cwnd every RTT&lt;/li&gt;
-&lt;li&gt;Done by incrementing cwnd for every ACK received&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;

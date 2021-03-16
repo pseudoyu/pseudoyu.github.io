@@ -28,6 +28,15 @@
     </item>
     
     <item>
+      <title>Blockchain学习 - 比特币数据模型</title>
+      <link>https://www.pseudoyu.com/en/2020/12/17/blockchain_note_bitcoin_data/</link>
+      <pubDate>Thu, 17 Dec 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/12/17/blockchain_note_bitcoin_data/</guid>
+      <description>比特币数据模型 区块头 前一个 时间戳 Merkle Root Nonce Block Body 交易 输入 UTXO: Unspent outputs from another Transaction 必须以整体被花费，不能划分，多余部分转回源账户 所有输入都可以追溯至输出 输出 双重</description>
+    </item>
+    
+    <item>
       <title>Blockchain学习 - Bitcoin Core客户端</title>
       <link>https://www.pseudoyu.com/en/2020/12/15/blockchain_note_bitcoin_core/</link>
       <pubDate>Tue, 15 Dec 2020 03:12:17 +0800</pubDate>
@@ -182,15 +191,6 @@ Datasets  Criteo Dataset. It is a famous industry benchmarking dataset for devel
       
       <guid>https://www.pseudoyu.com/en/2020/10/20/icom6012_topic4/</guid>
       <description>ICOM6012 Internet Infrastructure Technologies Topic 4 Transport Layer Actions Sender  Get application layer message Determine segment header fields values Create segment Pass segment to IP  Receiver  Receive segment from IP Check header values Extract application layer message Demultiplexes message up to application via socket  Services Provide logical communication between processes Run in end system  Send side  Break app messages into segment Pass to network layer   Receive side  Reassembles segments into messages Pass to application layer    Protocols TCP  Features  Point-to-point  One sender, one receiver   Reliable, in-order byte system  No message boundaries   Full duplex data  Bi-directional data flow in same connection MSS: maximum segment size (excluding header)   Cumulative ACKs Pipelining  TCP congestion and flow control set window size   Flow Control  Sender will not overwhelm receiver   Congestion control   Concepts  Segment structure Sequence numbers  Byte stream &amp;ldquo;number&amp;rdquo; of first byte in segment&amp;rsquo;s data   Acknowledgements (ACKs)  Seq # of next byte expected from other side Cumulative ACKs     Procedure  Connection-oriented  Handshaking initializes sender, receiver state before data exchange TCP socket identified by 4-tuple  Source IP Source Port # Dest IP Dest Port #   Server host may support many simultaneous TCP sockets Web servers have different sockets for each connecting client (Non-persistent HTTP will have different socket for each request) Demux  Receiver uses all four values to direct segment to appropriate socket     3-way handshake  Connection setup   Connection management  Handshake  Agree to establish connection Agree on connection parameters     Retransmission Closing a connection   Events  Data received from application  Create segment with seq # (a byte-stream number of first data byte in segment) Start timer if not already running  Think of timer as for oldest unACKed segment Expiration interval: TimeOutInterval     Timeout  Retransmit segment that caused timeout Restart timer   ACK received  Update what is known to ACKed Start timer if there are still unACKed segment     Shortcomings  SYN DoS Attack  Half-open TCP connections consume all the TCP connection resources SYN packet with a spoofed source address      UDP   Features</description>
-    </item>
-    
-    <item>
-      <title>ICOM6012 Topic 3 Application Layer</title>
-      <link>https://www.pseudoyu.com/en/2020/10/19/icom6012_topic3/</link>
-      <pubDate>Mon, 19 Oct 2020 17:50:44 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/19/icom6012_topic3/</guid>
-      <description>ICOM6012 Internet Infrastructure Technologies Topic 3 Application Layer Creating a Network App Run on different end systems Communication over network No need to write for network-core devices Client-Server Architecture (The Centralized Internet) Server Always-on host Permanent IP address Often in data centers (for scaling) Clients Contact, communicate with server May be intermittently connected May have dynamic IP addresses Don&amp;rsquo;t communicate directly with each other Peer-to-Peer (P2P) Architecture No always-on server</description>
     </item>
     
   </channel>

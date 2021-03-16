@@ -710,8 +710,8 @@
 &lt;li&gt;区块链&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;哈希&#34;&gt;哈希&lt;/h3&gt;
-&lt;p&gt;区块链使用的是SHA256(Secure Hashing Algorithm 256 bits)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_sha256.png&#34; alt=&#34;blockchain_sha256&#34;&gt;&lt;/p&gt;
+&lt;p&gt;区块链使用的是SHA256(Secure Hashing Algorithm 256 bits)
+&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_sha256.png&#34; alt=&#34;blockchain_sha256&#34;&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;SHA256&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;require&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;crypto-js/sha256&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 
 &lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;data1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Blockchain Rock!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
@@ -728,7 +728,7 @@
 &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`SHA256 Hash: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;generateHash&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;data1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;************************************&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`SHA256 Hash: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;generateHash&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;dataObject&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;blocks&#34;&gt;Blocks&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;区块&#34;&gt;区块&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;区块头&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;前一个区块的Hash&lt;/li&gt;
@@ -787,21 +787,26 @@
 &lt;span class=&#34;p&#34;&gt;}).&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;catch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)});&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;区块链&#34;&gt;区块链&lt;/h3&gt;
 &lt;p&gt;存储网络中所有交易历史记录的账本&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://andersbrownworth.com/blockchain/blockchain&#34;&gt;Demo&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_overview.png&#34; alt=&#34;blockchain_overview&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://andersbrownworth.com/blockchain/blockchain&#34;&gt;Demo&lt;/a&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_overview.png&#34; alt=&#34;blockchain_overview&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;network&#34;&gt;Network&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;P2P网络：不同用户之间共享信息和资源的一种分布式网络
+&lt;li&gt;
+&lt;p&gt;P2P网络：不同用户之间共享信息和资源的一种分布式网络&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;分布式网络：分布在不同地域的网络互相连接&lt;/li&gt;
+&lt;li&gt;分布式网络：分布在不同地域的网络互相连接
+&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_network.png&#34; alt=&#34;blockchain_network&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_network.png&#34; alt=&#34;blockchain_network&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;中心化网络：所有人都连接至一个（或一组）中心化网络&lt;/li&gt;
-&lt;li&gt;去中心化网络：没有一个单点网络可以拥有所有的信息&lt;/li&gt;
-&lt;li&gt;分布式网络：每个人都得到一份信息备份，且都拥有访问权限&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;中心化网络：所有人都连接至一个（或一组）中心化网络&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;去中心化网络：没有一个单点网络可以拥有所有的信息&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;分布式网络：每个人都得到一份信息备份，且都拥有访问权限&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;内存池&#34;&gt;内存池&lt;/h3&gt;
 &lt;p&gt;交易脱离内存池的原因&lt;/p&gt;
@@ -873,22 +878,18 @@
 &lt;li&gt;通过SHA256和RIPEMD160来生成钱包地址&lt;/li&gt;
 &lt;li&gt;通过Base58Check来保障其可读性&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;流程&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_wallet_generate1.png&#34; alt=&#34;blockchain_wallet_generate1&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_wallet_generate2.png&#34; alt=&#34;blockchain_wallet_generate2&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;钱包类型&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_wallet_type.png&#34; alt=&#34;blockchain_wallet_type&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;流程&lt;/strong&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_wallet_generate1.png&#34; alt=&#34;blockchain_wallet_generate1&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_wallet_generate2.png&#34; alt=&#34;blockchain_wallet_generate2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;钱包类型&lt;/strong&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_wallet_type.png&#34; alt=&#34;blockchain_wallet_type&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Non-Deterministic Wallet&lt;/li&gt;
 &lt;li&gt;Deterministic Wallet
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Sequential Deterministic Wallet&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Hierarchical Deterministic (HD) Wallet&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_wallet_hd.png&#34; alt=&#34;blockchain_wallet_hd&#34;&gt;&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;Sequential Deterministic Wallet&lt;/li&gt;
+&lt;li&gt;Hierarchical Deterministic (HD) Wallet
+&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_wallet_hd.png&#34; alt=&#34;blockchain_wallet_hd&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -921,13 +922,19 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;交易周期&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Inputs&lt;/li&gt;
-&lt;li&gt;Outputs&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_transaction_lifecycle.png&#34; alt=&#34;blockchain_transaction_lifecycle&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;UTXO (Unspent transaction output in bitcoin)&lt;/li&gt;
-&lt;li&gt;广播到区块链&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Inputs&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Outputs
+&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_transaction_lifecycle.png&#34; alt=&#34;blockchain_transaction_lifecycle&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;UTXO (Unspent transaction output in bitcoin)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;广播到区块链&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       

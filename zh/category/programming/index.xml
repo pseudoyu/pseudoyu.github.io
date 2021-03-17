@@ -6,7 +6,70 @@
     <description>Recent content in Programming on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 23 Dec 2020 03:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/category/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Feb 2021 05:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/category/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blockchain学习 - 区块链安全与隐私</title>
+      <link>https://www.pseudoyu.com/zh/2021/02/20/blockchain_note_security_privacy/</link>
+      <pubDate>Sat, 20 Feb 2021 05:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/02/20/blockchain_note_security_privacy/</guid>
+      <description>区块链安全 风险来源 应用层 与应用程序相关的攻击和安全问题，如数字货币交易所 智能合约层 很多潜在风险，如DAO事件 激励层 矿工付出成本 &amp;gt; 奖励，则去中</description>
+    </item>
+    
+    <item>
+      <title>Blockchain学习 - 比特币数据模型</title>
+      <link>https://www.pseudoyu.com/zh/2021/02/17/blockchain_note_bitcoin_data/</link>
+      <pubDate>Wed, 17 Feb 2021 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/02/17/blockchain_note_bitcoin_data/</guid>
+      <description>比特币数据模型 区块头 前一个区块的哈希值 时间戳 Merkle Root Nonce Block Body 交易 输入 UTXO: Unspent outputs from another Transaction 必须以整体被花费，不能划分，多余部分转回源账户 所有输入都可以追溯至</description>
+    </item>
+    
+    <item>
+      <title>Blockchain学习 - Bitcoin Core客户端</title>
+      <link>https://www.pseudoyu.com/zh/2021/02/15/blockchain_note_bitcoin_core/</link>
+      <pubDate>Mon, 15 Feb 2021 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/02/15/blockchain_note_bitcoin_core/</guid>
+      <description>Bitcoin Core客户端 比特币的实现 Bitcoin-QT Satoshi-client 特点 连接至比特币网络 可验证区块链 可以发送与接收区块链 网络 Mainnet Testnet Regnet Debug Console 与比特币区块链交互的工具 Blockchain getblockchaininfo: 返回有关区块链</description>
+    </item>
+    
+    <item>
+      <title>Blockchain学习 - 比特币基础</title>
+      <link>https://www.pseudoyu.com/zh/2021/02/13/blockchain_note_bitcoin/</link>
+      <pubDate>Sat, 13 Feb 2021 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/02/13/blockchain_note_bitcoin/</guid>
+      <description>比特币的数据结构 哈希指针 Hash Pointers 哈希指针指向一个结构体的哈希值（整个区块+其H()一起算出下一个值） 特征 tamper-evident log 如果这个区块被篡改，则会影响后续所有</description>
+    </item>
+    
+    <item>
+      <title>Blockchain学习 - 区块链框架</title>
+      <link>https://www.pseudoyu.com/zh/2021/02/12/blockchain_note_framework/</link>
+      <pubDate>Fri, 12 Feb 2021 08:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/02/12/blockchain_note_framework/</guid>
+      <description>区块链框架 交易 钱包 签名 内存池 网络 共识机制 哈希 区块 区块链 哈希 区块链使用的是SHA256(Secure Hashing Algorithm 256 bits) var SHA256 = require(&amp;#34;crypto-js/sha256&amp;#34;); const data1 = &amp;#34;Blockchain Rock!&amp;#34;; const dataObject = { id: 1, body: &amp;#34;With</description>
+    </item>
+    
+    <item>
+      <title>Blockchain学习 - 区块链概念</title>
+      <link>https://www.pseudoyu.com/zh/2021/02/12/blockchain_note_concept/</link>
+      <pubDate>Fri, 12 Feb 2021 05:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/02/12/blockchain_note_concept/</guid>
+      <description>区块链概念 区块链是一种分布式账本技术，由于是一群人来记账，所以修改这个账本的难度比较高。 单式记账 → 复式记账 → 数字化记账 → 分布式记账 传统中心化</description>
+    </item>
+    
+    <item>
+      <title>Blockchain学习 - 密码学原理</title>
+      <link>https://www.pseudoyu.com/zh/2021/02/12/blockchain_note_cryptography/</link>
+      <pubDate>Fri, 12 Feb 2021 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/02/12/blockchain_note_cryptography/</guid>
+      <description>密码学原理 哈希 特征 collision resistance 抗碰撞性 哈希碰撞是指当x≠y时，存在H(x)=H(y)，不同的输入映射到哈希表的同一个位置 很难人工创造哈希碰撞 常用于文</description>
+    </item>
+    
     <item>
       <title>Java学习 - 线程间的通信</title>
       <link>https://www.pseudoyu.com/zh/2020/12/23/java_note_concurrent_communication/</link>
@@ -14,69 +77,6 @@
       
       <guid>https://www.pseudoyu.com/zh/2020/12/23/java_note_concurrent_communication/</guid>
       <description>线程间的通信 锁与同步 Java中锁是基于对象的，因此也被称为对象锁 一个锁同一时间只能被一个线程持有 线程之间的同步是指线程按照一定的顺序执行 public class</description>
-    </item>
-    
-    <item>
-      <title>Blockchain学习 - 区块链安全与隐私</title>
-      <link>https://www.pseudoyu.com/zh/2020/12/20/blockchain_note_security_privacy/</link>
-      <pubDate>Sun, 20 Dec 2020 05:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/12/20/blockchain_note_security_privacy/</guid>
-      <description>区块链安全 风险来源 应用层 与应用程序相关的攻击和安全问题，如数字货币交易所 智能合约层 很多潜在风险，如DAO事件 激励层 矿工付出成本 &amp;gt; 奖励，则去中</description>
-    </item>
-    
-    <item>
-      <title>Blockchain学习 - 比特币数据模型</title>
-      <link>https://www.pseudoyu.com/zh/2020/12/17/blockchain_note_bitcoin_data/</link>
-      <pubDate>Thu, 17 Dec 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/12/17/blockchain_note_bitcoin_data/</guid>
-      <description>比特币数据模型 区块头 前一个区块的哈希值 时间戳 Merkle Root Nonce Block Body 交易 输入 UTXO: Unspent outputs from another Transaction 必须以整体被花费，不能划分，多余部分转回源账户 所有输入都可以追溯至</description>
-    </item>
-    
-    <item>
-      <title>Blockchain学习 - Bitcoin Core客户端</title>
-      <link>https://www.pseudoyu.com/zh/2020/12/15/blockchain_note_bitcoin_core/</link>
-      <pubDate>Tue, 15 Dec 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/12/15/blockchain_note_bitcoin_core/</guid>
-      <description>Bitcoin Core客户端 比特币的实现 Bitcoin-QT Satoshi-client 特点 连接至比特币网络 可验证区块链 可以发送与接收区块链 网络 Mainnet Testnet Regnet Debug Console 与比特币区块链交互的工具 Blockchain getblockchaininfo: 返回有关区块链</description>
-    </item>
-    
-    <item>
-      <title>Blockchain学习 - 比特币基础</title>
-      <link>https://www.pseudoyu.com/zh/2020/12/13/blockchain_note_bitcoin/</link>
-      <pubDate>Sun, 13 Dec 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/12/13/blockchain_note_bitcoin/</guid>
-      <description>比特币的数据结构 哈希指针 Hash Pointers 哈希指针指向一个结构体的哈希值（整个区块+其H()一起算出下一个值） 特征 tamper-evident log 如果这个区块被篡改，则会影响后续所有</description>
-    </item>
-    
-    <item>
-      <title>Blockchain学习 - 区块链框架</title>
-      <link>https://www.pseudoyu.com/zh/2020/12/12/blockchain_note_framework/</link>
-      <pubDate>Sat, 12 Dec 2020 08:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/12/12/blockchain_note_framework/</guid>
-      <description>区块链框架 交易 钱包 签名 内存池 网络 共识机制 哈希 区块 区块链 哈希 区块链使用的是SHA256(Secure Hashing Algorithm 256 bits) var SHA256 = require(&amp;#34;crypto-js/sha256&amp;#34;); const data1 = &amp;#34;Blockchain Rock!&amp;#34;; const dataObject = { id: 1, body: &amp;#34;With</description>
-    </item>
-    
-    <item>
-      <title>Blockchain学习 - 区块链概念</title>
-      <link>https://www.pseudoyu.com/zh/2020/12/12/blockchain_note_concept/</link>
-      <pubDate>Sat, 12 Dec 2020 05:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/12/12/blockchain_note_concept/</guid>
-      <description>区块链概念 区块链是一种分布式账本技术，由于是一群人来记账，所以修改这个账本的难度比较高。 单式记账 → 复式记账 → 数字化记账 → 分布式记账 传统中心化</description>
-    </item>
-    
-    <item>
-      <title>Blockchain学习 - 密码学原理</title>
-      <link>https://www.pseudoyu.com/zh/2020/12/12/blockchain_note_cryptography/</link>
-      <pubDate>Sat, 12 Dec 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/12/12/blockchain_note_cryptography/</guid>
-      <description>密码学原理 哈希 特征 collision resistance 抗碰撞性 哈希碰撞是指当x≠y时，存在H(x)=H(y)，不同的输入映射到哈希表的同一个位置 很难人工创造哈希碰撞 常用于文</description>
     </item>
     
     <item>

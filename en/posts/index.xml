@@ -26,15 +26,6 @@
     </item>
     
     <item>
-      <title>用OKR的方式梳理自己的学习计划</title>
-      <link>https://www.pseudoyu.com/en/2021/02/17/learning_plan_okr/</link>
-      <pubDate>Wed, 17 Feb 2021 00:00:00 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2021/02/17/learning_plan_okr/</guid>
-      <description>用一句话形容理想情况下，自己想要达到的状态 具体目标范围：提升编程技术能力 时间周期：2个月 描述：我想要成为一名具备过硬的编程能力的开发者，并对</description>
-    </item>
-    
-    <item>
       <title>Blockchain学习 - Bitcoin Core客户端</title>
       <link>https://www.pseudoyu.com/en/2021/02/15/blockchain_note_bitcoin_core/</link>
       <pubDate>Mon, 15 Feb 2021 03:12:17 +0800</pubDate>
@@ -77,6 +68,15 @@
       
       <guid>https://www.pseudoyu.com/en/2021/02/12/blockchain_note_cryptography/</guid>
       <description>密码学原理 哈希 特征 collision resistance 抗碰撞性 哈希碰撞是指当x≠y时，存在H(x)=H(y)，不同的输入映射到哈希表的同一个位置 很难人工创造哈希碰撞 常用于文</description>
+    </item>
+    
+    <item>
+      <title>用OKR的方式梳理自己的学习计划</title>
+      <link>https://www.pseudoyu.com/en/2021/02/11/learning_plan_okr/</link>
+      <pubDate>Thu, 11 Feb 2021 00:00:00 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2021/02/11/learning_plan_okr/</guid>
+      <description>用一句话形容理想情况下，自己想要达到的状态 具体目标范围：提升编程技术能力 时间周期：2个月 描述：我想要成为一名具备过硬的编程能力的开发者，并对</description>
     </item>
     
     <item>

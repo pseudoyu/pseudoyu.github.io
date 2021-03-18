@@ -1254,6 +1254,617 @@
     </item>
     
     <item>
+      <title>COMP7801 Topic 2 Spatial Data Management</title>
+      <link>https://www.pseudoyu.com/zh/2021/01/30/comp7801_topic2/</link>
+      <pubDate>Sat, 30 Jan 2021 01:18:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/01/30/comp7801_topic2/</guid>
+      
+        <description>&lt;h2 id=&#34;spatial-data-management&#34;&gt;Spatial Data Management&lt;/h2&gt;
+&lt;h3 id=&#34;concepts&#34;&gt;Concepts&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Spatial Data&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Location data
+&lt;ul&gt;
+&lt;li&gt;Check-in service&lt;/li&gt;
+&lt;li&gt;Online Maps&lt;/li&gt;
+&lt;li&gt;Location-based services&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Location tracking&lt;/li&gt;
+&lt;li&gt;Traffic Data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Spatial Databases&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PostgreSQL with PostGIS&lt;/li&gt;
+&lt;li&gt;Neo4J-spatial&lt;/li&gt;
+&lt;li&gt;HadoopGIS&lt;/li&gt;
+&lt;li&gt;Ingres&lt;/li&gt;
+&lt;li&gt;GeoMesa&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Spatial Data Management&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Spatial Database Systems
+&lt;ul&gt;
+&lt;li&gt;Manage large collections of multidimensional objects (2D/3D)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;A spatial object
+&lt;ul&gt;
+&lt;li&gt;Contains (at least) one spatial attributes that describes its location and/or geometry&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;A spatial relation
+&lt;ul&gt;
+&lt;li&gt;Is an organized collection of spatial objects of the same entity&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;spatial-data&#34;&gt;Spatial Data&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Representation&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Points (Cities in large-scale map)&lt;/li&gt;
+&lt;li&gt;Extent (rivers, forest, etc.)
+&lt;ul&gt;
+&lt;li&gt;Vector (approximation by geometric objects)&lt;/li&gt;
+&lt;li&gt;Raster (A set of pixels in the grid)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Application&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Spatial data
+&lt;ul&gt;
+&lt;li&gt;GIS&lt;/li&gt;
+&lt;li&gt;Segemented images&lt;/li&gt;
+&lt;li&gt;Components of CAD constructs or VLSI circuit&lt;/li&gt;
+&lt;li&gt;Stars on the sky&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Spatial database
+&lt;ul&gt;
+&lt;li&gt;Users of mobile devices&lt;/li&gt;
+&lt;li&gt;Geographers, life scientists&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;features-of-spatial&#34;&gt;Features of spatial&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Dimensionality
+&lt;ul&gt;
+&lt;li&gt;There is no total ordering of objects in the multidimensional space that preserves spatial proximity&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Complex spatial extent&lt;/li&gt;
+&lt;li&gt;No standard definitions of spatial operations and algebra&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Relationa indexes (like B+ trees) and query processing methods (sort-merge join, hash-join) are not applicable&lt;/p&gt;
+&lt;p&gt;Spatial access methods (SAMs) for spatial data have to be defined&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Index spatial objects&lt;/li&gt;
+&lt;li&gt;Facilitate efficient processing of simple spatial query types (e.g. range queries)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;spatial-relationships&#34;&gt;Spatial Relationships&lt;/h3&gt;
+&lt;p&gt;A spatial relationship associates two objects according to their relative location and extent in space. Sometimes also called &amp;ldquo;spatial relations&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Can refer to a database relation which stores spatial objects.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Classification&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Topological relationships&lt;/li&gt;
+&lt;li&gt;Distance relationships&lt;/li&gt;
+&lt;li&gt;Directional relationships&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;topological-relationships&#34;&gt;Topological relationships&lt;/h4&gt;
+&lt;p&gt;Each object is characterized by the space it occupies in the universe (A set of pixels).&lt;/p&gt;
+&lt;p&gt;A set of relationsips between their boundaries and interiors&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Boundary&lt;/li&gt;
+&lt;li&gt;Interior (some may not have, points, line segments, etc.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;A hierarchy of relations&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;intersect (or overlaps)
+&lt;ul&gt;
+&lt;li&gt;equals&lt;/li&gt;
+&lt;li&gt;inside&lt;/li&gt;
+&lt;li&gt;contains&lt;/li&gt;
+&lt;li&gt;adjacent&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;disjoint&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;distance-relationships&#34;&gt;Distance relationships&lt;/h4&gt;
+&lt;p&gt;Associate two objects based on their geometric (Euclidean distance), and it&amp;rsquo;s usually abstracted into human mind.&lt;/p&gt;
+&lt;p&gt;Distance relationships are expressed either explicitly or by some abstract distance class.&lt;/p&gt;
+&lt;h4 id=&#34;directional-relationships&#34;&gt;Directional relationships&lt;/h4&gt;
+&lt;p&gt;Associates two object based on their relative orientation according to a global reference system.&lt;/p&gt;
+&lt;h3 id=&#34;spatial-queries&#34;&gt;Spatial Queries&lt;/h3&gt;
+&lt;p&gt;Applied on one (or more) spatial relations to retrieve objects staisfying some spatial relationships&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Nearest neighbor query&lt;/li&gt;
+&lt;li&gt;Spatial join&lt;/li&gt;
+&lt;li&gt;Range query
+&lt;ul&gt;
+&lt;li&gt;Spatial selction&lt;/li&gt;
+&lt;li&gt;window query&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;spatial-query-processing&#34;&gt;Spatial Query Processing&lt;/h3&gt;
+&lt;p&gt;Evaluating spatial relationships on geometric data is slow.&lt;/p&gt;
+&lt;p&gt;A spatial object is approximated by its minimum bounding rectangle (MBR)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Process&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Filter: The MBR is tested against the query predicate&lt;/li&gt;
+&lt;li&gt;Refinement: The exact geometry of objects that pass the filter step is tested for qualification&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;spatial-access-methods-sams&#34;&gt;Spatial Access Methods (SAMs)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;The problem of indexing spatial data&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;No dynamic access method with good theoretical worst-case guarantees for range queries&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;SAMs aim at the minimization of the expected cost.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Indexing of multidimensional points&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;point-access-methods&#34;&gt;Point access methods&lt;/h4&gt;
+&lt;p&gt;Divide the apce into disjoint partitions and group the points according to the regions they belong&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/point_access_methods.png&#34; alt=&#34;point_access_methods&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Not effective for extended objects (may need to be clipped into several parts which leads to data redundancy and affects performance negatively).&lt;/p&gt;
+&lt;p&gt;Object clipping can be avoided if we allow the regions of object to overlap.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/object_clipping.png&#34; alt=&#34;object_clipping&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Optimization&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Group the objects below into 3 groups of 4 objects each such that the MBRs of the groups have the minimum overlap&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/overlap_region.png&#34; alt=&#34;overlap_region&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hard optimization problem&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;the-r-tree&#34;&gt;The R-tree&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Concept&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Group object MBRs to disk blocks hierarchically&lt;/li&gt;
+&lt;li&gt;Each group of object is a leaf of the tree&lt;/li&gt;
+&lt;li&gt;The MBRs of the leaf nodes are grouped to form nodes at the next level&lt;/li&gt;
+&lt;li&gt;Grouping is recursively applied at each level until a single group (the root) is formed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/R_Tree_example.png&#34; alt=&#34;R_Tree_example&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Elements&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Leaf node entries: &amp;lt;MBR, object-id&amp;gt;, all leaves are in same level&lt;/li&gt;
+&lt;li&gt;Non-leaf node entries: &amp;lt;MBR, ptr&amp;gt;, pointing to entries&lt;/li&gt;
+&lt;li&gt;Root: have at least two children&lt;/li&gt;
+&lt;li&gt;Non-root node parameters
+&lt;ul&gt;
+&lt;li&gt;M&lt;/li&gt;
+&lt;li&gt;m&lt;/li&gt;
+&lt;li&gt;m &amp;lt;= M/2&lt;/li&gt;
+&lt;li&gt;Usually m = 0.4 M&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;range-searching-using-an-r-tree&#34;&gt;Range searching using an R-tree&lt;/h4&gt;
+&lt;p&gt;Range_query (query W, R-tree node n)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If n is not a leaf node
+&lt;ul&gt;
+&lt;li&gt;For each index entry e in n such that e.MBR intersects W
+&lt;ul&gt;
+&lt;li&gt;Visit node n&#39; pointed  by e.ptr&lt;/li&gt;
+&lt;li&gt;Range_query (W, n&#39;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;If n is a leaf
+&lt;ul&gt;
+&lt;li&gt;For each index entry e in n such that e.MBR intersects W
+&lt;ul&gt;
+&lt;li&gt;Visit object o pointed by e.object-id&lt;/li&gt;
+&lt;li&gt;Test range query against exact geometry of o; If o intersects W, report o&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;May follow multiple paths during search&lt;/li&gt;
+&lt;li&gt;Different search predicates are used for different realtionships with W&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/range_search.png&#34; alt=&#34;range_search&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;construction-of-the-r-tree&#34;&gt;Construction of the R-tree&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Dynamically constructed/maintained&lt;/li&gt;
+&lt;li&gt;Insertions/deletions interleave with search operations
+&lt;ul&gt;
+&lt;li&gt;Insertion similiar to B+ Tree, but with special optimization algorithms
+&lt;ul&gt;
+&lt;li&gt;Choose the path where a new MBR is inserted&lt;/li&gt;
+&lt;li&gt;Split overflow nodes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Underflows in deletions
+&lt;ul&gt;
+&lt;li&gt;Deleting the underflow leaf node&lt;/li&gt;
+&lt;li&gt;Re-insert the remaining entries&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;r-tree&#34;&gt;R*-tree&lt;/h3&gt;
+&lt;p&gt;Only different in the insertion algorithm (compared to R-tree), aiming at constructing a tree of high quality&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A good tree&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;nodes with small MBRs&lt;/li&gt;
+&lt;li&gt;nodes with small overlap&lt;/li&gt;
+&lt;li&gt;nodes that look like squares&lt;/li&gt;
+&lt;li&gt;nodes as full as possible&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;optimization&#34;&gt;Optimization&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Minimize the area covered by an index rectangle (small area means small dead space)&lt;/li&gt;
+&lt;li&gt;Minimize overlap between node MBRs (Minimizes the number of traversed paths)&lt;/li&gt;
+&lt;li&gt;Minimize the margins of node MBRs (Square-like nodes, smaller number of intersections for a random query, better structure)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/margin_minimization.png&#34; alt=&#34;margin_minimization&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Optimize the storage utilization
+&lt;ul&gt;
+&lt;li&gt;Nodes in tree should be filled as much as possible&lt;/li&gt;
+&lt;li&gt;Minimizes tree height and potentially decreases dead space&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Insertion heuristics (Select the path)
+&lt;ul&gt;
+&lt;li&gt;Least MBR enlargement after insertion
+&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/MBR_enlargement.png&#34; alt=&#34;MBR_enlargement&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Least MBR overlap after insertion
+&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/MBR_overlap.png&#34; alt=&#34;MBR_overlap&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;node-spliting&#34;&gt;Node Spliting&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Determine the split axis&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;For each axis (i.e. x and y axis)
+&lt;ul&gt;
+&lt;li&gt;Sum=0;&lt;/li&gt;
+&lt;li&gt;sort entries by the lower value, then by upper value&lt;/li&gt;
+&lt;li&gt;for each sorting (e.g. lower value)
+&lt;ul&gt;
+&lt;li&gt;for k=m to M+1-m&lt;/li&gt;
+&lt;li&gt;place first k entries in group A, and the remaining ones in group B&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;Sum = Sum + margin(A) + margin(B)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Choose axis with the minimum Sum&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Distribute entries along axis&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Along the split axis, choose the distribution with minimum overlap&lt;/li&gt;
+&lt;li&gt;If there are multiple groupings with minimal overlap choose &amp;lt;A,B&amp;gt; such that area(A)+area(B) is minimized&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;insertion-heuristics-forced-reinsert&#34;&gt;Insertion heuristics: Forced Reinsert&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/forced_reinsert.png&#34; alt=&#34;forced_reinsert&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Forced Reinsert
+&lt;ul&gt;
+&lt;li&gt;When R*-tree node n overflows, instead of splitting n immediately, try to see if some entries in n could possibly fit better in another node&lt;/li&gt;
+&lt;li&gt;Find the 30% furthest entries from the center of the group&lt;/li&gt;
+&lt;li&gt;Re-insert them to the tree (not to be repeated if another overflow occurs)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Slightly more expensive, but better tree structure:
+&lt;ul&gt;
+&lt;li&gt;less overlap&lt;/li&gt;
+&lt;li&gt;more space is utilized (more full nodes)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;bulk-loading-r-trees&#34;&gt;Bulk-loading R-trees&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/bulk_loading_R_tree.png&#34; alt=&#34;bulk_loading_R_tree&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Given a static set S of rectangles, build an R-tree that indexes S.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Method 1: iteratively insert rectangles into an initially empty tree
+&lt;ul&gt;
+&lt;li&gt;Feature
+&lt;ul&gt;
+&lt;li&gt;tree reorganization is slow&lt;/li&gt;
+&lt;li&gt;tree nodes are not as full as possible: more space occupied for the tree&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Method 2 (x-sorting): bulk-load the rectangles into the tree using some fast (sort or hash-based) process
+&lt;ul&gt;
+&lt;li&gt;sort rectangles using the x-coordinate of their center&lt;/li&gt;
+&lt;li&gt;pack M consecutive rectangles in leaf nodes&lt;/li&gt;
+&lt;li&gt;build tree bottom-up&lt;/li&gt;
+&lt;li&gt;Feature
+&lt;ul&gt;
+&lt;li&gt;R-tree is built fast&lt;/li&gt;
+&lt;li&gt;good space utilization&lt;/li&gt;
+&lt;li&gt;results in leaf nodes that are have long stripes as MBRs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Method 3 (Hilbert sorting): use a space-filling curve to order the rectangles
+&lt;ul&gt;
+&lt;li&gt;much better structure, but still the nodes have large overlap&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Method 4 (sort-tile-recursive): Sort using one axis first and then groups of sqrt(n) rectangles using the other axis
+&lt;ul&gt;
+&lt;li&gt;Usually the best structure compared to other bulk-loading methods&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;k-nearest-neighbor-search&#34;&gt;K Nearest Neighbor Search&lt;/h3&gt;
+&lt;p&gt;Given a spatial relation R, a query object q, and a number k &amp;lt;|R|, find the k-nearest neighbors of q in R.&lt;/p&gt;
+&lt;p&gt;We can have more than one k-NN sets (with multiple possible equidistant furthest points in them).&lt;/p&gt;
+&lt;h4 id=&#34;distance-measures-and-mbrs&#34;&gt;Distance measures and MBRs&lt;/h4&gt;
+&lt;p&gt;Distances between MBRs lower-bound the distances between the corresponding objects&lt;/p&gt;
+&lt;p&gt;dist(MBR(oi),MBR(oj)) ≤ dist(oi, oj)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/distance_mbr.png&#34; alt=&#34;distance_mbr&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Distances between R-tree node MBRs lower-bound the distances between the entries in them&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/min_distance_mbr.png&#34; alt=&#34;min_distance_mbr&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The distance between a query object q and an R-tree node MBR lower-bounds the distances between q and the objects indexed under this node&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/q_distance_mbr.png&#34; alt=&#34;q_distance_mbr&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;depth-first-nn-search-using-an-r-tree&#34;&gt;Depth-first NN search using an R-tree&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Start from the root and visit the node nearest to q&lt;/li&gt;
+&lt;li&gt;Continue recursively, until a leaf node nl is visited.&lt;/li&gt;
+&lt;li&gt;Find the NN of q in nl.&lt;/li&gt;
+&lt;li&gt;Continue visiting other nodes after backtracking as long there are nodes closer to q than the current NN.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/DFNNS_code.png&#34; alt=&#34;DFNNS_code&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Large space can be pruned by avoiding visiting R-tree nodes and their sub-trees&lt;/li&gt;
+&lt;li&gt;Should order the entries of a node in increasing distance from q to maximize potential for a good NN found fast&lt;/li&gt;
+&lt;li&gt;Can be easily adapted for k-NN search&lt;/li&gt;
+&lt;li&gt;Requires at most one tree path to be currently in memory – good for small memory buffers
+&lt;ul&gt;
+&lt;li&gt;Characteristic of all depth-first search algorithms&lt;/li&gt;
+&lt;li&gt;Recall that the range search algorithm is also DF&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;However, does not visit the least possible number of nodes&lt;/li&gt;
+&lt;li&gt;Also, not incremental – more on this later…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/DFNNS_example.png&#34; alt=&#34;DFNNS_example&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. visit root
+dist(q,M1)&amp;lt;dist(q,oNN)
+must visit node M1
+
+2. visit M1
+dist(q,m1)&amp;lt;dist(q,oNN)
+must visit node m1
+
+3. visit m1
+check a,b,c
+found new NN:
+oNN = a, dist(q,oNN) = sqrt(5)
+
+4. backtrack to M1
+check m2dist(q,m2) = 3 &amp;gt;= sqrt(5):
+No need to visit node m2
+check m3dist(q,m3) = sqrt(5) &amp;gt;= sqrt(5):
+No need to visit node m3
+
+5. backtrack to root
+check M2dist(q,M2) = sqrt(2) &amp;lt; sqrt(5):
+must visit node M2
+
+6. visit M2
+check m4dist(q,m4) = sqrt(2) &amp;lt; sqrt(5):
+must visit node m4
+
+7. visit m4
+check i,j,k
+found new NN:
+oNN = k, dist(q,oNN) = sqrt(2)
+
+8. backtrack to M2
+check m5dist(q,m5) &amp;gt;= sqrt(2):
+No need to visit node m5
+check m6dist(q,m6) &amp;gt;= sqrt(2):
+No need to visit node m6
+
+9. backtrack to root
+check M3dist(q,M3) &amp;gt;= sqrt(2):
+No need to visit node M3
+
+10. backtrack from root
+Algorithm terminates
+oNN =k with dist(q,oNN)= sqrt(2) found
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;best-first-nn-search&#34;&gt;Best-first NN search&lt;/h4&gt;
+&lt;p&gt;Put all entries in a priority queue and always “open” the closest one, independently of the node that contains it.&lt;/p&gt;
+&lt;p&gt;Thus the best (i.e., closest) entry is always visited first.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A more efficient algorithm (given large enough memory)&lt;/li&gt;
+&lt;li&gt;Optimal in the number of R-tree nodes visited for a given query q&lt;/li&gt;
+&lt;li&gt;Uses a priority queue to organize seen entries and prioritize the next node to be visited&lt;/li&gt;
+&lt;li&gt;Adaptable for k-NN search and incremental NN search&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/BFNNS_code.png&#34; alt=&#34;BFNNS_code&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In the previous example, we have visited fewer nodes compared to DF-NN algorithm
+&lt;ul&gt;
+&lt;li&gt;Only nodes whose MBR intersect the disk centered at q with radius the real NN distance are visited (see if you can you prove this)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The algorithm can be adapted for incremental NN search
+&lt;ul&gt;
+&lt;li&gt;After having found the NN can we easily (incrementally) find the next NN without starting search from the beginning?
+&lt;ul&gt;
+&lt;li&gt;put objects on the heap&lt;/li&gt;
+&lt;li&gt;never prune, but wait until an object comes out&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The algorithm can be used for k-NN search
+&lt;ul&gt;
+&lt;li&gt;use a second heap to organize the NN found so far (same can be done for DF-NN)&lt;/li&gt;
+&lt;li&gt;no need if we just use the inc. version of the algorithm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;… but: The heap can grow very large until the algorithm terminates&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/BFNNS_example.png&#34; alt=&#34;BFNNS_example&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Step 1: put all entries of root on heap Q
+Q = M1(1), M2(sqrt(2)), M3(sqrt(8))
+
+Step 2: get closest entry (top element of Q):
+M1(1). Visit node M1. Put all entries of 
+visited node on heap Q
+Q = M2(sqrt(2)), m1(sqrt(5)), M3(sqrt(5)), M3(sqrt(8)), m2(3)
+
+Step 3: get closest entry (top element of Q):
+M2(sqrt(2)). Visit node M2. Put all entries of 
+visited node on heap Q
+Q =m4(sqrt(2)), m1(sqrt(5)), M3(sqrt(5)), M3(sqrt(8)), m2(3), 	m5(sqrt(13)), m5(sqrt(17))
+
+Step 4: get closest entry (top element of Q):
+m4( 2). Visit node m4. m4 is a leaf node, so update NN if some object in m4 is closer than the current NN:
+oNN = k, dist(q,oNN)= sqrt(2)
+Q =m1(sqrt(5)), M3(sqrt(5)), M3(sqrt(8)), m2(3), 	m5(sqrt(13)), m5(sqrt(17))
+
+Step 5: get closest entry (top element of Q):
+m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN is returned as the NN of q
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;incremental NN search&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Example 1: find the nearest large city (&amp;gt;10,000 residents) to my current position
+&lt;ul&gt;
+&lt;li&gt;Solution 1:
+&lt;ul&gt;
+&lt;li&gt;find all large cities&lt;/li&gt;
+&lt;li&gt;apply NN search on the result&lt;/li&gt;
+&lt;li&gt;could be slow if many such cities&lt;/li&gt;
+&lt;li&gt;also R-tree may not be available for large cities only&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Solution 2:
+&lt;ul&gt;
+&lt;li&gt;incrementally find NN and check if the large city requirement is satisfied; if not get the next NN&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Example 2: find the nearest hotel; see if you like it; if not get the next one; see if you like it; …&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;spatial-joins&#34;&gt;Spatial Joins&lt;/h3&gt;
+&lt;p&gt;Most algorithms focus on the efficient processing of the filter step.&lt;/p&gt;
+&lt;p&gt;Most spatial predicates on actual objects reduce to intersection of MBRs in the filter step. Thus all algorithms consider mainly the intersect predicate.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Types&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;intersection joins&lt;/li&gt;
+&lt;li&gt;Semi-join: Find the cities that intersect a river&lt;/li&gt;
+&lt;li&gt;Similarity join: Find pairs of hotels, restaurants close to each other (with distance smaller than 100m)&lt;/li&gt;
+&lt;li&gt;Closest pairs: Find the closest pair of hotels, restaurants&lt;/li&gt;
+&lt;li&gt;All-NN: For each hotel find the nearest restaurant&lt;/li&gt;
+&lt;li&gt;Iceberg distance join: Find hotels close to at least 10 restaurants&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Three categories of spatial join algorithms&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Both inputs are indexed (e.g., synchronized tree traversal)&lt;/li&gt;
+&lt;li&gt;One input is indexed (e.g., indexed nested loops)&lt;/li&gt;
+&lt;li&gt;Neither input is indexed (e.g., spatial hash join)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;r-tree-intersection-join&#34;&gt;R-tree (Intersection) Join&lt;/h4&gt;
+&lt;p&gt;Applies on two R-trees of spatial relations R and S&lt;/p&gt;
+&lt;p&gt;Node MBRs at the high level of the trees can prune object combinations to be checked&lt;/p&gt;
+&lt;p&gt;This pseudo-code version assumes that the trees have same height&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/R_tree_join_code.png&#34; alt=&#34;R_tree_join_code&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;run for root(RA), root(RB)&lt;/li&gt;
+&lt;li&gt;for every intersecting pair there (e.g., A1, B1) run recursively for pointed nodes&lt;/li&gt;
+&lt;li&gt;intersecting pairs of leaf nodes are qualifying object MBR pairs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/R_tree_join_example.png&#34; alt=&#34;R_tree_join_example&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;optimization-1&#34;&gt;Optimization&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;space restriction&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If an entry in n1 does not intersect the MBR of n2 it may not intersect any entry in n2.&lt;/li&gt;
+&lt;li&gt;Perform two scans in n1 and n2 to prune such entries&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/R_tree_join_optimization.png&#34; alt=&#34;R_tree_join_optimization&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;plane sweep&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sort entries in both nodes on their lower-x value (lower bound of x-projection)&lt;/li&gt;
+&lt;li&gt;Sweep a line to find fast all entry pairs that qualify x-intersection
+&lt;ul&gt;
+&lt;li&gt;for each of them check y-intersection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/R_tree_join_optimization2.png&#34; alt=&#34;R_tree_join_optimization2&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Worst-case sub-optimal. But very effective on the average&lt;/li&gt;
+&lt;li&gt;Worst-case optimal algorithms require advanced data structures for y-intersection. Large hidden constants, thus high cost for this problem size&lt;/li&gt;
+&lt;li&gt;Can be used with other spatial join algorithms&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;R-tree join&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The most efficient algorithm (assuming that the relations are indexed)&lt;/li&gt;
+&lt;li&gt;Cannot be used for non-indexed inputs&lt;/li&gt;
+&lt;li&gt;unless we build on-the-fly R-trees&lt;/li&gt;
+&lt;li&gt;Comes with some I/O scheduling techniques for minimizing the page accesses&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;joining-non-indexed-inputs&#34;&gt;Joining non-indexed inputs&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Spatial hash join&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/spatial_hash_join.png&#34; alt=&#34;spatial_hash_join&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Partition based spatial merge join&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/spatial_merge_join.png&#34; alt=&#34;spatial_merge_join&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Indexed Nested Loops&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/indexed_nest_loops.png&#34; alt=&#34;indexed_nest_loops&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Seeded tree join and Bulk-load and Match build an on-the-fly R-tree&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/seeded_tree_join.png&#34; alt=&#34;seeded_tree_join&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Slot-index spatial join applies hash-join using the entries of a high R-tree level&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/slot_index_spatial_join.png&#34; alt=&#34;slot_index_spatial_join&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;the-refinement-step&#34;&gt;The refinement step&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/refinement_step.png&#34; alt=&#34;refinement_step&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Step 1: find MBR pairs that intersect&lt;/li&gt;
+&lt;li&gt;Step 2: compare some more detailed approximations to make conclusions (a.k.a. geometric filter)
+&lt;ul&gt;
+&lt;li&gt;conservative approximations
+&lt;ul&gt;
+&lt;li&gt;e.g., convex hull&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;progressive approximation
+&lt;ul&gt;
+&lt;li&gt;e.g., maximum enclosed rectangle&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/refinement_detailed_approximations.png&#34; alt=&#34;refinement_detailed_approximations&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Step 3: if still join predicate inconclusive, perform expensive refinement step
+&lt;ul&gt;
+&lt;li&gt;can be processed by computational geometry algorithms&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Multi-step processing (R-tree join as example)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/refinement_multi_step.png&#34; alt=&#34;refinement_multi_step&#34;&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>COMP7103 Topic 1 Introduction</title>
       <link>https://www.pseudoyu.com/zh/2021/01/28/comp7103_topic1/</link>
       <pubDate>Thu, 28 Jan 2021 01:18:17 +0800</pubDate>
@@ -3667,361 +4278,6 @@
 &lt;li&gt;动态配置实例的属性&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Java学习 - 基础</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/20/java_note_basic/</link>
-      <pubDate>Fri, 20 Nov 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/20/java_note_basic/</guid>
-      
-        <description>&lt;h2 id=&#34;java基础&#34;&gt;Java基础&lt;/h2&gt;
-&lt;h3 id=&#34;java特性&#34;&gt;Java特性&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;简单性
-&lt;ul&gt;
-&lt;li&gt;丢弃了C++中运算符重载、多重继承等&lt;/li&gt;
-&lt;li&gt;不使用指针而是使用引用&lt;/li&gt;
-&lt;li&gt;自动垃圾回收机制（不用开发者进行内存管理）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;面向对象
-&lt;ul&gt;
-&lt;li&gt;提供了类、接口和继承等&lt;/li&gt;
-&lt;li&gt;支持类之间的单继承&lt;/li&gt;
-&lt;li&gt;支持接口之间的多继承&lt;/li&gt;
-&lt;li&gt;全面支持动态绑定&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;安全性
-&lt;ul&gt;
-&lt;li&gt;不支持指针，一切对内存的访问都必须通过实例变量来实现&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;可靠性&lt;/li&gt;
-&lt;li&gt;跨平台性
-&lt;ul&gt;
-&lt;li&gt;可以运行在各种平台上&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;支持多线程
-&lt;ul&gt;
-&lt;li&gt;并发执行多个任务，提升执行效率&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;支持网络编程（Java语言诞生就是为了简化网络编程而设计的）&lt;/li&gt;
-&lt;li&gt;编译与解释并存&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;与C++的区别&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;都面向对象，实现了封装、继承和多态，但是Java是类不能多重继承（接口可以），C++可以&lt;/li&gt;
-&lt;li&gt;Java不提供指针访问内存，程序内存更加安全&lt;/li&gt;
-&lt;li&gt;Java提供了自动内存管理垃圾回收机制，程序员不需要手动释放&lt;/li&gt;
-&lt;li&gt;Java中没有结束符&#39;\0&amp;rsquo;而C语言有&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;import java 和 javax区别&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;以前javaAPI必需的是java开头的包，javax只是拓展API&lt;/li&gt;
-&lt;li&gt;后来javax逐渐拓展为javaAPI的组成部分，但移植麻烦，最终成为标准API的一部分&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;jdkjava-development-kit&#34;&gt;JDK（Java Development Kit）&lt;/h3&gt;
-&lt;p&gt;Java开发环境&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;编译器&lt;/li&gt;
-&lt;li&gt;运行工具&lt;/li&gt;
-&lt;li&gt;文档生成工具&lt;/li&gt;
-&lt;li&gt;打包工具&lt;/li&gt;
-&lt;li&gt;JRE（Java Runtime Environment）运行环境&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Java程序编译&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;javac编译源文件&lt;/li&gt;
-&lt;li&gt;生成.class字节码文件&lt;/li&gt;
-&lt;li&gt;java虚拟机解释执行&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;JVM虚拟机&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;针对不同的操作系统有特定的实现，使用相同的字节码，给出相应的结果&lt;/li&gt;
-&lt;li&gt;解决了传统解释型语言执行效率低的问题，又保留了其可移植的特性&lt;/li&gt;
-&lt;li&gt;引进了JIT编译器，运行时编译，完成第一次编译后，将机器码保存下来，下次直接使用（解决解释器逐行解释执行效率低与热点代码经常被调用的问题）&lt;/li&gt;
-&lt;li&gt;根据代码每次执行情况做一些优化，执行次数越多，速度越快&lt;/li&gt;
-&lt;li&gt;JDK9引入了AOT编译模式，将字节吗直接编译成机器码，避免了JIT预热等方面的开销（但编译质量相对较差），JDK支持分层编译和AOT协同使用&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Oracle JDK 与 Open JDK区别&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Open JDK是一个参考模型，完全开源，而Oracle JDK是Open JDK的一个实现，并不完全开源&lt;/li&gt;
-&lt;li&gt;Oracle JDK相对更稳定，有更多的类和错误修复&lt;/li&gt;
-&lt;li&gt;Oracle JDK提供了更好的性能&lt;/li&gt;
-&lt;li&gt;Oracle不会为即将发布的版本提供长期支持&lt;/li&gt;
-&lt;li&gt;Oracle JDK根据二进制代码许可协议获得许可，Open JDK根据GPL v2获得许可&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;java编程基础&#34;&gt;Java编程基础&lt;/h2&gt;
-&lt;h3 id=&#34;基本语法&#34;&gt;基本语法&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;HelloWorld&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;c1&#34;&gt;// 定义一个字符串变量
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;end&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;!&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello World&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;end&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;功能性语句和结构性语句组成  结构性语句主要是为了承载功能性语句&lt;/li&gt;
-&lt;li&gt;严格区分大小写的&lt;/li&gt;
-&lt;li&gt;需要注意层次清晰规范&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;书写规范&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;包名：不使用大写的英文字母&lt;/li&gt;
-&lt;li&gt;类名和接口名：首字母大写&lt;/li&gt;
-&lt;li&gt;常量：英文字母大写 单词之间使用下划线分割&lt;/li&gt;
-&lt;li&gt;变量名和方法名：驼峰命名&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;注释&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;单行注释&lt;/li&gt;
-&lt;li&gt;多行注释
-&lt;ul&gt;
-&lt;li&gt;文档注释，一般写在方法或类上&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;数据类型&#34;&gt;数据类型&lt;/h3&gt;
-&lt;p&gt;Java要确定每种基本类型所占存储空间的大小，并不随着机器硬件架构的变化而变化，因此更具备可移植性。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;整型
-&lt;ul&gt;
-&lt;li&gt;byte 8位&lt;/li&gt;
-&lt;li&gt;short 16位&lt;/li&gt;
-&lt;li&gt;int 32位&lt;/li&gt;
-&lt;li&gt;long 64位&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;浮点数
-&lt;ul&gt;
-&lt;li&gt;float 32位 +f&lt;/li&gt;
-&lt;li&gt;double 64位 +d&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;字符（相当于一个整型ASCII值，可参加表达式运算）
-&lt;ul&gt;
-&lt;li&gt;char 16位，2个字节&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;字符串（代表一个地址值）
-&lt;ul&gt;
-&lt;li&gt;String&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;布尔常量
-&lt;ul&gt;
-&lt;li&gt;boolean
-&lt;ul&gt;
-&lt;li&gt;true&lt;/li&gt;
-&lt;li&gt;false&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;变量&#34;&gt;变量&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;程序运行期间会产生一些临时数据，保存在一些内存单元中，用一个标识符来表示，称之为变量&lt;/li&gt;
-&lt;li&gt;声明变量时候要指定变量的数据类型 赋值时候需要相互匹配&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;类型转换&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;自动类型转换
-&lt;ul&gt;
-&lt;li&gt;两种数据彼此兼容&lt;/li&gt;
-&lt;li&gt;目标类型的取值范围大于源类型取值范围&lt;/li&gt;
-&lt;li&gt;例如：byte类型转换至short, int, double等&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;强制类型转换
-&lt;ul&gt;
-&lt;li&gt;两种类型彼此不兼容&lt;/li&gt;
-&lt;li&gt;目标类型的取值范围小于源类型&lt;/li&gt;
-&lt;li&gt;会造成精度丢失&lt;/li&gt;
-&lt;li&gt;格式：目标类型 变量 = （目标类型）值&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;作用域&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;变量需要在作用范围内才可以被使用&lt;/li&gt;
-&lt;li&gt;一般定义在某一对大括号中&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;运算符&#34;&gt;运算符&lt;/h3&gt;
-&lt;p&gt;算数运算符&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;+&lt;/li&gt;
-&lt;li&gt;-&lt;/li&gt;
-&lt;li&gt;*&lt;/li&gt;
-&lt;li&gt;/ 整数相除为整,有小数参与则为小数&lt;/li&gt;
-&lt;li&gt;% 正负结果取决于左边（被模数）&lt;/li&gt;
-&lt;li&gt;++ 算数符号在前先自增&lt;/li&gt;
-&lt;li&gt;&amp;ndash; 算数符号在前先自减&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;赋值运算符（会自动完成强制类型转换）&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;=&lt;/li&gt;
-&lt;li&gt;+=&lt;/li&gt;
-&lt;li&gt;-=&lt;/li&gt;
-&lt;li&gt;*=&lt;/li&gt;
-&lt;li&gt;/=&lt;/li&gt;
-&lt;li&gt;%=&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;比较运算符&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;==&lt;/li&gt;
-&lt;li&gt;!=&lt;/li&gt;
-&lt;li&gt;&amp;lt; &amp;gt;&lt;/li&gt;
-&lt;li&gt;&amp;lt;= &amp;gt;=&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;逻辑运算符（用于布尔运算，结果仍为布尔型）&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&amp;amp; 与&lt;/li&gt;
-&lt;li&gt;| 或&lt;/li&gt;
-&lt;li&gt;^ 异或&lt;/li&gt;
-&lt;li&gt;! 非&lt;/li&gt;
-&lt;li&gt;&amp;amp;&amp;amp; 短路与&lt;/li&gt;
-&lt;li&gt;|| 短路或&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;运算符优先级&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;. [] ()&lt;/li&gt;
-&lt;li&gt;++ - - ~ !&lt;/li&gt;
-&lt;li&gt;* / %&lt;/li&gt;
-&lt;li&gt;+ -&lt;/li&gt;
-&lt;li&gt;&amp;laquo; &amp;raquo; &amp;raquo;&amp;gt;&lt;/li&gt;
-&lt;li&gt;&amp;lt; &amp;gt; &amp;lt;= &amp;gt;=&lt;/li&gt;
-&lt;li&gt;== !=&lt;/li&gt;
-&lt;li&gt;&amp;amp;&lt;/li&gt;
-&lt;li&gt;^&lt;/li&gt;
-&lt;li&gt;|&lt;/li&gt;
-&lt;li&gt;&amp;amp;&amp;amp;&lt;/li&gt;
-&lt;li&gt;||&lt;/li&gt;
-&lt;li&gt;?&lt;/li&gt;
-&lt;li&gt;赋值运算符&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;选择结构&#34;&gt;选择结构&lt;/h3&gt;
-&lt;p&gt;if&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;if&lt;/li&gt;
-&lt;li&gt;if&amp;hellip;else&lt;/li&gt;
-&lt;li&gt;if&amp;hellip;else if&amp;hellip;else&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;condition1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;statement1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;statement2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;statement3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;switch&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;语句类型
-&lt;ul&gt;
-&lt;li&gt;byte&lt;/li&gt;
-&lt;li&gt;short&lt;/li&gt;
-&lt;li&gt;char&lt;/li&gt;
-&lt;li&gt;int&lt;/li&gt;
-&lt;li&gt;枚举&lt;/li&gt;
-&lt;li&gt;String&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;k&#34;&gt;switch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;语句&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;statement1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;break&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-
-  &lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;statement2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;continue&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;nl&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;  default:&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;statement3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;循环结构&#34;&gt;循环结构&lt;/h3&gt;
-&lt;p&gt;while循环&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;while&lt;/li&gt;
-&lt;li&gt;do&amp;hellip;while&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// while循环
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;condition&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;statement&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;// do...while循环
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;statement&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;condition&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;for循环&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;初始化&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;条件&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;操作表达式&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;statement&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;方法&#34;&gt;方法&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;声明方法&lt;/li&gt;
-&lt;li&gt;重载方法：允许在一个程序中定义多个名称相同的方法，但是参数类型/个数必须不同&lt;/li&gt;
-&lt;li&gt;调用方法&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 声明方法的基本语法
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;修饰符&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;返回值类型&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;方法名&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;参数类型&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;参数1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;...])&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;执行语句&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;返回值&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;// 示例
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;printHello&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello World!&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;数组&#34;&gt;数组&lt;/h3&gt;
-&lt;p&gt;一组数据的集合&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;可以存放任意类型的元素&lt;/li&gt;
-&lt;li&gt;同个数组类型必须一致&lt;/li&gt;
-&lt;li&gt;引用为null时会发生空指针异常&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;数组元素默认值&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;byte, short, int, long - 0&lt;/li&gt;
-&lt;li&gt;float, double - 0.0&lt;/li&gt;
-&lt;li&gt;char - 空字符&#39;\u0000&#39;&lt;/li&gt;
-&lt;li&gt;boolean - false&lt;/li&gt;
-&lt;li&gt;引用数据类型 - null&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 定义数组
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;];&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;// 静态初始化
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;元素&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;元素&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,...}&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;// 静态初始化简便写法（建议）
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;元素&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;元素&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,...}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;遍历数组&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;arr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;};&lt;/span&gt;
-
-&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;arr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;length&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;c1&#34;&gt;// 通过index来访问元素
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;arr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]);&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;多维数组&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 定义一个m*n的多维数组
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[][]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;arr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;];&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;引用&#34;&gt;引用&lt;/h3&gt;
-&lt;p&gt;Java是按值传递参数，在将一个参数传入一个方法时，本质上是将对象的地址以值的方式传递到形参中&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;方法得到的是所有参数值的一个拷贝，不能修改传递给它的任何参数变量内容&lt;/li&gt;
-&lt;li&gt;对象引用作为参数则指向通过同一个对象（如数组），外部引用对象的改变会反映到所对应的对象上&lt;/li&gt;
-&lt;li&gt;一个方法可以改变一个对象参数的状态&lt;/li&gt;
-&lt;li&gt;一个方法不能让对象参数引用一个新的对象&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       

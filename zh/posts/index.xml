@@ -80,6 +80,18 @@
     </item>
     
     <item>
+      <title>COMP7801 Topic 2 Spatial Data Management</title>
+      <link>https://www.pseudoyu.com/zh/2021/01/30/comp7801_topic2/</link>
+      <pubDate>Sat, 30 Jan 2021 01:18:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/01/30/comp7801_topic2/</guid>
+      <description>Spatial Data Management Concepts Spatial Data
+ Location data  Check-in service Online Maps Location-based services   Location tracking Traffic Data  Spatial Databases
+ PostgreSQL with PostGIS Neo4J-spatial HadoopGIS Ingres GeoMesa  Spatial Data Management
+ Spatial Database Systems  Manage large collections of multidimensional objects (2D/3D)   A spatial object  Contains (at least) one spatial attributes that describes its location and/or geometry   A spatial relation  Is an organized collection of spatial objects of the same entity    Spatial Data Representation</description>
+    </item>
+    
+    <item>
       <title>COMP7103 Topic 1 Introduction</title>
       <link>https://www.pseudoyu.com/zh/2021/01/28/comp7103_topic1/</link>
       <pubDate>Thu, 28 Jan 2021 01:18:17 +0800</pubDate>
@@ -178,19 +190,6 @@
       
       <guid>https://www.pseudoyu.com/zh/2020/11/20/java_note_basic/</guid>
       <description>Java基础 Java特性 简单性 丢弃了C++中运算符重载、多重继承等 不使用指针而是使用引用 自动垃圾回收机制（不用开发者进行内存管理） 面向对象 提</description>
-    </item>
-    
-    <item>
-      <title>xDeepFM for Recommender Systems</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/11/comp7404_group_project/</link>
-      <pubDate>Wed, 11 Nov 2020 16:30:25 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/11/comp7404_group_project/</guid>
-      <description>xDeepFM for Recommender Systems eXtreme Deep Factorization Machine (xDeepFM)
-This paper proposes a novel Compressed Interaction Network (CIN), which aims to generate feature interactions in an explicit fashion and at the vector-wise level.
-Github Repository GitHub: xDeepFM_for_Recommender_Systems
-Video Demo YouTube | Google Drive
-Datasets  Criteo Dataset. It is a famous industry benchmarking dataset for developing models predicting ad click-through rate, and is publicly accessible. Given a user and the page he is visiting, the goal is to predict the probability that he will clik on a given ad  Running Environment I strongly recommmend that you use Anaconda to implement this project.</description>
     </item>
     
   </channel>

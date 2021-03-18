@@ -6,7 +6,19 @@
     <description>Recent content in notes on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 28 Jan 2021 01:18:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Jan 2021 01:18:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>COMP7801 Topic 2 Spatial Data Management</title>
+      <link>https://www.pseudoyu.com/zh/2021/01/30/comp7801_topic2/</link>
+      <pubDate>Sat, 30 Jan 2021 01:18:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/01/30/comp7801_topic2/</guid>
+      <description>Spatial Data Management Concepts Spatial Data
+ Location data  Check-in service Online Maps Location-based services   Location tracking Traffic Data  Spatial Databases
+ PostgreSQL with PostGIS Neo4J-spatial HadoopGIS Ingres GeoMesa  Spatial Data Management
+ Spatial Database Systems  Manage large collections of multidimensional objects (2D/3D)   A spatial object  Contains (at least) one spatial attributes that describes its location and/or geometry   A spatial relation  Is an organized collection of spatial objects of the same entity    Spatial Data Representation</description>
+    </item>
+    
     <item>
       <title>COMP7103 Topic 1 Introduction</title>
       <link>https://www.pseudoyu.com/zh/2021/01/28/comp7103_topic1/</link>
@@ -204,22 +216,6 @@ Apple iPad Air product line is mainly targeted to educators/students, staffs and
       <description>ICOM6012 Internet Infrastructure Technologies Topic 1 Overview Internet&amp;rsquo;s Birthday: Sept. 2 or Oct. 29, 1969.
  ARPANET (1969 -)  TCP protocol in 1974 &amp;ldquo;Internet = Internetworking&amp;rdquo;   NSFNET (1986 -) The Internet (late 1980s)  Some Interesting Topics about Internet (More than Technical)
  Who controls the Internet? What is Net Neutrality? A TikTok Ban Is Overdue Zoom’s stock surges 41% after earnings beat, adding over $37 billion in market cap  Evolution of Computers</description>
-    </item>
-    
-    <item>
-      <title>Puma Goes Omni Case Study</title>
-      <link>https://www.pseudoyu.com/zh/2020/09/08/ecom6013_discussion_topic1/</link>
-      <pubDate>Tue, 08 Sep 2020 23:30:19 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/09/08/ecom6013_discussion_topic1/</guid>
-      <description>Puma Goes Omni About Puma Puma Official Website
-A Fancy Presentation
-Slogan: &amp;ldquo;Run The Streets. Do You.&amp;rdquo;
-The third largest sportswear manufacture in the world. (2018)
-The company was founded in 1948 by Rudolf Dassler.
-Building a Centralize Website Restructuring Strategy
- Replacing multiple e-commerce sites on different platform Unifying content and product strategies Building multiple teams in different regions, separate tasks  Content Management System (CMS)
-&amp;ldquo;Database software program specifically designed to manage structures, unstructured data and objects in a Website environment.</description>
     </item>
     
   </channel>

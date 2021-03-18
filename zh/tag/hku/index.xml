@@ -6,7 +6,19 @@
     <description>Recent content in hku on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 28 Jan 2021 01:18:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/hku/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Jan 2021 01:18:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/hku/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>COMP7801 Topic 2 Spatial Data Management</title>
+      <link>https://www.pseudoyu.com/zh/2021/01/30/comp7801_topic2/</link>
+      <pubDate>Sat, 30 Jan 2021 01:18:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/01/30/comp7801_topic2/</guid>
+      <description>Spatial Data Management Concepts Spatial Data
+ Location data  Check-in service Online Maps Location-based services   Location tracking Traffic Data  Spatial Databases
+ PostgreSQL with PostGIS Neo4J-spatial HadoopGIS Ingres GeoMesa  Spatial Data Management
+ Spatial Database Systems  Manage large collections of multidimensional objects (2D/3D)   A spatial object  Contains (at least) one spatial attributes that describes its location and/or geometry   A spatial relation  Is an organized collection of spatial objects of the same entity    Spatial Data Representation</description>
+    </item>
+    
     <item>
       <title>COMP7103 Topic 1 Introduction</title>
       <link>https://www.pseudoyu.com/zh/2021/01/28/comp7103_topic1/</link>
@@ -206,17 +218,6 @@ Apple iPad Air product line is mainly targeted to educators/students, staffs and
       <guid>https://www.pseudoyu.com/zh/2020/09/16/comp7404_topic1/</guid>
       <description>COMP7404 Computational Intelligence and Machine Learning Topic 1 Solving Problems by Searching Types of Search
  Uninformed Search (Know nothing about the problem except definition) Informed Search (know something more like how close to the goal) Local Search (Randomly initilize a state and make it better, e.g. Deep Learning) Constraint Satisfaction Problems (Know more about the problem) Adversarial Search (have an opponent, e.g. chess, star craft game)  Is Search the same as Unsupervised/Supervised Learning?</description>
-    </item>
-    
-    <item>
-      <title>ICOM6012 Topic 1 Overview</title>
-      <link>https://www.pseudoyu.com/zh/2020/09/09/icom6012_topic1/</link>
-      <pubDate>Wed, 09 Sep 2020 20:22:09 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/09/09/icom6012_topic1/</guid>
-      <description>ICOM6012 Internet Infrastructure Technologies Topic 1 Overview Internet&amp;rsquo;s Birthday: Sept. 2 or Oct. 29, 1969.
- ARPANET (1969 -)  TCP protocol in 1974 &amp;ldquo;Internet = Internetworking&amp;rdquo;   NSFNET (1986 -) The Internet (late 1980s)  Some Interesting Topics about Internet (More than Technical)
- Who controls the Internet? What is Net Neutrality? A TikTok Ban Is Overdue Zoom’s stock surges 41% after earnings beat, adding over $37 billion in market cap  Evolution of Computers</description>
     </item>
     
   </channel>

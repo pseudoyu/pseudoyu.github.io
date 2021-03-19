@@ -518,7 +518,7 @@ visited node on heap Q
 Q =m4(sqrt(2)), m1(sqrt(5)), M3(sqrt(5)), M3(sqrt(8)), m2(3), 	m5(sqrt(13)), m5(sqrt(17))
 
 Step 4: get closest entry (top element of Q):
-m4( 2). Visit node m4. m4 is a leaf node, so update NN if some object in m4 is closer than the current NN:
+m4(sqrt(2)). Visit node m4. m4 is a leaf node, so update NN if some object in m4 is closer than the current NN:
 oNN = k, dist(q,oNN)= sqrt(2)
 Q =m1(sqrt(5)), M3(sqrt(5)), M3(sqrt(8)), m2(3), 	m5(sqrt(13)), m5(sqrt(17))
 

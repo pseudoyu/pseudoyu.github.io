@@ -6,7 +6,19 @@
     <description>Recent content in Posts on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 20 Feb 2021 05:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Feb 2021 01:18:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>COMP7801 Topic 2 Spatial Data Management</title>
+      <link>https://www.pseudoyu.com/zh/2021/02/27/comp7801_topic2/</link>
+      <pubDate>Sat, 27 Feb 2021 01:18:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/02/27/comp7801_topic2/</guid>
+      <description>Spatial Data Management Concepts Spatial Data
+ Location data  Check-in service Online Maps Location-based services   Location tracking Traffic Data  Spatial Databases
+ PostgreSQL with PostGIS Neo4J-spatial HadoopGIS Ingres GeoMesa  Spatial Data Management
+ Spatial Database Systems  Manage large collections of multidimensional objects (2D/3D)   A spatial object  Contains (at least) one spatial attributes that describes its location and/or geometry   A spatial relation  Is an organized collection of spatial objects of the same entity    Spatial Data Representation</description>
+    </item>
+    
     <item>
       <title>Blockchain学习 - 区块链安全与隐私</title>
       <link>https://www.pseudoyu.com/zh/2021/02/20/blockchain_note_security_privacy/</link>
@@ -77,18 +89,6 @@
       
       <guid>https://www.pseudoyu.com/zh/2021/02/11/learning_plan_okr/</guid>
       <description>用一句话形容理想情况下，自己想要达到的状态 具体目标范围：提升编程技术能力 时间周期：2个月 描述：我想要成为一名具备过硬的编程能力的开发者，并对</description>
-    </item>
-    
-    <item>
-      <title>COMP7801 Topic 2 Spatial Data Management</title>
-      <link>https://www.pseudoyu.com/zh/2021/01/30/comp7801_topic2/</link>
-      <pubDate>Sat, 30 Jan 2021 01:18:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2021/01/30/comp7801_topic2/</guid>
-      <description>Spatial Data Management Concepts Spatial Data
- Location data  Check-in service Online Maps Location-based services   Location tracking Traffic Data  Spatial Databases
- PostgreSQL with PostGIS Neo4J-spatial HadoopGIS Ingres GeoMesa  Spatial Data Management
- Spatial Database Systems  Manage large collections of multidimensional objects (2D/3D)   A spatial object  Contains (at least) one spatial attributes that describes its location and/or geometry   A spatial relation  Is an organized collection of spatial objects of the same entity    Spatial Data Representation</description>
     </item>
     
     <item>

@@ -6,13 +6,13 @@
     <description>Recent content in database on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 30 Jan 2021 01:18:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/database/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Feb 2021 01:18:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/database/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>COMP7801 Topic 2 Spatial Data Management</title>
-      <link>https://www.pseudoyu.com/en/2021/01/30/comp7801_topic2/</link>
-      <pubDate>Sat, 30 Jan 2021 01:18:17 +0800</pubDate>
+      <link>https://www.pseudoyu.com/en/2021/02/27/comp7801_topic2/</link>
+      <pubDate>Sat, 27 Feb 2021 01:18:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/01/30/comp7801_topic2/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/02/27/comp7801_topic2/</guid>
       <description>Spatial Data Management Concepts Spatial Data
  Location data  Check-in service Online Maps Location-based services   Location tracking Traffic Data  Spatial Databases
  PostgreSQL with PostGIS Neo4J-spatial HadoopGIS Ingres GeoMesa  Spatial Data Management

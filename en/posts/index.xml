@@ -92,6 +92,16 @@
     </item>
     
     <item>
+      <title>COMP7801 Topic 1a Relational Databases</title>
+      <link>https://www.pseudoyu.com/en/2021/01/30/comp7801_topic1a/</link>
+      <pubDate>Sat, 30 Jan 2021 01:18:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2021/01/30/comp7801_topic1a/</guid>
+      <description>Relational Databases Structure of Relational Databases Basic structure  Given sets D1, D2, …. Dn A relation r is a subset of D1 x D2 x … x Dn A relation is a set of n-tuples (a1, a2, …, an) where each ai Di  Example
+ if  customer-name = {Jones, Smith, Curry, Lindsay} customer-street = {Main, North, Park} customer-city = {Harrison, Rye, Pittsfield}   Then  r = {(Jones, Main, Harrison), (Smith, North, Rye), (Curry, North, Rye), (Lindsay, Park, Pittsfield)} is a relation over customer-name x customer-street x customer-city    Attribute Types  Each attribute of a relation has a name The set of allowed values for each attribute is called the domain of the attribute  Relation Schema  A1, A2, …, An are attributes R = (A1, A2, …, An ) is a relation schema  E.</description>
+    </item>
+    
+    <item>
       <title>COMP7103 Topic 1 Introduction</title>
       <link>https://www.pseudoyu.com/en/2021/01/28/comp7103_topic1/</link>
       <pubDate>Thu, 28 Jan 2021 01:18:17 +0800</pubDate>
@@ -181,15 +191,6 @@
       
       <guid>https://www.pseudoyu.com/en/2020/11/23/java_note_oop/</guid>
       <description>Java面向对象 特性 封装性：将对象的属性和行为封装起来，不需要让外界知道具体的实现细节 继承性：无需重新编写原有类的情况下，新类可拥有原有类的</description>
-    </item>
-    
-    <item>
-      <title>Java学习 - 基础</title>
-      <link>https://www.pseudoyu.com/en/2020/11/20/java_note_basic/</link>
-      <pubDate>Fri, 20 Nov 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/11/20/java_note_basic/</guid>
-      <description>Java基础 Java特性 简单性 丢弃了C++中运算符重载、多重继承等 不使用指针而是使用引用 自动垃圾回收机制（不用开发者进行内存管理） 面向对象 提</description>
     </item>
     
   </channel>

@@ -20,6 +20,16 @@
     </item>
     
     <item>
+      <title>COMP7801 Topic 1a Relational Databases</title>
+      <link>https://www.pseudoyu.com/zh/2021/01/30/comp7801_topic1a/</link>
+      <pubDate>Sat, 30 Jan 2021 01:18:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/01/30/comp7801_topic1a/</guid>
+      <description>Relational Databases Structure of Relational Databases Basic structure  Given sets D1, D2, …. Dn A relation r is a subset of D1 x D2 x … x Dn A relation is a set of n-tuples (a1, a2, …, an) where each ai Di  Example
+ if  customer-name = {Jones, Smith, Curry, Lindsay} customer-street = {Main, North, Park} customer-city = {Harrison, Rye, Pittsfield}   Then  r = {(Jones, Main, Harrison), (Smith, North, Rye), (Curry, North, Rye), (Lindsay, Park, Pittsfield)} is a relation over customer-name x customer-street x customer-city    Attribute Types  Each attribute of a relation has a name The set of allowed values for each attribute is called the domain of the attribute  Relation Schema  A1, A2, …, An are attributes R = (A1, A2, …, An ) is a relation schema  E.</description>
+    </item>
+    
+    <item>
       <title>COMP7103 Topic 1 Introduction</title>
       <link>https://www.pseudoyu.com/zh/2021/01/28/comp7103_topic1/</link>
       <pubDate>Thu, 28 Jan 2021 01:18:17 +0800</pubDate>
@@ -205,17 +215,6 @@ Apple iPad Air product line is mainly targeted to educators/students, staffs and
       <guid>https://www.pseudoyu.com/zh/2020/09/16/comp7404_topic1/</guid>
       <description>COMP7404 Computational Intelligence and Machine Learning Topic 1 Solving Problems by Searching Types of Search
  Uninformed Search (Know nothing about the problem except definition) Informed Search (know something more like how close to the goal) Local Search (Randomly initilize a state and make it better, e.g. Deep Learning) Constraint Satisfaction Problems (Know more about the problem) Adversarial Search (have an opponent, e.g. chess, star craft game)  Is Search the same as Unsupervised/Supervised Learning?</description>
-    </item>
-    
-    <item>
-      <title>ICOM6012 Topic 1 Overview</title>
-      <link>https://www.pseudoyu.com/zh/2020/09/09/icom6012_topic1/</link>
-      <pubDate>Wed, 09 Sep 2020 20:22:09 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/09/09/icom6012_topic1/</guid>
-      <description>ICOM6012 Internet Infrastructure Technologies Topic 1 Overview Internet&amp;rsquo;s Birthday: Sept. 2 or Oct. 29, 1969.
- ARPANET (1969 -)  TCP protocol in 1974 &amp;ldquo;Internet = Internetworking&amp;rdquo;   NSFNET (1986 -) The Internet (late 1980s)  Some Interesting Topics about Internet (More than Technical)
- Who controls the Internet? What is Net Neutrality? A TikTok Ban Is Overdue Zoom’s stock surges 41% after earnings beat, adding over $37 billion in market cap  Evolution of Computers</description>
     </item>
     
   </channel>

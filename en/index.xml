@@ -1865,6 +1865,394 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
     </item>
     
     <item>
+      <title>COMP7801 Topic 1a Relational Databases</title>
+      <link>https://www.pseudoyu.com/en/2021/01/30/comp7801_topic1a/</link>
+      <pubDate>Sat, 30 Jan 2021 01:18:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2021/01/30/comp7801_topic1a/</guid>
+      
+        <description>&lt;h2 id=&#34;relational-databases&#34;&gt;Relational Databases&lt;/h2&gt;
+&lt;h3 id=&#34;structure-of-relational-databases&#34;&gt;Structure of Relational Databases&lt;/h3&gt;
+&lt;h4 id=&#34;basic-structure&#34;&gt;Basic structure&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Given sets D1, D2, …. Dn&lt;/li&gt;
+&lt;li&gt;A relation r is a subset of D1 x  D2  x … x Dn&lt;/li&gt;
+&lt;li&gt;A relation is a set of n-tuples (a1, a2, …, an) where each ai  &lt;!-- raw HTML omitted --&gt; Di&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;if
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;customer-name = {Jones, Smith, Curry, Lindsay}&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;customer-street = {Main, North, Park}&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;customer-city = {Harrison, Rye, Pittsfield}&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Then
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;r = {(Jones, Main, Harrison), (Smith, North, Rye), (Curry, North, Rye), (Lindsay, Park, Pittsfield)}&lt;/code&gt; is a relation over customer-name x customer-street x customer-city&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;attribute-types&#34;&gt;Attribute Types&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Each attribute of a relation has a name&lt;/li&gt;
+&lt;li&gt;The set of allowed values for each attribute is called the domain of the attribute&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;relation-schema&#34;&gt;Relation Schema&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;A1, A2, …, An are attributes&lt;/li&gt;
+&lt;li&gt;R = (A1, A2, …, An ) is a relation schema
+&lt;ul&gt;
+&lt;li&gt;E.g. &lt;code&gt;Account-schema = (account-number, branch-name, balance)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;r(R) is a relation on the relation schema R
+&lt;ul&gt;
+&lt;li&gt;E.g. &lt;code&gt;customer(Customer-schema)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;relation-instance&#34;&gt;Relation Instance&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;The current values (relation instance) of a relation are specified by a table&lt;/li&gt;
+&lt;li&gt;An element t of r is a tuple, represented by a row in a table&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/relation_instance.png&#34; alt=&#34;relation_instance&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;database&#34;&gt;Database&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A database consists of multiple relations which are inter-related&lt;/li&gt;
+&lt;li&gt;Information about an enterprise is broken up into parts, with each relation storing one part of the information&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/database_overview.png&#34; alt=&#34;database_overview&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;query-language&#34;&gt;Query language&lt;/h4&gt;
+&lt;p&gt;Language in which user requests information from the database&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Categories
+&lt;ul&gt;
+&lt;li&gt;procedural&lt;/li&gt;
+&lt;li&gt;non-procedural&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Pure languages
+&lt;ul&gt;
+&lt;li&gt;Relational Algebra
+&lt;ul&gt;
+&lt;li&gt;The operators take one or more relations as inputs and give a new relation as a result&lt;/li&gt;
+&lt;li&gt;Operations
+&lt;ul&gt;
+&lt;li&gt;select&lt;/li&gt;
+&lt;li&gt;project&lt;/li&gt;
+&lt;li&gt;union&lt;/li&gt;
+&lt;li&gt;set-Intersection&lt;/li&gt;
+&lt;li&gt;set difference&lt;/li&gt;
+&lt;li&gt;cartesian product&lt;/li&gt;
+&lt;li&gt;rename&lt;/li&gt;
+&lt;li&gt;Natural Join&lt;/li&gt;
+&lt;li&gt;Aggregate Functions
+&lt;ul&gt;
+&lt;li&gt;avg:  average value&lt;/li&gt;
+&lt;li&gt;min:  minimum value&lt;/li&gt;
+&lt;li&gt;max:  maximum value&lt;/li&gt;
+&lt;li&gt;sum:  sum of values&lt;/li&gt;
+&lt;li&gt;count:  number of values&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Relational Calculus&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;SQL&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SQL is based on set and relational operations with certain modifications and enhancements&lt;/li&gt;
+&lt;li&gt;A typical SQL query has the form
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;select A1, A2, ..., Anfrom r1, r2, ..., rm where P&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The result of an SQL query is a multiset of tuples&lt;/li&gt;
+&lt;li&gt;Clauses
+&lt;ul&gt;
+&lt;li&gt;select
+&lt;ul&gt;
+&lt;li&gt;To force the elimination of duplicates, insert the keyword &lt;code&gt;distinct&lt;/code&gt; after &lt;code&gt;select&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;where
+&lt;ul&gt;
+&lt;li&gt;The where clause specifies conditions that the result must satisfy
+&lt;ul&gt;
+&lt;li&gt;Comparison results can be combined using the logical connectives and, or, and not&lt;/li&gt;
+&lt;li&gt;Comparisons can be applied to results of arithmetic expressions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;from
+&lt;ul&gt;
+&lt;li&gt;The from clause lists the relations involved in the query&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Aggregate Functions
+&lt;ul&gt;
+&lt;li&gt;Group By
+&lt;ul&gt;
+&lt;li&gt;Find the number of depositors for each branch
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;select branch-name,count (distinct customer-name)from depositor,account where depositor.account-number = account.account-numbergroup by branch-name&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Having
+&lt;ul&gt;
+&lt;li&gt;formation of groups whereas predicates in the where clause are applied before forming groups&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Query Evaluation&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Basic operations
+&lt;ul&gt;
+&lt;li&gt;Selections&lt;/li&gt;
+&lt;li&gt;Joins&lt;/li&gt;
+&lt;li&gt;Other operations (projection, aggregation)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Transformation of queries into a tree of operations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Query Optimizationh&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Many equivalent expressions to the original query can be derived&lt;/li&gt;
+&lt;li&gt;The query optimizer uses statistical data and appropriate algorithms to compute an expression of low evaluation cost&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;storage-of-databases&#34;&gt;Storage of databases&lt;/h3&gt;
+&lt;h4 id=&#34;physical-storage-media&#34;&gt;Physical Storage Media&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Cache
+&lt;ul&gt;
+&lt;li&gt;fastest and most costly form of storage&lt;/li&gt;
+&lt;li&gt;volatile&lt;/li&gt;
+&lt;li&gt;managed by the computer system hardware&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Main memory
+&lt;ul&gt;
+&lt;li&gt;fast access&lt;/li&gt;
+&lt;li&gt;generally too small (or too expensive) to store the entire database&lt;/li&gt;
+&lt;li&gt;Volatile
+&lt;ul&gt;
+&lt;li&gt;contents of main memory are usually lost if a power failure or system crash occurs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Magnetic-disk
+&lt;ul&gt;
+&lt;li&gt;Data is stored on spinning disk, and read/written magnetically&lt;/li&gt;
+&lt;li&gt;Primary medium for the long-term storage of data&lt;/li&gt;
+&lt;li&gt;typically stores entire database&lt;/li&gt;
+&lt;li&gt;Data must be moved from disk to main memory for access, and written back for storage
+&lt;ul&gt;
+&lt;li&gt;Much slower access than main memory&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;direct-access –  possible to read data on disk in any order, unlike magnetic tape&lt;/li&gt;
+&lt;li&gt;Capacities range up to several TB currently&lt;/li&gt;
+&lt;li&gt;Survives power failures and system crashes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;storage-hierarchy&#34;&gt;Storage Hierarchy&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Primary storage
+&lt;ul&gt;
+&lt;li&gt;Fastest media but volatile (cache, main memory).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Secondary storage&lt;/li&gt;
+&lt;li&gt;Next level in hierarchy, non-volatile, moderately fast access time
+&lt;ul&gt;
+&lt;li&gt;Also called on-line storage, E.g. flash memory, magnetic disks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Tertiary storage: lowest level in hierarchy, non-volatile, slow access time
+&lt;ul&gt;
+&lt;li&gt;Also called off-line storage, E.g. magnetic tape, optical storage&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/memory_hierarchy.png&#34; alt=&#34;memory_hierarchy&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;magnetic-disks&#34;&gt;Magnetic Disks&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Read-write head
+&lt;ul&gt;
+&lt;li&gt;Positioned very close to the platter surface (almost touching it)&lt;/li&gt;
+&lt;li&gt;Reads or writes magnetically encoded information.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Surface of platter divided into circular tracks
+&lt;ul&gt;
+&lt;li&gt;Over 16,000 tracks per platter on typical hard disks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Each track is divided into sectors
+&lt;ul&gt;
+&lt;li&gt;A sector is the smallest unit of data that can be read or written&lt;/li&gt;
+&lt;li&gt;Sector size typically 512 bytes&lt;/li&gt;
+&lt;li&gt;Typical sectors per track: 200 (on inner tracks) to 400 (on outer tracks)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;To read/write a sector
+&lt;ul&gt;
+&lt;li&gt;disk arm swings to position head on right track&lt;/li&gt;
+&lt;li&gt;platter spins continually; data is read/written as sector passes under head&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Head-disk assemblies
+&lt;ul&gt;
+&lt;li&gt;multiple disk platters on a single spindle (typically 2 to 4)&lt;/li&gt;
+&lt;li&gt;one head per platter, mounted on a common arm.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Cylinder i consists of ith track of all the platters&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/magnetic_hard_disk.png&#34; alt=&#34;magnetic_hard_disk&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;performance-measures-of-disks&#34;&gt;Performance Measures of Disks&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Access time – the time it takes from when a read or write request is issued to when data transfer begins
+&lt;ul&gt;
+&lt;li&gt;Seek time – time it takes to reposition the arm over the correct track
+&lt;ul&gt;
+&lt;li&gt;Average seek time is 1/2 the worst case seek time
+&lt;ul&gt;
+&lt;li&gt;Would be 1/3 if all tracks had the same number of sectors, and we ignore the time to start and stop arm movement&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;4 to 10 milliseconds on typical disks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Rotational latency – time it takes for the sector to be accessed to appear under the head
+&lt;ul&gt;
+&lt;li&gt;Average latency is 1/2 of the worst case latency&lt;/li&gt;
+&lt;li&gt;4 to 11 milliseconds on typical disks (5400 to 15000 r.p.m.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Data-transfer rate – the rate at which data can be retrieved from or stored to the disk
+&lt;ul&gt;
+&lt;li&gt;4 to 8 MB per second is typical&lt;/li&gt;
+&lt;li&gt;Multiple disks may share a controller, so rate that controller can handle is also important&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;optimization-of-disk-block-access&#34;&gt;Optimization of Disk-Block Access&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Block – a contiguous sequence of sectors from a single track
+&lt;ul&gt;
+&lt;li&gt;data is transferred between disk and main memory in blocks&lt;/li&gt;
+&lt;li&gt;sizes range from 512 bytes to several kilobytes
+&lt;ul&gt;
+&lt;li&gt;Smaller blocks: more transfers from disk&lt;/li&gt;
+&lt;li&gt;Larger blocks:  more space wasted due to partially filled blocks&lt;/li&gt;
+&lt;li&gt;Typical block sizes today range from 4 to 16 kilobytes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Disk-arm-scheduling algorithms order pending accesses to tracks so that disk arm movement is minimized&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;storage-access&#34;&gt;Storage Access&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;A database file is partitioned into fixed-length storage units called blocks.  Blocks are units of both storage allocation and data transfer. Typical size of a block ranges between 4Kb-16Kb&lt;/li&gt;
+&lt;li&gt;Database system seeks to minimize the number of block transfers between the disk and memory.  We can reduce the number of disk accesses by keeping as many blocks as possible in main memory&lt;/li&gt;
+&lt;li&gt;Buffer
+&lt;ul&gt;
+&lt;li&gt;portion of main memory available to store copies of disk blocks.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Buffer manager
+&lt;ul&gt;
+&lt;li&gt;subsystem responsible for allocating buffer space in main memory.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/storage_access.png&#34; alt=&#34;storage_access&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;buffer-manager&#34;&gt;Buffer manager&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Programs call on the buffer manager when they need a block from disk
+&lt;ul&gt;
+&lt;li&gt;If the block is already in the buffer, the requesting program is given the address of the block in main memory&lt;/li&gt;
+&lt;li&gt;If the block is not in the buffer
+&lt;ul&gt;
+&lt;li&gt;the buffer manager allocates space in the buffer for the block, replacing (throwing out) some other block, if required, to make space for the new block&lt;/li&gt;
+&lt;li&gt;The block that is thrown out is written back to disk only if it was modified since the most recent time that it was written to/fetched from the disk&lt;/li&gt;
+&lt;li&gt;Once space is allocated in the buffer, the buffer manager reads the block from the disk to the buffer, and passes the address of the block in main memory to requester&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Buffer-Replacement Policies&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Most operating systems replace the block least recently used (LRU strategy)&lt;/li&gt;
+&lt;li&gt;Idea behind LRU – use past pattern of block references as a predictor of future references. If a block has not been recently used, then it is unlikely that it will be used in the near future&lt;/li&gt;
+&lt;li&gt;This replacement policy is also used at different applications. A proxy server keeps in the most recently used web pages in a local cache. If a user requests again a page he has seen, it does not need to be downloaded again in the future&lt;/li&gt;
+&lt;li&gt;LRU works well for unpredicted access patterns&lt;/li&gt;
+&lt;li&gt;However, queries have well-defined access patterns (such as sequential scans), and a database system can use the information in a user’s query to predict future references&lt;/li&gt;
+&lt;li&gt;LRU can be a bad strategy for certain access patterns involving repeated scans of data. Mixed strategy with hints on replacement strategy provided by the query optimizer is preferable&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;file-organization&#34;&gt;File Organization&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;The database is stored as a collection of files. Each file is a sequence of records. A record is a sequence of fields&lt;/li&gt;
+&lt;li&gt;Each record has an address in the file, which is called record pointer or record id (simply rid)&lt;/li&gt;
+&lt;li&gt;A simple approach
+&lt;ul&gt;
+&lt;li&gt;assume record size is fixed&lt;/li&gt;
+&lt;li&gt;each file has records of one particular type only&lt;/li&gt;
+&lt;li&gt;different files are used for different relations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Organization of Records in Files&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Heap
+&lt;ul&gt;
+&lt;li&gt;a record can be placed anywhere in the file where there is space&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Sequential
+&lt;ul&gt;
+&lt;li&gt;store records in sequential order, based on the value of the search key of each record&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Hashing
+&lt;ul&gt;
+&lt;li&gt;a hash function computed on some attribute of each record; the result specifies in which block of the file the record should be placed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Records of each relation may be stored in a separate file. In a  clustered file organization  records of several different relations can be stored in the same file
+&lt;ul&gt;
+&lt;li&gt;Motivation: store related records on the same block to minimize I/O&lt;/li&gt;
+&lt;li&gt;However, not good for queries accessing only a few relations&lt;/li&gt;
+&lt;li&gt;In general, this representation is barely used&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>COMP7103 Topic 1 Introduction</title>
       <link>https://www.pseudoyu.com/en/2021/01/28/comp7103_topic1/</link>
       <pubDate>Thu, 28 Jan 2021 01:18:17 +0800</pubDate>
@@ -3900,384 +4288,6 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 创建集合并指定泛型为String
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ArrayList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ArrayList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;();&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Java学习 - 面向对象</title>
-      <link>https://www.pseudoyu.com/en/2020/11/23/java_note_oop/</link>
-      <pubDate>Mon, 23 Nov 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/11/23/java_note_oop/</guid>
-      
-        <description>&lt;h2 id=&#34;java面向对象&#34;&gt;Java面向对象&lt;/h2&gt;
-&lt;h3 id=&#34;特性&#34;&gt;特性&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;封装性：将对象的属性和行为封装起来，不需要让外界知道具体的实现细节&lt;/li&gt;
-&lt;li&gt;继承性：无需重新编写原有类的情况下，新类可拥有原有类的功能&lt;/li&gt;
-&lt;li&gt;多态性：一个类中定义的属性和方法被继承后，可以具有不同的数据类型和表现出不同的行为&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;面向对象与面向过程的区别&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;面向过程的性能比面向对象高，类的调用需要实例化、开销比较大，比较消耗资源。非根本原因，面向过程也需要分配内存，计算内存偏移量，Java性能差主要原因是它是半编译语言，最终的执行代码并不是可以直接被CPU执行的二进制机器码，而面向过程语言大多是直接编译成机器码在电脑上执行&lt;/li&gt;
-&lt;li&gt;面向对象易维护、易复用、易拓展，可以设计出低耦合的系统，使系统更灵活、更加易于维护&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;类与对象&#34;&gt;类与对象&lt;/h3&gt;
-&lt;p&gt;成员变量与局部变量的区别&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;语法形式：成员变量是定义在类中的变量，可以被public、private、static等修饰符修饰，而局部变量是定义在代码块或方法中的变量，不能被访问修饰符修饰，但都可以被final修饰&lt;/li&gt;
-&lt;li&gt;变量在内存中的存储方式：成员变量如果使用static则属于类，没有则属于实例；对象存在于堆内存，局部变量存在于栈内存&lt;/li&gt;
-&lt;li&gt;变量在内存中的生存时间：成员变量是对象的一部分，随着对象创建而存在，而局部变量随着方法调用自动消失&lt;/li&gt;
-&lt;li&gt;成员变量如果没有初始值则自动以类型默认值赋值（除非被final修饰），而局部变量不会自动赋值&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Person&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;c1&#34;&gt;// 定义成员变量
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;age&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-  &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;speak&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;c1&#34;&gt;// 定义局部变量，方法优先访问局部变量
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;age&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;age&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;类的构造方法&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;完成对类对象的初始化工作&lt;/li&gt;
-&lt;li&gt;如果自己添加了构造方法，则不会添加默认的无参数构造方法了，因此需要自己添加一下&lt;/li&gt;
-&lt;li&gt;调用子类构造方法前先调用父类无参数的构造方法是为了帮助子类做初始化工作&lt;/li&gt;
-&lt;li&gt;一般需要在父类中加上一个不做事且没有参数的构造方法，因为程序在执行子类的构造方法之前，如果父类只定义了有参数的构造方法，子类没有super()调用父类特定的构造方法，则会编译错误&lt;/li&gt;
-&lt;li&gt;方法名与类名相同&lt;/li&gt;
-&lt;li&gt;方法名前没有返回值声明&lt;/li&gt;
-&lt;li&gt;不能使用return返回值&lt;/li&gt;
-&lt;li&gt;使用this来访问成员变量以解决命名冲突&lt;/li&gt;
-&lt;li&gt;构造方法不能被重写，但可以被重载，所以可以有多个构造函数&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 无参数默认
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;Person&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;c1&#34;&gt;// 构造函数
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;// 重载构造函数
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;Person&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;age&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;c1&#34;&gt;// 新的构造函数
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;创建对象&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;new运算符创建对象实例（在堆内存中），对象引用指向对象实例（在栈内存中），一个对象引用可以指向0或1个对象，一个对象可以有n个引用指向它&lt;/li&gt;
-&lt;li&gt;对象的相等是比较内存中存放的内容，引用相等比较的是指向的内存地址是否相等&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 类名 对象名 = new 类名();
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Person&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Person&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;垃圾回收机制&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;对象成为垃圾后仍然会占用内存空间&lt;/li&gt;
-&lt;li&gt;Java虚拟机自动启动垃圾回收器将垃圾从内存中释放&lt;/li&gt;
-&lt;li&gt;可以调用System.gc()方法通知虚拟机立即进行垃圾回收&lt;/li&gt;
-&lt;li&gt;对象在内存中被释放时，finalize()方法会被自动调用，因此可以在类中定义finalized()方法来观察对象何时被释放&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;封装方法&#34;&gt;封装方法&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;private修饰成员变量&lt;/li&gt;
-&lt;li&gt;把一个对象的状态信息隐藏在对象内部，不允许外部对象直接访问，但是为外界提供一些操作方法，如set和get方法&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;static关键字&#34;&gt;static关键字&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;静态变量：修饰成员变量，特定的数据在内存中只有一份，可以通过类名来访问&lt;/li&gt;
-&lt;li&gt;静态方法：可以通过类名.方法名的方式来访问
-&lt;ul&gt;
-&lt;li&gt;静态方法只能访问static修饰的成员&lt;/li&gt;
-&lt;li&gt;静态方法不依赖于任何实例，因此必须有实现，不能是抽象方法&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;静态代码块：static修饰的代码块
-&lt;ul&gt;
-&lt;li&gt;类被加载时执行，一次&lt;/li&gt;
-&lt;li&gt;通常被用来对类的成员作初始化&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;静态导包
-&lt;ul&gt;
-&lt;li&gt;在使用静态变量和方法时不用再指名ClassName，简化代码，但降低了可读性&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;成员内部类&#34;&gt;成员内部类&lt;/h3&gt;
-&lt;p&gt;一个类中除了可以定义成员变量、成员方法，还可以定义类&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;普通成员内部类&lt;/li&gt;
-&lt;li&gt;静态内部类&lt;/li&gt;
-&lt;li&gt;方法内部类&lt;/li&gt;
-&lt;li&gt;匿名内部类&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;特性&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;成员内部类可以访问外部类的所有成员&lt;/li&gt;
-&lt;li&gt;外部类访问内部类需要通过外部类去创建内部类对象&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 外部类名.内部类名 变量名 = new 外部类名().new 内部类名();
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;outer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;inner&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;var1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;outer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inner&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;初始化顺序&#34;&gt;初始化顺序&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;父类（静态变量，静态语句块）&lt;/li&gt;
-&lt;li&gt;子类（静态变量，静态语句块）&lt;/li&gt;
-&lt;li&gt;父类（实例变量，普通语句块）&lt;/li&gt;
-&lt;li&gt;父类（构造函数）&lt;/li&gt;
-&lt;li&gt;子类（实例变量，普通语句块）&lt;/li&gt;
-&lt;li&gt;子类（构造函数）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;访问权限&#34;&gt;访问权限&lt;/h3&gt;
-&lt;p&gt;访问级别&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;private 只能被该类的其他成员访问&lt;/li&gt;
-&lt;li&gt;default 能被包中的其他类访问。默认访问控制级别&lt;/li&gt;
-&lt;li&gt;protected 可以被包中的其他类和子类访问&lt;/li&gt;
-&lt;li&gt;public 不管访问类与被访问类是否在同一个包中都可以访问&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;类的继承&#34;&gt;类的继承&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;不同类型对象经常有一定数量的共同点，因此可以在一个类的基础上构建新的类&lt;/li&gt;
-&lt;li&gt;子类会自动拥有父类所有可继承的属性和方法，不可选择性继承&lt;/li&gt;
-&lt;li&gt;父类中的私有属性和方法子类是无法访问的，只是拥有&lt;/li&gt;
-&lt;li&gt;可以快速创建新的类，提高代码的重用、程序的可维持性，节省创建新类的时间，提高开发效率&lt;/li&gt;
-&lt;li&gt;子类可以拥有自己的属性和方法，进行拓展，也可以用自己的方式实现父类方法（即重写）&lt;/li&gt;
-&lt;li&gt;使用extends关键字&lt;/li&gt;
-&lt;li&gt;不允许多重继承&lt;/li&gt;
-&lt;li&gt;多个类可以继承自同一个父类&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;重写&#34;&gt;重写&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;发生在运行期&lt;/li&gt;
-&lt;li&gt;子类会自动继承父类中定义的方法&lt;/li&gt;
-&lt;li&gt;可以对方法进行修改，即重写&lt;/li&gt;
-&lt;li&gt;重写方法需要和父类方法具有相同的方法名、参数列表及返回类型&lt;/li&gt;
-&lt;li&gt;使用super方法访问父类成员&lt;/li&gt;
-&lt;li&gt;使用super方法访问父类构造方法，第一行&lt;/li&gt;
-&lt;li&gt;使用this关键字调用子类构造方法，第一行&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;重载&#34;&gt;重载&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;发生在编译期&lt;/li&gt;
-&lt;li&gt;同一个方法能够根据输入数据不同做出不同的处理&lt;/li&gt;
-&lt;li&gt;方法名必须相同&lt;/li&gt;
-&lt;li&gt;参数类型不同、个数不同、顺序不同、方法返回值和访问修饰符可以不同&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;final关键字&#34;&gt;final关键字&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;final修饰的类不可被继承&lt;/li&gt;
-&lt;li&gt;final修饰的方法不可被重写&lt;/li&gt;
-&lt;li&gt;final修饰的变量不可被改变赋值&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;抽象类&#34;&gt;抽象类&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;使用abstract关键词修饰&lt;/li&gt;
-&lt;li&gt;包含抽象方法的类必须声明为抽象类&lt;/li&gt;
-&lt;li&gt;抽象类可以不包含任何抽象方法&lt;/li&gt;
-&lt;li&gt;抽象类不可以被实例化&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 定义一个抽象Animal类
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;abstract&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Animal&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;c1&#34;&gt;// 定义一个抽象方法shout()
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;kd&#34;&gt;abstract&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;shout&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;接口&#34;&gt;接口&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;接口是由常量和抽象方法组成的特殊类，是对抽象类的进一步抽象&lt;/li&gt;
-&lt;li&gt;使用接口主要是为了克服单继承的限制&lt;/li&gt;
-&lt;li&gt;使用extends来继承别的接口&lt;/li&gt;
-&lt;li&gt;使用interface关键字来声明&lt;/li&gt;
-&lt;li&gt;类使用implement关键字来继承接口&lt;/li&gt;
-&lt;li&gt;接口中的变量默认用public static final修饰&lt;/li&gt;
-&lt;li&gt;接口中的方法默认用public static修饰&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;interface&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;接口名&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;接口1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;接口2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;...&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;数据类型&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;常量名&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;常量值&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;返回值&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;抽象方法名&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;参数列表&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;抽象类与接口对比&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;都不能实例化，都可以有抽象方法&lt;/li&gt;
-&lt;li&gt;接口可用于多继承&lt;/li&gt;
-&lt;li&gt;接口具有默认修饰符&lt;/li&gt;
-&lt;li&gt;关键字不一样
-&lt;ul&gt;
-&lt;li&gt;接口继承接口，类继承类用extends&lt;/li&gt;
-&lt;li&gt;类继承接口implements&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;使用场景&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;接口（推荐）
-&lt;ul&gt;
-&lt;li&gt;需要让不相关的类实现同一个方法&lt;/li&gt;
-&lt;li&gt;需要多重继承&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;抽象类
-&lt;ul&gt;
-&lt;li&gt;需要在几个相关的类中共享代码&lt;/li&gt;
-&lt;li&gt;需要能控制继承来的成员的访问权限&lt;/li&gt;
-&lt;li&gt;需要继承非静态和非常量字段&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;多态&#34;&gt;多态&lt;/h3&gt;
-&lt;p&gt;父类引用，指向不同子类的实例，对同一个实例方法名调用，调用的程序不一样&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;多态的基础是继承和重写&lt;/li&gt;
-&lt;li&gt;多态仅限于实例方法&lt;/li&gt;
-&lt;li&gt;对象类型和引用类型之间具有继承/实现的关系&lt;/li&gt;
-&lt;li&gt;引用类型变量发出的方法调用哪个类中的方法必须在程序运行期间才能确定&lt;/li&gt;
-&lt;li&gt;多态不能调用只在子类存在但父类不存在的方法&lt;/li&gt;
-&lt;li&gt;如果子类重写了父类的方法，真正执行的是子类覆盖的方法&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;对象的类型转换&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;显式转换&lt;/li&gt;
-&lt;li&gt;隐式转换&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 把子类对象当作父类类型
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Animal&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;an1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Cat&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;Animal&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;an2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Dog&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;异常处理&#34;&gt;异常处理&lt;/h3&gt;
-&lt;p&gt;异常结构&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Throwable
-&lt;ul&gt;
-&lt;li&gt;Error 一般是Java运行时产生的系统内部错误或者资源耗尽的错误，仅靠修改程序本身不能恢复执行，例如虚拟机运行错误Virtual MachineError，虚拟机内存不够错误OutOfMemoryError，类定义错误NoClassDefFoundError，虚拟机一般选择线程终止&lt;/li&gt;
-&lt;li&gt;Exception 异常 RuntimeException用于运行时异常，其他用于编译时异常&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Throwable类常用方法
-&lt;ul&gt;
-&lt;li&gt;String getMessage()返回异常发生时的简要描述&lt;/li&gt;
-&lt;li&gt;string toString()返回异常发生时的详细信息&lt;/li&gt;
-&lt;li&gt;string getLocalizedMessage()返回异常对象的本地化信息，使用Throwable子类覆盖这个方法，生成本地化信息，没覆盖的话则与getMessage()相同&lt;/li&gt;
-&lt;li&gt;void printStackTrace()在控制台上打印Throwable对象封装的异常信息&lt;/li&gt;
-&lt;li&gt;void printStackTrace(PrintStream s)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;异常处理方法&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;c1&#34;&gt;// 程序
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;catch&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;异常类型类&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;c1&#34;&gt;// 对异常的处理
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;finally&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;c1&#34;&gt;// 一定执行的语句
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;finally不执行的情况&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;try或finally中用了System.exit(int)退出程序，但如果在异常语句之后还是会被执行&lt;/li&gt;
-&lt;li&gt;程序所在的线程死亡&lt;/li&gt;
-&lt;li&gt;关闭CPU&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;当try语句和finally语句中都有return语句时，在方法返回之前，finally语句的内容将被执行，并且finally语句的返回值将会覆盖原始的返回值&lt;/p&gt;
-&lt;p&gt;try-with-resources代替try-catch-finally&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;适用范围（资源的定义）：任何实现java.lang.AutoCloseable或者java.io.Closeable的对象&lt;/li&gt;
-&lt;li&gt;关闭资源和final的执行顺序：在try-with-resources语句中，任何catch或finally块在声明的资源关闭后运行&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Scanner&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;scanner&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Scanner&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;File&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;test.txt&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;scanner&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;hasNext&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;())&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;scanner&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;nextLine&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt;
-    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;catch&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;FileNotFoundException&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fnfe&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;fnfe&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;printStackTrace&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;多个资源&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;BufferedInputStream&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bin&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BufferedInputStream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FileInputStream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;File&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;test.txt&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)));&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;BufferedOutputStream&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BufferedOutputStream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FileOutputStream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;File&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;out.txt&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bin&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;())&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;bout&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;write&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;catch&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;IOException&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;printStackTrace&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;throws关键字&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;修饰符&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;返回值类型&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;方法名&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;throws&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;异常类型1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;异常类型2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;c1&#34;&gt;// 定义方法
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;自定义异常&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 自定义异常类
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;CustomerException&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;RuntimeException&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;c1&#34;&gt;// 继承构造函数
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;CustomerException&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;kd&#34;&gt;super&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-
-  &lt;span class=&#34;c1&#34;&gt;// 自定义异常方法
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;// 调用自定义异常类
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;throws&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Exception&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;异常对象&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;代理&#34;&gt;代理&lt;/h2&gt;
-&lt;p&gt;代理关系模型，A想要调用B类的方法，A不直接调用，A会在自己的类中创建一个B对象的代理，再由代理调用B的方法&lt;/p&gt;
-&lt;h2 id=&#34;泛型&#34;&gt;泛型&lt;/h2&gt;
-&lt;p&gt;提供了编译时类型安全检测机制，允许在编译时检测到非法的类型，本质是参数化类型。Java的泛型是伪泛型，也就是在编译期间，所有的泛型信息会被擦除，Java编译器会在编译时尽可能发现出错的地方，但没办法发现运行时类型转换异常的问题，类型擦除是Java泛型与C++模板机制实现方式之间的重要区别。类型擦除后只保留Object或者Comparable这样的原始类型。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Java编译器先检查泛型类型，进行类型擦除，再进行编译&lt;/li&gt;
-&lt;li&gt;类型检查是编译时就完成的，类型检查针对引用，引用调用泛型方法则会对这个引用调用的方法进行类型检测，无关真正引用的对象&lt;/li&gt;
-&lt;li&gt;泛型不允许继承关系&lt;/li&gt;
-&lt;li&gt;泛型信息虽然会被擦除，但是当存取一个泛型域时会自动插入强制类型转换&lt;/li&gt;
-&lt;li&gt;子类在继承时只能将父类类型擦除为原始类型，目的为重写却变为了重载，要解决多态与泛型的冲突，JVM编译生成桥方法&lt;/li&gt;
-&lt;li&gt;泛型类型变量不能使基本数据类型&lt;/li&gt;
-&lt;li&gt;编译时用instanceof是错误的（因为类型擦除了）&lt;/li&gt;
-&lt;li&gt;泛型类中的静态方法和静态变量不可以使用泛型类所声明的泛型类型参数&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;使用方式&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;用泛型表示类&lt;/li&gt;
-&lt;li&gt;用泛型表示接口&lt;/li&gt;
-&lt;li&gt;泛型方法&lt;/li&gt;
-&lt;li&gt;泛型通配符
-&lt;ul&gt;
-&lt;li&gt;？表示不确定的java类型&lt;/li&gt;
-&lt;li&gt;T表示具体的一个java类型&lt;/li&gt;
-&lt;li&gt;K V表示Key Value&lt;/li&gt;
-&lt;li&gt;E表示Element&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;反射&#34;&gt;反射&lt;/h2&gt;
-&lt;p&gt;Java反射机制是在程序运行的过程中，对于任何一个类，都能够知道它的所有属性和方法；对于任意一个对象，都能够知道调用它的任意属性和方法；动态获取信息及动态调用对象。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;在运行时判断一个对象所属的类&lt;/li&gt;
-&lt;li&gt;在运行是构造任意一个类的对象&lt;/li&gt;
-&lt;li&gt;在运行时判断任意一个类所有的成员变量和方法&lt;/li&gt;
-&lt;li&gt;在运行时调用任意一个对象的方法&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;静态编译和动态编译&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;静态编译：在编译时确定类型，绑定对象&lt;/li&gt;
-&lt;li&gt;动态编译：在运行时确定对象，绑定对象&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;优缺点&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;优点：运行期类型的判断，动态加载类，提高代码的灵活度&lt;/li&gt;
-&lt;li&gt;缺点
-&lt;ul&gt;
-&lt;li&gt;JVM需要做一系列解释操作，性能比直接的java代码要慢很多，造成性能瓶颈&lt;/li&gt;
-&lt;li&gt;让我们可以动态操作改变类的属性同时也增加了其安全隐患&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;应用场景&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;主要用于框架设计&lt;/li&gt;
-&lt;li&gt;模块化开发，通过反射去调用对应的字节码&lt;/li&gt;
-&lt;li&gt;动态代理设计模式采用了反射机制&lt;/li&gt;
-&lt;li&gt;Spring/Hibernate框架也大量使用到了反射机制&lt;/li&gt;
-&lt;li&gt;例如
-&lt;ul&gt;
-&lt;li&gt;JDBC连接数据库时使用Class.forName()通过反射加载数据库的驱动程序&lt;/li&gt;
-&lt;li&gt;Spring框架的IOC（动态加载管理Bean）创建对象及AOP动态代理功能和反射都有联系&lt;/li&gt;
-&lt;li&gt;动态配置实例的属性&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       

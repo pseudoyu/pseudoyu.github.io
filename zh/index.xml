@@ -649,11 +649,74 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
     </item>
     
     <item>
-      <title>Blockchain学习 - 区块链安全与隐私</title>
-      <link>https://www.pseudoyu.com/zh/2021/02/20/blockchain_note_security_privacy/</link>
+      <title>Blockchain学习 - 区块链隐私</title>
+      <link>https://www.pseudoyu.com/zh/2021/02/23/blockchain_note_privacy/</link>
+      <pubDate>Tue, 23 Feb 2021 05:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/02/23/blockchain_note_privacy/</guid>
+      
+        <description>&lt;h2 id=&#34;区块链隐私&#34;&gt;区块链隐私&lt;/h2&gt;
+&lt;h3 id=&#34;区块链透明性&#34;&gt;区块链透明性&lt;/h3&gt;
+&lt;p&gt;所有人都能看到交易细节/历史记录&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;应用场景：供应链 （食品、药品、酒&amp;hellip;）&lt;/li&gt;
+&lt;li&gt;隐私风险：个人信息（账户余额、交易信息&amp;hellip;）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;隐私分类&#34;&gt;隐私分类&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;发送方匿名&lt;/li&gt;
+&lt;li&gt;交易匿名/机密&lt;/li&gt;
+&lt;li&gt;接收方匿名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;比特币隐私建议&#34;&gt;比特币隐私建议&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;不要重复使用地址&lt;/li&gt;
+&lt;li&gt;在同一比交易中不要将多个输出（UTXO）作为输入&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;隐私保护技术&#34;&gt;隐私保护技术&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;混币&lt;/li&gt;
+&lt;li&gt;匿名签名
+&lt;ul&gt;
+&lt;li&gt;环签（小组中每一个人都可以签名，但不知道被谁签名）&lt;/li&gt;
+&lt;li&gt;可链接环签名（依然不知道被谁签名，但是可以知道被同一个签名者签，可检测双花）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;零知识证明 （在不让其他人知道额外信息的前提下证明正确性）&lt;/li&gt;
+&lt;li&gt;加密
+&lt;ul&gt;
+&lt;li&gt;同态加密（以太坊智能合约在区块链存储上提供了同态加密）&lt;/li&gt;
+&lt;li&gt;基于属性的加密（Attribute-based encryption(ABE)）
+&lt;ul&gt;
+&lt;li&gt;每个用户有一些属性（角色）&lt;/li&gt;
+&lt;li&gt;权限控制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;可信执行环境（Trusted execution environment(TEE)）
+&lt;ul&gt;
+&lt;li&gt;安全硬件（如Intel SGX）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;基于隐私保护的交易平台&#34;&gt;基于隐私保护的交易平台&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/blockchain_privacy_market_place.png&#34; alt=&#34;blockchain_privacy_market_place&#34;&gt;&lt;/p&gt;
+&lt;p&gt;现有平台不支持对于加密数据的计算（区块链多方计算）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;加密搜索&lt;/li&gt;
+&lt;li&gt;统计计算/数据挖掘&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Blockchain学习 - 区块链安全</title>
+      <link>https://www.pseudoyu.com/zh/2021/02/20/blockchain_note_security/</link>
       <pubDate>Sat, 20 Feb 2021 05:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2021/02/20/blockchain_note_security_privacy/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/02/20/blockchain_note_security/</guid>
       
         <description>&lt;h2 id=&#34;区块链安全&#34;&gt;区块链安全&lt;/h2&gt;
 &lt;h3 id=&#34;风险来源&#34;&gt;风险来源&lt;/h3&gt;
@@ -3821,472 +3884,6 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
 &lt;li&gt;BufferedReader
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;BufferedReader&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;input&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BufferedReader&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;InputStreamReader&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;in&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;readLine&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Java学习 - 集合</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/25/java_note_collections/</link>
-      <pubDate>Wed, 25 Nov 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/25/java_note_collections/</guid>
-      
-        <description>&lt;h2 id=&#34;集合类&#34;&gt;集合类&lt;/h2&gt;
-&lt;h3 id=&#34;概述&#34;&gt;概述&lt;/h3&gt;
-&lt;p&gt;为了在程序中保存数目不确定的对象，JDK中提供了一系列特殊的类，这些类可以存储任意类型的对象且长度可变，称为集合，位于java.util包中&lt;/p&gt;
-&lt;p&gt;按存储结构分类&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Collection
-&lt;ul&gt;
-&lt;li&gt;List
-&lt;ul&gt;
-&lt;li&gt;ArrayList：基于动态数组实现，支持随机访问
-&lt;ul&gt;
-&lt;li&gt;CopyOnWriteArrayList
-&lt;ul&gt;
-&lt;li&gt;读写分离，读在原数组，写则是复制到新数组（加锁）&lt;/li&gt;
-&lt;li&gt;内存为两倍左右&lt;/li&gt;
-&lt;li&gt;数据不同步&lt;/li&gt;
-&lt;li&gt;不适合对内存敏感或是实时性要求较高的数组&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;LinkedList：基于双向链表实现（JDK1.6之前为循环链表，JDK1.7取消了循环），只能顺序访问，但是可以快速地在链表中间插入和删除元素，也可以用作栈、队列和双向队列&lt;/li&gt;
-&lt;li&gt;ArrayList和LinkedList区别
-&lt;ul&gt;
-&lt;li&gt;都不同步，不保证线程安全&lt;/li&gt;
-&lt;li&gt;ArrayList底层使用Object数组，LinkedList使用双向链表
-&lt;ul&gt;
-&lt;li&gt;双向链表包含两个指针，一个prev指向前一个节点，一个next指向后一个节点&lt;/li&gt;
-&lt;li&gt;双向循环链表最后一个节点的next指向head，而head的prev指向最后一个节点，构成一个环&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;LinkedList不支持高效随机元素访问，ArrayList支持&lt;/li&gt;
-&lt;li&gt;ArrayList空间浪费在list列表结尾会预留一些空间，而LinkedList每一个元素都需要消耗币ArrayList更多的空间&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Vector：与ArrayList类似，但是是线程安全的&lt;/li&gt;
-&lt;li&gt;RandomAccess接口：标识实现这个接口的类具有随机访问功能，如ArrayList&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Set
-&lt;ul&gt;
-&lt;li&gt;HashSet：基于HashMap实现，支持快速查找，但不支持有序性操作，并且没有插入顺序信息（用Iterator遍历的结果不确定）
-&lt;ul&gt;
-&lt;li&gt;实现Set接口，仅存储对象，调用add()方法向Set中添加元素&lt;/li&gt;
-&lt;li&gt;使用成员对象来计算hashcode值&lt;/li&gt;
-&lt;li&gt;LinkedHashSet：具有HashSet的查找效率，并且内部使用双向链表来维护元素的插入顺序。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;TreeSet：基于红黑树实现，支持有序性操作，查找效率不如HashSet（O(1)），为O(Log N)&lt;/li&gt;
-&lt;li&gt;无序性是指存储的数据在底层数组中并非按照数组索引的顺序添加，而是根据数据的哈希值决定的&lt;/li&gt;
-&lt;li&gt;不可重复性是指添加到元素按照equals判断时返回false&lt;/li&gt;
-&lt;li&gt;Comparable和Comparator
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;一般需要对一个集合使用自定义排序时，需要重写compareTo或compare方法&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;如果需要对一个集合使用两种排序，可以重写compareTo，使用自制的Comparator方法或者以两个Comparator来实现&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 定制排序的用法
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Collections&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;sort&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;arrayList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Comparator&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-
-    &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
-    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;compare&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;o1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;o2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;o2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;compareTo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;o1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;});&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;定制排序后：&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;arrayList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;重写compareTo方法实现按年龄来排序&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// person对象没有实现Comparable接口，所以必须实现，这样才不会出错，才可以使treemap中的数据按顺序排列
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 前面一个例子的String类已经默认实现了Comparable接口，详细可以查看String类的API文档，另外其他
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 像Integer类等都已经实现了Comparable接口，所以不需要另外实现了
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt;  &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Person&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;implements&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Comparable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Person&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;cm&#34;&gt;/**
-&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;    * T重写compareTo方法实现按年龄来排序
-&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;    */&lt;/span&gt;
-    &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
-    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;compareTo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Person&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;age&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getAge&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;())&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-            &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;age&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getAge&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;())&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-            &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Queue
-&lt;ul&gt;
-&lt;li&gt;LinkedList：可用来实现双向队列&lt;/li&gt;
-&lt;li&gt;PriorityQueue：基于堆结构实现，可以用它来实现有限队列&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Map
-&lt;ul&gt;
-&lt;li&gt;Hashtable：类似于HashMap，但是是线程安全的
-&lt;ul&gt;
-&lt;li&gt;Properties&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;HashMap：基于哈希表实现
-&lt;ul&gt;
-&lt;li&gt;多线程下使用容易造成数据丢失等问题&lt;/li&gt;
-&lt;li&gt;存储结构
-&lt;ul&gt;
-&lt;li&gt;包含一个Entry类型的数组table，存放键值对（hashCode，K，V，next）&lt;/li&gt;
-&lt;li&gt;Entry是一个链表，通过拉链法解决冲突&lt;/li&gt;
-&lt;li&gt;头插式进行&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;JDK1.8开始，桶的链表长度大于8时会转换为红黑树，但如果当前数据长度小于64则会优先选择数组扩容&lt;/li&gt;
-&lt;li&gt;查找
-&lt;ul&gt;
-&lt;li&gt;计算键值所在的桶&lt;/li&gt;
-&lt;li&gt;在链表上顺序查找，时间复杂度取决于链表长度&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;允许插入null的键值对，使用第0个桶存放&lt;/li&gt;
-&lt;li&gt;ConcurrentHashMap
-&lt;ul&gt;
-&lt;li&gt;使用了分段锁segment，维护着多个HashEntry，因此可以多线程访问&lt;/li&gt;
-&lt;li&gt;分段锁继承自重入锁ReentrantLock&lt;/li&gt;
-&lt;li&gt;每个segment维护了一个count变量来统计键值对个数&lt;/li&gt;
-&lt;li&gt;JDK1.8采用了CAS操作来支持更高的并发度，在CAS操作失败时使用内置锁synchronized&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;LinkedHashMap&lt;/li&gt;
-&lt;li&gt;WeakHashMap
-&lt;ul&gt;
-&lt;li&gt;继承自WeakReference，被关联的对象在下一次垃圾回收时会被回收&lt;/li&gt;
-&lt;li&gt;主要用来实现缓存，通过WeakHashMap引用缓存对象，JVM进行回收&lt;/li&gt;
-&lt;li&gt;Tomcat中的ConcurrentCache使用了缓存功能，分代缓存
-&lt;ul&gt;
-&lt;li&gt;常用对象放入eden中，ConcurrentHashMap&lt;/li&gt;
-&lt;li&gt;不常用对象放入longterm，使用WeakHashMap&lt;/li&gt;
-&lt;li&gt;调用get时，优先从eden中获取，没找到则在longterm中获取&lt;/li&gt;
-&lt;li&gt;调用put时，如果大小超过了size，则全部放入longterm，JVM回收掉一部分&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;TreeMap
-&lt;ul&gt;
-&lt;li&gt;基于红黑树实现&lt;/li&gt;
-&lt;li&gt;实现了NavigableMap接口和SortedMap接口
-&lt;ul&gt;
-&lt;li&gt;Navigable接口让TreeMap有了对集合中的元素搜索的能力&lt;/li&gt;
-&lt;li&gt;SortMap接口让TreeMap有了对集合中的元素根据键排序的能力，默认是按照key的升序排序&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;HashMap和HashTable的区别
-&lt;ul&gt;
-&lt;li&gt;HashMap线程不安全，HashTable线程安全（经过synchronized修饰）&lt;/li&gt;
-&lt;li&gt;HashMap效率高一点&lt;/li&gt;
-&lt;li&gt;HashMap可以拥有一个null键和多个null值，而HashTable不允许，不然会抛出NullPointerException&lt;/li&gt;
-&lt;li&gt;初始值
-&lt;ul&gt;
-&lt;li&gt;HashTable创建默认大小为11，每次扩充为2n+1；HashMap默认大小为12，每次扩充为两倍&lt;/li&gt;
-&lt;li&gt;创建时如果给了初始值，HashTable直接使用，而HashMap则扩充为2的幂次方大小&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;底层数据结构
-&lt;ul&gt;
-&lt;li&gt;HashMap在JDK1.8之后解决哈希冲突有了较大变化，当链表长度大于8时，将链表转为红黑树以减少搜索时间&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;ConcurrentHashMap和HashTable的区别
-&lt;ul&gt;
-&lt;li&gt;HashTable采取数组+链表，而JDK1.8之后的ConcurrentHashMap采取分段的数组+链表/红黑树&lt;/li&gt;
-&lt;li&gt;HashTable使用synchronized来保证线程安全，效率比较低（同一把锁，存在竞争）&lt;/li&gt;
-&lt;li&gt;ConcurrentHashMap采用segment分段锁，每一把锁只锁容器其中一部分数据，多线程访问容器中不同数据段的数据，就不会存在锁竞争；JDK1.8之后摒弃了Segment分段锁，而是直接使用Node数组+链表+红黑树的形式，并发控制使用了synchronized和CAS（CompareAndSet，先进行比较再修改，对应着一条硬件指令，虽然有多个步骤，但是操作系统保证其原子性）来操作
-&lt;ul&gt;
-&lt;li&gt;synchronized只锁定当前链表或红黑书的首节点，只要哈希不冲突，就不会产生并发，提升效率&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;collection接口&#34;&gt;Collection接口&lt;/h3&gt;
-&lt;p&gt;通用方法&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;boolean add(Object o) 向集合中添加一个元素&lt;/li&gt;
-&lt;li&gt;boolean addAll(Collection c) 将指定集合中所有元素添加到该集合中&lt;/li&gt;
-&lt;li&gt;void clear() 删除该集合所有元素&lt;/li&gt;
-&lt;li&gt;boolean remove(Object o) 删除该集合指定元素&lt;/li&gt;
-&lt;li&gt;boolean removeAll(Collection c) 删除该集合所有元素&lt;/li&gt;
-&lt;li&gt;boolean isEmpty() 判断是否为空&lt;/li&gt;
-&lt;li&gt;boolean contains(Object o) 判断该集合是否包含某个元素&lt;/li&gt;
-&lt;li&gt;boolean containsAll(Collection c) 判断集合中是否包含指定集合中的所有元素&lt;/li&gt;
-&lt;li&gt;Iterator iterator(Collection c) 返回在该集合的算俗尚进行迭代的迭代起（用于遍历）&lt;/li&gt;
-&lt;li&gt;int size() 获取该集合元素个数&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;list接口&#34;&gt;List接口&lt;/h4&gt;
-&lt;p&gt;继承自Collection接口&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;允许出现重复的元素&lt;/li&gt;
-&lt;li&gt;线性存储，可通过索引访问集合中的指定元素&lt;/li&gt;
-&lt;li&gt;元素有序&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;增加了根据元素索引进行操作的方法&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;boolean add(int index, Object e) 插入元素至指定位置&lt;/li&gt;
-&lt;li&gt;boolean addAll(int index, Collection c) 插入集合至指定位置&lt;/li&gt;
-&lt;li&gt;Object get(int index) 返回指定索引元素&lt;/li&gt;
-&lt;li&gt;Object remove(int index) 删除指定索引元素&lt;/li&gt;
-&lt;li&gt;Object set(int index, Object e) 将索引处元素替换，并返回替换后的元素&lt;/li&gt;
-&lt;li&gt;int indexOf(Object o) 返回元素在List集合中的位置&lt;/li&gt;
-&lt;li&gt;int lastIndexOf(Object o) 返回元素在List集合中最后出现的位置&lt;/li&gt;
-&lt;li&gt;List subList(int fromIndex, int toIndex) 两个索引之间集合组成的子集合，包含头不包含尾&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;ArrayList&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;是List接口的一个实现类，底层的存储结构式数组&lt;/li&gt;
-&lt;li&gt;大部分方法从接口中继承，其中add()方法和get()方法主要用于元素存取&lt;/li&gt;
-&lt;li&gt;查询元素时效率高，但增删元素时效率低&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;LinkedList&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;内部维护了一个双向循环链表&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;对于元素的增删具有很高的效率&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;方法&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;void add(int index, E e) 在列表指定位置插入指定元素&lt;/li&gt;
-&lt;li&gt;void addFirst(Object o) 将指定元素插入列表开头&lt;/li&gt;
-&lt;li&gt;void addLast(Object o) 将指定元素插入列表结尾&lt;/li&gt;
-&lt;li&gt;Object getFirst() 返回列表第一个元素&lt;/li&gt;
-&lt;li&gt;Object getLast() 返回列表最后一个元素&lt;/li&gt;
-&lt;li&gt;Object removeFirst() 移除并返回列表第一个元素&lt;/li&gt;
-&lt;li&gt;Object removeLast() 移除并返回列表最后一个元素&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;LinkedList&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LinkedList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-
-  &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;removeFirst&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;removeLast&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;iterator接口&#34;&gt;Iterator接口&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;用于遍历集合中的所有元素&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;迭代器获取ArrayList集合中的元素时，会当作Object看待，如想得到特定元素则需要强制类型转换&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;方法&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;hasNext()&lt;/li&gt;
-&lt;li&gt;next()&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 构建一个迭代器
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Iterator&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;iterator&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;iterator&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;// 通过hasNext()方法来循环遍历
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;iterator&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;hasNext&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()){&lt;/span&gt;
-  &lt;span class=&#34;c1&#34;&gt;// 通过next()来访问下一个元素
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;Object&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;iterator&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;next&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;foreach循环&#34;&gt;foreach循环&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;容器内元素类型&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;临时变量&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;容器变量&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;执行语句&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-
-&lt;span class=&#34;n&#34;&gt;List&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ArrayList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;123&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;234&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;abc&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-  
-  &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;){&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;999&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-  
-  &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Object&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;){&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;如果要进行remove操作，可以调用迭代器的remove方法而不是集合类的reomve方法，因为如果列表在任何时间从结构上修改创建迭代器之后，以任何方式除非通过迭代器自身remove/add方法，都会抛出一个ConcurrentModificationException，这就是单线程状态下的fail-fast机制&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Java8开始，可以使用Collection#removeIf()方法删除满足特定条件的元素&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;    &lt;span class=&#34;n&#34;&gt;List&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ArrayList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;removeIf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;filter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;filter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;cm&#34;&gt;/* 删除list中的所有偶数 */&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;cm&#34;&gt;/* [1, 3, 5, 7, 9] */&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;set接口&#34;&gt;Set接口&lt;/h4&gt;
-&lt;p&gt;继承自Collection接口，Collection接口中的方法一致但更加严格&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;元素无序&lt;/li&gt;
-&lt;li&gt;保证存入的程序不出现重复&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;HashSet&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;根据对象的哈希值来确定元素在集合中的存储位置
-&lt;ul&gt;
-&lt;li&gt;向HashSet添加一个对象时，首先调用那个hashCode方法计算对象的哈希值，确定元素的存储位置&lt;/li&gt;
-&lt;li&gt;如果哈希值相同，调用对象的equals方法确保该位置没有重复元素&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;具有良好的存取和查找功能&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;TreeSet&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;以二叉树的方式来存储元素&lt;/li&gt;
-&lt;li&gt;可以实现对集合中元素进行排序&lt;/li&gt;
-&lt;li&gt;TreeSet有序指的是元素会按照大小关系进行排序&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;map接口&#34;&gt;Map接口&lt;/h3&gt;
-&lt;p&gt;存储具有对应关系的数据&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;双列集合&lt;/li&gt;
-&lt;li&gt;Key和Value进行对应&lt;/li&gt;
-&lt;li&gt;Key不能重复&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;常用方法&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;void put(Object key, Object value) 存入键值对&lt;/li&gt;
-&lt;li&gt;Object get(Object key) 获取值&lt;/li&gt;
-&lt;li&gt;boolean containsKey(Object key) 是否包含key&lt;/li&gt;
-&lt;li&gt;boolean containsValue(Object value) 是否包含值&lt;/li&gt;
-&lt;li&gt;Set keySet 返回键的Set&lt;/li&gt;
-&lt;li&gt;Collection&lt;!-- raw HTML omitted --&gt; values() 返回值的Collection&lt;/li&gt;
-&lt;li&gt;Set&amp;lt;Map.Entry,&amp;lt;K, V&amp;raquo;entrySet() 返回映射关系的Set&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;HashMap&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;判断key是否重复和HashSet一样 跟hashCode和equals方法相关&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;LinkedHashMap&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;维持元素读取和存储的顺序一致&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Properties&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Hashtable是线程安全的 性能比较低&lt;/li&gt;
-&lt;li&gt;Properties是Hashtable的子类&lt;/li&gt;
-&lt;li&gt;应用场景：多线程安全的需求 往往对应到系统属性&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;容器中的设计模式&#34;&gt;容器中的设计模式&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;迭代器模式
-&lt;ul&gt;
-&lt;li&gt;继承了Iterable接口，iterator()方法能够产生一个iterator对象&lt;/li&gt;
-&lt;li&gt;JDK1.5 之后可以通过foreach来遍历实现了Iterable接口的对象&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;适配器模式
-&lt;ul&gt;
-&lt;li&gt;Arrays.asList可以把数组类型转换为List类型&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;arraysaslist使用指南&#34;&gt;Arrays.asList()使用指南&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;可以将一个数组转换为一个List集合&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;arr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;};&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;List&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Arrays&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;asList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;arr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;// 另一种方式
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;List&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Arrays&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;asList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;将数组转换为集合后，底层还是数组&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;传递的数组必须是数组对象而不是基本类型（泛型方法），因此要使用包装类型数组&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;使用集合的修改方法add()，remove()和clear()会抛出异常，因为返回的是java.util.Arrays的一个内部类，并没有实现（重写）集合的修改方法，只重写了get, set, indexOf, contains, forEach, replaceAll, sort&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;正确地将数组转为arraylist&#34;&gt;正确地将数组转为ArrayList&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;简便方法&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;List&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ArrayList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Arrays&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;asList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;a&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;b&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;c&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;使用Java8的Stream&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;myArray&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;};&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;List&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;myList&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Arrays&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;stream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;myArray&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;collect&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Collectors&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;toList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;//基本类型也可以实现转换（依赖boxed的装箱操作）
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;myArray2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;};&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;List&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;myList&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Arrays&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;stream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;myArray2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;boxed&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;collect&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Collectors&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;toList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;使用Java9的List.of()方法&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;array&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;};&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;List&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;List&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;of&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;array&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;cm&#34;&gt;/* [1, 2, 3] */&lt;/span&gt;
-&lt;span class=&#34;cm&#34;&gt;/* 不支持基本数据类型 */&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;collectiontoarray方法使用&#34;&gt;Collection.toArray()方法使用&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;泛型方法，如果toArray方法没有传递任何参数则返回Object类型数组&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]{&lt;/span&gt;
-    &lt;span class=&#34;s&#34;&gt;&amp;#34;dog&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;lazy&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;a&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;over&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;jumps&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;fox&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;brown&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;quick&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;A&amp;#34;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;};&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;List&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Arrays&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;asList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;Collections&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;reverse&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;toArray&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]);&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//没有指定类型的话会报错
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;由于JVM优化，new String[0]作为Collection.toArray()方法的参数使用，是作为一个模板作用，指定了返回数组的类型，0为了节省空间&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;泛型&#34;&gt;泛型&lt;/h3&gt;
-&lt;p&gt;功能&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;和集合联合使用的时候&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;限制往集合添加的数据类型&lt;/li&gt;
-&lt;li&gt;保证获取元素的时候 使用具体的数据类型 而不是Object 从而避免不必要的强制类型转换&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 创建集合并指定泛型为String
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ArrayList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ArrayList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;();&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>

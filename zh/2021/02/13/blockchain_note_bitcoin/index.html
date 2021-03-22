@@ -269,7 +269,7 @@
 <li>Block reward 出块奖励：coinbase tx是唯一一个产生新币的途径</li>
 <li>矿工费</li>
 </ul>
-<p>挖矿：不断尝试nonce值，是Block header立德hash值≤给定的目标阈值</p>
+<p>挖矿：不断尝试nonce值，是Block header里的hash值≤给定的目标阈值</p>
 <p>H(block header) ≤ target （target是难度为1的时候所对应的阈值，target越小，挖矿难度越大）</p>
 <p>difficulty = (difficulty - 1 - target) / target</p>
 <p>挖矿过程</p>
@@ -283,7 +283,7 @@
 </ul>
 <h3 id="为什么要调整难度">为什么要调整难度</h3>
 <p>出块时间太短容易出现分叉，分叉过多则会影响系统达成共识，危害系统安全性</p>
-<p>BTC的储廥速度是10分钟，ETH出块速度是15秒（意味着ETH需要新的协议，ghost → orphan block不能简单丢弃，而是要给奖励，uncle reward）</p>
+<p>BTC的出块速度是10分钟，ETH出块速度是15秒（意味着ETH需要新的协议，ghost → orphan block不能简单丢弃，而是要给奖励，uncle reward）</p>
 <h3 id="如何调整挖矿难度">如何调整挖矿难度</h3>
 <p>每2016个区块（约两周）调整一次目标阈值，存在Block header中，有个nbits，是编码的版本</p>
 <p>target = target * (actual time / expected time)</p>
@@ -413,7 +413,7 @@
 <li>私钥丢失则失去对币的所有权，除非存在交易所中，但交易所有风险</li>
 <li>私钥泄漏需要立即将账户中的钱转到另外的账户</li>
 <li>转账时写错地址无法取消交易，也没办法追回</li>
-<li>既然所有要写入区块链的交易都需要被验证正确性，为什么proof of burn中OP_RETURN会被区块接收：
+<li>既然所有要写入区块链的交易都需要被验证正确性，为什么proof of burn中OP_RETURN会被区块接受：
 <ul>
 <li>对于某个交易，我们需要验证输入脚本和输出脚本，而OP_RETURN是写在当前交易的输出脚本的，因此在本次验证中不会被检查到</li>
 </ul>

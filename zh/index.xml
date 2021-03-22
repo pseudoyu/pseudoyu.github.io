@@ -1190,7 +1190,7 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
 &lt;li&gt;Block reward 出块奖励：coinbase tx是唯一一个产生新币的途径&lt;/li&gt;
 &lt;li&gt;矿工费&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;挖矿：不断尝试nonce值，是Block header立德hash值≤给定的目标阈值&lt;/p&gt;
+&lt;p&gt;挖矿：不断尝试nonce值，是Block header里的hash值≤给定的目标阈值&lt;/p&gt;
 &lt;p&gt;H(block header) ≤ target （target是难度为1的时候所对应的阈值，target越小，挖矿难度越大）&lt;/p&gt;
 &lt;p&gt;difficulty = (difficulty - 1 - target) / target&lt;/p&gt;
 &lt;p&gt;挖矿过程&lt;/p&gt;
@@ -1204,7 +1204,7 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
 &lt;/ul&gt;
 &lt;h3 id=&#34;为什么要调整难度&#34;&gt;为什么要调整难度&lt;/h3&gt;
 &lt;p&gt;出块时间太短容易出现分叉，分叉过多则会影响系统达成共识，危害系统安全性&lt;/p&gt;
-&lt;p&gt;BTC的储廥速度是10分钟，ETH出块速度是15秒（意味着ETH需要新的协议，ghost → orphan block不能简单丢弃，而是要给奖励，uncle reward）&lt;/p&gt;
+&lt;p&gt;BTC的出块速度是10分钟，ETH出块速度是15秒（意味着ETH需要新的协议，ghost → orphan block不能简单丢弃，而是要给奖励，uncle reward）&lt;/p&gt;
 &lt;h3 id=&#34;如何调整挖矿难度&#34;&gt;如何调整挖矿难度&lt;/h3&gt;
 &lt;p&gt;每2016个区块（约两周）调整一次目标阈值，存在Block header中，有个nbits，是编码的版本&lt;/p&gt;
 &lt;p&gt;target = target * (actual time / expected time)&lt;/p&gt;
@@ -1334,7 +1334,7 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
 &lt;li&gt;私钥丢失则失去对币的所有权，除非存在交易所中，但交易所有风险&lt;/li&gt;
 &lt;li&gt;私钥泄漏需要立即将账户中的钱转到另外的账户&lt;/li&gt;
 &lt;li&gt;转账时写错地址无法取消交易，也没办法追回&lt;/li&gt;
-&lt;li&gt;既然所有要写入区块链的交易都需要被验证正确性，为什么proof of burn中OP_RETURN会被区块接收：
+&lt;li&gt;既然所有要写入区块链的交易都需要被验证正确性，为什么proof of burn中OP_RETURN会被区块接受：
 &lt;ul&gt;
 &lt;li&gt;对于某个交易，我们需要验证输入脚本和输出脚本，而OP_RETURN是写在当前交易的输出脚本的，因此在本次验证中不会被检查到&lt;/li&gt;
 &lt;/ul&gt;
@@ -1607,7 +1607,7 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
 &lt;p&gt;区块链是一种分布式账本技术，由于是一群人来记账，所以修改这个账本的难度比较高。&lt;/p&gt;
 &lt;p&gt;单式记账 → 复式记账 → 数字化记账 → 分布式记账&lt;/p&gt;
 &lt;p&gt;传统中心化数字记账依赖于某个组织的可信度，而区块链是通过共识机制来共同记账，由区块链技术来保障信任机制，具有去中心化、难以篡改、可追溯等特点。&lt;/p&gt;
-&lt;p&gt;难以篡改是区块链主要特征，相比传统数据库（传统数据库包喊了增删改查），区块链只有增加和查询，是一种“历史记录不可篡改的数据库”。&lt;/p&gt;
+&lt;p&gt;难以篡改是区块链主要特征，相比传统数据库（传统数据库包含了增删改查），区块链只有增加和查询，是一种“历史记录不可篡改的数据库”。&lt;/p&gt;
 &lt;h3 id=&#34;传统数据库-vs-区块链数据库&#34;&gt;传统数据库 vs. 区块链数据库&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;传统数据库&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;

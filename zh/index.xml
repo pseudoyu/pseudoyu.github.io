@@ -2882,6 +2882,360 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
     </item>
     
     <item>
+      <title>COMP7801 Topic 1b Database Indexing</title>
+      <link>https://www.pseudoyu.com/zh/2021/01/30/comp7801_topic1b/</link>
+      <pubDate>Sat, 30 Jan 2021 01:18:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/01/30/comp7801_topic1b/</guid>
+      
+        <description>&lt;h2 id=&#34;database-indexing&#34;&gt;Database Indexing&lt;/h2&gt;
+&lt;h3 id=&#34;concepts&#34;&gt;Concepts&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Indexing mechanisms used to speed up access to desired data&lt;/li&gt;
+&lt;li&gt;Search Key
+&lt;ul&gt;
+&lt;li&gt;An attribute or a set of attributes used to look up records in a file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;An index file consists of records (called index entries) of the form &lt;code&gt;search key - pointer&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Index files are typically much smaller than the original file&lt;/li&gt;
+&lt;li&gt;Two basic kinds of indices
+&lt;ul&gt;
+&lt;li&gt;Ordered indices:  search keys are stored in sorted order&lt;/li&gt;
+&lt;li&gt;Hash indices:  search keys are distributed across &amp;ldquo;buckets&amp;rdquo; using a &amp;ldquo;hash function&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/indexing_example.png&#34; alt=&#34;indexing_example&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;good-index&#34;&gt;Good Index&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Index quality is evaluated by several factors
+&lt;ul&gt;
+&lt;li&gt;Access types supported by the index efficiently
+&lt;ul&gt;
+&lt;li&gt;records with a specified value in the attribute (equality query)&lt;/li&gt;
+&lt;li&gt;or records with an attribute value falling in a specified range of values (range query)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Access time – query response time&lt;/li&gt;
+&lt;li&gt;Insertion time – data record insertion time&lt;/li&gt;
+&lt;li&gt;Deletion time – data record deletion time&lt;/li&gt;
+&lt;li&gt;Space overhead – size of the index file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;classification-of-indexes&#34;&gt;Classification of Indexes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Primary index
+&lt;ul&gt;
+&lt;li&gt;In a sequentially ordered file, the index whose search key specifies the sequential order of the file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Secondary index
+&lt;ul&gt;
+&lt;li&gt;an index whose search key specifies an order different from the sequential order of the file&lt;/li&gt;
+&lt;li&gt;Also called non-clustered index&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/classification_of_indexing.png&#34; alt=&#34;classification_of_indexing&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Dense index
+&lt;ul&gt;
+&lt;li&gt;Index record appears for every search-key value in the file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Sparse Index
+&lt;ul&gt;
+&lt;li&gt;Contains index records for only some search-key values&lt;/li&gt;
+&lt;li&gt;Applicable when records are sequentially ordered on search-key&lt;/li&gt;
+&lt;li&gt;Less space and less maintenance overhead for insertions and deletions&lt;/li&gt;
+&lt;li&gt;Generally slower than dense index for locating records&lt;/li&gt;
+&lt;li&gt;Good tradeoff: sparse index with an index entry for every block in file, corresponding to least search-key value in the block&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/classification_of_indexing_2.png&#34; alt=&#34;classification_of_indexing_2&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;primary-and-secondary-indices&#34;&gt;Primary and Secondary Indices&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Secondary indices have to be dense&lt;/li&gt;
+&lt;li&gt;Indices offer substantial benefits when searching for records
+&lt;ul&gt;
+&lt;li&gt;Index is much smaller than relation file (cheap scan)&lt;/li&gt;
+&lt;li&gt;Index can be ordered (fast search)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;When a file is modified, every index on the file must be updated
+&lt;ul&gt;
+&lt;li&gt;Updating indices imposes overhead on database modification&lt;/li&gt;
+&lt;li&gt;Indexes should be used with care&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Sequential scan using primary index is efficient, but a sequential scan using a secondary index is expensive
+&lt;ul&gt;
+&lt;li&gt;Each record access may fetch a new block from disk&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;multilevel-index&#34;&gt;Multilevel Index&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;If index does not fit in memory, access becomes expensive&lt;/li&gt;
+&lt;li&gt;To reduce number of disk accesses to index records, treat 1st level of index kept on disk as a sequential file and construct a sparse index on it
+&lt;ul&gt;
+&lt;li&gt;outer index – a sparse index on 1st-level index file&lt;/li&gt;
+&lt;li&gt;inner index – the 1st-level index file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;If even outer index is too large to fit in main memory, yet another level of index can be created, and so on&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/multilevel_index_example.png&#34; alt=&#34;multilevel_index_example&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;b-tree-index-files&#34;&gt;B+-Tree Index Files&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A dynamic, multi-level index&lt;/li&gt;
+&lt;li&gt;Advantage
+&lt;ul&gt;
+&lt;li&gt;automatically reorganizes itself with small local changes, in the face of insertions and deletions&lt;/li&gt;
+&lt;li&gt;Reorganization of entire file is not required to maintain performance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Disadvantage of B+-trees
+&lt;ul&gt;
+&lt;li&gt;Extra insertion and deletion overhead, space overhead&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Advantages of B+-trees outweigh disadvantages, and they are used extensively&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;basic-properties&#34;&gt;Basic Properties&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Disk-based tree structure
+&lt;ul&gt;
+&lt;li&gt;every node of the tree is a block and has an address (block-id) on the disk&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Multiway tree
+&lt;ul&gt;
+&lt;li&gt;each node has multiple children (between n/2 and n, where n/2 is the order or degree of the tree)&lt;/li&gt;
+&lt;li&gt;Therefore, at least 50% of the space in a node is guaranteed to be occupied (this rule may not apply to tree root)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Balanced tree
+&lt;ul&gt;
+&lt;li&gt;all paths from the root to a leaf have the same length&lt;/li&gt;
+&lt;li&gt;guarantees good search performance (to be seen later)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Disjoint partition of attribute domain into ranges
+&lt;ul&gt;
+&lt;li&gt;each sub-tree indexes a range in the attribute domain&lt;/li&gt;
+&lt;li&gt;the entries of a directory node define the separators between domain intervals&lt;/li&gt;
+&lt;li&gt;leaf nodes store index entries and pointers to the relation file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/B_Plus_Tree_Example.png&#34; alt=&#34;B_Plus_Tree_Example&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;non-leaf-nodes-in-b-trees&#34;&gt;Non-Leaf Nodes in B+-Trees&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Each non-leaf node contains up to n-1 search key values and up to n pointers&lt;/li&gt;
+&lt;li&gt;All non-leaf nodes (except root) contain at least n/2 pointers (n/2 is sometimes called the minimum fan-out or degree)&lt;/li&gt;
+&lt;li&gt;Non leaf nodes form a multi-level sparse index on the leaf nodes.  For a non-leaf node with m pointers
+&lt;ul&gt;
+&lt;li&gt;All the search-keys in the subtree to which P1 points are less than K1&lt;/li&gt;
+&lt;li&gt;For 2 &amp;lt;= i &amp;lt;= n – 1, all the search-keys in the subtree to which Pi points have values greater than or equal to Ki–1 and smaller than Km–1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/B_Plus_Tree_Non_Leaf_Node.png&#34; alt=&#34;B_Plus_Tree_Non_Leaf_Node&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;leaf-node-in-a-b-tree&#34;&gt;Leaf Node in a B+-Tree&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Contains between (n-1)/2 and n-1 entries&lt;/li&gt;
+&lt;li&gt;Each index entry is a search key value + a record-id&lt;/li&gt;
+&lt;li&gt;If Li, Lj are leaf nodes and i &amp;lt; j, Li’s search-key values are all smaller than Lj’s search-key values&lt;/li&gt;
+&lt;li&gt;Each leaf node is linked with a pointer to the next node&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;observations&#34;&gt;Observations&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Since the inter-node connections are done by pointers, &amp;ldquo;logically&amp;rdquo; close blocks need not be “physically” close
+&lt;ul&gt;
+&lt;li&gt;Nodes of the tree are dynamically created/deleted, so we cannot guarantee physical closeness&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The non-leaf levels of the B+-tree form a hierarchy of sparse indices&lt;/li&gt;
+&lt;li&gt;The B+-tree contains a relatively small number of levels (logarithmic in the size of the main file), thus searches can be conducted efficiently&lt;/li&gt;
+&lt;li&gt;Insertions and deletions to the main file can be handled efficiently (in logarithmic time)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;queries&#34;&gt;Queries&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Find all records with a search-key value of k&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Start with the root node
+&lt;ul&gt;
+&lt;li&gt;Examine the node for the smallest search-key value &amp;gt; k&lt;/li&gt;
+&lt;li&gt;If such a value exists, assume it is Ki.  Then follow Pi to the child node. (E.g. P2 is for keys in  K1 &amp;lt;= Keys &amp;lt; K2 )&lt;/li&gt;
+&lt;li&gt;Otherwise k &amp;gt;= Kn–1, where there are n pointers in the node.  Then follow Pn to the child node&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;If the node reached by following the pointer above is not a leaf node, repeat the above procedure on the node, and follow the corresponding pointer&lt;/li&gt;
+&lt;li&gt;Eventually reach a leaf node.  If for some i, key Ki = k  follow pointer Pi  to the desired record.  Else no record with search-key value k exists&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In processing a query, a path is traversed in the tree from the root to some leaf node&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If there are K search-key values in the file, the path is not longer than log(n/2)(K). (The degree of a node is no less than n/2)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A node has generally the same size of a disk block, typically 4 kilobytes, and n is typically around 100 (40 bytes per index entry)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;With 1 million search key values and n/2 = 50, at most log50(1,000,000) = 4 nodes are accessed in a lookup&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Contrast this with a balanced binary tree with 1 million search key values — around 20 nodes are accessed in a lookup&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(log2(1,000,000) ~= 20)&lt;/li&gt;
+&lt;li&gt;above difference is significant since every node access may need a disk I/O, costing around 10 milliseconds!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Similar result for a binary search of an ordered sequential file&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;range-queries&#34;&gt;Range Queries&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Find all records with a search-key value between k and m (k&amp;lt;m)
+&lt;ul&gt;
+&lt;li&gt;Start with the root node
+&lt;ul&gt;
+&lt;li&gt;Examine the node for the smallest search-key value &amp;gt; k&lt;/li&gt;
+&lt;li&gt;If such a value exists, assume it is Kj
+&lt;ul&gt;
+&lt;li&gt;Then follow Pi to the child node&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Otherwise k &amp;gt;= Kn–1, where there are n pointers in the node
+&lt;ul&gt;
+&lt;li&gt;Then follow Pn to the child node.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;If the node reached by following the pointer above is not a leaf node, repeat the above procedure on the node, and follow the corresponding pointer&lt;/li&gt;
+&lt;li&gt;Eventually reach a leaf node.  If for some i, k &amp;lt;= Ki &amp;lt;= m follow pointer Pi  to the desired record. Continue with next entry Ki+1, while Ki+1 &amp;lt;= m. If at end of leaf node follow pointer to next node, until Ki &amp;gt;m or end of index&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/B_Plus_Tree_Range_Query.png&#34; alt=&#34;B_Plus_Tree_Range_Query&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;insertion&#34;&gt;Insertion&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Find the leaf node in which the search-key value to be inserted  would appear&lt;/li&gt;
+&lt;li&gt;If the search-key value is already there in the leaf node, record is added to file and if necessary one more pointer is associated with the search key value&lt;/li&gt;
+&lt;li&gt;If the search-key value is not there, then add the record to the main file. Then
+&lt;ul&gt;
+&lt;li&gt;If there is room in the leaf node, insert (key-value, pointer) pair in the leaf node&lt;/li&gt;
+&lt;li&gt;Otherwise, split the node (along with the new (key-value, pointer) entry) as discussed in the next slides&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/B_Plus_Tree_Insertion.png&#34; alt=&#34;B_Plus_Tree_Insertion&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;splitting&#34;&gt;Splitting&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Splitting a node
+&lt;ul&gt;
+&lt;li&gt;take the (search-key value, pointer) pairs (including the one being inserted) in sorted order.  Place the first n/2 in the original node, and the rest in a new node&lt;/li&gt;
+&lt;li&gt;let the new node be p, and let k be the least key value in p.  Insert (k,p) in the parent of the node being split. If the parent is full, split it and propagate the split further up&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The splitting of nodes proceeds upwards till a node that is not full is found.  In the worst case the root node may be split increasing the height of the tree by 1&lt;/li&gt;
+&lt;li&gt;Non-leaf node splitting
+&lt;ul&gt;
+&lt;li&gt;Overflown node has n+1 pointers and n values&lt;/li&gt;
+&lt;li&gt;Leave first n/2 key values and n/2+1 pointers to original node&lt;/li&gt;
+&lt;li&gt;Move last n/2 key values and n/2+1 pointers to new node&lt;/li&gt;
+&lt;li&gt;insert (middle key value, pointer to new node) to parent node&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/B_Plus_Tree_splitting.png&#34; alt=&#34;B_Plus_Tree_splitting&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;deletion&#34;&gt;Deletion&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Find the record to be deleted, and remove it from the relation file&lt;/li&gt;
+&lt;li&gt;Remove (search-key value, record-id) of deleted record from the leaf node of the B+-tree&lt;/li&gt;
+&lt;li&gt;If the node has too few entries due to the removal, and the entries in the node and a sibling fit into a single node, then
+&lt;ul&gt;
+&lt;li&gt;Insert all the search-key values in the two nodes into a single node (the one on the left), and delete the other node. (Deletion triggers a merge)&lt;/li&gt;
+&lt;li&gt;Delete the pair (Ki–1, Pi), where Pi is the pointer to the deleted node, from its parent, recursively using the above procedure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Otherwise, if the node has too few entries due to the removal, and the entries in the node and a sibling does not fit into a single node, then
+&lt;ul&gt;
+&lt;li&gt;Redistribute the pointers between the node and a sibling such that both have more than the minimum number of entries. (Deletion and rebalancing)&lt;/li&gt;
+&lt;li&gt;Update the corresponding search-key value in the parent of the node&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The node deletions may cascade upwards until a node which has n/2 or more pointers is found.  If the root node has only one pointer after deletion, it is deleted and the sole child becomes the root&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/B_Plus_Tree_deletion.png&#34; alt=&#34;B_Plus_Tree_deletion&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;static-hashing&#34;&gt;Static Hashing&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A bucket is a unit of storage containing one or more records (a bucket is typically a disk block)&lt;/li&gt;
+&lt;li&gt;In a hash file organization we obtain the bucket of a record directly from its search-key value using a hash function&lt;/li&gt;
+&lt;li&gt;Hash function h is a function from the set of all search-key values K to the set of all bucket addresses B&lt;/li&gt;
+&lt;li&gt;Hash function is used to locate records for access, insertion as well as deletion&lt;/li&gt;
+&lt;li&gt;Records with different search-key values may be mapped to the same bucket; thus entire bucket has to be searched sequentially to locate a record. (Collision)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/indexing_hashing.png&#34; alt=&#34;indexing_hashing&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;hash-function&#34;&gt;Hash Function&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Worst case has function maps all search-key values to the same bucket; this makes access time proportional to the number of search-key values in the file&lt;/li&gt;
+&lt;li&gt;An ideal hash function is uniform, i.e., each bucket is assigned the same number of search-key values from the set of all possible values&lt;/li&gt;
+&lt;li&gt;Ideal hash function is random, so each bucket will have the same number of records assigned to it irrespective of the actual distribution of search-key values in the file&lt;/li&gt;
+&lt;li&gt;Typical hash functions perform computation on the internal binary representation of the search-key
+&lt;ul&gt;
+&lt;li&gt;For example, for a string search-key, the binary representations of all the characters in the string could be added and the sum modulo the number of buckets could be returned&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;handling-of-bucket-overflows&#34;&gt;Handling of Bucket Overflows&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Bucket overflow can occur because of
+&lt;ul&gt;
+&lt;li&gt;Insufficient buckets&lt;/li&gt;
+&lt;li&gt;Skew in distribution of records.  This can occur due to two reasons
+&lt;ul&gt;
+&lt;li&gt;multiple records have same search-key value&lt;/li&gt;
+&lt;li&gt;chosen hash function produces non-uniform distribution of key values&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Although the probability of bucket overflow can be reduced, it cannot be eliminated; it is handled by using overflow buckets&lt;/li&gt;
+&lt;li&gt;Overflow chaining / closed hashing – the overflow buckets of a given bucket are chained together in a linked list&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;hash-indices&#34;&gt;Hash Indices&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Hashing can be used not only for file organization, but also for index-structure creation&lt;/li&gt;
+&lt;li&gt;A hash index organizes the search keys, with their associated record pointers, into a hash file structure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/Hash_Index.png&#34; alt=&#34;Hash_Index&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;deficiencies-of-static-hashing&#34;&gt;Deficiencies of Static Hashing&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;In static hashing, function h maps search-key values to a fixed set of B of bucket addresses
+&lt;ul&gt;
+&lt;li&gt;Databases grow with time.  If initial number of buckets is too small, performance will degrade due to too much overflows&lt;/li&gt;
+&lt;li&gt;If file size at some point in the future is anticipated and number of buckets allocated accordingly, significant amount of space will be wasted initially&lt;/li&gt;
+&lt;li&gt;If database shrinks, again space will be wasted&lt;/li&gt;
+&lt;li&gt;One option is periodic re-organization of the file with a new hash function, but it is very expensive.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;These problems can be avoided by using techniques that allow the number of buckets to be modified dynamically (dynamic hashing)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>COMP7103 Topic 1 Introduction</title>
       <link>https://www.pseudoyu.com/zh/2021/01/28/comp7103_topic1/</link>
       <pubDate>Thu, 28 Jan 2021 01:18:17 +0800</pubDate>
@@ -3975,52 +4329,6 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
 &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;INTERRUPTING&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
 &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;INTERRUPTED&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Java学习 - 文件与I/O流</title>
-      <link>https://www.pseudoyu.com/zh/2020/12/02/java_note_io/</link>
-      <pubDate>Wed, 02 Dec 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/12/02/java_note_io/</guid>
-      
-        <description>&lt;h2 id=&#34;io流&#34;&gt;IO流&lt;/h2&gt;
-&lt;h3 id=&#34;分类&#34;&gt;分类&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;流的流向
-&lt;ul&gt;
-&lt;li&gt;输入流&lt;/li&gt;
-&lt;li&gt;输出流&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;操作单元
-&lt;ul&gt;
-&lt;li&gt;字节流&lt;/li&gt;
-&lt;li&gt;字符流&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;角色
-&lt;ul&gt;
-&lt;li&gt;节点流&lt;/li&gt;
-&lt;li&gt;处理流&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;抽象类基类&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;InputStream（字节流）/Reader（字符流）&lt;/li&gt;
-&lt;li&gt;OutputStream（字节流）/Writer（字符流）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;为什么有了字节流还需要字符流？&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;字符流是由虚拟机将字节转换得到的，过程耗时且容易出现编码问题，所以，提供一个直接操作字符的接口方便我们对字符进行流操作，如果音频文件、图片等媒体文件则用字节流比较好，而如果涉及到字符则使用字符流比较好，Socket, ServerSocket。&lt;/p&gt;
-&lt;h3 id=&#34;bio-nio-aio&#34;&gt;BIO, NIO, AIO&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;BIO是同步阻塞I/O模式，数据的读取写入必须阻塞在一个线程内等待其完成。在活动连接数较低（小于单机1000）的情况下比较适用，模型简单，不需要考虑系统过载、限流等问题。但是面对较高并发量的时候不适用。&lt;/li&gt;
-&lt;li&gt;NIO是同步非阻塞模型，对应java.nio包，提供Channel, Selector, Buffer等抽象。支持面向缓冲、基于通道的I/O方法。提供了SocketChannel，ServerSocketChannel量中国套接字通道实现，都支持阻塞和非阻塞。因此，对于低负载和并发的应用程序，可以使用同步阻塞I/O来提升开发效率和更好的维护性；对于高负载和并发的应用（网络程序），可以使用NIO的非阻塞模式来开发。NIO的IO行为是同步的，对于NIO来说，业务线程是在IO操作准备好时，得到通知，接着由这个线程自行进行IO操作。&lt;/li&gt;
-&lt;li&gt;AIO是异步非阻塞的I/O模型，基于事件和回调机制，应用操作后会直接返回，不会阻塞，当后台处理完成，操作系统会通知相应线程进行后续操作。AIO应用不广泛，Netty尝试过但是放弃了。&lt;/li&gt;
-&lt;/ul&gt;
-</description>
       
     </item>
     

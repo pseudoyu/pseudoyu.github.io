@@ -1928,6 +1928,198 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
     </item>
     
     <item>
+      <title>COMP7103 Topic 2 Association Rules</title>
+      <link>https://www.pseudoyu.com/zh/2021/02/05/comp7103_topic2/</link>
+      <pubDate>Fri, 05 Feb 2021 01:18:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/02/05/comp7103_topic2/</guid>
+      
+        <description>&lt;h1 id=&#34;comp7103-data-mining&#34;&gt;COMP7103 Data Mining&lt;/h1&gt;
+&lt;h2 id=&#34;topic-2-association-rules&#34;&gt;Topic 2 Association Rules&lt;/h2&gt;
+&lt;h3 id=&#34;market-basket-model&#34;&gt;Market-Basket Model&lt;/h3&gt;
+&lt;p&gt;A general many-many mapping (association) between two kinds of things&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A large set of items, e.g., things sold in a supermarket&lt;/li&gt;
+&lt;li&gt;A large set of baskets, each of which is a small set of the items, e.g., the things one customer buys on one day&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;frequent-itemsets&#34;&gt;Frequent Itemsets&lt;/h3&gt;
+&lt;h4 id=&#34;support&#34;&gt;Support&lt;/h4&gt;
+&lt;p&gt;Support for itemset I (s(I)) = the number of baskets containing all items in I&lt;/p&gt;
+&lt;p&gt;Given a support threshold s, sets of items that appear in at least s baskets are called frequent itemsets&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/frequent_itemsets.png&#34; alt=&#34;frequent_itemsets&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;monotonicity&#34;&gt;Monotonicity&lt;/h4&gt;
+&lt;p&gt;For any sets of items I and any set of items J, it holds that&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/association_rules_monotonicity.png&#34; alt=&#34;association_rules_monotonicity&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;applications&#34;&gt;Applications&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;given that many people buy beer and diapers together
+&lt;ul&gt;
+&lt;li&gt;Run a sale on diapers; raise price of beer&lt;/li&gt;
+&lt;li&gt;Only useful if many buy diapers &amp;amp; beer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Items that appear together too often could represent plagiarism&lt;/li&gt;
+&lt;li&gt;Unusual words appearing together in a large number of documents&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;association-rules&#34;&gt;Association Rules&lt;/h3&gt;
+&lt;p&gt;If-then rules I → j about the contents of baskets, I is a set of items and j is an item&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;i → j means
+&lt;ul&gt;
+&lt;li&gt;if a basket contains all the items in I then it is likely to contain j&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;confidence&#34;&gt;Confidence&lt;/h4&gt;
+&lt;p&gt;The probability of j given I&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/association_rules_confidence.png&#34; alt=&#34;association_rules_confidence&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/association_rules_confidence_example.png&#34; alt=&#34;association_rules_confidence_example&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;finding-association-rules&#34;&gt;Finding Association Rules&lt;/h4&gt;
+&lt;p&gt;find all association rules with support ≥ s and confidence ≥ c&lt;/p&gt;
+&lt;h4 id=&#34;computation-model&#34;&gt;Computation Model&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Data is kept in raw files rather than in a database system
+&lt;ul&gt;
+&lt;li&gt;Stored on disk&lt;/li&gt;
+&lt;li&gt;Stored basket-by-basket&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The true cost of mining disk-resident data is usually the number of disk I/O’s&lt;/li&gt;
+&lt;li&gt;In practice, association-rule algorithms read data in passes – all baskets read in turn&lt;/li&gt;
+&lt;li&gt;we measure the cost by the number of passes an algorithm takes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;association-rules-algorithms&#34;&gt;Association Rules Algorithms&lt;/h3&gt;
+&lt;h4 id=&#34;naïve-algorithm&#34;&gt;Naïve Algorithm&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Read file once, counting in main memory the occurrences of each pair
+&lt;ul&gt;
+&lt;li&gt;From each basket of n items, generate its n (n -1)/2 pairs by two nested loops&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Fails if (#items)^2 exceeds main memory&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;a-priori-algorithm&#34;&gt;A-Priori Algorithm&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;A two-pass approach called a-priori limits the need for main memory&lt;/li&gt;
+&lt;li&gt;Key idea: monotonicity
+&lt;ul&gt;
+&lt;li&gt;If a set of items appears at least s times, so does every subset&lt;/li&gt;
+&lt;li&gt;For pairs: if item i does not appear in s baskets, then no pair including i can appear in s baskets&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Process
+&lt;ul&gt;
+&lt;li&gt;Pass 1
+&lt;ul&gt;
+&lt;li&gt;Read baskets and count in main memory the occurrences of each item (Requires only memory proportional to #items)
+&lt;ul&gt;
+&lt;li&gt;Items that appear at least s times are the frequent items&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Pass 2
+&lt;ul&gt;
+&lt;li&gt;Read baskets again and count in main memory only those pairs both of which were found in pass 1 to be frequent
+&lt;ul&gt;
+&lt;li&gt;To count number of item pairs use a hash function&lt;/li&gt;
+&lt;li&gt;Requires memory proportional to square of frequent items only, plus a list of the frequent items, plus space for hashing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/APriori_Algorithm.png&#34; alt=&#34;APriori_Algorithm&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;One pass for each k&lt;/li&gt;
+&lt;li&gt;Needs room in main memory to count each candidate k -set&lt;/li&gt;
+&lt;li&gt;For typical market-basket data and reasonable support (e.g., 1%), k = 2 requires the most memory&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;pcy-algorithm&#34;&gt;PCY Algorithm&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Main observation: during pass 1 of A-priori, most memory is idle&lt;/li&gt;
+&lt;li&gt;Use that memory to keep additional info to improve storage during pass 2 of A-priori&lt;/li&gt;
+&lt;li&gt;Passes &amp;gt; 2 are the same as in A-Priori&lt;/li&gt;
+&lt;li&gt;Process
+&lt;ul&gt;
+&lt;li&gt;Pass 1
+&lt;ul&gt;
+&lt;li&gt;Use a hash function which bucketizes item pairs, that is, maps them to integers in [1,k]&lt;/li&gt;
+&lt;li&gt;Each bucket i in [1,k] is associated with a counter ci&lt;/li&gt;
+&lt;li&gt;During pass 1, as we examine a basket (e.g. {m,b,d,o})
+&lt;ul&gt;
+&lt;li&gt;update counters of single items&lt;/li&gt;
+&lt;li&gt;Generate all item pairs for that basket, hash each of them and add 1 to the corr. counter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Pass 2
+&lt;ul&gt;
+&lt;li&gt;Count all pairs {i, j } that meet the conditions for being a candidate pair
+&lt;ul&gt;
+&lt;li&gt;Both i and j are frequent items&lt;/li&gt;
+&lt;li&gt;The pair {i, j }, hashes to a frequent bucket&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Ignore all pairs belonging to non-frequent buckets (do not use a counter for them)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;simple-algorithm&#34;&gt;Simple Algorithm&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Take a random sample of the market baskets
+&lt;ul&gt;
+&lt;li&gt;give a full pass on the data and keep a basket in main memory with probability p&lt;/li&gt;
+&lt;li&gt;A random sample is the best representative of a dataset&lt;/li&gt;
+&lt;li&gt;Keeping only the first baskets might not contain iPhones for example&lt;/li&gt;
+&lt;li&gt;If we cannot have a sample large enough then
+&lt;ul&gt;
+&lt;li&gt;Remove false positives with one more pass&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Run A-priori or one of its improvements in main memory, so you don’t pay for disk I/O each time you give a pass on the data
+&lt;ul&gt;
+&lt;li&gt;Be sure you leave enough space for counts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Adjust the support threshold s accordingly&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;son-algorithm&#34;&gt;SON Algorithm&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Two passes&lt;/li&gt;
+&lt;li&gt;No false positives or false negatives&lt;/li&gt;
+&lt;li&gt;Divide the dataset into chunks, where each chunk contains a subset of baskets&lt;/li&gt;
+&lt;li&gt;Process
+&lt;ul&gt;
+&lt;li&gt;Pass 1
+&lt;ul&gt;
+&lt;li&gt;Divide the dataset into chunks, where each chunk contains a subset of baskets&lt;/li&gt;
+&lt;li&gt;Let pi such that the ith chunk contains a fraction pi of the dataset&lt;/li&gt;
+&lt;li&gt;For each chunk i compute all frequent itemsets with support p i x s and store them on disk. This is the set of candidates for next pass&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Pass 2
+&lt;ul&gt;
+&lt;li&gt;Read all frequent itemsets found in the previous pass (candidates)&lt;/li&gt;
+&lt;li&gt;For each of them count the number of occurrences and output only those with support at least s&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>COMP7801 Topic 1a Relational Database</title>
       <link>https://www.pseudoyu.com/zh/2021/01/30/comp7801_topic1a/</link>
       <pubDate>Sat, 30 Jan 2021 01:18:17 +0800</pubDate>
@@ -3667,224 +3859,6 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
 &lt;li&gt;偏向锁加锁和解锁不需要额外的消耗，和执行非同步方法相比进存在纳秒级的差距，但如果线程间存在锁竞争会带来额外的锁撤销的消耗，适用于只有一个线程访问同步块场景&lt;/li&gt;
 &lt;li&gt;轻量级锁竞争的线程不会阻塞，提高了程序的相应速度，但如果是种得不到锁竞争的线程会自旋消耗CPU，适合追求响应速度、同步块执行速度非常快的场景&lt;/li&gt;
 &lt;li&gt;线程竞争不使用自旋，不会消耗CPU，但线程阻塞、相应时间缓慢，适合追求吞吐量、同步块执行速度较长的场景&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Java学习 - 常用方法</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/27/java_note_methods/</link>
-      <pubDate>Fri, 27 Nov 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/27/java_note_methods/</guid>
-      
-        <description>&lt;h2 id=&#34;string与stringbuffer&#34;&gt;String与StringBuffer&lt;/h2&gt;
-&lt;h3 id=&#34;string&#34;&gt;String&lt;/h3&gt;
-&lt;p&gt;特征&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Java8中，String内部使用char数组存储数据&lt;/li&gt;
-&lt;li&gt;Java9后，String类的实现改用了byte数组存储字符串，并使用coder标识编码&lt;/li&gt;
-&lt;li&gt;字符串不可变
-&lt;ul&gt;
-&lt;li&gt;实现
-&lt;ul&gt;
-&lt;li&gt;value数组被声明为final&lt;/li&gt;
-&lt;li&gt;String内部没有能改变value数组的方法&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;作用
-&lt;ul&gt;
-&lt;li&gt;可以缓存hash值，如hashmap的key&lt;/li&gt;
-&lt;li&gt;String Pool的使用需要String不可变&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;可以通过char[]数组生成新的对象&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;String Pool&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;保存着所有字符串字面量（编译时期确定）&lt;/li&gt;
-&lt;li&gt;通过String的intern()方法在运行过程中添加&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;abc&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;abc&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-
-&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s3&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;intern&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s4&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;intern&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-
-&lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s3&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s4&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// true
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;创建方法&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;直接使用字符串常量&lt;/li&gt;
-&lt;li&gt;调用String类构造函数&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Hello World!&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Hello&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;World&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;访问方法&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;charAt(): 可以通过索引需要获取字符&lt;/li&gt;
-&lt;li&gt;indexOf(): 可以通过字符获取索引&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;常用方法&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;subString(): 截取子字符串&lt;/li&gt;
-&lt;li&gt;split(): 切割字符串&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;stringbuffer&#34;&gt;StringBuffer&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;可变&lt;/li&gt;
-&lt;li&gt;对StringBuffer对象本身进行操作&lt;/li&gt;
-&lt;li&gt;线程安全，内部使用synchronized进行同步&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;stringbuilder&#34;&gt;StringBuilder&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;可变&lt;/li&gt;
-&lt;li&gt;未加同步锁，线程不安全&lt;/li&gt;
-&lt;li&gt;性能比StringBuffer高10%-15%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;使用总结&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;操作少量数据用String&lt;/li&gt;
-&lt;li&gt;单线程下操作字符串缓冲区下操作大量数据，适用StringBuilder&lt;/li&gt;
-&lt;li&gt;多线程下操作字符串缓冲区下操作大量数据，使用StringBuffer&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;包装类&#34;&gt;包装类&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;和基本数据类型对应的类&lt;/li&gt;
-&lt;li&gt;类型
-&lt;ul&gt;
-&lt;li&gt;Byte&lt;/li&gt;
-&lt;li&gt;Short&lt;/li&gt;
-&lt;li&gt;Integer&lt;/li&gt;
-&lt;li&gt;Long&lt;/li&gt;
-&lt;li&gt;Float&lt;/li&gt;
-&lt;li&gt;Double&lt;/li&gt;
-&lt;li&gt;Character&lt;/li&gt;
-&lt;li&gt;Boolean&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;自动装箱与拆箱
-&lt;ul&gt;
-&lt;li&gt;Integer x = 2; 装箱，自动调用了Integer.valueOf(2）&lt;/li&gt;
-&lt;li&gt;int y = x;拆箱，调用了X.intValue()&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;常量池技术，缓存数据 Character[0,127]，Boolean[True,False]，Float、Double没有实现常量池技术，其他[-128,127]，超出范围则仍然创建新对象
-&lt;ul&gt;
-&lt;li&gt;new Integer(123)每次都会新建一个对象&lt;/li&gt;
-&lt;li&gt;Integer.valueOf(123)会使用缓存池中的对象&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;浮点数之间的等值判断，基本数据类型不能用==来比较，包装数据类型不能用equals来判断&lt;/li&gt;
-&lt;li&gt;使用BigDecimal来定义浮点数的值，再进行浮点数的运算操作，主要用于操作大浮点数
-&lt;ul&gt;
-&lt;li&gt;大小比较：a.compareTo(b)&lt;/li&gt;
-&lt;li&gt;保留小数：setScale(n, BigDecimal.ROUND_HALF_DOWN)&lt;/li&gt;
-&lt;li&gt;创建对象：BigDecimal(String)防止精度丢失&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;使用标准
-&lt;ul&gt;
-&lt;li&gt;所有的POJO类属性必须使用包装数据类型&lt;/li&gt;
-&lt;li&gt;RPC方法的返回值和参数必须使用包装数据类型&lt;/li&gt;
-&lt;li&gt;所有的局部变量使用基本数据类型&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;object通用方法&#34;&gt;Object通用方法&lt;/h2&gt;
-&lt;h3 id=&#34;equals&#34;&gt;equals&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;等价关系
-&lt;ul&gt;
-&lt;li&gt;自反性&lt;/li&gt;
-&lt;li&gt;对称性&lt;/li&gt;
-&lt;li&gt;传递性&lt;/li&gt;
-&lt;li&gt;一致性&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;相等关系
-&lt;ul&gt;
-&lt;li&gt;基本类型，==判断两个值是否相等&lt;/li&gt;
-&lt;li&gt;引用类型，==判断两个变量是否引用同一个对象&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;equals实现&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;检查是否为一个对象的引用，是则直接返回true&lt;/li&gt;
-&lt;li&gt;检查是否是同个类型，不是则返回false&lt;/li&gt;
-&lt;li&gt;将Object进行转型&lt;/li&gt;
-&lt;li&gt;判断每个关键域是否相等&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;equals与==的区别&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;==是判断两个对象地址是不是相等（因为Java只有按值传递，所以本质比较的都是值），即判断是不是同一个对象（基本数据类型比较值、引用数据类型比较内存地址）&lt;/li&gt;
-&lt;li&gt;equals不能比较基本数据类型的变量，equals方法存在Object类中&lt;/li&gt;
-&lt;li&gt;类没有覆盖equals方法的话等价于==，类覆盖了equals方法的话可以用来比较两个对象的内容相等&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;equals方法造成空指针异常的原因及解决方案&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;用值为null的引用类型变量调用equals方法（非静态方法）会抛出异常&lt;/li&gt;
-&lt;li&gt;应该使用常量或确认有值的量来调用equals&lt;/li&gt;
-&lt;li&gt;或者使用java.util.Objects#equals来进行比较
-&lt;ul&gt;
-&lt;li&gt;Objects.equals(null, &amp;ldquo;Test&amp;rdquo;);&lt;/li&gt;
-&lt;li&gt;如果a == null的话a.equals(b)就不会执行，避免空指针异常&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;null是所有引用类型（Object类型）的默认值&lt;/li&gt;
-&lt;li&gt;可以用 == 或 != 操作比较null值&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;hashcode&#34;&gt;hashCode()&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;确定对象在哈希表中的索引位置&lt;/li&gt;
-&lt;li&gt;是个本地方法，返回哈希值，将对象的内存地址转换为整数之后返回&lt;/li&gt;
-&lt;li&gt;equals()的两个对象哈希值一定相等，反之不一定&lt;/li&gt;
-&lt;li&gt;equals()应该覆盖hashCode()方法，保证两个对象哈希值相等&lt;/li&gt;
-&lt;li&gt;hashCode默认对堆上的对象产生独特值，如果没有重写hashCode，则无论如何也不会相等&lt;/li&gt;
-&lt;li&gt;HashSet和HashMap也都需要实现hashCode()方法
-&lt;ul&gt;
-&lt;li&gt;当对象加入HashSet值时，会先计算对象的hashcode来判断对象加入的位置，同时比较其他已加入对象的hashcode值，如果没有符合，则没重复出现，但是如果发现有相同的hashcode值的对象，会调用equals方法来检查是否真的相同，相同则不会加入，不同则加入到其他位置&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;clone&#34;&gt;clone()&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;是Object类的protected方法&lt;/li&gt;
-&lt;li&gt;如果没有实现Cloneable接口但是调用了clone()方法，会抛出CloneNotSupportedException&lt;/li&gt;
-&lt;li&gt;浅拷贝：拷贝对象和原始对象引用类型引用同个对象&lt;/li&gt;
-&lt;li&gt;深拷贝：拷贝对象和原始对象引用类型引用不同对象&lt;/li&gt;
-&lt;li&gt;风险与替代方案
-&lt;ul&gt;
-&lt;li&gt;会抛出异常&lt;/li&gt;
-&lt;li&gt;需要类型转换&lt;/li&gt;
-&lt;li&gt;可以用构造函数或拷贝工厂来拷贝一个对象&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;java组织序列化&#34;&gt;Java组织序列化&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;对于不想序列化的变量使用transient关键词修饰
-&lt;ul&gt;
-&lt;li&gt;阻止实例中那些用此关键字修饰的变量序列化&lt;/li&gt;
-&lt;li&gt;当对象被反序列化时，其不会被持久化和恢复&lt;/li&gt;
-&lt;li&gt;智能修饰变量，不能修饰类和方法&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;获取键盘输入的方法&#34;&gt;获取键盘输入的方法&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Scanner
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;Scanner&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;input&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Scanner&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;in&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;nextLine&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;BufferedReader
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;BufferedReader&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;input&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BufferedReader&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;InputStreamReader&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;in&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;readLine&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       

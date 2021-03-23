@@ -18,6 +18,15 @@ Application  Understanding  Group related documents for browsing, group genes an
     </item>
     
     <item>
+      <title>COMP7801 Topic 3 Spatial Networks</title>
+      <link>https://www.pseudoyu.com/en/2021/02/27/comp7801_topic3/</link>
+      <pubDate>Sat, 27 Feb 2021 01:18:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2021/02/27/comp7801_topic3/</guid>
+      <description>Background Network Distance  In many real applications accessibility of objects is restricted by a spatial network  Examples  Driver looking for nearest gas station Mobile user looking for nearest restaurant     Shortest path distance used instead of Euclidean distance SP(a,b) = path between a and b with the minimum accumulated length  Challenges  Euclidean distance is no longer relevant  R-tree may not be useful, when search is based on shortest path distance   Graph cannot be flattened to a one-dimensional space  Special storage and indexing techniques for graphs are required   Graph properties may vary  directed vs.</description>
+    </item>
+    
+    <item>
       <title>COMP7103 Topic 2 Association Rules</title>
       <link>https://www.pseudoyu.com/en/2021/02/25/comp7103_topic2/</link>
       <pubDate>Thu, 25 Feb 2021 01:18:17 +0800</pubDate>
@@ -200,18 +209,6 @@ Cell Handover
       <description>E-Commerce Presence Look Around New iPad Air 4 (2020) Presence by Apple Inc. Website Link
 The iPad Air 4 (2020) got shown off at Apple&amp;rsquo;s September event held on September 16. There is a specific designed website (mobile version included) for this product. I&amp;rsquo;d like to do an analysis towards this very impressive E-Commerce presence.
 Apple iPad Air product line is mainly targeted to educators/students, staffs and kids/teenagers. So, the most premium features this new product wants to convey to customers is its fancy appearance and powerful A14 Bionic for creation, study and entertainment.</description>
-    </item>
-    
-    <item>
-      <title>ECOM6013 Topic 4 Website Design, Testing and Maintenance</title>
-      <link>https://www.pseudoyu.com/en/2020/09/16/ecom6013_topic4/</link>
-      <pubDate>Wed, 16 Sep 2020 21:25:28 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/09/16/ecom6013_topic4/</guid>
-      <description>ECOM6013 E-Commerce Technologies Topic 4 Website Design, Testing and Maintenance Planing: The Systems Development Life Cycle
- Systems analysis/planing  Busisess objectives System functionalities Information requirements   Systems design Building the system Testing Implementation  Quality Consideration
- Navigation Accessibility Scalability Reliability Maintainability Usability Compatibility and interoperability Security Readability  In-House / Outsourcing (Hiring vendors to provide services)
- Build own / outsourcing Host own / outsourcing (preferred)  Implementation, Maintenance, and Optimization</description>
     </item>
     
   </channel>

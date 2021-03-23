@@ -6,7 +6,16 @@
     <description>Recent content in database on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 06 Feb 2021 01:18:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/database/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Feb 2021 01:18:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/database/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>COMP7801 Topic 3 Spatial Networks</title>
+      <link>https://www.pseudoyu.com/zh/2021/02/27/comp7801_topic3/</link>
+      <pubDate>Sat, 27 Feb 2021 01:18:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/02/27/comp7801_topic3/</guid>
+      <description>Background Network Distance  In many real applications accessibility of objects is restricted by a spatial network  Examples  Driver looking for nearest gas station Mobile user looking for nearest restaurant     Shortest path distance used instead of Euclidean distance SP(a,b) = path between a and b with the minimum accumulated length  Challenges  Euclidean distance is no longer relevant  R-tree may not be useful, when search is based on shortest path distance   Graph cannot be flattened to a one-dimensional space  Special storage and indexing techniques for graphs are required   Graph properties may vary  directed vs.</description>
+    </item>
+    
     <item>
       <title>COMP7801 Topic 2 Spatial Data Management</title>
       <link>https://www.pseudoyu.com/zh/2021/02/06/comp7801_topic2/</link>

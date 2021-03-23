@@ -18,6 +18,15 @@ Application  Understanding  Group related documents for browsing, group genes an
     </item>
     
     <item>
+      <title>COMP7801 Topic 3 Spatial Networks</title>
+      <link>https://www.pseudoyu.com/zh/2021/02/27/comp7801_topic3/</link>
+      <pubDate>Sat, 27 Feb 2021 01:18:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/02/27/comp7801_topic3/</guid>
+      <description>Background Network Distance  In many real applications accessibility of objects is restricted by a spatial network  Examples  Driver looking for nearest gas station Mobile user looking for nearest restaurant     Shortest path distance used instead of Euclidean distance SP(a,b) = path between a and b with the minimum accumulated length  Challenges  Euclidean distance is no longer relevant  R-tree may not be useful, when search is based on shortest path distance   Graph cannot be flattened to a one-dimensional space  Special storage and indexing techniques for graphs are required   Graph properties may vary  directed vs.</description>
+    </item>
+    
+    <item>
       <title>COMP7103 Topic 2 Association Rules</title>
       <link>https://www.pseudoyu.com/zh/2021/02/25/comp7103_topic2/</link>
       <pubDate>Thu, 25 Feb 2021 01:18:17 +0800</pubDate>
@@ -184,15 +193,6 @@ Application  Understanding  Group related documents for browsing, group genes an
       
       <guid>https://www.pseudoyu.com/zh/2020/12/05/java_note_concurrent_practice/</guid>
       <description>多线程入门类和接口 Java中使用多线程的方法 由于Java单继承多实现的特性，Runnable接口用起来比Thread更灵活 Runnable接</description>
-    </item>
-    
-    <item>
-      <title>Java学习 - 文件与I/O流</title>
-      <link>https://www.pseudoyu.com/zh/2020/12/02/java_note_io/</link>
-      <pubDate>Wed, 02 Dec 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/12/02/java_note_io/</guid>
-      <description>IO流 分类 流的流向 输入流 输出流 操作单元 字节流 字符流 角色 节点流 处理流 抽象类基类 InputStream（字节流）/Reader（字符流） Outp</description>
     </item>
     
   </channel>

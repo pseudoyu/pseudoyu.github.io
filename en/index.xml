@@ -413,6 +413,414 @@
     </item>
     
     <item>
+      <title>COMP7801 Topic 3 Spatial Networks</title>
+      <link>https://www.pseudoyu.com/en/2021/02/27/comp7801_topic3/</link>
+      <pubDate>Sat, 27 Feb 2021 01:18:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2021/02/27/comp7801_topic3/</guid>
+      
+        <description>&lt;h3 id=&#34;background&#34;&gt;Background&lt;/h3&gt;
+&lt;h4 id=&#34;network-distance&#34;&gt;Network Distance&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;In many real applications accessibility of objects is restricted by a spatial network
+&lt;ul&gt;
+&lt;li&gt;Examples
+&lt;ul&gt;
+&lt;li&gt;Driver looking for nearest gas station&lt;/li&gt;
+&lt;li&gt;Mobile user looking for nearest restaurant&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Shortest path distance&lt;/strong&gt; used instead of Euclidean distance&lt;/li&gt;
+&lt;li&gt;SP(a,b) = path between a and b with the minimum accumulated length&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;challenges&#34;&gt;Challenges&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Euclidean distance is no longer relevant
+&lt;ul&gt;
+&lt;li&gt;R-tree may not be useful, when search is based on shortest path distance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Graph cannot be flattened to a one-dimensional space
+&lt;ul&gt;
+&lt;li&gt;Special storage and indexing techniques for graphs are required&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Graph properties may vary
+&lt;ul&gt;
+&lt;li&gt;directed vs. undirected&lt;/li&gt;
+&lt;li&gt;length, time, etc. as edge weights&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;modeling-and-storing-spatial-networks&#34;&gt;Modeling and Storing Spatial Networks&lt;/h3&gt;
+&lt;h4 id=&#34;modeling-spatial-networks&#34;&gt;Modeling Spatial Networks&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Adjacency matrix only appropriate for dense graphs&lt;/li&gt;
+&lt;li&gt;Spatial networks are sparse: use adjacency lists instead&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/Modeling_Spatial_Networks.png&#34; alt=&#34;Modeling_Spatial_Networks&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;storing-large-spatial-networks&#34;&gt;Storing Large Spatial Networks&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Problem: adjacency lists representation may not fit in memory if graph is large&lt;/li&gt;
+&lt;li&gt;Solution:
+&lt;ul&gt;
+&lt;li&gt;partition adjacency lists to disk blocks (based on proximity)&lt;/li&gt;
+&lt;li&gt;create B+-tree index on top of partitions (based on node-id)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/Storing_Large_Spatial_Network.png&#34; alt=&#34;Storing_Large_Spatial_Network&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;shortest-path-search&#34;&gt;Shortest Path Search&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Given a graph G(V,E), and two nodes s,t in V, find the shortest path from s to t&lt;/li&gt;
+&lt;li&gt;A classic algorithmic problem&lt;/li&gt;
+&lt;li&gt;Studied extensively since the 1950’s&lt;/li&gt;
+&lt;li&gt;Several methods:
+&lt;ul&gt;
+&lt;li&gt;Dijkstra’s algorithm&lt;/li&gt;
+&lt;li&gt;A*-search&lt;/li&gt;
+&lt;li&gt;Bi-directional search&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;dijkstras-shortest-path-search&#34;&gt;Dijkstra’s Shortest Path Search&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;idea: incrementally explore the graph around s, visitingnodes in distance order to suntil t is found (like NN)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/Dijkstra_1.png&#34; alt=&#34;Dijkstra_1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/Dijkstra_2.png&#34; alt=&#34;Dijkstra_2&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;algorithm&#34;&gt;Algorithm&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/Dijkstra_Algorithm.png&#34; alt=&#34;Dijkstra_Algorithm&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;example&#34;&gt;Example&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/Dijkstra_Example.png&#34; alt=&#34;Dijkstra_Example&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;illustrating&#34;&gt;Illustrating&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Find the shortest path between a and b.&lt;/li&gt;
+&lt;li&gt;Worst-case performance O(|E| + |V|log|V| )&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;a-search&#34;&gt;A*-search&lt;/h3&gt;
+&lt;h4 id=&#34;description&#34;&gt;Description&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Dijkstra’s search explores nodes around s without a specific search direction until t is found&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Idea: improve Dijkstra’s algorithm by directing search towards t&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Due to triangular inequality, Euclidean distance is a lower bound of network distance&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use Euclidean distance to lower bound network distance based on known information:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Nodes are visited in increasing SPD(s,v)+dist(v,t) order
+&lt;ul&gt;
+&lt;li&gt;SPD(s,v): shortest path distance from s to v (computed by Dijkstra)&lt;/li&gt;
+&lt;li&gt;dist(v,t): Euclidean distance between v and t&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Original Dijkstra visits nodes in increasing SPD(s,v) order&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/A_Star_1.png&#34; alt=&#34;A_Star_1&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;example-1&#34;&gt;Example&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/A_Star_Example.png&#34; alt=&#34;A_Star_Example&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;illustrating-1&#34;&gt;Illustrating&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Find the shortest path between s and t.
+&lt;ul&gt;
+&lt;li&gt;f(p) = Dijkstra_dist(s, p) + Euclidean_dist(p, t)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;bi-directional-search&#34;&gt;Bi-directional search&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Dijkstra’s search explores nodes around s without a specific search direction until t is found&lt;/li&gt;
+&lt;li&gt;Idea: search can be performed concurrently from s and from t (backwards)&lt;/li&gt;
+&lt;li&gt;The shortest path tree of s and the (backward) shortest path tree of t are computed in concurrently
+&lt;ul&gt;
+&lt;li&gt;One queue Q_s for forward and one queue Q_t for backward search&lt;/li&gt;
+&lt;li&gt;Node visits are prioritized based on min(SPD(s,v), SPD(v,t))&lt;/li&gt;
+&lt;li&gt;If v already visited from s and v is in Qt, then candidate shortest path: p(s,v)+p(v,t)  (if v already visited from t and v in Q_s symmetric)&lt;/li&gt;
+&lt;li&gt;If v is visited by both s and t terminate search; report best candidate shortest path&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;example-2&#34;&gt;Example&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/Bi_Directional_Example.png&#34; alt=&#34;Bi_Directional_Example&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;discussions&#34;&gt;Discussions&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A* and bi-directional search can be combined to powerful search techniques&lt;/li&gt;
+&lt;li&gt;A* can only be applied if lower distance bounds are available&lt;/li&gt;
+&lt;li&gt;All versions of Dijkstra’s search require non-negative edge weights
+&lt;ul&gt;
+&lt;li&gt;Bellman-Ford is an algorithm for arbitrary negative edges&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;spatial-queries-over-spatial-networks&#34;&gt;Spatial queries over spatial networks&lt;/h2&gt;
+&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
+&lt;h4 id=&#34;sourcedestination-on-edges&#34;&gt;Source/Destination on Edges&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;We have assumed that points s and t are nodes of the network&lt;/li&gt;
+&lt;li&gt;In practice s and t could be arbitrary points on edges
+&lt;ul&gt;
+&lt;li&gt;Mobile user locations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Solve problem by introducing 2 more nodes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/Source_Destination_on_Edges.png&#34; alt=&#34;Source_Destination_on_Edges&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;spatial-queries-over-spatial-networks-1&#34;&gt;Spatial Queries over Spatial Networks&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Data:
+&lt;ul&gt;
+&lt;li&gt;A (static) spatial network (e.g., city map)&lt;/li&gt;
+&lt;li&gt;A (dynamic) set of spatial objects&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Spatial queries based on network distance:
+&lt;ul&gt;
+&lt;li&gt;Selections. Ex: find gas stations within 10km driving distance from here&lt;/li&gt;
+&lt;li&gt;Nearest neighbor search. Ex: find k nearest restaurants from present position&lt;/li&gt;
+&lt;li&gt;Joins. Ex: find pairs of restaurants and hotels at most 100m from each other&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/Spatial_Queries_over_Spatial_Networks.png&#34; alt=&#34;Spatial_Queries_over_Spatial_Networks&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;methodology&#34;&gt;Methodology&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Store (and index) the spatial network
+&lt;ul&gt;
+&lt;li&gt;Graph component (indexes connectivity information)&lt;/li&gt;
+&lt;li&gt;Spatial component (indexes coordinates of nodes, edges, etc.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Store (and index) the sets of spatial objects
+&lt;ul&gt;
+&lt;li&gt;Ex., one spatial relation for restaurants, one spatial relation for hotels, one relation for mobile users, etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Given a spatial location p, use spatial component of network to find the network edge containing p&lt;/li&gt;
+&lt;li&gt;Given a network edge, use network component to traverse neighboring edges&lt;/li&gt;
+&lt;li&gt;Given a neighboring edge, use spatial indexes to find objects on them&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;evaluation-of-spatial-selections-1&#34;&gt;Evaluation of Spatial Selections (1)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Query: find all objects in spatial relation R, within network distance ε from location q&lt;/li&gt;
+&lt;li&gt;Method:
+&lt;ul&gt;
+&lt;li&gt;Use spatial index of network (R-tree indexing network edges) to find edge n_1n_2, which includes q&lt;/li&gt;
+&lt;li&gt;Use adjacency index of network (graph component) and apply Dijkstra’s algorithm to progressively retrieve edges that are within network distance ε from location q&lt;/li&gt;
+&lt;li&gt;For all these edges apply a spatial selection on the R-tree that indexes R to find the results&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;example-3&#34;&gt;Example&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Example: Find restaurants at most distance 10 from q&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Step 1: find network edge which contains q&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/Evaluation_of_Spatial_Selections_1.png&#34; alt=&#34;Evaluation_of_Spatial_Selections_1&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Step 2: traverse network to find all edges (or parts of them within distance 10 from q)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/Evaluation_of_Spatial_Selections_2.png&#34; alt=&#34;Evaluation_of_Spatial_Selections_2&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Step 3: find restaurants that intersect the subnetwork computed at step 2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/Evaluation_of_Spatial_Selections_3.png&#34; alt=&#34;Evaluation_of_Spatial_Selections_3&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;evaluation-of-spatial-selections-2&#34;&gt;Evaluation of Spatial Selections (2)&lt;/h3&gt;
+&lt;h4 id=&#34;description-1&#34;&gt;Description&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Query: find all objects in spatial relation R, within network distance ε from location q&lt;/li&gt;
+&lt;li&gt;Alternative method based on Euclidean bounds:
+&lt;ul&gt;
+&lt;li&gt;Assumption: Euclidean distance is a lower-bound of network distance:
+&lt;ul&gt;
+&lt;li&gt;dist(v,u) ≤ SPD(v,u), for any v,u&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Use R-tree on R to find set S of objects such that for each o in S: dist(q,o) ≤ ε&lt;/li&gt;
+&lt;li&gt;For each o in S:
+&lt;ul&gt;
+&lt;li&gt;find where o is located in the network (use Network R-tree)&lt;/li&gt;
+&lt;li&gt;compute SPD(q,o) (e.g. use A*)&lt;/li&gt;
+&lt;li&gt;If SPD(q,o) ≤ ε then output o&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;example-4&#34;&gt;Example&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Example: Find restaurants at most distance 10 from q&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Step 1: find restaurants for which the Euclidean distance to q is at most 10: S={r1,r2,r3}&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/Evaluation_of_Spatial_Selections_Example_1.png&#34; alt=&#34;Evaluation_of_Spatial_Selections_Example_1&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Step 2: for each restaurant in S, compute SPD to q and verify if it is indeed a correct result&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/Evaluation_of_Spatial_Selections_Example_2.png&#34; alt=&#34;Evaluation_of_Spatial_Selections_Example_2&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;evaluation-of-nn-search-1&#34;&gt;Evaluation of NN search (1)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Query: find in spatial relation R the nearest object to a given location q&lt;/li&gt;
+&lt;li&gt;Method:
+&lt;ul&gt;
+&lt;li&gt;Use spatial index of network (R-tree indexing network edges) to find edge n_1n_2, which includes q&lt;/li&gt;
+&lt;li&gt;Use adjacency index of network (graph component) and apply Dijkstra’s algorithm to progressively retrieve edges in order of their distance to q&lt;/li&gt;
+&lt;li&gt;For each edge apply a spatial selection on the R-tree that indexes R to find any objects&lt;/li&gt;
+&lt;li&gt;Keep track of nearest object found so far; use its shortest path distance to terminate network browsing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;example-5&#34;&gt;Example&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Example: Find nearest restaurant to q&lt;/li&gt;
+&lt;li&gt;Step: in ppt 31&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;evaluation-of-nn-search-2&#34;&gt;Evaluation of NN search (2)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Query: find in spatial relation R the nearest object to a given location q&lt;/li&gt;
+&lt;li&gt;Alternative method based on Euclidean bounds:
+&lt;ul&gt;
+&lt;li&gt;Assumption: Euclidean distance lower-bounds network distance:
+&lt;ul&gt;
+&lt;li&gt;dist(v,u) ≤ SPD(v,u), for any v,u&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/Evaluation_of_NN_search.png&#34; alt=&#34;Evaluation_of_NN_search&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;spatial-join-queries&#34;&gt;Spatial Join Queries&lt;/h3&gt;
+&lt;h4 id=&#34;description-2&#34;&gt;Description&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Query: find pairs (r,s), such that r in relation R, s in relation S, and SPD(r,s)≤ε&lt;/li&gt;
+&lt;li&gt;Methods:
+&lt;ul&gt;
+&lt;li&gt;For each r in R, do an ε-distance selection queries for objects in S (Index Nested Loops)&lt;/li&gt;
+&lt;li&gt;For each pair (r,s), such that Euclidean dist(r,s)≤ε compute SPD(r,s) and verify SPD(r,s)≤ε&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;notes-on-query-evaluation-based-on-network-distance&#34;&gt;Notes on Query Evaluation based on Network Distance&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;For each query type, there are methods based on network browsing and methods based on Euclidean bounds&lt;/li&gt;
+&lt;li&gt;Network browsing methods are fast if network edges are densely populated with points of interest
+&lt;ul&gt;
+&lt;li&gt;A limited network traversal can find the result fast&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Methods based on Euclidean bounds are good if the searched POIs are sparsely distributed in the network
+&lt;ul&gt;
+&lt;li&gt;Few verifications with exact SP searches are required&lt;/li&gt;
+&lt;li&gt;Directed SP search (e.g. using A*) avoids visiting empty parts of the network&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;advanced-indexing-techniques-for-spatial-networks&#34;&gt;Advanced indexing techniques for spatial networks&lt;/h2&gt;
+&lt;h3 id=&#34;shortest-path-materialization-and-indexing-in-large-graphs&#34;&gt;Shortest Path Materialization and Indexing in Large Graphs&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Dijkstra’s algorithm and related methods could be very expensive on very large graphs&lt;/li&gt;
+&lt;li&gt;(Partial) materialization of shortest paths in static graphs can accelerate search&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/Shortest_Path_Materialization_and_Indexing_in_Large_Graphs.png&#34; alt=&#34;Shortest_Path_Materialization_and_Indexing_in_Large_Graphs.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;hierarchical-path-materialization&#34;&gt;Hierarchical Path Materialization&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Idea: Partition graph G into G_1,G_2,G_3,… based on connectivity and proximity of nodes&lt;/li&gt;
+&lt;li&gt;Every edge of G goes to exactly one G_i&lt;/li&gt;
+&lt;li&gt;Border nodes belong to more than one G_i’s&lt;/li&gt;
+&lt;li&gt;For each G_i compute and materialize SPs between every pair of nodes in G_i (matrix M_i)
+&lt;ul&gt;
+&lt;li&gt;Partitions are small enough for materialization space overhead to be low&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Compute and materialize SPs between every pair of border nodes (matrix B)
+&lt;ul&gt;
+&lt;li&gt;If border nodes too many, hierarchically partition them into 2nd-level partitions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/Hierarchical_Path_Materialization.png&#34; alt=&#34;Hierarchical_Path_Materialization&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;algorithm-1&#34;&gt;algorithm&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/Hierarchical_Path_Materialization_algorithm.png&#34; alt=&#34;Hierarchical_Path_Materialization_algorithm&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;illustrating-2&#34;&gt;Illustrating&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Good partitioning if:
+&lt;ul&gt;
+&lt;li&gt;small partitions&lt;/li&gt;
+&lt;li&gt;few combinations examined for SP search&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Real road networks:
+&lt;ul&gt;
+&lt;li&gt;Non-highway nodes in local partitions&lt;/li&gt;
+&lt;li&gt;Highway nodes become border nodes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/Hierarchical_Path_Materialization_Illustration.png&#34; alt=&#34;Hierarchical_Path_Materialization_Illustration&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;compressing-materialized-paths&#34;&gt;Compressing Materialized Paths&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Distance matrix with successors has O(n_2) space cost&lt;/li&gt;
+&lt;li&gt;Motivation: reduce space by grouping targets based on common successors&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/Compressing_Materialized_Paths.png&#34; alt=&#34;Compressing_Materialized_Paths&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;algorithm-2&#34;&gt;algorithm&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Create and encode one space partitioning defined by targets of the same successor&lt;/li&gt;
+&lt;li&gt;For each node s, index Is a set of &amp;lt;succ,R&amp;gt; pairs:
+&lt;ul&gt;
+&lt;li&gt;succ: a successor of s&lt;/li&gt;
+&lt;li&gt;R: a continuous region, such that for each t in R, the successor of s in SP(s,t) is succ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/Compressing_Materialized_Paths_Algorithm.png&#34; alt=&#34;Compressing_Materialized_Paths_Algorithm&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To compute SP(s,t) for a given s, t:
+&lt;ol&gt;
+&lt;li&gt;SP=s&lt;/li&gt;
+&lt;li&gt;Use spatial index Is to find &amp;lt;succ,R&amp;gt;, such that t in R&lt;/li&gt;
+&lt;li&gt;SP = SP + (s,succ)&lt;/li&gt;
+&lt;li&gt;If succ = t, report SP and terminate&lt;/li&gt;
+&lt;li&gt;Otherwise s=succ; Goto step 2&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Indexing and search of spatial networks is different than spatial indexing
+&lt;ul&gt;
+&lt;li&gt;Shortest path distance is used instead of Euclidean distance, to define range queries, nearest neighbor search, and spatial joins&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Spatial networks could be too large to fit in memory
+&lt;ul&gt;
+&lt;li&gt;Disk-based index for adjacency lists is used&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Several shortest path algorithms&lt;/li&gt;
+&lt;li&gt;Spatial queries can be evaluated using Euclidean bounds&lt;/li&gt;
+&lt;li&gt;Advanced indexing methods for shortest path search on large graphs&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>COMP7103 Topic 2 Association Rules</title>
       <link>https://www.pseudoyu.com/en/2021/02/25/comp7103_topic2/</link>
       <pubDate>Thu, 25 Feb 2021 01:18:17 +0800</pubDate>
@@ -4170,164 +4578,6 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
         &lt;span class=&#34;n&#34;&gt;security&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;checkAccess&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
     &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Java学习 - 多线程入门类和接口</title>
-      <link>https://www.pseudoyu.com/en/2020/12/05/java_note_concurrent_practice/</link>
-      <pubDate>Sat, 05 Dec 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/12/05/java_note_concurrent_practice/</guid>
-      
-        <description>&lt;h2 id=&#34;多线程入门类和接口&#34;&gt;多线程入门类和接口&lt;/h2&gt;
-&lt;h3 id=&#34;java中使用多线程的方法&#34;&gt;Java中使用多线程的方法&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;由于Java单继承多实现的特性，Runnable接口用起来比Thread更灵活&lt;/li&gt;
-&lt;li&gt;Runnable接口更符合面向对象，将线程单独进行对象的封装&lt;/li&gt;
-&lt;li&gt;Runnable接口降低了线程对象和线程任务的耦合性&lt;/li&gt;
-&lt;li&gt;如果使用线程时不需要使用Thread类的诸多方法，Runnable接口更加轻量&lt;/li&gt;
-&lt;li&gt;Thread类和Runnable接口创建新线程的run方法是没有返回值的&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;继承thread类并重写run方法&#34;&gt;继承Thread类，并重写run方法&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Demo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;MyThread&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Thread&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
-        &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-            &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;MyThread&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-
-    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;Thread&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;myThread&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MyThread&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;myThread&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;构造方法是简单调用一个私有的init方法来实现私有化&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;g：线程组&lt;/li&gt;
-&lt;li&gt;target：指定要执行的任务&lt;/li&gt;
-&lt;li&gt;name：线程的名字&lt;/li&gt;
-&lt;li&gt;acc：初始化私有变量&lt;/li&gt;
-&lt;li&gt;inheritThreadLocals：可继承的ThreadLocal&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;大多数情况下直接调用下面方法&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;Thread&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Runnable&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;target&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;Thread&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Runnable&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;target&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;常用方法&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;currentThread()：返回正在执行的线程对象的引用&lt;/li&gt;
-&lt;li&gt;start()：开始执行线程的方法（JVM调用线程内的run()方法）&lt;/li&gt;
-&lt;li&gt;yield()：当前线程愿意让出对当前处理器的占用（但调度时可能继续运行）&lt;/li&gt;
-&lt;li&gt;sleep()：使当前线程睡眠一段时间&lt;/li&gt;
-&lt;li&gt;join()：使当前线程等待另一个线程执行完毕之后再继续执行，调用了Object类的wait方法&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;实现runnable接口的run方法&#34;&gt;实现Runnable接口的run方法&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@FunctionalInterface&lt;/span&gt;
-&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;interface&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Runnable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;abstract&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-
-&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Demo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;MyThread&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;implements&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Runnable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
-        &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-            &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;MyThread&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-
-    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-
-        &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Thread&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MyThread&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-
-        &lt;span class=&#34;c1&#34;&gt;// Java 8 函数式编程，可以省略MyThread类
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Thread&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-            &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Java 8 匿名内部类&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-        &lt;span class=&#34;o&#34;&gt;}).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;callable接口&#34;&gt;Callable接口&lt;/h4&gt;
-&lt;p&gt;与Runnable类似，是只有一个抽象方法的函数式接口，但是提供返回值并且支持泛型&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@FunctionalInterface&lt;/span&gt;
-&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;interface&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Callable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;V&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;V&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;call&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;throws&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Exception&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Callable一般配合线程池工具ExecutorService使用，ExecutorService可以使用submit方法来让一个Callable接口执行，会返回一个Future，后续可以通过Future的get方法得到结果&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 自定义Callable
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Task&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;implements&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Callable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;{&lt;/span&gt;
-    &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
-    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;call&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;throws&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Exception&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;c1&#34;&gt;// 模拟计算需要一秒
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;Thread&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;sleep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;1000&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[])&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;throws&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Exception&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;c1&#34;&gt;// 使用
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;ExecutorService&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;executor&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Executors&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;newCachedThreadPool&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;Task&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;task&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Task&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;Future&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;executor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;submit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;task&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-        &lt;span class=&#34;c1&#34;&gt;// 注意调用get方法会阻塞当前线程，直到得到结果。
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;c1&#34;&gt;// 所以实际编码中建议使用可以设置超时时间的重载get方法。
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt; 
-    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;// 输出结果：2
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;future接口&#34;&gt;Future接口&lt;/h4&gt;
-&lt;p&gt;只有几个比较简单的方法&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;abstract&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;interface&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Future&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;V&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;abstract&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;boolean&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;cancel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;boolean&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;paramBoolean&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;abstract&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;boolean&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;isCancelled&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;abstract&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;boolean&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;isDone&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;abstract&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;V&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;throws&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;InterruptedException&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ExecutionException&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;abstract&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;V&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;long&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;paramLong&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TimeUnit&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;paramTimeUnit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-            &lt;span class=&#34;kd&#34;&gt;throws&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;InterruptedException&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ExecutionException&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TimeoutException&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;cancel方法试图取消一个线程的执行&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;任务可能已完成、已取消或不可取消，因此有可能失败&lt;/li&gt;
-&lt;li&gt;返回的是是否取消成功的状态&lt;/li&gt;
-&lt;li&gt;参数paramBoolean表示是否采用中断的方式取消线程执行&lt;/li&gt;
-&lt;li&gt;如果为了可取消性但是又不提供可用的结果，则可以声明&lt;code&gt;Future&amp;lt;?&amp;gt;&lt;/code&gt;形式类型，并返回null作为底层任务的结果&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;futuretask类&#34;&gt;FutureTask类&lt;/h4&gt;
-&lt;p&gt;实现了RunnableFuture接口（同时继承了Runnable接口和Future接口），实现了cancel，get，isDone等方法&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 自定义Callable，与上面一样
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Task&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;implements&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Callable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;{&lt;/span&gt;
-    &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
-    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;call&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;throws&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Exception&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;c1&#34;&gt;// 模拟计算需要一秒
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;Thread&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;sleep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;1000&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[])&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;throws&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Exception&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;c1&#34;&gt;// 使用
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;ExecutorService&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;executor&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Executors&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;newCachedThreadPool&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;FutureTask&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;futureTask&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FutureTask&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Task&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;executor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;submit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;futureTask&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;futureTask&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt;
-    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;调用submit方法是没有返回值的，实际上调用的是submit(Runnable task)方法；这里使用FutureTask直接用get取值。&lt;/p&gt;
-&lt;p&gt;很多高并发的环境下，有可能Callable和FutureTask会创建多次，FutureTask能够在高并发环境下确保任务只执行一次。&lt;/p&gt;
-&lt;p&gt;状态&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;cm&#34;&gt;/**
-&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;  *
-&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;  * state可能的状态转变路径如下：
-&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;  * NEW -&amp;gt; COMPLETING -&amp;gt; NORMAL
-&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;  * NEW -&amp;gt; COMPLETING -&amp;gt; EXCEPTIONAL
-&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;  * NEW -&amp;gt; CANCELLED
-&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;  * NEW -&amp;gt; INTERRUPTING -&amp;gt; INTERRUPTED
-&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;  */&lt;/span&gt;
-&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;volatile&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;state&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;NEW&lt;/span&gt;          &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;COMPLETING&lt;/span&gt;   &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;NORMAL&lt;/span&gt;       &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;EXCEPTIONAL&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CANCELLED&lt;/span&gt;    &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;INTERRUPTING&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;INTERRUPTED&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
       
     </item>

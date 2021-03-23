@@ -18,6 +18,15 @@ Application  Understanding  Group related documents for browsing, group genes an
     </item>
     
     <item>
+      <title>COMP7801 Topic 3 Spatial Networks</title>
+      <link>https://www.pseudoyu.com/zh/2021/02/27/comp7801_topic3/</link>
+      <pubDate>Sat, 27 Feb 2021 01:18:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/02/27/comp7801_topic3/</guid>
+      <description>Background Network Distance  In many real applications accessibility of objects is restricted by a spatial network  Examples  Driver looking for nearest gas station Mobile user looking for nearest restaurant     Shortest path distance used instead of Euclidean distance SP(a,b) = path between a and b with the minimum accumulated length  Challenges  Euclidean distance is no longer relevant  R-tree may not be useful, when search is based on shortest path distance   Graph cannot be flattened to a one-dimensional space  Special storage and indexing techniques for graphs are required   Graph properties may vary  directed vs.</description>
+    </item>
+    
+    <item>
       <title>COMP7103 Topic 2 Association Rules</title>
       <link>https://www.pseudoyu.com/zh/2021/02/25/comp7103_topic2/</link>
       <pubDate>Thu, 25 Feb 2021 01:18:17 +0800</pubDate>
@@ -202,17 +211,6 @@ Cell Handover
 4G vs. 5G
  4G  10 ms 100 Thousand Connections / km^2 1 Gbps   5G  &amp;lt; 1ms 1 Million Connections / km^2 20 Gbps    E-Commerce vs. M-Commerce
  E-Commerce  Device: PC Network: Internet (HTTP)   M-Commerce  Device: Mobile devices Network  Mobile carrier network WiFi Local frequency (RFID/NFC)      Definition of M-Commerce</description>
-    </item>
-    
-    <item>
-      <title>New iPad Air 4 (2020) Presence by Apple Inc.</title>
-      <link>https://www.pseudoyu.com/zh/2020/09/18/ecom6013_discussion_topic2/</link>
-      <pubDate>Fri, 18 Sep 2020 01:25:19 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/09/18/ecom6013_discussion_topic2/</guid>
-      <description>E-Commerce Presence Look Around New iPad Air 4 (2020) Presence by Apple Inc. Website Link
-The iPad Air 4 (2020) got shown off at Apple&amp;rsquo;s September event held on September 16. There is a specific designed website (mobile version included) for this product. I&amp;rsquo;d like to do an analysis towards this very impressive E-Commerce presence.
-Apple iPad Air product line is mainly targeted to educators/students, staffs and kids/teenagers. So, the most premium features this new product wants to convey to customers is its fancy appearance and powerful A14 Bionic for creation, study and entertainment.</description>
     </item>
     
   </channel>

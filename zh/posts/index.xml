@@ -18,6 +18,15 @@ Application  Understanding  Group related documents for browsing, group genes an
     </item>
     
     <item>
+      <title>COMP7801 Topic 4 Top-k</title>
+      <link>https://www.pseudoyu.com/zh/2021/03/06/comp7801_topic4/</link>
+      <pubDate>Sat, 06 Mar 2021 01:18:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/03/06/comp7801_topic4/</guid>
+      <description>Background Multidimensional Data  Flat relational tables Multimedia feature vectors Data warehouse data Spatial data Text documents  Attribute Types  Attributes of multidimensional tuples may have variable types  Ordinal (e.g., age, salary) Nominal categorical values (e.g., color, religion) Binary (e.g., gender, owns_property)   Basic queries: range, NN, similarity  Basic Queries  (Range) selection query  Returns the records that qualify a (multidimensional) range predicate Example:  Return the employees of age between 45 and 50 and salary above $100,000     Distance (similarity) query  Returns the records that are within a distance from a reference record.</description>
+    </item>
+    
+    <item>
       <title>COMP7801 Topic 3 Spatial Networks</title>
       <link>https://www.pseudoyu.com/zh/2021/02/27/comp7801_topic3/</link>
       <pubDate>Sat, 27 Feb 2021 01:18:17 +0800</pubDate>
@@ -184,15 +193,6 @@ Application  Understanding  Group related documents for browsing, group genes an
       
       <guid>https://www.pseudoyu.com/zh/2020/12/07/java_note_concurrent_threadgroup/</guid>
       <description>线程组和线程优先级 线程组 Java中的ThreadGroup表示线程组，可使用线程组对线程进行批量控制；每个线程必须存在于一个线程组中，不能独</description>
-    </item>
-    
-    <item>
-      <title>Java学习 - 多线程入门类和接口</title>
-      <link>https://www.pseudoyu.com/zh/2020/12/05/java_note_concurrent_practice/</link>
-      <pubDate>Sat, 05 Dec 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/12/05/java_note_concurrent_practice/</guid>
-      <description>多线程入门类和接口 Java中使用多线程的方法 由于Java单继承多实现的特性，Runnable接口用起来比Thread更灵活 Runnable接</description>
     </item>
     
   </channel>

@@ -18,6 +18,15 @@ Application  Understanding  Group related documents for browsing, group genes an
     </item>
     
     <item>
+      <title>COMP7801 Topic 4 Top-k</title>
+      <link>https://www.pseudoyu.com/zh/2021/03/06/comp7801_topic4/</link>
+      <pubDate>Sat, 06 Mar 2021 01:18:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/03/06/comp7801_topic4/</guid>
+      <description>Background Multidimensional Data  Flat relational tables Multimedia feature vectors Data warehouse data Spatial data Text documents  Attribute Types  Attributes of multidimensional tuples may have variable types  Ordinal (e.g., age, salary) Nominal categorical values (e.g., color, religion) Binary (e.g., gender, owns_property)   Basic queries: range, NN, similarity  Basic Queries  (Range) selection query  Returns the records that qualify a (multidimensional) range predicate Example:  Return the employees of age between 45 and 50 and salary above $100,000     Distance (similarity) query  Returns the records that are within a distance from a reference record.</description>
+    </item>
+    
+    <item>
       <title>COMP7801 Topic 3 Spatial Networks</title>
       <link>https://www.pseudoyu.com/zh/2021/02/27/comp7801_topic3/</link>
       <pubDate>Sat, 27 Feb 2021 01:18:17 +0800</pubDate>
@@ -197,20 +206,6 @@ Datasets  Criteo Dataset. It is a famous industry benchmarking dataset for devel
       <description>ECOM6013 E-Commerce Technologies Topic 6 E-Commerce Security Good E-Commerce Security
  Highest degree of security  New technologies Organizational policies and procedures Industry standards and government law   Other factors  Cost of security vs. potential loss Security often breaks at weakest link    The Tense Between Security and Other Values
  Security vs. Easy of use  More Secure -&amp;gt; More difficult to use + slower   Security vs.</description>
-    </item>
-    
-    <item>
-      <title>ECOM6013 Topic 5 Mobile Commerce</title>
-      <link>https://www.pseudoyu.com/zh/2020/09/21/ecom6013_topic5/</link>
-      <pubDate>Mon, 21 Sep 2020 10:44:28 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/09/21/ecom6013_topic5/</guid>
-      <description>ECOM6013 E-Commerce Technologies Topic 5 Mobile Commerce Basic Principle of Mobile Technology
- FDMA (Frequency Division Multiple Access) TDMA (Time Division Multiple Access) CDMA (Code Division Multiple Access)  Fundamental Mobility: Cellphones
-Cell Handover
-4G vs. 5G
- 4G  10 ms 100 Thousand Connections / km^2 1 Gbps   5G  &amp;lt; 1ms 1 Million Connections / km^2 20 Gbps    E-Commerce vs. M-Commerce
- E-Commerce  Device: PC Network: Internet (HTTP)   M-Commerce  Device: Mobile devices Network  Mobile carrier network WiFi Local frequency (RFID/NFC)      Definition of M-Commerce</description>
     </item>
     
   </channel>

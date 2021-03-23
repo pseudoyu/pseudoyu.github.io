@@ -18,6 +18,15 @@ Application  Understanding  Group related documents for browsing, group genes an
     </item>
     
     <item>
+      <title>COMP7801 Topic 4 Top-k</title>
+      <link>https://www.pseudoyu.com/en/2021/03/06/comp7801_topic4/</link>
+      <pubDate>Sat, 06 Mar 2021 01:18:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2021/03/06/comp7801_topic4/</guid>
+      <description>Background Multidimensional Data  Flat relational tables Multimedia feature vectors Data warehouse data Spatial data Text documents  Attribute Types  Attributes of multidimensional tuples may have variable types  Ordinal (e.g., age, salary) Nominal categorical values (e.g., color, religion) Binary (e.g., gender, owns_property)   Basic queries: range, NN, similarity  Basic Queries  (Range) selection query  Returns the records that qualify a (multidimensional) range predicate Example:  Return the employees of age between 45 and 50 and salary above $100,000     Distance (similarity) query  Returns the records that are within a distance from a reference record.</description>
+    </item>
+    
+    <item>
       <title>COMP7801 Topic 3 Spatial Networks</title>
       <link>https://www.pseudoyu.com/en/2021/02/27/comp7801_topic3/</link>
       <pubDate>Sat, 27 Feb 2021 01:18:17 +0800</pubDate>
@@ -198,17 +207,6 @@ Cell Handover
 4G vs. 5G
  4G  10 ms 100 Thousand Connections / km^2 1 Gbps   5G  &amp;lt; 1ms 1 Million Connections / km^2 20 Gbps    E-Commerce vs. M-Commerce
  E-Commerce  Device: PC Network: Internet (HTTP)   M-Commerce  Device: Mobile devices Network  Mobile carrier network WiFi Local frequency (RFID/NFC)      Definition of M-Commerce</description>
-    </item>
-    
-    <item>
-      <title>New iPad Air 4 (2020) Presence by Apple Inc.</title>
-      <link>https://www.pseudoyu.com/en/2020/09/18/ecom6013_discussion_topic2/</link>
-      <pubDate>Fri, 18 Sep 2020 01:25:19 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/09/18/ecom6013_discussion_topic2/</guid>
-      <description>E-Commerce Presence Look Around New iPad Air 4 (2020) Presence by Apple Inc. Website Link
-The iPad Air 4 (2020) got shown off at Apple&amp;rsquo;s September event held on September 16. There is a specific designed website (mobile version included) for this product. I&amp;rsquo;d like to do an analysis towards this very impressive E-Commerce presence.
-Apple iPad Air product line is mainly targeted to educators/students, staffs and kids/teenagers. So, the most premium features this new product wants to convey to customers is its fancy appearance and powerful A14 Bionic for creation, study and entertainment.</description>
     </item>
     
   </channel>

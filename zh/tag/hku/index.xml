@@ -6,47 +6,37 @@
     <description>Recent content in hku on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 27 Feb 2021 01:18:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/hku/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>COMP7801 Topic 2 Spatial Data Management</title>
-      <link>https://www.pseudoyu.com/zh/2021/02/27/comp7801_topic2/</link>
-      <pubDate>Sat, 27 Feb 2021 01:18:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2021/02/27/comp7801_topic2/</guid>
-      <description>Spatial Data Management Concepts Spatial Data
- Location data  Check-in service Online Maps Location-based services   Location tracking Traffic Data  Spatial Databases
- PostgreSQL with PostGIS Neo4J-spatial HadoopGIS Ingres GeoMesa  Spatial Data Management
- Spatial Database Systems  Manage large collections of multidimensional objects (2D/3D)   A spatial object  Contains (at least) one spatial attributes that describes its location and/or geometry   A spatial relation  Is an organized collection of spatial objects of the same entity    Spatial Data Representation</description>
-    </item>
-    
+    <lastBuildDate>Thu, 18 Mar 2021 01:18:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/hku/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>COMP7103 Topic 3 Clustering</title>
-      <link>https://www.pseudoyu.com/zh/2021/02/12/comp7103_topic3/</link>
-      <pubDate>Fri, 12 Feb 2021 01:18:17 +0800</pubDate>
+      <link>https://www.pseudoyu.com/zh/2021/03/18/comp7103_topic3/</link>
+      <pubDate>Thu, 18 Mar 2021 01:18:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2021/02/12/comp7103_topic3/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/03/18/comp7103_topic3/</guid>
       <description>COMP7103 Data Mining Topic 3 Clustering Cluster Analysis Finding groups of objects such that the objects in a group will be similar (or related) to one another and different from (or unrelated to) the objects in other groups
 Application  Understanding  Group related documents for browsing, group genes and proteins that have similar functionality, or group stocks with similar price fluctuations   Summarization  Reduce size of large data sets    Types of Clusterings  Partitional Clustering  A division data objects into non-overlapping subsets (clusters) such that each data object is in exactly one subset    Hierarchical clustering  A set of nested clusters organized as a hierarchical tree    Other Distinctions Between Sets of Clusters  Exclusive versus non-exclusive  In non-exclusive clusterings, points may belong to multiple clusters Can represent multiple classes or &amp;lsquo;border&amp;rsquo; points   Fuzzy versus non-fuzzy  In fuzzy clustering, a point belongs to every cluster with some weight between 0 and 1 Weights must sum to 1 Probabilistic clustering has similar characteristics   Partial versus complete  In some cases, we only want to cluster some of the data   Heterogeneous versus homogeneous  Cluster of widely different sizes, shapes, and densities      Well-separated clusters A cluster is a set of points such that any point in a cluster is closer (or more similar) to every other point in the cluster than to any point not in the cluster</description>
     </item>
     
     <item>
       <title>COMP7103 Topic 2 Association Rules</title>
-      <link>https://www.pseudoyu.com/zh/2021/02/05/comp7103_topic2/</link>
-      <pubDate>Fri, 05 Feb 2021 01:18:17 +0800</pubDate>
+      <link>https://www.pseudoyu.com/zh/2021/02/25/comp7103_topic2/</link>
+      <pubDate>Thu, 25 Feb 2021 01:18:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2021/02/05/comp7103_topic2/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/02/25/comp7103_topic2/</guid>
       <description>COMP7103 Data Mining Topic 2 Association Rules Market-Basket Model A general many-many mapping (association) between two kinds of things
  A large set of items, e.g., things sold in a supermarket A large set of baskets, each of which is a small set of the items, e.g., the things one customer buys on one day  Frequent Itemsets Support Support for itemset I (s(I)) = the number of baskets containing all items in I</description>
     </item>
     
     <item>
-      <title>COMP7801 Topic 1a Relational Database</title>
-      <link>https://www.pseudoyu.com/zh/2021/01/30/comp7801_topic1a/</link>
-      <pubDate>Sat, 30 Jan 2021 01:18:17 +0800</pubDate>
+      <title>COMP7801 Topic 2 Spatial Data Management</title>
+      <link>https://www.pseudoyu.com/zh/2021/02/06/comp7801_topic2/</link>
+      <pubDate>Sat, 06 Feb 2021 01:18:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2021/01/30/comp7801_topic1a/</guid>
-      <description>Relational Databases Structure of Relational Databases Basic structure  Given sets D1, D2, …. Dn A relation r is a subset of D1 x D2 x … x Dn A relation is a set of n-tuples (a1, a2, …, an) where each ai Di  Example
- if  customer-name = {Jones, Smith, Curry, Lindsay} customer-street = {Main, North, Park} customer-city = {Harrison, Rye, Pittsfield}   Then  r = {(Jones, Main, Harrison), (Smith, North, Rye), (Curry, North, Rye), (Lindsay, Park, Pittsfield)} is a relation over customer-name x customer-street x customer-city    Attribute Types  Each attribute of a relation has a name The set of allowed values for each attribute is called the domain of the attribute  Relation Schema  A1, A2, …, An are attributes R = (A1, A2, …, An ) is a relation schema  E.</description>
+      <guid>https://www.pseudoyu.com/zh/2021/02/06/comp7801_topic2/</guid>
+      <description>Spatial Data Management Concepts Spatial Data
+ Location data  Check-in service Online Maps Location-based services   Location tracking Traffic Data  Spatial Databases
+ PostgreSQL with PostGIS Neo4J-spatial HadoopGIS Ingres GeoMesa  Spatial Data Management
+ Spatial Database Systems  Manage large collections of multidimensional objects (2D/3D)   A spatial object  Contains (at least) one spatial attributes that describes its location and/or geometry   A spatial relation  Is an organized collection of spatial objects of the same entity    Spatial Data Representation</description>
     </item>
     
     <item>
@@ -67,6 +57,16 @@ Application  Understanding  Group related documents for browsing, group genes an
       <description>COMP7103 Data Mining Topic 1 Introduction Decision-Support System (DSS)
  A decision-support system (DSS) is a system that assists decision makers to make important decisions for an organization or business KDD and data mining are important components in many DSS&amp;rsquo;s  Data and Knowledge
  Data  A collecion of facts about certain group of objects   Pattern  Certain characteristics of data that are frequently observed   Knowledge  Some general rules about the objects    Data Warehouse</description>
+    </item>
+    
+    <item>
+      <title>COMP7801 Topic 1a Relational Database</title>
+      <link>https://www.pseudoyu.com/zh/2021/01/23/comp7801_topic1a/</link>
+      <pubDate>Sat, 23 Jan 2021 01:18:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/01/23/comp7801_topic1a/</guid>
+      <description>Relational Databases Structure of Relational Databases Basic structure  Given sets D1, D2, …. Dn A relation r is a subset of D1 x D2 x … x Dn A relation is a set of n-tuples (a1, a2, …, an) where each ai Di  Example
+ if  customer-name = {Jones, Smith, Curry, Lindsay} customer-street = {Main, North, Park} customer-city = {Harrison, Rye, Pittsfield}   Then  r = {(Jones, Main, Harrison), (Smith, North, Rye), (Curry, North, Rye), (Lindsay, Park, Pittsfield)} is a relation over customer-name x customer-street x customer-city    Attribute Types  Each attribute of a relation has a name The set of allowed values for each attribute is called the domain of the attribute  Relation Schema  A1, A2, …, An are attributes R = (A1, A2, …, An ) is a relation schema  E.</description>
     </item>
     
     <item>

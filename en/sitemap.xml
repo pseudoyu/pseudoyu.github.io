@@ -10,77 +10,84 @@
   
   <url>
     <loc>https://www.pseudoyu.com/en/categories/</loc>
-    <lastmod>2021-02-27T01:18:17+08:00</lastmod>
+    <lastmod>2021-03-18T01:18:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.pseudoyu.com/en/tag/comp/</loc>
-    <lastmod>2021-02-27T01:18:17+08:00</lastmod>
+    <lastmod>2021-03-18T01:18:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/en/tag/comp7801/</loc>
-    <lastmod>2021-02-27T01:18:17+08:00</lastmod>
+    <loc>https://www.pseudoyu.com/en/tag/comp7103/</loc>
+    <lastmod>2021-03-18T01:18:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/en/2021/02/27/comp7801_topic2/</loc>
-    <lastmod>2021-02-27T01:18:17+08:00</lastmod>
+    <loc>https://www.pseudoyu.com/en/2021/03/18/comp7103_topic3/</loc>
+    <lastmod>2021-03-18T01:18:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/en/tag/database/</loc>
-    <lastmod>2021-02-27T01:18:17+08:00</lastmod>
+    <loc>https://www.pseudoyu.com/en/tag/data-mining/</loc>
+    <lastmod>2021-03-18T01:18:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.pseudoyu.com/en/tag/hku/</loc>
-    <lastmod>2021-02-27T01:18:17+08:00</lastmod>
+    <lastmod>2021-03-18T01:18:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.pseudoyu.com/en/category/notes/</loc>
-    <lastmod>2021-02-27T01:18:17+08:00</lastmod>
+    <lastmod>2021-03-18T01:18:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.pseudoyu.com/en/tag/notes/</loc>
-    <lastmod>2021-02-27T01:18:17+08:00</lastmod>
+    <lastmod>2021-03-18T01:18:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.pseudoyu.com/en/posts/</loc>
-    <lastmod>2021-02-27T01:18:17+08:00</lastmod>
+    <lastmod>2021-03-18T01:18:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.pseudoyu.com/en/</loc>
-    <lastmod>2021-02-27T01:18:17+08:00</lastmod>
+    <lastmod>2021-03-18T01:18:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.pseudoyu.com/en/tags/</loc>
-    <lastmod>2021-02-27T01:18:17+08:00</lastmod>
+    <lastmod>2021-03-18T01:18:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/en/2021/02/25/comp7103_topic2/</loc>
+    <lastmod>2021-02-25T01:18:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -163,27 +170,6 @@
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/en/tag/comp7103/</loc>
-    <lastmod>2021-02-12T01:18:17+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pseudoyu.com/en/2021/02/12/comp7103_topic3/</loc>
-    <lastmod>2021-02-12T01:18:17+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pseudoyu.com/en/tag/data-mining/</loc>
-    <lastmod>2021-02-12T01:18:17+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://www.pseudoyu.com/en/category/ideas/</loc>
     <lastmod>2021-02-11T00:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -226,15 +212,22 @@
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/en/2021/02/05/comp7103_topic2/</loc>
-    <lastmod>2021-02-05T01:18:17+08:00</lastmod>
+    <loc>https://www.pseudoyu.com/en/tag/comp7801/</loc>
+    <lastmod>2021-02-06T01:18:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/en/2021/01/30/comp7801_topic1a/</loc>
-    <lastmod>2021-01-30T01:18:17+08:00</lastmod>
+    <loc>https://www.pseudoyu.com/en/2021/02/06/comp7801_topic2/</loc>
+    <lastmod>2021-02-06T01:18:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/en/tag/database/</loc>
+    <lastmod>2021-02-06T01:18:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -249,6 +242,13 @@
   <url>
     <loc>https://www.pseudoyu.com/en/2021/01/28/comp7103_topic1/</loc>
     <lastmod>2021-01-28T01:18:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/en/2021/01/23/comp7801_topic1a/</loc>
+    <lastmod>2021-01-23T01:18:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

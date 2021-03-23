@@ -1941,7 +1941,6 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
 &lt;ul&gt;
 &lt;li&gt;A large set of items, e.g., things sold in a supermarket&lt;/li&gt;
 &lt;li&gt;A large set of baskets, each of which is a small set of the items, e.g., the things one customer buys on one day&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;frequent-itemsets&#34;&gt;Frequent Itemsets&lt;/h3&gt;
 &lt;h4 id=&#34;support&#34;&gt;Support&lt;/h4&gt;

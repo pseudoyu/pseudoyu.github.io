@@ -14,7 +14,7 @@
       
       <guid>https://www.pseudoyu.com/en/2021/02/05/comp7103_topic2/</guid>
       <description>COMP7103 Data Mining Topic 2 Association Rules Market-Basket Model A general many-many mapping (association) between two kinds of things
- A large set of items, e.g., things sold in a supermarket A large set of baskets, each of which is a small set of the items, e.g., the things one customer buys on one day   Frequent Itemsets Support Support for itemset I (s(I)) = the number of baskets containing all items in I</description>
+ A large set of items, e.g., things sold in a supermarket A large set of baskets, each of which is a small set of the items, e.g., the things one customer buys on one day  Frequent Itemsets Support Support for itemset I (s(I)) = the number of baskets containing all items in I</description>
     </item>
     
     <item>

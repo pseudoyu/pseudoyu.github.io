@@ -92,6 +92,15 @@
     </item>
     
     <item>
+      <title>COMP7103 Topic 3 Clustering</title>
+      <link>https://www.pseudoyu.com/zh/2021/02/12/comp7103_topic3/</link>
+      <pubDate>Fri, 12 Feb 2021 01:18:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/02/12/comp7103_topic3/</guid>
+      <description>COMP7103 Data Mining Topic 3 Clustering </description>
+    </item>
+    
+    <item>
       <title>用OKR的方式梳理自己的学习计划</title>
       <link>https://www.pseudoyu.com/zh/2021/02/11/learning_plan_okr/</link>
       <pubDate>Thu, 11 Feb 2021 00:00:00 +0800</pubDate>
@@ -107,7 +116,7 @@
       
       <guid>https://www.pseudoyu.com/zh/2021/02/05/comp7103_topic2/</guid>
       <description>COMP7103 Data Mining Topic 2 Association Rules Market-Basket Model A general many-many mapping (association) between two kinds of things
- A large set of items, e.g., things sold in a supermarket A large set of baskets, each of which is a small set of the items, e.g., the things one customer buys on one day   Frequent Itemsets Support Support for itemset I (s(I)) = the number of baskets containing all items in I</description>
+ A large set of items, e.g., things sold in a supermarket A large set of baskets, each of which is a small set of the items, e.g., the things one customer buys on one day  Frequent Itemsets Support Support for itemset I (s(I)) = the number of baskets containing all items in I</description>
     </item>
     
     <item>
@@ -183,15 +192,6 @@
       
       <guid>https://www.pseudoyu.com/zh/2020/11/29/java_note_concurrent/</guid>
       <description>多线程 线程、程序、进程的基本概念 线程 比进程更小的执行单位，一个进程在执行的过程中可以产生多个线程 同类的多个线程共享同一块内存空间和一组系统资</description>
-    </item>
-    
-    <item>
-      <title>Java学习 - 常用方法</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/27/java_note_methods/</link>
-      <pubDate>Fri, 27 Nov 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/27/java_note_methods/</guid>
-      <description>String与StringBuffer String 特征 Java8中，String内部使用char数组存储数据 Java9后，String类的实现改用了b</description>
     </item>
     
   </channel>

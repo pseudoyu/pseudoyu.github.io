@@ -92,6 +92,16 @@
     </item>
     
     <item>
+      <title>COMP7103 Topic 3 Clustering</title>
+      <link>https://www.pseudoyu.com/en/2021/02/12/comp7103_topic3/</link>
+      <pubDate>Fri, 12 Feb 2021 01:18:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2021/02/12/comp7103_topic3/</guid>
+      <description>COMP7103 Data Mining Topic 3 Clustering Cluster Analysis Finding groups of objects such that the objects in a group will be similar (or related) to one another and different from (or unrelated to) the objects in other groups
+Application  Understanding  Group related documents for browsing, group genes and proteins that have similar functionality, or group stocks with similar price fluctuations   Summarization  Reduce size of large data sets    Types of Clusterings  Partitional Clustering  A division data objects into non-overlapping subsets (clusters) such that each data object is in exactly one subset    Hierarchical clustering  A set of nested clusters organized as a hierarchical tree    Other Distinctions Between Sets of Clusters  Exclusive versus non-exclusive  In non-exclusive clusterings, points may belong to multiple clusters Can represent multiple classes or &amp;lsquo;border&amp;rsquo; points   Fuzzy versus non-fuzzy  In fuzzy clustering, a point belongs to every cluster with some weight between 0 and 1 Weights must sum to 1 Probabilistic clustering has similar characteristics   Partial versus complete  In some cases, we only want to cluster some of the data   Heterogeneous versus homogeneous  Cluster of widely different sizes, shapes, and densities      Well-separated clusters A cluster is a set of points such that any point in a cluster is closer (or more similar) to every other point in the cluster than to any point not in the cluster</description>
+    </item>
+    
+    <item>
       <title>用OKR的方式梳理自己的学习计划</title>
       <link>https://www.pseudoyu.com/en/2021/02/11/learning_plan_okr/</link>
       <pubDate>Thu, 11 Feb 2021 00:00:00 +0800</pubDate>
@@ -183,15 +193,6 @@
       
       <guid>https://www.pseudoyu.com/en/2020/11/29/java_note_concurrent/</guid>
       <description>多线程 线程、程序、进程的基本概念 线程 比进程更小的执行单位，一个进程在执行的过程中可以产生多个线程 同类的多个线程共享同一块内存空间和一组系统资</description>
-    </item>
-    
-    <item>
-      <title>Java学习 - 常用方法</title>
-      <link>https://www.pseudoyu.com/en/2020/11/27/java_note_methods/</link>
-      <pubDate>Fri, 27 Nov 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/11/27/java_note_methods/</guid>
-      <description>String与StringBuffer String 特征 Java8中，String内部使用char数组存储数据 Java9后，String类的实现改用了b</description>
     </item>
     
   </channel>

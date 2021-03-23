@@ -1842,6 +1842,381 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
     </item>
     
     <item>
+      <title>COMP7103 Topic 3 Clustering</title>
+      <link>https://www.pseudoyu.com/zh/2021/02/12/comp7103_topic3/</link>
+      <pubDate>Fri, 12 Feb 2021 01:18:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/02/12/comp7103_topic3/</guid>
+      
+        <description>&lt;h1 id=&#34;comp7103-data-mining&#34;&gt;COMP7103 Data Mining&lt;/h1&gt;
+&lt;h2 id=&#34;topic-3-clustering&#34;&gt;Topic 3 Clustering&lt;/h2&gt;
+&lt;h3 id=&#34;cluster-analysis&#34;&gt;Cluster Analysis&lt;/h3&gt;
+&lt;p&gt;Finding groups of objects such that the objects in a group will be similar (or related) to one another and different from (or unrelated to) the objects in other groups&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/cluster_analysis.png&#34; alt=&#34;cluster_analysis&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;application&#34;&gt;Application&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Understanding
+&lt;ul&gt;
+&lt;li&gt;Group related documents for browsing, group genes and proteins that have similar functionality, or group stocks with similar price fluctuations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Summarization
+&lt;ul&gt;
+&lt;li&gt;Reduce size of large data sets&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;types-of-clusterings&#34;&gt;Types of Clusterings&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Partitional Clustering
+&lt;ul&gt;
+&lt;li&gt;A division data objects into non-overlapping subsets (clusters) such that each data object is in exactly one subset
+&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/partitional_clustering.png&#34; alt=&#34;partitional_clustering&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Hierarchical clustering
+&lt;ul&gt;
+&lt;li&gt;A set of nested clusters organized as a hierarchical tree
+&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/hierarchical_clustering.png&#34; alt=&#34;hierarchical_clustering&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Other Distinctions Between Sets of Clusters
+&lt;ul&gt;
+&lt;li&gt;Exclusive versus non-exclusive
+&lt;ul&gt;
+&lt;li&gt;In non-exclusive clusterings, points may belong to multiple clusters&lt;/li&gt;
+&lt;li&gt;Can represent multiple classes or &amp;lsquo;border&amp;rsquo; points&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Fuzzy versus non-fuzzy
+&lt;ul&gt;
+&lt;li&gt;In fuzzy clustering, a point belongs to every cluster with some weight between 0 and 1&lt;/li&gt;
+&lt;li&gt;Weights must sum to 1&lt;/li&gt;
+&lt;li&gt;Probabilistic clustering has similar characteristics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Partial versus complete
+&lt;ul&gt;
+&lt;li&gt;In some cases, we only want to cluster some of the data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Heterogeneous versus homogeneous
+&lt;ul&gt;
+&lt;li&gt;Cluster of widely different sizes, shapes, and densities&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;well-separated-clusters&#34;&gt;Well-separated clusters&lt;/h4&gt;
+&lt;p&gt;A cluster is a set of points such that any point in a cluster is closer (or more similar) to every other point in the cluster than to any point not in the cluster&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/wellseparated_clusters.png&#34; alt=&#34;wellseparated_clusters&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;center-based-clusters&#34;&gt;Center-based clusters&lt;/h4&gt;
+&lt;p&gt;A cluster is a set of objects such that an object in a cluster is closer (more similar) to the “center” of a cluster, than to the center of any other cluster&lt;/p&gt;
+&lt;p&gt;The center of a cluster is often a centroid, the average of all the points in the cluster, or a medoid, the most “representative” point of a cluster&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/center_based_clusters.png&#34; alt=&#34;center_based_clusters&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;contiguity-based-clusters&#34;&gt;Contiguity-Based clusters&lt;/h4&gt;
+&lt;p&gt;A cluster is a set of points such that a point in a cluster is closer (or more similar) to one or more other points in the cluster than to any point not in the cluster&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/contiguity_based_clusters.png&#34; alt=&#34;contiguity_based_clusters&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;density-based-clusters&#34;&gt;Density-based clusters&lt;/h4&gt;
+&lt;p&gt;A cluster is a dense region of points, which is separated by low-density regions, from other regions of high density&lt;/p&gt;
+&lt;p&gt;Used when the clusters are irregular or intertwined, and when noise and outliers are present&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/density_based_clusters.png&#34; alt=&#34;density_based_clusters&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;conceptual-clusters&#34;&gt;Conceptual Clusters&lt;/h4&gt;
+&lt;p&gt;Finds clusters that share some common property or represent a particular concept&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/conceptual_clusters.png&#34; alt=&#34;conceptual_clusters&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;k-means&#34;&gt;K-means&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Input
+&lt;ul&gt;
+&lt;li&gt;integer k&amp;gt;0, set S of points in the euclidean space&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Output
+&lt;ul&gt;
+&lt;li&gt;A (partitional) clustering of S&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Step&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Select k points in S as the initial centroids&lt;/li&gt;
+&lt;li&gt;Repeat until the centroids do not change
+&lt;ul&gt;
+&lt;li&gt;Form k clusters by assigning points to the closest centroids&lt;/li&gt;
+&lt;li&gt;For each cluster recompute its centroid&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Feature&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Initial centroids are often chosen randomly&lt;/li&gt;
+&lt;li&gt;Centroids are often the mean of the points in the cluster&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;Closeness&amp;rsquo; is measured by Euclidean distance, cosine similarity, correlation, etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;importance-of-choosing-initial-centroids&#34;&gt;Importance of Choosing Initial Centroids&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/choosing_Initial_centroids.png&#34; alt=&#34;choosing_Initial_centroids&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/choosing_Initial_centroids_2.png&#34; alt=&#34;choosing_Initial_centroids_2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/choosing_Initial_centroids_3.png&#34; alt=&#34;choosing_Initial_centroids_3&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;evaluating-k-means-clusterings&#34;&gt;Evaluating K-means Clusterings&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Most common measure is Sum of Squared Error (SSE)
+&lt;ul&gt;
+&lt;li&gt;Given two clusterings, we can choose the one with smallest error&lt;/li&gt;
+&lt;li&gt;Decreasing K might decrease SSE&lt;/li&gt;
+&lt;li&gt;However, good clusterings with small K might have a lower SSE than poor clusterings with higher K&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;k-means-always-terminates&#34;&gt;K-Means Always Terminates&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Theorem
+&lt;ul&gt;
+&lt;li&gt;K-means with Euclidean distance as distance always terminates&lt;/li&gt;
+&lt;li&gt;Proof follows from the following lemmas&lt;/li&gt;
+&lt;li&gt;We cannot obtain the same clustering more than once, otherwise we get the same SSE value&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Lemma 1
+&lt;ul&gt;
+&lt;li&gt;The point y that minimizes the SSE in a cluster C is the mean of all points in C&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Lemma 2
+&lt;ul&gt;
+&lt;li&gt;SSE strictly decreases.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Lemma 3&lt;/li&gt;
+&lt;li&gt;The total number of possible clusterings is finite (&amp;lt; n^k).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;solutions-to-initial-centroids-problem&#34;&gt;Solutions to Initial Centroids Problem&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Multiple runs (helps but low success probability)&lt;/li&gt;
+&lt;li&gt;Sample and use hierarchical clustering to determine initial centroids&lt;/li&gt;
+&lt;li&gt;Select more than k initial centroids and then select among these initial centroids&lt;/li&gt;
+&lt;li&gt;Postprocessing&lt;/li&gt;
+&lt;li&gt;K-Means++&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;handling-empty-clusters&#34;&gt;Handling Empty Clusters&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;Basic K-means algorithm can yield less than k clusters (so called empty clusters)&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pick the points that contributes most to SSE and move them to empty cluster&lt;/li&gt;
+&lt;li&gt;Pick the points from the cluster with the highest SSE&lt;/li&gt;
+&lt;li&gt;If there are several empty clusters, the above can be repeated several times&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;updating-centers-incrementally&#34;&gt;Updating Centers Incrementally&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;In the basic K-means algorithm, centroids are updated after all points are assigned to a centroid&lt;/li&gt;
+&lt;li&gt;An alternative is to update the centroids after each assignment (incremental approach)&lt;/li&gt;
+&lt;li&gt;More precisely, let C1 ,C2 ,&amp;hellip;,C k be the current clusters. Reassign all points one by one to the best cluster. Let p in C i be the current point and suppose we re-assign it to Cj . Then, after that, recompute the centroid of C i and Cj
+&lt;ul&gt;
+&lt;li&gt;Never get an empty cluster&lt;/li&gt;
+&lt;li&gt;Introduces an order dependency&lt;/li&gt;
+&lt;li&gt;More expensive&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;pre-processing-and-post-processing&#34;&gt;Pre-processing and Post-processing&lt;/h4&gt;
+&lt;p&gt;Pre-processing&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Normalize the data&lt;/li&gt;
+&lt;li&gt;Eliminate outliers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Post-processing&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Eliminate small clusters that may represent outliers&lt;/li&gt;
+&lt;li&gt;Split &amp;lsquo;loose&amp;rsquo; clusters, i.e., clusters with relatively high SSE&lt;/li&gt;
+&lt;li&gt;Merge clusters that are ‘close’ and that have relatively low SSE&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;limitations-of-k-means&#34;&gt;Limitations of K-means&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;K-means has problems when clusters are of differing
+&lt;ul&gt;
+&lt;li&gt;Sizes
+&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/kmeans_limitations.png&#34; alt=&#34;kmeans_limitations&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Densities
+&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/kmeans_limitations_density.png&#34; alt=&#34;kmeans_limitations_density&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Non-globular shapes
+&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/kmeans_limitations_globular.png&#34; alt=&#34;kmeans_limitations_globular&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;K-means has problems when the data contains outliers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;overcoming-k-means-limitations&#34;&gt;Overcoming K-means Limitations&lt;/h4&gt;
+&lt;p&gt;Use many clusters, find parts of clusters, but need to put together&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/overcome_kmeans_limitations_1.png&#34; alt=&#34;overcome_kmeans_limitations_1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/overcome_kmeans_limitations_2.png&#34; alt=&#34;overcome_kmeans_limitations_2&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;hierarchical-clustering&#34;&gt;Hierarchical clustering&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Produces a set of nested clusters organized as a hierarchical tree&lt;/li&gt;
+&lt;li&gt;Can be visualized as a dendrogram
+&lt;ul&gt;
+&lt;li&gt;A tree like diagram that records the sequences of merges or splits
+&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/hierarchical_clustering_dendrogram.png&#34; alt=&#34;hierarchical_clustering_dendrogram&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;strengths-of-hierarchical-clustering&#34;&gt;Strengths of Hierarchical Clustering&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Do not have to assume any particular number of clusters
+&lt;ul&gt;
+&lt;li&gt;Any desired number of clusters can be obtained by ‘cutting’ the dendogram at the proper level&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;They may correspond to meaningful taxonomies
+&lt;ul&gt;
+&lt;li&gt;Example in biological sciences (e.g., animal kingdom, phylogeny reconstruction, …)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;two-main-types-of-hierarchical-clustering&#34;&gt;Two main types of hierarchical clustering&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Agglomerative
+&lt;ul&gt;
+&lt;li&gt;Start with the points as individual clusters&lt;/li&gt;
+&lt;li&gt;At each step, merge the closest pair of clusters until only one cluster (or k clusters) left&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Divisive
+&lt;ul&gt;
+&lt;li&gt;Start with one, all-inclusive cluster&lt;/li&gt;
+&lt;li&gt;At each step, split a cluster until each cluster contains a point (or there are k clusters)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Traditional hierarchical algorithms use a similarity or distance matrix&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Merge or split one cluster at a time&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;agglomerative-clustering-algorithm&#34;&gt;Agglomerative Clustering Algorithm&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;Most popular hierarchical clustering technique&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Let each data point be a cluster&lt;/li&gt;
+&lt;li&gt;Compute the distance matrix n x n&lt;/li&gt;
+&lt;li&gt;Repeat
+&lt;ul&gt;
+&lt;li&gt;Merge the two closest clusters&lt;/li&gt;
+&lt;li&gt;Update distance matrix&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Until only a single cluster remains&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Procedure&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Start with clusters of individual points and a distance matrix n x n
+&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/agglomerative_clustering_algorithm_1.png&#34; alt=&#34;agglomerative_clustering_algorithm_1&#34;&gt;&lt;/li&gt;
+&lt;li&gt;After some merging steps, we have some clusters
+&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/agglomerative_clustering_algorithm_2.png&#34; alt=&#34;agglomerative_clustering_algorithm_2&#34;&gt;&lt;/li&gt;
+&lt;li&gt;We want to merge the two closest clusters (C2 and C5) and update the distance matrix
+&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/agglomerative_clustering_algorithm_3.png&#34; alt=&#34;agglomerative_clustering_algorithm_3&#34;&gt;&lt;/li&gt;
+&lt;li&gt;The question is “How do we update the distance matrix
+&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/agglomerative_clustering_algorithm_4.png&#34; alt=&#34;agglomerative_clustering_algorithm_4&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;how-to-define-inter-cluster-similarity&#34;&gt;How to Define Inter-Cluster Similarity&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;MIN
+&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/inter_cluster_similarity_1.png&#34; alt=&#34;inter_cluster_similarity_1&#34;&gt;&lt;/li&gt;
+&lt;li&gt;MAX
+&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/inter_cluster_similarity_2.png&#34; alt=&#34;inter_cluster_similarity_2&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Group Average
+&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/inter_cluster_similarity_3.png&#34; alt=&#34;inter_cluster_similarity_3&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Distance Between Centroids
+&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/inter_cluster_similarity_4.png&#34; alt=&#34;inter_cluster_similarity_4&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Other methods driven by an objective function
+&lt;ul&gt;
+&lt;li&gt;Ward’s Method uses squared error&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;problems-and-limitations&#34;&gt;Problems and Limitations&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Once a decision is made to combine two clusters, it cannot be undone&lt;/li&gt;
+&lt;li&gt;No objective function is directly minimized&lt;/li&gt;
+&lt;li&gt;Different schemes have problems with one or more of the following
+&lt;ul&gt;
+&lt;li&gt;Sensitivity to noise and outliers&lt;/li&gt;
+&lt;li&gt;Difficulty handling different sized clusters and convex shapes&lt;/li&gt;
+&lt;li&gt;Breaking large clusters&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;cluster-validity&#34;&gt;Cluster Validity&lt;/h3&gt;
+&lt;p&gt;Numerical measures that are applied to judge various aspects of cluster validity, are classified into the following three types&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;External Index
+&lt;ul&gt;
+&lt;li&gt;Used to measure the extent to which cluster labels match externally supplied class labels
+&lt;ul&gt;
+&lt;li&gt;Entropy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Internal Index
+&lt;ul&gt;
+&lt;li&gt;Used to measure the goodness of a clustering structure without respect to external information
+&lt;ul&gt;
+&lt;li&gt;Sum of Squared Error (SSE)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Relative Index
+&lt;ul&gt;
+&lt;li&gt;To compare two different clusterings or clusters
+&lt;ul&gt;
+&lt;li&gt;An external or internal index is used for this function, e.g., SSE or entropy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;internal-measures-sse&#34;&gt;Internal Measures: SSE&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Clusters in more complicated figures aren’t well separated&lt;/li&gt;
+&lt;li&gt;SSE is good for comparing two clusterings or two clusters (average SSE)&lt;/li&gt;
+&lt;li&gt;Can also be used to estimate the number of clusters&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/internal_measures_SSE.png&#34; alt=&#34;internal_measures_SSE&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;external-measures-of-cluster-validity-entropy&#34;&gt;External Measures of Cluster Validity: Entropy&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Definition: Entropy
+&lt;ul&gt;
+&lt;li&gt;Entropy measure how uncertain is an event, the larger the entropy the more uncertain is the event&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/external_measures_of_cluster_validity_Entropy.png&#34; alt=&#34;external_measures_of_cluster_validity_Entropy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&amp;ldquo;The validation of clustering structures is the most difficult and frustrating part of cluster analysis. Without a strong effort in this direction, cluster analysis will remain a black art accessible only to those true believers who have experience and great courage.&amp;quot;&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;k-means-1&#34;&gt;K-means++&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Initialize the centroids as in Algorithm 1&lt;/li&gt;
+&lt;li&gt;Run K-means algorithm to improve the clustering&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/kmeans_plus_plus_algorithm1.png&#34; alt=&#34;kmeans_plus_plus_algorithm1&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;algorithm-comparison&#34;&gt;Algorithm Comparison&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;K-means
+&lt;ul&gt;
+&lt;li&gt;No guarantees on the quality of the solution&lt;/li&gt;
+&lt;li&gt;It always terminates&lt;/li&gt;
+&lt;li&gt;Running time could be exponential but it is OK in practice&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;K-means++
+&lt;ul&gt;
+&lt;li&gt;It always terminates&lt;/li&gt;
+&lt;li&gt;O(log k)-approximation on the quality of the solution&lt;/li&gt;
+&lt;li&gt;In practice the advantage is noticeable for large k&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>用OKR的方式梳理自己的学习计划</title>
       <link>https://www.pseudoyu.com/zh/2021/02/11/learning_plan_okr/</link>
       <pubDate>Thu, 11 Feb 2021 00:00:00 +0800</pubDate>
@@ -3644,220 +4019,6 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
 &lt;li&gt;BIO是同步阻塞I/O模式，数据的读取写入必须阻塞在一个线程内等待其完成。在活动连接数较低（小于单机1000）的情况下比较适用，模型简单，不需要考虑系统过载、限流等问题。但是面对较高并发量的时候不适用。&lt;/li&gt;
 &lt;li&gt;NIO是同步非阻塞模型，对应java.nio包，提供Channel, Selector, Buffer等抽象。支持面向缓冲、基于通道的I/O方法。提供了SocketChannel，ServerSocketChannel量中国套接字通道实现，都支持阻塞和非阻塞。因此，对于低负载和并发的应用程序，可以使用同步阻塞I/O来提升开发效率和更好的维护性；对于高负载和并发的应用（网络程序），可以使用NIO的非阻塞模式来开发。NIO的IO行为是同步的，对于NIO来说，业务线程是在IO操作准备好时，得到通知，接着由这个线程自行进行IO操作。&lt;/li&gt;
 &lt;li&gt;AIO是异步非阻塞的I/O模型，基于事件和回调机制，应用操作后会直接返回，不会阻塞，当后台处理完成，操作系统会通知相应线程进行后续操作。AIO应用不广泛，Netty尝试过但是放弃了。&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Java学习 - 多线程</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/29/java_note_concurrent/</link>
-      <pubDate>Sun, 29 Nov 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/29/java_note_concurrent/</guid>
-      
-        <description>&lt;h2 id=&#34;多线程&#34;&gt;多线程&lt;/h2&gt;
-&lt;h3 id=&#34;线程程序进程的基本概念&#34;&gt;线程、程序、进程的基本概念&lt;/h3&gt;
-&lt;p&gt;线程&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;比进程更小的执行单位，一个进程在执行的过程中可以产生多个线程&lt;/li&gt;
-&lt;li&gt;同类的多个线程共享同一块内存空间和一组系统资源，所以系统在产生一个线程或者在各个线程之间切换工作时，负担要比进程小得多&lt;/li&gt;
-&lt;li&gt;线程也被称为轻量级进程&lt;/li&gt;
-&lt;li&gt;同一进程中的线程极有可能相互影响&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;程序&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;含有指令和数据的文件&lt;/li&gt;
-&lt;li&gt;被存储在磁盘或其他数据存储设备中&lt;/li&gt;
-&lt;li&gt;静态的代码&lt;/li&gt;
-&lt;li&gt;程序执行时会被操作系统载入内存中&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;进程&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;程序的一次执行过程，系统运行程序的基本单位，动态的&lt;/li&gt;
-&lt;li&gt;运行一个程序即进程从创建、运行到消亡的过程&lt;/li&gt;
-&lt;li&gt;一个进程就是一个执行中的程序&lt;/li&gt;
-&lt;li&gt;每个进程占有某些系统资源，如CPU时间、内存空间、文件、输入输出设备使用权等&lt;/li&gt;
-&lt;li&gt;各进程基本上是独立的&lt;/li&gt;
-&lt;li&gt;进程属于操作系统的范畴&lt;/li&gt;
-&lt;li&gt;同一时间段内，可以执行一个以上的程序&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;进程让操作系统的并发性成为了可能，而线程让进程的内部并发成为了可能。使用多进程可以实现并发，但是用多线程有一些优势&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;线程间通信较为简单，通常使用共享资源，负担小一些&lt;/li&gt;
-&lt;li&gt;线程是轻量级的，系统开销更小&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;进程和线程的区别&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;本质区别在于是否单独占有内存地址空间和其他系统资源
-&lt;ul&gt;
-&lt;li&gt;进程单独占有一定内存地址空间，所以进程间内存隔离，数据分开，通讯困难但是同步简单，各个进程互相不干扰；线程共享所属进程占有的内存空间和资源，数据共享简单但是同步困难&lt;/li&gt;
-&lt;li&gt;进程单独占有一定的内存地址空间，一个进程出现问题不会影响其他进程，不影响主程序的稳定性，可靠性高；但是一个线程崩溃可能影响整个程序的稳定性，可靠性较低&lt;/li&gt;
-&lt;li&gt;进程的创建和销毁不仅需要保存寄存器和栈信息，还需要资源的分配回收以及页调度，开销较大；线程只需要保存寄存器和栈信息，开销较小&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;进程是操作系统进行资源分配的基本单位，而线程是操作系统进行调度的基本单位（CPU分配时间的单位）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;基本状态&#34;&gt;基本状态&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;NEW：初始状态，被构建但是没有调用start()方法&lt;/li&gt;
-&lt;li&gt;RUNNABLE
-&lt;ul&gt;
-&lt;li&gt;READY：调用start()方法后&lt;/li&gt;
-&lt;li&gt;RUNNING：获得cpu时间片time slice后&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;BLOCKED：调用同步方法时没有获取到锁&lt;/li&gt;
-&lt;li&gt;WAITING：执行wait()方法后&lt;/li&gt;
-&lt;li&gt;TIME_WAITING：在WAITING状态基础上增加了超时限制，如sleep()或wait()，时间达成后返回到RUNNABLE状态&lt;/li&gt;
-&lt;li&gt;TERMINATED：执行RUNNABLE的run()方法后&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;上下文切换&#34;&gt;上下文切换&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;CPU通过时间片分配算法来循环执行任务，切换前会保留上一个任务的状态，以便下次切换回这个任务时再加载这个任务的状态，任务从保存到再加载的过程就是一次上下文切换；上下文是指某一时间点CPU寄存器和程序计数器的内容&lt;/li&gt;
-&lt;li&gt;创建线程和上下文切换开销会影响并发的速度&lt;/li&gt;
-&lt;li&gt;减少上下文切换
-&lt;ul&gt;
-&lt;li&gt;无锁并发编程，避免使用锁，如将数据的ID按照Hash算法取模分段，不同的线程处理不同段的数据&lt;/li&gt;
-&lt;li&gt;CAS算法，Java的Atomic包使用CAS算法来更新数据 不需要加锁
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;CAS算法解析&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;由于采用这种 CAS 机制是没有对方法进行加锁的，所以，所有的线程都可以进入 increment() 这个方法，假如进入这个方法的线程太多，就会出现一个问题：每次有线程要执行第三个步骤的时候，i 的值老是被修改了，所以线程又到回到第一步继续重头再来&lt;/li&gt;
-&lt;li&gt;为了解决这个问题，Java8 引入了一个 cell[] 数组，如果有 100 个线程要对 i 进行自增操作的话，这个时候，冲突就会大大增加，系统就会把这些线程分配到不同的 cell 数组元素去&lt;/li&gt;
-&lt;li&gt;在 Java 中，也是提供了这种 CAS 的原子类，例如
-&lt;ul&gt;
-&lt;li&gt;AtomicBoolean&lt;/li&gt;
-&lt;li&gt;AtomicInteger&lt;/li&gt;
-&lt;li&gt;AtomicLong&lt;/li&gt;
-&lt;li&gt;AtomicReference&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;increment&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-        &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;j&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;compareAndSet&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-
-&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;CASTest&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AtomicInteger&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AtomicInteger&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-
-    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;increment&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;c1&#34;&gt;// 自增 1并返回之后的结果
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;incrementAndGet&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;使用最少线程，避免创建不需要的线程，比如任务很少，但是创建了很多线程来处理，会造成大量线程都处于等待状态&lt;/li&gt;
-&lt;li&gt;使用协程，在单线程里实现多任务的调度，并在单线程里维持多个任务间的切换&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;死锁&#34;&gt;死锁&lt;/h3&gt;
-&lt;p&gt;多个线程互相等待对方释放锁，可能会引起死锁，造成系统功能不可用。如复杂场景中，t1拿到锁后，因为异常没释放掉（死循环），或者是t1拿到了一个数据库锁，释放锁的时候抛出了异常。一旦出现死锁，业务是可感知的，因为不能继续提供服务了。&lt;/p&gt;
-&lt;p&gt;避免死锁的常见方法&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;避免一个线程同时获取多个锁&lt;/li&gt;
-&lt;li&gt;避免一个线程在锁内同时占用多个资源，尽量保证每个锁只占用一个资源&lt;/li&gt;
-&lt;li&gt;尝试使用定时锁，lock.tryLock(timeout)来替代内部锁机制&lt;/li&gt;
-&lt;li&gt;对于数据库锁，加锁和解锁必须在同一个数据库连接里，否则会出现解锁失败&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;资源限制&#34;&gt;资源限制&lt;/h3&gt;
-&lt;p&gt;并发编程时，程序的执行速度受限于计算机硬件资源或软件资源，如果并发代码因为资源限制仍然在串行执行，程序执行反而会更慢&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;硬件：带宽速度、硬盘读写速度、CPU处理速度&lt;/li&gt;
-&lt;li&gt;软件：数据库连接数、socket连接数等&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;解决方案&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;硬件：使用集群并行执行程序，如使用ODPS、Hadoop或者自己搭建服务器集群&lt;/li&gt;
-&lt;li&gt;软件：使用资源池将资源复用，如使用连接池将数据库和Socket连接复用&lt;/li&gt;
-&lt;li&gt;根据不同的资源限制调整程序的并发度&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;volatile&#34;&gt;volatile&lt;/h3&gt;
-&lt;p&gt;volatile是轻量级的synchronized，在多处理器开发中保证了共享变量的“可见性”&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;当一个线程修改一个共享变量时，另一个线程能读到这个修改的值&lt;/li&gt;
-&lt;li&gt;比synchronized使用和执行成本更低，不会引起上下文切换和调度&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;synchronized&#34;&gt;synchronized&lt;/h3&gt;
-&lt;p&gt;实现基础&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Java中的每一个对象都可以作为锁
-&lt;ul&gt;
-&lt;li&gt;普通同步方法，锁是当前实例对象&lt;/li&gt;
-&lt;li&gt;静态同步方法，锁是当前类的Class对象&lt;/li&gt;
-&lt;li&gt;同步方法块，锁是Synchronized括号里配置的对象&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;使用monitorenter和monitorexit两个指令&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;JavaSE1.6中锁的四种状态（锁可以升级不能降低，提高获得和释放锁的效率）&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;无锁&lt;/li&gt;
-&lt;li&gt;偏向锁
-&lt;ul&gt;
-&lt;li&gt;大多数情况下，锁不存在多线程竞争，而且总是由同一线程多次获得，因此偏向锁引入可以让线程获得锁的代价更低&lt;/li&gt;
-&lt;li&gt;当线程访问同步锁时，会在对象头和栈帧中的锁记录里存储锁偏向的线程ID，之后进入和退出时不需要进行CAS操作来加锁和解锁，只需要测是否有偏向锁
-&lt;ul&gt;
-&lt;li&gt;测试成功，获得锁&lt;/li&gt;
-&lt;li&gt;测试失败
-&lt;ul&gt;
-&lt;li&gt;再测试偏向锁标识是否为1，是则尝试指向当前线程&lt;/li&gt;
-&lt;li&gt;没有设置则使用CAS竞争锁&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;撤销
-&lt;ul&gt;
-&lt;li&gt;使用了一种等到竞争出现才会释放锁的机制&lt;/li&gt;
-&lt;li&gt;需要等待全局安全点（在这个时间点上没有正在执行的字节码）&lt;/li&gt;
-&lt;li&gt;首先暂停拥有偏向锁的线程，再检查持有偏向锁的线程是否活着，如果不处于活动状态，则将对象头设置成无锁状态；如果线程仍然活着，拥有锁的栈会被执行，遍历偏向对象的锁记录，栈中的锁记录和对象头的Mark Word要么重新偏向于其他线程，要么恢复到无锁活着标记对象不适合作为偏向锁，最后唤醒暂停的线程&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;关闭
-&lt;ul&gt;
-&lt;li&gt;默认启用，可以使用JVM参数来关闭延迟或关闭偏向锁&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;轻量级锁
-&lt;ul&gt;
-&lt;li&gt;加锁
-&lt;ul&gt;
-&lt;li&gt;执行同步块之前，JVM会先在当前线程的栈帧中创建用于存储锁记录的空间并复制Mark Word到锁记录&lt;/li&gt;
-&lt;li&gt;使用CAS将对象头里的Mark Word替换为指向锁记录的指针&lt;/li&gt;
-&lt;li&gt;成功则获得锁&lt;/li&gt;
-&lt;li&gt;失败则其他线程竞争锁，尝试自旋获取锁&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;解锁
-&lt;ul&gt;
-&lt;li&gt;使用原子的CAS操作将Mark Word替换回到对象头&lt;/li&gt;
-&lt;li&gt;成功则表示没有竞争发生&lt;/li&gt;
-&lt;li&gt;失败则表示当前锁存在竞争，锁就会膨胀成重量级锁&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;重量级锁
-&lt;ul&gt;
-&lt;li&gt;自旋会消耗CPU，为了避免无用的自旋，一旦升级为重量锁就不会恢复到重量锁，其他线程试图获取锁时会被阻塞，当持有锁的线程释放锁之后会唤醒这些线程，再开始争夺锁&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;锁的对比&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;偏向锁加锁和解锁不需要额外的消耗，和执行非同步方法相比进存在纳秒级的差距，但如果线程间存在锁竞争会带来额外的锁撤销的消耗，适用于只有一个线程访问同步块场景&lt;/li&gt;
-&lt;li&gt;轻量级锁竞争的线程不会阻塞，提高了程序的相应速度，但如果是种得不到锁竞争的线程会自旋消耗CPU，适合追求响应速度、同步块执行速度非常快的场景&lt;/li&gt;
-&lt;li&gt;线程竞争不使用自旋，不会消耗CPU，但线程阻塞、相应时间缓慢，适合追求吞吐量、同步块执行速度较长的场景&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       

@@ -20,6 +20,16 @@
     </item>
     
     <item>
+      <title>COMP7103 Topic 3 Clustering</title>
+      <link>https://www.pseudoyu.com/zh/2021/02/12/comp7103_topic3/</link>
+      <pubDate>Fri, 12 Feb 2021 01:18:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/02/12/comp7103_topic3/</guid>
+      <description>COMP7103 Data Mining Topic 3 Clustering Cluster Analysis Finding groups of objects such that the objects in a group will be similar (or related) to one another and different from (or unrelated to) the objects in other groups
+Application  Understanding  Group related documents for browsing, group genes and proteins that have similar functionality, or group stocks with similar price fluctuations   Summarization  Reduce size of large data sets    Types of Clusterings  Partitional Clustering  A division data objects into non-overlapping subsets (clusters) such that each data object is in exactly one subset    Hierarchical clustering  A set of nested clusters organized as a hierarchical tree    Other Distinctions Between Sets of Clusters  Exclusive versus non-exclusive  In non-exclusive clusterings, points may belong to multiple clusters Can represent multiple classes or &amp;lsquo;border&amp;rsquo; points   Fuzzy versus non-fuzzy  In fuzzy clustering, a point belongs to every cluster with some weight between 0 and 1 Weights must sum to 1 Probabilistic clustering has similar characteristics   Partial versus complete  In some cases, we only want to cluster some of the data   Heterogeneous versus homogeneous  Cluster of widely different sizes, shapes, and densities      Well-separated clusters A cluster is a set of points such that any point in a cluster is closer (or more similar) to every other point in the cluster than to any point not in the cluster</description>
+    </item>
+    
+    <item>
       <title>COMP7103 Topic 2 Association Rules</title>
       <link>https://www.pseudoyu.com/zh/2021/02/05/comp7103_topic2/</link>
       <pubDate>Fri, 05 Feb 2021 01:18:17 +0800</pubDate>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="utf-8">
+  <title>Blockchain学习 - 区块链概念 · Pseudoyu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="区块链概念 区块链是一种分布式账本技术，由于是一群人来记账，所以修改这个账本的难度比较高。 单式记账 → 复式记账 → 数字化记账 → 分布式记账 传统中心化" />
+
+  <meta name="keywords" content="Hugo, theme, den" />
+
+<link rel="canonical" href="https://www.pseudoyu.com/zh/2021/01/07/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E6%A6%82%E5%BF%B5/" />
+<link rel="alternate" href="https://www.pseudoyu.com/en/2021/01/07/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E6%A6%82%E5%BF%B5/" hreflang="en">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.pseudoyu.com/css/den.css">
+
+
+
+
+<meta property="og:title" content="Blockchain学习 - 区块链概念" />
+<meta property="og:description" content="区块链概念 区块链是一种分布式账本技术，由于是一群人来记账，所以修改这个账本的难度比较高。 单式记账 → 复式记账 → 数字化记账 → 分布式记账 传统中心化" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.pseudoyu.com/zh/2021/01/07/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E6%A6%82%E5%BF%B5/" />
+<meta property="article:published_time" content="2021-01-07T05:12:17+08:00" />
+<meta property="article:modified_time" content="2021-01-07T05:12:17+08:00" />
+<meta itemprop="name" content="Blockchain学习 - 区块链概念">
+<meta itemprop="description" content="区块链概念 区块链是一种分布式账本技术，由于是一群人来记账，所以修改这个账本的难度比较高。 单式记账 → 复式记账 → 数字化记账 → 分布式记账 传统中心化">
+<meta itemprop="datePublished" content="2021-01-07T05:12:17+08:00" />
+<meta itemprop="dateModified" content="2021-01-07T05:12:17+08:00" />
+<meta itemprop="wordCount" content="1274">
+
+
+
+<meta itemprop="keywords" content="programming,blockchain," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Blockchain学习 - 区块链概念"/>
+<meta name="twitter:description" content="区块链概念 区块链是一种分布式账本技术，由于是一群人来记账，所以修改这个账本的难度比较高。 单式记账 → 复式记账 → 数字化记账 → 分布式记账 传统中心化"/>
+</head>
+<body>
+  
+  <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://www.pseudoyu.com/images/background.jpg'); background-position: center; background-size: cover;">
+  <div class="container">
+  <nav class="header-nav navbar navbar-expand-md navbar-dark light-dark">
+    <div class="header-logo navbar-brand">
+      
+        <a class="float-left" href="https://www.pseudoyu.com/zh/">
+      
+        
+        <img class="mr20 header-logo-image" src="https://www.pseudoyu.com/images/fly.png" alt="logo">
+        
+        
+          Pseudoyu
+         
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav-menu collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/ideas/">思考</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/programming/">编程</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/notes/">笔记</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/projects/">项目</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              <a class="nav-link" href="https://www.pseudoyu.com/zh/about/">关于</a>
+            
+          </li>
+        
+        
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.pseudoyu.com/en/"><i class="fas fa-globe"></i> English</a>
+            </li>
+          
+          
+        
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container header-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="header-content">
+        <h1 class="header-title">Blockchain学习 - 区块链概念</h1>
+        <p class="header-date">作者：
+          pseudoyu /
+        
+        2021-01-07
+          / 分类：
+          <a href="https://www.pseudoyu.com/zh/category/programming/">Programming</a>
+        </p>
+        
+        <div class="header-underline"></div>
+        
+          <div class="clearfix"></div>
+          <p class="float-right header-tags">
+              <i class="fas fa-tags" aria-hidden="true"></i>
+              <a href="https://www.pseudoyu.com/zh/tag/blockchain/">blockchain</a>, 
+                <a href="https://www.pseudoyu.com/zh/tag/programming/">programming</a>
+          </p>
+        
+        <div class="clearfix"></div>
+<p class="float-right translations">
+    <i class="fas fa-language" aria-hidden="true"></i>
+    翻译： 
+    <a href="https://www.pseudoyu.com/en/2021/01/07/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E6%A6%82%E5%BF%B5/">EN</a>
+</p>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <main>
+<div class="container content">
+  <article>
+  <h2 id="区块链概念">区块链概念</h2>
+<p>区块链是一种分布式账本技术，由于是一群人来记账，所以修改这个账本的难度比较高。</p>
+<p>单式记账 → 复式记账 → 数字化记账 → 分布式记账</p>
+<p>传统中心化数字记账依赖于某个组织的可信度，而区块链是通过共识机制来共同记账，由区块链技术来保障信任机制，具有去中心化、难以篡改、可追溯等特点。</p>
+<p>难以篡改是区块链主要特征，相比传统数据库（传统数据库包含了增删改查），区块链只有增加和查询，是一种“历史记录不可篡改的数据库”。</p>
+<h3 id="传统数据库-vs-区块链数据库">传统数据库 vs. 区块链数据库</h3>
+<p><strong>传统数据库</strong></p>
+<ul>
+<li>网络
+<ul>
+<li>中心化</li>
+</ul>
+</li>
+<li>功能
+<ul>
+<li>Create 创建</li>
+<li>Read 读取</li>
+<li>Update 更新</li>
+<li>Delete 删除</li>
+</ul>
+</li>
+<li>可变性
+<ul>
+<li>可变</li>
+</ul>
+</li>
+<li>权限
+<ul>
+<li>中心化</li>
+</ul>
+</li>
+<li>透明度
+<ul>
+<li>低</li>
+</ul>
+</li>
+</ul>
+<p><strong>区块链数据库</strong></p>
+<ul>
+<li>网络
+<ul>
+<li>去中心化
+<ul>
+<li>给予节点控制权</li>
+<li>必须达成共识</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>功能
+<ul>
+<li>Read，Append，Validate
+<ul>
+<li>具有准确的历史记录</li>
+<li>读取和写入更快</li>
+<li>必须达成共识</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>可变性
+<ul>
+<li>不可变
+<ul>
+<li>永久保存历史记录</li>
+<li>占据较大存储空间</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>权限
+<ul>
+<li>分布式
+<ul>
+<li>安全性高</li>
+<li>不能撤回交易</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>透明度
+<ul>
+<li>高
+<ul>
+<li>每个人都能看到</li>
+<li>没有权限控制机制</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="是否需要区块链">是否需要区块链</h3>
+<ul>
+<li>是否需要数据库？</li>
+<li>是否需要共享写入权限？</li>
+<li>是否需要多方达成信任？</li>
+<li>能否脱离第三方机构运作？</li>
+<li>能否脱离权限控制机制运作？</li>
+</ul>
+<h3 id="适合区块链的应用场景">适合区块链的应用场景</h3>
+<ol>
+<li>需要建立一个共享数据库，且有多方参与</li>
+<li>参与业务的各方没有建立起信任</li>
+<li>现有业务中信任一个或多个信任机构</li>
+<li>现有业务中有加密认证的业务需求</li>
+<li>数据需要集成到不同数据库且业务数字化和一致性的需求迫切</li>
+<li>对于系统参与者有统一的规则</li>
+<li>多方决策是透明的</li>
+<li>需要客观、不可改变的记录</li>
+<li>非实时性处理业务</li>
+</ol>
+<p>如果以下条件则不适合采用</p>
+<ul>
+<li>数据无法公开</li>
+<li>数据很大</li>
+<li>业务规则经常变化</li>
+<li>需要外部服务来收集、存储数据</li>
+</ul>
+<h3 id="区块链类型">区块链类型</h3>
+<p>区块链分为</p>
+<ul>
+<li>公链：交易是否要公开</li>
+<li>私链：是否需要其他公司（机构）访问数据</li>
+<li>联盟链：权限控制</li>
+</ul>
+<p>越靠近公有链则对节点的认证和权限管理要求越少、去中心化程度越高</p>
+<p>公有链主流共识机制有</p>
+<ul>
+<li>工作量证明 PoW</li>
+<li>权益证明 PoS</li>
+<li>委任权益证明 DPoS</li>
+</ul>
+<p>共识机制核心是记账权的争夺，公链的设计思路是让恶意节点的攻击成本远远大于诚实节点的受益。一般采取拜占庭容错机制，解决了节点故障和节点作恶的情况下还是能达成共识。</p>
+<h4 id="公链">公链</h4>
+<ul>
+<li>比特币：第一个成功的去中心化数字货币系统</li>
+<li>以太坊：可编程、可运算的智能合约</li>
+<li>EOS：超越货币、经济的去中心话应用操作系统</li>
+</ul>
+<h4 id="联盟链">联盟链</h4>
+<p>联盟链节点需要经过认证才能参与到区块链网络，交易速度更快、拓展性更高、并能很好地保护交易隐私。联盟链因为节点数有限且需要认证，为了提升效率，弱化了节点作恶，重点考虑1/3节点故障下系统共识机制的达成，且一般不需要代币作为激励机制，而是每个部门作为记账节点，实现跨部门之间的业务协同给大家带来经济效益。</p>
+<p>联盟链的代表是Hyperledger，这是首个面向企业应用场景的开源分布式账本平台，而Hyperledger Fabric是其中发展的最好的子项目。</p>
+<p>Hyperledger Fabric定位是面向企业的分布式账本平台，引入了权限管理机制，设计上支持可插拔、可拓展，具备良好的设计架构、完善的文档、清晰的代码。</p>
+<h4 id="私有链">私有链</h4>
+<p>而私有链是在某一领域、某一企业运行的区块链，一般用于解决部门间的信任问题。</p>
+<h4 id="应用场景">应用场景</h4>
+<p>长期来看，公有链和联盟链在技术上会趋于融合，界限也会越来越模糊，一般将需要信任的数据放在公有链上，而一些行业数据、私有数据放在联盟链上。</p>
+
+  </article>
+
+  
+  
+  
+
+
+</div>
+
+  </main><div class="footer gradient-2">
+  <div class="container footer-container ">
+    <div class="row">
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        <div class="footer-title">网站地图</div>
+        <ul class="list-unstyled">
+            
+              
+                <li><a href="https://www.pseudoyu.com/zh/tags/">标签</a></li>
+              
+              
+                <li><a href="https://www.pseudoyu.com/zh/categories/">分类</a></li>
+              
+            
+            
+            
+            <li><a rel="alternate" type="application/rss&#43;xml" href="https://www.pseudoyu.com/zh/index.xml"><i class="fas fa-rss-square"></i> RSS订阅</a></li>
+            
+            
+            
+        </ul>
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">社群</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://www.facebook.com/pseudoyuzhang" rel="noopener" target="_blank">Facebook</a></li>
+          
+          <li><a href="https://www.instagram.com/pseudo.yu/" rel="noopener" target="_blank">Instagram</a></li>
+          
+          <li><a href="https://space.bilibili.com/5374948/" rel="noopener" target="_blank">BiliBili</a></li>
+          
+        </ul>
+        
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">友链</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://www.linkedin.com/in/pseudoyu/" rel="noopener" target="_blank">LinkedIn</a></li>
+          
+          <li><a href="https://github.com/pseudoyu" rel="noopener" target="_blank">GitHub</a></li>
+          
+          <li><a href="https://www.coursera.org/user/ffe947f087d1f63b161c3fcb310a6578" rel="noopener" target="_blank">Coursera</a></li>
+          
+        </ul>
+        
+      </div> 
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <p class="pull-right text-right">
+          <small><em><a href="https://www.hku.hk" rel="noopener" target="_blank">The University of Hong Kong</a> - <a href="https://www.cs.hku.hk" rel="noopener" target="_blank">CS</a></em></small><br/>
+          <small><em>Team Rocket - <a href="https://www.marshalgao.com" rel="noopener" target="_blank">Marshal</a> | <a href="https://www.m1sty.com" rel="noopener" target="_blank">Misty</a></em></small><br/>
+          <small>
+            &copy; 
+            pseudoyu
+            
+              2020 -
+            2021
+          </small>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

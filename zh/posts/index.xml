@@ -9,57 +9,57 @@
     <lastBuildDate>Thu, 18 Mar 2021 01:18:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>COMP7103 Topic 3 Clustering</title>
-      <link>https://www.pseudoyu.com/zh/2021/03/18/comp7103_topic3/</link>
+      <link>https://www.pseudoyu.com/zh/2021/03/18/comp7103-topic-3-clustering/</link>
       <pubDate>Thu, 18 Mar 2021 01:18:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2021/03/18/comp7103_topic3/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/03/18/comp7103-topic-3-clustering/</guid>
       <description>COMP7103 Data Mining Topic 3 Clustering Cluster Analysis Finding groups of objects such that the objects in a group will be similar (or related) to one another and different from (or unrelated to) the objects in other groups
 Application  Understanding  Group related documents for browsing, group genes and proteins that have similar functionality, or group stocks with similar price fluctuations   Summarization  Reduce size of large data sets    Types of Clusterings  Partitional Clustering  A division data objects into non-overlapping subsets (clusters) such that each data object is in exactly one subset    Hierarchical clustering  A set of nested clusters organized as a hierarchical tree    Other Distinctions Between Sets of Clusters  Exclusive versus non-exclusive  In non-exclusive clusterings, points may belong to multiple clusters Can represent multiple classes or &amp;lsquo;border&amp;rsquo; points   Fuzzy versus non-fuzzy  In fuzzy clustering, a point belongs to every cluster with some weight between 0 and 1 Weights must sum to 1 Probabilistic clustering has similar characteristics   Partial versus complete  In some cases, we only want to cluster some of the data   Heterogeneous versus homogeneous  Cluster of widely different sizes, shapes, and densities      Well-separated clusters A cluster is a set of points such that any point in a cluster is closer (or more similar) to every other point in the cluster than to any point not in the cluster</description>
     </item>
     
     <item>
       <title>COMP7801 Topic 4 Top-k</title>
-      <link>https://www.pseudoyu.com/zh/2021/03/06/comp7801_topic4/</link>
+      <link>https://www.pseudoyu.com/zh/2021/03/06/comp7801-topic-4-top-k/</link>
       <pubDate>Sat, 06 Mar 2021 01:18:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2021/03/06/comp7801_topic4/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/03/06/comp7801-topic-4-top-k/</guid>
       <description>Background Multidimensional Data  Flat relational tables Multimedia feature vectors Data warehouse data Spatial data Text documents  Attribute Types  Attributes of multidimensional tuples may have variable types  Ordinal (e.g., age, salary) Nominal categorical values (e.g., color, religion) Binary (e.g., gender, owns_property)   Basic queries: range, NN, similarity  Basic Queries  (Range) selection query  Returns the records that qualify a (multidimensional) range predicate Example:  Return the employees of age between 45 and 50 and salary above $100,000     Distance (similarity) query  Returns the records that are within a distance from a reference record.</description>
     </item>
     
     <item>
       <title>COMP7801 Topic 3 Spatial Networks</title>
-      <link>https://www.pseudoyu.com/zh/2021/02/27/comp7801_topic3/</link>
+      <link>https://www.pseudoyu.com/zh/2021/02/27/comp7801-topic-3-spatial-networks/</link>
       <pubDate>Sat, 27 Feb 2021 01:18:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2021/02/27/comp7801_topic3/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/02/27/comp7801-topic-3-spatial-networks/</guid>
       <description>Background Network Distance  In many real applications accessibility of objects is restricted by a spatial network  Examples  Driver looking for nearest gas station Mobile user looking for nearest restaurant     Shortest path distance used instead of Euclidean distance SP(a,b) = path between a and b with the minimum accumulated length  Challenges  Euclidean distance is no longer relevant  R-tree may not be useful, when search is based on shortest path distance   Graph cannot be flattened to a one-dimensional space  Special storage and indexing techniques for graphs are required   Graph properties may vary  directed vs.</description>
     </item>
     
     <item>
       <title>COMP7103 Topic 2 Association Rules</title>
-      <link>https://www.pseudoyu.com/zh/2021/02/25/comp7103_topic2/</link>
+      <link>https://www.pseudoyu.com/zh/2021/02/25/comp7103-topic-2-association-rules/</link>
       <pubDate>Thu, 25 Feb 2021 01:18:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2021/02/25/comp7103_topic2/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/02/25/comp7103-topic-2-association-rules/</guid>
       <description>COMP7103 Data Mining Topic 2 Association Rules Market-Basket Model A general many-many mapping (association) between two kinds of things
  A large set of items, e.g., things sold in a supermarket A large set of baskets, each of which is a small set of the items, e.g., the things one customer buys on one day  Frequent Itemsets Support Support for itemset I (s(I)) = the number of baskets containing all items in I</description>
     </item>
     
     <item>
       <title>用OKR的方式梳理自己的学习计划</title>
-      <link>https://www.pseudoyu.com/zh/2021/02/11/learning_plan_okr/</link>
+      <link>https://www.pseudoyu.com/zh/2021/02/11/%E7%94%A8okr%E7%9A%84%E6%96%B9%E5%BC%8F%E6%A2%B3%E7%90%86%E8%87%AA%E5%B7%B1%E7%9A%84%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</link>
       <pubDate>Thu, 11 Feb 2021 00:00:00 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2021/02/11/learning_plan_okr/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/02/11/%E7%94%A8okr%E7%9A%84%E6%96%B9%E5%BC%8F%E6%A2%B3%E7%90%86%E8%87%AA%E5%B7%B1%E7%9A%84%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</guid>
       <description>用一句话形容理想情况下，自己想要达到的状态 具体目标范围：提升编程技术能力 时间周期：2个月 描述：我想要成为一名具备过硬的编程能力的开发者，并对</description>
     </item>
     
     <item>
       <title>COMP7801 Topic 2 Spatial Data Management</title>
-      <link>https://www.pseudoyu.com/zh/2021/02/06/comp7801_topic2/</link>
+      <link>https://www.pseudoyu.com/zh/2021/02/06/comp7801-topic-2-spatial-data-management/</link>
       <pubDate>Sat, 06 Feb 2021 01:18:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2021/02/06/comp7801_topic2/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/02/06/comp7801-topic-2-spatial-data-management/</guid>
       <description>Spatial Data Management Concepts Spatial Data
  Location data  Check-in service Online Maps Location-based services   Location tracking Traffic Data  Spatial Databases
  PostgreSQL with PostGIS Neo4J-spatial HadoopGIS Ingres GeoMesa  Spatial Data Management
@@ -68,28 +68,28 @@ Application  Understanding  Group related documents for browsing, group genes an
     
     <item>
       <title>Blockchain学习 - 区块链隐私</title>
-      <link>https://www.pseudoyu.com/zh/2021/01/30/blockchain_note_privacy/</link>
+      <link>https://www.pseudoyu.com/zh/2021/01/30/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E9%9A%90%E7%A7%81/</link>
       <pubDate>Sat, 30 Jan 2021 05:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2021/01/30/blockchain_note_privacy/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/01/30/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E9%9A%90%E7%A7%81/</guid>
       <description>区块链隐私 区块链透明性 所有人都能看到交易细节/历史记录 应用场景：供应链 （食品、药品、酒&amp;hellip;） 隐私风险：个人信息（账户余额、交易信</description>
     </item>
     
     <item>
       <title>COMP7801 Topic 1b Database Indexing</title>
-      <link>https://www.pseudoyu.com/zh/2021/01/30/comp7801_topic1b/</link>
+      <link>https://www.pseudoyu.com/zh/2021/01/30/comp7801-topic-1b-database-indexing/</link>
       <pubDate>Sat, 30 Jan 2021 01:18:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2021/01/30/comp7801_topic1b/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/01/30/comp7801-topic-1b-database-indexing/</guid>
       <description>Database Indexing Concepts  Indexing mechanisms used to speed up access to desired data Search Key  An attribute or a set of attributes used to look up records in a file   An index file consists of records (called index entries) of the form search key - pointer Index files are typically much smaller than the original file Two basic kinds of indices  Ordered indices: search keys are stored in sorted order Hash indices: search keys are distributed across &amp;ldquo;buckets&amp;rdquo; using a &amp;ldquo;hash function&amp;rdquo;    Good Index  Index quality is evaluated by several factors  Access types supported by the index efficiently  records with a specified value in the attribute (equality query) or records with an attribute value falling in a specified range of values (range query)   Access time – query response time Insertion time – data record insertion time Deletion time – data record deletion time Space overhead – size of the index file    Classification of Indexes  Primary index  In a sequentially ordered file, the index whose search key specifies the sequential order of the file   Secondary index  an index whose search key specifies an order different from the sequential order of the file Also called non-clustered index     Dense index  Index record appears for every search-key value in the file   Sparse Index  Contains index records for only some search-key values Applicable when records are sequentially ordered on search-key Less space and less maintenance overhead for insertions and deletions Generally slower than dense index for locating records Good tradeoff: sparse index with an index entry for every block in file, corresponding to least search-key value in the block    Primary and Secondary Indices  Secondary indices have to be dense Indices offer substantial benefits when searching for records  Index is much smaller than relation file (cheap scan) Index can be ordered (fast search)   When a file is modified, every index on the file must be updated  Updating indices imposes overhead on database modification Indexes should be used with care   Sequential scan using primary index is efficient, but a sequential scan using a secondary index is expensive  Each record access may fetch a new block from disk    Multilevel Index  If index does not fit in memory, access becomes expensive To reduce number of disk accesses to index records, treat 1st level of index kept on disk as a sequential file and construct a sparse index on it  outer index – a sparse index on 1st-level index file inner index – the 1st-level index file   If even outer index is too large to fit in main memory, yet another level of index can be created, and so on  B+-Tree Index Files  A dynamic, multi-level index Advantage  automatically reorganizes itself with small local changes, in the face of insertions and deletions Reorganization of entire file is not required to maintain performance   Disadvantage of B+-trees  Extra insertion and deletion overhead, space overhead   Advantages of B+-trees outweigh disadvantages, and they are used extensively  Basic Properties  Disk-based tree structure  every node of the tree is a block and has an address (block-id) on the disk   Multiway tree  each node has multiple children (between n/2 and n, where n/2 is the order or degree of the tree) Therefore, at least 50% of the space in a node is guaranteed to be occupied (this rule may not apply to tree root)   Balanced tree  all paths from the root to a leaf have the same length guarantees good search performance (to be seen later)   Disjoint partition of attribute domain into ranges  each sub-tree indexes a range in the attribute domain the entries of a directory node define the separators between domain intervals leaf nodes store index entries and pointers to the relation file    Non-Leaf Nodes in B+-Trees  Each non-leaf node contains up to n-1 search key values and up to n pointers All non-leaf nodes (except root) contain at least n/2 pointers (n/2 is sometimes called the minimum fan-out or degree) Non leaf nodes form a multi-level sparse index on the leaf nodes.</description>
     </item>
     
     <item>
       <title>COMP7103 Topic 1 Introduction</title>
-      <link>https://www.pseudoyu.com/zh/2021/01/28/comp7103_topic1/</link>
+      <link>https://www.pseudoyu.com/zh/2021/01/28/comp7103-topic-1-introduction/</link>
       <pubDate>Thu, 28 Jan 2021 01:18:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2021/01/28/comp7103_topic1/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/01/28/comp7103-topic-1-introduction/</guid>
       <description>COMP7103 Data Mining Topic 1 Introduction Decision-Support System (DSS)
  A decision-support system (DSS) is a system that assists decision makers to make important decisions for an organization or business KDD and data mining are important components in many DSS&amp;rsquo;s  Data and Knowledge
  Data  A collecion of facts about certain group of objects   Pattern  Certain characteristics of data that are frequently observed   Knowledge  Some general rules about the objects    Data Warehouse</description>
@@ -97,101 +97,101 @@ Application  Understanding  Group related documents for browsing, group genes an
     
     <item>
       <title>Blockchain学习 - 区块链安全</title>
-      <link>https://www.pseudoyu.com/zh/2021/01/25/blockchain_note_security/</link>
+      <link>https://www.pseudoyu.com/zh/2021/01/25/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AE%89%E5%85%A8/</link>
       <pubDate>Mon, 25 Jan 2021 05:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2021/01/25/blockchain_note_security/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/01/25/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AE%89%E5%85%A8/</guid>
       <description>区块链安全 风险来源 应用层 与应用程序相关的攻击和安全问题，如数字货币交易所 智能合约层 很多潜在风险，如DAO事件 激励层 矿工付出成本 &amp;gt; 奖励，则去中</description>
     </item>
     
     <item>
       <title>COMP7801 Topic 1a Relational Database</title>
-      <link>https://www.pseudoyu.com/zh/2021/01/23/comp7801_topic1a/</link>
+      <link>https://www.pseudoyu.com/zh/2021/01/23/comp7801-topic-1a-relational-database/</link>
       <pubDate>Sat, 23 Jan 2021 01:18:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2021/01/23/comp7801_topic1a/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/01/23/comp7801-topic-1a-relational-database/</guid>
       <description>Relational Databases Structure of Relational Databases Basic structure  Given sets D1, D2, …. Dn A relation r is a subset of D1 x D2 x … x Dn A relation is a set of n-tuples (a1, a2, …, an) where each ai Di  Example
  if  customer-name = {Jones, Smith, Curry, Lindsay} customer-street = {Main, North, Park} customer-city = {Harrison, Rye, Pittsfield}   Then  r = {(Jones, Main, Harrison), (Smith, North, Rye), (Curry, North, Rye), (Lindsay, Park, Pittsfield)} is a relation over customer-name x customer-street x customer-city    Attribute Types  Each attribute of a relation has a name The set of allowed values for each attribute is called the domain of the attribute  Relation Schema  A1, A2, …, An are attributes R = (A1, A2, …, An ) is a relation schema  E.</description>
     </item>
     
     <item>
       <title>Blockchain学习 - 比特币数据模型</title>
-      <link>https://www.pseudoyu.com/zh/2021/01/22/blockchain_note_bitcoin_data/</link>
+      <link>https://www.pseudoyu.com/zh/2021/01/22/blockchain%E5%AD%A6%E4%B9%A0-%E6%AF%94%E7%89%B9%E5%B8%81%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B/</link>
       <pubDate>Fri, 22 Jan 2021 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2021/01/22/blockchain_note_bitcoin_data/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/01/22/blockchain%E5%AD%A6%E4%B9%A0-%E6%AF%94%E7%89%B9%E5%B8%81%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B/</guid>
       <description>比特币数据模型 区块头 前一个区块的哈希值 时间戳 Merkle Root Nonce Block Body 交易 输入 UTXO: Unspent outputs from another Transaction 必须以整体被花费，不能划分，多余部分转回源账户 所有输入都可以追溯至</description>
     </item>
     
     <item>
       <title>Blockchain学习 - Bitcoin Core客户端</title>
-      <link>https://www.pseudoyu.com/zh/2021/01/19/blockchain_note_bitcoin_core/</link>
+      <link>https://www.pseudoyu.com/zh/2021/01/19/blockchain%E5%AD%A6%E4%B9%A0-bitcoin-core%E5%AE%A2%E6%88%B7%E7%AB%AF/</link>
       <pubDate>Tue, 19 Jan 2021 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2021/01/19/blockchain_note_bitcoin_core/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/01/19/blockchain%E5%AD%A6%E4%B9%A0-bitcoin-core%E5%AE%A2%E6%88%B7%E7%AB%AF/</guid>
       <description>Bitcoin Core客户端 比特币的实现 Bitcoin-QT Satoshi-client 特点 连接至比特币网络 可验证区块链 可以发送与接收区块链 网络 Mainnet Testnet Regnet Debug Console 与比特币区块链交互的工具 Blockchain getblockchaininfo: 返回有关区块链</description>
     </item>
     
     <item>
       <title>Blockchain学习 - 比特币基础</title>
-      <link>https://www.pseudoyu.com/zh/2021/01/15/blockchain_note_bitcoin/</link>
+      <link>https://www.pseudoyu.com/zh/2021/01/15/blockchain%E5%AD%A6%E4%B9%A0-%E6%AF%94%E7%89%B9%E5%B8%81%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Fri, 15 Jan 2021 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2021/01/15/blockchain_note_bitcoin/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/01/15/blockchain%E5%AD%A6%E4%B9%A0-%E6%AF%94%E7%89%B9%E5%B8%81%E5%9F%BA%E7%A1%80/</guid>
       <description>比特币的数据结构 哈希指针 Hash Pointers 哈希指针指向一个结构体的哈希值（整个区块+其H()一起算出下一个值） 特征 tamper-evident log 如果这个区块被篡改，则会影响后续所有</description>
     </item>
     
     <item>
       <title>Blockchain学习 - 区块链框架</title>
-      <link>https://www.pseudoyu.com/zh/2021/01/11/blockchain_note_framework/</link>
+      <link>https://www.pseudoyu.com/zh/2021/01/11/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E6%A1%86%E6%9E%B6/</link>
       <pubDate>Mon, 11 Jan 2021 08:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2021/01/11/blockchain_note_framework/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/01/11/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E6%A1%86%E6%9E%B6/</guid>
       <description>区块链框架 交易 钱包 签名 内存池 网络 共识机制 哈希 区块 区块链 哈希 区块链使用的是SHA256(Secure Hashing Algorithm 256 bits) var SHA256 = require(&amp;#34;crypto-js/sha256&amp;#34;); const data1 = &amp;#34;Blockchain Rock!&amp;#34;; const dataObject = { id: 1, body: &amp;#34;With</description>
     </item>
     
     <item>
       <title>Blockchain学习 - 区块链概念</title>
-      <link>https://www.pseudoyu.com/zh/2021/01/07/blockchain_note_concept/</link>
+      <link>https://www.pseudoyu.com/zh/2021/01/07/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E6%A6%82%E5%BF%B5/</link>
       <pubDate>Thu, 07 Jan 2021 05:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2021/01/07/blockchain_note_concept/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/01/07/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E6%A6%82%E5%BF%B5/</guid>
       <description>区块链概念 区块链是一种分布式账本技术，由于是一群人来记账，所以修改这个账本的难度比较高。 单式记账 → 复式记账 → 数字化记账 → 分布式记账 传统中心化</description>
     </item>
     
     <item>
       <title>Blockchain学习 - 密码学原理</title>
-      <link>https://www.pseudoyu.com/zh/2021/01/03/blockchain_note_cryptography/</link>
+      <link>https://www.pseudoyu.com/zh/2021/01/03/blockchain%E5%AD%A6%E4%B9%A0-%E5%AF%86%E7%A0%81%E5%AD%A6%E5%8E%9F%E7%90%86/</link>
       <pubDate>Sun, 03 Jan 2021 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2021/01/03/blockchain_note_cryptography/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/01/03/blockchain%E5%AD%A6%E4%B9%A0-%E5%AF%86%E7%A0%81%E5%AD%A6%E5%8E%9F%E7%90%86/</guid>
       <description>密码学原理 哈希 特征 collision resistance 抗碰撞性 哈希碰撞是指当x≠y时，存在H(x)=H(y)，不同的输入映射到哈希表的同一个位置 很难人工创造哈希碰撞 常用于文</description>
     </item>
     
     <item>
       <title>Java学习 - 线程间的通信</title>
-      <link>https://www.pseudoyu.com/zh/2020/12/23/java_note_concurrent_communication/</link>
+      <link>https://www.pseudoyu.com/zh/2020/12/23/java%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E7%A8%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1/</link>
       <pubDate>Wed, 23 Dec 2020 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2020/12/23/java_note_concurrent_communication/</guid>
+      <guid>https://www.pseudoyu.com/zh/2020/12/23/java%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E7%A8%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1/</guid>
       <description>线程间的通信 锁与同步 Java中锁是基于对象的，因此也被称为对象锁 一个锁同一时间只能被一个线程持有 线程之间的同步是指线程按照一定的顺序执行 public class</description>
     </item>
     
     <item>
       <title>Java学习 - 线程状态及转化方法</title>
-      <link>https://www.pseudoyu.com/zh/2020/12/09/java_note_concurrent_state/</link>
+      <link>https://www.pseudoyu.com/zh/2020/12/09/java%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E5%8F%8A%E8%BD%AC%E5%8C%96%E6%96%B9%E6%B3%95/</link>
       <pubDate>Wed, 09 Dec 2020 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2020/12/09/java_note_concurrent_state/</guid>
+      <guid>https://www.pseudoyu.com/zh/2020/12/09/java%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E5%8F%8A%E8%BD%AC%E5%8C%96%E6%96%B9%E6%B3%95/</guid>
       <description>线程状态及转化方法 操作系统中的线程状态转换 操作系统线程主要有以下三个状态 就绪状态 READY：线程正在等待使用CPU，经调度程序调用之后可进入</description>
     </item>
     
     <item>
       <title>Java学习 - 线程组和线程优先级</title>
-      <link>https://www.pseudoyu.com/zh/2020/12/07/java_note_concurrent_threadgroup/</link>
+      <link>https://www.pseudoyu.com/zh/2020/12/07/java%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E7%A8%8B%E7%BB%84%E5%92%8C%E7%BA%BF%E7%A8%8B%E4%BC%98%E5%85%88%E7%BA%A7/</link>
       <pubDate>Mon, 07 Dec 2020 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2020/12/07/java_note_concurrent_threadgroup/</guid>
+      <guid>https://www.pseudoyu.com/zh/2020/12/07/java%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E7%A8%8B%E7%BB%84%E5%92%8C%E7%BA%BF%E7%A8%8B%E4%BC%98%E5%85%88%E7%BA%A7/</guid>
       <description>线程组和线程优先级 线程组 Java中的ThreadGroup表示线程组，可使用线程组对线程进行批量控制；每个线程必须存在于一个线程组中，不能独</description>
     </item>
     

@@ -39,10 +39,10 @@
     
     <item>
       <title>COMP7103 Topic 3 Clustering</title>
-      <link>https://www.pseudoyu.com/en/2021/03/18/comp7103_topic3/</link>
+      <link>https://www.pseudoyu.com/en/2021/03/18/comp7103-topic-3-clustering/</link>
       <pubDate>Thu, 18 Mar 2021 01:18:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/03/18/comp7103_topic3/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/03/18/comp7103-topic-3-clustering/</guid>
       
         <description>&lt;h1 id=&#34;comp7103-data-mining&#34;&gt;COMP7103 Data Mining&lt;/h1&gt;
 &lt;h2 id=&#34;topic-3-clustering&#34;&gt;Topic 3 Clustering&lt;/h2&gt;
@@ -414,10 +414,10 @@
     
     <item>
       <title>COMP7801 Topic 4 Top-k</title>
-      <link>https://www.pseudoyu.com/en/2021/03/06/comp7801_topic4/</link>
+      <link>https://www.pseudoyu.com/en/2021/03/06/comp7801-topic-4-top-k/</link>
       <pubDate>Sat, 06 Mar 2021 01:18:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/03/06/comp7801_topic4/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/03/06/comp7801-topic-4-top-k/</guid>
       
         <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
 &lt;h3 id=&#34;multidimensional-data&#34;&gt;Multidimensional Data&lt;/h3&gt;
@@ -672,10 +672,10 @@
     
     <item>
       <title>COMP7801 Topic 3 Spatial Networks</title>
-      <link>https://www.pseudoyu.com/en/2021/02/27/comp7801_topic3/</link>
+      <link>https://www.pseudoyu.com/en/2021/02/27/comp7801-topic-3-spatial-networks/</link>
       <pubDate>Sat, 27 Feb 2021 01:18:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/02/27/comp7801_topic3/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/02/27/comp7801-topic-3-spatial-networks/</guid>
       
         <description>&lt;h3 id=&#34;background&#34;&gt;Background&lt;/h3&gt;
 &lt;h4 id=&#34;network-distance&#34;&gt;Network Distance&lt;/h4&gt;
@@ -1080,10 +1080,10 @@
     
     <item>
       <title>COMP7103 Topic 2 Association Rules</title>
-      <link>https://www.pseudoyu.com/en/2021/02/25/comp7103_topic2/</link>
+      <link>https://www.pseudoyu.com/en/2021/02/25/comp7103-topic-2-association-rules/</link>
       <pubDate>Thu, 25 Feb 2021 01:18:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/02/25/comp7103_topic2/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/02/25/comp7103-topic-2-association-rules/</guid>
       
         <description>&lt;h1 id=&#34;comp7103-data-mining&#34;&gt;COMP7103 Data Mining&lt;/h1&gt;
 &lt;h2 id=&#34;topic-2-association-rules&#34;&gt;Topic 2 Association Rules&lt;/h2&gt;
@@ -1271,10 +1271,10 @@
     
     <item>
       <title>用OKR的方式梳理自己的学习计划</title>
-      <link>https://www.pseudoyu.com/en/2021/02/11/learning_plan_okr/</link>
+      <link>https://www.pseudoyu.com/en/2021/02/11/%E7%94%A8okr%E7%9A%84%E6%96%B9%E5%BC%8F%E6%A2%B3%E7%90%86%E8%87%AA%E5%B7%B1%E7%9A%84%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</link>
       <pubDate>Thu, 11 Feb 2021 00:00:00 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/02/11/learning_plan_okr/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/02/11/%E7%94%A8okr%E7%9A%84%E6%96%B9%E5%BC%8F%E6%A2%B3%E7%90%86%E8%87%AA%E5%B7%B1%E7%9A%84%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</guid>
       
         <description>&lt;h2 id=&#34;用一句话形容理想情况下自己想要达到的状态&#34;&gt;用一句话形容理想情况下，自己想要达到的状态&lt;/h2&gt;
 &lt;ul&gt;
@@ -1357,10 +1357,10 @@
     
     <item>
       <title>COMP7801 Topic 2 Spatial Data Management</title>
-      <link>https://www.pseudoyu.com/en/2021/02/06/comp7801_topic2/</link>
+      <link>https://www.pseudoyu.com/en/2021/02/06/comp7801-topic-2-spatial-data-management/</link>
       <pubDate>Sat, 06 Feb 2021 01:18:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/02/06/comp7801_topic2/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/02/06/comp7801-topic-2-spatial-data-management/</guid>
       
         <description>&lt;h2 id=&#34;spatial-data-management&#34;&gt;Spatial Data Management&lt;/h2&gt;
 &lt;h3 id=&#34;concepts&#34;&gt;Concepts&lt;/h3&gt;
@@ -1968,10 +1968,10 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
     
     <item>
       <title>Blockchain学习 - 区块链隐私</title>
-      <link>https://www.pseudoyu.com/en/2021/01/30/blockchain_note_privacy/</link>
+      <link>https://www.pseudoyu.com/en/2021/01/30/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E9%9A%90%E7%A7%81/</link>
       <pubDate>Sat, 30 Jan 2021 05:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/01/30/blockchain_note_privacy/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/01/30/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E9%9A%90%E7%A7%81/</guid>
       
         <description>&lt;h2 id=&#34;区块链隐私&#34;&gt;区块链隐私&lt;/h2&gt;
 &lt;h3 id=&#34;区块链透明性&#34;&gt;区块链透明性&lt;/h3&gt;
@@ -2031,10 +2031,10 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
     
     <item>
       <title>COMP7801 Topic 1b Database Indexing</title>
-      <link>https://www.pseudoyu.com/en/2021/01/30/comp7801_topic1b/</link>
+      <link>https://www.pseudoyu.com/en/2021/01/30/comp7801-topic-1b-database-indexing/</link>
       <pubDate>Sat, 30 Jan 2021 01:18:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/01/30/comp7801_topic1b/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/01/30/comp7801-topic-1b-database-indexing/</guid>
       
         <description>&lt;h2 id=&#34;database-indexing&#34;&gt;Database Indexing&lt;/h2&gt;
 &lt;h3 id=&#34;concepts&#34;&gt;Concepts&lt;/h3&gt;
@@ -2385,10 +2385,10 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
     
     <item>
       <title>COMP7103 Topic 1 Introduction</title>
-      <link>https://www.pseudoyu.com/en/2021/01/28/comp7103_topic1/</link>
+      <link>https://www.pseudoyu.com/en/2021/01/28/comp7103-topic-1-introduction/</link>
       <pubDate>Thu, 28 Jan 2021 01:18:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/01/28/comp7103_topic1/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/01/28/comp7103-topic-1-introduction/</guid>
       
         <description>&lt;h1 id=&#34;comp7103-data-mining&#34;&gt;COMP7103 Data Mining&lt;/h1&gt;
 &lt;h2 id=&#34;topic-1-introduction&#34;&gt;Topic 1 Introduction&lt;/h2&gt;
@@ -2673,10 +2673,10 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
     
     <item>
       <title>Blockchain学习 - 区块链安全</title>
-      <link>https://www.pseudoyu.com/en/2021/01/25/blockchain_note_security/</link>
+      <link>https://www.pseudoyu.com/en/2021/01/25/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AE%89%E5%85%A8/</link>
       <pubDate>Mon, 25 Jan 2021 05:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/01/25/blockchain_note_security/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/01/25/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AE%89%E5%85%A8/</guid>
       
         <description>&lt;h2 id=&#34;区块链安全&#34;&gt;区块链安全&lt;/h2&gt;
 &lt;h3 id=&#34;风险来源&#34;&gt;风险来源&lt;/h3&gt;
@@ -2810,10 +2810,10 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
     
     <item>
       <title>COMP7801 Topic 1a Relational Database</title>
-      <link>https://www.pseudoyu.com/en/2021/01/23/comp7801_topic1a/</link>
+      <link>https://www.pseudoyu.com/en/2021/01/23/comp7801-topic-1a-relational-database/</link>
       <pubDate>Sat, 23 Jan 2021 01:18:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/01/23/comp7801_topic1a/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/01/23/comp7801-topic-1a-relational-database/</guid>
       
         <description>&lt;h2 id=&#34;relational-databases&#34;&gt;Relational Databases&lt;/h2&gt;
 &lt;h3 id=&#34;structure-of-relational-databases&#34;&gt;Structure of Relational Databases&lt;/h3&gt;
@@ -3198,10 +3198,10 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
     
     <item>
       <title>Blockchain学习 - 比特币数据模型</title>
-      <link>https://www.pseudoyu.com/en/2021/01/22/blockchain_note_bitcoin_data/</link>
+      <link>https://www.pseudoyu.com/en/2021/01/22/blockchain%E5%AD%A6%E4%B9%A0-%E6%AF%94%E7%89%B9%E5%B8%81%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B/</link>
       <pubDate>Fri, 22 Jan 2021 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/01/22/blockchain_note_bitcoin_data/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/01/22/blockchain%E5%AD%A6%E4%B9%A0-%E6%AF%94%E7%89%B9%E5%B8%81%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B/</guid>
       
         <description>&lt;h2 id=&#34;比特币数据模型&#34;&gt;比特币数据模型&lt;/h2&gt;
 &lt;h3 id=&#34;区块头&#34;&gt;区块头&lt;/h3&gt;
@@ -3329,10 +3329,10 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
     
     <item>
       <title>Blockchain学习 - Bitcoin Core客户端</title>
-      <link>https://www.pseudoyu.com/en/2021/01/19/blockchain_note_bitcoin_core/</link>
+      <link>https://www.pseudoyu.com/en/2021/01/19/blockchain%E5%AD%A6%E4%B9%A0-bitcoin-core%E5%AE%A2%E6%88%B7%E7%AB%AF/</link>
       <pubDate>Tue, 19 Jan 2021 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/01/19/blockchain_note_bitcoin_core/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/01/19/blockchain%E5%AD%A6%E4%B9%A0-bitcoin-core%E5%AE%A2%E6%88%B7%E7%AB%AF/</guid>
       
         <description>&lt;h3 id=&#34;bitcoin-core客户端&#34;&gt;Bitcoin Core客户端&lt;/h3&gt;
 &lt;p&gt;比特币的实现&lt;/p&gt;
@@ -3417,10 +3417,10 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
     
     <item>
       <title>Blockchain学习 - 比特币基础</title>
-      <link>https://www.pseudoyu.com/en/2021/01/15/blockchain_note_bitcoin/</link>
+      <link>https://www.pseudoyu.com/en/2021/01/15/blockchain%E5%AD%A6%E4%B9%A0-%E6%AF%94%E7%89%B9%E5%B8%81%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Fri, 15 Jan 2021 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/01/15/blockchain_note_bitcoin/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/01/15/blockchain%E5%AD%A6%E4%B9%A0-%E6%AF%94%E7%89%B9%E5%B8%81%E5%9F%BA%E7%A1%80/</guid>
       
         <description>&lt;h2 id=&#34;比特币的数据结构&#34;&gt;比特币的数据结构&lt;/h2&gt;
 &lt;h3 id=&#34;哈希指针-hash-pointers&#34;&gt;哈希指针 Hash Pointers&lt;/h3&gt;
@@ -3696,10 +3696,10 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
     
     <item>
       <title>Blockchain学习 - 区块链框架</title>
-      <link>https://www.pseudoyu.com/en/2021/01/11/blockchain_note_framework/</link>
+      <link>https://www.pseudoyu.com/en/2021/01/11/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E6%A1%86%E6%9E%B6/</link>
       <pubDate>Mon, 11 Jan 2021 08:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/01/11/blockchain_note_framework/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/01/11/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E6%A1%86%E6%9E%B6/</guid>
       
         <description>&lt;h2 id=&#34;区块链框架&#34;&gt;区块链框架&lt;/h2&gt;
 &lt;ul&gt;
@@ -3946,10 +3946,10 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
     
     <item>
       <title>Blockchain学习 - 区块链概念</title>
-      <link>https://www.pseudoyu.com/en/2021/01/07/blockchain_note_concept/</link>
+      <link>https://www.pseudoyu.com/en/2021/01/07/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E6%A6%82%E5%BF%B5/</link>
       <pubDate>Thu, 07 Jan 2021 05:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/01/07/blockchain_note_concept/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/01/07/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E6%A6%82%E5%BF%B5/</guid>
       
         <description>&lt;h2 id=&#34;区块链概念&#34;&gt;区块链概念&lt;/h2&gt;
 &lt;p&gt;区块链是一种分布式账本技术，由于是一群人来记账，所以修改这个账本的难度比较高。&lt;/p&gt;
@@ -4104,10 +4104,10 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
     
     <item>
       <title>Blockchain学习 - 密码学原理</title>
-      <link>https://www.pseudoyu.com/en/2021/01/03/blockchain_note_cryptography/</link>
+      <link>https://www.pseudoyu.com/en/2021/01/03/blockchain%E5%AD%A6%E4%B9%A0-%E5%AF%86%E7%A0%81%E5%AD%A6%E5%8E%9F%E7%90%86/</link>
       <pubDate>Sun, 03 Jan 2021 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/01/03/blockchain_note_cryptography/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/01/03/blockchain%E5%AD%A6%E4%B9%A0-%E5%AF%86%E7%A0%81%E5%AD%A6%E5%8E%9F%E7%90%86/</guid>
       
         <description>&lt;h2 id=&#34;密码学原理&#34;&gt;密码学原理&lt;/h2&gt;
 &lt;h3 id=&#34;哈希&#34;&gt;哈希&lt;/h3&gt;
@@ -4191,10 +4191,10 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
     
     <item>
       <title>Java学习 - 线程间的通信</title>
-      <link>https://www.pseudoyu.com/en/2020/12/23/java_note_concurrent_communication/</link>
+      <link>https://www.pseudoyu.com/en/2020/12/23/java%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E7%A8%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1/</link>
       <pubDate>Wed, 23 Dec 2020 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2020/12/23/java_note_concurrent_communication/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/12/23/java%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E7%A8%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1/</guid>
       
         <description>&lt;h2 id=&#34;线程间的通信&#34;&gt;线程间的通信&lt;/h2&gt;
 &lt;h3 id=&#34;锁与同步&#34;&gt;锁与同步&lt;/h3&gt;
@@ -4518,10 +4518,10 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
     
     <item>
       <title>Java学习 - 线程状态及转化方法</title>
-      <link>https://www.pseudoyu.com/en/2020/12/09/java_note_concurrent_state/</link>
+      <link>https://www.pseudoyu.com/en/2020/12/09/java%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E5%8F%8A%E8%BD%AC%E5%8C%96%E6%96%B9%E6%B3%95/</link>
       <pubDate>Wed, 09 Dec 2020 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2020/12/09/java_note_concurrent_state/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/12/09/java%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E5%8F%8A%E8%BD%AC%E5%8C%96%E6%96%B9%E6%B3%95/</guid>
       
         <description>&lt;h2 id=&#34;线程状态及转化方法&#34;&gt;线程状态及转化方法&lt;/h2&gt;
 &lt;h3 id=&#34;操作系统中的线程状态转换&#34;&gt;操作系统中的线程状态转换&lt;/h3&gt;

@@ -9,163 +9,163 @@
     <lastBuildDate>Sat, 30 Jan 2021 05:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blockchain学习 - 区块链隐私</title>
-      <link>https://www.pseudoyu.com/en/2021/01/30/blockchain_note_privacy/</link>
+      <link>https://www.pseudoyu.com/en/2021/01/30/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E9%9A%90%E7%A7%81/</link>
       <pubDate>Sat, 30 Jan 2021 05:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/01/30/blockchain_note_privacy/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/01/30/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E9%9A%90%E7%A7%81/</guid>
       <description>区块链隐私 区块链透明性 所有人都能看到交易细节/历史记录 应用场景：供应链 （食品、药品、酒&amp;hellip;） 隐私风险：个人信息（账户余额、交易信</description>
     </item>
     
     <item>
       <title>Blockchain学习 - 区块链安全</title>
-      <link>https://www.pseudoyu.com/en/2021/01/25/blockchain_note_security/</link>
+      <link>https://www.pseudoyu.com/en/2021/01/25/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AE%89%E5%85%A8/</link>
       <pubDate>Mon, 25 Jan 2021 05:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/01/25/blockchain_note_security/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/01/25/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AE%89%E5%85%A8/</guid>
       <description>区块链安全 风险来源 应用层 与应用程序相关的攻击和安全问题，如数字货币交易所 智能合约层 很多潜在风险，如DAO事件 激励层 矿工付出成本 &amp;gt; 奖励，则去中</description>
     </item>
     
     <item>
       <title>Blockchain学习 - 比特币数据模型</title>
-      <link>https://www.pseudoyu.com/en/2021/01/22/blockchain_note_bitcoin_data/</link>
+      <link>https://www.pseudoyu.com/en/2021/01/22/blockchain%E5%AD%A6%E4%B9%A0-%E6%AF%94%E7%89%B9%E5%B8%81%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B/</link>
       <pubDate>Fri, 22 Jan 2021 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/01/22/blockchain_note_bitcoin_data/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/01/22/blockchain%E5%AD%A6%E4%B9%A0-%E6%AF%94%E7%89%B9%E5%B8%81%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B/</guid>
       <description>比特币数据模型 区块头 前一个区块的哈希值 时间戳 Merkle Root Nonce Block Body 交易 输入 UTXO: Unspent outputs from another Transaction 必须以整体被花费，不能划分，多余部分转回源账户 所有输入都可以追溯至</description>
     </item>
     
     <item>
       <title>Blockchain学习 - Bitcoin Core客户端</title>
-      <link>https://www.pseudoyu.com/en/2021/01/19/blockchain_note_bitcoin_core/</link>
+      <link>https://www.pseudoyu.com/en/2021/01/19/blockchain%E5%AD%A6%E4%B9%A0-bitcoin-core%E5%AE%A2%E6%88%B7%E7%AB%AF/</link>
       <pubDate>Tue, 19 Jan 2021 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/01/19/blockchain_note_bitcoin_core/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/01/19/blockchain%E5%AD%A6%E4%B9%A0-bitcoin-core%E5%AE%A2%E6%88%B7%E7%AB%AF/</guid>
       <description>Bitcoin Core客户端 比特币的实现 Bitcoin-QT Satoshi-client 特点 连接至比特币网络 可验证区块链 可以发送与接收区块链 网络 Mainnet Testnet Regnet Debug Console 与比特币区块链交互的工具 Blockchain getblockchaininfo: 返回有关区块链</description>
     </item>
     
     <item>
       <title>Blockchain学习 - 比特币基础</title>
-      <link>https://www.pseudoyu.com/en/2021/01/15/blockchain_note_bitcoin/</link>
+      <link>https://www.pseudoyu.com/en/2021/01/15/blockchain%E5%AD%A6%E4%B9%A0-%E6%AF%94%E7%89%B9%E5%B8%81%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Fri, 15 Jan 2021 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/01/15/blockchain_note_bitcoin/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/01/15/blockchain%E5%AD%A6%E4%B9%A0-%E6%AF%94%E7%89%B9%E5%B8%81%E5%9F%BA%E7%A1%80/</guid>
       <description>比特币的数据结构 哈希指针 Hash Pointers 哈希指针指向一个结构体的哈希值（整个区块+其H()一起算出下一个值） 特征 tamper-evident log 如果这个区块被篡改，则会影响后续所有</description>
     </item>
     
     <item>
       <title>Blockchain学习 - 区块链框架</title>
-      <link>https://www.pseudoyu.com/en/2021/01/11/blockchain_note_framework/</link>
+      <link>https://www.pseudoyu.com/en/2021/01/11/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E6%A1%86%E6%9E%B6/</link>
       <pubDate>Mon, 11 Jan 2021 08:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/01/11/blockchain_note_framework/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/01/11/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E6%A1%86%E6%9E%B6/</guid>
       <description>区块链框架 交易 钱包 签名 内存池 网络 共识机制 哈希 区块 区块链 哈希 区块链使用的是SHA256(Secure Hashing Algorithm 256 bits) var SHA256 = require(&amp;#34;crypto-js/sha256&amp;#34;); const data1 = &amp;#34;Blockchain Rock!&amp;#34;; const dataObject = { id: 1, body: &amp;#34;With</description>
     </item>
     
     <item>
       <title>Blockchain学习 - 区块链概念</title>
-      <link>https://www.pseudoyu.com/en/2021/01/07/blockchain_note_concept/</link>
+      <link>https://www.pseudoyu.com/en/2021/01/07/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E6%A6%82%E5%BF%B5/</link>
       <pubDate>Thu, 07 Jan 2021 05:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/01/07/blockchain_note_concept/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/01/07/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E6%A6%82%E5%BF%B5/</guid>
       <description>区块链概念 区块链是一种分布式账本技术，由于是一群人来记账，所以修改这个账本的难度比较高。 单式记账 → 复式记账 → 数字化记账 → 分布式记账 传统中心化</description>
     </item>
     
     <item>
       <title>Blockchain学习 - 密码学原理</title>
-      <link>https://www.pseudoyu.com/en/2021/01/03/blockchain_note_cryptography/</link>
+      <link>https://www.pseudoyu.com/en/2021/01/03/blockchain%E5%AD%A6%E4%B9%A0-%E5%AF%86%E7%A0%81%E5%AD%A6%E5%8E%9F%E7%90%86/</link>
       <pubDate>Sun, 03 Jan 2021 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/01/03/blockchain_note_cryptography/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/01/03/blockchain%E5%AD%A6%E4%B9%A0-%E5%AF%86%E7%A0%81%E5%AD%A6%E5%8E%9F%E7%90%86/</guid>
       <description>密码学原理 哈希 特征 collision resistance 抗碰撞性 哈希碰撞是指当x≠y时，存在H(x)=H(y)，不同的输入映射到哈希表的同一个位置 很难人工创造哈希碰撞 常用于文</description>
     </item>
     
     <item>
       <title>Java学习 - 线程间的通信</title>
-      <link>https://www.pseudoyu.com/en/2020/12/23/java_note_concurrent_communication/</link>
+      <link>https://www.pseudoyu.com/en/2020/12/23/java%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E7%A8%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1/</link>
       <pubDate>Wed, 23 Dec 2020 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2020/12/23/java_note_concurrent_communication/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/12/23/java%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E7%A8%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1/</guid>
       <description>线程间的通信 锁与同步 Java中锁是基于对象的，因此也被称为对象锁 一个锁同一时间只能被一个线程持有 线程之间的同步是指线程按照一定的顺序执行 public class</description>
     </item>
     
     <item>
       <title>Java学习 - 线程状态及转化方法</title>
-      <link>https://www.pseudoyu.com/en/2020/12/09/java_note_concurrent_state/</link>
+      <link>https://www.pseudoyu.com/en/2020/12/09/java%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E5%8F%8A%E8%BD%AC%E5%8C%96%E6%96%B9%E6%B3%95/</link>
       <pubDate>Wed, 09 Dec 2020 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2020/12/09/java_note_concurrent_state/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/12/09/java%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E5%8F%8A%E8%BD%AC%E5%8C%96%E6%96%B9%E6%B3%95/</guid>
       <description>线程状态及转化方法 操作系统中的线程状态转换 操作系统线程主要有以下三个状态 就绪状态 READY：线程正在等待使用CPU，经调度程序调用之后可进入</description>
     </item>
     
     <item>
       <title>Java学习 - 线程组和线程优先级</title>
-      <link>https://www.pseudoyu.com/en/2020/12/07/java_note_concurrent_threadgroup/</link>
+      <link>https://www.pseudoyu.com/en/2020/12/07/java%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E7%A8%8B%E7%BB%84%E5%92%8C%E7%BA%BF%E7%A8%8B%E4%BC%98%E5%85%88%E7%BA%A7/</link>
       <pubDate>Mon, 07 Dec 2020 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2020/12/07/java_note_concurrent_threadgroup/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/12/07/java%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E7%A8%8B%E7%BB%84%E5%92%8C%E7%BA%BF%E7%A8%8B%E4%BC%98%E5%85%88%E7%BA%A7/</guid>
       <description>线程组和线程优先级 线程组 Java中的ThreadGroup表示线程组，可使用线程组对线程进行批量控制；每个线程必须存在于一个线程组中，不能独</description>
     </item>
     
     <item>
       <title>Java学习 - 多线程入门类和接口</title>
-      <link>https://www.pseudoyu.com/en/2020/12/05/java_note_concurrent_practice/</link>
+      <link>https://www.pseudoyu.com/en/2020/12/05/java%E5%AD%A6%E4%B9%A0-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%85%A5%E9%97%A8%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/</link>
       <pubDate>Sat, 05 Dec 2020 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2020/12/05/java_note_concurrent_practice/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/12/05/java%E5%AD%A6%E4%B9%A0-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%85%A5%E9%97%A8%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/</guid>
       <description>多线程入门类和接口 Java中使用多线程的方法 由于Java单继承多实现的特性，Runnable接口用起来比Thread更灵活 Runnable接</description>
     </item>
     
     <item>
       <title>Java学习 - 文件与I/O流</title>
-      <link>https://www.pseudoyu.com/en/2020/12/02/java_note_io/</link>
+      <link>https://www.pseudoyu.com/en/2020/12/02/java%E5%AD%A6%E4%B9%A0-%E6%96%87%E4%BB%B6%E4%B8%8Ei/o%E6%B5%81/</link>
       <pubDate>Wed, 02 Dec 2020 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2020/12/02/java_note_io/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/12/02/java%E5%AD%A6%E4%B9%A0-%E6%96%87%E4%BB%B6%E4%B8%8Ei/o%E6%B5%81/</guid>
       <description>IO流 分类 流的流向 输入流 输出流 操作单元 字节流 字符流 角色 节点流 处理流 抽象类基类 InputStream（字节流）/Reader（字符流） Outp</description>
     </item>
     
     <item>
       <title>Java学习 - 多线程</title>
-      <link>https://www.pseudoyu.com/en/2020/11/29/java_note_concurrent/</link>
+      <link>https://www.pseudoyu.com/en/2020/11/29/java%E5%AD%A6%E4%B9%A0-%E5%A4%9A%E7%BA%BF%E7%A8%8B/</link>
       <pubDate>Sun, 29 Nov 2020 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2020/11/29/java_note_concurrent/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/11/29/java%E5%AD%A6%E4%B9%A0-%E5%A4%9A%E7%BA%BF%E7%A8%8B/</guid>
       <description>多线程 线程、程序、进程的基本概念 线程 比进程更小的执行单位，一个进程在执行的过程中可以产生多个线程 同类的多个线程共享同一块内存空间和一组系统资</description>
     </item>
     
     <item>
       <title>Java学习 - 常用方法</title>
-      <link>https://www.pseudoyu.com/en/2020/11/27/java_note_methods/</link>
+      <link>https://www.pseudoyu.com/en/2020/11/27/java%E5%AD%A6%E4%B9%A0-%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</link>
       <pubDate>Fri, 27 Nov 2020 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2020/11/27/java_note_methods/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/11/27/java%E5%AD%A6%E4%B9%A0-%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
       <description>String与StringBuffer String 特征 Java8中，String内部使用char数组存储数据 Java9后，String类的实现改用了b</description>
     </item>
     
     <item>
       <title>Java学习 - 集合</title>
-      <link>https://www.pseudoyu.com/en/2020/11/25/java_note_collections/</link>
+      <link>https://www.pseudoyu.com/en/2020/11/25/java%E5%AD%A6%E4%B9%A0-%E9%9B%86%E5%90%88/</link>
       <pubDate>Wed, 25 Nov 2020 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2020/11/25/java_note_collections/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/11/25/java%E5%AD%A6%E4%B9%A0-%E9%9B%86%E5%90%88/</guid>
       <description>集合类 概述 为了在程序中保存数目不确定的对象，JDK中提供了一系列特殊的类，这些类可以存储任意类型的对象且长度可变，称为集合，位于java.u</description>
     </item>
     
     <item>
       <title>Java学习 - 面向对象</title>
-      <link>https://www.pseudoyu.com/en/2020/11/23/java_note_oop/</link>
+      <link>https://www.pseudoyu.com/en/2020/11/23/java%E5%AD%A6%E4%B9%A0-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</link>
       <pubDate>Mon, 23 Nov 2020 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2020/11/23/java_note_oop/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/11/23/java%E5%AD%A6%E4%B9%A0-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</guid>
       <description>Java面向对象 特性 封装性：将对象的属性和行为封装起来，不需要让外界知道具体的实现细节 继承性：无需重新编写原有类的情况下，新类可拥有原有类的</description>
     </item>
     
     <item>
       <title>Java学习 - 基础</title>
-      <link>https://www.pseudoyu.com/en/2020/11/20/java_note_basic/</link>
+      <link>https://www.pseudoyu.com/en/2020/11/20/java%E5%AD%A6%E4%B9%A0-%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Fri, 20 Nov 2020 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2020/11/20/java_note_basic/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/11/20/java%E5%AD%A6%E4%B9%A0-%E5%9F%BA%E7%A1%80/</guid>
       <description>Java基础 Java特性 简单性 丢弃了C++中运算符重载、多重继承等 不使用指针而是使用引用 自动垃圾回收机制（不用开发者进行内存管理） 面向对象 提</description>
     </item>
     

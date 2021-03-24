@@ -30,7 +30,7 @@
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2021/03/18/comp7103-topic-3-clustering/</loc>
+    <loc>https://www.pseudoyu.com/zh/2021/03/18/comp7103_topic3/</loc>
     <lastmod>2021-03-18T01:18:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -93,7 +93,7 @@
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2021/03/06/comp7801-topic-4-top-k/</loc>
+    <loc>https://www.pseudoyu.com/zh/2021/03/06/comp7801_topic4/</loc>
     <lastmod>2021-03-06T01:18:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -107,14 +107,14 @@
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2021/02/27/comp7801-topic-3-spatial-networks/</loc>
+    <loc>https://www.pseudoyu.com/zh/2021/02/27/comp7801_topic3/</loc>
     <lastmod>2021-02-27T01:18:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2021/02/25/comp7103-topic-2-association-rules/</loc>
+    <loc>https://www.pseudoyu.com/zh/2021/02/25/comp7103_topic2/</loc>
     <lastmod>2021-02-25T01:18:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -156,14 +156,14 @@
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2021/02/11/%E7%94%A8okr%E7%9A%84%E6%96%B9%E5%BC%8F%E6%A2%B3%E7%90%86%E8%87%AA%E5%B7%B1%E7%9A%84%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</loc>
+    <loc>https://www.pseudoyu.com/zh/2021/02/11/learning_plan_okr/</loc>
     <lastmod>2021-02-11T00:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2021/02/06/comp7801-topic-2-spatial-data-management/</loc>
+    <loc>https://www.pseudoyu.com/zh/2021/02/06/comp7801_topic2/</loc>
     <lastmod>2021-02-06T01:18:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -177,7 +177,7 @@
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2021/01/30/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E9%9A%90%E7%A7%81/</loc>
+    <loc>https://www.pseudoyu.com/zh/2021/01/30/blockchain_note_privacy/</loc>
     <lastmod>2021-01-30T05:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -198,70 +198,70 @@
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2021/01/30/comp7801-topic-1b-database-indexing/</loc>
+    <loc>https://www.pseudoyu.com/zh/2021/01/30/comp7801_topic1b/</loc>
     <lastmod>2021-01-30T01:18:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2021/01/28/comp7103-topic-1-introduction/</loc>
+    <loc>https://www.pseudoyu.com/zh/2021/01/28/comp7103_topic1/</loc>
     <lastmod>2021-01-28T01:18:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2021/01/25/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AE%89%E5%85%A8/</loc>
+    <loc>https://www.pseudoyu.com/zh/2021/01/25/blockchain_note_security/</loc>
     <lastmod>2021-01-25T05:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2021/01/23/comp7801-topic-1a-relational-database/</loc>
+    <loc>https://www.pseudoyu.com/zh/2021/01/23/comp7801_topic1a/</loc>
     <lastmod>2021-01-23T01:18:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2021/01/22/blockchain%E5%AD%A6%E4%B9%A0-%E6%AF%94%E7%89%B9%E5%B8%81%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B/</loc>
+    <loc>https://www.pseudoyu.com/zh/2021/01/22/blockchain_note_bitcoin_data/</loc>
     <lastmod>2021-01-22T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2021/01/19/blockchain%E5%AD%A6%E4%B9%A0-bitcoin-core%E5%AE%A2%E6%88%B7%E7%AB%AF/</loc>
+    <loc>https://www.pseudoyu.com/zh/2021/01/19/blockchain_note_bitcoin_core/</loc>
     <lastmod>2021-01-19T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2021/01/15/blockchain%E5%AD%A6%E4%B9%A0-%E6%AF%94%E7%89%B9%E5%B8%81%E5%9F%BA%E7%A1%80/</loc>
+    <loc>https://www.pseudoyu.com/zh/2021/01/15/blockchain_note_bitcoin/</loc>
     <lastmod>2021-01-15T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2021/01/11/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E6%A1%86%E6%9E%B6/</loc>
+    <loc>https://www.pseudoyu.com/zh/2021/01/11/blockchain_note_framework/</loc>
     <lastmod>2021-01-11T08:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2021/01/07/blockchain%E5%AD%A6%E4%B9%A0-%E5%8C%BA%E5%9D%97%E9%93%BE%E6%A6%82%E5%BF%B5/</loc>
+    <loc>https://www.pseudoyu.com/zh/2021/01/07/blockchain_note_concept/</loc>
     <lastmod>2021-01-07T05:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2021/01/03/blockchain%E5%AD%A6%E4%B9%A0-%E5%AF%86%E7%A0%81%E5%AD%A6%E5%8E%9F%E7%90%86/</loc>
+    <loc>https://www.pseudoyu.com/zh/2021/01/03/blockchain_note_cryptography/</loc>
     <lastmod>2021-01-03T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -275,70 +275,70 @@
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/12/23/java%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E7%A8%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/12/23/java_note_concurrent_communication/</loc>
     <lastmod>2020-12-23T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/12/09/java%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E5%8F%8A%E8%BD%AC%E5%8C%96%E6%96%B9%E6%B3%95/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/12/09/java_note_concurrent_state/</loc>
     <lastmod>2020-12-09T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/12/07/java%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E7%A8%8B%E7%BB%84%E5%92%8C%E7%BA%BF%E7%A8%8B%E4%BC%98%E5%85%88%E7%BA%A7/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/12/07/java_note_concurrent_threadgroup/</loc>
     <lastmod>2020-12-07T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/12/05/java%E5%AD%A6%E4%B9%A0-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%85%A5%E9%97%A8%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/12/05/java_note_concurrent_practice/</loc>
     <lastmod>2020-12-05T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/12/02/java%E5%AD%A6%E4%B9%A0-%E6%96%87%E4%BB%B6%E4%B8%8Ei/o%E6%B5%81/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/12/02/java_note_io/</loc>
     <lastmod>2020-12-02T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/11/29/java%E5%AD%A6%E4%B9%A0-%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/11/29/java_note_concurrent/</loc>
     <lastmod>2020-11-29T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/11/27/java%E5%AD%A6%E4%B9%A0-%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/11/27/java_note_methods/</loc>
     <lastmod>2020-11-27T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/11/25/java%E5%AD%A6%E4%B9%A0-%E9%9B%86%E5%90%88/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/11/25/java_note_collections/</loc>
     <lastmod>2020-11-25T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/11/23/java%E5%AD%A6%E4%B9%A0-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/11/23/java_note_oop/</loc>
     <lastmod>2020-11-23T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/11/20/java%E5%AD%A6%E4%B9%A0-%E5%9F%BA%E7%A1%80/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/11/20/java_note_basic/</loc>
     <lastmod>2020-11-20T03:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -380,7 +380,7 @@
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/11/11/xdeepfm-for-recommender-systems/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/11/11/comp7404_group_project/</loc>
     <lastmod>2020-11-11T16:30:25+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -401,7 +401,7 @@
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/10/21/icom6045-topic-1-cryptography/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/10/21/icom6045_topic1/</loc>
     <lastmod>2020-10-21T19:53:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -429,21 +429,21 @@
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/10/20/icom6012-topic-4-transport-layer/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/10/20/icom6012_topic4/</loc>
     <lastmod>2020-10-20T09:37:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/10/19/icom6012-topic-3-application-layer/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/10/19/icom6012_topic3/</loc>
     <lastmod>2020-10-19T17:50:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/10/16/a-look-at-tik-tok/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/10/16/ecom6013_discussion_topic4/</loc>
     <lastmod>2020-10-16T09:19:19+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -471,119 +471,119 @@
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/10/09/ecom6013-topic-8-blockchain-and-cybercurrency/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/10/09/ecom6013_topic8/</loc>
     <lastmod>2020-10-09T11:01:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/10/05/icom6012-topic-2-the-big-picture/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/10/05/icom6012_topic2/</loc>
     <lastmod>2020-10-05T09:06:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/10/05/comp7404-topic-3-adversarial-search/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/10/05/comp7404_topic3/</loc>
     <lastmod>2020-10-05T00:30:11+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/10/04/comp7404-topic-2-beyond-classical-search/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/10/04/comp7404_topic2/</loc>
     <lastmod>2020-10-04T21:30:11+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/10/01/mobile-payment-systems-case-study/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/10/01/ecom6013_discussion_topic3/</loc>
     <lastmod>2020-10-01T22:25:19+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/09/27/ecom6013-topic-7-e-payment-systems/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/09/27/ecom6013_topic7/</loc>
     <lastmod>2020-09-27T11:30:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/09/26/ecom6013-topic-6-e-commerce-security/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/09/26/ecom6013_topic6/</loc>
     <lastmod>2020-09-26T15:46:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/09/21/ecom6013-topic-5-mobile-commerce/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/09/21/ecom6013_topic5/</loc>
     <lastmod>2020-09-21T10:44:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/09/18/new-ipad-air-4-2020-presence-by-apple-inc./</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/09/18/ecom6013_discussion_topic2/</loc>
     <lastmod>2020-09-18T01:25:19+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/09/16/ecom6013-topic-4-website-design-testing-and-maintenance/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/09/16/ecom6013_topic4/</loc>
     <lastmod>2020-09-16T21:25:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/09/16/ecom6013-topic-3-e-commerce-presence/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/09/16/ecom6013_topic3/</loc>
     <lastmod>2020-09-16T20:25:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/09/16/ecom6013-topic-2-internet-and-e-commerce-infrasture/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/09/16/ecom6013_topic2/</loc>
     <lastmod>2020-09-16T19:28:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/09/16/comp7404-topic-1-solving-problems-by-searching/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/09/16/comp7404_topic1/</loc>
     <lastmod>2020-09-16T00:28:11+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/09/09/icom6012-topic-1-overview/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/09/09/icom6012_topic1/</loc>
     <lastmod>2020-09-09T20:22:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/09/08/puma-goes-omni-case-study/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/09/08/ecom6013_discussion_topic1/</loc>
     <lastmod>2020-09-08T23:30:19+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/09/06/ecom6013-topic-1-introduction-to-e-commerce-technology/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/09/06/ecom6013_topic1/</loc>
     <lastmod>2020-09-06T04:28:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/06/06/23%E5%B2%81%E7%9A%84%E8%87%AA%E7%99%BD%E5%8E%BB%E8%BF%BD%E5%AF%BB%E6%84%8F%E4%B9%89/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/06/06/yearly_review_23/</loc>
     <lastmod>2020-06-06T00:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -639,7 +639,7 @@
   </url>
   
   <url>
-    <loc>https://www.pseudoyu.com/zh/2020/04/05/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BA%91%E5%BC%80%E5%8F%91%E9%A1%B9%E7%9B%AE-%E5%90%83%E4%BB%80%E4%B9%88%E5%90%96/</loc>
+    <loc>https://www.pseudoyu.com/zh/2020/04/05/mini_program_dev/</loc>
     <lastmod>2020-04-05T23:40:25+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

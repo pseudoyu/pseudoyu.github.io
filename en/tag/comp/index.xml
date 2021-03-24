@@ -9,48 +9,48 @@
     <lastBuildDate>Thu, 18 Mar 2021 01:18:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/comp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>COMP7103 Topic 3 Clustering</title>
-      <link>https://www.pseudoyu.com/en/2021/03/18/comp7103-topic-3-clustering/</link>
+      <link>https://www.pseudoyu.com/en/2021/03/18/comp7103_topic3/</link>
       <pubDate>Thu, 18 Mar 2021 01:18:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/03/18/comp7103-topic-3-clustering/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/03/18/comp7103_topic3/</guid>
       <description>COMP7103 Data Mining Topic 3 Clustering Cluster Analysis Finding groups of objects such that the objects in a group will be similar (or related) to one another and different from (or unrelated to) the objects in other groups
 Application  Understanding  Group related documents for browsing, group genes and proteins that have similar functionality, or group stocks with similar price fluctuations   Summarization  Reduce size of large data sets    Types of Clusterings  Partitional Clustering  A division data objects into non-overlapping subsets (clusters) such that each data object is in exactly one subset    Hierarchical clustering  A set of nested clusters organized as a hierarchical tree    Other Distinctions Between Sets of Clusters  Exclusive versus non-exclusive  In non-exclusive clusterings, points may belong to multiple clusters Can represent multiple classes or &amp;lsquo;border&amp;rsquo; points   Fuzzy versus non-fuzzy  In fuzzy clustering, a point belongs to every cluster with some weight between 0 and 1 Weights must sum to 1 Probabilistic clustering has similar characteristics   Partial versus complete  In some cases, we only want to cluster some of the data   Heterogeneous versus homogeneous  Cluster of widely different sizes, shapes, and densities      Well-separated clusters A cluster is a set of points such that any point in a cluster is closer (or more similar) to every other point in the cluster than to any point not in the cluster</description>
     </item>
     
     <item>
       <title>COMP7801 Topic 4 Top-k</title>
-      <link>https://www.pseudoyu.com/en/2021/03/06/comp7801-topic-4-top-k/</link>
+      <link>https://www.pseudoyu.com/en/2021/03/06/comp7801_topic4/</link>
       <pubDate>Sat, 06 Mar 2021 01:18:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/03/06/comp7801-topic-4-top-k/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/03/06/comp7801_topic4/</guid>
       <description>Background Multidimensional Data  Flat relational tables Multimedia feature vectors Data warehouse data Spatial data Text documents  Attribute Types  Attributes of multidimensional tuples may have variable types  Ordinal (e.g., age, salary) Nominal categorical values (e.g., color, religion) Binary (e.g., gender, owns_property)   Basic queries: range, NN, similarity  Basic Queries  (Range) selection query  Returns the records that qualify a (multidimensional) range predicate Example:  Return the employees of age between 45 and 50 and salary above $100,000     Distance (similarity) query  Returns the records that are within a distance from a reference record.</description>
     </item>
     
     <item>
       <title>COMP7801 Topic 3 Spatial Networks</title>
-      <link>https://www.pseudoyu.com/en/2021/02/27/comp7801-topic-3-spatial-networks/</link>
+      <link>https://www.pseudoyu.com/en/2021/02/27/comp7801_topic3/</link>
       <pubDate>Sat, 27 Feb 2021 01:18:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/02/27/comp7801-topic-3-spatial-networks/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/02/27/comp7801_topic3/</guid>
       <description>Background Network Distance  In many real applications accessibility of objects is restricted by a spatial network  Examples  Driver looking for nearest gas station Mobile user looking for nearest restaurant     Shortest path distance used instead of Euclidean distance SP(a,b) = path between a and b with the minimum accumulated length  Challenges  Euclidean distance is no longer relevant  R-tree may not be useful, when search is based on shortest path distance   Graph cannot be flattened to a one-dimensional space  Special storage and indexing techniques for graphs are required   Graph properties may vary  directed vs.</description>
     </item>
     
     <item>
       <title>COMP7103 Topic 2 Association Rules</title>
-      <link>https://www.pseudoyu.com/en/2021/02/25/comp7103-topic-2-association-rules/</link>
+      <link>https://www.pseudoyu.com/en/2021/02/25/comp7103_topic2/</link>
       <pubDate>Thu, 25 Feb 2021 01:18:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/02/25/comp7103-topic-2-association-rules/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/02/25/comp7103_topic2/</guid>
       <description>COMP7103 Data Mining Topic 2 Association Rules Market-Basket Model A general many-many mapping (association) between two kinds of things
  A large set of items, e.g., things sold in a supermarket A large set of baskets, each of which is a small set of the items, e.g., the things one customer buys on one day  Frequent Itemsets Support Support for itemset I (s(I)) = the number of baskets containing all items in I</description>
     </item>
     
     <item>
       <title>COMP7801 Topic 2 Spatial Data Management</title>
-      <link>https://www.pseudoyu.com/en/2021/02/06/comp7801-topic-2-spatial-data-management/</link>
+      <link>https://www.pseudoyu.com/en/2021/02/06/comp7801_topic2/</link>
       <pubDate>Sat, 06 Feb 2021 01:18:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/02/06/comp7801-topic-2-spatial-data-management/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/02/06/comp7801_topic2/</guid>
       <description>Spatial Data Management Concepts Spatial Data
  Location data  Check-in service Online Maps Location-based services   Location tracking Traffic Data  Spatial Databases
  PostgreSQL with PostGIS Neo4J-spatial HadoopGIS Ingres GeoMesa  Spatial Data Management
@@ -59,19 +59,19 @@ Application  Understanding  Group related documents for browsing, group genes an
     
     <item>
       <title>COMP7801 Topic 1b Database Indexing</title>
-      <link>https://www.pseudoyu.com/en/2021/01/30/comp7801-topic-1b-database-indexing/</link>
+      <link>https://www.pseudoyu.com/en/2021/01/30/comp7801_topic1b/</link>
       <pubDate>Sat, 30 Jan 2021 01:18:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/01/30/comp7801-topic-1b-database-indexing/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/01/30/comp7801_topic1b/</guid>
       <description>Database Indexing Concepts  Indexing mechanisms used to speed up access to desired data Search Key  An attribute or a set of attributes used to look up records in a file   An index file consists of records (called index entries) of the form search key - pointer Index files are typically much smaller than the original file Two basic kinds of indices  Ordered indices: search keys are stored in sorted order Hash indices: search keys are distributed across &amp;ldquo;buckets&amp;rdquo; using a &amp;ldquo;hash function&amp;rdquo;    Good Index  Index quality is evaluated by several factors  Access types supported by the index efficiently  records with a specified value in the attribute (equality query) or records with an attribute value falling in a specified range of values (range query)   Access time – query response time Insertion time – data record insertion time Deletion time – data record deletion time Space overhead – size of the index file    Classification of Indexes  Primary index  In a sequentially ordered file, the index whose search key specifies the sequential order of the file   Secondary index  an index whose search key specifies an order different from the sequential order of the file Also called non-clustered index     Dense index  Index record appears for every search-key value in the file   Sparse Index  Contains index records for only some search-key values Applicable when records are sequentially ordered on search-key Less space and less maintenance overhead for insertions and deletions Generally slower than dense index for locating records Good tradeoff: sparse index with an index entry for every block in file, corresponding to least search-key value in the block    Primary and Secondary Indices  Secondary indices have to be dense Indices offer substantial benefits when searching for records  Index is much smaller than relation file (cheap scan) Index can be ordered (fast search)   When a file is modified, every index on the file must be updated  Updating indices imposes overhead on database modification Indexes should be used with care   Sequential scan using primary index is efficient, but a sequential scan using a secondary index is expensive  Each record access may fetch a new block from disk    Multilevel Index  If index does not fit in memory, access becomes expensive To reduce number of disk accesses to index records, treat 1st level of index kept on disk as a sequential file and construct a sparse index on it  outer index – a sparse index on 1st-level index file inner index – the 1st-level index file   If even outer index is too large to fit in main memory, yet another level of index can be created, and so on  B+-Tree Index Files  A dynamic, multi-level index Advantage  automatically reorganizes itself with small local changes, in the face of insertions and deletions Reorganization of entire file is not required to maintain performance   Disadvantage of B+-trees  Extra insertion and deletion overhead, space overhead   Advantages of B+-trees outweigh disadvantages, and they are used extensively  Basic Properties  Disk-based tree structure  every node of the tree is a block and has an address (block-id) on the disk   Multiway tree  each node has multiple children (between n/2 and n, where n/2 is the order or degree of the tree) Therefore, at least 50% of the space in a node is guaranteed to be occupied (this rule may not apply to tree root)   Balanced tree  all paths from the root to a leaf have the same length guarantees good search performance (to be seen later)   Disjoint partition of attribute domain into ranges  each sub-tree indexes a range in the attribute domain the entries of a directory node define the separators between domain intervals leaf nodes store index entries and pointers to the relation file    Non-Leaf Nodes in B+-Trees  Each non-leaf node contains up to n-1 search key values and up to n pointers All non-leaf nodes (except root) contain at least n/2 pointers (n/2 is sometimes called the minimum fan-out or degree) Non leaf nodes form a multi-level sparse index on the leaf nodes.</description>
     </item>
     
     <item>
       <title>COMP7103 Topic 1 Introduction</title>
-      <link>https://www.pseudoyu.com/en/2021/01/28/comp7103-topic-1-introduction/</link>
+      <link>https://www.pseudoyu.com/en/2021/01/28/comp7103_topic1/</link>
       <pubDate>Thu, 28 Jan 2021 01:18:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/01/28/comp7103-topic-1-introduction/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/01/28/comp7103_topic1/</guid>
       <description>COMP7103 Data Mining Topic 1 Introduction Decision-Support System (DSS)
  A decision-support system (DSS) is a system that assists decision makers to make important decisions for an organization or business KDD and data mining are important components in many DSS&amp;rsquo;s  Data and Knowledge
  Data  A collecion of facts about certain group of objects   Pattern  Certain characteristics of data that are frequently observed   Knowledge  Some general rules about the objects    Data Warehouse</description>
@@ -79,20 +79,20 @@ Application  Understanding  Group related documents for browsing, group genes an
     
     <item>
       <title>COMP7801 Topic 1a Relational Database</title>
-      <link>https://www.pseudoyu.com/en/2021/01/23/comp7801-topic-1a-relational-database/</link>
+      <link>https://www.pseudoyu.com/en/2021/01/23/comp7801_topic1a/</link>
       <pubDate>Sat, 23 Jan 2021 01:18:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/01/23/comp7801-topic-1a-relational-database/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/01/23/comp7801_topic1a/</guid>
       <description>Relational Databases Structure of Relational Databases Basic structure  Given sets D1, D2, …. Dn A relation r is a subset of D1 x D2 x … x Dn A relation is a set of n-tuples (a1, a2, …, an) where each ai Di  Example
  if  customer-name = {Jones, Smith, Curry, Lindsay} customer-street = {Main, North, Park} customer-city = {Harrison, Rye, Pittsfield}   Then  r = {(Jones, Main, Harrison), (Smith, North, Rye), (Curry, North, Rye), (Lindsay, Park, Pittsfield)} is a relation over customer-name x customer-street x customer-city    Attribute Types  Each attribute of a relation has a name The set of allowed values for each attribute is called the domain of the attribute  Relation Schema  A1, A2, …, An are attributes R = (A1, A2, …, An ) is a relation schema  E.</description>
     </item>
     
     <item>
       <title>xDeepFM for Recommender Systems</title>
-      <link>https://www.pseudoyu.com/en/2020/11/11/xdeepfm-for-recommender-systems/</link>
+      <link>https://www.pseudoyu.com/en/2020/11/11/comp7404_group_project/</link>
       <pubDate>Wed, 11 Nov 2020 16:30:25 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2020/11/11/xdeepfm-for-recommender-systems/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/11/11/comp7404_group_project/</guid>
       <description>xDeepFM for Recommender Systems eXtreme Deep Factorization Machine (xDeepFM)
 This paper proposes a novel Compressed Interaction Network (CIN), which aims to generate feature interactions in an explicit fashion and at the vector-wise level.
 Github Repository GitHub: xDeepFM_for_Recommender_Systems
@@ -102,10 +102,10 @@ Datasets  Criteo Dataset. It is a famous industry benchmarking dataset for devel
     
     <item>
       <title>COMP7404 Topic 3 Adversarial Search</title>
-      <link>https://www.pseudoyu.com/en/2020/10/05/comp7404-topic-3-adversarial-search/</link>
+      <link>https://www.pseudoyu.com/en/2020/10/05/comp7404_topic3/</link>
       <pubDate>Mon, 05 Oct 2020 00:30:11 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2020/10/05/comp7404-topic-3-adversarial-search/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/10/05/comp7404_topic3/</guid>
       <description>COMP7404 Computational Intelligence and Machine Learning Topic 3 Adversarial Search A Multi-agent Competitive Environment
  Other agents are planning against us Goals are in conflict (not necessarily)  Game Definition
  A game can be defined as  s : States s0: Initial state Player(s) : Defines which player has the move Actions(s) : Returns a set of legal moves Result(s,a) : Defines the result of a move TerminalTest(s) : True when game is over, false otherwise Utility(s,p) : Defines the final numeric value for a game that ends in terminal state s for player p   A game tree can be constructed  Nodes are game states and edges are moves    Tic-Tac-Toe Game Tree</description>
@@ -113,20 +113,20 @@ Datasets  Criteo Dataset. It is a famous industry benchmarking dataset for devel
     
     <item>
       <title>COMP7404 Topic 2 Beyond Classical Search</title>
-      <link>https://www.pseudoyu.com/en/2020/10/04/comp7404-topic-2-beyond-classical-search/</link>
+      <link>https://www.pseudoyu.com/en/2020/10/04/comp7404_topic2/</link>
       <pubDate>Sun, 04 Oct 2020 21:30:11 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2020/10/04/comp7404-topic-2-beyond-classical-search/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/10/04/comp7404_topic2/</guid>
       <description>COMP7404 Computational Intelligence and Machine Learning Topic 2 Beyond Classical Search Planning vs Identification
  Planing: sequence of actions  The path to the goal is the important thing Paths have various costs, depths Heuristics to guide, frontier to keep backups   Identification: assignments to variables  The goal itself is important, not the path    Local Search can find solutions faster for specific types of identification problems</description>
     </item>
     
     <item>
       <title>COMP7404 Topic 1 Solving Problems by Searching</title>
-      <link>https://www.pseudoyu.com/en/2020/09/16/comp7404-topic-1-solving-problems-by-searching/</link>
+      <link>https://www.pseudoyu.com/en/2020/09/16/comp7404_topic1/</link>
       <pubDate>Wed, 16 Sep 2020 00:28:11 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2020/09/16/comp7404-topic-1-solving-problems-by-searching/</guid>
+      <guid>https://www.pseudoyu.com/en/2020/09/16/comp7404_topic1/</guid>
       <description>COMP7404 Computational Intelligence and Machine Learning Topic 1 Solving Problems by Searching Types of Search
  Uninformed Search (Know nothing about the problem except definition) Informed Search (know something more like how close to the goal) Local Search (Randomly initilize a state and make it better, e.g. Deep Learning) Constraint Satisfaction Problems (Know more about the problem) Adversarial Search (have an opponent, e.g. chess, star craft game)  Is Search the same as Unsupervised/Supervised Learning?</description>
     </item>

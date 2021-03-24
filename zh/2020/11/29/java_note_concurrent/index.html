@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="utf-8">
+  <title>Java学习 - 多线程 · Pseudoyu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="多线程 线程、程序、进程的基本概念 线程 比进程更小的执行单位，一个进程在执行的过程中可以产生多个线程 同类的多个线程共享同一块内存空间和一组系统资" />
+
+  <meta name="keywords" content="Hugo, theme, den" />
+
+<link rel="canonical" href="https://www.pseudoyu.com/zh/2020/11/29/java_note_concurrent/" />
+<link rel="alternate" href="https://www.pseudoyu.com/en/2020/11/29/java_note_concurrent/" hreflang="en">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.pseudoyu.com/css/den.css">
+
+
+
+
+<meta property="og:title" content="Java学习 - 多线程" />
+<meta property="og:description" content="多线程 线程、程序、进程的基本概念 线程 比进程更小的执行单位，一个进程在执行的过程中可以产生多个线程 同类的多个线程共享同一块内存空间和一组系统资" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.pseudoyu.com/zh/2020/11/29/java_note_concurrent/" />
+<meta property="article:published_time" content="2020-11-29T03:12:17+08:00" />
+<meta property="article:modified_time" content="2020-11-29T03:12:17+08:00" />
+<meta itemprop="name" content="Java学习 - 多线程">
+<meta itemprop="description" content="多线程 线程、程序、进程的基本概念 线程 比进程更小的执行单位，一个进程在执行的过程中可以产生多个线程 同类的多个线程共享同一块内存空间和一组系统资">
+<meta itemprop="datePublished" content="2020-11-29T03:12:17+08:00" />
+<meta itemprop="dateModified" content="2020-11-29T03:12:17+08:00" />
+<meta itemprop="wordCount" content="3056">
+
+
+
+<meta itemprop="keywords" content="programming,java," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Java学习 - 多线程"/>
+<meta name="twitter:description" content="多线程 线程、程序、进程的基本概念 线程 比进程更小的执行单位，一个进程在执行的过程中可以产生多个线程 同类的多个线程共享同一块内存空间和一组系统资"/>
+</head>
+<body>
+  
+  <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://www.pseudoyu.com/images/background.jpg'); background-position: center; background-size: cover;">
+  <div class="container">
+  <nav class="header-nav navbar navbar-expand-md navbar-dark light-dark">
+    <div class="header-logo navbar-brand">
+      
+        <a class="float-left" href="https://www.pseudoyu.com/zh/">
+      
+        
+        <img class="mr20 header-logo-image" src="https://www.pseudoyu.com/images/fly.png" alt="logo">
+        
+        
+          Pseudoyu
+         
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav-menu collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/ideas/">思考</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/programming/">编程</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/notes/">笔记</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/projects/">项目</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              <a class="nav-link" href="https://www.pseudoyu.com/zh/about/">关于</a>
+            
+          </li>
+        
+        
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.pseudoyu.com/en/"><i class="fas fa-globe"></i> English</a>
+            </li>
+          
+          
+        
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container header-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="header-content">
+        <h1 class="header-title">Java学习 - 多线程</h1>
+        <p class="header-date">作者：
+          pseudoyu /
+        
+        2020-11-29
+          / 分类：
+          <a href="https://www.pseudoyu.com/zh/category/programming/">Programming</a>
+        </p>
+        
+        <div class="header-underline"></div>
+        
+          <div class="clearfix"></div>
+          <p class="float-right header-tags">
+              <i class="fas fa-tags" aria-hidden="true"></i>
+              <a href="https://www.pseudoyu.com/zh/tag/java/">java</a>, 
+                <a href="https://www.pseudoyu.com/zh/tag/programming/">programming</a>
+          </p>
+        
+        <div class="clearfix"></div>
+<p class="float-right translations">
+    <i class="fas fa-language" aria-hidden="true"></i>
+    翻译： 
+    <a href="https://www.pseudoyu.com/en/2020/11/29/java_note_concurrent/">EN</a>
+</p>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <main>
+<div class="container content">
+  <article>
+  <h2 id="多线程">多线程</h2>
+<h3 id="线程程序进程的基本概念">线程、程序、进程的基本概念</h3>
+<p>线程</p>
+<ul>
+<li>比进程更小的执行单位，一个进程在执行的过程中可以产生多个线程</li>
+<li>同类的多个线程共享同一块内存空间和一组系统资源，所以系统在产生一个线程或者在各个线程之间切换工作时，负担要比进程小得多</li>
+<li>线程也被称为轻量级进程</li>
+<li>同一进程中的线程极有可能相互影响</li>
+</ul>
+<p>程序</p>
+<ul>
+<li>含有指令和数据的文件</li>
+<li>被存储在磁盘或其他数据存储设备中</li>
+<li>静态的代码</li>
+<li>程序执行时会被操作系统载入内存中</li>
+</ul>
+<p>进程</p>
+<ul>
+<li>程序的一次执行过程，系统运行程序的基本单位，动态的</li>
+<li>运行一个程序即进程从创建、运行到消亡的过程</li>
+<li>一个进程就是一个执行中的程序</li>
+<li>每个进程占有某些系统资源，如CPU时间、内存空间、文件、输入输出设备使用权等</li>
+<li>各进程基本上是独立的</li>
+<li>进程属于操作系统的范畴</li>
+<li>同一时间段内，可以执行一个以上的程序</li>
+</ul>
+<p>进程让操作系统的并发性成为了可能，而线程让进程的内部并发成为了可能。使用多进程可以实现并发，但是用多线程有一些优势</p>
+<ul>
+<li>线程间通信较为简单，通常使用共享资源，负担小一些</li>
+<li>线程是轻量级的，系统开销更小</li>
+</ul>
+<p>进程和线程的区别</p>
+<ul>
+<li>本质区别在于是否单独占有内存地址空间和其他系统资源
+<ul>
+<li>进程单独占有一定内存地址空间，所以进程间内存隔离，数据分开，通讯困难但是同步简单，各个进程互相不干扰；线程共享所属进程占有的内存空间和资源，数据共享简单但是同步困难</li>
+<li>进程单独占有一定的内存地址空间，一个进程出现问题不会影响其他进程，不影响主程序的稳定性，可靠性高；但是一个线程崩溃可能影响整个程序的稳定性，可靠性较低</li>
+<li>进程的创建和销毁不仅需要保存寄存器和栈信息，还需要资源的分配回收以及页调度，开销较大；线程只需要保存寄存器和栈信息，开销较小</li>
+</ul>
+</li>
+<li>进程是操作系统进行资源分配的基本单位，而线程是操作系统进行调度的基本单位（CPU分配时间的单位）</li>
+</ul>
+<h3 id="基本状态">基本状态</h3>
+<ul>
+<li>NEW：初始状态，被构建但是没有调用start()方法</li>
+<li>RUNNABLE
+<ul>
+<li>READY：调用start()方法后</li>
+<li>RUNNING：获得cpu时间片time slice后</li>
+</ul>
+</li>
+<li>BLOCKED：调用同步方法时没有获取到锁</li>
+<li>WAITING：执行wait()方法后</li>
+<li>TIME_WAITING：在WAITING状态基础上增加了超时限制，如sleep()或wait()，时间达成后返回到RUNNABLE状态</li>
+<li>TERMINATED：执行RUNNABLE的run()方法后</li>
+</ul>
+<h3 id="上下文切换">上下文切换</h3>
+<ul>
+<li>CPU通过时间片分配算法来循环执行任务，切换前会保留上一个任务的状态，以便下次切换回这个任务时再加载这个任务的状态，任务从保存到再加载的过程就是一次上下文切换；上下文是指某一时间点CPU寄存器和程序计数器的内容</li>
+<li>创建线程和上下文切换开销会影响并发的速度</li>
+<li>减少上下文切换
+<ul>
+<li>无锁并发编程，避免使用锁，如将数据的ID按照Hash算法取模分段，不同的线程处理不同段的数据</li>
+<li>CAS算法，Java的Atomic包使用CAS算法来更新数据 不需要加锁
+<ul>
+<li>
+<p>CAS算法解析</p>
+<ul>
+<li>由于采用这种 CAS 机制是没有对方法进行加锁的，所以，所有的线程都可以进入 increment() 这个方法，假如进入这个方法的线程太多，就会出现一个问题：每次有线程要执行第三个步骤的时候，i 的值老是被修改了，所以线程又到回到第一步继续重头再来</li>
+<li>为了解决这个问题，Java8 引入了一个 cell[] 数组，如果有 100 个线程要对 i 进行自增操作的话，这个时候，冲突就会大大增加，系统就会把这些线程分配到不同的 cell 数组元素去</li>
+<li>在 Java 中，也是提供了这种 CAS 的原子类，例如
+<ul>
+<li>AtomicBoolean</li>
+<li>AtomicInteger</li>
+<li>AtomicLong</li>
+<li>AtomicReference</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">increment</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">do</span><span class="o">{</span>
+        <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">i</span><span class="o">;</span>
+        <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="n">1</span><span class="o">;</span>
+    <span class="o">}</span><span class="k">while</span> <span class="o">(</span><span class="n">compareAndSet</span><span class="o">(</span><span class="n">i</span><span class="o">,</span> <span class="n">k</span><span class="o">,</span> <span class="n">j</span><span class="o">))</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CASTest</span> <span class="o">{</span>
+    <span class="kd">static</span> <span class="n">AtomicInteger</span> <span class="n">i</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AtomicInteger</span><span class="o">(</span><span class="n">0</span><span class="o">);</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">increment</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// 自增 1并返回之后的结果
+</span><span class="c1"></span>        <span class="n">i</span><span class="o">.</span><span class="na">incrementAndGet</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>使用最少线程，避免创建不需要的线程，比如任务很少，但是创建了很多线程来处理，会造成大量线程都处于等待状态</li>
+<li>使用协程，在单线程里实现多任务的调度，并在单线程里维持多个任务间的切换</li>
+</ul>
+</li>
+</ul>
+<h3 id="死锁">死锁</h3>
+<p>多个线程互相等待对方释放锁，可能会引起死锁，造成系统功能不可用。如复杂场景中，t1拿到锁后，因为异常没释放掉（死循环），或者是t1拿到了一个数据库锁，释放锁的时候抛出了异常。一旦出现死锁，业务是可感知的，因为不能继续提供服务了。</p>
+<p>避免死锁的常见方法</p>
+<ul>
+<li>避免一个线程同时获取多个锁</li>
+<li>避免一个线程在锁内同时占用多个资源，尽量保证每个锁只占用一个资源</li>
+<li>尝试使用定时锁，lock.tryLock(timeout)来替代内部锁机制</li>
+<li>对于数据库锁，加锁和解锁必须在同一个数据库连接里，否则会出现解锁失败</li>
+</ul>
+<h3 id="资源限制">资源限制</h3>
+<p>并发编程时，程序的执行速度受限于计算机硬件资源或软件资源，如果并发代码因为资源限制仍然在串行执行，程序执行反而会更慢</p>
+<ul>
+<li>硬件：带宽速度、硬盘读写速度、CPU处理速度</li>
+<li>软件：数据库连接数、socket连接数等</li>
+</ul>
+<p>解决方案</p>
+<ul>
+<li>硬件：使用集群并行执行程序，如使用ODPS、Hadoop或者自己搭建服务器集群</li>
+<li>软件：使用资源池将资源复用，如使用连接池将数据库和Socket连接复用</li>
+<li>根据不同的资源限制调整程序的并发度</li>
+</ul>
+<h3 id="volatile">volatile</h3>
+<p>volatile是轻量级的synchronized，在多处理器开发中保证了共享变量的“可见性”</p>
+<ul>
+<li>当一个线程修改一个共享变量时，另一个线程能读到这个修改的值</li>
+<li>比synchronized使用和执行成本更低，不会引起上下文切换和调度</li>
+</ul>
+<h3 id="synchronized">synchronized</h3>
+<p>实现基础</p>
+<ul>
+<li>Java中的每一个对象都可以作为锁
+<ul>
+<li>普通同步方法，锁是当前实例对象</li>
+<li>静态同步方法，锁是当前类的Class对象</li>
+<li>同步方法块，锁是Synchronized括号里配置的对象</li>
+</ul>
+</li>
+<li>使用monitorenter和monitorexit两个指令</li>
+</ul>
+<p>JavaSE1.6中锁的四种状态（锁可以升级不能降低，提高获得和释放锁的效率）</p>
+<ul>
+<li>无锁</li>
+<li>偏向锁
+<ul>
+<li>大多数情况下，锁不存在多线程竞争，而且总是由同一线程多次获得，因此偏向锁引入可以让线程获得锁的代价更低</li>
+<li>当线程访问同步锁时，会在对象头和栈帧中的锁记录里存储锁偏向的线程ID，之后进入和退出时不需要进行CAS操作来加锁和解锁，只需要测是否有偏向锁
+<ul>
+<li>测试成功，获得锁</li>
+<li>测试失败
+<ul>
+<li>再测试偏向锁标识是否为1，是则尝试指向当前线程</li>
+<li>没有设置则使用CAS竞争锁</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>撤销
+<ul>
+<li>使用了一种等到竞争出现才会释放锁的机制</li>
+<li>需要等待全局安全点（在这个时间点上没有正在执行的字节码）</li>
+<li>首先暂停拥有偏向锁的线程，再检查持有偏向锁的线程是否活着，如果不处于活动状态，则将对象头设置成无锁状态；如果线程仍然活着，拥有锁的栈会被执行，遍历偏向对象的锁记录，栈中的锁记录和对象头的Mark Word要么重新偏向于其他线程，要么恢复到无锁活着标记对象不适合作为偏向锁，最后唤醒暂停的线程</li>
+</ul>
+</li>
+<li>关闭
+<ul>
+<li>默认启用，可以使用JVM参数来关闭延迟或关闭偏向锁</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>轻量级锁
+<ul>
+<li>加锁
+<ul>
+<li>执行同步块之前，JVM会先在当前线程的栈帧中创建用于存储锁记录的空间并复制Mark Word到锁记录</li>
+<li>使用CAS将对象头里的Mark Word替换为指向锁记录的指针</li>
+<li>成功则获得锁</li>
+<li>失败则其他线程竞争锁，尝试自旋获取锁</li>
+</ul>
+</li>
+<li>解锁
+<ul>
+<li>使用原子的CAS操作将Mark Word替换回到对象头</li>
+<li>成功则表示没有竞争发生</li>
+<li>失败则表示当前锁存在竞争，锁就会膨胀成重量级锁</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>重量级锁
+<ul>
+<li>自旋会消耗CPU，为了避免无用的自旋，一旦升级为重量锁就不会恢复到重量锁，其他线程试图获取锁时会被阻塞，当持有锁的线程释放锁之后会唤醒这些线程，再开始争夺锁</li>
+</ul>
+</li>
+</ul>
+<p>锁的对比</p>
+<ul>
+<li>偏向锁加锁和解锁不需要额外的消耗，和执行非同步方法相比进存在纳秒级的差距，但如果线程间存在锁竞争会带来额外的锁撤销的消耗，适用于只有一个线程访问同步块场景</li>
+<li>轻量级锁竞争的线程不会阻塞，提高了程序的相应速度，但如果是种得不到锁竞争的线程会自旋消耗CPU，适合追求响应速度、同步块执行速度非常快的场景</li>
+<li>线程竞争不使用自旋，不会消耗CPU，但线程阻塞、相应时间缓慢，适合追求吞吐量、同步块执行速度较长的场景</li>
+</ul>
+
+  </article>
+
+  
+  
+  
+
+
+</div>
+
+  </main><div class="footer gradient-2">
+  <div class="container footer-container ">
+    <div class="row">
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        <div class="footer-title">网站地图</div>
+        <ul class="list-unstyled">
+            
+              
+                <li><a href="https://www.pseudoyu.com/zh/tags/">标签</a></li>
+              
+              
+                <li><a href="https://www.pseudoyu.com/zh/categories/">分类</a></li>
+              
+            
+            
+            
+            <li><a rel="alternate" type="application/rss&#43;xml" href="https://www.pseudoyu.com/zh/index.xml"><i class="fas fa-rss-square"></i> RSS订阅</a></li>
+            
+            
+            
+        </ul>
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">社群</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://www.facebook.com/pseudoyuzhang" rel="noopener" target="_blank">Facebook</a></li>
+          
+          <li><a href="https://www.instagram.com/pseudo.yu/" rel="noopener" target="_blank">Instagram</a></li>
+          
+          <li><a href="https://space.bilibili.com/5374948/" rel="noopener" target="_blank">BiliBili</a></li>
+          
+        </ul>
+        
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">友链</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://www.linkedin.com/in/pseudoyu/" rel="noopener" target="_blank">LinkedIn</a></li>
+          
+          <li><a href="https://github.com/pseudoyu" rel="noopener" target="_blank">GitHub</a></li>
+          
+          <li><a href="https://www.coursera.org/user/ffe947f087d1f63b161c3fcb310a6578" rel="noopener" target="_blank">Coursera</a></li>
+          
+        </ul>
+        
+      </div> 
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <p class="pull-right text-right">
+          <small><em><a href="https://www.hku.hk" rel="noopener" target="_blank">The University of Hong Kong</a> - <a href="https://www.cs.hku.hk" rel="noopener" target="_blank">CS</a></em></small><br/>
+          <small><em>Team Rocket - <a href="https://www.marshalgao.com" rel="noopener" target="_blank">Marshal</a> | <a href="https://www.m1sty.com" rel="noopener" target="_blank">Misty</a></em></small><br/>
+          <small>
+            &copy; 
+            pseudoyu
+            
+              2020 -
+            2021
+          </small>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

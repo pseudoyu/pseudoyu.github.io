@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="utf-8">
+  <title>Java学习 - 面向对象 · Pseudoyu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Java面向对象 特性 封装性：将对象的属性和行为封装起来，不需要让外界知道具体的实现细节 继承性：无需重新编写原有类的情况下，新类可拥有原有类的" />
+
+  <meta name="keywords" content="Hugo, theme, den" />
+
+<link rel="canonical" href="https://www.pseudoyu.com/en/2020/11/23/java_note_oop/" />
+<link rel="alternate" href="https://www.pseudoyu.com/zh/2020/11/23/java_note_oop/" hreflang="zh">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.pseudoyu.com/css/den.css">
+
+
+
+
+<meta property="og:title" content="Java学习 - 面向对象" />
+<meta property="og:description" content="Java面向对象 特性 封装性：将对象的属性和行为封装起来，不需要让外界知道具体的实现细节 继承性：无需重新编写原有类的情况下，新类可拥有原有类的" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.pseudoyu.com/en/2020/11/23/java_note_oop/" />
+<meta property="article:published_time" content="2020-11-23T03:12:17+08:00" />
+<meta property="article:modified_time" content="2020-11-23T03:12:17+08:00" />
+<meta itemprop="name" content="Java学习 - 面向对象">
+<meta itemprop="description" content="Java面向对象 特性 封装性：将对象的属性和行为封装起来，不需要让外界知道具体的实现细节 继承性：无需重新编写原有类的情况下，新类可拥有原有类的">
+<meta itemprop="datePublished" content="2020-11-23T03:12:17+08:00" />
+<meta itemprop="dateModified" content="2020-11-23T03:12:17+08:00" />
+<meta itemprop="wordCount" content="4723">
+
+
+
+<meta itemprop="keywords" content="programming,java," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Java学习 - 面向对象"/>
+<meta name="twitter:description" content="Java面向对象 特性 封装性：将对象的属性和行为封装起来，不需要让外界知道具体的实现细节 继承性：无需重新编写原有类的情况下，新类可拥有原有类的"/>
+</head>
+<body>
+  
+  <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://www.pseudoyu.com/images/background.jpg'); background-position: center; background-size: cover;">
+  <div class="container">
+  <nav class="header-nav navbar navbar-expand-md navbar-dark light-dark">
+    <div class="header-logo navbar-brand">
+      
+        <a class="float-left" href="https://www.pseudoyu.com/en/">
+      
+        
+        <img class="mr20 header-logo-image" src="https://www.pseudoyu.com/images/fly.png" alt="logo">
+        
+        
+          Pseudoyu
+         
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav-menu collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/en/category/ideas/">Ideas</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/en/category/programming/">Programming</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/en/category/notes/">Notes</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/en/category/projects/">Projects</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              <a class="nav-link" href="https://www.pseudoyu.com/en/about/">About</a>
+            
+          </li>
+        
+        
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.pseudoyu.com/zh/"><i class="fas fa-globe"></i> 中文</a>
+            </li>
+          
+          
+          
+          
+        
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container header-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="header-content">
+        <h1 class="header-title">Java学习 - 面向对象</h1>
+        <p class="header-date">By
+          pseudoyu /
+        
+        2020-11-23
+          / In categories
+          <a href="https://www.pseudoyu.com/en/category/programming/">Programming</a>
+        </p>
+        
+        <div class="header-underline"></div>
+        
+          <div class="clearfix"></div>
+          <p class="float-right header-tags">
+              <i class="fas fa-tags" aria-hidden="true"></i>
+              <a href="https://www.pseudoyu.com/en/tag/java/">java</a>, 
+                <a href="https://www.pseudoyu.com/en/tag/programming/">programming</a>
+          </p>
+        
+        <div class="clearfix"></div>
+<p class="float-right translations">
+    <i class="fas fa-language" aria-hidden="true"></i>
+    Translations: 
+    <a href="https://www.pseudoyu.com/zh/2020/11/23/java_note_oop/">ZH</a>
+</p>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <main>
+<div class="container content">
+  <article>
+  <h2 id="java面向对象">Java面向对象</h2>
+<h3 id="特性">特性</h3>
+<ul>
+<li>封装性：将对象的属性和行为封装起来，不需要让外界知道具体的实现细节</li>
+<li>继承性：无需重新编写原有类的情况下，新类可拥有原有类的功能</li>
+<li>多态性：一个类中定义的属性和方法被继承后，可以具有不同的数据类型和表现出不同的行为</li>
+</ul>
+<p>面向对象与面向过程的区别</p>
+<ul>
+<li>面向过程的性能比面向对象高，类的调用需要实例化、开销比较大，比较消耗资源。非根本原因，面向过程也需要分配内存，计算内存偏移量，Java性能差主要原因是它是半编译语言，最终的执行代码并不是可以直接被CPU执行的二进制机器码，而面向过程语言大多是直接编译成机器码在电脑上执行</li>
+<li>面向对象易维护、易复用、易拓展，可以设计出低耦合的系统，使系统更灵活、更加易于维护</li>
+</ul>
+<h3 id="类与对象">类与对象</h3>
+<p>成员变量与局部变量的区别</p>
+<ul>
+<li>语法形式：成员变量是定义在类中的变量，可以被public、private、static等修饰符修饰，而局部变量是定义在代码块或方法中的变量，不能被访问修饰符修饰，但都可以被final修饰</li>
+<li>变量在内存中的存储方式：成员变量如果使用static则属于类，没有则属于实例；对象存在于堆内存，局部变量存在于栈内存</li>
+<li>变量在内存中的生存时间：成员变量是对象的一部分，随着对象创建而存在，而局部变量随着方法调用自动消失</li>
+<li>成员变量如果没有初始值则自动以类型默认值赋值（除非被final修饰），而局部变量不会自动赋值</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Person</span> <span class="o">{</span>
+  <span class="c1">// 定义成员变量
+</span><span class="c1"></span>  <span class="kt">int</span> <span class="n">age</span> <span class="o">=</span> <span class="n">10</span><span class="o">;</span>
+  <span class="kt">void</span> <span class="nf">speak</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// 定义局部变量，方法优先访问局部变量
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="n">age</span> <span class="o">=</span> <span class="n">60</span><span class="o">;</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">age</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><p>类的构造方法</p>
+<ul>
+<li>完成对类对象的初始化工作</li>
+<li>如果自己添加了构造方法，则不会添加默认的无参数构造方法了，因此需要自己添加一下</li>
+<li>调用子类构造方法前先调用父类无参数的构造方法是为了帮助子类做初始化工作</li>
+<li>一般需要在父类中加上一个不做事且没有参数的构造方法，因为程序在执行子类的构造方法之前，如果父类只定义了有参数的构造方法，子类没有super()调用父类特定的构造方法，则会编译错误</li>
+<li>方法名与类名相同</li>
+<li>方法名前没有返回值声明</li>
+<li>不能使用return返回值</li>
+<li>使用this来访问成员变量以解决命名冲突</li>
+<li>构造方法不能被重写，但可以被重载，所以可以有多个构造函数</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// 无参数默认
+</span><span class="c1"></span><span class="kd">public</span> <span class="nf">Person</span><span class="o">()</span> <span class="o">{</span>
+  <span class="c1">// 构造函数
+</span><span class="c1"></span><span class="o">}</span>
+
+<span class="c1">// 重载构造函数
+</span><span class="c1"></span><span class="kd">public</span> <span class="nf">Person</span><span class="o">(</span><span class="n">age</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+  <span class="c1">// 新的构造函数
+</span><span class="c1"></span><span class="o">}</span>
+</code></pre></div><p>创建对象</p>
+<ul>
+<li>new运算符创建对象实例（在堆内存中），对象引用指向对象实例（在栈内存中），一个对象引用可以指向0或1个对象，一个对象可以有n个引用指向它</li>
+<li>对象的相等是比较内存中存放的内容，引用相等比较的是指向的内存地址是否相等</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// 类名 对象名 = new 类名();
+</span><span class="c1"></span><span class="n">Person</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Person</span><span class="o">();</span>
+</code></pre></div><p>垃圾回收机制</p>
+<ul>
+<li>对象成为垃圾后仍然会占用内存空间</li>
+<li>Java虚拟机自动启动垃圾回收器将垃圾从内存中释放</li>
+<li>可以调用System.gc()方法通知虚拟机立即进行垃圾回收</li>
+<li>对象在内存中被释放时，finalize()方法会被自动调用，因此可以在类中定义finalized()方法来观察对象何时被释放</li>
+</ul>
+<h3 id="封装方法">封装方法</h3>
+<ul>
+<li>private修饰成员变量</li>
+<li>把一个对象的状态信息隐藏在对象内部，不允许外部对象直接访问，但是为外界提供一些操作方法，如set和get方法</li>
+</ul>
+<h3 id="static关键字">static关键字</h3>
+<ul>
+<li>静态变量：修饰成员变量，特定的数据在内存中只有一份，可以通过类名来访问</li>
+<li>静态方法：可以通过类名.方法名的方式来访问
+<ul>
+<li>静态方法只能访问static修饰的成员</li>
+<li>静态方法不依赖于任何实例，因此必须有实现，不能是抽象方法</li>
+</ul>
+</li>
+<li>静态代码块：static修饰的代码块
+<ul>
+<li>类被加载时执行，一次</li>
+<li>通常被用来对类的成员作初始化</li>
+</ul>
+</li>
+<li>静态导包
+<ul>
+<li>在使用静态变量和方法时不用再指名ClassName，简化代码，但降低了可读性</li>
+</ul>
+</li>
+</ul>
+<h3 id="成员内部类">成员内部类</h3>
+<p>一个类中除了可以定义成员变量、成员方法，还可以定义类</p>
+<ul>
+<li>普通成员内部类</li>
+<li>静态内部类</li>
+<li>方法内部类</li>
+<li>匿名内部类</li>
+</ul>
+<p>特性</p>
+<ul>
+<li>成员内部类可以访问外部类的所有成员</li>
+<li>外部类访问内部类需要通过外部类去创建内部类对象</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// 外部类名.内部类名 变量名 = new 外部类名().new 内部类名();
+</span><span class="c1"></span><span class="n">outer</span><span class="o">.</span><span class="na">inner</span> <span class="n">var1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">outer</span><span class="o">().</span><span class="na">new</span> <span class="n">inner</span><span class="o">();</span>
+</code></pre></div><h3 id="初始化顺序">初始化顺序</h3>
+<ul>
+<li>父类（静态变量，静态语句块）</li>
+<li>子类（静态变量，静态语句块）</li>
+<li>父类（实例变量，普通语句块）</li>
+<li>父类（构造函数）</li>
+<li>子类（实例变量，普通语句块）</li>
+<li>子类（构造函数）</li>
+</ul>
+<h3 id="访问权限">访问权限</h3>
+<p>访问级别</p>
+<ul>
+<li>private 只能被该类的其他成员访问</li>
+<li>default 能被包中的其他类访问。默认访问控制级别</li>
+<li>protected 可以被包中的其他类和子类访问</li>
+<li>public 不管访问类与被访问类是否在同一个包中都可以访问</li>
+</ul>
+<h3 id="类的继承">类的继承</h3>
+<ul>
+<li>不同类型对象经常有一定数量的共同点，因此可以在一个类的基础上构建新的类</li>
+<li>子类会自动拥有父类所有可继承的属性和方法，不可选择性继承</li>
+<li>父类中的私有属性和方法子类是无法访问的，只是拥有</li>
+<li>可以快速创建新的类，提高代码的重用、程序的可维持性，节省创建新类的时间，提高开发效率</li>
+<li>子类可以拥有自己的属性和方法，进行拓展，也可以用自己的方式实现父类方法（即重写）</li>
+<li>使用extends关键字</li>
+<li>不允许多重继承</li>
+<li>多个类可以继承自同一个父类</li>
+</ul>
+<h3 id="重写">重写</h3>
+<ul>
+<li>发生在运行期</li>
+<li>子类会自动继承父类中定义的方法</li>
+<li>可以对方法进行修改，即重写</li>
+<li>重写方法需要和父类方法具有相同的方法名、参数列表及返回类型</li>
+<li>使用super方法访问父类成员</li>
+<li>使用super方法访问父类构造方法，第一行</li>
+<li>使用this关键字调用子类构造方法，第一行</li>
+</ul>
+<h3 id="重载">重载</h3>
+<ul>
+<li>发生在编译期</li>
+<li>同一个方法能够根据输入数据不同做出不同的处理</li>
+<li>方法名必须相同</li>
+<li>参数类型不同、个数不同、顺序不同、方法返回值和访问修饰符可以不同</li>
+</ul>
+<h3 id="final关键字">final关键字</h3>
+<ul>
+<li>final修饰的类不可被继承</li>
+<li>final修饰的方法不可被重写</li>
+<li>final修饰的变量不可被改变赋值</li>
+</ul>
+<h3 id="抽象类">抽象类</h3>
+<ul>
+<li>使用abstract关键词修饰</li>
+<li>包含抽象方法的类必须声明为抽象类</li>
+<li>抽象类可以不包含任何抽象方法</li>
+<li>抽象类不可以被实例化</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// 定义一个抽象Animal类
+</span><span class="c1"></span><span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">Animal</span> <span class="o">{</span>
+  <span class="c1">// 定义一个抽象方法shout()
+</span><span class="c1"></span>  <span class="kd">abstract</span> <span class="kt">int</span> <span class="nf">shout</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div><h3 id="接口">接口</h3>
+<ul>
+<li>接口是由常量和抽象方法组成的特殊类，是对抽象类的进一步抽象</li>
+<li>使用接口主要是为了克服单继承的限制</li>
+<li>使用extends来继承别的接口</li>
+<li>使用interface关键字来声明</li>
+<li>类使用implement关键字来继承接口</li>
+<li>接口中的变量默认用public static final修饰</li>
+<li>接口中的方法默认用public static修饰</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">接口名</span> <span class="kd">extends</span> <span class="n">接口1</span><span class="o">,</span> <span class="n">接口2</span><span class="o">,</span> <span class="o">...</span> <span class="o">{</span>
+  <span class="n">数据类型</span> <span class="n">常量名</span> <span class="o">=</span> <span class="n">常量值</span><span class="o">;</span>
+  <span class="n">返回值</span> <span class="nf">抽象方法名</span><span class="o">(</span><span class="n">参数列表</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div><p>抽象类与接口对比</p>
+<ul>
+<li>都不能实例化，都可以有抽象方法</li>
+<li>接口可用于多继承</li>
+<li>接口具有默认修饰符</li>
+<li>关键字不一样
+<ul>
+<li>接口继承接口，类继承类用extends</li>
+<li>类继承接口implements</li>
+</ul>
+</li>
+</ul>
+<p>使用场景</p>
+<ul>
+<li>接口（推荐）
+<ul>
+<li>需要让不相关的类实现同一个方法</li>
+<li>需要多重继承</li>
+</ul>
+</li>
+<li>抽象类
+<ul>
+<li>需要在几个相关的类中共享代码</li>
+<li>需要能控制继承来的成员的访问权限</li>
+<li>需要继承非静态和非常量字段</li>
+</ul>
+</li>
+</ul>
+<h3 id="多态">多态</h3>
+<p>父类引用，指向不同子类的实例，对同一个实例方法名调用，调用的程序不一样</p>
+<ul>
+<li>多态的基础是继承和重写</li>
+<li>多态仅限于实例方法</li>
+<li>对象类型和引用类型之间具有继承/实现的关系</li>
+<li>引用类型变量发出的方法调用哪个类中的方法必须在程序运行期间才能确定</li>
+<li>多态不能调用只在子类存在但父类不存在的方法</li>
+<li>如果子类重写了父类的方法，真正执行的是子类覆盖的方法</li>
+</ul>
+<p>对象的类型转换</p>
+<ul>
+<li>显式转换</li>
+<li>隐式转换</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// 把子类对象当作父类类型
+</span><span class="c1"></span><span class="n">Animal</span> <span class="n">an1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Cat</span><span class="o">();</span>
+<span class="n">Animal</span> <span class="n">an2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Dog</span><span class="o">();</span>
+</code></pre></div><h3 id="异常处理">异常处理</h3>
+<p>异常结构</p>
+<ul>
+<li>Throwable
+<ul>
+<li>Error 一般是Java运行时产生的系统内部错误或者资源耗尽的错误，仅靠修改程序本身不能恢复执行，例如虚拟机运行错误Virtual MachineError，虚拟机内存不够错误OutOfMemoryError，类定义错误NoClassDefFoundError，虚拟机一般选择线程终止</li>
+<li>Exception 异常 RuntimeException用于运行时异常，其他用于编译时异常</li>
+</ul>
+</li>
+<li>Throwable类常用方法
+<ul>
+<li>String getMessage()返回异常发生时的简要描述</li>
+<li>string toString()返回异常发生时的详细信息</li>
+<li>string getLocalizedMessage()返回异常对象的本地化信息，使用Throwable子类覆盖这个方法，生成本地化信息，没覆盖的话则与getMessage()相同</li>
+<li>void printStackTrace()在控制台上打印Throwable对象封装的异常信息</li>
+<li>void printStackTrace(PrintStream s)</li>
+</ul>
+</li>
+</ul>
+<p>异常处理方法</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="k">try</span> <span class="o">{</span>
+  <span class="c1">// 程序
+</span><span class="c1"></span><span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">异常类型类</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+  <span class="c1">// 对异常的处理
+</span><span class="c1"></span><span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+  <span class="c1">// 一定执行的语句
+</span><span class="c1"></span><span class="o">}</span>
+</code></pre></div><p>finally不执行的情况</p>
+<ul>
+<li>try或finally中用了System.exit(int)退出程序，但如果在异常语句之后还是会被执行</li>
+<li>程序所在的线程死亡</li>
+<li>关闭CPU</li>
+</ul>
+<p>当try语句和finally语句中都有return语句时，在方法返回之前，finally语句的内容将被执行，并且finally语句的返回值将会覆盖原始的返回值</p>
+<p>try-with-resources代替try-catch-finally</p>
+<ul>
+<li>适用范围（资源的定义）：任何实现java.lang.AutoCloseable或者java.io.Closeable的对象</li>
+<li>关闭资源和final的执行顺序：在try-with-resources语句中，任何catch或finally块在声明的资源关闭后运行</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="k">try</span> <span class="o">(</span><span class="n">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s">&#34;test.txt&#34;</span><span class="o">)))</span> <span class="o">{</span>
+    <span class="k">while</span> <span class="o">(</span><span class="n">scanner</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">scanner</span><span class="o">.</span><span class="na">nextLine</span><span class="o">());</span>
+    <span class="o">}</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">FileNotFoundException</span> <span class="n">fnfe</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">fnfe</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div><p>多个资源</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="k">try</span> <span class="o">(</span><span class="n">BufferedInputStream</span> <span class="n">bin</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BufferedInputStream</span><span class="o">(</span><span class="k">new</span> <span class="n">FileInputStream</span><span class="o">(</span><span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s">&#34;test.txt&#34;</span><span class="o">)));</span>
+    <span class="n">BufferedOutputStream</span> <span class="n">bout</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BufferedOutputStream</span><span class="o">(</span><span class="k">new</span> <span class="n">FileOutputStream</span><span class="o">(</span><span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s">&#34;out.txt&#34;</span><span class="o">))))</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">b</span><span class="o">;</span>
+    <span class="k">while</span> <span class="o">((</span><span class="n">b</span> <span class="o">=</span> <span class="n">bin</span><span class="o">.</span><span class="na">read</span><span class="o">())</span> <span class="o">!=</span> <span class="o">-</span><span class="n">1</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">bout</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">b</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+<span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div><p>throws关键字</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">修饰符</span> <span class="n">返回值类型</span> <span class="nf">方法名</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">异常类型1</span><span class="o">,</span> <span class="n">异常类型2</span> <span class="o">{</span>
+  <span class="c1">// 定义方法
+</span><span class="c1"></span><span class="o">}</span>
+</code></pre></div><p>自定义异常</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// 自定义异常类
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CustomerException</span> <span class="kd">extends</span> <span class="n">RuntimeException</span> <span class="o">{</span>
+  <span class="c1">// 继承构造函数
+</span><span class="c1"></span>  <span class="kd">public</span> <span class="nf">CustomerException</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">super</span><span class="o">();</span>
+  <span class="o">}</span>
+
+  <span class="c1">// 自定义异常方法
+</span><span class="c1"></span><span class="o">}</span>
+
+<span class="c1">// 调用自定义异常类
+</span><span class="c1"></span><span class="kd">throws</span> <span class="n">Exception</span> <span class="n">异常对象</span>
+</code></pre></div><h2 id="代理">代理</h2>
+<p>代理关系模型，A想要调用B类的方法，A不直接调用，A会在自己的类中创建一个B对象的代理，再由代理调用B的方法</p>
+<h2 id="泛型">泛型</h2>
+<p>提供了编译时类型安全检测机制，允许在编译时检测到非法的类型，本质是参数化类型。Java的泛型是伪泛型，也就是在编译期间，所有的泛型信息会被擦除，Java编译器会在编译时尽可能发现出错的地方，但没办法发现运行时类型转换异常的问题，类型擦除是Java泛型与C++模板机制实现方式之间的重要区别。类型擦除后只保留Object或者Comparable这样的原始类型。</p>
+<ul>
+<li>Java编译器先检查泛型类型，进行类型擦除，再进行编译</li>
+<li>类型检查是编译时就完成的，类型检查针对引用，引用调用泛型方法则会对这个引用调用的方法进行类型检测，无关真正引用的对象</li>
+<li>泛型不允许继承关系</li>
+<li>泛型信息虽然会被擦除，但是当存取一个泛型域时会自动插入强制类型转换</li>
+<li>子类在继承时只能将父类类型擦除为原始类型，目的为重写却变为了重载，要解决多态与泛型的冲突，JVM编译生成桥方法</li>
+<li>泛型类型变量不能使基本数据类型</li>
+<li>编译时用instanceof是错误的（因为类型擦除了）</li>
+<li>泛型类中的静态方法和静态变量不可以使用泛型类所声明的泛型类型参数</li>
+</ul>
+<p>使用方式</p>
+<ul>
+<li>用泛型表示类</li>
+<li>用泛型表示接口</li>
+<li>泛型方法</li>
+<li>泛型通配符
+<ul>
+<li>？表示不确定的java类型</li>
+<li>T表示具体的一个java类型</li>
+<li>K V表示Key Value</li>
+<li>E表示Element</li>
+</ul>
+</li>
+</ul>
+<h2 id="反射">反射</h2>
+<p>Java反射机制是在程序运行的过程中，对于任何一个类，都能够知道它的所有属性和方法；对于任意一个对象，都能够知道调用它的任意属性和方法；动态获取信息及动态调用对象。</p>
+<ul>
+<li>在运行时判断一个对象所属的类</li>
+<li>在运行是构造任意一个类的对象</li>
+<li>在运行时判断任意一个类所有的成员变量和方法</li>
+<li>在运行时调用任意一个对象的方法</li>
+</ul>
+<p>静态编译和动态编译</p>
+<ul>
+<li>静态编译：在编译时确定类型，绑定对象</li>
+<li>动态编译：在运行时确定对象，绑定对象</li>
+</ul>
+<p>优缺点</p>
+<ul>
+<li>优点：运行期类型的判断，动态加载类，提高代码的灵活度</li>
+<li>缺点
+<ul>
+<li>JVM需要做一系列解释操作，性能比直接的java代码要慢很多，造成性能瓶颈</li>
+<li>让我们可以动态操作改变类的属性同时也增加了其安全隐患</li>
+</ul>
+</li>
+</ul>
+<p>应用场景</p>
+<ul>
+<li>主要用于框架设计</li>
+<li>模块化开发，通过反射去调用对应的字节码</li>
+<li>动态代理设计模式采用了反射机制</li>
+<li>Spring/Hibernate框架也大量使用到了反射机制</li>
+<li>例如
+<ul>
+<li>JDBC连接数据库时使用Class.forName()通过反射加载数据库的驱动程序</li>
+<li>Spring框架的IOC（动态加载管理Bean）创建对象及AOP动态代理功能和反射都有联系</li>
+<li>动态配置实例的属性</li>
+</ul>
+</li>
+</ul>
+
+  </article>
+
+  
+  
+  
+
+
+</div>
+
+  </main><div class="footer gradient-2">
+  <div class="container footer-container ">
+    <div class="row">
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        <div class="footer-title">Sitemap</div>
+        <ul class="list-unstyled">
+            
+              
+                <li><a href="https://www.pseudoyu.com/en/tags/">Tags</a></li>
+              
+              
+                <li><a href="https://www.pseudoyu.com/en/categories/">Categories</a></li>
+              
+            
+            
+            
+            <li><a rel="alternate" type="application/rss&#43;xml" href="https://www.pseudoyu.com/en/index.xml"><i class="fas fa-rss-square"></i> RSS Feed</a></li>
+            
+            
+            
+        </ul>
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">Social</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://www.facebook.com/pseudoyuzhang" rel="noopener" target="_blank">Facebook</a></li>
+          
+          <li><a href="https://www.instagram.com/pseudo.yu/" rel="noopener" target="_blank">Instagram</a></li>
+          
+          <li><a href="https://space.bilibili.com/5374948/" rel="noopener" target="_blank">BiliBili</a></li>
+          
+        </ul>
+        
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">Links</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://www.linkedin.com/in/pseudoyu/" rel="noopener" target="_blank">LinkedIn</a></li>
+          
+          <li><a href="https://github.com/pseudoyu" rel="noopener" target="_blank">GitHub</a></li>
+          
+          <li><a href="https://www.coursera.org/user/ffe947f087d1f63b161c3fcb310a6578" rel="noopener" target="_blank">Coursera</a></li>
+          
+        </ul>
+        
+      </div> 
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <p class="pull-right text-right">
+          <small><em><a href="https://www.hku.hk" rel="noopener" target="_blank">The University of Hong Kong</a> - <a href="https://www.cs.hku.hk" rel="noopener" target="_blank">CS</a></em></small><br/>
+          <small><em>Team Rocket - <a href="https://www.marshalgao.com" rel="noopener" target="_blank">Marshal</a> | <a href="https://www.m1sty.com" rel="noopener" target="_blank">Misty</a></em></small><br/>
+          <small>
+            &copy; 
+            pseudoyu
+            
+              2020 -
+            2021
+          </small>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

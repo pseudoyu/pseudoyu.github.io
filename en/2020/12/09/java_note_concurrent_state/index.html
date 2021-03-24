@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="utf-8">
+  <title>Java学习 - 线程状态及转化方法 · Pseudoyu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="线程状态及转化方法 操作系统中的线程状态转换 操作系统线程主要有以下三个状态 就绪状态 READY：线程正在等待使用CPU，经调度程序调用之后可进入" />
+
+  <meta name="keywords" content="Hugo, theme, den" />
+
+<link rel="canonical" href="https://www.pseudoyu.com/en/2020/12/09/java_note_concurrent_state/" />
+<link rel="alternate" href="https://www.pseudoyu.com/zh/2020/12/09/java_note_concurrent_state/" hreflang="zh">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.pseudoyu.com/css/den.css">
+
+
+
+
+<meta property="og:title" content="Java学习 - 线程状态及转化方法" />
+<meta property="og:description" content="线程状态及转化方法 操作系统中的线程状态转换 操作系统线程主要有以下三个状态 就绪状态 READY：线程正在等待使用CPU，经调度程序调用之后可进入" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.pseudoyu.com/en/2020/12/09/java_note_concurrent_state/" />
+<meta property="article:published_time" content="2020-12-09T03:12:17+08:00" />
+<meta property="article:modified_time" content="2020-12-09T03:12:17+08:00" />
+<meta itemprop="name" content="Java学习 - 线程状态及转化方法">
+<meta itemprop="description" content="线程状态及转化方法 操作系统中的线程状态转换 操作系统线程主要有以下三个状态 就绪状态 READY：线程正在等待使用CPU，经调度程序调用之后可进入">
+<meta itemprop="datePublished" content="2020-12-09T03:12:17+08:00" />
+<meta itemprop="dateModified" content="2020-12-09T03:12:17+08:00" />
+<meta itemprop="wordCount" content="2152">
+
+
+
+<meta itemprop="keywords" content="programming,java," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Java学习 - 线程状态及转化方法"/>
+<meta name="twitter:description" content="线程状态及转化方法 操作系统中的线程状态转换 操作系统线程主要有以下三个状态 就绪状态 READY：线程正在等待使用CPU，经调度程序调用之后可进入"/>
+</head>
+<body>
+  
+  <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://www.pseudoyu.com/images/background.jpg'); background-position: center; background-size: cover;">
+  <div class="container">
+  <nav class="header-nav navbar navbar-expand-md navbar-dark light-dark">
+    <div class="header-logo navbar-brand">
+      
+        <a class="float-left" href="https://www.pseudoyu.com/en/">
+      
+        
+        <img class="mr20 header-logo-image" src="https://www.pseudoyu.com/images/fly.png" alt="logo">
+        
+        
+          Pseudoyu
+         
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav-menu collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/en/category/ideas/">Ideas</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/en/category/programming/">Programming</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/en/category/notes/">Notes</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/en/category/projects/">Projects</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              <a class="nav-link" href="https://www.pseudoyu.com/en/about/">About</a>
+            
+          </li>
+        
+        
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.pseudoyu.com/zh/"><i class="fas fa-globe"></i> 中文</a>
+            </li>
+          
+          
+          
+          
+        
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container header-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="header-content">
+        <h1 class="header-title">Java学习 - 线程状态及转化方法</h1>
+        <p class="header-date">By
+          pseudoyu /
+        
+        2020-12-09
+          / In categories
+          <a href="https://www.pseudoyu.com/en/category/programming/">Programming</a>
+        </p>
+        
+        <div class="header-underline"></div>
+        
+          <div class="clearfix"></div>
+          <p class="float-right header-tags">
+              <i class="fas fa-tags" aria-hidden="true"></i>
+              <a href="https://www.pseudoyu.com/en/tag/java/">java</a>, 
+                <a href="https://www.pseudoyu.com/en/tag/programming/">programming</a>
+          </p>
+        
+        <div class="clearfix"></div>
+<p class="float-right translations">
+    <i class="fas fa-language" aria-hidden="true"></i>
+    Translations: 
+    <a href="https://www.pseudoyu.com/zh/2020/12/09/java_note_concurrent_state/">ZH</a>
+</p>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <main>
+<div class="container content">
+  <article>
+  <h2 id="线程状态及转化方法">线程状态及转化方法</h2>
+<h3 id="操作系统中的线程状态转换">操作系统中的线程状态转换</h3>
+<p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/java_state.png" alt="java_state"></p>
+<p>操作系统线程主要有以下三个状态</p>
+<ul>
+<li>就绪状态 READY：线程正在等待使用CPU，经调度程序调用之后可进入RUNNING状态</li>
+<li>执行状态 RUNNING：线程正在使用CPU</li>
+<li>等待状态 WAITING：县城经过等待事件的调用或者正在等待其他资源（如I/O）</li>
+</ul>
+<h3 id="java线程的六个状态">Java线程的六个状态</h3>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// Thread.State 源码
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">enum</span> <span class="n">State</span> <span class="o">{</span>
+    <span class="n">NEW</span><span class="o">,</span>
+    <span class="n">RUNNABLE</span><span class="o">,</span>
+    <span class="n">BLOCKED</span><span class="o">,</span>
+    <span class="n">WAITING</span><span class="o">,</span>
+    <span class="n">TIMED_WAITING</span><span class="o">,</span>
+    <span class="n">TERMINATED</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div><h4 id="new">NEW</h4>
+<p>处于NEW状态的线程此时尚未启动（未调用Thread实例的start()方法）</p>
+<ul>
+<li>反复调用一个线程的start()方法是否可行</li>
+<li>假如一个线程执行完毕（此时处于TERMINATED状态），再次调用这个线程的start()方法是否可行</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">synchronized</span> <span class="kt">void</span> <span class="nf">start</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">threadStatus</span> <span class="o">!=</span> <span class="n">0</span><span class="o">)</span>
+        <span class="k">throw</span> <span class="k">new</span> <span class="n">IllegalThreadStateException</span><span class="o">();</span>
+
+    <span class="n">group</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+
+    <span class="kt">boolean</span> <span class="n">started</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+    <span class="k">try</span> <span class="o">{</span>
+        <span class="n">start0</span><span class="o">();</span>
+        <span class="n">started</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+    <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="k">if</span> <span class="o">(!</span><span class="n">started</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">group</span><span class="o">.</span><span class="na">threadStartFailed</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+            <span class="o">}</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Throwable</span> <span class="n">ignore</span><span class="o">)</span> <span class="o">{</span>
+
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><p>在start()内部有一个threadStatus变量，如果不等于0则调用start()会直接抛出异常。在调用一次start()后，threadStatus的值会改变，此时调用会抛出IllegalThreadStateException异常，比如threadStatus为2代表当前状态为TERMINATED。</p>
+<h4 id="runnable">RUNNABLE</h4>
+<p>表示当前线程正在运行中（在虚拟机中运行或等待CPU分配资源），包含了传统操作系统线程的ready和running两个状态</p>
+<h4 id="blocked">BLOCKED</h4>
+<p>阻塞状态，等待锁的释放以进入同步区</p>
+<h4 id="waiting">WAITING</h4>
+<p>等待状态，需要其他线程唤醒才能变成RUNNABLE状态</p>
+<p>进入等待状态</p>
+<ul>
+<li>Object.wait()：使当前线程处于等待状态，知道另一个线程唤醒它</li>
+<li>Thread.join()：等待线程执行完毕，底层调用的Object的wait()方法</li>
+<li>LockSupport.park()：除非获得调用许可，否则禁用当前线程进行线程调度</li>
+</ul>
+<h4 id="timed_waiting">TIMED_WAITING</h4>
+<p>超时等待状态。线程等待一个具体的时间后被自动唤醒</p>
+<p>进入超时等待状态</p>
+<ul>
+<li>Thread.sleep(long millis)：使当前线程睡眠指定时间</li>
+<li>Object.wait(long timeout)：线程休眠指定时间，可以通过notify()/notifyAll()唤醒</li>
+<li>Thread.join(long mills)：等待当前线程最多执行millis毫秒，如果millis为0则会一直执行</li>
+<li>LockSupport.parkNanos(long nanos)：除非获得调用许可，否则禁用当前线程进行线程调度指定时间</li>
+<li>LockSupport.parkUntil(long deadline)：禁止线程进行调度指定时间</li>
+</ul>
+<h4 id="terminated">TERMINATED</h4>
+<p>终止状态，此时线程执行完毕</p>
+<h3 id="线程状态的转换">线程状态的转换</h3>
+<p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/java_state_convert.png" alt="java_state_convert"></p>
+<h4 id="blocked和runnable状态的转换">BLOCKED和RUNNABLE状态的转换</h4>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="nd">@Test</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">blockedTest</span><span class="o">()</span> <span class="o">{</span>
+
+    <span class="n">Thread</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Thread</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+            <span class="n">testMethod</span><span class="o">();</span>
+        <span class="o">}</span>
+    <span class="o">},</span> <span class="s">&#34;a&#34;</span><span class="o">);</span>
+    <span class="n">Thread</span> <span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Thread</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+            <span class="n">testMethod</span><span class="o">();</span>
+        <span class="o">}</span>
+    <span class="o">},</span> <span class="s">&#34;b&#34;</span><span class="o">);</span>
+
+    <span class="n">a</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
+    <span class="n">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="n">1000L</span><span class="o">);</span> <span class="c1">// 需要注意这里main线程休眠了1000毫秒，而testMethod()里休眠了2000毫秒
+</span><span class="c1"></span>    <span class="n">b</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">a</span><span class="o">.</span><span class="na">getName</span><span class="o">()</span> <span class="o">+</span> <span class="s">&#34;:&#34;</span> <span class="o">+</span> <span class="n">a</span><span class="o">.</span><span class="na">getState</span><span class="o">());</span> <span class="c1">// 输出？
+</span><span class="c1"></span>    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">b</span><span class="o">.</span><span class="na">getName</span><span class="o">()</span> <span class="o">+</span> <span class="s">&#34;:&#34;</span> <span class="o">+</span> <span class="n">b</span><span class="o">.</span><span class="na">getState</span><span class="o">());</span> <span class="c1">// 输出？
+</span><span class="c1"></span><span class="o">}</span>
+
+<span class="c1">// 同步方法争夺锁
+</span><span class="c1"></span><span class="kd">private</span> <span class="kd">synchronized</span> <span class="kt">void</span> <span class="nf">testMethod</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">try</span> <span class="o">{</span>
+        <span class="n">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="n">2000L</span><span class="o">);</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">InterruptedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><p>两个线程的状态转换</p>
+<ul>
+<li>a：RUNNABLE（a.start()） -&gt; TIMED_WATING（Thread.sleep()）-&gt;RUNABLE（sleep()时间到）-&gt; <em>BLOCKED(未抢到锁)</em> -&gt; TERMINATED</li>
+<li>b：RUNNABLE（b.start()) -&gt; <em>BLOCKED(未抢到锁)</em> -&gt;TERMINATED</li>
+</ul>
+<h4 id="waiting和runnable状态的转换">WAITING和RUNNABLE状态的转换</h4>
+<ul>
+<li>Object.wait()
+<ul>
+<li>调用wait()前必须持有对象的锁</li>
+<li>调用wait()方法时，会释放当前的锁，知道有其他线程调用notify()/notifyAll()方法唤醒等待锁的线程。notify()方法只会唤醒单个等待锁的线程，如有多个线程都在等待这个锁的话不一定会唤醒到之前调用wait()方法的线程；notifyAll()唤醒所有等待锁的线程后，也不一定马上把时间片分给刚放弃锁的线程，具体要看系统调度</li>
+</ul>
+</li>
+<li>Thread.join()
+<ul>
+<li>
+<p>调用join()方法不会释放锁，会一直等待当前线程执行完毕（转变为TERMINATED状态），在Demo中，a线程一定会执行完毕，所以会打印TERMINATED状态；b线程可能打印RUNNABLE（尚未进入同步方法），也可能打印TIMED_WAITING（进入同步方法）</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">blockedTest</span><span class="o">()</span> <span class="o">{</span>
+    <span class="err">······</span>
+    <span class="n">a</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
+    <span class="n">a</span><span class="o">.</span><span class="na">join</span><span class="o">();</span>
+    <span class="n">b</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">a</span><span class="o">.</span><span class="na">getName</span><span class="o">()</span> <span class="o">+</span> <span class="s">&#34;:&#34;</span> <span class="o">+</span> <span class="n">a</span><span class="o">.</span><span class="na">getState</span><span class="o">());</span> <span class="c1">// 输出 TERMINATED
+</span><span class="c1"></span>    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">b</span><span class="o">.</span><span class="na">getName</span><span class="o">()</span> <span class="o">+</span> <span class="s">&#34;:&#34;</span> <span class="o">+</span> <span class="n">b</span><span class="o">.</span><span class="na">getState</span><span class="o">());</span>
+<span class="o">}</span>
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
+<h4 id="timed_waiting和runnable状态的转换">TIMED_WAITING和RUNNABLE状态的转换</h4>
+<ul>
+<li>Thread.sleep(long)
+<ul>
+<li>使当前线程睡眠指定时间，暂时停止执行但是不释放锁，时间到后线程重新进入RUNNABLE状态</li>
+</ul>
+</li>
+<li>Object.wait(long)
+<ul>
+<li>使线程进入TIMED_WAITING状态</li>
+<li>可以通过notify()和notifyAll()来唤醒</li>
+<li>即使不被唤醒，经过指定时间long之后也会自动唤醒，拥有争夺锁的资格</li>
+</ul>
+</li>
+<li>Thread.join(long)
+<ul>
+<li>使当前线程执行指定时间，并且进入TIMED_WAITING状态</li>
+</ul>
+</li>
+</ul>
+<h4 id="线程中断">线程中断</h4>
+<p>Java提供了线程中断机制来处理需要中断线程的情况，是一种协作机制。通过中断操作并不能直接终止一个线程，而是通知需要被中断的线程自行处理。</p>
+<p>当其他线程通知需要被中断的线程后，线程中断的状态被设置为true，但是具体被要求中断的线程要怎么处理看，完全由被中断的县城自己而定，可以在合适的实际处理中断请求，也可以完全不处理继续执行下去</p>
+<ul>
+<li>Thread.interrupt()：中断线程，并不会直接停止线程，而是设置线程的中断状态为true（默认false）</li>
+<li>Thread.interrupted()：测试当前线程是否被中断，线程的中断状态受这个方法的影响，调用一次使线程中断状态设置为true，连续调用两次会使这个线程的中断状态重新转为false</li>
+<li>Thread.isInterrupted()：测试当前线程是否被中断，调用这个方法不会影响线程的中断状态</li>
+</ul>
+
+  </article>
+
+  
+  
+  
+
+
+</div>
+
+  </main><div class="footer gradient-2">
+  <div class="container footer-container ">
+    <div class="row">
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        <div class="footer-title">Sitemap</div>
+        <ul class="list-unstyled">
+            
+              
+                <li><a href="https://www.pseudoyu.com/en/tags/">Tags</a></li>
+              
+              
+                <li><a href="https://www.pseudoyu.com/en/categories/">Categories</a></li>
+              
+            
+            
+            
+            <li><a rel="alternate" type="application/rss&#43;xml" href="https://www.pseudoyu.com/en/index.xml"><i class="fas fa-rss-square"></i> RSS Feed</a></li>
+            
+            
+            
+        </ul>
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">Social</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://www.facebook.com/pseudoyuzhang" rel="noopener" target="_blank">Facebook</a></li>
+          
+          <li><a href="https://www.instagram.com/pseudo.yu/" rel="noopener" target="_blank">Instagram</a></li>
+          
+          <li><a href="https://space.bilibili.com/5374948/" rel="noopener" target="_blank">BiliBili</a></li>
+          
+        </ul>
+        
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">Links</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://www.linkedin.com/in/pseudoyu/" rel="noopener" target="_blank">LinkedIn</a></li>
+          
+          <li><a href="https://github.com/pseudoyu" rel="noopener" target="_blank">GitHub</a></li>
+          
+          <li><a href="https://www.coursera.org/user/ffe947f087d1f63b161c3fcb310a6578" rel="noopener" target="_blank">Coursera</a></li>
+          
+        </ul>
+        
+      </div> 
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <p class="pull-right text-right">
+          <small><em><a href="https://www.hku.hk" rel="noopener" target="_blank">The University of Hong Kong</a> - <a href="https://www.cs.hku.hk" rel="noopener" target="_blank">CS</a></em></small><br/>
+          <small><em>Team Rocket - <a href="https://www.marshalgao.com" rel="noopener" target="_blank">Marshal</a> | <a href="https://www.m1sty.com" rel="noopener" target="_blank">Misty</a></em></small><br/>
+          <small>
+            &copy; 
+            pseudoyu
+            
+              2020 -
+            2021
+          </small>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

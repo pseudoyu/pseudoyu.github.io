@@ -4458,7 +4458,7 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
 &lt;li&gt;wait必须放在同步块或同步方法中，sleep可以放在任意位置&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;threadlocal类&#34;&gt;ThreadLocal类&lt;/h4&gt;
-&lt;p&gt;是一个本地线程副本变量工具类，内部不是一个弱引用的Map来维护。ThreadLocal并不属于多线程间的通信，而是让每个线程都有自己独立的变量，线程之间互不影响，为每个线程都创建一个副本，每个县城可以访问自己内部的副本变量。&lt;/p&gt;
+&lt;p&gt;是一个本地线程副本变量工具类，内部不是一个弱引用的Map来维护。ThreadLocal并不属于多线程间的通信，而是让每个线程都有自己独立的变量，线程之间互不影响，为每个线程都创建一个副本，每个线程可以访问自己内部的副本变量。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ThreadLocalDemo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
     &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ThreadA&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;implements&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Runnable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
         &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ThreadLocal&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;threadLocal&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
@@ -4530,7 +4530,7 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
 &lt;ul&gt;
 &lt;li&gt;就绪状态 READY：线程正在等待使用CPU，经调度程序调用之后可进入RUNNING状态&lt;/li&gt;
 &lt;li&gt;执行状态 RUNNING：线程正在使用CPU&lt;/li&gt;
-&lt;li&gt;等待状态 WAITING：县城经过等待事件的调用或者正在等待其他资源（如I/O）&lt;/li&gt;
+&lt;li&gt;等待状态 WAITING：线程经过等待事件的调用或者正在等待其他资源（如I/O）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;java线程的六个状态&#34;&gt;Java线程的六个状态&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// Thread.State 源码
@@ -4678,7 +4678,7 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
 &lt;/ul&gt;
 &lt;h4 id=&#34;线程中断&#34;&gt;线程中断&lt;/h4&gt;
 &lt;p&gt;Java提供了线程中断机制来处理需要中断线程的情况，是一种协作机制。通过中断操作并不能直接终止一个线程，而是通知需要被中断的线程自行处理。&lt;/p&gt;
-&lt;p&gt;当其他线程通知需要被中断的线程后，线程中断的状态被设置为true，但是具体被要求中断的线程要怎么处理看，完全由被中断的县城自己而定，可以在合适的实际处理中断请求，也可以完全不处理继续执行下去&lt;/p&gt;
+&lt;p&gt;当其他线程通知需要被中断的线程后，线程中断的状态被设置为true，但是具体被要求中断的线程要怎么处理看，完全由被中断的线程自己而定，可以在合适的实际处理中断请求，也可以完全不处理继续执行下去&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Thread.interrupt()：中断线程，并不会直接停止线程，而是设置线程的中断状态为true（默认false）&lt;/li&gt;
 &lt;li&gt;Thread.interrupted()：测试当前线程是否被中断，线程的中断状态受这个方法的影响，调用一次使线程中断状态设置为true，连续调用两次会使这个线程的中断状态重新转为false&lt;/li&gt;

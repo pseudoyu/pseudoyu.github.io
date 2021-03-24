@@ -415,7 +415,7 @@
 <li>wait必须放在同步块或同步方法中，sleep可以放在任意位置</li>
 </ul>
 <h4 id="threadlocal类">ThreadLocal类</h4>
-<p>是一个本地线程副本变量工具类，内部不是一个弱引用的Map来维护。ThreadLocal并不属于多线程间的通信，而是让每个线程都有自己独立的变量，线程之间互不影响，为每个线程都创建一个副本，每个县城可以访问自己内部的副本变量。</p>
+<p>是一个本地线程副本变量工具类，内部不是一个弱引用的Map来维护。ThreadLocal并不属于多线程间的通信，而是让每个线程都有自己独立的变量，线程之间互不影响，为每个线程都创建一个副本，每个线程可以访问自己内部的副本变量。</p>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ThreadLocalDemo</span> <span class="o">{</span>
     <span class="kd">static</span> <span class="kd">class</span> <span class="nc">ThreadA</span> <span class="kd">implements</span> <span class="n">Runnable</span> <span class="o">{</span>
         <span class="kd">private</span> <span class="n">ThreadLocal</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">threadLocal</span><span class="o">;</span>

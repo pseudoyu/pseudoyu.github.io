@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 18 Mar 2021 01:18:17 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 27 Mar 2021 03:12:17 +0800</lastBuildDate>
     
     <atom:link href="https://www.pseudoyu.com/zh/index.xml" rel="self" type="application/rss+xml" />
     
@@ -34,6 +34,100 @@
 &lt;p&gt;&lt;strong&gt;Pseudoyu&lt;/strong&gt; 这个名字也是寓意自己不应该再时常纠结意义，而是要不断去学习、体验与挑战新的事物，即使被评价「变了」、「不像自己」也能欣然接受。&lt;/p&gt;
 &lt;p&gt;希望自己能多输入一些新的知识和想法，多写一些小文章。&lt;/p&gt;
 </description>
+      
+    </item>
+    
+    <item>
+      <title>Blockchain学习 - IPFS星际文件系统</title>
+      <link>https://www.pseudoyu.com/zh/2021/03/27/blockchain_note_ipfs/</link>
+      <pubDate>Sat, 27 Mar 2021 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/03/27/blockchain_note_ipfs/</guid>
+      
+        <description>&lt;h2 id=&#34;ipfs星际文件系统&#34;&gt;IPFS星际文件系统&lt;/h2&gt;
+&lt;h3 id=&#34;ipfs简介&#34;&gt;IPFS简介&lt;/h3&gt;
+&lt;p&gt;IPFS (InterPlanetary File System) 星际文件系统，是一个面向全球的、点对点的分布式文件存储系统，目标是为了补充（甚至是取代）目前统治互联网的超文本传输协议(HTTP)，将所有具有相同文件系统的计算设备连接在一起，使数据访问的速度更快、更安全、更健壮、更持久。项目由Juan Benet在2014年5月发起。&lt;/p&gt;
+&lt;p&gt;IPFS的愿景是构建一个全世界的分布式网络，用来替代传统中心化的服务器模式，所有的IPFS节点组成一个分布式网络，每个节点都可以存储文件，用户可以从IPFS构建的网络中以DHT(Distributed Hash Table，分布式哈希表) 的方式获取文件，从而实现了新一代的完全去中心化的网络，旨在取代现有的万维网。&lt;/p&gt;
+&lt;p&gt;一句话概括：IPFS是一种点对点的超媒体文件存储、索引、交换协议。&lt;/p&gt;
+&lt;h4 id=&#34;传统http存在的问题&#34;&gt;传统HTTP存在的问题&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;内容无法永久保存&lt;/li&gt;
+&lt;li&gt;非常浪费资源&lt;/li&gt;
+&lt;li&gt;安全问题
+&lt;ul&gt;
+&lt;li&gt;DDoS&lt;/li&gt;
+&lt;li&gt;XSS&lt;/li&gt;
+&lt;li&gt;CSRF&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;ipfs特点&#34;&gt;IPFS特点&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;内容可寻址&lt;/li&gt;
+&lt;li&gt;版本管理&lt;/li&gt;
+&lt;li&gt;点对点超媒体&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;ipfs功能&#34;&gt;IPFS功能&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;DHT组网&lt;/li&gt;
+&lt;li&gt;文件存储&lt;/li&gt;
+&lt;li&gt;Bitswap文件交换&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;ipfs应用场景&#34;&gt;IPFS应用场景&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;在/ipfs和/ipns下挂在全球文件系统&lt;/li&gt;
+&lt;li&gt;挂载的个人同步文件夹，拥有版本管理功能&lt;/li&gt;
+&lt;li&gt;可用于所有软件的带版本的包管理器&lt;/li&gt;
+&lt;li&gt;可以作为数据库&lt;/li&gt;
+&lt;li&gt;可以做（加密）通讯平台&lt;/li&gt;
+&lt;li&gt;各种类型CDN&lt;/li&gt;
+&lt;li&gt;永久Web（不存在失效链接）&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;ipfs入门&#34;&gt;IPFS入门&lt;/h3&gt;
+&lt;h4 id=&#34;安装macos-1123&#34;&gt;安装（macOS 11.2.3）&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;wget https://dist.ipfs.io/go-ipfs/v0.8.0/go-ipfs_v0.8.0_darwin-amd64.tar.gz
+tar -xvzf go-ipfs_v0.8.0_darwin-amd64.tar.gz
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; go-ipfs
+./install.sh
+ipfs --version
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;启动&#34;&gt;启动&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 启动节点&lt;/span&gt;
+ipfs init
+
+&lt;span class=&#34;c1&#34;&gt;# 上传文件&lt;/span&gt;
+ipfs add ipfs_init_readme.png
+
+&lt;span class=&#34;c1&#34;&gt;# 上传文件并且只输出哈希值&lt;/span&gt;
+ipfs add -q ipfs_init_readme.png
+
+&lt;span class=&#34;c1&#34;&gt;# 查看文件&lt;/span&gt;
+ipfs cat /ipfs/QmQPeNsJPyVWPFDVHb77w8G42Fvo15z4bG2X8D2GhfbSXc/readme
+ipfs cat /ipfs/QmQPeNsJPyVWPFDVHb77w8G42Fvo15z4bG2X8D2GhfbSXc/quick-start
+
+&lt;span class=&#34;c1&#34;&gt;# 查看自己上传的文件&lt;/span&gt;
+ipfs cat QmaP3QS6ZfBoEaUJZ3ZfRKoBm3GGuhQSnUWtkVCNc8ZLTj
+
+&lt;span class=&#34;c1&#34;&gt;# 查看图片并输出到文件&lt;/span&gt;
+ipfs cat QmfViXYw7GA296brLwid255ivDp1kmTiXJw1kmZVsg7DFH &amp;gt; ipfsTest.png
+
+&lt;span class=&#34;c1&#34;&gt;# 下载文件&lt;/span&gt;
+ipfs get QmfViXYw7GA296brLwid255ivDp1kmTiXJw1kmZVsg7DFH -o ipfsTest.png
+
+&lt;span class=&#34;c1&#34;&gt;# 压缩并下载文件&lt;/span&gt;
+ipfs get QmfViXYw7GA296brLwid255ivDp1kmTiXJw1kmZVsg7DFH -Cao ipfsTest.png
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ipfs_init_readme.png&#34; alt=&#34;ipfs_init_readme&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;开启加入服务&#34;&gt;开启/加入服务&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 查看当前节点信息 &lt;/span&gt;
+ipfs id
+
+&lt;span class=&#34;c1&#34;&gt;# 查看IPFS配置信息&lt;/span&gt;
+ipfs config show
+
+&lt;span class=&#34;c1&#34;&gt;# 开启节点服务器&lt;/span&gt;
+ipfs daemon
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
       
     </item>
     
@@ -4512,178 +4606,6 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
 &lt;p&gt;最常见的使用场景是解决数据库连接、Session管理等（涉及多个复杂对象的初始化和关闭），如果用私有变量则需要频繁创建和关闭连接，不轻量。&lt;/p&gt;
 &lt;h4 id=&#34;inheritablethreadlocal&#34;&gt;InheritableThreadLocal&lt;/h4&gt;
 &lt;p&gt;InheritableThreadLocal类不仅仅是当前线程可以存取副本值，它的子线程也可以存取。&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Java学习 - 线程状态及转化方法</title>
-      <link>https://www.pseudoyu.com/zh/2020/12/09/java_note_concurrent_state/</link>
-      <pubDate>Wed, 09 Dec 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/12/09/java_note_concurrent_state/</guid>
-      
-        <description>&lt;h2 id=&#34;线程状态及转化方法&#34;&gt;线程状态及转化方法&lt;/h2&gt;
-&lt;h3 id=&#34;操作系统中的线程状态转换&#34;&gt;操作系统中的线程状态转换&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/java_state.png&#34; alt=&#34;java_state&#34;&gt;&lt;/p&gt;
-&lt;p&gt;操作系统线程主要有以下三个状态&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;就绪状态 READY：线程正在等待使用CPU，经调度程序调用之后可进入RUNNING状态&lt;/li&gt;
-&lt;li&gt;执行状态 RUNNING：线程正在使用CPU&lt;/li&gt;
-&lt;li&gt;等待状态 WAITING：线程经过等待事件的调用或者正在等待其他资源（如I/O）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;java线程的六个状态&#34;&gt;Java线程的六个状态&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// Thread.State 源码
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;enum&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;State&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;NEW&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;RUNNABLE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;BLOCKED&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;WAITING&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;TIMED_WAITING&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;TERMINATED&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;new&#34;&gt;NEW&lt;/h4&gt;
-&lt;p&gt;处于NEW状态的线程此时尚未启动（未调用Thread实例的start()方法）&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;反复调用一个线程的start()方法是否可行&lt;/li&gt;
-&lt;li&gt;假如一个线程执行完毕（此时处于TERMINATED状态），再次调用这个线程的start()方法是否可行&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;synchronized&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;threadStatus&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-        &lt;span class=&#34;k&#34;&gt;throw&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;IllegalThreadStateException&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-
-    &lt;span class=&#34;n&#34;&gt;group&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-
-    &lt;span class=&#34;kt&#34;&gt;boolean&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;started&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;start0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;started&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;finally&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-            &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(!&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;started&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-                &lt;span class=&#34;n&#34;&gt;group&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;threadStartFailed&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-            &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;catch&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Throwable&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ignore&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-
-        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在start()内部有一个threadStatus变量，如果不等于0则调用start()会直接抛出异常。在调用一次start()后，threadStatus的值会改变，此时调用会抛出IllegalThreadStateException异常，比如threadStatus为2代表当前状态为TERMINATED。&lt;/p&gt;
-&lt;h4 id=&#34;runnable&#34;&gt;RUNNABLE&lt;/h4&gt;
-&lt;p&gt;表示当前线程正在运行中（在虚拟机中运行或等待CPU分配资源），包含了传统操作系统线程的ready和running两个状态&lt;/p&gt;
-&lt;h4 id=&#34;blocked&#34;&gt;BLOCKED&lt;/h4&gt;
-&lt;p&gt;阻塞状态，等待锁的释放以进入同步区&lt;/p&gt;
-&lt;h4 id=&#34;waiting&#34;&gt;WAITING&lt;/h4&gt;
-&lt;p&gt;等待状态，需要其他线程唤醒才能变成RUNNABLE状态&lt;/p&gt;
-&lt;p&gt;进入等待状态&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Object.wait()：使当前线程处于等待状态，知道另一个线程唤醒它&lt;/li&gt;
-&lt;li&gt;Thread.join()：等待线程执行完毕，底层调用的Object的wait()方法&lt;/li&gt;
-&lt;li&gt;LockSupport.park()：除非获得调用许可，否则禁用当前线程进行线程调度&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;timed_waiting&#34;&gt;TIMED_WAITING&lt;/h4&gt;
-&lt;p&gt;超时等待状态。线程等待一个具体的时间后被自动唤醒&lt;/p&gt;
-&lt;p&gt;进入超时等待状态&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Thread.sleep(long millis)：使当前线程睡眠指定时间&lt;/li&gt;
-&lt;li&gt;Object.wait(long timeout)：线程休眠指定时间，可以通过notify()/notifyAll()唤醒&lt;/li&gt;
-&lt;li&gt;Thread.join(long mills)：等待当前线程最多执行millis毫秒，如果millis为0则会一直执行&lt;/li&gt;
-&lt;li&gt;LockSupport.parkNanos(long nanos)：除非获得调用许可，否则禁用当前线程进行线程调度指定时间&lt;/li&gt;
-&lt;li&gt;LockSupport.parkUntil(long deadline)：禁止线程进行调度指定时间&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;terminated&#34;&gt;TERMINATED&lt;/h4&gt;
-&lt;p&gt;终止状态，此时线程执行完毕&lt;/p&gt;
-&lt;h3 id=&#34;线程状态的转换&#34;&gt;线程状态的转换&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/java_state_convert.png&#34; alt=&#34;java_state_convert&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;blocked和runnable状态的转换&#34;&gt;BLOCKED和RUNNABLE状态的转换&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Test&lt;/span&gt;
-&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;blockedTest&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-
-    &lt;span class=&#34;n&#34;&gt;Thread&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Thread&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Runnable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
-        &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-            &lt;span class=&#34;n&#34;&gt;testMethod&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-    &lt;span class=&#34;o&#34;&gt;},&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;a&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;Thread&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Thread&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Runnable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
-        &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-            &lt;span class=&#34;n&#34;&gt;testMethod&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-    &lt;span class=&#34;o&#34;&gt;},&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;b&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-
-    &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;Thread&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;sleep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;1000L&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 需要注意这里main线程休眠了1000毫秒，而testMethod()里休眠了2000毫秒
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;:&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getState&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 输出？
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;:&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getState&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 输出？
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;// 同步方法争夺锁
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;synchronized&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;testMethod&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;Thread&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;sleep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;2000L&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;catch&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;InterruptedException&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;printStackTrace&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;两个线程的状态转换&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;a：RUNNABLE（a.start()） -&amp;gt; TIMED_WATING（Thread.sleep()）-&amp;gt;RUNABLE（sleep()时间到）-&amp;gt; &lt;em&gt;BLOCKED(未抢到锁)&lt;/em&gt; -&amp;gt; TERMINATED&lt;/li&gt;
-&lt;li&gt;b：RUNNABLE（b.start()) -&amp;gt; &lt;em&gt;BLOCKED(未抢到锁)&lt;/em&gt; -&amp;gt;TERMINATED&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;waiting和runnable状态的转换&#34;&gt;WAITING和RUNNABLE状态的转换&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;Object.wait()
-&lt;ul&gt;
-&lt;li&gt;调用wait()前必须持有对象的锁&lt;/li&gt;
-&lt;li&gt;调用wait()方法时，会释放当前的锁，知道有其他线程调用notify()/notifyAll()方法唤醒等待锁的线程。notify()方法只会唤醒单个等待锁的线程，如有多个线程都在等待这个锁的话不一定会唤醒到之前调用wait()方法的线程；notifyAll()唤醒所有等待锁的线程后，也不一定马上把时间片分给刚放弃锁的线程，具体要看系统调度&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Thread.join()
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;调用join()方法不会释放锁，会一直等待当前线程执行完毕（转变为TERMINATED状态），在Demo中，a线程一定会执行完毕，所以会打印TERMINATED状态；b线程可能打印RUNNABLE（尚未进入同步方法），也可能打印TIMED_WAITING（进入同步方法）&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;blockedTest&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;err&#34;&gt;······&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;join&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;:&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getState&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 输出 TERMINATED
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;:&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getState&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;timed_waiting和runnable状态的转换&#34;&gt;TIMED_WAITING和RUNNABLE状态的转换&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;Thread.sleep(long)
-&lt;ul&gt;
-&lt;li&gt;使当前线程睡眠指定时间，暂时停止执行但是不释放锁，时间到后线程重新进入RUNNABLE状态&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Object.wait(long)
-&lt;ul&gt;
-&lt;li&gt;使线程进入TIMED_WAITING状态&lt;/li&gt;
-&lt;li&gt;可以通过notify()和notifyAll()来唤醒&lt;/li&gt;
-&lt;li&gt;即使不被唤醒，经过指定时间long之后也会自动唤醒，拥有争夺锁的资格&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Thread.join(long)
-&lt;ul&gt;
-&lt;li&gt;使当前线程执行指定时间，并且进入TIMED_WAITING状态&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;线程中断&#34;&gt;线程中断&lt;/h4&gt;
-&lt;p&gt;Java提供了线程中断机制来处理需要中断线程的情况，是一种协作机制。通过中断操作并不能直接终止一个线程，而是通知需要被中断的线程自行处理。&lt;/p&gt;
-&lt;p&gt;当其他线程通知需要被中断的线程后，线程中断的状态被设置为true，但是具体被要求中断的线程要怎么处理看，完全由被中断的线程自己而定，可以在合适的实际处理中断请求，也可以完全不处理继续执行下去&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Thread.interrupt()：中断线程，并不会直接停止线程，而是设置线程的中断状态为true（默认false）&lt;/li&gt;
-&lt;li&gt;Thread.interrupted()：测试当前线程是否被中断，线程的中断状态受这个方法的影响，调用一次使线程中断状态设置为true，连续调用两次会使这个线程的中断状态重新转为false&lt;/li&gt;
-&lt;li&gt;Thread.isInterrupted()：测试当前线程是否被中断，调用这个方法不会影响线程的中断状态&lt;/li&gt;
-&lt;/ul&gt;
 </description>
       
     </item>

@@ -6,7 +6,16 @@
     <description>Recent content in blockchain on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 30 Jan 2021 05:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/blockchain/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Mar 2021 03:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/blockchain/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blockchain学习 - IPFS星际文件系统</title>
+      <link>https://www.pseudoyu.com/en/2021/03/27/blockchain_note_ipfs/</link>
+      <pubDate>Sat, 27 Mar 2021 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2021/03/27/blockchain_note_ipfs/</guid>
+      <description>IPFS星际文件系统 IPFS简介 IPFS (InterPlanetary File System) 星际文件系统，是一个面向全球的、点对点的分布式文件存储系统，目标是为了补充（甚至是取代）目前统治互联</description>
+    </item>
+    
     <item>
       <title>Blockchain学习 - 区块链隐私</title>
       <link>https://www.pseudoyu.com/en/2021/01/30/blockchain_note_privacy/</link>

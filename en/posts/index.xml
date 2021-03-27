@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 18 Mar 2021 01:18:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Mar 2021 03:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blockchain学习 - IPFS星际文件系统</title>
+      <link>https://www.pseudoyu.com/en/2021/03/27/blockchain_note_ipfs/</link>
+      <pubDate>Sat, 27 Mar 2021 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2021/03/27/blockchain_note_ipfs/</guid>
+      <description>IPFS星际文件系统 IPFS简介 IPFS (InterPlanetary File System) 星际文件系统，是一个面向全球的、点对点的分布式文件存储系统，目标是为了补充（甚至是取代）目前统治互联</description>
+    </item>
+    
     <item>
       <title>COMP7103 Topic 3 Clustering</title>
       <link>https://www.pseudoyu.com/en/2021/03/18/comp7103_topic3/</link>
@@ -184,15 +193,6 @@ Application  Understanding  Group related documents for browsing, group genes an
       
       <guid>https://www.pseudoyu.com/en/2020/12/09/java_note_concurrent_state/</guid>
       <description>线程状态及转化方法 操作系统中的线程状态转换 操作系统线程主要有以下三个状态 就绪状态 READY：线程正在等待使用CPU，经调度程序调用之后可进入</description>
-    </item>
-    
-    <item>
-      <title>Java学习 - 线程组和线程优先级</title>
-      <link>https://www.pseudoyu.com/en/2020/12/07/java_note_concurrent_threadgroup/</link>
-      <pubDate>Mon, 07 Dec 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/12/07/java_note_concurrent_threadgroup/</guid>
-      <description>线程组和线程优先级 线程组 Java中的ThreadGroup表示线程组，可使用线程组对线程进行批量控制；每个线程必须存在于一个线程组中，不能独</description>
     </item>
     
   </channel>

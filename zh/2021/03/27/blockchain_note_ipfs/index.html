@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="utf-8">
+  <title>Blockchain学习 - IPFS星际文件系统 · Pseudoyu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="IPFS星际文件系统 IPFS简介 IPFS (InterPlanetary File System) 星际文件系统，是一个面向全球的、点对点的分布式文件存储系统，目标是为了补充（甚至是取代）目前统治互联" />
+
+  <meta name="keywords" content="hugo, blockchain, programming" />
+
+<link rel="canonical" href="https://www.pseudoyu.com/zh/2021/03/27/blockchain_note_ipfs/" />
+<link rel="alternate" href="https://www.pseudoyu.com/en/2021/03/27/blockchain_note_ipfs/" hreflang="en">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.pseudoyu.com/css/den.css">
+
+
+
+
+<meta property="og:title" content="Blockchain学习 - IPFS星际文件系统" />
+<meta property="og:description" content="IPFS星际文件系统 IPFS简介 IPFS (InterPlanetary File System) 星际文件系统，是一个面向全球的、点对点的分布式文件存储系统，目标是为了补充（甚至是取代）目前统治互联" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.pseudoyu.com/zh/2021/03/27/blockchain_note_ipfs/" />
+<meta property="article:published_time" content="2021-03-27T03:12:17+08:00" />
+<meta property="article:modified_time" content="2021-03-27T03:12:17+08:00" />
+<meta itemprop="name" content="Blockchain学习 - IPFS星际文件系统">
+<meta itemprop="description" content="IPFS星际文件系统 IPFS简介 IPFS (InterPlanetary File System) 星际文件系统，是一个面向全球的、点对点的分布式文件存储系统，目标是为了补充（甚至是取代）目前统治互联">
+<meta itemprop="datePublished" content="2021-03-27T03:12:17+08:00" />
+<meta itemprop="dateModified" content="2021-03-27T03:12:17+08:00" />
+<meta itemprop="wordCount" content="693">
+
+
+
+<meta itemprop="keywords" content="programming,blockchain," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Blockchain学习 - IPFS星际文件系统"/>
+<meta name="twitter:description" content="IPFS星际文件系统 IPFS简介 IPFS (InterPlanetary File System) 星际文件系统，是一个面向全球的、点对点的分布式文件存储系统，目标是为了补充（甚至是取代）目前统治互联"/>
+</head>
+<body>
+  
+  <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://www.pseudoyu.com/images/background.jpg'); background-position: center; background-size: cover;">
+  <div class="container">
+  <nav class="header-nav navbar navbar-expand-md navbar-dark light-dark">
+    <div class="header-logo navbar-brand">
+      
+        <a class="float-left" href="https://www.pseudoyu.com/zh/">
+      
+        
+        <img class="mr20 header-logo-image" src="https://www.pseudoyu.com/images/fly.png" alt="logo">
+        
+        
+          Pseudoyu
+         
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav-menu collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/ideas/">思考</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/programming/">编程</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/notes/">笔记</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/projects/">项目</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              <a class="nav-link" href="https://www.pseudoyu.com/zh/about/">关于</a>
+            
+          </li>
+        
+        
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.pseudoyu.com/en/"><i class="fas fa-globe"></i> English</a>
+            </li>
+          
+          
+        
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container header-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="header-content">
+        <h1 class="header-title">Blockchain学习 - IPFS星际文件系统</h1>
+        <p class="header-date">作者：
+          Arthur /
+        
+        2021-03-27
+          / 分类：
+          <a href="https://www.pseudoyu.com/zh/category/programming/">Programming</a>
+        </p>
+        
+        <div class="header-underline"></div>
+        
+          <div class="clearfix"></div>
+          <p class="float-right header-tags">
+              <i class="fas fa-tags" aria-hidden="true"></i>
+              <a href="https://www.pseudoyu.com/zh/tag/blockchain/">blockchain</a>, 
+                <a href="https://www.pseudoyu.com/zh/tag/programming/">programming</a>
+          </p>
+        
+        <div class="clearfix"></div>
+<p class="float-right translations">
+    <i class="fas fa-language" aria-hidden="true"></i>
+    翻译： 
+    <a href="https://www.pseudoyu.com/en/2021/03/27/blockchain_note_ipfs/">EN</a>
+</p>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <main>
+<div class="container content">
+  <article>
+  <h2 id="ipfs星际文件系统">IPFS星际文件系统</h2>
+<h3 id="ipfs简介">IPFS简介</h3>
+<p>IPFS (InterPlanetary File System) 星际文件系统，是一个面向全球的、点对点的分布式文件存储系统，目标是为了补充（甚至是取代）目前统治互联网的超文本传输协议(HTTP)，将所有具有相同文件系统的计算设备连接在一起，使数据访问的速度更快、更安全、更健壮、更持久。项目由Juan Benet在2014年5月发起。</p>
+<p>IPFS的愿景是构建一个全世界的分布式网络，用来替代传统中心化的服务器模式，所有的IPFS节点组成一个分布式网络，每个节点都可以存储文件，用户可以从IPFS构建的网络中以DHT(Distributed Hash Table，分布式哈希表) 的方式获取文件，从而实现了新一代的完全去中心化的网络，旨在取代现有的万维网。</p>
+<p>一句话概括：IPFS是一种点对点的超媒体文件存储、索引、交换协议。</p>
+<h4 id="传统http存在的问题">传统HTTP存在的问题</h4>
+<ul>
+<li>内容无法永久保存</li>
+<li>非常浪费资源</li>
+<li>安全问题
+<ul>
+<li>DDoS</li>
+<li>XSS</li>
+<li>CSRF</li>
+</ul>
+</li>
+</ul>
+<h4 id="ipfs特点">IPFS特点</h4>
+<ul>
+<li>内容可寻址</li>
+<li>版本管理</li>
+<li>点对点超媒体</li>
+</ul>
+<h4 id="ipfs功能">IPFS功能</h4>
+<ul>
+<li>DHT组网</li>
+<li>文件存储</li>
+<li>Bitswap文件交换</li>
+<li>&hellip;</li>
+</ul>
+<h3 id="ipfs应用场景">IPFS应用场景</h3>
+<ul>
+<li>在/ipfs和/ipns下挂在全球文件系统</li>
+<li>挂载的个人同步文件夹，拥有版本管理功能</li>
+<li>可用于所有软件的带版本的包管理器</li>
+<li>可以作为数据库</li>
+<li>可以做（加密）通讯平台</li>
+<li>各种类型CDN</li>
+<li>永久Web（不存在失效链接）</li>
+<li>&hellip;</li>
+</ul>
+<h3 id="ipfs入门">IPFS入门</h3>
+<h4 id="安装macos-1123">安装（macOS 11.2.3）</h4>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">wget https://dist.ipfs.io/go-ipfs/v0.8.0/go-ipfs_v0.8.0_darwin-amd64.tar.gz
+tar -xvzf go-ipfs_v0.8.0_darwin-amd64.tar.gz
+<span class="nb">cd</span> go-ipfs
+./install.sh
+ipfs --version
+</code></pre></div><h4 id="启动">启动</h4>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># 启动节点</span>
+ipfs init
+
+<span class="c1"># 上传文件</span>
+ipfs add ipfs_init_readme.png
+
+<span class="c1"># 上传文件并且只输出哈希值</span>
+ipfs add -q ipfs_init_readme.png
+
+<span class="c1"># 查看文件</span>
+ipfs cat /ipfs/QmQPeNsJPyVWPFDVHb77w8G42Fvo15z4bG2X8D2GhfbSXc/readme
+ipfs cat /ipfs/QmQPeNsJPyVWPFDVHb77w8G42Fvo15z4bG2X8D2GhfbSXc/quick-start
+
+<span class="c1"># 查看自己上传的文件</span>
+ipfs cat QmaP3QS6ZfBoEaUJZ3ZfRKoBm3GGuhQSnUWtkVCNc8ZLTj
+
+<span class="c1"># 查看图片并输出到文件</span>
+ipfs cat QmfViXYw7GA296brLwid255ivDp1kmTiXJw1kmZVsg7DFH &gt; ipfsTest.png
+
+<span class="c1"># 下载文件</span>
+ipfs get QmfViXYw7GA296brLwid255ivDp1kmTiXJw1kmZVsg7DFH -o ipfsTest.png
+
+<span class="c1"># 压缩并下载文件</span>
+ipfs get QmfViXYw7GA296brLwid255ivDp1kmTiXJw1kmZVsg7DFH -Cao ipfsTest.png
+</code></pre></div><p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ipfs_init_readme.png" alt="ipfs_init_readme"></p>
+<h4 id="开启加入服务">开启/加入服务</h4>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># 查看当前节点信息 </span>
+ipfs id
+
+<span class="c1"># 查看IPFS配置信息</span>
+ipfs config show
+
+<span class="c1"># 开启节点服务器</span>
+ipfs daemon
+</code></pre></div>
+  </article>
+
+  
+  
+  
+
+
+</div>
+
+  </main><div class="footer gradient-2">
+  <div class="container footer-container ">
+    <div class="row">
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        <div class="footer-title">网站地图</div>
+        <ul class="list-unstyled">
+            
+              
+                <li><a href="https://www.pseudoyu.com/zh/tags/">标签</a></li>
+              
+              
+                <li><a href="https://www.pseudoyu.com/zh/categories/">分类</a></li>
+              
+            
+            
+            
+            <li><a rel="alternate" type="application/rss&#43;xml" href="https://www.pseudoyu.com/zh/index.xml"><i class="fas fa-rss-square"></i> RSS订阅</a></li>
+            
+            
+            
+        </ul>
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">社群</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://www.facebook.com/pseudoyuzhang" rel="noopener" target="_blank">Facebook</a></li>
+          
+          <li><a href="https://www.instagram.com/pseudo.yu/" rel="noopener" target="_blank">Instagram</a></li>
+          
+          <li><a href="https://space.bilibili.com/5374948/" rel="noopener" target="_blank">BiliBili</a></li>
+          
+        </ul>
+        
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">友链</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://www.linkedin.com/in/pseudoyu/" rel="noopener" target="_blank">LinkedIn</a></li>
+          
+          <li><a href="https://github.com/pseudoyu" rel="noopener" target="_blank">GitHub</a></li>
+          
+          <li><a href="https://www.coursera.org/user/ffe947f087d1f63b161c3fcb310a6578" rel="noopener" target="_blank">Coursera</a></li>
+          
+        </ul>
+        
+      </div> 
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <p class="pull-right text-right">
+          <small><em>Team Rocket: <a href="https://www.marshalgao.com" rel="noopener" target="_blank">Marshal</a> | <a href="https://www.m1sty.com" rel="noopener" target="_blank">Misty</a></em></small><br/>
+          <small><em>The University of Hong Kong - <a href="https://www.cs.hku.hk" rel="noopener" target="_blank">CS</a></em></small><br/>
+          <small>
+            &copy; 
+            Arthur
+            
+              2020 -
+            2021
+          </small>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

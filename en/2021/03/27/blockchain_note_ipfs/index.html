@@ -23,13 +23,13 @@
 <meta property="og:description" content="IPFS星际文件系统 IPFS简介 IPFS (InterPlanetary File System) 星际文件系统，是一个面向全球的、点对点的分布式文件存储系统，目标是为了补充（甚至是取代）目前统治互联" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.pseudoyu.com/en/2021/03/27/blockchain_note_ipfs/" />
-<meta property="article:published_time" content="2021-03-27T03:12:17+08:00" />
-<meta property="article:modified_time" content="2021-03-27T03:12:17+08:00" />
+<meta property="article:published_time" content="2021-03-27T18:46:17+08:00" />
+<meta property="article:modified_time" content="2021-03-27T18:46:17+08:00" />
 <meta itemprop="name" content="Blockchain学习 - IPFS星际文件系统">
 <meta itemprop="description" content="IPFS星际文件系统 IPFS简介 IPFS (InterPlanetary File System) 星际文件系统，是一个面向全球的、点对点的分布式文件存储系统，目标是为了补充（甚至是取代）目前统治互联">
-<meta itemprop="datePublished" content="2021-03-27T03:12:17+08:00" />
-<meta itemprop="dateModified" content="2021-03-27T03:12:17+08:00" />
-<meta itemprop="wordCount" content="693">
+<meta itemprop="datePublished" content="2021-03-27T18:46:17+08:00" />
+<meta itemprop="dateModified" content="2021-03-27T18:46:17+08:00" />
+<meta itemprop="wordCount" content="757">
 
 
 
@@ -236,6 +236,27 @@ ipfs config show
 
 <span class="c1"># 开启节点服务器</span>
 ipfs daemon
+</code></pre></div><h4 id="文件操作">文件操作</h4>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># 列出文件</span>
+ipfs files ls
+
+<span class="c1"># 创建目录</span>
+ipfs files mkdir
+
+<span class="c1"># 删除文件</span>
+ipfs files rm
+
+<span class="c1"># 拷贝文件</span>
+ipfs files cp <span class="o">[</span>File Hash<span class="o">]</span> /<span class="o">[</span>Dest Dir<span class="o">]</span>
+
+<span class="c1"># 移动文件</span>
+ipfs files mv <span class="o">[</span>File Hash<span class="o">]</span> /<span class="o">[</span>Dest Dir<span class="o">]</span>
+
+<span class="c1"># 状态</span>
+ipfs files stat
+
+<span class="c1"># 读取</span>
+ipfs files <span class="nb">read</span>
 </code></pre></div>
   </article>
 

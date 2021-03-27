@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 27 Mar 2021 03:12:17 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 27 Mar 2021 18:46:17 +0800</lastBuildDate>
     
     <atom:link href="https://www.pseudoyu.com/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -40,7 +40,7 @@
     <item>
       <title>Blockchain学习 - IPFS星际文件系统</title>
       <link>https://www.pseudoyu.com/en/2021/03/27/blockchain_note_ipfs/</link>
-      <pubDate>Sat, 27 Mar 2021 03:12:17 +0800</pubDate>
+      <pubDate>Sat, 27 Mar 2021 18:46:17 +0800</pubDate>
       
       <guid>https://www.pseudoyu.com/en/2021/03/27/blockchain_note_ipfs/</guid>
       
@@ -127,6 +127,27 @@ ipfs config show
 
 &lt;span class=&#34;c1&#34;&gt;# 开启节点服务器&lt;/span&gt;
 ipfs daemon
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;文件操作&#34;&gt;文件操作&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 列出文件&lt;/span&gt;
+ipfs files ls
+
+&lt;span class=&#34;c1&#34;&gt;# 创建目录&lt;/span&gt;
+ipfs files mkdir
+
+&lt;span class=&#34;c1&#34;&gt;# 删除文件&lt;/span&gt;
+ipfs files rm
+
+&lt;span class=&#34;c1&#34;&gt;# 拷贝文件&lt;/span&gt;
+ipfs files cp &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; /&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Dest Dir&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# 移动文件&lt;/span&gt;
+ipfs files mv &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; /&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Dest Dir&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# 状态&lt;/span&gt;
+ipfs files stat
+
+&lt;span class=&#34;c1&#34;&gt;# 读取&lt;/span&gt;
+ipfs files &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
       
     </item>

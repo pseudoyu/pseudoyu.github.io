@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>IPFS文件存储模式详解 · Pseudoyu</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="IPFS文件存储模式详解 CID (Content-ID) CID是类似IPFS分布式文件系统中标准的文件寻址格式 内容寻址 加密散列算法 自我描述z 目前在IPFS用base58" />
+  <meta name="description" content="IPFS文件存储模式详解 CID (Content-ID) CID是类似IPFS分布式文件系统中标准的文件寻址格式 内容寻址 加密散列算法 自我描述 目前在IPFS用base58b" />
 
   <meta name="keywords" content="hugo, blockchain, programming" />
 
@@ -20,23 +20,23 @@
 
 
 <meta property="og:title" content="IPFS文件存储模式详解" />
-<meta property="og:description" content="IPFS文件存储模式详解 CID (Content-ID) CID是类似IPFS分布式文件系统中标准的文件寻址格式 内容寻址 加密散列算法 自我描述z 目前在IPFS用base58" />
+<meta property="og:description" content="IPFS文件存储模式详解 CID (Content-ID) CID是类似IPFS分布式文件系统中标准的文件寻址格式 内容寻址 加密散列算法 自我描述 目前在IPFS用base58b" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.pseudoyu.com/zh/2021/03/28/blockchain_note_ipfs_model/" />
 <meta property="article:published_time" content="2021-03-28T16:30:17+08:00" />
 <meta property="article:modified_time" content="2021-03-28T16:30:17+08:00" />
 <meta itemprop="name" content="IPFS文件存储模式详解">
-<meta itemprop="description" content="IPFS文件存储模式详解 CID (Content-ID) CID是类似IPFS分布式文件系统中标准的文件寻址格式 内容寻址 加密散列算法 自我描述z 目前在IPFS用base58">
+<meta itemprop="description" content="IPFS文件存储模式详解 CID (Content-ID) CID是类似IPFS分布式文件系统中标准的文件寻址格式 内容寻址 加密散列算法 自我描述 目前在IPFS用base58b">
 <meta itemprop="datePublished" content="2021-03-28T16:30:17+08:00" />
 <meta itemprop="dateModified" content="2021-03-28T16:30:17+08:00" />
-<meta itemprop="wordCount" content="2287">
+<meta itemprop="wordCount" content="2286">
 
 
 
 <meta itemprop="keywords" content="programming,blockchain," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="IPFS文件存储模式详解"/>
-<meta name="twitter:description" content="IPFS文件存储模式详解 CID (Content-ID) CID是类似IPFS分布式文件系统中标准的文件寻址格式 内容寻址 加密散列算法 自我描述z 目前在IPFS用base58"/>
+<meta name="twitter:description" content="IPFS文件存储模式详解 CID (Content-ID) CID是类似IPFS分布式文件系统中标准的文件寻址格式 内容寻址 加密散列算法 自我描述 目前在IPFS用base58b"/>
 </head>
 <body>
   
@@ -159,7 +159,7 @@
 <ul>
 <li>内容寻址</li>
 <li>加密散列算法</li>
-<li>自我描述z</li>
+<li>自我描述</li>
 </ul>
 <p><em>目前在IPFS用base58btc对multihashes进行编码，在开发IPLD（InterPlanetary Linked Data，内容可寻址的数据模型，主要用来定义数据，给数据建模）过程中遇到了很多与数据格式相关的棘手问题，CID的出现让管理不同格式的数据成为了可能。</em></p>
 <h4 id="描述">描述</h4>

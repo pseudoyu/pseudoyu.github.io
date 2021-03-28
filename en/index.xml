@@ -50,7 +50,7 @@
 &lt;ul&gt;
 &lt;li&gt;内容寻址&lt;/li&gt;
 &lt;li&gt;加密散列算法&lt;/li&gt;
-&lt;li&gt;自我描述z&lt;/li&gt;
+&lt;li&gt;自我描述&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;em&gt;目前在IPFS用base58btc对multihashes进行编码，在开发IPLD（InterPlanetary Linked Data，内容可寻址的数据模型，主要用来定义数据，给数据建模）过程中遇到了很多与数据格式相关的棘手问题，CID的出现让管理不同格式的数据成为了可能。&lt;/em&gt;&lt;/p&gt;
 &lt;h4 id=&#34;描述&#34;&gt;描述&lt;/h4&gt;

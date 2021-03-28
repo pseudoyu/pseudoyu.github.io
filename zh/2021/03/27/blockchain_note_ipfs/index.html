@@ -29,7 +29,7 @@
 <meta itemprop="description" content="IPFS星际文件系统 IPFS简介 IPFS (InterPlanetary File System) 星际文件系统，是一个面向全球的、点对点的分布式文件存储系统，目标是为了补充（甚至是取代）目前统治互联">
 <meta itemprop="datePublished" content="2021-03-27T18:46:17+08:00" />
 <meta itemprop="dateModified" content="2021-03-27T18:46:17+08:00" />
-<meta itemprop="wordCount" content="757">
+<meta itemprop="wordCount" content="1953">
 
 
 
@@ -170,11 +170,22 @@
 </ul>
 </li>
 </ul>
+<h4 id="工作原理">工作原理</h4>
+<p><em>现在的网络服务里，内容是基于位置（IP）寻址的，就是在查找内容的时候，需要先找到内容所在的服务器（根据IP），然后再在服务器上找对应的内容。</em></p>
+<p><em>在IPFS的网络里，是根据内容寻址，每一个‍‍上传到IPFS上面去的文件、文件夹，都是以Qm为开头字母的哈希值，无需知道文件存储在哪里，通过哈希值就能够找到这个文件，这种方式叫内容寻址。</em></p>
+<p>在IPFS系统中，内容会分块存放（如果内容很小就会直接存在DHT中），并分散存储在IPFS网络中的节点上（不过目前的IPFS实现，一个节点会完整保存内容的所有区块）。</p>
+<ol>
+<li>系统会给内容的每一个块计算哈希值，然后把所有块的哈希值拼凑起来，再计算一次哈希值，从而得到最终的哈希值</li>
+<li>同时每个节点会维护一张DHT（分布式哈希表），包含数据块与目标节点的映射关系</li>
+<li>在IPFS中是通过哈希去请求文件的，它就会使用这个分布式哈希表找到文件所在的节点，取回文件根据哈希重新组合文件（同样也会验证文件）</li>
+</ol>
 <h4 id="ipfs特点">IPFS特点</h4>
 <ul>
-<li>内容可寻址</li>
-<li>版本管理</li>
-<li>点对点超媒体</li>
+<li>内容可寻址，并且可以确保内容不被篡改（微小的改变也会造成哈希值变得截然不同）</li>
+<li>因为IPFS是统一的网络，文件不会重复存储（文件名不影响哈希值），节约整体存储空间，网络更加高效</li>
+<li>文件永久保存（如节点达到一定规模，即使部分节点离线也不会影响读取）</li>
+<li>IPFS采用分布式存储网络，文件被被存储在不同的网络节点，避免DDoS等网络攻击</li>
+<li>点对点媒体存储，同一个文件可以从多个节点下载，提高了通信效率</li>
 </ul>
 <h4 id="ipfs功能">IPFS功能</h4>
 <ul>
@@ -194,6 +205,10 @@
 <li>永久Web（不存在失效链接）</li>
 <li>&hellip;</li>
 </ul>
+<h3 id="ipns">IPNS</h3>
+<p>IPFS中文件内容的改变会造成其哈希值的变化，确保内容不被篡改，提升数据安全性。</p>
+<p>但网站等需要版本更新迭代的应用则需要一个映射方案以保证用户体验，IPFS提供了IPNS(Inter-Planetary Naming System)，提供了一个被私钥限定的哈希ID（通常是PeerID），用来指向具体的IPFS文件，文件更新且自动更新哈希ID的指向。</p>
+<p>IPNS同样兼容DNS，使用DNS TXT记录域名对应的IPNS哈希ID，就可以域名来替换IPNS哈希ID来进行访问。从而实现更容易读写和记忆。</p>
 <h3 id="ipfs入门">IPFS入门</h3>
 <h4 id="安装macos-1123">安装（macOS 11.2.3）</h4>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">wget https://dist.ipfs.io/go-ipfs/v0.8.0/go-ipfs_v0.8.0_darwin-amd64.tar.gz
@@ -210,6 +225,9 @@ ipfs add ipfs_init_readme.png
 
 <span class="c1"># 上传文件并且只输出哈希值</span>
 ipfs add -q ipfs_init_readme.png
+
+<span class="c1"># 上传目录</span>
+ipfs add -r <span class="o">[</span>Dir<span class="o">]</span>
 
 <span class="c1"># 查看文件</span>
 ipfs cat /ipfs/QmQPeNsJPyVWPFDVHb77w8G42Fvo15z4bG2X8D2GhfbSXc/readme
@@ -236,7 +254,14 @@ ipfs config show
 
 <span class="c1"># 开启节点服务器</span>
 ipfs daemon
-</code></pre></div><h4 id="文件操作">文件操作</h4>
+</code></pre></div><ul>
+<li>API服务，默认在5001端口，可以通过 http://localhost:5001/webui 进行访问</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ipfs_webui.png" alt="ipfs_webui"></p>
+<ul>
+<li>网关服务，默认在8080端口，在浏览器里访问文件需要借助于IPFS提供的网关服务，由浏览器先访问到网关，网关去获取IPFS网络杀过了的文件。通过 http://localhost:8080/ipfs/[File Hash] 来访问上传到ipfs的文件</li>
+</ul>
+<h4 id="文件操作">文件操作</h4>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># 列出文件</span>
 ipfs files ls
 
@@ -257,6 +282,29 @@ ipfs files stat
 
 <span class="c1"># 读取</span>
 ipfs files <span class="nb">read</span>
+</code></pre></div><h4 id="使用ipns来解决文件更新问题">使用IPNS来解决文件更新问题</h4>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># 使用IPNS发布内容以自动更新</span>
+ipfs name publish <span class="o">[</span>File Hash<span class="o">]</span>
+
+<span class="c1"># 查询节点id指向的Hash</span>
+ipfs name resolve
+
+<span class="c1"># 有多个站点需要更新，可以新产生一个秘钥对，使用新的key发布</span>
+ipfs key gen --type<span class="o">=</span>rsa --size<span class="o">=</span><span class="m">2048</span> mykey
+ipfs name publish --key<span class="o">=</span>mykey  <span class="o">[</span>File Hash<span class="o">]</span> 
+</code></pre></div><h4 id="pinning">Pinning</h4>
+<p>当我们向IPFS网络请求文件时，IPFS会把内容先同步的本地提供服务，使用Cache机制处理文件以防止存储空间不断增长，如果文件一段时间未被使用则会被“回收”，Pining的作用就是确保文件在本地不被“回收”。</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># pin一个文件</span>
+ipfs pin add <span class="o">[</span>File Hash<span class="o">]</span>
+
+<span class="c1"># 查询某一个Hash是否被pin</span>
+ipfs pin ls <span class="o">[</span>File Hash<span class="o">]</span>
+
+<span class="c1"># 删除pin的状态</span>
+ipfs pin rm -r <span class="o">[</span>File Hash<span class="o">]</span>
+
+<span class="c1"># GC操作</span>
+ipfs repo gc
 </code></pre></div>
   </article>
 

@@ -108,6 +108,20 @@
 &lt;li&gt;&lt;code&gt;&amp;lt;multihash-content-address&amp;gt;&lt;/code&gt;是一个multihash值，表示了内容的加密哈希值，让CID可以使用不同的加密哈希散列函数&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;ipfs文件存储&#34;&gt;IPFS文件存储&lt;/h3&gt;
+&lt;h4 id=&#34;存储步骤&#34;&gt;存储步骤&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;把单个文件拆分成若干个256KB的block
+&lt;ul&gt;
+&lt;li&gt;小文件（小于1KB）会直接和Hash一起上传至IPFS，不会额外占用一个block大小&lt;/li&gt;
+&lt;li&gt;对大文件进行数据追加，如果新增了一个1KB文件，未变化的大文件内容部分并不会分配新的空间，只会为追加部分分配一个新block，再重新上传Hash&lt;/li&gt;
+&lt;li&gt;即使是不同文件的相同部分也只会存储一份，很多文件的索引会指向同一个block，构成MerkleDAG数据结构&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;逐个block计算块block哈希值&lt;/li&gt;
+&lt;li&gt;将所有的blockhash值合成一个数组，计算得到最终文件Hash&lt;/li&gt;
+&lt;li&gt;将文件Hash和blockhash数组组合称为一个对象，形成索引结构&lt;/li&gt;
+&lt;li&gt;把block、索引结构全部上传至IPFS节点，文件同步至IPFS网络&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h4 id=&#34;存储结构&#34;&gt;存储结构&lt;/h4&gt;
 &lt;p&gt;IPFS采用的索引结构是DHT（分布式哈希表）&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ipfs_dht.png&#34; alt=&#34;ipfs_dht&#34;&gt;&lt;/p&gt;
@@ -169,8 +183,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;存储步骤&#34;&gt;存储步骤&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;IPFS目录结构&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;ipfs目录结构&#34;&gt;IPFS目录结构&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;.
 ├── api
 ├── blocks
@@ -205,7 +218,7 @@
 &lt;li&gt;blocks为文件存储的目录&lt;/li&gt;
 &lt;li&gt;datastore为leveldb的数据库，存储了文件系统的根哈希等&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;数据对象格式&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;数据对象格式&#34;&gt;数据对象格式&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;IPFSObject&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;nx&#34;&gt;links&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;IPFSLink&lt;/span&gt;      &lt;span class=&#34;c1&#34;&gt;// link数组
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;byte&lt;/span&gt;           &lt;span class=&#34;c1&#34;&gt;// 数据内容
@@ -216,20 +229,7 @@
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;nx&#34;&gt;Hash&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Multihash&lt;/span&gt;        &lt;span class=&#34;c1&#34;&gt;// 数据的加密哈希值
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;nx&#34;&gt;Size&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;              &lt;span class=&#34;c1&#34;&gt;// 数据大小
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol&gt;
-&lt;li&gt;把单个文件拆分成若干个256KB的block
-&lt;ul&gt;
-&lt;li&gt;小文件（小于1KB）会直接和Hash一起上传至IPFS，不会额外占用一个block大小&lt;/li&gt;
-&lt;li&gt;对大文件进行数据追加，如果新增了一个1KB文件，未变化的大文件内容部分并不会分配新的空间，只会为追加部分分配一个新block，再重新上传Hash&lt;/li&gt;
-&lt;li&gt;即使是不同文件的相同部分也只会存储一份，很多文件的索引会指向同一个block，构成MerkleDAG数据结构&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;逐个block计算块block哈希值&lt;/li&gt;
-&lt;li&gt;将所有的blockhash值合成一个数组，计算得到最终文件Hash&lt;/li&gt;
-&lt;li&gt;将文件Hash和blockhash数组组合称为一个对象，形成索引结构&lt;/li&gt;
-&lt;li&gt;把block、索引结构全部上传至IPFS节点，文件同步至IPFS网络&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;特点&lt;/strong&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;特点-1&#34;&gt;特点&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;存储格式为MerkleDAG&lt;/li&gt;
 &lt;li&gt;每一层Links大小为174个，超过了则会重新调整&lt;/li&gt;
@@ -246,7 +246,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;应用场景&#34;&gt;应用场景&lt;/h3&gt;
+&lt;h3 id=&#34;ipfs存储应用场景&#34;&gt;IPFS存储应用场景&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;互联网内容分发&lt;/li&gt;
 &lt;li&gt;企业分布式存储服务

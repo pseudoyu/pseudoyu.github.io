@@ -29,7 +29,7 @@
 <meta itemprop="description" content="IPFS文件存储模式详解 CID (Content-ID) CID是类似IPFS分布式文件系统中标准的文件寻址格式 内容寻址 加密散列算法 自我描述 目前在IPFS用base58b">
 <meta itemprop="datePublished" content="2021-03-28T16:30:17+08:00" />
 <meta itemprop="dateModified" content="2021-03-28T16:30:17+08:00" />
-<meta itemprop="wordCount" content="2286">
+<meta itemprop="wordCount" content="2292">
 
 
 
@@ -217,6 +217,20 @@
 <li><code>&lt;multihash-content-address&gt;</code>是一个multihash值，表示了内容的加密哈希值，让CID可以使用不同的加密哈希散列函数</li>
 </ul>
 <h3 id="ipfs文件存储">IPFS文件存储</h3>
+<h4 id="存储步骤">存储步骤</h4>
+<ol>
+<li>把单个文件拆分成若干个256KB的block
+<ul>
+<li>小文件（小于1KB）会直接和Hash一起上传至IPFS，不会额外占用一个block大小</li>
+<li>对大文件进行数据追加，如果新增了一个1KB文件，未变化的大文件内容部分并不会分配新的空间，只会为追加部分分配一个新block，再重新上传Hash</li>
+<li>即使是不同文件的相同部分也只会存储一份，很多文件的索引会指向同一个block，构成MerkleDAG数据结构</li>
+</ul>
+</li>
+<li>逐个block计算块block哈希值</li>
+<li>将所有的blockhash值合成一个数组，计算得到最终文件Hash</li>
+<li>将文件Hash和blockhash数组组合称为一个对象，形成索引结构</li>
+<li>把block、索引结构全部上传至IPFS节点，文件同步至IPFS网络</li>
+</ol>
 <h4 id="存储结构">存储结构</h4>
 <p>IPFS采用的索引结构是DHT（分布式哈希表）</p>
 <p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ipfs_dht.png" alt="ipfs_dht"></p>
@@ -278,8 +292,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="存储步骤">存储步骤</h4>
-<p><strong>IPFS目录结构</strong></p>
+<h4 id="ipfs目录结构">IPFS目录结构</h4>
 <pre><code>.
 ├── api
 ├── blocks
@@ -314,7 +327,7 @@
 <li>blocks为文件存储的目录</li>
 <li>datastore为leveldb的数据库，存储了文件系统的根哈希等</li>
 </ul>
-<p><strong>数据对象格式</strong></p>
+<h4 id="数据对象格式">数据对象格式</h4>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">IPFSObject</span> <span class="kd">struct</span> <span class="p">{</span>
   <span class="nx">links</span> <span class="p">[]</span><span class="nx">IPFSLink</span>      <span class="c1">// link数组
 </span><span class="c1"></span>  <span class="nx">data</span> <span class="p">[]</span><span class="kt">byte</span>           <span class="c1">// 数据内容
@@ -325,20 +338,7 @@
 </span><span class="c1"></span>  <span class="nx">Hash</span> <span class="nx">Multihash</span>        <span class="c1">// 数据的加密哈希值
 </span><span class="c1"></span>  <span class="nx">Size</span> <span class="kt">int</span>              <span class="c1">// 数据大小
 </span><span class="c1"></span><span class="p">}</span>
-</code></pre></div><ol>
-<li>把单个文件拆分成若干个256KB的block
-<ul>
-<li>小文件（小于1KB）会直接和Hash一起上传至IPFS，不会额外占用一个block大小</li>
-<li>对大文件进行数据追加，如果新增了一个1KB文件，未变化的大文件内容部分并不会分配新的空间，只会为追加部分分配一个新block，再重新上传Hash</li>
-<li>即使是不同文件的相同部分也只会存储一份，很多文件的索引会指向同一个block，构成MerkleDAG数据结构</li>
-</ul>
-</li>
-<li>逐个block计算块block哈希值</li>
-<li>将所有的blockhash值合成一个数组，计算得到最终文件Hash</li>
-<li>将文件Hash和blockhash数组组合称为一个对象，形成索引结构</li>
-<li>把block、索引结构全部上传至IPFS节点，文件同步至IPFS网络</li>
-</ol>
-<p><strong>特点</strong></p>
+</code></pre></div><h4 id="特点-1">特点</h4>
 <ul>
 <li>存储格式为MerkleDAG</li>
 <li>每一层Links大小为174个，超过了则会重新调整</li>
@@ -355,7 +355,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="应用场景">应用场景</h3>
+<h3 id="ipfs存储应用场景">IPFS存储应用场景</h3>
 <ul>
 <li>互联网内容分发</li>
 <li>企业分布式存储服务

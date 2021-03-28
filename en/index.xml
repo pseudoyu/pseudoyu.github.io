@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 27 Mar 2021 18:46:17 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 25 Mar 2021 18:46:17 +0800</lastBuildDate>
     
     <atom:link href="https://www.pseudoyu.com/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -38,13 +38,13 @@
     </item>
     
     <item>
-      <title>Blockchain学习 - IPFS星际文件系统</title>
-      <link>https://www.pseudoyu.com/en/2021/03/27/blockchain_note_ipfs/</link>
-      <pubDate>Sat, 27 Mar 2021 18:46:17 +0800</pubDate>
+      <title>Blockchain学习 - IPFS分布式文件存储</title>
+      <link>https://www.pseudoyu.com/en/2021/03/25/blockchain_note_ipfs/</link>
+      <pubDate>Thu, 25 Mar 2021 18:46:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/03/27/blockchain_note_ipfs/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/03/25/blockchain_note_ipfs/</guid>
       
-        <description>&lt;h2 id=&#34;ipfs星际文件系统&#34;&gt;IPFS星际文件系统&lt;/h2&gt;
+        <description>&lt;h2 id=&#34;ipfs分布式文件存储&#34;&gt;IPFS分布式文件存储&lt;/h2&gt;
 &lt;h3 id=&#34;ipfs简介&#34;&gt;IPFS简介&lt;/h3&gt;
 &lt;p&gt;IPFS (InterPlanetary File System) 星际文件系统，是一个面向全球的、点对点的分布式文件存储系统，目标是为了补充（甚至是取代）目前统治互联网的超文本传输协议(HTTP)，将所有具有相同文件系统的计算设备连接在一起，使数据访问的速度更快、更安全、更健壮、更持久。项目由Juan Benet在2014年5月发起。&lt;/p&gt;
 &lt;p&gt;IPFS的愿景是构建一个全世界的分布式网络，用来替代传统中心化的服务器模式，所有的IPFS节点组成一个分布式网络，每个节点都可以存储文件，用户可以从IPFS构建的网络中以DHT(Distributed Hash Table，分布式哈希表) 的方式获取文件，从而实现了新一代的完全去中心化的网络，旨在取代现有的万维网。&lt;/p&gt;

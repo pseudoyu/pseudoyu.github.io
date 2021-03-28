@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="utf-8">
+  <title>Blockchain学习 - IPFS文件存储模式详解 · Pseudoyu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="IPFS文件存储模式详解 CID (Content-ID) CID是类似IPFS分布式文件系统中标准的文件寻址格式 内容寻址 加密散列算法 自我描述z 目前在IPFS用base58" />
+
+  <meta name="keywords" content="hugo, blockchain, programming" />
+
+<link rel="canonical" href="https://www.pseudoyu.com/en/2021/03/28/blockchain_note_ipfs_model/" />
+<link rel="alternate" href="https://www.pseudoyu.com/zh/2021/03/28/blockchain_note_ipfs_model/" hreflang="zh">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.pseudoyu.com/css/den.css">
+
+
+
+
+<meta property="og:title" content="Blockchain学习 - IPFS文件存储模式详解" />
+<meta property="og:description" content="IPFS文件存储模式详解 CID (Content-ID) CID是类似IPFS分布式文件系统中标准的文件寻址格式 内容寻址 加密散列算法 自我描述z 目前在IPFS用base58" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.pseudoyu.com/en/2021/03/28/blockchain_note_ipfs_model/" />
+<meta property="article:published_time" content="2021-03-28T16:30:17+08:00" />
+<meta property="article:modified_time" content="2021-03-28T16:30:17+08:00" />
+<meta itemprop="name" content="Blockchain学习 - IPFS文件存储模式详解">
+<meta itemprop="description" content="IPFS文件存储模式详解 CID (Content-ID) CID是类似IPFS分布式文件系统中标准的文件寻址格式 内容寻址 加密散列算法 自我描述z 目前在IPFS用base58">
+<meta itemprop="datePublished" content="2021-03-28T16:30:17+08:00" />
+<meta itemprop="dateModified" content="2021-03-28T16:30:17+08:00" />
+<meta itemprop="wordCount" content="2287">
+
+
+
+<meta itemprop="keywords" content="programming,blockchain," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Blockchain学习 - IPFS文件存储模式详解"/>
+<meta name="twitter:description" content="IPFS文件存储模式详解 CID (Content-ID) CID是类似IPFS分布式文件系统中标准的文件寻址格式 内容寻址 加密散列算法 自我描述z 目前在IPFS用base58"/>
+</head>
+<body>
+  
+  <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://www.pseudoyu.com/images/background.jpg'); background-position: center; background-size: cover;">
+  <div class="container">
+  <nav class="header-nav navbar navbar-expand-md navbar-dark light-dark">
+    <div class="header-logo navbar-brand">
+      
+        <a class="float-left" href="https://www.pseudoyu.com/en/">
+      
+        
+        <img class="mr20 header-logo-image" src="https://www.pseudoyu.com/images/fly.png" alt="logo">
+        
+        
+          Pseudoyu
+         
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav-menu collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/en/category/ideas/">Ideas</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/en/category/programming/">Programming</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/en/category/notes/">Notes</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/en/category/projects/">Projects</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              <a class="nav-link" href="https://www.pseudoyu.com/en/about/">About</a>
+            
+          </li>
+        
+        
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.pseudoyu.com/zh/"><i class="fas fa-globe"></i> 中文</a>
+            </li>
+          
+          
+          
+          
+        
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container header-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="header-content">
+        <h1 class="header-title">Blockchain学习 - IPFS文件存储模式详解</h1>
+        <p class="header-date">By
+          Arthur /
+        
+        2021-03-28
+          / In categories
+          <a href="https://www.pseudoyu.com/en/category/programming/">Programming</a>
+        </p>
+        
+        <div class="header-underline"></div>
+        
+          <div class="clearfix"></div>
+          <p class="float-right header-tags">
+              <i class="fas fa-tags" aria-hidden="true"></i>
+              <a href="https://www.pseudoyu.com/en/tag/blockchain/">blockchain</a>, 
+                <a href="https://www.pseudoyu.com/en/tag/programming/">programming</a>
+          </p>
+        
+        <div class="clearfix"></div>
+<p class="float-right translations">
+    <i class="fas fa-language" aria-hidden="true"></i>
+    Translations: 
+    <a href="https://www.pseudoyu.com/zh/2021/03/28/blockchain_note_ipfs_model/">ZH</a>
+</p>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <main>
+<div class="container content">
+  <article>
+  <h2 id="ipfs文件存储模式详解">IPFS文件存储模式详解</h2>
+<h3 id="cid-content-id">CID (Content-ID)</h3>
+<p>CID是类似IPFS分布式文件系统中标准的文件寻址格式</p>
+<ul>
+<li>内容寻址</li>
+<li>加密散列算法</li>
+<li>自我描述z</li>
+</ul>
+<p><em>目前在IPFS用base58btc对multihashes进行编码，在开发IPLD（InterPlanetary Linked Data，内容可寻址的数据模型，主要用来定义数据，给数据建模）过程中遇到了很多与数据格式相关的棘手问题，CID的出现让管理不同格式的数据成为了可能。</em></p>
+<h4 id="描述">描述</h4>
+<p><em>CID是一种自描述式的内容寻址的识别符，必须使用加密散列函数来得到内容的地址</em></p>
+<p>使用了很多multiformats实现灵活的自描述</p>
+<ul>
+<li>使用multihash得到哈希值</li>
+<li>multicodec-packed用于描述内容类型，类似于文件后缀，表示数据的格式，但其是数据标识符的一部分，用户不能随意修改，且支持的格式有限
+<ul>
+<li>原生protobuf格式</li>
+<li>IPLD CBOR格式</li>
+<li>git</li>
+<li>比特币对象</li>
+<li>以太坊对象</li>
+</ul>
+</li>
+<li>multibase将CID本身编码成字符串</li>
+</ul>
+<h4 id="特点">特点</h4>
+<ul>
+<li>压缩：CID二进制的特性使其压缩效率非常高，可作为URL的一部分</li>
+<li>传输友好：以multibase编码来方便传输，如以base58btc编码的CID将长度缩短</li>
+<li>多变：CID可以表示任意格式，任何哈希函数的结果</li>
+<li>避免内容锁：防止受限于历史内容</li>
+<li>可升级：CID的编码版本可升级</li>
+</ul>
+<h4 id="版本">版本</h4>
+<p><strong>v0版本的CID由V0Builder生成，以Qm字符串开头，向后兼容</strong></p>
+<ul>
+<li><code>multibase</code>一直为base58btc</li>
+<li><code>multicodec</code>一直为protobuf-mdag</li>
+<li><code>cid-version</code>一直为cidv0</li>
+<li><code>multihash</code>表示为<code>cidv0 ::= &lt;multihash-content-address&gt;</code></li>
+</ul>
+<p><strong>v1版本的CID由V1Builder生成</strong></p>
+<ul>
+<li>Codec：表示内容的编码类型，如DagProtobuf, DagCBOR等</li>
+<li>MhType：哈希算法，如SHA2_256, SHA2_512, SHA3_256, SHA3_512等</li>
+<li>MhLength：生成哈希的长度</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">Cid</span> <span class="kd">struct</span> <span class="p">{</span><span class="nx">str</span> <span class="kt">string</span><span class="p">}</span>
+<span class="kd">type</span> <span class="nx">V0Builder</span> <span class="kd">struct</span> <span class="p">{}</span>
+<span class="kd">type</span> <span class="nx">V1Builder</span> <span class="kd">struct</span> <span class="p">{}</span>
+
+<span class="nx">Codec</span> <span class="kt">uint64</span>
+<span class="nx">MhType</span> <span class="kt">uint64</span>
+<span class="nx">MhLength</span> <span class="kt">int</span> <span class="c1">// Default: -1
+</span></code></pre></div><pre><code>&lt;cidv1&gt; ::= &lt;mb&gt;&lt;version&gt;&lt;mcp&gt;&lt;mh&gt;
+# or, expanded:
+&lt;cidv1&gt; ::= &lt;multibase-prefix&gt;&lt;cid-version&gt;&lt;multicodec-packed-content-type&gt;&lt;multihash-content-address&gt;
+</code></pre><ul>
+<li><code>&lt;multibase-prefix&gt;</code>是一个multibase编码（1-2字节），便于将CID编码成不同的格式</li>
+<li><code>&lt;cid-version&gt;</code>是一个表示CID版本的变量，便于以后升级</li>
+<li><code>&lt;multicodec-packed-content-type&gt;</code>是一种用multicodec-packed编码表示内容的类型/数据的格式</li>
+<li><code>&lt;multihash-content-address&gt;</code>是一个multihash值，表示了内容的加密哈希值，让CID可以使用不同的加密哈希散列函数</li>
+</ul>
+<h3 id="ipfs文件存储">IPFS文件存储</h3>
+<h4 id="存储结构">存储结构</h4>
+<p>IPFS采用的索引结构是DHT（分布式哈希表）</p>
+<p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ipfs_dht.png" alt="ipfs_dht"></p>
+<p>数据结构是MerkleDAG（Merkle有向无环图）</p>
+<ul>
+<li>内容寻址
+<ul>
+<li>使用多重哈希来唯一识别一个数据块的内容</li>
+</ul>
+</li>
+<li>防篡改
+<ul>
+<li>可以方便的检查哈希值来确认数据是否被篡改，如果数据被篡改或损坏，IPFS会检测到</li>
+</ul>
+</li>
+<li>去重
+<ul>
+<li>由于内容相同的数据块哈希是相同的，可以很容去掉重复的数据，节省存储空间</li>
+</ul>
+</li>
+</ul>
+<h4 id="ipfs组件">IPFS组件</h4>
+<p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ipfs_components.png" alt="ipfs_components"></p>
+<ul>
+<li>Pining
+<ul>
+<li>负责固定文件和文件块的CID，Pin添加到块不会被GC</li>
+<li>上传文件最后的文件CID都会被Pin，防止被GC</li>
+</ul>
+</li>
+<li>Blockstore
+<ul>
+<li>GCBlockstore类型</li>
+<li>组合Blockstore和GCLocker两个组件</li>
+</ul>
+</li>
+<li>BaseBlocks
+<ul>
+<li>原始Blockstore</li>
+<li>提供对Block的Get/Put/Has/DeleteBlock等操作</li>
+</ul>
+</li>
+<li>GCLocker
+<ul>
+<li>锁住Blockstore，防止GC</li>
+</ul>
+</li>
+<li>Blocks
+<ul>
+<li>提供Block服务</li>
+<li>组合Blockstore组件</li>
+<li>提供GetBlock/GetBlocks, AddBlock/AddBlocks, DeleteBlock操作</li>
+</ul>
+</li>
+<li>DAG
+<ul>
+<li>IPFS的MerkleDAG服务</li>
+<li>组合BlockService组件，提供Get/GetMany, Add/AddMany, Remove/RemoveMany等操作</li>
+</ul>
+</li>
+</ul>
+<h4 id="存储步骤">存储步骤</h4>
+<p><strong>IPFS目录结构</strong></p>
+<pre><code>.
+├── api
+├── blocks
+│   ├── 2G
+│   ├── 2I
+│   ├── 2J
+│   ├── ...
+│   ├── SD
+│   ├── SHARDING
+│   ├── SP
+│   ├── SU
+│   ├── SX
+│   ├── ...
+│   ├── ZZ
+│   ├── _README
+│   └── diskUsage.cache
+├── config
+├── datastore
+│   ├── 000045.ldb
+│   ├── 000050.ldb
+│   ├── 000051.log
+│   ├── CURRENT
+│   ├── CURRENT.bak
+│   ├── LOCK
+│   ├── LOG
+│   └── MANIFEST-000052
+├── datastore_spec
+├── keystore
+├── repo.lock
+└── version
+</code></pre><ul>
+<li>blocks为文件存储的目录</li>
+<li>datastore为leveldb的数据库，存储了文件系统的根哈希等</li>
+</ul>
+<p><strong>数据对象格式</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">IPFSObject</span> <span class="kd">struct</span> <span class="p">{</span>
+  <span class="nx">links</span> <span class="p">[]</span><span class="nx">IPFSLink</span>      <span class="c1">// link数组
+</span><span class="c1"></span>  <span class="nx">data</span> <span class="p">[]</span><span class="kt">byte</span>           <span class="c1">// 数据内容
+</span><span class="c1"></span><span class="p">}</span>
+
+<span class="kd">type</span> <span class="nx">IPFSLink</span> <span class="kd">struct</span> <span class="p">{</span>
+  <span class="nx">Name</span> <span class="kt">string</span>           <span class="c1">// link的名字
+</span><span class="c1"></span>  <span class="nx">Hash</span> <span class="nx">Multihash</span>        <span class="c1">// 数据的加密哈希值
+</span><span class="c1"></span>  <span class="nx">Size</span> <span class="kt">int</span>              <span class="c1">// 数据大小
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><ol>
+<li>把单个文件拆分成若干个256KB的block
+<ul>
+<li>小文件（小于1KB）会直接和Hash一起上传至IPFS，不会额外占用一个block大小</li>
+<li>对大文件进行数据追加，如果新增了一个1KB文件，未变化的大文件内容部分并不会分配新的空间，只会为追加部分分配一个新block，再重新上传Hash</li>
+<li>即使是不同文件的相同部分也只会存储一份，很多文件的索引会指向同一个block，构成MerkleDAG数据结构</li>
+</ul>
+</li>
+<li>逐个block计算块block哈希值</li>
+<li>将所有的blockhash值合成一个数组，计算得到最终文件Hash</li>
+<li>将文件Hash和blockhash数组组合称为一个对象，形成索引结构</li>
+<li>把block、索引结构全部上传至IPFS节点，文件同步至IPFS网络</li>
+</ol>
+<p><strong>特点</strong></p>
+<ul>
+<li>存储格式为MerkleDAG</li>
+<li>每一层Links大小为174个，超过了则会重新调整</li>
+<li>存储过程中有多个Datastore进行组合与封装，每个Datastore功能单一
+<ul>
+<li>各个组件功能明确
+<ul>
+<li>arccache：Block缓存</li>
+<li>VerifBS：CID校验</li>
+<li>&hellip;</li>
+</ul>
+</li>
+<li>调用深度比较深，内部都用interface，不便于阅读</li>
+</ul>
+</li>
+</ul>
+<h3 id="应用场景">应用场景</h3>
+<ul>
+<li>互联网内容分发</li>
+<li>企业分布式存储服务
+<ul>
+<li>容易进行存储的动态扩容</li>
+<li>结合节点认证机制和DHT查找内容的剥离</li>
+<li>配合区块链技术，通过链上链下协同技术，很容易解决存储容量不足的问题</li>
+</ul>
+</li>
+</ul>
+
+  </article>
+
+  
+  
+  
+
+
+</div>
+
+  </main><div class="footer gradient-2">
+  <div class="container footer-container ">
+    <div class="row">
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        <div class="footer-title">Sitemap</div>
+        <ul class="list-unstyled">
+            
+              
+                <li><a href="https://www.pseudoyu.com/en/tags/">Tags</a></li>
+              
+              
+                <li><a href="https://www.pseudoyu.com/en/categories/">Categories</a></li>
+              
+            
+            
+            
+            <li><a rel="alternate" type="application/rss&#43;xml" href="https://www.pseudoyu.com/en/index.xml"><i class="fas fa-rss-square"></i> RSS Feed</a></li>
+            
+            
+            
+        </ul>
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">Social</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://www.facebook.com/pseudoyuzhang" rel="noopener" target="_blank">Facebook</a></li>
+          
+          <li><a href="https://www.instagram.com/pseudo.yu/" rel="noopener" target="_blank">Instagram</a></li>
+          
+          <li><a href="https://space.bilibili.com/5374948/" rel="noopener" target="_blank">BiliBili</a></li>
+          
+        </ul>
+        
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">Links</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://www.linkedin.com/in/pseudoyu/" rel="noopener" target="_blank">LinkedIn</a></li>
+          
+          <li><a href="https://github.com/pseudoyu" rel="noopener" target="_blank">GitHub</a></li>
+          
+          <li><a href="https://www.coursera.org/user/ffe947f087d1f63b161c3fcb310a6578" rel="noopener" target="_blank">Coursera</a></li>
+          
+        </ul>
+        
+      </div> 
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <p class="pull-right text-right">
+          <small><em>Team Rocket: <a href="https://www.marshalgao.com" rel="noopener" target="_blank">Marshal</a> | <a href="https://www.m1sty.com" rel="noopener" target="_blank">Misty</a></em></small><br/>
+          <small><em>The University of Hong Kong - <a href="https://www.cs.hku.hk" rel="noopener" target="_blank">CS</a></em></small><br/>
+          <small>
+            &copy; 
+            Arthur
+            
+              2020 -
+            2021
+          </small>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

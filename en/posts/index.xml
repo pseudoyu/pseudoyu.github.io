@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 25 Mar 2021 18:46:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 28 Mar 2021 16:30:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blockchain学习 - IPFS文件存储模式详解</title>
+      <link>https://www.pseudoyu.com/en/2021/03/28/blockchain_note_ipfs_model/</link>
+      <pubDate>Sun, 28 Mar 2021 16:30:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2021/03/28/blockchain_note_ipfs_model/</guid>
+      <description>IPFS文件存储模式详解 CID (Content-ID) CID是类似IPFS分布式文件系统中标准的文件寻址格式 内容寻址 加密散列算法 自我描述z 目前在IPFS用base58</description>
+    </item>
+    
     <item>
       <title>Blockchain学习 - IPFS分布式文件存储</title>
       <link>https://www.pseudoyu.com/en/2021/03/25/blockchain_note_ipfs/</link>
@@ -184,15 +193,6 @@ Application  Understanding  Group related documents for browsing, group genes an
       
       <guid>https://www.pseudoyu.com/en/2020/12/23/java_note_concurrent_communication/</guid>
       <description>线程间的通信 锁与同步 Java中锁是基于对象的，因此也被称为对象锁 一个锁同一时间只能被一个线程持有 线程之间的同步是指线程按照一定的顺序执行 public class</description>
-    </item>
-    
-    <item>
-      <title>Java学习 - 线程状态及转化方法</title>
-      <link>https://www.pseudoyu.com/en/2020/12/09/java_note_concurrent_state/</link>
-      <pubDate>Wed, 09 Dec 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/12/09/java_note_concurrent_state/</guid>
-      <description>线程状态及转化方法 操作系统中的线程状态转换 操作系统线程主要有以下三个状态 就绪状态 READY：线程正在等待使用CPU，经调度程序调用之后可进入</description>
     </item>
     
   </channel>

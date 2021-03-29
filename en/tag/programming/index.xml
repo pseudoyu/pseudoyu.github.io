@@ -26,6 +26,15 @@
     </item>
     
     <item>
+      <title>Hyperledger Fabric详解</title>
+      <link>https://www.pseudoyu.com/en/2021/02/05/blockchain_note_hyperledger_fabric_structure/</link>
+      <pubDate>Fri, 05 Feb 2021 12:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2021/02/05/blockchain_note_hyperledger_fabric_structure/</guid>
+      <description>Hyperledger Hyperledger是一组专注于跨行业分布式技术的开源项目 创建企业级、开源、分布式的分类框架和代码库来支持业务用例 提供中立、开放和社区驱</description>
+    </item>
+    
+    <item>
       <title>区块链隐私问题概述</title>
       <link>https://www.pseudoyu.com/en/2021/01/30/blockchain_note_privacy/</link>
       <pubDate>Sat, 30 Jan 2021 05:12:17 +0800</pubDate>
@@ -176,15 +185,6 @@
       
       <guid>https://www.pseudoyu.com/en/2020/11/25/java_note_collections/</guid>
       <description>集合类 概述 为了在程序中保存数目不确定的对象，JDK中提供了一系列特殊的类，这些类可以存储任意类型的对象且长度可变，称为集合，位于java.u</description>
-    </item>
-    
-    <item>
-      <title>Java学习 - 面向对象</title>
-      <link>https://www.pseudoyu.com/en/2020/11/23/java_note_oop/</link>
-      <pubDate>Mon, 23 Nov 2020 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/11/23/java_note_oop/</guid>
-      <description>Java面向对象 特性 封装性：将对象的属性和行为封装起来，不需要让外界知道具体的实现细节 继承性：无需重新编写原有类的情况下，新类可拥有原有类的</description>
     </item>
     
   </channel>

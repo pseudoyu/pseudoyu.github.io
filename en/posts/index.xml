@@ -187,12 +187,12 @@ Application  Understanding  Group related documents for browsing, group genes an
     </item>
     
     <item>
-      <title>Java学习 - 线程间的通信</title>
-      <link>https://www.pseudoyu.com/en/2020/12/23/java_note_concurrent_communication/</link>
-      <pubDate>Wed, 23 Dec 2020 03:12:17 +0800</pubDate>
+      <title>刷题常用数据结构（Java）</title>
+      <link>https://www.pseudoyu.com/en/2021/01/01/algorithm_java_data_structure/</link>
+      <pubDate>Fri, 01 Jan 2021 00:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2020/12/23/java_note_concurrent_communication/</guid>
-      <description>线程间的通信 锁与同步 Java中锁是基于对象的，因此也被称为对象锁 一个锁同一时间只能被一个线程持有 线程之间的同步是指线程按照一定的顺序执行 public class</description>
+      <guid>https://www.pseudoyu.com/en/2021/01/01/algorithm_java_data_structure/</guid>
+      <description>数组 [] 初始化 // 初始化一个大小为10，默认值为0的数组 int[] nums = new int[10]; // 初始化一个二位boolean数组 boolean[][] visited = new boolean[5][10]; 常用方法 // 函数开头一般要做一个非空</description>
     </item>
     
   </channel>

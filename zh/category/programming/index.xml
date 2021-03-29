@@ -63,10 +63,10 @@
     
     <item>
       <title>比特币基础原理</title>
-      <link>https://www.pseudoyu.com/zh/2021/01/15/blockchain_note_bitcoin/</link>
+      <link>https://www.pseudoyu.com/zh/2021/01/15/blockchain_note_bitcoin_basic/</link>
       <pubDate>Fri, 15 Jan 2021 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2021/01/15/blockchain_note_bitcoin/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/01/15/blockchain_note_bitcoin_basic/</guid>
       <description>比特币基础原理 哈希指针 Hash Pointers 哈希指针指向一个结构体的哈希值（整个区块+其H()一起算出下一个值） 特征 tamper-evident log 如果这个区块被篡改，则会影响后续所有区</description>
     </item>
     

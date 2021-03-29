@@ -3803,10 +3803,10 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
     
     <item>
       <title>比特币基础原理</title>
-      <link>https://www.pseudoyu.com/en/2021/01/15/blockchain_note_bitcoin/</link>
+      <link>https://www.pseudoyu.com/en/2021/01/15/blockchain_note_bitcoin_basic/</link>
       <pubDate>Fri, 15 Jan 2021 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/01/15/blockchain_note_bitcoin/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/01/15/blockchain_note_bitcoin_basic/</guid>
       
         <description>&lt;h2 id=&#34;比特币基础原理&#34;&gt;比特币基础原理&lt;/h2&gt;
 &lt;h3 id=&#34;哈希指针-hash-pointers&#34;&gt;哈希指针 Hash Pointers&lt;/h3&gt;

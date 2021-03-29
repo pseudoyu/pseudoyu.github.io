@@ -2354,13 +2354,13 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
     </item>
     
     <item>
-      <title>Blockchain学习 - 区块链隐私</title>
+      <title>区块链隐私问题概述</title>
       <link>https://www.pseudoyu.com/zh/2021/01/30/blockchain_note_privacy/</link>
       <pubDate>Sat, 30 Jan 2021 05:12:17 +0800</pubDate>
       
       <guid>https://www.pseudoyu.com/zh/2021/01/30/blockchain_note_privacy/</guid>
       
-        <description>&lt;h2 id=&#34;区块链隐私&#34;&gt;区块链隐私&lt;/h2&gt;
+        <description>&lt;h2 id=&#34;区块链隐私问题概述&#34;&gt;区块链隐私问题概述&lt;/h2&gt;
 &lt;h3 id=&#34;区块链透明性&#34;&gt;区块链透明性&lt;/h3&gt;
 &lt;p&gt;所有人都能看到交易细节/历史记录&lt;/p&gt;
 &lt;ul&gt;
@@ -3059,13 +3059,13 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
     </item>
     
     <item>
-      <title>Blockchain学习 - 区块链安全</title>
+      <title>区块链安全问题概述</title>
       <link>https://www.pseudoyu.com/zh/2021/01/25/blockchain_note_security/</link>
       <pubDate>Mon, 25 Jan 2021 05:12:17 +0800</pubDate>
       
       <guid>https://www.pseudoyu.com/zh/2021/01/25/blockchain_note_security/</guid>
       
-        <description>&lt;h2 id=&#34;区块链安全&#34;&gt;区块链安全&lt;/h2&gt;
+        <description>&lt;h2 id=&#34;区块链安全问题概述&#34;&gt;区块链安全问题概述&lt;/h2&gt;
 &lt;h3 id=&#34;风险来源&#34;&gt;风险来源&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;应用层&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -3584,13 +3584,13 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
     </item>
     
     <item>
-      <title>Blockchain学习 - 比特币数据模型</title>
+      <title>比特币数据模型概述</title>
       <link>https://www.pseudoyu.com/zh/2021/01/22/blockchain_note_bitcoin_data/</link>
       <pubDate>Fri, 22 Jan 2021 03:12:17 +0800</pubDate>
       
       <guid>https://www.pseudoyu.com/zh/2021/01/22/blockchain_note_bitcoin_data/</guid>
       
-        <description>&lt;h2 id=&#34;比特币数据模型&#34;&gt;比特币数据模型&lt;/h2&gt;
+        <description>&lt;h2 id=&#34;比特币数据模型概述&#34;&gt;比特币数据模型概述&lt;/h2&gt;
 &lt;h3 id=&#34;区块头&#34;&gt;区块头&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;前一个区块的哈希值&lt;/li&gt;
@@ -3715,13 +3715,13 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
     </item>
     
     <item>
-      <title>Blockchain学习 - Bitcoin Core客户端</title>
+      <title>Bitcoin Core客户端入门</title>
       <link>https://www.pseudoyu.com/zh/2021/01/19/blockchain_note_bitcoin_core/</link>
       <pubDate>Tue, 19 Jan 2021 03:12:17 +0800</pubDate>
       
       <guid>https://www.pseudoyu.com/zh/2021/01/19/blockchain_note_bitcoin_core/</guid>
       
-        <description>&lt;h3 id=&#34;bitcoin-core客户端&#34;&gt;Bitcoin Core客户端&lt;/h3&gt;
+        <description>&lt;h3 id=&#34;bitcoin-core客户端入门&#34;&gt;Bitcoin Core客户端入门&lt;/h3&gt;
 &lt;p&gt;比特币的实现&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Bitcoin-QT&lt;/li&gt;
@@ -3803,13 +3803,13 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
     </item>
     
     <item>
-      <title>Blockchain学习 - 比特币基础</title>
+      <title>比特币基础原理</title>
       <link>https://www.pseudoyu.com/zh/2021/01/15/blockchain_note_bitcoin/</link>
       <pubDate>Fri, 15 Jan 2021 03:12:17 +0800</pubDate>
       
       <guid>https://www.pseudoyu.com/zh/2021/01/15/blockchain_note_bitcoin/</guid>
       
-        <description>&lt;h2 id=&#34;比特币的数据结构&#34;&gt;比特币的数据结构&lt;/h2&gt;
+        <description>&lt;h2 id=&#34;比特币基础原理&#34;&gt;比特币基础原理&lt;/h2&gt;
 &lt;h3 id=&#34;哈希指针-hash-pointers&#34;&gt;哈希指针 Hash Pointers&lt;/h3&gt;
 &lt;p&gt;哈希指针指向一个结构体的哈希值（整个区块+其H()一起算出下一个值）&lt;/p&gt;
 &lt;p&gt;特征&lt;/p&gt;
@@ -4082,7 +4082,7 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
     </item>
     
     <item>
-      <title>Blockchain学习 - 区块链框架</title>
+      <title>区块链基本框架</title>
       <link>https://www.pseudoyu.com/zh/2021/01/11/blockchain_note_framework/</link>
       <pubDate>Mon, 11 Jan 2021 08:12:17 +0800</pubDate>
       
@@ -4332,13 +4332,13 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
     </item>
     
     <item>
-      <title>Blockchain学习 - 区块链概念</title>
+      <title>区块链基础原理</title>
       <link>https://www.pseudoyu.com/zh/2021/01/07/blockchain_note_concept/</link>
       <pubDate>Thu, 07 Jan 2021 05:12:17 +0800</pubDate>
       
       <guid>https://www.pseudoyu.com/zh/2021/01/07/blockchain_note_concept/</guid>
       
-        <description>&lt;h2 id=&#34;区块链概念&#34;&gt;区块链概念&lt;/h2&gt;
+        <description>&lt;h2 id=&#34;区块链基础原理&#34;&gt;区块链基础原理&lt;/h2&gt;
 &lt;p&gt;区块链是一种分布式账本技术，由于是一群人来记账，所以修改这个账本的难度比较高。&lt;/p&gt;
 &lt;p&gt;单式记账 → 复式记账 → 数字化记账 → 分布式记账&lt;/p&gt;
 &lt;p&gt;传统中心化数字记账依赖于某个组织的可信度，而区块链是通过共识机制来共同记账，由区块链技术来保障信任机制，具有去中心化、难以篡改、可追溯等特点。&lt;/p&gt;
@@ -4490,7 +4490,7 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
     </item>
     
     <item>
-      <title>Blockchain学习 - 密码学原理</title>
+      <title>区块链中的密码学原理</title>
       <link>https://www.pseudoyu.com/zh/2021/01/03/blockchain_note_cryptography/</link>
       <pubDate>Sun, 03 Jan 2021 03:12:17 +0800</pubDate>
       

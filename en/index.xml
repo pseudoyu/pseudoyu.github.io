@@ -46,13 +46,13 @@
       
         <description>&lt;h2 id=&#34;ipfs文件存储模式详解&#34;&gt;IPFS文件存储模式详解&lt;/h2&gt;
 &lt;h3 id=&#34;cid-content-id&#34;&gt;CID (Content-ID)&lt;/h3&gt;
-&lt;p&gt;CID是类似IPFS分布式文件系统中标准的文件寻址格式&lt;/p&gt;
+&lt;p&gt;CID是IPFS分布式文件系统中标准的文件寻址格式&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;内容寻址&lt;/li&gt;
 &lt;li&gt;加密散列算法&lt;/li&gt;
 &lt;li&gt;自我描述&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;目前在IPFS用base58btc对multihashes进行编码，在开发IPLD（InterPlanetary Linked Data，内容可寻址的数据模型，主要用来定义数据，给数据建模）过程中遇到了很多与数据格式相关的棘手问题，CID的出现让管理不同格式的数据成为了可能。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;之前在IPFS用base58btc对multihashes进行编码，在开发IPLD（InterPlanetary Linked Data，内容可寻址的数据模型，主要用来定义数据，给数据建模）过程中遇到了很多与数据格式相关的棘手问题，CID的出现让管理不同格式的数据成为了可能。&lt;/em&gt;&lt;/p&gt;
 &lt;h4 id=&#34;描述&#34;&gt;描述&lt;/h4&gt;
 &lt;p&gt;&lt;em&gt;CID是一种自描述式的内容寻址的识别符，必须使用加密散列函数来得到内容的地址&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;使用了很多multiformats实现灵活的自描述&lt;/p&gt;
@@ -117,7 +117,7 @@
 &lt;li&gt;即使是不同文件的相同部分也只会存储一份，很多文件的索引会指向同一个block，构成MerkleDAG数据结构&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;逐个block计算块block哈希值&lt;/li&gt;
+&lt;li&gt;逐个block计算block哈希值&lt;/li&gt;
 &lt;li&gt;将所有的blockhash值合成一个数组，计算得到最终文件Hash&lt;/li&gt;
 &lt;li&gt;将文件Hash和blockhash数组组合称为一个对象，形成索引结构&lt;/li&gt;
 &lt;li&gt;把block、索引结构全部上传至IPFS节点，文件同步至IPFS网络&lt;/li&gt;
@@ -134,12 +134,12 @@
 &lt;/li&gt;
 &lt;li&gt;防篡改
 &lt;ul&gt;
-&lt;li&gt;可以方便的检查哈希值来确认数据是否被篡改，如果数据被篡改或损坏，IPFS会检测到&lt;/li&gt;
+&lt;li&gt;可以方便地检查哈希值来确认数据是否被篡改，如果数据被篡改或损坏，IPFS会检测到&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;去重
 &lt;ul&gt;
-&lt;li&gt;由于内容相同的数据块哈希是相同的，可以很容去掉重复的数据，节省存储空间&lt;/li&gt;
+&lt;li&gt;由于内容相同的数据块哈希是相同的，可以很容易去掉重复的数据，节省存储空间&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -148,13 +148,12 @@
 &lt;ul&gt;
 &lt;li&gt;Pining
 &lt;ul&gt;
-&lt;li&gt;负责固定文件和文件块的CID，Pin添加到块不会被GC&lt;/li&gt;
+&lt;li&gt;负责固定文件/文件块的CID，Pin添加的块不会被GC&lt;/li&gt;
 &lt;li&gt;上传文件最后的文件CID都会被Pin，防止被GC&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Blockstore
+&lt;li&gt;GCBlockstore
 &lt;ul&gt;
-&lt;li&gt;GCBlockstore类型&lt;/li&gt;
 &lt;li&gt;组合Blockstore和GCLocker两个组件&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;

@@ -13,7 +13,7 @@
       <pubDate>Sun, 28 Mar 2021 16:30:17 +0800</pubDate>
       
       <guid>https://www.pseudoyu.com/zh/2021/03/28/blockchain_note_ipfs_model/</guid>
-      <description>IPFS文件存储模式详解 CID (Content-ID) CID是类似IPFS分布式文件系统中标准的文件寻址格式 内容寻址 加密散列算法 自我描述 目前在IPFS用base58b</description>
+      <description>IPFS文件存储模式详解 CID (Content-ID) CID是IPFS分布式文件系统中标准的文件寻址格式 内容寻址 加密散列算法 自我描述 之前在IPFS用base58btc</description>
     </item>
     
     <item>

@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 28 Mar 2021 16:30:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 Mar 2021 12:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hyperledger Fabric详解</title>
+      <link>https://www.pseudoyu.com/en/2021/03/29/blockchain_note_hyperledger_fabric_structure/</link>
+      <pubDate>Mon, 29 Mar 2021 12:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2021/03/29/blockchain_note_hyperledger_fabric_structure/</guid>
+      <description>因为毕业Case Study的项目主要是基于Ethereum公链，也没有面向企业的应用场景，所以之前对Hyperledger Fabric的了解</description>
+    </item>
+    
     <item>
       <title>IPFS文件存储模式详解</title>
       <link>https://www.pseudoyu.com/en/2021/03/28/blockchain_note_ipfs_model/</link>
@@ -82,15 +91,6 @@ Application  Understanding  Group related documents for browsing, group genes an
  Location data  Check-in service Online Maps Location-based services   Location tracking Traffic Data  Spatial Databases
  PostgreSQL with PostGIS Neo4J-spatial HadoopGIS Ingres GeoMesa  Spatial Data Management
  Spatial Database Systems  Manage large collections of multidimensional objects (2D/3D)   A spatial object  Contains (at least) one spatial attributes that describes its location and/or geometry   A spatial relation  Is an organized collection of spatial objects of the same entity    Spatial Data Representation</description>
-    </item>
-    
-    <item>
-      <title>Hyperledger Fabric详解</title>
-      <link>https://www.pseudoyu.com/en/2021/02/05/blockchain_note_hyperledger_fabric_structure/</link>
-      <pubDate>Fri, 05 Feb 2021 12:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2021/02/05/blockchain_note_hyperledger_fabric_structure/</guid>
-      <description>Hyperledger Hyperledger是一组专注于跨行业分布式技术的开源项目 创建企业级、开源、分布式的分类框架和代码库来支持业务用例 提供中立、开放和社区驱</description>
     </item>
     
     <item>

@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 28 Mar 2021 16:30:17 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 29 Mar 2021 12:12:17 +0800</lastBuildDate>
     
     <atom:link href="https://www.pseudoyu.com/zh/index.xml" rel="self" type="application/rss+xml" />
     
@@ -33,6 +33,146 @@
 &lt;p&gt;我常辗转于自我怀疑之中，在与挚友聊天时谈及「初心」或是「意义」时总是选择逃避，即使取得一些世俗的小成就也很难从心底感受到喜悦或满足，总觉得一切都如同「伪物」一样毫无意义。而随着年岁与经历的增长，我在另一篇文章 &lt;a href=&#34;https://www.pseudoyu.com/zh/2020/06/06/23%E5%B2%81%E7%9A%84%E8%87%AA%E7%99%BD%E5%8E%BB%E8%BF%BD%E5%AF%BB%E6%84%8F%E4%B9%89/&#34;&gt;&lt;em&gt;23岁的自白：去追寻意义&lt;/em&gt;&lt;/a&gt; 中写道，「&lt;em&gt;也许思考本身就是建构意义的过程，让我不再期待某个瞬间能够顿悟，只是希望继续向前，体验和追寻着自己的人生.&lt;/em&gt;」&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Pseudoyu&lt;/strong&gt; 这个名字也是寓意自己不应该再时常纠结意义，而是要不断去学习、体验与挑战新的事物，即使被评价「变了」、「不像自己」也能欣然接受。&lt;/p&gt;
 &lt;p&gt;希望自己能多输入一些新的知识和想法，多写一些小文章。&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Hyperledger Fabric详解</title>
+      <link>https://www.pseudoyu.com/zh/2021/03/29/blockchain_note_hyperledger_fabric_structure/</link>
+      <pubDate>Mon, 29 Mar 2021 12:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/03/29/blockchain_note_hyperledger_fabric_structure/</guid>
+      
+        <description>&lt;blockquote&gt;
+&lt;p&gt;因为毕业Case Study的项目主要是基于&lt;code&gt;Ethereum&lt;/code&gt;公链，也没有面向企业的应用场景，所以之前对&lt;code&gt;Hyperledger Fabric&lt;/code&gt;的了解大多只是停留在它的权限管理机制、通道、灵活的智能合约编写等几个特色的概念，对它的架构、各个节点的角色、运行机制等都是一知半解。最近在上HKU的&lt;code&gt;&amp;lt;FITE3011 Distributed Ledger and Blockchain&amp;gt;&lt;/code&gt;课程，教授对&lt;code&gt;Hyperledger Fabric&lt;/code&gt;的工作原理、网络搭建及&lt;code&gt;Chaincode&lt;/code&gt;相关的知识做了很详细的讲解，受益匪浅。因为涉及的内容较多，通过本文来梳理一下，如有错漏，欢迎交流指正~&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;hyperledger概述&#34;&gt;Hyperledger概述&lt;/h2&gt;
+&lt;p&gt;要学习&lt;code&gt;Hyperledger Fabric&lt;/code&gt;，先来看看它的母项目&lt;code&gt;Hyperledger&lt;/code&gt;是什么。&lt;/p&gt;
+&lt;p&gt;企业级应用有较复杂的业务逻辑和参与者角色划分，对于业务执行效率、安全性要求很高，并且针对常见的如支付、数据/信息交易等场景，隐私保护也是重中之重，因此，常见的比特币、以太坊等公链并不符合大部分企业应用需求。但是区块链的分布式、不可篡改的历史账本等特性在溯源、跨境电商等场景中又能够避免因各个国家/地区法律法规、货币等造成的复杂操作流程，大大提高效率。因此，针对企业的联盟链也在不断发展。&lt;/p&gt;
+&lt;p&gt;联盟链严格意义上并不是真正的“去中心化”，它通过引入了权限管理机制（结合企业在现实业务中的角色）来弱化对节点作恶的预防机制，从而能提高效率、应对复杂的业务逻辑。&lt;/p&gt;
+&lt;p&gt;其中，&lt;code&gt;Hyperledger&lt;/code&gt;是由Linux基金会维护的一组专注于跨行业分布式技术的开源项目，旨在创建企业级、开源、分布式的分类框架和代码库来支持业务用例，提供中立、开放和社区驱动的基础设施；建立技术社区并推广，开发区块链和共享账本概念验证、使用案例、试验和部署；建立行业标准，鼓励更多企业参与到分布式账本技术的建设和应用中来，形成一个开放的生态体系；教育公众关于区块链科技的市场机会。&lt;/p&gt;
+&lt;h3 id=&#34;设计理念&#34;&gt;设计理念&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/hyperledger_design_philosophy.png&#34; alt=&#34;hyperledger_design_philosophy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Hyperledger&lt;/code&gt;有如下几个核心设计理念：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;它针对企业具体的业务场景提升效率，并且对溯源等场景有着独特优势，每个企业都可以针对自己的场景维护独立的&lt;code&gt;Hyperledger&lt;/code&gt;项目，因此，它不需要像公链一样通过数字货币来激励用户参与区块链系统。&lt;/li&gt;
+&lt;li&gt;企业的应用场景较为复杂，往往Hyperledger只是在其中参与了某个或某些环节，因此与其他现有系统的交互必不可少，因此Hyperledger在设计上注重配备完整的API以供其他系统调用与交互。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Hyperledger&lt;/code&gt;的框架结构是模块化、可拓展，企业可以根据具体的业务需求选择不同的模块，避免复杂的业务逻辑和臃肿的系统。&lt;/li&gt;
+&lt;li&gt;企业应用的安全性是重中之重，尤其是许多应用场景牵扯到高价值交易或敏感数据，因此提供了很多机制来保障安全性（如&lt;code&gt;Fabric&lt;/code&gt;的通道机制等）&lt;/li&gt;
+&lt;li&gt;除了与现有的系统交互外，企业未来的区块链应用中还可能会和很多不同的区块链网络进行交互，因此大部分智能合约/应用应该具备跨区块链网络的可移植性，以形成更复杂和强大的网络。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/hyperledger_family.png&#34; alt=&#34;hyperledger_family&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;框架&#34;&gt;框架&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;Hyperledger&lt;/code&gt;下有如下几个项目，其中&lt;code&gt;Fabric&lt;/code&gt;目前应用最为广泛，本文也将主要介绍&lt;code&gt;Fabric&lt;/code&gt;区块链网络&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Burrow&lt;/li&gt;
+&lt;li&gt;Fabric&lt;/li&gt;
+&lt;li&gt;Grid&lt;/li&gt;
+&lt;li&gt;Indy&lt;/li&gt;
+&lt;li&gt;Iroha&lt;/li&gt;
+&lt;li&gt;Sawtooth&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;工具&#34;&gt;工具&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;Hyperledger Cello&lt;/code&gt;。主要用于更方便地搭建和管理区块链服务，降低项目框架部署、维护的复杂度；可以用来搭建区块链BaaS平台；可以通过Dashboard来创建和管理区块链，技术人员可以更方便地进行开发和部署；可以将SaaS部署模型引入区块链系统，帮助企业进一步开发框架。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Hyperledger Explorer&lt;/code&gt;。是一个可视化区块链的操作工具，可以用于创建对用户友好的Web应用程序；是首个&lt;code&gt;Hyperledger&lt;/code&gt;的区块链浏览器，用户可以查看/调用/部署/查询交易、网络、智能合约、存储等信息。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;hyperledger-fabric&#34;&gt;Hyperledger Fabric&lt;/h2&gt;
+&lt;p&gt;我们着重来讲讲其中应用最广泛的&lt;code&gt;Fabric&lt;/code&gt;项目，它是由Linux基金会维护的一个模块化、可拓展的区块链联盟链项目，不依赖任何加密货币，它对有着共同目标（业务需求）但彼此不完全信息的实体之间的业务提供了保护，例如跨境电商、资金交易、溯源等。&lt;/p&gt;
+&lt;h3 id=&#34;架构&#34;&gt;架构&lt;/h3&gt;
+&lt;p&gt;在大部分公链中，架构为&lt;code&gt;Order - Execute - Validate - Update State&lt;/code&gt;。如比特币区块链中，如果有一个新交易，会先采用PoW机制对Block进行排序，然后比特币网络中的每个节点逐个进行验证，最后更新状态。因为需要依序进行验证，这种方式决定了其执行效率相对较低。&lt;/p&gt;
+&lt;p&gt;而&lt;code&gt;Fabric&lt;/code&gt;采用了&lt;code&gt;Execute - Order - Validate - Update State&lt;/code&gt;架构。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/hyperledger_fabric_architecture.png&#34; alt=&#34;hyperledger_fabric_architecture&#34;&gt;&lt;/p&gt;
+&lt;p&gt;收到一笔新的交易后，首先提交至背书节点本地模拟交易执行（并背书），再将已背书交易排序并广播，各个节点对交易进行验证后更新状态。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/hyperledger_fabric_architecture_complete.png&#34; alt=&#34;hyperledger_fabric_architecture_complete&#34;&gt;&lt;/p&gt;
+&lt;p&gt;正如上述联盟链特性中所述，&lt;code&gt;Fabric&lt;/code&gt;网络的加入需要得到许可（身份验证），&lt;code&gt;Fabric&lt;/code&gt;网路中的每个节点都有自己的身份。&lt;/p&gt;
+&lt;p&gt;总的来说，&lt;code&gt;Fabric&lt;/code&gt;通过模块化、可插拔的架构来支持企业的复杂业务场景，通过身份验证（绑定现实身份）来弱化节点作恶，使用通道机制大大提升了系统的安全性和隐私保护。&lt;/p&gt;
+&lt;h4 id=&#34;msp成员服务提供商&#34;&gt;MSP成员服务提供商&lt;/h4&gt;
+&lt;p&gt;那么，参与&lt;code&gt;Fabric&lt;/code&gt;网络的身份是怎样管理的呢？&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Fabric&lt;/code&gt;有一个MSP(Membership Service Provider)成员管理提供商，它主要用来管理CA证书来验证哪些成员是可信任的。&lt;code&gt;Fabric CA&lt;/code&gt;模块是独立的，可以管理证书服务，也可以允许第三方CA的接入，大大拓展的系统的应用范围。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/hyperledger_fabric_ca_structure.png&#34; alt=&#34;hyperledger_fabric_ca_structure&#34;&gt;&lt;/p&gt;
+&lt;p&gt;如上图所示，&lt;code&gt;Fabric CA&lt;/code&gt;提供了客户端和SDK两种方式来和CA进行交互，每个&lt;code&gt;Fabric CA&lt;/code&gt;都有一个根CA或中间CA，为了进一步提高CA的安全性，可以采用集群来搭建中间CA。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/hyperledger_fabric_ca_hierarchy.png&#34; alt=&#34;hyperledger_fabric_ca_hierarchy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;更具体一点看CA的层级体系，一般是采用根CA、业务CA和用户CA三层树结构，所有的下层CA会继承上层CA的信任体系。根CA用来签发业务CA，业务CA用来签发具体的用户CA（身份认证CA、交易签名、安全通讯CA等）&lt;/p&gt;
+&lt;h4 id=&#34;通道&#34;&gt;通道&lt;/h4&gt;
+&lt;p&gt;上文提到&lt;code&gt;Fabric&lt;/code&gt;用Channel通道机制来保障交易的安全和隐私性，本质上每一个通道就是一个独立的账本，也是一个独立的区块链，有着不同的世界状态，网络中的一个节点可以同时加入多个通道。这种机制可以很好地划分不同的业务场景，也不用担心交易信息泄漏问题。&lt;/p&gt;
+&lt;h4 id=&#34;链码&#34;&gt;链码&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;Fabric&lt;/code&gt;也有类似以太坊的智能合约，称为Chaincode链码，智能合约使外部的应用程序可以和&lt;code&gt;Fabric&lt;/code&gt;网络中的账本进行交互。不同于&lt;code&gt;Ethereum&lt;/code&gt;，&lt;code&gt;Fabric&lt;/code&gt;使用Docker而不是特定的虚拟机来存放链码，提供了一个安全、轻便的语言执行环境。&lt;/p&gt;
+&lt;p&gt;链码主要分成系统链码和用户链码两种，系统链码嵌入在系统内，提供对系统进行配置、管理的支持；而用户链码则是运行在单独的Docker容器中，提供对上层应用的支持，用户通过链码相关的API编写用户链码，即可对账本中状态进行更新操作。&lt;/p&gt;
+&lt;p&gt;链码经过安装和实例化操作后即可被调用，在安装的时候需要指定具体安装到哪个Peer节点（有的节点可以没有链码），实例化时还需要指定通道及背书策略。&lt;/p&gt;
+&lt;p&gt;链码之间也可以相互调用，从而创建更灵活的应用逻辑。&lt;/p&gt;
+&lt;h4 id=&#34;共识机制&#34;&gt;共识机制&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;Fabric&lt;/code&gt;中广义的共识机制包括背书、排序和验证三个环节，狭义的共识是指排序，&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Fabric&lt;/code&gt;区块链网络中，不同参与者之间交易必须按照发生的顺序写到分布式账本中，依赖共识机制，主要有三种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SOLO（只限于开发）&lt;/li&gt;
+&lt;li&gt;Kafka（一种消息平台）&lt;/li&gt;
+&lt;li&gt;Raft（相比Kafka更中心化）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;网络协议&#34;&gt;网络协议&lt;/h4&gt;
+&lt;p&gt;那&lt;code&gt;Fabric&lt;/code&gt;网络中各个节点的状态分发又是怎么进行的呢？&lt;/p&gt;
+&lt;p&gt;外界的客户端是通过&lt;code&gt;gRPC&lt;/code&gt;来对&lt;code&gt;Fabric&lt;/code&gt;网络中的各个节点进行远程调用，而&lt;code&gt;P2P&lt;/code&gt;网络中各个节点之间的同步是通过&lt;code&gt;Gossip&lt;/code&gt;协议来进行的。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Gossip&lt;/code&gt;协议主要是用于网络中多个节点之间的数据交换，比较容易实现且容错率很高，原理就是数据发送一方从网络中随机选取若干个节点发送过去，等几个节点接收到这些数据后再随机发送给除了发送方外的若干节点，不断重复，最终所有节点达成一致（复杂度为LogN）。&lt;/p&gt;
+&lt;h4 id=&#34;分布式账本&#34;&gt;分布式账本&lt;/h4&gt;
+&lt;p&gt;最终所有的交易都会记录到分布式账本中，这也是区块链诸多特性的核心。&lt;code&gt;Fabric&lt;/code&gt;中交易可以存储相关业务信息，区块是一组排列后的交易集合，将区块通过密码算法链接起来就是区块链。分布式账本主要记录世界状态（最新的分布式账本状态，一般使用&lt;code&gt;CouchDB&lt;/code&gt;以方便查询）和事务日志（世界状态的更新历史，记录区块链结构，使用&lt;code&gt;LevelDB&lt;/code&gt;），对账本的每个操作都会记录在日志中，不可篡改。&lt;/p&gt;
+&lt;h4 id=&#34;应用编程接口&#34;&gt;应用编程接口&lt;/h4&gt;
+&lt;p&gt;对于基于&lt;code&gt;Fabric&lt;/code&gt;的应用，则主要提供了SDK开发工具包和CLI命令行两种方式进行交互。&lt;/p&gt;
+&lt;h3 id=&#34;fabric区块链核心角色&#34;&gt;Fabric区块链核心角色&lt;/h3&gt;
+&lt;p&gt;首先要提的是&lt;code&gt;Fabric&lt;/code&gt;网络中的角色都是逻辑角色，比如Peer节点A可能既是排序节点，也可能在某些业务中是背书节点，而一个角色也不仅仅由单一节点担任。&lt;/p&gt;
+&lt;p&gt;接下来介绍一下各个角色的作用和职能。&lt;/p&gt;
+&lt;p&gt;Clients客户端主要给交易签名，提交交易Proposal给背书节点，接收已经背书后的交易广播给排序节点；背书节点则是本地模拟执行交易Proposal验证交易（策略由Chaincode制定），签名并返回已背书交易；排序节点则将交易打包为block然后广播至各个节点，不参与交易的执行和验证，多个排序节点可以组成OSN；所有的节点都维护区块链账本。&lt;/p&gt;
+&lt;h3 id=&#34;优势总结&#34;&gt;优势总结&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Fabric&lt;/code&gt;通过将企业应用的各个复杂环节分配到各个逻辑角色节点（背书、排序等），不需要所有节点都承担如排序这样资源消耗较大的操作，消除了网络瓶颈；分配了角色后某些交易只在特定的节点部署和执行，且可以并发执行，大大提升效率和安全性，也隐藏了一些商业逻辑；因此，可以根据不同的业务需要来形成多种灵活的分配方案，极大增强了系统的拓展性。&lt;/p&gt;
+&lt;p&gt;将共识机制、权限管理、加密机制、账本等模块都设置为可插拔，且不同的链码可以设置不同的背书策略，信任机制更加灵活，这样可以根据业务需要设置自己的高效系统。&lt;/p&gt;
+&lt;p&gt;成员身份管理的&lt;code&gt;Fabric CA&lt;/code&gt;作为单独的项目，能够提供更多功能，也能够与很多第三方CA直接进行接入和交互，功能更强大，适合企业复杂的场景。&lt;/p&gt;
+&lt;p&gt;多通道的特性是不同通道之间的数据彼此隔离，提高了安全性和隐私保护。&lt;/p&gt;
+&lt;p&gt;链码支持如&lt;code&gt;Java&lt;/code&gt;、&lt;code&gt;Go&lt;/code&gt;、&lt;code&gt;Node&lt;/code&gt;等不同的编程语言，更加灵活，也支持更多第三方拓展应用，降低了业务迁移和维护成本。&lt;/p&gt;
+&lt;h3 id=&#34;fabric应用开发及交互&#34;&gt;Fabric应用开发及交互&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/hyperledger_fabric_application_interact.png&#34; alt=&#34;hyperledger_fabric_application_interact&#34;&gt;&lt;/p&gt;
+&lt;p&gt;上图就是作为一个区块链开发者在应用&lt;code&gt;Fabric&lt;/code&gt;区块链中的开发和交互流程。&lt;/p&gt;
+&lt;p&gt;开发者主要负责开发应用和智能合约（链码），应用通过SDK与智能合约进行交互，而智能合约的逻辑可以对账本进行&lt;code&gt;get&lt;/code&gt;、&lt;code&gt;put&lt;/code&gt;、&lt;code&gt;delete&lt;/code&gt;等操作。&lt;/p&gt;
+&lt;h3 id=&#34;fabric工作流程&#34;&gt;Fabric工作流程&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/hyperledger_fabric_transaction_flow.png&#34; alt=&#34;hyperledger_fabric_transaction_flow&#34;&gt;&lt;/p&gt;
+&lt;p&gt;接下来通过一个完整的交易流来梳理一下&lt;code&gt;Fabric&lt;/code&gt;网络的工作原理
+0. 在所有操作之前，需要向CA获取合法身份并且指定通道&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;首先，Client提交交易Proposal（含自己的签名）至背书节点&lt;/li&gt;
+&lt;li&gt;背书节点接收到交易Proposal后用本地状态模拟执行，对交易进行背书、签名并返回（其中包含Read-Write Set、签名等）&lt;/li&gt;
+&lt;li&gt;Client收集到足够的背书后（策略由Chaincode制定，如图中示例为得到2个背书）提交已背书交易至排序节点（OSN）&lt;/li&gt;
+&lt;li&gt;排序节点将交易打包成blocks，排序（不执行或验证交易正确性）并广播至所有节点&lt;/li&gt;
+&lt;li&gt;所有节点对新blocks进行验证并提交至账本&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/hyperledger_fabric_processes.png&#34; alt=&#34;hyperledger_fabric_processes&#34;&gt;&lt;/p&gt;
+&lt;p&gt;接下来对每个环节进行一些详细的拆解&lt;/p&gt;
+&lt;h4 id=&#34;执行背书环节&#34;&gt;执行/背书环节&lt;/h4&gt;
+&lt;p&gt;Client提交交易proposal后，背书节点会首先核对Client的签名，用本地状态模拟执行，对交易进行签名和Read-Write Set回Clients，R-W Sets主要包含&lt;code&gt;key&lt;/code&gt;, &lt;code&gt;version&lt;/code&gt;, &lt;code&gt;value&lt;/code&gt;三个属性，Read-Set包含交易执行中读取的所有变量和其&lt;code&gt;version&lt;/code&gt;，对账本进行write操作的话&lt;code&gt;version&lt;/code&gt;会产生变化，Write-Set包含所有被编辑的变量及其新值。&lt;/p&gt;
+&lt;p&gt;背书节点在执行交易时值根据本地区块链的状态检查链码是否正确，执行并返回。&lt;/p&gt;
+&lt;p&gt;Fabric支持多种背书策略，Client在提交至排序节点前会验证是否满足背书要求，值得注意的是如果只做了查询账本操作，Client不会提交至OSN。&lt;/p&gt;
+&lt;p&gt;上文所提到的交易proposal主要含括链码、链码的输入值、Client的签名，而背书节点返回至Client的的信息则包括返回值、模拟执行结果的R-W Set以及背书节点的签名，组合起来则是已背书节点。&lt;/p&gt;
+&lt;p&gt;背书是相关组织对交易的认可，即相关节点对交易进行签名。对于一个链码交易来说，背书策略是在链码实例化的时候指定的，一笔有效交易必须是背书策略相关组织签名才能生效，本质上&lt;code&gt;Fabric&lt;/code&gt;区块链中的交易验证是基于对背书节点的信任，这也是称&lt;code&gt;Fabric&lt;/code&gt;并不是严格意义上的去中心化的原因之一。&lt;/p&gt;
+&lt;p&gt;以下是一个简单的链码执行示例&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;t&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;SimpleChaincode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;InitLedger&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ctx&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;contractapi&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;TransactionContextInterface&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;error&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;product&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Product&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Test Product&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Description&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Just a test product to make sure chaincode is running&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;CreatedBy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;admin&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;ProductId&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+	&lt;span class=&#34;nx&#34;&gt;productAsBytes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;err&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;json&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Marshal&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;product&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+	&lt;span class=&#34;nx&#34;&gt;err&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;ctx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;GetStub&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;PutState&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;productAsBytes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+	&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;err&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;nil&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+		&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;err&lt;/span&gt;
+	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在这个简单示例中，链码的主要操作就是更新了&lt;code&gt;key-value&lt;/code&gt;值，经过了这个操作后，&lt;code&gt;version&lt;/code&gt;会变化。&lt;/p&gt;
+&lt;p&gt;执行后返回的R-W Set为&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;nx&#34;&gt;key&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;nx&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Product&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Test Product&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Description&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Just a test product to make sure chaincode is running&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;CreatedBy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;admin&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;ProductId&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;的Json形式&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;排序环节&#34;&gt;排序环节&lt;/h4&gt;
+&lt;p&gt;Client提交已背书的交易至排序节点（排序节点可通过一些共识策略组成OSN），排序节点接收到交易后，会打包成blocks并按照配置中的规则进行排序，在此过程中，只执行排序操作，而不进行任何执行或验证，排序完成后发送至所有节点。&lt;/p&gt;
+&lt;p&gt;排序服务用来对全网交易达成一致，只负责对交易顺序达成一致，避免了整个网络瓶颈，更容易横向拓展以提升网络效率，目前支持&lt;code&gt;Kafka&lt;/code&gt;和&lt;code&gt;Raft&lt;/code&gt;两种，&lt;code&gt;Fabric&lt;/code&gt;区块链网络的统一/完整性依赖于排序节点的一致性。&lt;/p&gt;
+&lt;p&gt;Raft共识机制属于非拜占庭共识机制，使用了领导者和跟随者（Leader和Follower）模型，当一个Leader被选出，日志信息会从Leader向Follower单向复制，更容易管理，在设计上允许所有节点都可以称为Orderer节点，相比Kafka更中心化，其实也允许采用PBFT共识机制，但是性能往往很差。&lt;/p&gt;
+&lt;h4 id=&#34;验证环节&#34;&gt;验证环节&lt;/h4&gt;
+&lt;p&gt;当节点接收到由排序节点发送来的区块时，会对区块中的所有交易进行验证并标记是否可信，主要验证两个方面：1.是否满足背书策略。2.交易结构的合法性，是否有状态冲突，如Read-Set中的&lt;code&gt;version&lt;/code&gt;是否一致等。&lt;/p&gt;
 </description>
       
     </item>
@@ -2348,358 +2488,6 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
 &lt;li&gt;Multi-step processing (R-tree join as example)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/refinement_multi_step.png&#34; alt=&#34;refinement_multi_step&#34;&gt;&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Hyperledger Fabric详解</title>
-      <link>https://www.pseudoyu.com/zh/2021/02/05/blockchain_note_hyperledger_fabric_structure/</link>
-      <pubDate>Fri, 05 Feb 2021 12:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2021/02/05/blockchain_note_hyperledger_fabric_structure/</guid>
-      
-        <description>&lt;h2 id=&#34;hyperledger&#34;&gt;Hyperledger&lt;/h2&gt;
-&lt;p&gt;Hyperledger是一组专注于跨行业分布式技术的开源项目&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;创建企业级、开源、分布式的分类框架和代码库来支持业务用例&lt;/li&gt;
-&lt;li&gt;提供中立、开放和社区驱动的基础设施&lt;/li&gt;
-&lt;li&gt;建立技术社区并推广，开发区块链和共享账本概念验证、使用案例、试验和部署&lt;/li&gt;
-&lt;li&gt;建立行业标准，鼓励更多企业参与到分布式账本技术的建设和应用中来，形成一个开放的生态体系&lt;/li&gt;
-&lt;li&gt;教育公众关于区块链科技的市场机会&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;设计理念&#34;&gt;设计理念&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/hyperledger_design_philosophy.png&#34; alt=&#34;hyperledger_design_philosophy&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;对加密货币的作用存疑
-&lt;ul&gt;
-&lt;li&gt;Hyperledger项目是独立的，不使用加密货币、山寨币等代币&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;配备完整的API
-&lt;ul&gt;
-&lt;li&gt;所有Hyperledger项目都提供丰富且易于使用的API，支持与其他系统的交互&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;模块化
-&lt;ul&gt;
-&lt;li&gt;Hyperledger正在开发模块化的、可扩展的框架（可重用的通用构件）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;高度安全
-&lt;ul&gt;
-&lt;li&gt;安全性是分布式账本技术的一个关键考虑因素，尤其是许多应用场景涉及高价值交易或敏感数据&lt;/li&gt;
-&lt;li&gt;Hyperledger项目在系统设计上就充分考虑安全性，支持企业级应用场景&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;交互性
-&lt;ul&gt;
-&lt;li&gt;未来很多不同的区块链网络将会有沟通和交换数据的需求，以形成更复杂和强大的网络&lt;/li&gt;
-&lt;li&gt;因此，在Hyperledger项目中，大多数智能合约/应用需要具备跨区块链网络的可移植性&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;框架&#34;&gt;框架&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/hyperledger_family.png&#34; alt=&#34;hyperledger_family&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Burrow&lt;/li&gt;
-&lt;li&gt;Fabric&lt;/li&gt;
-&lt;li&gt;Grid&lt;/li&gt;
-&lt;li&gt;Indy&lt;/li&gt;
-&lt;li&gt;Iroha&lt;/li&gt;
-&lt;li&gt;Sawtooth&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;工具&#34;&gt;工具&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Hyperledger Cello
-&lt;ul&gt;
-&lt;li&gt;方便地创建、管理区块链服务&lt;/li&gt;
-&lt;li&gt;降低超级账本框架部署、维护的复杂度&lt;/li&gt;
-&lt;li&gt;用来搭建区块链BaaS平台&lt;/li&gt;
-&lt;li&gt;允许将区块链部署到云端&lt;/li&gt;
-&lt;li&gt;可以通过仪表盘来创建和管理区块链，技术人员也可以方便地创造区块链实例&lt;/li&gt;
-&lt;li&gt;将SaaS部署模型引入到区块链生态系统，帮助企业进一步开发和部署超级账本框架&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Hyperledger Explorer
-&lt;ul&gt;
-&lt;li&gt;可视化区块链操作工具&lt;/li&gt;
-&lt;li&gt;首个超级账本区块链浏览器&lt;/li&gt;
-&lt;li&gt;旨在创建用户友好的Web应用程序&lt;/li&gt;
-&lt;li&gt;用户可以查看、调用、部署或查询区块、交易和交易相关数据、网络信息、智能合约及存储在账本中的其他相关信息&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;hyperledger-fabric&#34;&gt;Hyperledger Fabric&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Fabric是一个模块化、可扩展的开源区块链系统，用于部署和操作联盟链（有权限的）&lt;/li&gt;
-&lt;li&gt;支持模块化的共识协议&lt;/li&gt;
-&lt;li&gt;由Linux基金会维护&lt;/li&gt;
-&lt;li&gt;第一个采用标准通用编程语言（Java/Go）编写分布式应用的系统，并且没有对加密货币的系统依赖性&lt;/li&gt;
-&lt;li&gt;它提供了一种解决方案来保护具有共同目标但彼此不完全信任的一组实体之间的交互，例如：交换资金、商品或信息的企业&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;架构&#34;&gt;架构&lt;/h3&gt;
-&lt;p&gt;大部分区块链架构为&lt;code&gt;Order - Execute - Validate - Update State&lt;/code&gt;，如比特币区块链&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;采用PoW机制对Block进行排序&lt;/li&gt;
-&lt;li&gt;区块链网络中的每个节点逐个验证&lt;/li&gt;
-&lt;li&gt;更新状态&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Fabric采用了&lt;code&gt;Execute - Order - Validate - Update State&lt;/code&gt;架构&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/hyperledger_fabric_architecture.png&#34; alt=&#34;hyperledger_fabric_architecture&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Execute
-&lt;ul&gt;
-&lt;li&gt;本地模拟交易并背书&lt;/li&gt;
-&lt;li&gt;创建Read-Write Set&lt;/li&gt;
-&lt;li&gt;收集背书信息/&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Order
-&lt;ul&gt;
-&lt;li&gt;排序Read-Write Sets&lt;/li&gt;
-&lt;li&gt;广播（通过共识机制）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Validate
-&lt;ul&gt;
-&lt;li&gt;验证背书信息和Read-Write Sets&lt;/li&gt;
-&lt;li&gt;去除无效/冲突交易&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Update State
-&lt;ul&gt;
-&lt;li&gt;更新状态&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/hyperledger_fabric_architecture_complete.png&#34; alt=&#34;hyperledger_fabric_architecture_complete&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Fabric区块链由节点组成网络&lt;/li&gt;
-&lt;li&gt;架构是要求许可的，所有参与Fabric网络的节点都有身份（由模块化的MSP, Membership Service Provider提供）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;分布式账本解决平台，采用模块化架构，支持不同组件的可插拔实现以适应业务系统的复杂性，并且通过授权方式与通道机制使得安全和隐私保护方面达到了商用化的标准。首次将权限管理机制引入区块链领域，其可拓展的架构设计、开放的接口风格、可插拔的组件化实现为分布式账本平台的设计和实现提供了重要参考。&lt;/em&gt;&lt;/p&gt;
-&lt;h4 id=&#34;msp成员服务提供商&#34;&gt;MSP成员服务提供商&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;MSP确定可信任中间CA和根CA，用于验证受信任域的成员&lt;/li&gt;
-&lt;li&gt;有一个独立的Fabric CA模块，用来管理证书服务，也允许第三方CA的接入
-&lt;ul&gt;
-&lt;li&gt;Fabric CA提供客户端与SDK两种方式与CA进行交互&lt;/li&gt;
-&lt;li&gt;每个Fabric CA都有一个根CA或者中间CA，可采用集群搭建中间CA以保证CA的安全性
-&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/hyperledger_fabric_ca_structure.png&#34; alt=&#34;hyperledger_fabric_ca_structure&#34;&gt;&lt;/li&gt;
-&lt;li&gt;一般采用根证书、业务证书、用户证书三级证书结构，所有的下层证书都会继承根证书的信任体系
-&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/hyperledger_fabric_ca_hierarchy.png&#34; alt=&#34;hyperledger_fabric_ca_hierarchy&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;根证书用来签发业务证书&lt;/li&gt;
-&lt;li&gt;业务证书用来签发具体的用户证书
-&lt;ul&gt;
-&lt;li&gt;Enrollment CA属于身份认证证书&lt;/li&gt;
-&lt;li&gt;Transaction CA属于交易签名证书&lt;/li&gt;
-&lt;li&gt;TLS CA属于安全通讯证书&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;通过身份认证弱化了节点作恶，在性能和隐私保护上满足政府企业需求&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;通道channel&#34;&gt;通道Channel&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;Channel是一个独立的账本/区块链，有不同的世界状态&lt;/li&gt;
-&lt;li&gt;一个Peer节点可以加入多个channel&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;chaincode智能合约&#34;&gt;Chaincode智能合约&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;Fabric中的智能合约称为链码（chaincode），由外部应用程序与分布式账本进行交互&lt;/li&gt;
-&lt;li&gt;Fabric使用Docker存放链上的代码，而不需要依靠特定的虚拟机，Docker为链码执行提供了一个安全、轻便的语言执行环境&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;共识机制&#34;&gt;共识机制&lt;/h4&gt;
-&lt;p&gt;区块链网络中，不同参与者之间交易必须按照发生的顺序写到分布式账本中，区块链网络中，不同参与者之间交易必须按照发生的顺序写到分布式账本中&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;SOLO（只限于开发）&lt;/li&gt;
-&lt;li&gt;Kafka（一种消息平台）&lt;/li&gt;
-&lt;li&gt;Raft（相比Kafka更中心化）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;p2p协议&#34;&gt;P2P协议&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;Peer节点和排序节点采用gRPC对外提供远程服务供客户端进行调用&lt;/li&gt;
-&lt;li&gt;网络中的节点之间通过Gossip协议来进行状态的同步和分发
-&lt;ul&gt;
-&lt;li&gt;用于网络内多个节点之间的数据分发或信息交换&lt;/li&gt;
-&lt;li&gt;容易实现、容错率高，被分布式系统广泛采用&lt;/li&gt;
-&lt;li&gt;原理：数据发送方从网络中随机选取若干节点，将数据发送过去，接收方重复这一过程（除发送方外），网络中所有节点最终会达成一致（复杂度为节点总数的对数）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;分布式账本&#34;&gt;分布式账本&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;世界状态：记录最新的分布式账本状态&lt;/li&gt;
-&lt;li&gt;事务日志：记录世界状态的更新历史&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;存储数据库&#34;&gt;存储数据库&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;LevelDB&lt;/li&gt;
-&lt;li&gt;CouchDB&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;应用编程接口&#34;&gt;应用编程接口&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;SDK 开发工具包&lt;/li&gt;
-&lt;li&gt;CLI 命令行&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;fabric网络核心逻辑角色&#34;&gt;Fabric网络核心逻辑角色&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Clients
-&lt;ul&gt;
-&lt;li&gt;提交交易Proposal，帮助安排执行阶段，最后广播交易至排序节点&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Peers
-&lt;ul&gt;
-&lt;li&gt;执行交易提案，验证交易&lt;/li&gt;
-&lt;li&gt;所有节点都维护区块链账本（记录所有交易、状态的数据结构，只能添加数据）&lt;/li&gt;
-&lt;li&gt;只有背书节点（Endorsers）执行所有的交易Proposal，由Chaincode制定策略）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;OSN(Ordering Service Nodes)
-&lt;ul&gt;
-&lt;li&gt;由排序节点组成，提供排序服务&lt;/li&gt;
-&lt;li&gt;为Fabric中的所有交易排序，每个交易包含状态更新、执行环节产生的依赖、背书节点的数字签名等&lt;/li&gt;
-&lt;li&gt;不参与交易执行/验证&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;fabric网络中的角色是逻辑角色&#34;&gt;Fabric网络中的角色是逻辑角色&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;一个Peer节点可能承担多个角色
-&lt;ul&gt;
-&lt;li&gt;部分chaincode的背书节点&lt;/li&gt;
-&lt;li&gt;排序节点&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;一个角色可能会被多个节点承担
-&lt;ul&gt;
-&lt;li&gt;Chaincode的背书节点可能有多个（如要求3/5）&lt;/li&gt;
-&lt;li&gt;可能有多个排序节点，通过一些机制共同对交易进行排序&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;优势&#34;&gt;优势&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;将复杂环节功能分配至各个逻辑角色节点，消除了网络瓶颈，增强了拓展性&lt;/li&gt;
-&lt;li&gt;可插拔的共识机制（1.4版本支持Raft共识机制）、权限管理、加解密、账本机制等模块&lt;/li&gt;
-&lt;li&gt;灵活的信任模型（不同交易可以根据不同的背书策略进行验证）&lt;/li&gt;
-&lt;li&gt;加强了身份证书管理服务，作为单独的Fabric CA 项目，提供更多功能&lt;/li&gt;
-&lt;li&gt;支持多通道特性，不同通道之间的数据彼此隔离，提高隔离安全性&lt;/li&gt;
-&lt;li&gt;使用chaincode，支持更灵活的智能合约语言和第三方&lt;/li&gt;
-&lt;li&gt;可并发执行所有操作
-&lt;ul&gt;
-&lt;li&gt;不同的背书节点模拟执行不同的交易Proposal&lt;/li&gt;
-&lt;li&gt;节点只需要验证数字签名&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;背书节点支持非确定性的执行（如随机操作）&lt;/li&gt;
-&lt;li&gt;Chaincode的可信度
-&lt;ul&gt;
-&lt;li&gt;Chaincode仅在特定的背书节点上部署和执行&lt;/li&gt;
-&lt;li&gt;可以隐藏商业逻辑&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;fabric应用开发及交互&#34;&gt;Fabric应用开发及交互&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/hyperledger_fabric_application_interact.png&#34; alt=&#34;hyperledger_fabric_application_interact&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;fabric交易流&#34;&gt;Fabric交易流&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/hyperledger_fabric_transaction_flow.png&#34; alt=&#34;hyperledger_fabric_transaction_flow&#34;&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;由Client提交交易Proposal至背书节点（特定）&lt;/li&gt;
-&lt;li&gt;背书节点模拟执行，进行背书并返回信息（Read-Write Set、签名等）&lt;/li&gt;
-&lt;li&gt;Client（SDK）收集到足够的背书后（策略由Chaincode制定，如图中为两个背书）提交已背书交易（Proposal+Response)至排序节点（OSN）&lt;/li&gt;
-&lt;li&gt;排序节点将交易打包成blocks，排序（不执行/验证）并广播至所有节点&lt;/li&gt;
-&lt;li&gt;所有节点对新blocks进行验证并提交至账本&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;execute执行环节&#34;&gt;Execute执行环节&lt;/h3&gt;
-&lt;p&gt;Clients（SDK）提交交易proposal后，背书节点用本地状态模拟执行，返回签名和Read-Write Set回SDK&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Key&lt;/li&gt;
-&lt;li&gt;Version&lt;/li&gt;
-&lt;li&gt;Value&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;注：Fabric支持多种背书策略，SDK在提交前会验证是否满足背书要求；如果Chaincode只做了查询账本操作，Client不会提交至OSN&lt;/p&gt;
-&lt;p&gt;Transaction proposal包含&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Chaincode智能合约&lt;/li&gt;
-&lt;li&gt;Chaincode输入&lt;/li&gt;
-&lt;li&gt;客户端签名&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Proposal response包含&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;返回值&lt;/li&gt;
-&lt;li&gt;模拟执行结果的Read-Write Set&lt;/li&gt;
-&lt;li&gt;背书节点的签名&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Endorsed Transaction = Transaction proposal + Proposal response&lt;/em&gt;&lt;/p&gt;
-&lt;h4 id=&#34;endorser背书节点详解&#34;&gt;Endorser背书节点详解&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;不同的chaincode可以有不同的背书节点（或多个）&lt;/li&gt;
-&lt;li&gt;节点根据背书节点来对交易进行验证
-&lt;ul&gt;
-&lt;li&gt;指定背书节点&lt;/li&gt;
-&lt;li&gt;3/5&lt;/li&gt;
-&lt;li&gt;((P1 and P2) or P3)&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;交易验证依赖于对背书节点的信任&lt;/li&gt;
-&lt;li&gt;背书节点只根据当前状态（本地区块链）检查chaincode执行是否正确&lt;/li&gt;
-&lt;li&gt;背书节点只根据当前账本（本地）状态模拟执行交易并返回&lt;/li&gt;
-&lt;li&gt;Read-Set包含交易执行中读取的所有变量和其version&lt;/li&gt;
-&lt;li&gt;Write-Set包含所有被编辑的变量及其新值&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;chaincode执行示例&#34;&gt;Chaincode执行示例&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;t&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;SimpleChaincode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;InitLedger&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ctx&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;contractapi&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;TransactionContextInterface&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;error&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-	&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;product&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Product&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Test Product&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Description&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Just a test product to make sure chaincode is running&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;CreatedBy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;admin&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;ProductId&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-
-	&lt;span class=&#34;nx&#34;&gt;productAsBytes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;err&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;json&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Marshal&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;product&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-
-	&lt;span class=&#34;nx&#34;&gt;err&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;ctx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;GetStub&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;PutState&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;productAsBytes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-
-	&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;err&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;nil&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-		&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;err&lt;/span&gt;
-	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在这个简单的Chaincode示例中，更新了key-value值&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;key: 1&lt;/li&gt;
-&lt;li&gt;value: Product { Name: &amp;ldquo;Test Product&amp;rdquo;, Description: &amp;ldquo;Just a test product to make sure chaincode is running&amp;rdquo;, CreatedBy: &amp;ldquo;admin&amp;rdquo;, ProductId: &amp;ldquo;1&amp;rdquo; } 的Json形式&lt;/li&gt;
-&lt;li&gt;Version版本经过Write操作会+1&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;order排序环节&#34;&gt;Order排序环节&lt;/h3&gt;
-&lt;p&gt;Clients提交经过背书的交易至排序节点（排序节点可通过一些共识策略组成OSN），排序节点对所有交易进行排序（不对交易内容进行核查/执行/验证），并发送至所有节点（实际运行中，交易会被打包成区块）&lt;/p&gt;
-&lt;h4 id=&#34;orderer排序节点详解&#34;&gt;Orderer排序节点详解&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;排序节点不对已背书交易进行验证&lt;/li&gt;
-&lt;li&gt;仅将所有交易打包成块并排序&lt;/li&gt;
-&lt;li&gt;Fabric区块链网络的完整性依赖于排序节点的一致性&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;validate验证环节&#34;&gt;Validate验证环节&lt;/h3&gt;
-&lt;p&gt;当节点接收到一个新区块，会对区块中的所有交易进行验证并标记&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;是否满足背书策略&lt;/li&gt;
-&lt;li&gt;是否有状态冲突，如Read-Set中的Version&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;peer节点详解&#34;&gt;Peer节点详解&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;Peer节点可能不包含chaincode&lt;/li&gt;
-&lt;li&gt;交易执行的正确性依赖于对背书节点的信任&lt;/li&gt;
-&lt;li&gt;Peer节点对交易进行验证
-&lt;ul&gt;
-&lt;li&gt;是否满足背书策略（指定节点/数量/&amp;hellip;）&lt;/li&gt;
-&lt;li&gt;是否有Read-Write冲突（与节点的本地账本备份对比）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;update-state环节&#34;&gt;Update State环节&lt;/h3&gt;
-&lt;p&gt;当新区块被验证为可信，则根据Write-Set更新世界状态（每次更新会变更version number）&lt;/p&gt;
 </description>
       
     </item>

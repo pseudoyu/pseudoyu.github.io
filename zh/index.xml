@@ -238,7 +238,9 @@ ipfs repo gc
 &lt;p&gt;&lt;code&gt;IPNS&lt;/code&gt;同样兼容&lt;code&gt;DNS&lt;/code&gt;，可以使用&lt;code&gt;DNS TXT&lt;/code&gt;记录域名对应的&lt;code&gt;IPNS&lt;/code&gt;哈希ID，就可以域名来替换IPNS哈希ID来进行访问，从而实现更容易读写和记忆。&lt;/p&gt;
 &lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
 &lt;p&gt;以上就是对&lt;code&gt;IPFS&lt;/code&gt;分布式存储原理的梳理，它的组件、存储流程细节、GC机制、数据交换模块Bitswap、网络以及实际应用场景都有很多值得深入挖掘的部分。&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;p&gt;推荐阅读：趣链科技QTech平台《&lt;a href=&#34;https://tech.hyperchain.cn/tag/ipfs/&#34;&gt;IPFS系列文章&lt;/a&gt;》&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;ol&gt;

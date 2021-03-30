@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 20 Mar 2021 12:12:17 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 27 Mar 2021 18:46:17 +0800</lastBuildDate>
     
     <atom:link href="https://www.pseudoyu.com/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -38,6 +38,222 @@
     </item>
     
     <item>
+      <title>IPFS本地节点搭建</title>
+      <link>https://www.pseudoyu.com/en/2021/03/27/blockchain_note_ipfs_practice/</link>
+      <pubDate>Sat, 27 Mar 2021 18:46:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2021/03/27/blockchain_note_ipfs_practice/</guid>
+      
+        <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;上一篇《IPFS分布式文件存储原理》对于&lt;code&gt;IPFS&lt;/code&gt;系统的设计理念、功能、工作原理及&lt;code&gt;IPNS&lt;/code&gt;做了详细的介绍，那么，如何在本地搭建一个&lt;code&gt;IPFS&lt;/code&gt;节点呢？&lt;/p&gt;
+&lt;p&gt;本文在&lt;code&gt;macOS 11.2.3&lt;/code&gt;系统上搭建了一个&lt;code&gt;IPFS&lt;/code&gt;节点（命令行版本），并对文件上传、下载、网络同步、&lt;code&gt;pin&lt;/code&gt;、&lt;code&gt;GC&lt;/code&gt;、&lt;code&gt;IPNS&lt;/code&gt;等进行了实际操作，以加深对&lt;code&gt;IPFS&lt;/code&gt;工作原理的理解。&lt;/p&gt;
+&lt;h3 id=&#34;安装&#34;&gt;安装&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;wget https://dist.ipfs.io/go-ipfs/v0.8.0/go-ipfs_v0.8.0_darwin-amd64.tar.gz
+tar -xvzf go-ipfs_v0.8.0_darwin-amd64.tar.gz
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; go-ipfs
+./install.sh
+ipfs --version
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;启动&#34;&gt;启动&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 启动节点&lt;/span&gt;
+ipfs init
+
+&lt;span class=&#34;c1&#34;&gt;# 上传文件&lt;/span&gt;
+ipfs add ipfs_init_readme.png
+
+&lt;span class=&#34;c1&#34;&gt;# 上传文件并且只输出哈希值&lt;/span&gt;
+ipfs add -q ipfs_init_readme.png
+
+&lt;span class=&#34;c1&#34;&gt;# 上传目录&lt;/span&gt;
+ipfs add -r &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Dir&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# 查看文件&lt;/span&gt;
+ipfs cat /ipfs/QmQPeNsJPyVWPFDVHb77w8G42Fvo15z4bG2X8D2GhfbSXc/readme
+ipfs cat /ipfs/QmQPeNsJPyVWPFDVHb77w8G42Fvo15z4bG2X8D2GhfbSXc/quick-start
+
+&lt;span class=&#34;c1&#34;&gt;# 查看自己上传的文件&lt;/span&gt;
+ipfs cat QmaP3QS6ZfBoEaUJZ3ZfRKoBm3GGuhQSnUWtkVCNc8ZLTj
+
+&lt;span class=&#34;c1&#34;&gt;# 查看图片并输出到文件&lt;/span&gt;
+ipfs cat QmfViXYw7GA296brLwid255ivDp1kmTiXJw1kmZVsg7DFH &amp;gt; ipfsTest.png
+
+&lt;span class=&#34;c1&#34;&gt;# 下载文件&lt;/span&gt;
+ipfs get QmfViXYw7GA296brLwid255ivDp1kmTiXJw1kmZVsg7DFH -o ipfsTest.png
+
+&lt;span class=&#34;c1&#34;&gt;# 压缩并下载文件&lt;/span&gt;
+ipfs get QmfViXYw7GA296brLwid255ivDp1kmTiXJw1kmZVsg7DFH -Cao ipfsTest.png
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ipfs_init_readme.png&#34; alt=&#34;ipfs_init_readme&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;开启加入服务&#34;&gt;开启/加入服务&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 查看当前节点信息 &lt;/span&gt;
+ipfs id
+
+&lt;span class=&#34;c1&#34;&gt;# 查看IPFS配置信息&lt;/span&gt;
+ipfs config show
+
+&lt;span class=&#34;c1&#34;&gt;# 开启节点服务器&lt;/span&gt;
+ipfs daemon
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;API服务，默认在5001端口，可以通过 http://localhost:5001/webui 进行访问&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ipfs_webui.png&#34; alt=&#34;ipfs_webui&#34;&gt;&lt;/p&gt;
+&lt;p&gt;网关服务，默认在8080端口，在浏览器里访问文件需要借助于IPFS提供的网关服务，由浏览器先访问到网关，网关去获取IPFS网络杀过了的文件。通过 http://localhost:8080/ipfs/[File Hash] 来访问上传到ipfs的文件&lt;/p&gt;
+&lt;h3 id=&#34;文件操作&#34;&gt;文件操作&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 列出文件&lt;/span&gt;
+ipfs files ls
+
+&lt;span class=&#34;c1&#34;&gt;# 创建目录&lt;/span&gt;
+ipfs files mkdir
+
+&lt;span class=&#34;c1&#34;&gt;# 删除文件&lt;/span&gt;
+ipfs files rm
+
+&lt;span class=&#34;c1&#34;&gt;# 拷贝文件&lt;/span&gt;
+ipfs files cp &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; /&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Dest Dir&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# 移动文件&lt;/span&gt;
+ipfs files mv &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; /&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Dest Dir&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# 状态&lt;/span&gt;
+ipfs files stat
+
+&lt;span class=&#34;c1&#34;&gt;# 读取&lt;/span&gt;
+ipfs files &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;使用ipns来解决文件更新问题&#34;&gt;使用IPNS来解决文件更新问题&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 使用IPNS发布内容以自动更新&lt;/span&gt;
+ipfs name publish &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# 查询节点id指向的Hash&lt;/span&gt;
+ipfs name resolve
+
+&lt;span class=&#34;c1&#34;&gt;# 有多个站点需要更新，可以新产生一个秘钥对，使用新的key发布&lt;/span&gt;
+ipfs key gen --type&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;rsa --size&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2048&lt;/span&gt; mykey
+ipfs name publish --key&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;mykey  &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;pinning&#34;&gt;Pinning&lt;/h3&gt;
+&lt;p&gt;当我们向IPFS网络请求文件时，IPFS会把内容先同步的本地提供服务，使用Cache机制处理文件以防止存储空间不断增长，如果文件一段时间未被使用则会被“回收”，Pining的作用就是确保文件在本地不被“回收”。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# pin一个文件&lt;/span&gt;
+ipfs pin add &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# 查询某一个Hash是否被pin&lt;/span&gt;
+ipfs pin ls &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# 删除pin的状态&lt;/span&gt;
+ipfs pin rm -r &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# GC操作&lt;/span&gt;
+ipfs repo gc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
+&lt;p&gt;本文主要在本地部署了&lt;code&gt;IPFS&lt;/code&gt;文件系统并对基本操作进行了尝试，基于&lt;code&gt;macOS 11.2.3&lt;/code&gt;和&lt;code&gt;go-ipfs_v0.8.0_darwin-amd64&lt;/code&gt;版本，不同系统操作可能会因版本或依赖问题不一样，如有错漏，欢迎交流指正。&lt;/p&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://ipfs.io&#34;&gt;IPFS官网&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>IPFS分布式文件存储原理</title>
+      <link>https://www.pseudoyu.com/en/2021/03/25/blockchain_note_ipfs_structure/</link>
+      <pubDate>Thu, 25 Mar 2021 16:30:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2021/03/25/blockchain_note_ipfs_structure/</guid>
+      
+        <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;最近在做学校的Case Study项目，是一个基于&lt;code&gt;Ethereum&lt;/code&gt;平台的音乐版权管理项目，其中对于音乐作品、版权证明文件等上传用到了&lt;code&gt;IPFS&lt;/code&gt;分布式文件存储技术，主要是利用其去重的特性来检测侵权行为。对&lt;code&gt;IPFS&lt;/code&gt;这个系统产生了兴趣，阅读了&lt;code&gt;QTech&lt;/code&gt;平台上的系列文章，也查询了一些相关资料，通过本文梳理一下，如有错漏，欢迎交流指正。&lt;/p&gt;
+&lt;h3 id=&#34;概述&#34;&gt;概述&lt;/h3&gt;
+&lt;p&gt;我们日常使用网盘或其他服务时大多都是访问文件所在的特定的服务器（IP地址），请求文件并下载到本地，通过的是&lt;code&gt;HTTP&lt;/code&gt;协议，本质上是基于位置寻址的，访问&lt;code&gt;URL&lt;/code&gt;来得到一层层找到具体的文件，这种方式固然便捷，但是存在一些问题。文件依托于特定的服务器，因此一旦中心化的服务器宕机或者文件被删除了，内容将永久丢失，并且如果离服务器很远/同时访问文件的人很多的话访问速度也会比较慢；而且同样一份文件可能重复存储在不同的服务器中，造成资源的浪费；此外就是存在严重的安全隐患，&lt;code&gt;DDoS&lt;/code&gt;、&lt;code&gt;XSS&lt;/code&gt;、&lt;code&gt;CSRF&lt;/code&gt;等攻击都可能对文件安全性造成威胁。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;那有没有更好的解决方案呢？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;试想我们把文件存储在一个分布式网络里，每个节点都可以存储文件，用户可以通过访问一个类似目录索引的方式来向最近的节点互相请求文件。这就是&lt;code&gt;IPFS&lt;/code&gt;星际文件系统的解决思路，它是一个点对点的超媒体文件存储、索引、交换协议，由Juan Benet在2014年5月发起。&lt;/p&gt;
+&lt;h4 id=&#34;特点&#34;&gt;特点&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;IPFS&lt;/code&gt;想把全世界所有部署了相同文件系统的计算设备链接在一起，构建一个分布式网络来替代传统中心化的服务器模式，每个节点都可以存储文件，用户通过&lt;code&gt;DHT(Distributed Hash Table)&lt;/code&gt;分布式哈希表来获取文件，速度更快、更安全，网络安全性更强。&lt;/p&gt;
+&lt;p&gt;因为通过&lt;code&gt;IPFS&lt;/code&gt;存储的文件内容是通过分块求Hash值存储为地址的，本质上是通过多重哈希来确定文件的地址，这是一种去中心化但是基于内容寻址的方式，通过对数据本身进行加密，生成独一无二的Hash以供查找，这种方式下，即使是微小的改变，也会造成Hash结果截然不同，因此很容易能够从Hash检测内容是否被篡改，甚至不用访问文件本身。&lt;/p&gt;
+&lt;p&gt;不同于传统的服务器模式，&lt;code&gt;IPFS&lt;/code&gt;是一个统一的网络，因此已经上传的相同内容的文件不会重复存储（可以通过Hash值检验），极大地节约了整体网络资源，也更加高效。而且理论上只要节点达到一定规模，文件将永久保存，且同一个文件可以从多个（也更近）的节点下载，通讯效率也会更高。&lt;/p&gt;
+&lt;p&gt;除此之外，因为是分布式网络进行存储，也可以天然地避免传统&lt;code&gt;DDoS&lt;/code&gt;等攻击。&lt;/p&gt;
+&lt;h4 id=&#34;功能&#34;&gt;功能&lt;/h4&gt;
+&lt;p&gt;除了文件存储外，&lt;code&gt;IPFS&lt;/code&gt;还有DHT组网、Bitswap文件交换等功能，之后也会单独写博文进行讲解。&lt;/p&gt;
+&lt;h3 id=&#34;工作原理&#34;&gt;工作原理&lt;/h3&gt;
+&lt;p&gt;作为一个文件存储系统，上传文件和下载文件是两个最基本的操作，我们分别讲一下原理。&lt;/p&gt;
+&lt;h4 id=&#34;ipfs-add命令&#34;&gt;IPFS add命令&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在&lt;code&gt;IPFS&lt;/code&gt;系统中执行add操作就完成了上传操作，那是怎么上传的呢？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在&lt;code&gt;IPFS&lt;/code&gt;文件存储系统中，每当上传一个新文件，系统会将单个文件拆分成若干个256KB的block，每个block会有一个专属的CID进行标识，这个后面会详细讲；然后计算每一个block的Hash值，并存储再一个数组中，最后对这个数组求Hash得到文件的最终Hash值；接着将文件的Hash和所有的blocks Hash的数组组成成一个对象，也就形成了一种索引结构；最后把文件block和这个索引结构全部上传到&lt;code&gt;IPFS&lt;/code&gt;节点，同步到&lt;code&gt;IPFS&lt;/code&gt;网络。&lt;/p&gt;
+&lt;p&gt;文件上传时有两个值得注意的情况：1.文件特别小，如果文件小于1KB的话就不浪费一个block了，会直接和Hash一起上传到&lt;code&gt;IPFS&lt;/code&gt;。2.文件特别大，比如之前上传了一个1G的视频，之后又加了几KB的字幕文件，这种情况下未变化的1G部分是不会重新分配新的空间的，而只会为追加的字母文件部分分配新的block，再重新上传Hash。&lt;/p&gt;
+&lt;p&gt;因此，很好理解的是，即使是不同文件的相同部分也只会存储一份，很多文件的索引会指向同一个block，所形成的结构就是MerkleDAG数据结构。&lt;/p&gt;
+&lt;p&gt;值得注意的是，当节点执行add操作时，会保留到本地blockstore中，但不会立刻主动上传到IPFS网络中，也就是说，与其连接的节点并不会存储这个文件，除非有某个节点请求过该block数据！因此，它并不是一个自动备份数据的分布式数据库。&lt;code&gt;IPFS&lt;/code&gt;这种设计是出于网络带宽、可靠性等方面的考虑。&lt;/p&gt;
+&lt;p&gt;还有一个细节就是，当节点在执行&lt;code&gt;add&lt;/code&gt;命令时，还会广播自己的块信息，并维护一个所有发给这个节点的block请求列表，一旦add命令添加到数据满足这个列表，就会主动向对应的节点发送数据并且更新列表。&lt;/p&gt;
+&lt;h4 id=&#34;ipfs-get命令&#34;&gt;IPFS get命令&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;那文件上传后，要怎么查找访问呢？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这就关系到上文所提到的&lt;code&gt;IPFS&lt;/code&gt;索引结构是&lt;code&gt;DHT&lt;/code&gt;（分布式哈希表），通过对&lt;code&gt;DHT&lt;/code&gt;进行访问可以很快访问得到数据。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ipfs_dht.png&#34; alt=&#34;ipfs_dht&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;那如果想要查找一个本地没有的数据呢？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ipfs_get.gif&#34; alt=&#34;ipfs_get&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在&lt;code&gt;IPFS&lt;/code&gt;系统中，所有和当前节点连接的节点会构成一个swarm网络，当节点发送一个文件请求(即&lt;code&gt;get&lt;/code&gt;)时，首先会在本地的blockstore里查找请求的数据，如果没找到的话，就会向swarm网络发出一个请求，通过网络中的&lt;code&gt;DHT Routing&lt;/code&gt;找到拥有该数据的节点。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;怎么知道网络中哪个（哪些）节点拥有这个请求文件呢？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如上文&lt;code&gt;add&lt;/code&gt;命令所讲的那样，当一个节点加入到IPFS网络中后，会告诉其它节点自己存储了什么内容（通过广播&lt;code&gt;DHT&lt;/code&gt;），这样每当有用户希望检索的内容正好在这个节点上时，其它节点就会告诉用户要从这个节点索取他想要的内容。&lt;/p&gt;
+&lt;p&gt;一旦找到拥有这个数据的节点，就会把请求数据反馈回来，这样本地节点会把收到的block数据缓存一份到本地的blockstore中，这样整个网络中相当于多了一份原数据的拷贝，更多节点请求数据的话，查找就变得更容易，因此数据的不可丢失性也是基于这个原理，只要有一个节点保存着这个数据，就可以被全网获取。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在项目中，上传的文件可以通过&lt;code&gt;ipfs.io&lt;/code&gt;网关直接获取到文件，类似于&lt;code&gt;https://ipfs.io/ipfs/Qm.....&lt;/code&gt;这样的网站地址，这个是什么原理呢？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ipfs_io_get.gif&#34; alt=&#34;ipfs_io_get&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ipfs.io&lt;/code&gt;网关实际上就是一个&lt;code&gt;IPFS&lt;/code&gt;节点，当我们打开上述这个网络链接的时候，实际上就是向这个节点发送了一次请求，因此&lt;code&gt;ipfs.io&lt;/code&gt;网关会帮我们去向拥有这个数据的节点请求这个block（如果这个文件是自己刚在本地节点通过&lt;code&gt;add&lt;/code&gt;命令添加的话就会通过这种方式被上传到&lt;code&gt;IPFS&lt;/code&gt;网络上），在&lt;code&gt;swarm&lt;/code&gt;网络中通过&lt;code&gt;DHT Routing&lt;/code&gt;获取到数据后，网关会自己先缓存一份，然后将数据通过&lt;code&gt;HTTP&lt;/code&gt;协议发给我们，因此，就可以在浏览器直接看到这个文件啦！&lt;/p&gt;
+&lt;p&gt;而任何其他机器通过浏览器访问这个链接时，因为&lt;code&gt;ipfs.io&lt;/code&gt;网关已经缓存了这个文件，再次请求的时候，就不需要向原节点来请求数据了，可以直接从缓存中返回数据给浏览器。&lt;/p&gt;
+&lt;h3 id=&#34;内容标识符cidcontent-id&#34;&gt;内容标识符CID(Content-ID)&lt;/h3&gt;
+&lt;p&gt;现在考虑另一个问题，我们常见的图像为&lt;code&gt;.jpg&lt;/code&gt;、&lt;code&gt;.png&lt;/code&gt;，而常见的视频则是&lt;code&gt;.mp4&lt;/code&gt;一样，可以直接从后缀名判断文件类型。通过&lt;code&gt;IPFS&lt;/code&gt;上传的文件也可以是多种类型，也包含了很多信息，怎么进行分辨呢？&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;IPFS&lt;/code&gt;早期主要使用&lt;code&gt;base58btc&lt;/code&gt;对&lt;code&gt;multihash&lt;/code&gt;进行编码，但是在开发&lt;code&gt;IPLD&lt;/code&gt;（I主要用来定义数据，给数据建模）的过程中会遇到很多与格式相关的问题，因此使用了一种叫&lt;code&gt;CID&lt;/code&gt;的文件寻址格式来对不同格式的数据进行管理，官方的定义为：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;CID&lt;/code&gt;是一种自描述式的内容寻址的识别符，必须使用加密散列函数来得到内容的地址&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;简单来说，&lt;code&gt;CID&lt;/code&gt;通过一些机制来对文件所包含的内容进行自描述，包含了版本信息、格式等。&lt;/p&gt;
+&lt;h4 id=&#34;cid结构&#34;&gt;CID结构&lt;/h4&gt;
+&lt;p&gt;目前&lt;code&gt;CID&lt;/code&gt;有&lt;code&gt;v0&lt;/code&gt;和&lt;code&gt;v1&lt;/code&gt;两种版本，&lt;code&gt;v1&lt;/code&gt;版本的&lt;code&gt;CID&lt;/code&gt;由&lt;code&gt;V1Builder&lt;/code&gt;生成&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;cidv1&amp;gt; ::= &amp;lt;mb&amp;gt;&amp;lt;version&amp;gt;&amp;lt;mcp&amp;gt;&amp;lt;mh&amp;gt;
+# or, expanded:
+&amp;lt;cidv1&amp;gt; ::= &amp;lt;multibase-prefix&amp;gt;&amp;lt;cid-version&amp;gt;&amp;lt;multicodec-packed-content-type&amp;gt;&amp;lt;multihash-content-address&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如上面列举的代码所示，采用的机制叫&lt;code&gt;multipleformats&lt;/code&gt;，主要包括：&lt;code&gt;multibase-prefix&lt;/code&gt;表示&lt;code&gt;CID&lt;/code&gt;编码成字符串，&lt;code&gt;cid-version&lt;/code&gt;表示版本变量，&lt;code&gt;multicodec-packed-content-type&lt;/code&gt;表示内容的类型和格式（类似于后缀，但是作为标识符的一部分，支持的格式有限，且用户是不能随意修改的），&lt;code&gt;multihash-content-address&lt;/code&gt;表示哈希值（让&lt;code&gt;CID&lt;/code&gt;可以使用不同的Hash函数）。&lt;/p&gt;
+&lt;p&gt;目前&lt;code&gt;CID&lt;/code&gt;支持的&lt;code&gt;multicodec-packed&lt;/code&gt;编码有原生的&lt;code&gt;protobuf&lt;/code&gt;格式、&lt;code&gt;IPLD CBOR&lt;/code&gt;格式、&lt;code&gt;git&lt;/code&gt;、比特币和以太坊对象等格式，也在逐步开发支持更多格式。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;CID&lt;/code&gt;代码详解：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Cid&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;str&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;V0Builder&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{}&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;V1Builder&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{}&lt;/span&gt;
+
+&lt;span class=&#34;nx&#34;&gt;Codec&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;uint64&lt;/span&gt;
+&lt;span class=&#34;nx&#34;&gt;MhType&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;uint64&lt;/span&gt;
+&lt;span class=&#34;nx&#34;&gt;MhLength&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// Default: -1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;Codec&lt;/code&gt;表示内容的编码类型，如&lt;code&gt;DagProtobuf&lt;/code&gt;, &lt;code&gt;DagCBOR&lt;/code&gt;等，&lt;code&gt;MhType&lt;/code&gt;表示哈希算法，如&lt;code&gt;SHA2_256&lt;/code&gt;, &lt;code&gt;SHA2_512&lt;/code&gt;, &lt;code&gt;SHA3_256&lt;/code&gt;, &lt;code&gt;SHA3_512&lt;/code&gt;等，而&lt;code&gt;MhLength&lt;/code&gt;则表示生成哈希的长度。&lt;/p&gt;
+&lt;p&gt;而&lt;code&gt;v0&lt;/code&gt;版本的&lt;code&gt;CID&lt;/code&gt;由&lt;code&gt;V0Builder&lt;/code&gt;生成，以&lt;code&gt;Qm&lt;/code&gt;字符串开头，向后兼容，&lt;code&gt;multibase&lt;/code&gt;一直为&lt;code&gt;base58btc&lt;/code&gt;，&lt;code&gt;multicodec&lt;/code&gt;一直为&lt;code&gt;protobuf-mdag&lt;/code&gt;，&lt;code&gt;cid-version&lt;/code&gt;一直为&lt;code&gt;cidv0&lt;/code&gt;，&lt;code&gt;multihash&lt;/code&gt;表示为&lt;code&gt;cidv0 ::= &amp;lt;multihash-content-address&amp;gt;&lt;/code&gt;。&lt;/p&gt;
+&lt;h4 id=&#34;设计理念&#34;&gt;设计理念&lt;/h4&gt;
+&lt;p&gt;通过&lt;code&gt;CID&lt;/code&gt;这种二进制的特性，大大提高了对于文件Hash的压缩效率，因此可以直接作为URL的一部分进行访问；通过&lt;code&gt;multibase&lt;/code&gt;的编码形式（如&lt;code&gt;base58btc&lt;/code&gt;）缩短了&lt;code&gt;CID&lt;/code&gt;的长度，这样更容易传输；可以表示任意格式、任何哈希函数的结果，十分灵活；可以通过结构中&lt;code&gt;cid-version&lt;/code&gt;参数进行编码版本的升级；不受限于历史内容。&lt;/p&gt;
+&lt;h3 id=&#34;ipns&#34;&gt;IPNS&lt;/h3&gt;
+&lt;p&gt;如上文所述，IPFS中文件内容的改变会造成其哈希值的变化，在实际应用中，如果通过&lt;code&gt;IPFS&lt;/code&gt;托管网站等需要版本更新迭代的应用，每一次都通过更新后的Hash访问很不方便，因此，需要一个映射方案以保证用户体验，这样用户在访问时仅需要访问一个固定地址。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;IPNS(Inter-Planetary Naming System)&lt;/code&gt;就提供了这样的服务，它提供了一个被私钥限定的哈希ID（通常是PeerID）来指向具体的IPFS文件，文件更新后会自动更新哈希ID的指向。&lt;/p&gt;
+&lt;p&gt;即使哈希值可以固定不变了，但是依然不便于记忆和输入，因此，有了更进一步的解决方案。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;IPNS&lt;/code&gt;同样兼容&lt;code&gt;DNS&lt;/code&gt;，可以使用&lt;code&gt;DNS TXT&lt;/code&gt;记录域名对应的&lt;code&gt;IPNS&lt;/code&gt;哈希ID，就可以域名来替换IPNS哈希ID来进行访问，从而实现更容易读写和记忆。&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
+&lt;p&gt;以上就是对&lt;code&gt;IPFS&lt;/code&gt;分布式存储原理的梳理，它的组件、存储流程细节、GC机制、数据交换模块&lt;code&gt;Bitswap&lt;/code&gt;、网络以及实际应用场景都有很多值得深入挖掘的部分。&lt;/p&gt;
+&lt;p&gt;推荐阅读：趣链科技QTech平台《&lt;a href=&#34;https://tech.hyperchain.cn/tag/ipfs/&#34;&gt;IPFS系列文章&lt;/a&gt;》&lt;/p&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://ipfs.io&#34;&gt;IPFS官网&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://tech.hyperchain.cn/ipfs/&#34;&gt;原来IPFS是这样存储文件的&lt;/a&gt;，&lt;em&gt;QTech，趣链科技&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://cloud.tencent.com/developer/news/277198&#34;&gt;IPFS到底怎么工作的？&lt;/a&gt;，&lt;em&gt;知辉&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://learnblockchain.cn/2018/12/12/what-is-ipfs&#34;&gt;站在Web3.0理解IPFS是什么&lt;/a&gt;，&lt;em&gt;Tiny熊，登链社区&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@kidinamoto/ipfs-cid-%E7%A0%94%E7%A9%B6-717c4ceb14a0&#34;&gt;IPFS CID研究&lt;/a&gt;，&lt;em&gt;Sophie Huang&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>Hyperledger Fabric架构详解</title>
       <link>https://www.pseudoyu.com/en/2021/03/20/blockchain_note_hyperledger_fabric_structure/</link>
       <pubDate>Sat, 20 Mar 2021 12:12:17 +0800</pubDate>
@@ -45,7 +261,7 @@
       <guid>https://www.pseudoyu.com/en/2021/03/20/blockchain_note_hyperledger_fabric_structure/</guid>
       
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;因为毕业Case Study的项目主要是基于&lt;code&gt;Ethereum&lt;/code&gt;公链，也没有面向企业的应用场景，所以之前对&lt;code&gt;Hyperledger Fabric&lt;/code&gt;的了解大多只是停留在它的权限管理机制、通道、灵活的智能合约编写等几个特色的概念，对它的架构、各个节点的角色、运行机制等都是一知半解。最近在上HKU的&lt;code&gt;&amp;lt;FITE3011 Distributed Ledger and Blockchain&amp;gt;&lt;/code&gt;课程，教授对&lt;code&gt;Hyperledger Fabric&lt;/code&gt;的工作原理、网络搭建及&lt;code&gt;Chaincode&lt;/code&gt;相关的知识做了很详细的讲解，受益匪浅。因为涉及的内容较多，通过本文来梳理一下，如有错漏，欢迎交流指正。&lt;/p&gt;
+&lt;p&gt;因为毕业Case Study的项目主要是基于&lt;code&gt;Ethereum&lt;/code&gt;公链，也没有面向企业的应用场景，所以之前对&lt;code&gt;Hyperledger Fabric&lt;/code&gt;的了解大多只是停留在它的权限管理机制、通道、灵活的智能合约编写等几个特色的概念，对它的架构、各个节点的角色、运行机制等都是一知半解。最近在上HKU的&lt;code&gt;&amp;lt;FITE3011 Distributed Ledger and Blockchain&amp;gt;&lt;/code&gt;课程，教授对&lt;code&gt;Hyperledger Fabric&lt;/code&gt;的工作原理、网络搭建及链码相关的知识做了很详细的讲解，受益匪浅，通过本文来梳理一下，如有错漏，欢迎交流指正。&lt;/p&gt;
 &lt;h2 id=&#34;hyperledger概述&#34;&gt;Hyperledger概述&lt;/h2&gt;
 &lt;p&gt;要学习&lt;code&gt;Hyperledger Fabric&lt;/code&gt;，先来看看它的母项目&lt;code&gt;Hyperledger&lt;/code&gt;是什么。&lt;/p&gt;
 &lt;p&gt;企业级应用有较复杂的业务逻辑和参与者角色划分，对于业务执行效率、安全性要求很高，并且针对常见的如支付、数据/信息交易等场景，隐私保护也是重中之重，因此，常见的比特币、以太坊等公链并不符合大部分企业应用需求。但是区块链的分布式、不可篡改的历史账本等特性在溯源、跨境电商等场景中又能够避免因各个国家/地区法律法规、货币等造成的复杂操作流程，大大提高效率。因此，针对企业的联盟链也在不断发展。&lt;/p&gt;
@@ -181,229 +397,6 @@
 &lt;li&gt;&lt;a href=&#34;https://github.com/yingpingzhang/enterprise_blockchain_tutorial&#34;&gt;企业级区块链实战教程&lt;/a&gt;，&lt;em&gt;张应平&lt;/em&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>IPFS文件存储模式详解</title>
-      <link>https://www.pseudoyu.com/en/2021/03/18/blockchain_note_ipfs_model/</link>
-      <pubDate>Thu, 18 Mar 2021 16:30:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2021/03/18/blockchain_note_ipfs_model/</guid>
-      
-        <description>&lt;h2 id=&#34;ipfs文件存储模式详解&#34;&gt;IPFS文件存储模式详解&lt;/h2&gt;
-&lt;h3 id=&#34;cid-content-id&#34;&gt;CID (Content-ID)&lt;/h3&gt;
-&lt;p&gt;CID是IPFS分布式文件系统中标准的文件寻址格式&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;内容寻址&lt;/li&gt;
-&lt;li&gt;加密散列算法&lt;/li&gt;
-&lt;li&gt;自我描述&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;之前在IPFS用base58btc对multihashes进行编码，在开发IPLD（InterPlanetary Linked Data，内容可寻址的数据模型，主要用来定义数据，给数据建模）过程中遇到了很多与数据格式相关的棘手问题，CID的出现让管理不同格式的数据成为了可能。&lt;/em&gt;&lt;/p&gt;
-&lt;h4 id=&#34;描述&#34;&gt;描述&lt;/h4&gt;
-&lt;p&gt;&lt;em&gt;CID是一种自描述式的内容寻址的识别符，必须使用加密散列函数来得到内容的地址&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;使用了很多multiformats实现灵活的自描述&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;使用multihash得到哈希值&lt;/li&gt;
-&lt;li&gt;multicodec-packed用于描述内容类型，类似于文件后缀，表示数据的格式，但其是数据标识符的一部分，用户不能随意修改，且支持的格式有限
-&lt;ul&gt;
-&lt;li&gt;原生protobuf格式&lt;/li&gt;
-&lt;li&gt;IPLD CBOR格式&lt;/li&gt;
-&lt;li&gt;git&lt;/li&gt;
-&lt;li&gt;比特币对象&lt;/li&gt;
-&lt;li&gt;以太坊对象&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;multibase将CID本身编码成字符串&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;特点&#34;&gt;特点&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;压缩：CID二进制的特性使其压缩效率非常高，可作为URL的一部分&lt;/li&gt;
-&lt;li&gt;传输友好：以multibase编码来方便传输，如以base58btc编码的CID将长度缩短&lt;/li&gt;
-&lt;li&gt;多变：CID可以表示任意格式，任何哈希函数的结果&lt;/li&gt;
-&lt;li&gt;避免内容锁：防止受限于历史内容&lt;/li&gt;
-&lt;li&gt;可升级：CID的编码版本可升级&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;版本&#34;&gt;版本&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;v0版本的CID由V0Builder生成，以Qm字符串开头，向后兼容&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;multibase&lt;/code&gt;一直为base58btc&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;multicodec&lt;/code&gt;一直为protobuf-mdag&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;cid-version&lt;/code&gt;一直为cidv0&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;multihash&lt;/code&gt;表示为&lt;code&gt;cidv0 ::= &amp;lt;multihash-content-address&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;v1版本的CID由V1Builder生成&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Codec：表示内容的编码类型，如DagProtobuf, DagCBOR等&lt;/li&gt;
-&lt;li&gt;MhType：哈希算法，如SHA2_256, SHA2_512, SHA3_256, SHA3_512等&lt;/li&gt;
-&lt;li&gt;MhLength：生成哈希的长度&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Cid&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;str&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;V0Builder&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{}&lt;/span&gt;
-&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;V1Builder&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{}&lt;/span&gt;
-
-&lt;span class=&#34;nx&#34;&gt;Codec&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;uint64&lt;/span&gt;
-&lt;span class=&#34;nx&#34;&gt;MhType&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;uint64&lt;/span&gt;
-&lt;span class=&#34;nx&#34;&gt;MhLength&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// Default: -1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;cidv1&amp;gt; ::= &amp;lt;mb&amp;gt;&amp;lt;version&amp;gt;&amp;lt;mcp&amp;gt;&amp;lt;mh&amp;gt;
-# or, expanded:
-&amp;lt;cidv1&amp;gt; ::= &amp;lt;multibase-prefix&amp;gt;&amp;lt;cid-version&amp;gt;&amp;lt;multicodec-packed-content-type&amp;gt;&amp;lt;multihash-content-address&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;multibase-prefix&amp;gt;&lt;/code&gt;是一个multibase编码（1-2字节），便于将CID编码成不同的格式&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;cid-version&amp;gt;&lt;/code&gt;是一个表示CID版本的变量，便于以后升级&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;multicodec-packed-content-type&amp;gt;&lt;/code&gt;是一种用multicodec-packed编码表示内容的类型/数据的格式&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;multihash-content-address&amp;gt;&lt;/code&gt;是一个multihash值，表示了内容的加密哈希值，让CID可以使用不同的加密哈希散列函数&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;ipfs文件存储&#34;&gt;IPFS文件存储&lt;/h3&gt;
-&lt;h4 id=&#34;存储步骤&#34;&gt;存储步骤&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;把单个文件拆分成若干个256KB的block
-&lt;ul&gt;
-&lt;li&gt;小文件（小于1KB）会直接和Hash一起上传至IPFS，不会额外占用一个block大小&lt;/li&gt;
-&lt;li&gt;对大文件进行数据追加，如果新增了一个1KB文件，未变化的大文件内容部分并不会分配新的空间，只会为追加部分分配一个新block，再重新上传Hash&lt;/li&gt;
-&lt;li&gt;即使是不同文件的相同部分也只会存储一份，很多文件的索引会指向同一个block，构成MerkleDAG数据结构&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;逐个block计算block哈希值&lt;/li&gt;
-&lt;li&gt;将所有的blockhash值合成一个数组，计算得到最终文件Hash&lt;/li&gt;
-&lt;li&gt;将文件Hash和blockhash数组组合称为一个对象，形成索引结构&lt;/li&gt;
-&lt;li&gt;把block、索引结构全部上传至IPFS节点，文件同步至IPFS网络&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&#34;存储结构&#34;&gt;存储结构&lt;/h4&gt;
-&lt;p&gt;IPFS采用的索引结构是DHT（分布式哈希表）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ipfs_dht.png&#34; alt=&#34;ipfs_dht&#34;&gt;&lt;/p&gt;
-&lt;p&gt;数据结构是MerkleDAG（Merkle有向无环图）&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;内容寻址
-&lt;ul&gt;
-&lt;li&gt;使用多重哈希来唯一识别一个数据块的内容&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;防篡改
-&lt;ul&gt;
-&lt;li&gt;可以方便地检查哈希值来确认数据是否被篡改，如果数据被篡改或损坏，IPFS会检测到&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;去重
-&lt;ul&gt;
-&lt;li&gt;由于内容相同的数据块哈希是相同的，可以很容易去掉重复的数据，节省存储空间&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;ipfs组件&#34;&gt;IPFS组件&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ipfs_components.png&#34; alt=&#34;ipfs_components&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Pining
-&lt;ul&gt;
-&lt;li&gt;负责固定文件/文件块的CID，Pin添加的块不会被GC&lt;/li&gt;
-&lt;li&gt;上传文件最后的文件CID都会被Pin，防止被GC&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;GCBlockstore
-&lt;ul&gt;
-&lt;li&gt;组合Blockstore和GCLocker两个组件&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;BaseBlocks
-&lt;ul&gt;
-&lt;li&gt;原始Blockstore&lt;/li&gt;
-&lt;li&gt;提供对Block的Get/Put/Has/DeleteBlock等操作&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;GCLocker
-&lt;ul&gt;
-&lt;li&gt;锁住Blockstore，防止GC&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Blocks
-&lt;ul&gt;
-&lt;li&gt;提供Block服务&lt;/li&gt;
-&lt;li&gt;组合Blockstore组件&lt;/li&gt;
-&lt;li&gt;提供GetBlock/GetBlocks, AddBlock/AddBlocks, DeleteBlock操作&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;DAG
-&lt;ul&gt;
-&lt;li&gt;IPFS的MerkleDAG服务&lt;/li&gt;
-&lt;li&gt;组合BlockService组件，提供Get/GetMany, Add/AddMany, Remove/RemoveMany等操作&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;ipfs目录结构&#34;&gt;IPFS目录结构&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;.
-├── api
-├── blocks
-│   ├── 2G
-│   ├── 2I
-│   ├── 2J
-│   ├── ...
-│   ├── SD
-│   ├── SHARDING
-│   ├── SP
-│   ├── SU
-│   ├── SX
-│   ├── ...
-│   ├── ZZ
-│   ├── _README
-│   └── diskUsage.cache
-├── config
-├── datastore
-│   ├── 000045.ldb
-│   ├── 000050.ldb
-│   ├── 000051.log
-│   ├── CURRENT
-│   ├── CURRENT.bak
-│   ├── LOCK
-│   ├── LOG
-│   └── MANIFEST-000052
-├── datastore_spec
-├── keystore
-├── repo.lock
-└── version
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
-&lt;li&gt;blocks为文件存储的目录&lt;/li&gt;
-&lt;li&gt;datastore为leveldb的数据库，存储了文件系统的根哈希等&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;数据对象格式&#34;&gt;数据对象格式&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;IPFSObject&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;nx&#34;&gt;links&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;IPFSLink&lt;/span&gt;      &lt;span class=&#34;c1&#34;&gt;// link数组
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;byte&lt;/span&gt;           &lt;span class=&#34;c1&#34;&gt;// 数据内容
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-
-&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;IPFSLink&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;nx&#34;&gt;Name&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;           &lt;span class=&#34;c1&#34;&gt;// link的名字
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;nx&#34;&gt;Hash&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Multihash&lt;/span&gt;        &lt;span class=&#34;c1&#34;&gt;// 数据的加密哈希值
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;nx&#34;&gt;Size&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;              &lt;span class=&#34;c1&#34;&gt;// 数据大小
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;特点-1&#34;&gt;特点&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;存储格式为MerkleDAG&lt;/li&gt;
-&lt;li&gt;每一层Links大小为174个，超过了则会重新调整&lt;/li&gt;
-&lt;li&gt;存储过程中有多个Datastore进行组合与封装，每个Datastore功能单一
-&lt;ul&gt;
-&lt;li&gt;各个组件功能明确
-&lt;ul&gt;
-&lt;li&gt;arccache：Block缓存&lt;/li&gt;
-&lt;li&gt;VerifBS：CID校验&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;调用深度比较深，内部都用interface，不便于阅读&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;ipfs存储应用场景&#34;&gt;IPFS存储应用场景&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;互联网内容分发&lt;/li&gt;
-&lt;li&gt;企业分布式存储服务
-&lt;ul&gt;
-&lt;li&gt;容易进行存储的动态扩容&lt;/li&gt;
-&lt;li&gt;结合节点认证机制和DHT查找内容的剥离&lt;/li&gt;
-&lt;li&gt;配合区块链技术，通过链上链下协同技术，很容易解决存储容量不足的问题&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
 </description>
       
     </item>
@@ -780,169 +773,6 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 </description>
-      
-    </item>
-    
-    <item>
-      <title>IPFS分布式文件存储入门</title>
-      <link>https://www.pseudoyu.com/en/2021/03/16/blockchain_note_ipfs/</link>
-      <pubDate>Tue, 16 Mar 2021 18:46:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2021/03/16/blockchain_note_ipfs/</guid>
-      
-        <description>&lt;h2 id=&#34;ipfs分布式文件存储入门&#34;&gt;IPFS分布式文件存储入门&lt;/h2&gt;
-&lt;h3 id=&#34;传统http存在的问题&#34;&gt;传统HTTP存在的问题&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;内容无法永久保存&lt;/li&gt;
-&lt;li&gt;非常浪费资源&lt;/li&gt;
-&lt;li&gt;安全问题
-&lt;ul&gt;
-&lt;li&gt;DDoS&lt;/li&gt;
-&lt;li&gt;XSS&lt;/li&gt;
-&lt;li&gt;CSRF&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;ipfs简介&#34;&gt;IPFS简介&lt;/h3&gt;
-&lt;p&gt;IPFS (InterPlanetary File System) 星际文件系统，是一个面向全球的、点对点的分布式文件存储系统，目标是为了补充（甚至是取代）目前统治互联网的超文本传输协议(HTTP)，将所有具有相同文件系统的计算设备连接在一起，使数据访问的速度更快、更安全、更健壮、更持久。项目由Juan Benet在2014年5月发起。&lt;/p&gt;
-&lt;p&gt;IPFS的愿景是构建一个全世界的分布式网络，用来替代传统中心化的服务器模式，所有的IPFS节点组成一个分布式网络，每个节点都可以存储文件，用户可以从IPFS构建的网络中以DHT(Distributed Hash Table，分布式哈希表) 的方式获取文件，从而实现了新一代的完全去中心化的网络，旨在取代现有的万维网。&lt;/p&gt;
-&lt;p&gt;一句话概括：IPFS是一种点对点的超媒体文件存储、索引、交换协议。&lt;/p&gt;
-&lt;h4 id=&#34;ipfs特点&#34;&gt;IPFS特点&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;内容可寻址，并且可以确保内容不被篡改（微小的改变也会造成哈希值变得截然不同）&lt;/li&gt;
-&lt;li&gt;因为IPFS是统一的网络，文件不会重复存储（文件名不影响哈希值），节约整体存储空间，网络更加高效&lt;/li&gt;
-&lt;li&gt;文件永久保存（如节点达到一定规模，即使部分节点离线也不会影响读取）&lt;/li&gt;
-&lt;li&gt;IPFS采用分布式存储网络，文件被被存储在不同的网络节点，避免DDoS等网络攻击&lt;/li&gt;
-&lt;li&gt;点对点媒体存储，同一个文件可以从多个节点下载，提高了通信效率&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;ipfs功能&#34;&gt;IPFS功能&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;DHT组网&lt;/li&gt;
-&lt;li&gt;文件存储&lt;/li&gt;
-&lt;li&gt;Bitswap文件交换&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;工作原理&#34;&gt;工作原理&lt;/h4&gt;
-&lt;p&gt;&lt;em&gt;现在的网络服务里，内容是基于位置（IP）寻址的，就是在查找内容的时候，需要先找到内容所在的服务器（根据IP），然后再在服务器上找对应的内容。&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;在IPFS的网络里，是根据内容寻址，每一个‍‍上传到IPFS上面去的文件、文件夹，都是以Qm为开头字母的哈希值，无需知道文件存储在哪里，通过哈希值就能够找到这个文件，这种方式叫内容寻址。&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;在IPFS系统中，内容会分块存放（如果内容很小就会直接存在DHT中），并分散存储在IPFS网络中的节点上（不过目前的IPFS实现，一个节点会完整保存内容的所有区块）。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;系统会给内容的每一个块计算哈希值，然后把所有块的哈希值拼凑起来，再计算一次哈希值，从而得到最终的哈希值&lt;/li&gt;
-&lt;li&gt;同时每个节点会维护一张DHT（分布式哈希表），包含数据块与目标节点的映射关系&lt;/li&gt;
-&lt;li&gt;在IPFS中是通过哈希去请求文件的，它就会使用这个分布式哈希表找到文件所在的节点，取回文件，根据哈希重新组合文件（同样也会验证文件）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;ipns&#34;&gt;IPNS&lt;/h3&gt;
-&lt;p&gt;IPFS中文件内容的改变会造成其哈希值的变化，确保内容不被篡改，提升数据安全性。&lt;/p&gt;
-&lt;p&gt;但网站等需要版本更新迭代的应用则需要一个映射方案以保证用户体验，IPFS提供了IPNS(Inter-Planetary Naming System)，提供了一个被私钥限定的哈希ID（通常是PeerID），用来指向具体的IPFS文件，文件更新且自动更新哈希ID的指向。&lt;/p&gt;
-&lt;p&gt;IPNS同样兼容DNS，使用DNS TXT记录域名对应的IPNS哈希ID，就可以域名来替换IPNS哈希ID来进行访问。从而实现更容易读写和记忆。&lt;/p&gt;
-&lt;h3 id=&#34;ipfs应用场景&#34;&gt;IPFS应用场景&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;在/ipfs和/ipns下挂载全球文件系统&lt;/li&gt;
-&lt;li&gt;挂载的个人同步文件夹，拥有版本管理功能&lt;/li&gt;
-&lt;li&gt;可用于所有软件的带版本的包管理器&lt;/li&gt;
-&lt;li&gt;可以作为数据库&lt;/li&gt;
-&lt;li&gt;可以做（加密）通讯平台&lt;/li&gt;
-&lt;li&gt;各种类型CDN&lt;/li&gt;
-&lt;li&gt;永久Web（不存在失效链接）&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;ipfs入门&#34;&gt;IPFS入门&lt;/h3&gt;
-&lt;h4 id=&#34;安装macos-1123&#34;&gt;安装（macOS 11.2.3）&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;wget https://dist.ipfs.io/go-ipfs/v0.8.0/go-ipfs_v0.8.0_darwin-amd64.tar.gz
-tar -xvzf go-ipfs_v0.8.0_darwin-amd64.tar.gz
-&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; go-ipfs
-./install.sh
-ipfs --version
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;启动&#34;&gt;启动&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 启动节点&lt;/span&gt;
-ipfs init
-
-&lt;span class=&#34;c1&#34;&gt;# 上传文件&lt;/span&gt;
-ipfs add ipfs_init_readme.png
-
-&lt;span class=&#34;c1&#34;&gt;# 上传文件并且只输出哈希值&lt;/span&gt;
-ipfs add -q ipfs_init_readme.png
-
-&lt;span class=&#34;c1&#34;&gt;# 上传目录&lt;/span&gt;
-ipfs add -r &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Dir&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# 查看文件&lt;/span&gt;
-ipfs cat /ipfs/QmQPeNsJPyVWPFDVHb77w8G42Fvo15z4bG2X8D2GhfbSXc/readme
-ipfs cat /ipfs/QmQPeNsJPyVWPFDVHb77w8G42Fvo15z4bG2X8D2GhfbSXc/quick-start
-
-&lt;span class=&#34;c1&#34;&gt;# 查看自己上传的文件&lt;/span&gt;
-ipfs cat QmaP3QS6ZfBoEaUJZ3ZfRKoBm3GGuhQSnUWtkVCNc8ZLTj
-
-&lt;span class=&#34;c1&#34;&gt;# 查看图片并输出到文件&lt;/span&gt;
-ipfs cat QmfViXYw7GA296brLwid255ivDp1kmTiXJw1kmZVsg7DFH &amp;gt; ipfsTest.png
-
-&lt;span class=&#34;c1&#34;&gt;# 下载文件&lt;/span&gt;
-ipfs get QmfViXYw7GA296brLwid255ivDp1kmTiXJw1kmZVsg7DFH -o ipfsTest.png
-
-&lt;span class=&#34;c1&#34;&gt;# 压缩并下载文件&lt;/span&gt;
-ipfs get QmfViXYw7GA296brLwid255ivDp1kmTiXJw1kmZVsg7DFH -Cao ipfsTest.png
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ipfs_init_readme.png&#34; alt=&#34;ipfs_init_readme&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;开启加入服务&#34;&gt;开启/加入服务&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 查看当前节点信息 &lt;/span&gt;
-ipfs id
-
-&lt;span class=&#34;c1&#34;&gt;# 查看IPFS配置信息&lt;/span&gt;
-ipfs config show
-
-&lt;span class=&#34;c1&#34;&gt;# 开启节点服务器&lt;/span&gt;
-ipfs daemon
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;API服务，默认在5001端口，可以通过 http://localhost:5001/webui 进行访问&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ipfs_webui.png&#34; alt=&#34;ipfs_webui&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;网关服务，默认在8080端口，在浏览器里访问文件需要借助于IPFS提供的网关服务，由浏览器先访问到网关，网关去获取IPFS网络杀过了的文件。通过 http://localhost:8080/ipfs/[File Hash] 来访问上传到ipfs的文件&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;文件操作&#34;&gt;文件操作&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 列出文件&lt;/span&gt;
-ipfs files ls
-
-&lt;span class=&#34;c1&#34;&gt;# 创建目录&lt;/span&gt;
-ipfs files mkdir
-
-&lt;span class=&#34;c1&#34;&gt;# 删除文件&lt;/span&gt;
-ipfs files rm
-
-&lt;span class=&#34;c1&#34;&gt;# 拷贝文件&lt;/span&gt;
-ipfs files cp &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; /&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Dest Dir&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# 移动文件&lt;/span&gt;
-ipfs files mv &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; /&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Dest Dir&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# 状态&lt;/span&gt;
-ipfs files stat
-
-&lt;span class=&#34;c1&#34;&gt;# 读取&lt;/span&gt;
-ipfs files &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;使用ipns来解决文件更新问题&#34;&gt;使用IPNS来解决文件更新问题&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 使用IPNS发布内容以自动更新&lt;/span&gt;
-ipfs name publish &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# 查询节点id指向的Hash&lt;/span&gt;
-ipfs name resolve
-
-&lt;span class=&#34;c1&#34;&gt;# 有多个站点需要更新，可以新产生一个秘钥对，使用新的key发布&lt;/span&gt;
-ipfs key gen --type&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;rsa --size&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2048&lt;/span&gt; mykey
-ipfs name publish --key&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;mykey  &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;pinning&#34;&gt;Pinning&lt;/h4&gt;
-&lt;p&gt;当我们向IPFS网络请求文件时，IPFS会把内容先同步的本地提供服务，使用Cache机制处理文件以防止存储空间不断增长，如果文件一段时间未被使用则会被“回收”，Pining的作用就是确保文件在本地不被“回收”。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# pin一个文件&lt;/span&gt;
-ipfs pin add &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# 查询某一个Hash是否被pin&lt;/span&gt;
-ipfs pin ls &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# 删除pin的状态&lt;/span&gt;
-ipfs pin rm -r &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# GC操作&lt;/span&gt;
-ipfs repo gc
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
       
     </item>
     

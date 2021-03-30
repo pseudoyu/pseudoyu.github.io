@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ipfs on Pseudoyu</title>
+    <link>https://www.pseudoyu.com/en/tag/ipfs/</link>
+    <description>Recent content in ipfs on Pseudoyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 27 Mar 2021 18:46:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/ipfs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IPFS本地节点搭建</title>
+      <link>https://www.pseudoyu.com/en/2021/03/27/blockchain_note_ipfs_practice/</link>
+      <pubDate>Sat, 27 Mar 2021 18:46:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2021/03/27/blockchain_note_ipfs_practice/</guid>
+      <description>前言 上一篇《IPFS分布式文件存储原理》对于IPFS系统的设计理念、功能、工作原理及IPNS做了详细的介绍，那么，如何在本地搭建一个IPFS</description>
+    </item>
+    
+    <item>
+      <title>IPFS分布式文件存储原理</title>
+      <link>https://www.pseudoyu.com/en/2021/03/25/blockchain_note_ipfs_structure/</link>
+      <pubDate>Thu, 25 Mar 2021 16:30:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2021/03/25/blockchain_note_ipfs_structure/</guid>
+      <description>前言 最近在做学校的Case Study项目，是一个基于Ethereum平台的音乐版权管理项目，其中对于音乐作品、版权证明文件等上传用到了IPF</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 29 Mar 2021 12:12:17 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 20 Mar 2021 12:12:17 +0800</lastBuildDate>
     
     <atom:link href="https://www.pseudoyu.com/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -39,10 +39,10 @@
     
     <item>
       <title>Hyperledger Fabric详解</title>
-      <link>https://www.pseudoyu.com/en/2021/03/29/blockchain_note_hyperledger_fabric_structure/</link>
-      <pubDate>Mon, 29 Mar 2021 12:12:17 +0800</pubDate>
+      <link>https://www.pseudoyu.com/en/2021/03/20/blockchain_note_hyperledger_fabric_structure/</link>
+      <pubDate>Sat, 20 Mar 2021 12:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/03/29/blockchain_note_hyperledger_fabric_structure/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/03/20/blockchain_note_hyperledger_fabric_structure/</guid>
       
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;因为毕业Case Study的项目主要是基于&lt;code&gt;Ethereum&lt;/code&gt;公链，也没有面向企业的应用场景，所以之前对&lt;code&gt;Hyperledger Fabric&lt;/code&gt;的了解大多只是停留在它的权限管理机制、通道、灵活的智能合约编写等几个特色的概念，对它的架构、各个节点的角色、运行机制等都是一知半解。最近在上HKU的&lt;code&gt;&amp;lt;FITE3011 Distributed Ledger and Blockchain&amp;gt;&lt;/code&gt;课程，教授对&lt;code&gt;Hyperledger Fabric&lt;/code&gt;的工作原理、网络搭建及&lt;code&gt;Chaincode&lt;/code&gt;相关的知识做了很详细的讲解，受益匪浅。因为涉及的内容较多，通过本文来梳理一下，如有错漏，欢迎交流指正~&lt;/p&gt;
@@ -178,10 +178,10 @@
     
     <item>
       <title>IPFS文件存储模式详解</title>
-      <link>https://www.pseudoyu.com/en/2021/03/28/blockchain_note_ipfs_model/</link>
-      <pubDate>Sun, 28 Mar 2021 16:30:17 +0800</pubDate>
+      <link>https://www.pseudoyu.com/en/2021/03/18/blockchain_note_ipfs_model/</link>
+      <pubDate>Thu, 18 Mar 2021 16:30:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/03/28/blockchain_note_ipfs_model/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/03/18/blockchain_note_ipfs_model/</guid>
       
         <description>&lt;h2 id=&#34;ipfs文件存储模式详解&#34;&gt;IPFS文件存储模式详解&lt;/h2&gt;
 &lt;h3 id=&#34;cid-content-id&#34;&gt;CID (Content-ID)&lt;/h3&gt;
@@ -396,169 +396,6 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 </description>
-      
-    </item>
-    
-    <item>
-      <title>IPFS分布式文件存储入门</title>
-      <link>https://www.pseudoyu.com/en/2021/03/25/blockchain_note_ipfs/</link>
-      <pubDate>Thu, 25 Mar 2021 18:46:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2021/03/25/blockchain_note_ipfs/</guid>
-      
-        <description>&lt;h2 id=&#34;ipfs分布式文件存储入门&#34;&gt;IPFS分布式文件存储入门&lt;/h2&gt;
-&lt;h3 id=&#34;传统http存在的问题&#34;&gt;传统HTTP存在的问题&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;内容无法永久保存&lt;/li&gt;
-&lt;li&gt;非常浪费资源&lt;/li&gt;
-&lt;li&gt;安全问题
-&lt;ul&gt;
-&lt;li&gt;DDoS&lt;/li&gt;
-&lt;li&gt;XSS&lt;/li&gt;
-&lt;li&gt;CSRF&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;ipfs简介&#34;&gt;IPFS简介&lt;/h3&gt;
-&lt;p&gt;IPFS (InterPlanetary File System) 星际文件系统，是一个面向全球的、点对点的分布式文件存储系统，目标是为了补充（甚至是取代）目前统治互联网的超文本传输协议(HTTP)，将所有具有相同文件系统的计算设备连接在一起，使数据访问的速度更快、更安全、更健壮、更持久。项目由Juan Benet在2014年5月发起。&lt;/p&gt;
-&lt;p&gt;IPFS的愿景是构建一个全世界的分布式网络，用来替代传统中心化的服务器模式，所有的IPFS节点组成一个分布式网络，每个节点都可以存储文件，用户可以从IPFS构建的网络中以DHT(Distributed Hash Table，分布式哈希表) 的方式获取文件，从而实现了新一代的完全去中心化的网络，旨在取代现有的万维网。&lt;/p&gt;
-&lt;p&gt;一句话概括：IPFS是一种点对点的超媒体文件存储、索引、交换协议。&lt;/p&gt;
-&lt;h4 id=&#34;ipfs特点&#34;&gt;IPFS特点&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;内容可寻址，并且可以确保内容不被篡改（微小的改变也会造成哈希值变得截然不同）&lt;/li&gt;
-&lt;li&gt;因为IPFS是统一的网络，文件不会重复存储（文件名不影响哈希值），节约整体存储空间，网络更加高效&lt;/li&gt;
-&lt;li&gt;文件永久保存（如节点达到一定规模，即使部分节点离线也不会影响读取）&lt;/li&gt;
-&lt;li&gt;IPFS采用分布式存储网络，文件被被存储在不同的网络节点，避免DDoS等网络攻击&lt;/li&gt;
-&lt;li&gt;点对点媒体存储，同一个文件可以从多个节点下载，提高了通信效率&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;ipfs功能&#34;&gt;IPFS功能&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;DHT组网&lt;/li&gt;
-&lt;li&gt;文件存储&lt;/li&gt;
-&lt;li&gt;Bitswap文件交换&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;工作原理&#34;&gt;工作原理&lt;/h4&gt;
-&lt;p&gt;&lt;em&gt;现在的网络服务里，内容是基于位置（IP）寻址的，就是在查找内容的时候，需要先找到内容所在的服务器（根据IP），然后再在服务器上找对应的内容。&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;在IPFS的网络里，是根据内容寻址，每一个‍‍上传到IPFS上面去的文件、文件夹，都是以Qm为开头字母的哈希值，无需知道文件存储在哪里，通过哈希值就能够找到这个文件，这种方式叫内容寻址。&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;在IPFS系统中，内容会分块存放（如果内容很小就会直接存在DHT中），并分散存储在IPFS网络中的节点上（不过目前的IPFS实现，一个节点会完整保存内容的所有区块）。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;系统会给内容的每一个块计算哈希值，然后把所有块的哈希值拼凑起来，再计算一次哈希值，从而得到最终的哈希值&lt;/li&gt;
-&lt;li&gt;同时每个节点会维护一张DHT（分布式哈希表），包含数据块与目标节点的映射关系&lt;/li&gt;
-&lt;li&gt;在IPFS中是通过哈希去请求文件的，它就会使用这个分布式哈希表找到文件所在的节点，取回文件，根据哈希重新组合文件（同样也会验证文件）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;ipns&#34;&gt;IPNS&lt;/h3&gt;
-&lt;p&gt;IPFS中文件内容的改变会造成其哈希值的变化，确保内容不被篡改，提升数据安全性。&lt;/p&gt;
-&lt;p&gt;但网站等需要版本更新迭代的应用则需要一个映射方案以保证用户体验，IPFS提供了IPNS(Inter-Planetary Naming System)，提供了一个被私钥限定的哈希ID（通常是PeerID），用来指向具体的IPFS文件，文件更新且自动更新哈希ID的指向。&lt;/p&gt;
-&lt;p&gt;IPNS同样兼容DNS，使用DNS TXT记录域名对应的IPNS哈希ID，就可以域名来替换IPNS哈希ID来进行访问。从而实现更容易读写和记忆。&lt;/p&gt;
-&lt;h3 id=&#34;ipfs应用场景&#34;&gt;IPFS应用场景&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;在/ipfs和/ipns下挂载全球文件系统&lt;/li&gt;
-&lt;li&gt;挂载的个人同步文件夹，拥有版本管理功能&lt;/li&gt;
-&lt;li&gt;可用于所有软件的带版本的包管理器&lt;/li&gt;
-&lt;li&gt;可以作为数据库&lt;/li&gt;
-&lt;li&gt;可以做（加密）通讯平台&lt;/li&gt;
-&lt;li&gt;各种类型CDN&lt;/li&gt;
-&lt;li&gt;永久Web（不存在失效链接）&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;ipfs入门&#34;&gt;IPFS入门&lt;/h3&gt;
-&lt;h4 id=&#34;安装macos-1123&#34;&gt;安装（macOS 11.2.3）&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;wget https://dist.ipfs.io/go-ipfs/v0.8.0/go-ipfs_v0.8.0_darwin-amd64.tar.gz
-tar -xvzf go-ipfs_v0.8.0_darwin-amd64.tar.gz
-&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; go-ipfs
-./install.sh
-ipfs --version
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;启动&#34;&gt;启动&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 启动节点&lt;/span&gt;
-ipfs init
-
-&lt;span class=&#34;c1&#34;&gt;# 上传文件&lt;/span&gt;
-ipfs add ipfs_init_readme.png
-
-&lt;span class=&#34;c1&#34;&gt;# 上传文件并且只输出哈希值&lt;/span&gt;
-ipfs add -q ipfs_init_readme.png
-
-&lt;span class=&#34;c1&#34;&gt;# 上传目录&lt;/span&gt;
-ipfs add -r &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Dir&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# 查看文件&lt;/span&gt;
-ipfs cat /ipfs/QmQPeNsJPyVWPFDVHb77w8G42Fvo15z4bG2X8D2GhfbSXc/readme
-ipfs cat /ipfs/QmQPeNsJPyVWPFDVHb77w8G42Fvo15z4bG2X8D2GhfbSXc/quick-start
-
-&lt;span class=&#34;c1&#34;&gt;# 查看自己上传的文件&lt;/span&gt;
-ipfs cat QmaP3QS6ZfBoEaUJZ3ZfRKoBm3GGuhQSnUWtkVCNc8ZLTj
-
-&lt;span class=&#34;c1&#34;&gt;# 查看图片并输出到文件&lt;/span&gt;
-ipfs cat QmfViXYw7GA296brLwid255ivDp1kmTiXJw1kmZVsg7DFH &amp;gt; ipfsTest.png
-
-&lt;span class=&#34;c1&#34;&gt;# 下载文件&lt;/span&gt;
-ipfs get QmfViXYw7GA296brLwid255ivDp1kmTiXJw1kmZVsg7DFH -o ipfsTest.png
-
-&lt;span class=&#34;c1&#34;&gt;# 压缩并下载文件&lt;/span&gt;
-ipfs get QmfViXYw7GA296brLwid255ivDp1kmTiXJw1kmZVsg7DFH -Cao ipfsTest.png
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ipfs_init_readme.png&#34; alt=&#34;ipfs_init_readme&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;开启加入服务&#34;&gt;开启/加入服务&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 查看当前节点信息 &lt;/span&gt;
-ipfs id
-
-&lt;span class=&#34;c1&#34;&gt;# 查看IPFS配置信息&lt;/span&gt;
-ipfs config show
-
-&lt;span class=&#34;c1&#34;&gt;# 开启节点服务器&lt;/span&gt;
-ipfs daemon
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;API服务，默认在5001端口，可以通过 http://localhost:5001/webui 进行访问&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ipfs_webui.png&#34; alt=&#34;ipfs_webui&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;网关服务，默认在8080端口，在浏览器里访问文件需要借助于IPFS提供的网关服务，由浏览器先访问到网关，网关去获取IPFS网络杀过了的文件。通过 http://localhost:8080/ipfs/[File Hash] 来访问上传到ipfs的文件&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;文件操作&#34;&gt;文件操作&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 列出文件&lt;/span&gt;
-ipfs files ls
-
-&lt;span class=&#34;c1&#34;&gt;# 创建目录&lt;/span&gt;
-ipfs files mkdir
-
-&lt;span class=&#34;c1&#34;&gt;# 删除文件&lt;/span&gt;
-ipfs files rm
-
-&lt;span class=&#34;c1&#34;&gt;# 拷贝文件&lt;/span&gt;
-ipfs files cp &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; /&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Dest Dir&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# 移动文件&lt;/span&gt;
-ipfs files mv &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; /&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Dest Dir&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# 状态&lt;/span&gt;
-ipfs files stat
-
-&lt;span class=&#34;c1&#34;&gt;# 读取&lt;/span&gt;
-ipfs files &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;使用ipns来解决文件更新问题&#34;&gt;使用IPNS来解决文件更新问题&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 使用IPNS发布内容以自动更新&lt;/span&gt;
-ipfs name publish &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# 查询节点id指向的Hash&lt;/span&gt;
-ipfs name resolve
-
-&lt;span class=&#34;c1&#34;&gt;# 有多个站点需要更新，可以新产生一个秘钥对，使用新的key发布&lt;/span&gt;
-ipfs key gen --type&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;rsa --size&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2048&lt;/span&gt; mykey
-ipfs name publish --key&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;mykey  &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;pinning&#34;&gt;Pinning&lt;/h4&gt;
-&lt;p&gt;当我们向IPFS网络请求文件时，IPFS会把内容先同步的本地提供服务，使用Cache机制处理文件以防止存储空间不断增长，如果文件一段时间未被使用则会被“回收”，Pining的作用就是确保文件在本地不被“回收”。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# pin一个文件&lt;/span&gt;
-ipfs pin add &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# 查询某一个Hash是否被pin&lt;/span&gt;
-ipfs pin ls &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# 删除pin的状态&lt;/span&gt;
-ipfs pin rm -r &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# GC操作&lt;/span&gt;
-ipfs repo gc
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
       
     </item>
     
@@ -934,6 +771,169 @@ ipfs repo gc
 &lt;/li&gt;
 &lt;/ul&gt;
 </description>
+      
+    </item>
+    
+    <item>
+      <title>IPFS分布式文件存储入门</title>
+      <link>https://www.pseudoyu.com/en/2021/03/16/blockchain_note_ipfs/</link>
+      <pubDate>Tue, 16 Mar 2021 18:46:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2021/03/16/blockchain_note_ipfs/</guid>
+      
+        <description>&lt;h2 id=&#34;ipfs分布式文件存储入门&#34;&gt;IPFS分布式文件存储入门&lt;/h2&gt;
+&lt;h3 id=&#34;传统http存在的问题&#34;&gt;传统HTTP存在的问题&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;内容无法永久保存&lt;/li&gt;
+&lt;li&gt;非常浪费资源&lt;/li&gt;
+&lt;li&gt;安全问题
+&lt;ul&gt;
+&lt;li&gt;DDoS&lt;/li&gt;
+&lt;li&gt;XSS&lt;/li&gt;
+&lt;li&gt;CSRF&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;ipfs简介&#34;&gt;IPFS简介&lt;/h3&gt;
+&lt;p&gt;IPFS (InterPlanetary File System) 星际文件系统，是一个面向全球的、点对点的分布式文件存储系统，目标是为了补充（甚至是取代）目前统治互联网的超文本传输协议(HTTP)，将所有具有相同文件系统的计算设备连接在一起，使数据访问的速度更快、更安全、更健壮、更持久。项目由Juan Benet在2014年5月发起。&lt;/p&gt;
+&lt;p&gt;IPFS的愿景是构建一个全世界的分布式网络，用来替代传统中心化的服务器模式，所有的IPFS节点组成一个分布式网络，每个节点都可以存储文件，用户可以从IPFS构建的网络中以DHT(Distributed Hash Table，分布式哈希表) 的方式获取文件，从而实现了新一代的完全去中心化的网络，旨在取代现有的万维网。&lt;/p&gt;
+&lt;p&gt;一句话概括：IPFS是一种点对点的超媒体文件存储、索引、交换协议。&lt;/p&gt;
+&lt;h4 id=&#34;ipfs特点&#34;&gt;IPFS特点&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;内容可寻址，并且可以确保内容不被篡改（微小的改变也会造成哈希值变得截然不同）&lt;/li&gt;
+&lt;li&gt;因为IPFS是统一的网络，文件不会重复存储（文件名不影响哈希值），节约整体存储空间，网络更加高效&lt;/li&gt;
+&lt;li&gt;文件永久保存（如节点达到一定规模，即使部分节点离线也不会影响读取）&lt;/li&gt;
+&lt;li&gt;IPFS采用分布式存储网络，文件被被存储在不同的网络节点，避免DDoS等网络攻击&lt;/li&gt;
+&lt;li&gt;点对点媒体存储，同一个文件可以从多个节点下载，提高了通信效率&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;ipfs功能&#34;&gt;IPFS功能&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;DHT组网&lt;/li&gt;
+&lt;li&gt;文件存储&lt;/li&gt;
+&lt;li&gt;Bitswap文件交换&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;工作原理&#34;&gt;工作原理&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;现在的网络服务里，内容是基于位置（IP）寻址的，就是在查找内容的时候，需要先找到内容所在的服务器（根据IP），然后再在服务器上找对应的内容。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;在IPFS的网络里，是根据内容寻址，每一个‍‍上传到IPFS上面去的文件、文件夹，都是以Qm为开头字母的哈希值，无需知道文件存储在哪里，通过哈希值就能够找到这个文件，这种方式叫内容寻址。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;在IPFS系统中，内容会分块存放（如果内容很小就会直接存在DHT中），并分散存储在IPFS网络中的节点上（不过目前的IPFS实现，一个节点会完整保存内容的所有区块）。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;系统会给内容的每一个块计算哈希值，然后把所有块的哈希值拼凑起来，再计算一次哈希值，从而得到最终的哈希值&lt;/li&gt;
+&lt;li&gt;同时每个节点会维护一张DHT（分布式哈希表），包含数据块与目标节点的映射关系&lt;/li&gt;
+&lt;li&gt;在IPFS中是通过哈希去请求文件的，它就会使用这个分布式哈希表找到文件所在的节点，取回文件，根据哈希重新组合文件（同样也会验证文件）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;ipns&#34;&gt;IPNS&lt;/h3&gt;
+&lt;p&gt;IPFS中文件内容的改变会造成其哈希值的变化，确保内容不被篡改，提升数据安全性。&lt;/p&gt;
+&lt;p&gt;但网站等需要版本更新迭代的应用则需要一个映射方案以保证用户体验，IPFS提供了IPNS(Inter-Planetary Naming System)，提供了一个被私钥限定的哈希ID（通常是PeerID），用来指向具体的IPFS文件，文件更新且自动更新哈希ID的指向。&lt;/p&gt;
+&lt;p&gt;IPNS同样兼容DNS，使用DNS TXT记录域名对应的IPNS哈希ID，就可以域名来替换IPNS哈希ID来进行访问。从而实现更容易读写和记忆。&lt;/p&gt;
+&lt;h3 id=&#34;ipfs应用场景&#34;&gt;IPFS应用场景&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;在/ipfs和/ipns下挂载全球文件系统&lt;/li&gt;
+&lt;li&gt;挂载的个人同步文件夹，拥有版本管理功能&lt;/li&gt;
+&lt;li&gt;可用于所有软件的带版本的包管理器&lt;/li&gt;
+&lt;li&gt;可以作为数据库&lt;/li&gt;
+&lt;li&gt;可以做（加密）通讯平台&lt;/li&gt;
+&lt;li&gt;各种类型CDN&lt;/li&gt;
+&lt;li&gt;永久Web（不存在失效链接）&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;ipfs入门&#34;&gt;IPFS入门&lt;/h3&gt;
+&lt;h4 id=&#34;安装macos-1123&#34;&gt;安装（macOS 11.2.3）&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;wget https://dist.ipfs.io/go-ipfs/v0.8.0/go-ipfs_v0.8.0_darwin-amd64.tar.gz
+tar -xvzf go-ipfs_v0.8.0_darwin-amd64.tar.gz
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; go-ipfs
+./install.sh
+ipfs --version
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;启动&#34;&gt;启动&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 启动节点&lt;/span&gt;
+ipfs init
+
+&lt;span class=&#34;c1&#34;&gt;# 上传文件&lt;/span&gt;
+ipfs add ipfs_init_readme.png
+
+&lt;span class=&#34;c1&#34;&gt;# 上传文件并且只输出哈希值&lt;/span&gt;
+ipfs add -q ipfs_init_readme.png
+
+&lt;span class=&#34;c1&#34;&gt;# 上传目录&lt;/span&gt;
+ipfs add -r &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Dir&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# 查看文件&lt;/span&gt;
+ipfs cat /ipfs/QmQPeNsJPyVWPFDVHb77w8G42Fvo15z4bG2X8D2GhfbSXc/readme
+ipfs cat /ipfs/QmQPeNsJPyVWPFDVHb77w8G42Fvo15z4bG2X8D2GhfbSXc/quick-start
+
+&lt;span class=&#34;c1&#34;&gt;# 查看自己上传的文件&lt;/span&gt;
+ipfs cat QmaP3QS6ZfBoEaUJZ3ZfRKoBm3GGuhQSnUWtkVCNc8ZLTj
+
+&lt;span class=&#34;c1&#34;&gt;# 查看图片并输出到文件&lt;/span&gt;
+ipfs cat QmfViXYw7GA296brLwid255ivDp1kmTiXJw1kmZVsg7DFH &amp;gt; ipfsTest.png
+
+&lt;span class=&#34;c1&#34;&gt;# 下载文件&lt;/span&gt;
+ipfs get QmfViXYw7GA296brLwid255ivDp1kmTiXJw1kmZVsg7DFH -o ipfsTest.png
+
+&lt;span class=&#34;c1&#34;&gt;# 压缩并下载文件&lt;/span&gt;
+ipfs get QmfViXYw7GA296brLwid255ivDp1kmTiXJw1kmZVsg7DFH -Cao ipfsTest.png
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ipfs_init_readme.png&#34; alt=&#34;ipfs_init_readme&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;开启加入服务&#34;&gt;开启/加入服务&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 查看当前节点信息 &lt;/span&gt;
+ipfs id
+
+&lt;span class=&#34;c1&#34;&gt;# 查看IPFS配置信息&lt;/span&gt;
+ipfs config show
+
+&lt;span class=&#34;c1&#34;&gt;# 开启节点服务器&lt;/span&gt;
+ipfs daemon
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;API服务，默认在5001端口，可以通过 http://localhost:5001/webui 进行访问&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ipfs_webui.png&#34; alt=&#34;ipfs_webui&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;网关服务，默认在8080端口，在浏览器里访问文件需要借助于IPFS提供的网关服务，由浏览器先访问到网关，网关去获取IPFS网络杀过了的文件。通过 http://localhost:8080/ipfs/[File Hash] 来访问上传到ipfs的文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;文件操作&#34;&gt;文件操作&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 列出文件&lt;/span&gt;
+ipfs files ls
+
+&lt;span class=&#34;c1&#34;&gt;# 创建目录&lt;/span&gt;
+ipfs files mkdir
+
+&lt;span class=&#34;c1&#34;&gt;# 删除文件&lt;/span&gt;
+ipfs files rm
+
+&lt;span class=&#34;c1&#34;&gt;# 拷贝文件&lt;/span&gt;
+ipfs files cp &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; /&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Dest Dir&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# 移动文件&lt;/span&gt;
+ipfs files mv &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; /&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Dest Dir&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# 状态&lt;/span&gt;
+ipfs files stat
+
+&lt;span class=&#34;c1&#34;&gt;# 读取&lt;/span&gt;
+ipfs files &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;使用ipns来解决文件更新问题&#34;&gt;使用IPNS来解决文件更新问题&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 使用IPNS发布内容以自动更新&lt;/span&gt;
+ipfs name publish &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# 查询节点id指向的Hash&lt;/span&gt;
+ipfs name resolve
+
+&lt;span class=&#34;c1&#34;&gt;# 有多个站点需要更新，可以新产生一个秘钥对，使用新的key发布&lt;/span&gt;
+ipfs key gen --type&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;rsa --size&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2048&lt;/span&gt; mykey
+ipfs name publish --key&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;mykey  &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;pinning&#34;&gt;Pinning&lt;/h4&gt;
+&lt;p&gt;当我们向IPFS网络请求文件时，IPFS会把内容先同步的本地提供服务，使用Cache机制处理文件以防止存储空间不断增长，如果文件一段时间未被使用则会被“回收”，Pining的作用就是确保文件在本地不被“回收”。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# pin一个文件&lt;/span&gt;
+ipfs pin add &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# 查询某一个Hash是否被pin&lt;/span&gt;
+ipfs pin ls &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# 删除pin的状态&lt;/span&gt;
+ipfs pin rm -r &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# GC操作&lt;/span&gt;
+ipfs repo gc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
       
     </item>
     

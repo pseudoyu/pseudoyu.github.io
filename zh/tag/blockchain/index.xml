@@ -6,31 +6,31 @@
     <description>Recent content in blockchain on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 29 Mar 2021 12:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/blockchain/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Mar 2021 12:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/blockchain/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hyperledger Fabric详解</title>
-      <link>https://www.pseudoyu.com/zh/2021/03/29/blockchain_note_hyperledger_fabric_structure/</link>
-      <pubDate>Mon, 29 Mar 2021 12:12:17 +0800</pubDate>
+      <link>https://www.pseudoyu.com/zh/2021/03/20/blockchain_note_hyperledger_fabric_structure/</link>
+      <pubDate>Sat, 20 Mar 2021 12:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2021/03/29/blockchain_note_hyperledger_fabric_structure/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/03/20/blockchain_note_hyperledger_fabric_structure/</guid>
       <description>前言 因为毕业Case Study的项目主要是基于Ethereum公链，也没有面向企业的应用场景，所以之前对Hyperledger Fabric的</description>
     </item>
     
     <item>
       <title>IPFS文件存储模式详解</title>
-      <link>https://www.pseudoyu.com/zh/2021/03/28/blockchain_note_ipfs_model/</link>
-      <pubDate>Sun, 28 Mar 2021 16:30:17 +0800</pubDate>
+      <link>https://www.pseudoyu.com/zh/2021/03/18/blockchain_note_ipfs_model/</link>
+      <pubDate>Thu, 18 Mar 2021 16:30:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2021/03/28/blockchain_note_ipfs_model/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/03/18/blockchain_note_ipfs_model/</guid>
       <description>IPFS文件存储模式详解 CID (Content-ID) CID是IPFS分布式文件系统中标准的文件寻址格式 内容寻址 加密散列算法 自我描述 之前在IPFS用base58btc</description>
     </item>
     
     <item>
       <title>IPFS分布式文件存储入门</title>
-      <link>https://www.pseudoyu.com/zh/2021/03/25/blockchain_note_ipfs/</link>
-      <pubDate>Thu, 25 Mar 2021 18:46:17 +0800</pubDate>
+      <link>https://www.pseudoyu.com/zh/2021/03/16/blockchain_note_ipfs/</link>
+      <pubDate>Tue, 16 Mar 2021 18:46:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2021/03/25/blockchain_note_ipfs/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/03/16/blockchain_note_ipfs/</guid>
       <description>IPFS分布式文件存储入门 传统HTTP存在的问题 内容无法永久保存 非常浪费资源 安全问题 DDoS XSS CSRF IPFS简介 IPFS (InterPlanetary File System) 星际文件系统，是一个面向全球的</description>
     </item>
     

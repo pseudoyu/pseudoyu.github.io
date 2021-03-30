@@ -38,14 +38,14 @@
     </item>
     
     <item>
-      <title>Hyperledger Fabric详解</title>
+      <title>Hyperledger Fabric架构详解</title>
       <link>https://www.pseudoyu.com/zh/2021/03/20/blockchain_note_hyperledger_fabric_structure/</link>
       <pubDate>Sat, 20 Mar 2021 12:12:17 +0800</pubDate>
       
       <guid>https://www.pseudoyu.com/zh/2021/03/20/blockchain_note_hyperledger_fabric_structure/</guid>
       
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;因为毕业Case Study的项目主要是基于&lt;code&gt;Ethereum&lt;/code&gt;公链，也没有面向企业的应用场景，所以之前对&lt;code&gt;Hyperledger Fabric&lt;/code&gt;的了解大多只是停留在它的权限管理机制、通道、灵活的智能合约编写等几个特色的概念，对它的架构、各个节点的角色、运行机制等都是一知半解。最近在上HKU的&lt;code&gt;&amp;lt;FITE3011 Distributed Ledger and Blockchain&amp;gt;&lt;/code&gt;课程，教授对&lt;code&gt;Hyperledger Fabric&lt;/code&gt;的工作原理、网络搭建及&lt;code&gt;Chaincode&lt;/code&gt;相关的知识做了很详细的讲解，受益匪浅。因为涉及的内容较多，通过本文来梳理一下，如有错漏，欢迎交流指正~&lt;/p&gt;
+&lt;p&gt;因为毕业Case Study的项目主要是基于&lt;code&gt;Ethereum&lt;/code&gt;公链，也没有面向企业的应用场景，所以之前对&lt;code&gt;Hyperledger Fabric&lt;/code&gt;的了解大多只是停留在它的权限管理机制、通道、灵活的智能合约编写等几个特色的概念，对它的架构、各个节点的角色、运行机制等都是一知半解。最近在上HKU的&lt;code&gt;&amp;lt;FITE3011 Distributed Ledger and Blockchain&amp;gt;&lt;/code&gt;课程，教授对&lt;code&gt;Hyperledger Fabric&lt;/code&gt;的工作原理、网络搭建及&lt;code&gt;Chaincode&lt;/code&gt;相关的知识做了很详细的讲解，受益匪浅。因为涉及的内容较多，通过本文来梳理一下，如有错漏，欢迎交流指正。&lt;/p&gt;
 &lt;h2 id=&#34;hyperledger概述&#34;&gt;Hyperledger概述&lt;/h2&gt;
 &lt;p&gt;要学习&lt;code&gt;Hyperledger Fabric&lt;/code&gt;，先来看看它的母项目&lt;code&gt;Hyperledger&lt;/code&gt;是什么。&lt;/p&gt;
 &lt;p&gt;企业级应用有较复杂的业务逻辑和参与者角色划分，对于业务执行效率、安全性要求很高，并且针对常见的如支付、数据/信息交易等场景，隐私保护也是重中之重，因此，常见的比特币、以太坊等公链并不符合大部分企业应用需求。但是区块链的分布式、不可篡改的历史账本等特性在溯源、跨境电商等场景中又能够避免因各个国家/地区法律法规、货币等造成的复杂操作流程，大大提高效率。因此，针对企业的联盟链也在不断发展。&lt;/p&gt;
@@ -172,6 +172,15 @@
 &lt;p&gt;Raft共识机制属于非拜占庭共识机制，使用了领导者和跟随者（Leader和Follower）模型，当一个Leader被选出，日志信息会从Leader向Follower单向复制，更容易管理，在设计上允许所有节点都可以称为Orderer节点，相比Kafka更中心化，其实也允许采用PBFT共识机制，但是性能往往很差。&lt;/p&gt;
 &lt;h4 id=&#34;验证环节&#34;&gt;验证环节&lt;/h4&gt;
 &lt;p&gt;当节点接收到由排序节点发送来的区块时，会对区块中的所有交易进行验证并标记是否可信，主要验证两个方面：1.是否满足背书策略。2.交易结构的合法性，是否有状态冲突，如Read-Set中的&lt;code&gt;version&lt;/code&gt;是否一致等。&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
+&lt;p&gt;以上就是对&lt;code&gt;Hyperledger Fabric&lt;/code&gt;架构的梳理了，虽然取舍了部分去中心化的理念，但是作为一个面向企业应用的开源联盟链，它鼓励了更多企业参与到分布式账本技术的建设和应用中来，现在国内也有很多联盟链的自研平台，如蚂蚁链、趣链等，相信未来会有更多企业参与到这个开放的生态体系！&lt;/p&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&amp;ldquo;FITE3011 Distributed Ledger and Blockchain&amp;rdquo; Lecture Slides, &lt;em&gt;Allen Au，HKU&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/yingpingzhang/enterprise_blockchain_tutorial&#34;&gt;企业级区块链实战教程&lt;/a&gt;，&lt;em&gt;张应平&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
 </description>
       
     </item>

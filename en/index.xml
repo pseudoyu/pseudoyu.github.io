@@ -158,7 +158,7 @@ ipfs repo gc
       <guid>https://www.pseudoyu.com/en/2021/03/25/blockchain_note_ipfs_structure/</guid>
       
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;最近在做学校的Case Study项目，是一个基于Ethereum平台的音乐版权管理项目，其中对于音乐作品、版权证明文件等上传用到了IPFS分布式文件存储技术，主要是利用其去重的特性来检测侵权行为。对IPFS这个系统产生了兴趣，阅读了&lt;a href=&#34;https://tech.hyperchain.cn&#34;&gt;QTech平台&lt;/a&gt;上的&lt;a href=&#34;https://tech.hyperchain.cn/tag/ipfs/&#34;&gt;IPFS系列文章&lt;/a&gt;，也查询了一些相关资料，通过本文梳理一下，如有错漏，欢迎交流指正。&lt;/p&gt;
+&lt;p&gt;最近在做学校的Case Study项目，是一个基于&lt;code&gt;Ethereum&lt;/code&gt;平台的音乐版权管理项目，其中对于音乐作品、版权证明文件等上传用到了IPFS分布式文件存储技术，主要是利用其去重的特性来检测侵权行为。对IPFS这个系统产生了兴趣，阅读了&lt;a href=&#34;https://tech.hyperchain.cn&#34;&gt;QTech平台&lt;/a&gt;上的&lt;a href=&#34;https://tech.hyperchain.cn/tag/ipfs/&#34;&gt;IPFS系列文章&lt;/a&gt;，也查询了一些相关资料，通过本文梳理一下，如有错漏，欢迎交流指正。&lt;/p&gt;
 &lt;h3 id=&#34;概述&#34;&gt;概述&lt;/h3&gt;
 &lt;p&gt;我们日常使用网盘或其他服务时大多都是访问文件所在的特定的服务器（IP地址），请求文件并下载到本地，通过的是HTTP协议，本质上是基于位置寻址的，访问URL来得到一层层找到具体的文件，这种方式固然便捷，但是存在一些问题。文件依托于特定的服务器，因此一旦中心化的服务器宕机或者文件被删除了，内容将永久丢失，并且如果离服务器很远/同时访问文件的人很多的话访问速度也会比较慢；而且同样一份文件可能重复存储在不同的服务器中，造成资源的浪费；此外就是存在严重的安全隐患，DDoS、XSS、CSRF等攻击都可能对文件安全性造成威胁。&lt;/p&gt;
 &lt;blockquote&gt;

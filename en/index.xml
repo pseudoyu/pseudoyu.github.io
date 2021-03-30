@@ -235,9 +235,9 @@ ipfs repo gc
 &lt;p&gt;如上文所述，IPFS中文件内容的改变会造成其哈希值的变化，在实际应用中，如果通过IPFS托管网站等需要版本更新迭代的应用，每一次都通过更新后的Hash访问很不方便，因此，需要一个映射方案以保证用户体验，这样用户在访问时仅需要访问一个固定地址。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;IPNS(Inter-Planetary Naming System)&lt;/code&gt;就提供了这样的服务，它提供了一个被私钥限定的哈希ID（通常是PeerID）来指向具体的IPFS文件，文件更新后会自动更新哈希ID的指向。&lt;/p&gt;
 &lt;p&gt;即使哈希值可以固定不变了，但是依然不便于记忆和输入，因此，有了更进一步的解决方案。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;IPNS&lt;/code&gt;同样兼容&lt;code&gt;DNS&lt;/code&gt;，可以使用&lt;code&gt;DNS TXT&lt;/code&gt;记录域名对应的&lt;code&gt;IPNS&lt;/code&gt;哈希ID，就可以域名来替换IPNS哈希ID来进行访问，从而实现更容易读写和记忆。&lt;/p&gt;
+&lt;p&gt;IPNS同样兼容DNS，可以使用&lt;code&gt;DNS TXT&lt;/code&gt;记录域名对应的IPNS哈希ID，就可以域名来替换IPNS哈希ID来进行访问，从而实现更容易读写和记忆。&lt;/p&gt;
 &lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
-&lt;p&gt;以上就是对&lt;code&gt;IPFS&lt;/code&gt;分布式存储原理的梳理，它的组件、存储流程细节、GC机制、数据交换模块Bitswap、网络以及实际应用场景都有很多值得深入挖掘的部分。&lt;/p&gt;
+&lt;p&gt;以上就是对IPFS分布式存储原理的梳理，它的组件、存储流程细节、GC机制、数据交换模块Bitswap、网络以及实际应用场景都有很多值得深入挖掘的部分。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;推荐阅读：趣链科技QTech平台《&lt;a href=&#34;https://tech.hyperchain.cn/tag/ipfs/&#34;&gt;IPFS系列文章&lt;/a&gt;》&lt;/p&gt;
 &lt;/blockquote&gt;

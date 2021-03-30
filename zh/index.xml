@@ -45,8 +45,8 @@
       <guid>https://www.pseudoyu.com/zh/2021/03/27/blockchain_note_ipfs_practice/</guid>
       
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;上一篇《IPFS分布式文件存储原理》对于&lt;code&gt;IPFS&lt;/code&gt;系统的设计理念、功能、工作原理及&lt;code&gt;IPNS&lt;/code&gt;做了详细的介绍，那么，如何在本地搭建一个&lt;code&gt;IPFS&lt;/code&gt;节点呢？&lt;/p&gt;
-&lt;p&gt;本文在&lt;code&gt;macOS 11.2.3&lt;/code&gt;系统上搭建了一个&lt;code&gt;IPFS&lt;/code&gt;节点（命令行版本），并对文件上传、下载、网络同步、&lt;code&gt;pin&lt;/code&gt;、&lt;code&gt;GC&lt;/code&gt;、&lt;code&gt;IPNS&lt;/code&gt;等进行了实际操作，以加深对&lt;code&gt;IPFS&lt;/code&gt;工作原理的理解。&lt;/p&gt;
+&lt;p&gt;上一篇《&lt;a href=&#34;https://www.pseudoyu.com/zh/2021/03/25/blockchain_note_ipfs_structure/&#34;&gt;IPFS分布式文件存储原理&lt;/a&gt;》对于IPFS系统的设计理念、功能、工作原理及IPNS做了详细的介绍，那么，如何在本地搭建一个IPFS节点呢？&lt;/p&gt;
+&lt;p&gt;本文在&lt;code&gt;macOS 11.2.3&lt;/code&gt;系统上搭建了一个IPFS节点（命令行版本），并对文件上传、下载、网络同步、&lt;code&gt;pin&lt;/code&gt;、&lt;code&gt;GC&lt;/code&gt;、&lt;code&gt;IPNS&lt;/code&gt;等进行了实际操作，以加深对IPFS工作原理的理解。&lt;/p&gt;
 &lt;h3 id=&#34;安装&#34;&gt;安装&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;wget https://dist.ipfs.io/go-ipfs/v0.8.0/go-ipfs_v0.8.0_darwin-amd64.tar.gz
 tar -xvzf go-ipfs_v0.8.0_darwin-amd64.tar.gz
@@ -139,7 +139,7 @@ ipfs pin rm -r &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;File Hash&lt;span cla
 &lt;span class=&#34;c1&#34;&gt;# GC操作&lt;/span&gt;
 ipfs repo gc
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
-&lt;p&gt;本文主要在本地部署了&lt;code&gt;IPFS&lt;/code&gt;文件系统并对基本操作进行了尝试，基于&lt;code&gt;macOS 11.2.3&lt;/code&gt;和&lt;code&gt;go-ipfs_v0.8.0_darwin-amd64&lt;/code&gt;版本，不同系统操作可能会因版本或依赖问题不一样，如有错漏，欢迎交流指正。&lt;/p&gt;
+&lt;p&gt;本文主要在本地部署了IPFS文件系统并对基本操作进行了尝试，基于&lt;code&gt;macOS 11.2.3&lt;/code&gt;和&lt;code&gt;go-ipfs_v0.8.0_darwin-amd64&lt;/code&gt;版本，不同系统操作可能会因版本或依赖问题不一样，如有错漏，欢迎交流指正。&lt;/p&gt;
 &lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;ol&gt;
@@ -158,42 +158,42 @@ ipfs repo gc
       <guid>https://www.pseudoyu.com/zh/2021/03/25/blockchain_note_ipfs_structure/</guid>
       
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;最近在做学校的Case Study项目，是一个基于&lt;code&gt;Ethereum&lt;/code&gt;平台的音乐版权管理项目，其中对于音乐作品、版权证明文件等上传用到了&lt;code&gt;IPFS&lt;/code&gt;分布式文件存储技术，主要是利用其去重的特性来检测侵权行为。对&lt;code&gt;IPFS&lt;/code&gt;这个系统产生了兴趣，阅读了&lt;code&gt;QTech&lt;/code&gt;平台上的系列文章，也查询了一些相关资料，通过本文梳理一下，如有错漏，欢迎交流指正。&lt;/p&gt;
+&lt;p&gt;最近在做学校的Case Study项目，是一个基于Ethereum平台的音乐版权管理项目，其中对于音乐作品、版权证明文件等上传用到了IPFS分布式文件存储技术，主要是利用其去重的特性来检测侵权行为。对IPFS这个系统产生了兴趣，阅读了&lt;a href=&#34;https://tech.hyperchain.cn&#34;&gt;QTech平台&lt;/a&gt;上的&lt;a href=&#34;https://tech.hyperchain.cn/tag/ipfs/&#34;&gt;IPFS系列文章&lt;/a&gt;，也查询了一些相关资料，通过本文梳理一下，如有错漏，欢迎交流指正。&lt;/p&gt;
 &lt;h3 id=&#34;概述&#34;&gt;概述&lt;/h3&gt;
-&lt;p&gt;我们日常使用网盘或其他服务时大多都是访问文件所在的特定的服务器（IP地址），请求文件并下载到本地，通过的是&lt;code&gt;HTTP&lt;/code&gt;协议，本质上是基于位置寻址的，访问&lt;code&gt;URL&lt;/code&gt;来得到一层层找到具体的文件，这种方式固然便捷，但是存在一些问题。文件依托于特定的服务器，因此一旦中心化的服务器宕机或者文件被删除了，内容将永久丢失，并且如果离服务器很远/同时访问文件的人很多的话访问速度也会比较慢；而且同样一份文件可能重复存储在不同的服务器中，造成资源的浪费；此外就是存在严重的安全隐患，&lt;code&gt;DDoS&lt;/code&gt;、&lt;code&gt;XSS&lt;/code&gt;、&lt;code&gt;CSRF&lt;/code&gt;等攻击都可能对文件安全性造成威胁。&lt;/p&gt;
+&lt;p&gt;我们日常使用网盘或其他服务时大多都是访问文件所在的特定的服务器（IP地址），请求文件并下载到本地，通过的是HTTP协议，本质上是基于位置寻址的，访问URL来得到一层层找到具体的文件，这种方式固然便捷，但是存在一些问题。文件依托于特定的服务器，因此一旦中心化的服务器宕机或者文件被删除了，内容将永久丢失，并且如果离服务器很远/同时访问文件的人很多的话访问速度也会比较慢；而且同样一份文件可能重复存储在不同的服务器中，造成资源的浪费；此外就是存在严重的安全隐患，DDoS、XSS、CSRF等攻击都可能对文件安全性造成威胁。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;那有没有更好的解决方案呢？&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;试想我们把文件存储在一个分布式网络里，每个节点都可以存储文件，用户可以通过访问一个类似目录索引的方式来向最近的节点互相请求文件。这就是&lt;code&gt;IPFS&lt;/code&gt;星际文件系统的解决思路，它是一个点对点的超媒体文件存储、索引、交换协议，由Juan Benet在2014年5月发起。&lt;/p&gt;
+&lt;p&gt;试想我们把文件存储在一个分布式网络里，每个节点都可以存储文件，用户可以通过访问一个类似目录索引的方式来向最近的节点互相请求文件。这就是IPFS星际文件系统的解决思路，它是一个点对点的超媒体文件存储、索引、交换协议，由Juan Benet在2014年5月发起。&lt;/p&gt;
 &lt;h4 id=&#34;特点&#34;&gt;特点&lt;/h4&gt;
-&lt;p&gt;&lt;code&gt;IPFS&lt;/code&gt;想把全世界所有部署了相同文件系统的计算设备链接在一起，构建一个分布式网络来替代传统中心化的服务器模式，每个节点都可以存储文件，用户通过&lt;code&gt;DHT(Distributed Hash Table)&lt;/code&gt;分布式哈希表来获取文件，速度更快、更安全，网络安全性更强。&lt;/p&gt;
-&lt;p&gt;因为通过&lt;code&gt;IPFS&lt;/code&gt;存储的文件内容是通过分块求Hash值存储为地址的，本质上是通过多重哈希来确定文件的地址，这是一种去中心化但是基于内容寻址的方式，通过对数据本身进行加密，生成独一无二的Hash以供查找，这种方式下，即使是微小的改变，也会造成Hash结果截然不同，因此很容易能够从Hash检测内容是否被篡改，甚至不用访问文件本身。&lt;/p&gt;
-&lt;p&gt;不同于传统的服务器模式，&lt;code&gt;IPFS&lt;/code&gt;是一个统一的网络，因此已经上传的相同内容的文件不会重复存储（可以通过Hash值检验），极大地节约了整体网络资源，也更加高效。而且理论上只要节点达到一定规模，文件将永久保存，且同一个文件可以从多个（也更近）的节点下载，通讯效率也会更高。&lt;/p&gt;
-&lt;p&gt;除此之外，因为是分布式网络进行存储，也可以天然地避免传统&lt;code&gt;DDoS&lt;/code&gt;等攻击。&lt;/p&gt;
+&lt;p&gt;IPFS想把全世界所有部署了相同文件系统的计算设备链接在一起，构建一个分布式网络来替代传统中心化的服务器模式，每个节点都可以存储文件，用户通过&lt;code&gt;DHT(Distributed Hash Table)&lt;/code&gt;分布式哈希表来获取文件，速度更快、更安全，网络安全性更强。&lt;/p&gt;
+&lt;p&gt;因为通过IPFS存储的文件内容是通过分块求Hash值存储为地址的，本质上是通过多重哈希来确定文件的地址，这是一种去中心化但是基于内容寻址的方式，通过对数据本身进行加密，生成独一无二的Hash以供查找，这种方式下，即使是微小的改变，也会造成Hash结果截然不同，因此很容易能够从Hash检测内容是否被篡改，甚至不用访问文件本身。&lt;/p&gt;
+&lt;p&gt;不同于传统的服务器模式，IPFS是一个统一的网络，因此已经上传的相同内容的文件不会重复存储（可以通过Hash值检验），极大地节约了整体网络资源，也更加高效。而且理论上只要节点达到一定规模，文件将永久保存，且同一个文件可以从多个（也更近）的节点下载，通讯效率也会更高。&lt;/p&gt;
+&lt;p&gt;除此之外，因为是分布式网络进行存储，也可以天然地避免传统DDoS等攻击。&lt;/p&gt;
 &lt;h4 id=&#34;功能&#34;&gt;功能&lt;/h4&gt;
-&lt;p&gt;除了文件存储外，&lt;code&gt;IPFS&lt;/code&gt;还有DHT组网、Bitswap文件交换等功能，之后也会单独写博文进行讲解。&lt;/p&gt;
+&lt;p&gt;除了文件存储外，IPFS还有DHT组网、Bitswap文件交换等功能，之后也会单独写博文进行讲解。&lt;/p&gt;
 &lt;h3 id=&#34;工作原理&#34;&gt;工作原理&lt;/h3&gt;
 &lt;p&gt;作为一个文件存储系统，上传文件和下载文件是两个最基本的操作，我们分别讲一下原理。&lt;/p&gt;
 &lt;h4 id=&#34;ipfs-add命令&#34;&gt;IPFS add命令&lt;/h4&gt;
 &lt;blockquote&gt;
-&lt;p&gt;在&lt;code&gt;IPFS&lt;/code&gt;系统中执行add操作就完成了上传操作，那是怎么上传的呢？&lt;/p&gt;
+&lt;p&gt;在IPFS系统中执行add操作就完成了上传操作，那是怎么上传的呢？&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;在&lt;code&gt;IPFS&lt;/code&gt;文件存储系统中，每当上传一个新文件，系统会将单个文件拆分成若干个256KB的block，每个block会有一个专属的CID进行标识，这个后面会详细讲；然后计算每一个block的Hash值，并存储再一个数组中，最后对这个数组求Hash得到文件的最终Hash值；接着将文件的Hash和所有的blocks Hash的数组组成成一个对象，也就形成了一种索引结构；最后把文件block和这个索引结构全部上传到&lt;code&gt;IPFS&lt;/code&gt;节点，同步到&lt;code&gt;IPFS&lt;/code&gt;网络。&lt;/p&gt;
-&lt;p&gt;文件上传时有两个值得注意的情况：1.文件特别小，如果文件小于1KB的话就不浪费一个block了，会直接和Hash一起上传到&lt;code&gt;IPFS&lt;/code&gt;。2.文件特别大，比如之前上传了一个1G的视频，之后又加了几KB的字幕文件，这种情况下未变化的1G部分是不会重新分配新的空间的，而只会为追加的字母文件部分分配新的block，再重新上传Hash。&lt;/p&gt;
+&lt;p&gt;在IPFS文件存储系统中，每当上传一个新文件，系统会将单个文件拆分成若干个256KB的block，每个block会有一个专属的CID进行标识，这个后面会详细讲；然后计算每一个block的Hash值，并存储再一个数组中，最后对这个数组求Hash得到文件的最终Hash值；接着将文件的Hash和所有的blocks Hash的数组组成成一个对象，也就形成了一种索引结构；最后把文件block和这个索引结构全部上传到IPFS节点，同步到IPFS网络。&lt;/p&gt;
+&lt;p&gt;文件上传时有两个值得注意的情况：1.文件特别小，如果文件小于1KB的话就不浪费一个block了，会直接和Hash一起上传到IPFS。2.文件特别大，比如之前上传了一个1G的视频，之后又加了几KB的字幕文件，这种情况下未变化的1G部分是不会重新分配新的空间的，而只会为追加的字母文件部分分配新的block，再重新上传Hash。&lt;/p&gt;
 &lt;p&gt;因此，很好理解的是，即使是不同文件的相同部分也只会存储一份，很多文件的索引会指向同一个block，所形成的结构就是MerkleDAG数据结构。&lt;/p&gt;
-&lt;p&gt;值得注意的是，当节点执行add操作时，会保留到本地blockstore中，但不会立刻主动上传到IPFS网络中，也就是说，与其连接的节点并不会存储这个文件，除非有某个节点请求过该block数据！因此，它并不是一个自动备份数据的分布式数据库。&lt;code&gt;IPFS&lt;/code&gt;这种设计是出于网络带宽、可靠性等方面的考虑。&lt;/p&gt;
+&lt;p&gt;值得注意的是，当节点执行add操作时，会保留到本地blockstore中，但不会立刻主动上传到IPFS网络中，也就是说，与其连接的节点并不会存储这个文件，除非有某个节点请求过该block数据！因此，它并不是一个自动备份数据的分布式数据库。IPFS这种设计是出于网络带宽、可靠性等方面的考虑。&lt;/p&gt;
 &lt;p&gt;还有一个细节就是，当节点在执行&lt;code&gt;add&lt;/code&gt;命令时，还会广播自己的块信息，并维护一个所有发给这个节点的block请求列表，一旦add命令添加到数据满足这个列表，就会主动向对应的节点发送数据并且更新列表。&lt;/p&gt;
 &lt;h4 id=&#34;ipfs-get命令&#34;&gt;IPFS get命令&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;那文件上传后，要怎么查找访问呢？&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;这就关系到上文所提到的&lt;code&gt;IPFS&lt;/code&gt;索引结构是&lt;code&gt;DHT&lt;/code&gt;（分布式哈希表），通过对&lt;code&gt;DHT&lt;/code&gt;进行访问可以很快访问得到数据。&lt;/p&gt;
+&lt;p&gt;这就关系到上文所提到的IPFS索引结构是&lt;code&gt;DHT&lt;/code&gt;（分布式哈希表），通过对&lt;code&gt;DHT&lt;/code&gt;进行访问可以很快访问得到数据。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ipfs_dht.png&#34; alt=&#34;ipfs_dht&#34;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;那如果想要查找一个本地没有的数据呢？&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ipfs_get.gif&#34; alt=&#34;ipfs_get&#34;&gt;&lt;/p&gt;
-&lt;p&gt;在&lt;code&gt;IPFS&lt;/code&gt;系统中，所有和当前节点连接的节点会构成一个swarm网络，当节点发送一个文件请求(即&lt;code&gt;get&lt;/code&gt;)时，首先会在本地的blockstore里查找请求的数据，如果没找到的话，就会向swarm网络发出一个请求，通过网络中的&lt;code&gt;DHT Routing&lt;/code&gt;找到拥有该数据的节点。&lt;/p&gt;
+&lt;p&gt;在IPFS系统中，所有和当前节点连接的节点会构成一个swarm网络，当节点发送一个文件请求(即&lt;code&gt;get&lt;/code&gt;)时，首先会在本地的blockstore里查找请求的数据，如果没找到的话，就会向swarm网络发出一个请求，通过网络中的&lt;code&gt;DHT Routing&lt;/code&gt;找到拥有该数据的节点。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;怎么知道网络中哪个（哪些）节点拥有这个请求文件呢？&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -203,11 +203,11 @@ ipfs repo gc
 &lt;p&gt;在项目中，上传的文件可以通过&lt;code&gt;ipfs.io&lt;/code&gt;网关直接获取到文件，类似于&lt;code&gt;https://ipfs.io/ipfs/Qm.....&lt;/code&gt;这样的网站地址，这个是什么原理呢？&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ipfs_io_get.gif&#34; alt=&#34;ipfs_io_get&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ipfs.io&lt;/code&gt;网关实际上就是一个&lt;code&gt;IPFS&lt;/code&gt;节点，当我们打开上述这个网络链接的时候，实际上就是向这个节点发送了一次请求，因此&lt;code&gt;ipfs.io&lt;/code&gt;网关会帮我们去向拥有这个数据的节点请求这个block（如果这个文件是自己刚在本地节点通过&lt;code&gt;add&lt;/code&gt;命令添加的话就会通过这种方式被上传到&lt;code&gt;IPFS&lt;/code&gt;网络上），在&lt;code&gt;swarm&lt;/code&gt;网络中通过&lt;code&gt;DHT Routing&lt;/code&gt;获取到数据后，网关会自己先缓存一份，然后将数据通过&lt;code&gt;HTTP&lt;/code&gt;协议发给我们，因此，就可以在浏览器直接看到这个文件啦！&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ipfs.io&lt;/code&gt;网关实际上就是一个IPFS节点，当我们打开上述这个网络链接的时候，实际上就是向这个节点发送了一次请求，因此&lt;code&gt;ipfs.io&lt;/code&gt;网关会帮我们去向拥有这个数据的节点请求这个block（如果这个文件是自己刚在本地节点通过&lt;code&gt;add&lt;/code&gt;命令添加的话就会通过这种方式被上传到IPFS网络上），在&lt;code&gt;swarm&lt;/code&gt;网络中通过&lt;code&gt;DHT Routing&lt;/code&gt;获取到数据后，网关会自己先缓存一份，然后将数据通过HTTP协议发给我们，因此，就可以在浏览器直接看到这个文件啦！&lt;/p&gt;
 &lt;p&gt;而任何其他机器通过浏览器访问这个链接时，因为&lt;code&gt;ipfs.io&lt;/code&gt;网关已经缓存了这个文件，再次请求的时候，就不需要向原节点来请求数据了，可以直接从缓存中返回数据给浏览器。&lt;/p&gt;
 &lt;h3 id=&#34;内容标识符cidcontent-id&#34;&gt;内容标识符CID(Content-ID)&lt;/h3&gt;
-&lt;p&gt;现在考虑另一个问题，我们常见的图像为&lt;code&gt;.jpg&lt;/code&gt;、&lt;code&gt;.png&lt;/code&gt;，而常见的视频则是&lt;code&gt;.mp4&lt;/code&gt;一样，可以直接从后缀名判断文件类型。通过&lt;code&gt;IPFS&lt;/code&gt;上传的文件也可以是多种类型，也包含了很多信息，怎么进行分辨呢？&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;IPFS&lt;/code&gt;早期主要使用&lt;code&gt;base58btc&lt;/code&gt;对&lt;code&gt;multihash&lt;/code&gt;进行编码，但是在开发&lt;code&gt;IPLD&lt;/code&gt;（I主要用来定义数据，给数据建模）的过程中会遇到很多与格式相关的问题，因此使用了一种叫&lt;code&gt;CID&lt;/code&gt;的文件寻址格式来对不同格式的数据进行管理，官方的定义为：&lt;/p&gt;
+&lt;p&gt;现在考虑另一个问题，我们常见的图像为&lt;code&gt;.jpg&lt;/code&gt;、&lt;code&gt;.png&lt;/code&gt;，而常见的视频则是&lt;code&gt;.mp4&lt;/code&gt;一样，可以直接从后缀名判断文件类型。通过IPFS上传的文件也可以是多种类型，也包含了很多信息，怎么进行分辨呢？&lt;/p&gt;
+&lt;p&gt;IPFS早期主要使用&lt;code&gt;base58btc&lt;/code&gt;对&lt;code&gt;multihash&lt;/code&gt;进行编码，但是在开发IPLD（主要用来定义数据，给数据建模）的过程中会遇到很多与格式相关的问题，因此使用了一种叫&lt;code&gt;CID&lt;/code&gt;的文件寻址格式来对不同格式的数据进行管理，官方的定义为：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;CID&lt;/code&gt;是一种自描述式的内容寻址的识别符，必须使用加密散列函数来得到内容的地址&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -232,12 +232,12 @@ ipfs repo gc
 &lt;h4 id=&#34;设计理念&#34;&gt;设计理念&lt;/h4&gt;
 &lt;p&gt;通过&lt;code&gt;CID&lt;/code&gt;这种二进制的特性，大大提高了对于文件Hash的压缩效率，因此可以直接作为URL的一部分进行访问；通过&lt;code&gt;multibase&lt;/code&gt;的编码形式（如&lt;code&gt;base58btc&lt;/code&gt;）缩短了&lt;code&gt;CID&lt;/code&gt;的长度，这样更容易传输；可以表示任意格式、任何哈希函数的结果，十分灵活；可以通过结构中&lt;code&gt;cid-version&lt;/code&gt;参数进行编码版本的升级；不受限于历史内容。&lt;/p&gt;
 &lt;h3 id=&#34;ipns&#34;&gt;IPNS&lt;/h3&gt;
-&lt;p&gt;如上文所述，IPFS中文件内容的改变会造成其哈希值的变化，在实际应用中，如果通过&lt;code&gt;IPFS&lt;/code&gt;托管网站等需要版本更新迭代的应用，每一次都通过更新后的Hash访问很不方便，因此，需要一个映射方案以保证用户体验，这样用户在访问时仅需要访问一个固定地址。&lt;/p&gt;
+&lt;p&gt;如上文所述，IPFS中文件内容的改变会造成其哈希值的变化，在实际应用中，如果通过IPFS托管网站等需要版本更新迭代的应用，每一次都通过更新后的Hash访问很不方便，因此，需要一个映射方案以保证用户体验，这样用户在访问时仅需要访问一个固定地址。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;IPNS(Inter-Planetary Naming System)&lt;/code&gt;就提供了这样的服务，它提供了一个被私钥限定的哈希ID（通常是PeerID）来指向具体的IPFS文件，文件更新后会自动更新哈希ID的指向。&lt;/p&gt;
 &lt;p&gt;即使哈希值可以固定不变了，但是依然不便于记忆和输入，因此，有了更进一步的解决方案。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;IPNS&lt;/code&gt;同样兼容&lt;code&gt;DNS&lt;/code&gt;，可以使用&lt;code&gt;DNS TXT&lt;/code&gt;记录域名对应的&lt;code&gt;IPNS&lt;/code&gt;哈希ID，就可以域名来替换IPNS哈希ID来进行访问，从而实现更容易读写和记忆。&lt;/p&gt;
 &lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
-&lt;p&gt;以上就是对&lt;code&gt;IPFS&lt;/code&gt;分布式存储原理的梳理，它的组件、存储流程细节、GC机制、数据交换模块&lt;code&gt;Bitswap&lt;/code&gt;、网络以及实际应用场景都有很多值得深入挖掘的部分。&lt;/p&gt;
+&lt;p&gt;以上就是对&lt;code&gt;IPFS&lt;/code&gt;分布式存储原理的梳理，它的组件、存储流程细节、GC机制、数据交换模块Bitswap、网络以及实际应用场景都有很多值得深入挖掘的部分。&lt;/p&gt;
 &lt;p&gt;推荐阅读：趣链科技QTech平台《&lt;a href=&#34;https://tech.hyperchain.cn/tag/ipfs/&#34;&gt;IPFS系列文章&lt;/a&gt;》&lt;/p&gt;
 &lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
 &lt;blockquote&gt;

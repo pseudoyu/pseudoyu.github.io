@@ -155,8 +155,8 @@
 <div class="container content">
   <article>
   <h2 id="前言">前言</h2>
-<p>上一篇《IPFS分布式文件存储原理》对于<code>IPFS</code>系统的设计理念、功能、工作原理及<code>IPNS</code>做了详细的介绍，那么，如何在本地搭建一个<code>IPFS</code>节点呢？</p>
-<p>本文在<code>macOS 11.2.3</code>系统上搭建了一个<code>IPFS</code>节点（命令行版本），并对文件上传、下载、网络同步、<code>pin</code>、<code>GC</code>、<code>IPNS</code>等进行了实际操作，以加深对<code>IPFS</code>工作原理的理解。</p>
+<p>上一篇《<a href="https://www.pseudoyu.com/en/2021/03/25/blockchain_note_ipfs_structure/">IPFS分布式文件存储原理</a>》对于IPFS系统的设计理念、功能、工作原理及IPNS做了详细的介绍，那么，如何在本地搭建一个IPFS节点呢？</p>
+<p>本文在<code>macOS 11.2.3</code>系统上搭建了一个IPFS节点（命令行版本），并对文件上传、下载、网络同步、<code>pin</code>、<code>GC</code>、<code>IPNS</code>等进行了实际操作，以加深对IPFS工作原理的理解。</p>
 <h3 id="安装">安装</h3>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">wget https://dist.ipfs.io/go-ipfs/v0.8.0/go-ipfs_v0.8.0_darwin-amd64.tar.gz
 tar -xvzf go-ipfs_v0.8.0_darwin-amd64.tar.gz
@@ -249,7 +249,7 @@ ipfs pin rm -r <span class="o">[</span>File Hash<span class="o">]</span>
 <span class="c1"># GC操作</span>
 ipfs repo gc
 </code></pre></div><h2 id="总结">总结</h2>
-<p>本文主要在本地部署了<code>IPFS</code>文件系统并对基本操作进行了尝试，基于<code>macOS 11.2.3</code>和<code>go-ipfs_v0.8.0_darwin-amd64</code>版本，不同系统操作可能会因版本或依赖问题不一样，如有错漏，欢迎交流指正。</p>
+<p>本文主要在本地部署了IPFS文件系统并对基本操作进行了尝试，基于<code>macOS 11.2.3</code>和<code>go-ipfs_v0.8.0_darwin-amd64</code>版本，不同系统操作可能会因版本或依赖问题不一样，如有错漏，欢迎交流指正。</p>
 <h2 id="参考资料">参考资料</h2>
 <blockquote>
 <ol>

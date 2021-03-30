@@ -39,13 +39,13 @@
     
     <item>
       <title>IPFS本地节点搭建（命令行）</title>
-      <link>https://www.pseudoyu.com/en/2021/03/27/blockchain_note_ipfs_practice/</link>
+      <link>https://www.pseudoyu.com/en/2021/03/27/blockchain_ipfs_practice/</link>
       <pubDate>Sat, 27 Mar 2021 18:46:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/03/27/blockchain_note_ipfs_practice/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/03/27/blockchain_ipfs_practice/</guid>
       
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;上一篇《&lt;a href=&#34;https://www.pseudoyu.com/en/2021/03/25/blockchain_note_ipfs_structure/&#34;&gt;IPFS分布式文件存储原理&lt;/a&gt;》对于IPFS系统的设计理念、功能、工作原理及IPNS做了详细的介绍，那么，如何在本地搭建一个IPFS节点呢？&lt;/p&gt;
+&lt;p&gt;上一篇《&lt;a href=&#34;https://www.pseudoyu.com/en/2021/03/25/blockchain_ipfs_structure/&#34;&gt;IPFS分布式文件存储原理&lt;/a&gt;》对于IPFS系统的设计理念、功能、工作原理及IPNS做了详细的介绍，那么，如何在本地搭建一个IPFS节点呢？&lt;/p&gt;
 &lt;p&gt;本文在&lt;code&gt;macOS 11.2.3&lt;/code&gt;系统上搭建了一个IPFS节点（命令行版本），并对文件上传、下载、网络同步、&lt;code&gt;pin&lt;/code&gt;、&lt;code&gt;GC&lt;/code&gt;、&lt;code&gt;IPNS&lt;/code&gt;等进行了实际操作，以加深对IPFS工作原理的理解。&lt;/p&gt;
 &lt;h3 id=&#34;安装&#34;&gt;安装&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;wget https://dist.ipfs.io/go-ipfs/v0.8.0/go-ipfs_v0.8.0_darwin-amd64.tar.gz
@@ -152,10 +152,10 @@ ipfs repo gc
     
     <item>
       <title>IPFS分布式文件存储原理详解</title>
-      <link>https://www.pseudoyu.com/en/2021/03/25/blockchain_note_ipfs_structure/</link>
+      <link>https://www.pseudoyu.com/en/2021/03/25/blockchain_ipfs_structure/</link>
       <pubDate>Thu, 25 Mar 2021 16:30:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/03/25/blockchain_note_ipfs_structure/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/03/25/blockchain_ipfs_structure/</guid>
       
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;最近在做学校的Case Study项目，是一个基于&lt;code&gt;Ethereum&lt;/code&gt;平台的音乐版权管理项目，其中对于音乐作品、版权证明文件等上传用到了IPFS分布式文件存储技术，主要是利用其去重的特性来检测侵权行为。对IPFS这个系统产生了兴趣，阅读了&lt;a href=&#34;https://tech.hyperchain.cn&#34;&gt;QTech平台&lt;/a&gt;上的&lt;a href=&#34;https://tech.hyperchain.cn/tag/ipfs/&#34;&gt;IPFS系列文章&lt;/a&gt;，也查询了一些相关资料，通过本文梳理一下，如有错漏，欢迎交流指正。&lt;/p&gt;
@@ -257,10 +257,10 @@ ipfs repo gc
     
     <item>
       <title>Hyperledger Fabric架构详解</title>
-      <link>https://www.pseudoyu.com/en/2021/03/20/blockchain_note_hyperledger_fabric_structure/</link>
+      <link>https://www.pseudoyu.com/en/2021/03/20/blockchain_hyperledger_fabric_structure/</link>
       <pubDate>Sat, 20 Mar 2021 12:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/03/20/blockchain_note_hyperledger_fabric_structure/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/03/20/blockchain_hyperledger_fabric_structure/</guid>
       
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;因为毕业Case Study的项目主要是基于&lt;code&gt;Ethereum&lt;/code&gt;公链，也没有面向企业的应用场景，所以之前对&lt;code&gt;Hyperledger Fabric&lt;/code&gt;的了解大多只是停留在它的权限管理机制、通道、灵活的智能合约编写等几个特色的概念，对它的架构、各个节点的角色、运行机制等都是一知半解。最近在上HKU的&lt;code&gt;&amp;lt;FITE3011 Distributed Ledger and Blockchain&amp;gt;&lt;/code&gt;课程，教授对&lt;code&gt;Hyperledger Fabric&lt;/code&gt;的工作原理、网络搭建及链码相关的知识做了很详细的讲解，受益匪浅，通过本文来梳理一下，如有错漏，欢迎交流指正。&lt;/p&gt;

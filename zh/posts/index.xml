@@ -9,28 +9,28 @@
     <lastBuildDate>Sat, 27 Mar 2021 18:46:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>IPFS本地节点搭建（命令行）</title>
-      <link>https://www.pseudoyu.com/zh/2021/03/27/blockchain_note_ipfs_practice/</link>
+      <link>https://www.pseudoyu.com/zh/2021/03/27/blockchain_ipfs_practice/</link>
       <pubDate>Sat, 27 Mar 2021 18:46:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2021/03/27/blockchain_note_ipfs_practice/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/03/27/blockchain_ipfs_practice/</guid>
       <description>前言 上一篇《IPFS分布式文件存储原理》对于IPFS系统的设计理念、功能、工作原理及IPNS做了详细的介绍，那么，如何在本地搭建一个IPFS</description>
     </item>
     
     <item>
       <title>IPFS分布式文件存储原理详解</title>
-      <link>https://www.pseudoyu.com/zh/2021/03/25/blockchain_note_ipfs_structure/</link>
+      <link>https://www.pseudoyu.com/zh/2021/03/25/blockchain_ipfs_structure/</link>
       <pubDate>Thu, 25 Mar 2021 16:30:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2021/03/25/blockchain_note_ipfs_structure/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/03/25/blockchain_ipfs_structure/</guid>
       <description>前言 最近在做学校的Case Study项目，是一个基于Ethereum平台的音乐版权管理项目，其中对于音乐作品、版权证明文件等上传用到了IPF</description>
     </item>
     
     <item>
       <title>Hyperledger Fabric架构详解</title>
-      <link>https://www.pseudoyu.com/zh/2021/03/20/blockchain_note_hyperledger_fabric_structure/</link>
+      <link>https://www.pseudoyu.com/zh/2021/03/20/blockchain_hyperledger_fabric_structure/</link>
       <pubDate>Sat, 20 Mar 2021 12:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/zh/2021/03/20/blockchain_note_hyperledger_fabric_structure/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/03/20/blockchain_hyperledger_fabric_structure/</guid>
       <description>前言 因为毕业Case Study的项目主要是基于Ethereum公链，也没有面向企业的应用场景，所以之前对Hyperledger Fabric的</description>
     </item>
     

@@ -9,10 +9,10 @@
     <lastBuildDate>Sat, 20 Mar 2021 12:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/fabric/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hyperledger Fabric架构详解</title>
-      <link>https://www.pseudoyu.com/en/2021/03/20/blockchain_note_hyperledger_fabric_structure/</link>
+      <link>https://www.pseudoyu.com/en/2021/03/20/blockchain_hyperledger_fabric_structure/</link>
       <pubDate>Sat, 20 Mar 2021 12:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/03/20/blockchain_note_hyperledger_fabric_structure/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/03/20/blockchain_hyperledger_fabric_structure/</guid>
       <description>前言 因为毕业Case Study的项目主要是基于Ethereum公链，也没有面向企业的应用场景，所以之前对Hyperledger Fabric的</description>
     </item>
     

@@ -44,33 +44,6 @@
     </item>
     
     <item>
-      <title>比特币数据模型概述</title>
-      <link>https://www.pseudoyu.com/en/2021/01/22/blockchain_note_bitcoin_data/</link>
-      <pubDate>Fri, 22 Jan 2021 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2021/01/22/blockchain_note_bitcoin_data/</guid>
-      <description>比特币数据模型概述 区块头 前一个区块的哈希值 时间戳 Merkle Root Nonce Block Body 交易 输入 UTXO: Unspent outputs from another Transaction 必须以整体被花费，不能划分，多余部分转回源账户 所有输入都可以追</description>
-    </item>
-    
-    <item>
-      <title>Bitcoin Core客户端入门</title>
-      <link>https://www.pseudoyu.com/en/2021/01/19/blockchain_note_bitcoin_core/</link>
-      <pubDate>Tue, 19 Jan 2021 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2021/01/19/blockchain_note_bitcoin_core/</guid>
-      <description>Bitcoin Core客户端入门 比特币的实现 Bitcoin-QT Satoshi-client 特点 连接至比特币网络 可验证区块链 可以发送与接收区块链 网络 Mainnet Testnet Regnet Debug Console 与比特币区块链交互的工具 Blockchain getblockchaininfo: 返回有关区</description>
-    </item>
-    
-    <item>
-      <title>比特币基础原理</title>
-      <link>https://www.pseudoyu.com/en/2021/01/15/blockchain_note_bitcoin_basic/</link>
-      <pubDate>Fri, 15 Jan 2021 03:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2021/01/15/blockchain_note_bitcoin_basic/</guid>
-      <description>比特币基础原理 哈希指针 Hash Pointers 哈希指针指向一个结构体的哈希值（整个区块+其H()一起算出下一个值） 特征 tamper-evident log 如果这个区块被篡改，则会影响后续所有区</description>
-    </item>
-    
-    <item>
       <title>刷题常用数据结构（Java）</title>
       <link>https://www.pseudoyu.com/en/2021/01/01/algorithm_java_data_structure/</link>
       <pubDate>Fri, 01 Jan 2021 00:12:17 +0800</pubDate>

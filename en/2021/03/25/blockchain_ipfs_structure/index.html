@@ -211,10 +211,10 @@
 <p>简单来说，<code>CID</code>通过一些机制来对文件所包含的内容进行自描述，包含了版本信息、格式等。</p>
 <h4 id="cid结构">CID结构</h4>
 <p>目前<code>CID</code>有<code>v0</code>和<code>v1</code>两种版本，<code>v1</code>版本的<code>CID</code>由<code>V1Builder</code>生成</p>
-<pre><code>&lt;cidv1&gt; ::= &lt;mb&gt;&lt;version&gt;&lt;mcp&gt;&lt;mh&gt;
-# or, expanded:
-&lt;cidv1&gt; ::= &lt;multibase-prefix&gt;&lt;cid-version&gt;&lt;multicodec-packed-content-type&gt;&lt;multihash-content-address&gt;
-</code></pre><p>如上面列举的代码所示，采用的机制叫<code>multipleformats</code>，主要包括：<code>multibase-prefix</code>表示<code>CID</code>编码成字符串，<code>cid-version</code>表示版本变量，<code>multicodec-packed-content-type</code>表示内容的类型和格式（类似于后缀，但是作为标识符的一部分，支持的格式有限，且用户是不能随意修改的），<code>multihash-content-address</code>表示哈希值（让<code>CID</code>可以使用不同的Hash函数）。</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">&lt;cidv1&gt; ::<span class="o">=</span> &lt;mb&gt;&lt;version&gt;&lt;mcp&gt;&lt;mh&gt;
+<span class="c1"># or, expanded:</span>
+&lt;cidv1&gt; ::<span class="o">=</span> &lt;multibase-prefix&gt;&lt;cid-version&gt;&lt;multicodec-packed-content-type&gt;&lt;multihash-content-address&gt;
+</code></pre></div><p>如上面列举的代码所示，采用的机制叫<code>multipleformats</code>，主要包括：<code>multibase-prefix</code>表示<code>CID</code>编码成字符串，<code>cid-version</code>表示版本变量，<code>multicodec-packed-content-type</code>表示内容的类型和格式（类似于后缀，但是作为标识符的一部分，支持的格式有限，且用户是不能随意修改的），<code>multihash-content-address</code>表示哈希值（让<code>CID</code>可以使用不同的Hash函数）。</p>
 <p>目前<code>CID</code>支持的<code>multicodec-packed</code>编码有原生的<code>protobuf</code>格式、<code>IPLD CBOR</code>格式、<code>git</code>、比特币和以太坊对象等格式，也在逐步开发支持更多格式。</p>
 <p><code>CID</code>代码详解：</p>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">Cid</span> <span class="kd">struct</span> <span class="p">{</span><span class="nx">str</span> <span class="kt">string</span><span class="p">}</span>

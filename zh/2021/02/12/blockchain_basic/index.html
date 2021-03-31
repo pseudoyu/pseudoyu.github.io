@@ -29,7 +29,7 @@
 <meta itemprop="description" content="前言 最近对在上HKU的&lt;COMP7408 Distributed Ledger and Blockchain Technology&gt;课程，对区块链的基础概念有了更系统的认知，结合之前上过的北">
 <meta itemprop="datePublished" content="2021-02-12T12:12:17+08:00" />
 <meta itemprop="dateModified" content="2021-02-12T12:12:17+08:00" />
-<meta itemprop="wordCount" content="4699">
+<meta itemprop="wordCount" content="4911">
 
 
 
@@ -244,8 +244,9 @@
 <blockquote>
 <p>那有哪些技术能够应用于这些存在高价值、敏感信息的隐私保护呢？</p>
 </blockquote>
-<p>硬件层面，可以采用可信的执行环境，采用一些安全硬件，如<code>Intel SGX</code>，很大程度保障了隐私。</p>
-<p>在技术层面，混币技术可以把很多交易进行一些混合，这样不容易找出对应的交易发送方和接收方；环签用于保障交易签名的匿名性；零知识证明可以在不让其他人知道额外信息的前提下证明交易的正确性；同态加密可以保护原数据；基于属性的加密（<code>Attribute-based Encryption, ABE</code>）则为各个节点添加一些属性/角色，实现权限控制，从而保护隐私。</p>
+<p>硬件层面，可以采用可信的执行环境，采用一些安全硬件，如<code>Intel SGX</code>，很大程度保障了隐私；网络可以采用多路径转发以避免从节点的ip地址推算出真实身份。</p>
+<p>在技术层面，混币技术可以把很多交易进行一些混合，这样不容易找出对应的交易发送方和接收方；盲签技术可以保障第三方机构不能将参与交易的双方联系起来；环签用于保障交易签名的匿名性；零知识证明则可以应用于一方（证明者）向另一方（验证者）证明一个陈述是正确的，而无需透露除该陈述是正确的以外的人和信息；同态加密可以保护原数据，给定E(x)和E(y)，可以很容易计算出某些关于x,y的加密函数值（同态运算）；基于属性的加密（<code>Attribute-based Encryption, ABE</code>）则为各个节点添加一些属性/角色，实现权限控制，从而保护隐私。</p>
+<p>值得注意的是，即使一笔交易生成多个inputs和outputs，这些inputs和outputs的地址也可能被人关联；除此之外，地址账户和现实世界中的真实身份也可能产生关联。</p>
 <h2 id="总结">总结</h2>
 <p>以上就是对区块链基础知识的一些梳理，主要从概念和原理层面进行了一些学习，后续还会更新对比特币、以太坊、<code>Hyperledger Fabric</code>等典型应用的分析与思考，并对IPFS、跨链、NFT等热门技术进行一些探究，敬请期待！</p>
 <h2 id="参考资料">参考资料</h2>

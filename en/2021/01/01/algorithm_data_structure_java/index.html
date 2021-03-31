@@ -3,14 +3,14 @@
 <head>
   <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="utf-8">
-  <title>刷题常用数据结构（Java） · Pseudoyu</title>
+  <title>刷题常用数据结构（Java篇） · Pseudoyu</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="数组 [] 初始化 // 初始化一个大小为10，默认值为0的数组 int[] nums = new int[10]; // 初始化一个二位boolean数组 boolean[][] visited = new boolean[5][10]; 常用方法 // 函数开头一般要做一个非空" />
+  <meta name="description" content="前言 最近开始刷LeetCode算法题，针对工作需求的算法刷题其实主要是锻炼解决问题的思路和代码撰写能力，而不是像算法竞赛那样用复杂的数据结构" />
 
   <meta name="keywords" content="hugo, blockchain, programming" />
 
-<link rel="canonical" href="https://www.pseudoyu.com/en/2021/01/01/algorithm_java_data_structure/" />
-<link rel="alternate" href="https://www.pseudoyu.com/zh/2021/01/01/algorithm_java_data_structure/" hreflang="zh">
+<link rel="canonical" href="https://www.pseudoyu.com/en/2021/01/01/algorithm_data_structure_java/" />
+<link rel="alternate" href="https://www.pseudoyu.com/zh/2021/01/01/algorithm_data_structure_java/" hreflang="zh">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -19,24 +19,24 @@
 
 
 
-<meta property="og:title" content="刷题常用数据结构（Java）" />
-<meta property="og:description" content="数组 [] 初始化 // 初始化一个大小为10，默认值为0的数组 int[] nums = new int[10]; // 初始化一个二位boolean数组 boolean[][] visited = new boolean[5][10]; 常用方法 // 函数开头一般要做一个非空" />
+<meta property="og:title" content="刷题常用数据结构（Java篇）" />
+<meta property="og:description" content="前言 最近开始刷LeetCode算法题，针对工作需求的算法刷题其实主要是锻炼解决问题的思路和代码撰写能力，而不是像算法竞赛那样用复杂的数据结构" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.pseudoyu.com/en/2021/01/01/algorithm_java_data_structure/" />
+<meta property="og:url" content="https://www.pseudoyu.com/en/2021/01/01/algorithm_data_structure_java/" />
 <meta property="article:published_time" content="2021-01-01T00:12:17+08:00" />
 <meta property="article:modified_time" content="2021-01-01T00:12:17+08:00" />
-<meta itemprop="name" content="刷题常用数据结构（Java）">
-<meta itemprop="description" content="数组 [] 初始化 // 初始化一个大小为10，默认值为0的数组 int[] nums = new int[10]; // 初始化一个二位boolean数组 boolean[][] visited = new boolean[5][10]; 常用方法 // 函数开头一般要做一个非空">
+<meta itemprop="name" content="刷题常用数据结构（Java篇）">
+<meta itemprop="description" content="前言 最近开始刷LeetCode算法题，针对工作需求的算法刷题其实主要是锻炼解决问题的思路和代码撰写能力，而不是像算法竞赛那样用复杂的数据结构">
 <meta itemprop="datePublished" content="2021-01-01T00:12:17+08:00" />
 <meta itemprop="dateModified" content="2021-01-01T00:12:17+08:00" />
-<meta itemprop="wordCount" content="972">
+<meta itemprop="wordCount" content="1151">
 
 
 
 <meta itemprop="keywords" content="programming,java,algorithm," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="刷题常用数据结构（Java）"/>
-<meta name="twitter:description" content="数组 [] 初始化 // 初始化一个大小为10，默认值为0的数组 int[] nums = new int[10]; // 初始化一个二位boolean数组 boolean[][] visited = new boolean[5][10]; 常用方法 // 函数开头一般要做一个非空"/>
+<meta name="twitter:title" content="刷题常用数据结构（Java篇）"/>
+<meta name="twitter:description" content="前言 最近开始刷LeetCode算法题，针对工作需求的算法刷题其实主要是锻炼解决问题的思路和代码撰写能力，而不是像算法竞赛那样用复杂的数据结构"/>
 </head>
 <body>
   
@@ -118,7 +118,7 @@
   <div class="row">
     <div class="col-lg-12">
       <div class="header-content">
-        <h1 class="header-title">刷题常用数据结构（Java）</h1>
+        <h1 class="header-title">刷题常用数据结构（Java篇）</h1>
         <p class="header-date">By
           Arthur /
         
@@ -141,7 +141,7 @@
 <p class="float-right translations">
     <i class="fas fa-language" aria-hidden="true"></i>
     Translations: 
-    <a href="https://www.pseudoyu.com/zh/2021/01/01/algorithm_java_data_structure/">ZH</a>
+    <a href="https://www.pseudoyu.com/zh/2021/01/01/algorithm_data_structure_java/">ZH</a>
 </p>
 
 
@@ -154,7 +154,10 @@
   <main>
 <div class="container content">
   <article>
-  <h3 id="数组-">数组 []</h3>
+  <h2 id="前言">前言</h2>
+<p>最近开始刷LeetCode算法题，针对工作需求的算法刷题其实主要是锻炼解决问题的思路和代码撰写能力，而不是像算法竞赛那样用复杂的数据结构，所以常用的数据结构和操作并不多，熟练使用也能很好地提升自己的代码质量，特此做一个整理，以便于查阅。</p>
+<h2 id="数据结构">数据结构</h2>
+<h3 id="数组-">数组 []</h3>
 <h4 id="初始化">初始化</h4>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// 初始化一个大小为10，默认值为0的数组
 </span><span class="c1"></span><span class="kt">int</span><span class="o">[]</span> <span class="n">nums</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">10</span><span class="o">];</span>
@@ -310,7 +313,16 @@
 
 <span class="c1">// 删除并的返回栈顶元素
 </span><span class="c1"></span><span class="n">E</span> <span class="nf">pop</span><span class="o">()</span>
-</code></pre></div>
+</code></pre></div><h2 id="总结">总结</h2>
+<p>刷题路漫漫&hellip;加油！</p>
+<h2 id="参考资料">参考资料</h2>
+<blockquote>
+<ol>
+<li><a href="https://leetcode.com">LeetCode官网</a></li>
+<li><a href="https://github.com/labuladong/fucking-algorithm">labuladong的算法小抄</a>，<em>GitHub</em></li>
+</ol>
+</blockquote>
+
   </article>
 
   

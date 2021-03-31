@@ -3696,13 +3696,16 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
     </item>
     
     <item>
-      <title>刷题常用数据结构（Java）</title>
-      <link>https://www.pseudoyu.com/en/2021/01/01/algorithm_java_data_structure/</link>
+      <title>刷题常用数据结构（Java篇）</title>
+      <link>https://www.pseudoyu.com/en/2021/01/01/algorithm_data_structure_java/</link>
       <pubDate>Fri, 01 Jan 2021 00:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/01/01/algorithm_java_data_structure/</guid>
+      <guid>https://www.pseudoyu.com/en/2021/01/01/algorithm_data_structure_java/</guid>
       
-        <description>&lt;h3 id=&#34;数组-&#34;&gt;数组 []&lt;/h3&gt;
+        <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;最近开始刷LeetCode算法题，针对工作需求的算法刷题其实主要是锻炼解决问题的思路和代码撰写能力，而不是像算法竞赛那样用复杂的数据结构，所以常用的数据结构和操作并不多，熟练使用也能很好地提升自己的代码质量，特此做一个整理，以便于查阅。&lt;/p&gt;
+&lt;h2 id=&#34;数据结构&#34;&gt;数据结构&lt;/h2&gt;
+&lt;h3 id=&#34;数组-&#34;&gt;数组 []&lt;/h3&gt;
 &lt;h4 id=&#34;初始化&#34;&gt;初始化&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 初始化一个大小为10，默认值为0的数组
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;];&lt;/span&gt;
@@ -3858,7 +3861,16 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
 
 &lt;span class=&#34;c1&#34;&gt;// 删除并的返回栈顶元素
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;E&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;pop&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
+&lt;p&gt;刷题路漫漫&amp;hellip;加油！&lt;/p&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://leetcode.com&#34;&gt;LeetCode官网&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/labuladong/fucking-algorithm&#34;&gt;labuladong的算法小抄&lt;/a&gt;，&lt;em&gt;GitHub&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+</description>
       
     </item>
     

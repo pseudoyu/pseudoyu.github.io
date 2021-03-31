@@ -17,7 +17,7 @@
     </item>
     
     <item>
-      <title>IPFS分布式文件存储原理详解</title>
+      <title>IPFS分布式存储协议分析与思考</title>
       <link>https://www.pseudoyu.com/en/2021/03/25/blockchain_ipfs_structure/</link>
       <pubDate>Thu, 25 Mar 2021 16:30:17 +0800</pubDate>
       
@@ -73,6 +73,15 @@ Application  Understanding  Group related documents for browsing, group genes an
     </item>
     
     <item>
+      <title>区块链基础知识与关键技术</title>
+      <link>https://www.pseudoyu.com/en/2021/02/12/blockchain_basic/</link>
+      <pubDate>Fri, 12 Feb 2021 12:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2021/02/12/blockchain_basic/</guid>
+      <description>前言 最近对在上HKU的&amp;lt;COMP7408 Distributed Ledger and Blockchain Technology&amp;gt;课程，对区块链的基础概念有了更系统的认知，结合之前上过的北</description>
+    </item>
+    
+    <item>
       <title>用OKR的方式梳理自己的学习计划</title>
       <link>https://www.pseudoyu.com/en/2021/02/11/learning_plan_okr/</link>
       <pubDate>Thu, 11 Feb 2021 00:00:00 +0800</pubDate>
@@ -94,15 +103,6 @@ Application  Understanding  Group related documents for browsing, group genes an
     </item>
     
     <item>
-      <title>区块链隐私问题概述</title>
-      <link>https://www.pseudoyu.com/en/2021/01/30/blockchain_note_privacy/</link>
-      <pubDate>Sat, 30 Jan 2021 05:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2021/01/30/blockchain_note_privacy/</guid>
-      <description>区块链隐私问题概述 区块链透明性 所有人都能看到交易细节/历史记录 应用场景：供应链 （食品、药品、酒&amp;hellip;） 隐私风险：个人信息（账户余额</description>
-    </item>
-    
-    <item>
       <title>COMP7801 Topic 1b Database Indexing</title>
       <link>https://www.pseudoyu.com/en/2021/01/30/comp7801_topic1b/</link>
       <pubDate>Sat, 30 Jan 2021 01:18:17 +0800</pubDate>
@@ -120,15 +120,6 @@ Application  Understanding  Group related documents for browsing, group genes an
       <description>COMP7103 Data Mining Topic 1 Introduction Decision-Support System (DSS)
  A decision-support system (DSS) is a system that assists decision makers to make important decisions for an organization or business KDD and data mining are important components in many DSS&amp;rsquo;s  Data and Knowledge
  Data  A collecion of facts about certain group of objects   Pattern  Certain characteristics of data that are frequently observed   Knowledge  Some general rules about the objects    Data Warehouse</description>
-    </item>
-    
-    <item>
-      <title>区块链安全问题概述</title>
-      <link>https://www.pseudoyu.com/en/2021/01/25/blockchain_note_security/</link>
-      <pubDate>Mon, 25 Jan 2021 05:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2021/01/25/blockchain_note_security/</guid>
-      <description>区块链安全问题概述 风险来源 应用层 与应用程序相关的攻击和安全问题，如数字货币交易所 智能合约层 很多潜在风险，如DAO事件 激励层 矿工付出成本 &amp;gt; 奖励</description>
     </item>
     
     <item>
@@ -169,30 +160,39 @@ Application  Understanding  Group related documents for browsing, group genes an
     </item>
     
     <item>
-      <title>区块链基本框架</title>
-      <link>https://www.pseudoyu.com/en/2021/01/11/blockchain_note_framework/</link>
-      <pubDate>Mon, 11 Jan 2021 08:12:17 +0800</pubDate>
+      <title>刷题常用数据结构（Java）</title>
+      <link>https://www.pseudoyu.com/en/2021/01/01/algorithm_java_data_structure/</link>
+      <pubDate>Fri, 01 Jan 2021 00:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/01/11/blockchain_note_framework/</guid>
-      <description>区块链框架 交易 钱包 签名 内存池 网络 共识机制 哈希 区块 区块链 哈希 区块链使用的是SHA256(Secure Hashing Algorithm 256 bits) var SHA256 = require(&amp;#34;crypto-js/sha256&amp;#34;); const data1 = &amp;#34;Blockchain Rock!&amp;#34;; const dataObject = { id: 1, body: &amp;#34;With</description>
+      <guid>https://www.pseudoyu.com/en/2021/01/01/algorithm_java_data_structure/</guid>
+      <description>数组 [] 初始化 // 初始化一个大小为10，默认值为0的数组 int[] nums = new int[10]; // 初始化一个二位boolean数组 boolean[][] visited = new boolean[5][10]; 常用方法 // 函数开头一般要做一个非空</description>
     </item>
     
     <item>
-      <title>区块链基础原理</title>
-      <link>https://www.pseudoyu.com/en/2021/01/07/blockchain_note_concept/</link>
-      <pubDate>Thu, 07 Jan 2021 05:12:17 +0800</pubDate>
+      <title>Java学习 - 线程间的通信</title>
+      <link>https://www.pseudoyu.com/en/2020/12/23/java_note_concurrent_communication/</link>
+      <pubDate>Wed, 23 Dec 2020 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/01/07/blockchain_note_concept/</guid>
-      <description>区块链基础原理 区块链是一种分布式账本技术，由于是一群人来记账，所以修改这个账本的难度比较高。 单式记账 → 复式记账 → 数字化记账 → 分布式记账 传统中</description>
+      <guid>https://www.pseudoyu.com/en/2020/12/23/java_note_concurrent_communication/</guid>
+      <description>线程间的通信 锁与同步 Java中锁是基于对象的，因此也被称为对象锁 一个锁同一时间只能被一个线程持有 线程之间的同步是指线程按照一定的顺序执行 public class</description>
     </item>
     
     <item>
-      <title>区块链中的密码学原理</title>
-      <link>https://www.pseudoyu.com/en/2021/01/03/blockchain_note_cryptography/</link>
-      <pubDate>Sun, 03 Jan 2021 03:12:17 +0800</pubDate>
+      <title>Java学习 - 线程状态及转化方法</title>
+      <link>https://www.pseudoyu.com/en/2020/12/09/java_note_concurrent_state/</link>
+      <pubDate>Wed, 09 Dec 2020 03:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/01/03/blockchain_note_cryptography/</guid>
-      <description>密码学原理 哈希 特征 collision resistance 抗碰撞性 哈希碰撞是指当x≠y时，存在H(x)=H(y)，不同的输入映射到哈希表的同一个位置 很难人工创造哈希碰撞 常用于文</description>
+      <guid>https://www.pseudoyu.com/en/2020/12/09/java_note_concurrent_state/</guid>
+      <description>线程状态及转化方法 操作系统中的线程状态转换 操作系统线程主要有以下三个状态 就绪状态 READY：线程正在等待使用CPU，经调度程序调用之后可进入</description>
+    </item>
+    
+    <item>
+      <title>Java学习 - 线程组和线程优先级</title>
+      <link>https://www.pseudoyu.com/en/2020/12/07/java_note_concurrent_threadgroup/</link>
+      <pubDate>Mon, 07 Dec 2020 03:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2020/12/07/java_note_concurrent_threadgroup/</guid>
+      <description>线程组和线程优先级 线程组 Java中的ThreadGroup表示线程组，可使用线程组对线程进行批量控制；每个线程必须存在于一个线程组中，不能独</description>
     </item>
     
   </channel>

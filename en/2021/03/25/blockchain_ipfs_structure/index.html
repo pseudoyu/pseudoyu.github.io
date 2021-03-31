@@ -3,7 +3,7 @@
 <head>
   <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="utf-8">
-  <title>IPFS分布式文件存储原理详解 · Pseudoyu</title>
+  <title>IPFS分布式存储协议分析与思考 · Pseudoyu</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="前言 最近在做学校的Case Study项目，是一个基于Ethereum平台的音乐版权管理项目，其中对于音乐作品、版权证明文件等上传用到了IPF" />
 
@@ -19,13 +19,13 @@
 
 
 
-<meta property="og:title" content="IPFS分布式文件存储原理详解" />
+<meta property="og:title" content="IPFS分布式存储协议分析与思考" />
 <meta property="og:description" content="前言 最近在做学校的Case Study项目，是一个基于Ethereum平台的音乐版权管理项目，其中对于音乐作品、版权证明文件等上传用到了IPF" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.pseudoyu.com/en/2021/03/25/blockchain_ipfs_structure/" />
 <meta property="article:published_time" content="2021-03-25T16:30:17+08:00" />
 <meta property="article:modified_time" content="2021-03-25T16:30:17+08:00" />
-<meta itemprop="name" content="IPFS分布式文件存储原理详解">
+<meta itemprop="name" content="IPFS分布式存储协议分析与思考">
 <meta itemprop="description" content="前言 最近在做学校的Case Study项目，是一个基于Ethereum平台的音乐版权管理项目，其中对于音乐作品、版权证明文件等上传用到了IPF">
 <meta itemprop="datePublished" content="2021-03-25T16:30:17+08:00" />
 <meta itemprop="dateModified" content="2021-03-25T16:30:17+08:00" />
@@ -35,7 +35,7 @@
 
 <meta itemprop="keywords" content="programming,blockchain,ipfs," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="IPFS分布式文件存储原理详解"/>
+<meta name="twitter:title" content="IPFS分布式存储协议分析与思考"/>
 <meta name="twitter:description" content="前言 最近在做学校的Case Study项目，是一个基于Ethereum平台的音乐版权管理项目，其中对于音乐作品、版权证明文件等上传用到了IPF"/>
 </head>
 <body>
@@ -118,7 +118,7 @@
   <div class="row">
     <div class="col-lg-12">
       <div class="header-content">
-        <h1 class="header-title">IPFS分布式文件存储原理详解</h1>
+        <h1 class="header-title">IPFS分布式存储协议分析与思考</h1>
         <p class="header-date">By
           Arthur /
         
@@ -156,22 +156,22 @@
   <article>
   <h2 id="前言">前言</h2>
 <p>最近在做学校的Case Study项目，是一个基于<code>Ethereum</code>平台的音乐版权管理项目，其中对于音乐作品、版权证明文件等上传用到了IPFS分布式文件存储技术，主要是利用其去重的特性来检测侵权行为。对IPFS这个系统产生了兴趣，阅读了<a href="https://tech.hyperchain.cn">QTech平台</a>上的<a href="https://tech.hyperchain.cn/tag/ipfs/">IPFS系列文章</a>，也查询了一些相关资料，通过本文梳理一下，如有错漏，欢迎交流指正。</p>
-<h3 id="概述">概述</h3>
+<h2 id="概述">概述</h2>
 <p>我们日常使用网盘或其他服务时大多都是访问文件所在的特定的服务器（IP地址），请求文件并下载到本地，通过的是HTTP协议，本质上是基于位置寻址的，访问URL来得到一层层找到具体的文件，这种方式固然便捷，但是存在一些问题。文件依托于特定的服务器，因此一旦中心化的服务器宕机或者文件被删除了，内容将永久丢失，并且如果离服务器很远/同时访问文件的人很多的话访问速度也会比较慢；而且同样一份文件可能重复存储在不同的服务器中，造成资源的浪费；此外就是存在严重的安全隐患，DDoS、XSS、CSRF等攻击都可能对文件安全性造成威胁。</p>
 <blockquote>
 <p>那有没有更好的解决方案呢？</p>
 </blockquote>
 <p>试想我们把文件存储在一个分布式网络里，每个节点都可以存储文件，用户可以通过访问一个类似目录索引的方式来向最近的节点互相请求文件。这就是IPFS星际文件系统的解决思路，它是一个点对点的超媒体文件存储、索引、交换协议，由Juan Benet在2014年5月发起。</p>
-<h4 id="特点">特点</h4>
+<h3 id="特点">特点</h3>
 <p>IPFS想把全世界所有部署了相同文件系统的计算设备链接在一起，构建一个分布式网络来替代传统中心化的服务器模式，每个节点都可以存储文件，用户通过<code>DHT(Distributed Hash Table)</code>分布式哈希表来获取文件，速度更快、更安全，网络安全性更强。</p>
 <p>因为通过IPFS存储的文件内容是通过分块求Hash值存储为地址的，本质上是通过多重哈希来确定文件的地址，这是一种去中心化但是基于内容寻址的方式，通过对数据本身进行加密，生成独一无二的Hash以供查找，这种方式下，即使是微小的改变，也会造成Hash结果截然不同，因此很容易能够从Hash检测内容是否被篡改，甚至不用访问文件本身。</p>
 <p>不同于传统的服务器模式，IPFS是一个统一的网络，因此已经上传的相同内容的文件不会重复存储（可以通过Hash值检验），极大地节约了整体网络资源，也更加高效。而且理论上只要节点达到一定规模，文件将永久保存，且同一个文件可以从多个（也更近）的节点下载，通讯效率也会更高。</p>
 <p>除此之外，因为是分布式网络进行存储，也可以天然地避免传统DDoS等攻击。</p>
-<h4 id="功能">功能</h4>
+<h3 id="功能">功能</h3>
 <p>除了文件存储外，IPFS还有DHT组网、Bitswap文件交换等功能，之后也会单独写博文进行讲解。</p>
-<h3 id="工作原理">工作原理</h3>
+<h2 id="工作原理">工作原理</h2>
 <p>作为一个文件存储系统，上传文件和下载文件是两个最基本的操作，我们分别讲一下原理。</p>
-<h4 id="ipfs-add命令">IPFS add命令</h4>
+<h3 id="ipfs-add命令">IPFS add命令</h3>
 <blockquote>
 <p>在IPFS系统中执行add操作就完成了上传操作，那是怎么上传的呢？</p>
 </blockquote>
@@ -180,7 +180,7 @@
 <p>因此，很好理解的是，即使是不同文件的相同部分也只会存储一份，很多文件的索引会指向同一个block，所形成的结构就是MerkleDAG数据结构。</p>
 <p>值得注意的是，当节点执行add操作时，会保留到本地blockstore中，但不会立刻主动上传到IPFS网络中，也就是说，与其连接的节点并不会存储这个文件，除非有某个节点请求过该block数据！因此，它并不是一个自动备份数据的分布式数据库。IPFS这种设计是出于网络带宽、可靠性等方面的考虑。</p>
 <p>还有一个细节就是，当节点在执行<code>add</code>命令时，还会广播自己的块信息，并维护一个所有发给这个节点的block请求列表，一旦add命令添加到数据满足这个列表，就会主动向对应的节点发送数据并且更新列表。</p>
-<h4 id="ipfs-get命令">IPFS get命令</h4>
+<h3 id="ipfs-get命令">IPFS get命令</h3>
 <blockquote>
 <p>那文件上传后，要怎么查找访问呢？</p>
 </blockquote>

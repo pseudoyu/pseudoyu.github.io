@@ -184,6 +184,20 @@
   </url>
   
   <url>
+    <loc>https://www.pseudoyu.com/en/tag/bitcoin/</loc>
+    <lastmod>2021-02-17T12:12:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pseudoyu.com/en/2021/02/17/blockchain_bitcoin_basic/</loc>
+    <lastmod>2021-02-17T12:12:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.pseudoyu.com/en/2021/02/12/blockchain_basic/</loc>
     <lastmod>2021-02-12T12:12:17+08:00</lastmod>
     <changefreq>weekly</changefreq>

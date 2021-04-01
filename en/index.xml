@@ -264,7 +264,7 @@ ipfs repo gc
       <guid>https://www.pseudoyu.com/en/2021/03/23/blockchain_hyperledger_fabric_network/</guid>
       
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;上一篇文章《&lt;a href=&#34;https://www.pseudoyu.com/zh/2021/03/20/blockchain_hyperledger_fabric_structure/&#34;&gt;Hyperledger Fabric架构详解&lt;/a&gt;》对&lt;code&gt;Fabric&lt;/code&gt;的架构和工作原理进行了详细的解读与分析，那作为一个企业级的区块链系统，它是如何根据复杂的业务需求搭建网络，在运行过程中存在哪些安全问题，以及&lt;code&gt;Fabric&lt;/code&gt;是如何从机制上进行预防的呢？&lt;/p&gt;
+&lt;p&gt;上一篇文章《&lt;a href=&#34;https://www.pseudoyu.com/en/2021/03/20/blockchain_hyperledger_fabric_structure/&#34;&gt;Hyperledger Fabric架构详解&lt;/a&gt;》对&lt;code&gt;Fabric&lt;/code&gt;的架构和工作原理进行了详细的解读与分析，那作为一个企业级的区块链系统，它是如何根据复杂的业务需求搭建网络，在运行过程中存在哪些安全问题，以及&lt;code&gt;Fabric&lt;/code&gt;是如何从机制上进行预防的呢？&lt;/p&gt;
 &lt;p&gt;本文将通过实例阐释一个简化版的企业&lt;code&gt;Fabric&lt;/code&gt;网络是如何构建的，并对其网络与安全体系进行分析，如有错漏，欢迎交流指正。&lt;/p&gt;
 &lt;h2 id=&#34;hyperledger-fabric网络&#34;&gt;Hyperledger Fabric网络&lt;/h2&gt;
 &lt;h3 id=&#34;hyperledger-fabric应用场景实例&#34;&gt;Hyperledger Fabric应用场景实例&lt;/h3&gt;
@@ -348,7 +348,7 @@ ipfs repo gc
     </item>
     
     <item>
-      <title>Hyperledger Fabric架构详解</title>
+      <title>Hyperledger Fabric系统架构详解</title>
       <link>https://www.pseudoyu.com/en/2021/03/20/blockchain_hyperledger_fabric_structure/</link>
       <pubDate>Sat, 20 Mar 2021 12:12:17 +0800</pubDate>
       

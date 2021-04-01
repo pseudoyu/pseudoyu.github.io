@@ -26,6 +26,15 @@
     </item>
     
     <item>
+      <title>Hyperledger Fabric网络与安全体系浅析</title>
+      <link>https://www.pseudoyu.com/zh/2021/03/23/blockchain_hyperledger_fabric_network/</link>
+      <pubDate>Tue, 23 Mar 2021 12:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/03/23/blockchain_hyperledger_fabric_network/</guid>
+      <description>前言 上一篇文章《Hyperledger Fabric架构详解》对Fabric的架构和工作原理进行了详细的解读与分析，那作为一个企业级的区块链系</description>
+    </item>
+    
+    <item>
       <title>Hyperledger Fabric架构详解</title>
       <link>https://www.pseudoyu.com/zh/2021/03/20/blockchain_hyperledger_fabric_structure/</link>
       <pubDate>Sat, 20 Mar 2021 12:12:17 +0800</pubDate>
@@ -188,15 +197,6 @@ Datasets  Criteo Dataset. It is a famous industry benchmarking dataset for devel
       
       <guid>https://www.pseudoyu.com/zh/2020/10/19/icom6012_topic3/</guid>
       <description>ICOM6012 Internet Infrastructure Technologies Topic 3 Application Layer Creating a Network App Run on different end systems Communication over network No need to write for network-core devices Client-Server Architecture (The Centralized Internet) Server Always-on host Permanent IP address Often in data centers (for scaling) Clients Contact, communicate with server May be intermittently connected May have dynamic IP addresses Don&amp;rsquo;t communicate directly with each other Peer-to-Peer (P2P) Architecture No always-on server</description>
-    </item>
-    
-    <item>
-      <title>A Look at Tik-Tok</title>
-      <link>https://www.pseudoyu.com/zh/2020/10/16/ecom6013_discussion_topic4/</link>
-      <pubDate>Fri, 16 Oct 2020 09:19:19 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/10/16/ecom6013_discussion_topic4/</guid>
-      <description>A Look at Tik-Tok Given there are many social media platforms already existing in US, what makes Tik-Tok so successful that it becomes a big enough threat to cause the US Government to act the way it did towards a commercial company (ignore political factors)? Economically, at about 2016, US tech giants such as Facebook or Google mainly focused on long video platform instead of the short video platform. A company called Musical.</description>
     </item>
     
   </channel>

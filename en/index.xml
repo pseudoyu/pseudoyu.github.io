@@ -1728,6 +1728,91 @@ ipfs repo gc
     </item>
     
     <item>
+      <title>Ethereum核心技术解读</title>
+      <link>https://www.pseudoyu.com/en/2021/02/20/blockchain_ethereum_basic/</link>
+      <pubDate>Sat, 20 Feb 2021 12:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2021/02/20/blockchain_ethereum_basic/</guid>
+      
+        <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;比特币作为一种去中心化的数字货币，是极其成功的，但受限于比特币脚本（非图灵完备，只能处理一些简单的逻辑），并不能处理很复杂的业务。而&lt;code&gt;Ethereum&lt;/code&gt;引入了智能合约，使去中心化的概念能够应用于更丰富的应用场景，因此也被称为区块链2.0。本文将对以太坊核心技术进行解读，如有错漏，欢迎交流指正。&lt;/p&gt;
+&lt;h2 id=&#34;ethereum系统&#34;&gt;Ethereum系统&lt;/h2&gt;
+&lt;p&gt;2014年1月，俄罗斯开发者Vitalik Buterin发布了以太坊白皮书并成立团队，旨在创造一个集成更通用的脚本语言的区块链平台。其中一位成员Dr. Gavin Wood发布了一份黄皮书，涉及&lt;code&gt;Ethereum Virtual Machin(EVM)&lt;/code&gt;以太坊虚拟的相关技术，这就是&lt;code&gt;Ethereum&lt;/code&gt;的诞生。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ethereum_overview.png&#34; alt=&#34;ethereum_overview&#34;&gt;&lt;/p&gt;
+&lt;p&gt;简单来说，&lt;code&gt;Ethereum&lt;/code&gt;是一个开源的去中心化系统，使用区块链来存储系统状态变化，因此也被称为“世界计算机”；它支持开发者在区块链上部署运行不可变的程序，称为智能合约，因此可以支持广泛的应用场景；它使用数字货币&lt;code&gt;Ether&lt;/code&gt;来衡量系统资源消耗，激励更多人参与&lt;code&gt;Ethereum&lt;/code&gt;系统建设。&lt;/p&gt;
+&lt;h3 id=&#34;去中心化应用dapp&#34;&gt;去中心化应用DApp&lt;/h3&gt;
+&lt;p&gt;狭义来说，DApp其实就是一个集成了用户界面、支持智能合约、运行于以太坊区块链上的应用。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ethereum_architecture.png&#34; alt=&#34;ethereum_architecture&#34;&gt;&lt;/p&gt;
+&lt;p&gt;如上图所示，&lt;code&gt;Ethereum&lt;/code&gt;应用实例部署在区块链网络上（智能合约运行于区块链虚拟机中），而Web程序只需要通过&lt;code&gt;Web3.js&lt;/code&gt;对区块链网络进行&lt;code&gt;RPC&lt;/code&gt;远程调用，这样用户就可以通过浏览器（DApp浏览器或MetaMask等插件工具）访问去中心化服务应用了。&lt;/p&gt;
+&lt;h3 id=&#34;账本&#34;&gt;账本&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Ethereum&lt;/code&gt;区块链是一个去中心化的账本（数据库），网络中的所有交易都会存储在区块链中，所有节点都要本地保存一份数据，并且确保每一笔交易的可信度；所有的交易都是公开且不可篡改的，网络中的所有节点都可以查看和验证。&lt;/p&gt;
+&lt;h3 id=&#34;账户&#34;&gt;账户&lt;/h3&gt;
+&lt;p&gt;当我们需要登录一个网站或系统（比如邮箱）时，往往需要一个帐号和一个密码，密码通过加密算法以暗文的形式存储在中心化的数据库中。然而，以太坊是一个去中心化的系统，那是怎么生成账户的呢？&lt;/p&gt;
+&lt;p&gt;和比特币系统原理类似&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;首先生成一个仅有自己知道的私钥，假设为&lt;code&gt;sk&lt;/code&gt;，采用&lt;code&gt;ECDSA(Elliptic Curve Digital Signature Algorithm)&lt;/code&gt;椭圆曲线算法生成对应的公钥&lt;code&gt;pk&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;采用&lt;code&gt;keccak256&lt;/code&gt;算法对公钥&lt;code&gt;pk&lt;/code&gt;求哈希值&lt;/li&gt;
+&lt;li&gt;截取后160位作为以太坊的地址&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;用户的私钥和地址一起组成了以太坊的账户，可以存储余额、发起交易等（比特币的余额是通过计算所有的&lt;code&gt;UTXO&lt;/code&gt;得到的，而不是像以太坊一样存储在账户中）。&lt;/p&gt;
+&lt;p&gt;其实&lt;code&gt;Ethereum&lt;/code&gt;账户分为两种类型，上述方式生成的叫&lt;code&gt;Externally Owned Accounts(EOA)&lt;/code&gt;，外部账户，也就是常规用户拥有的账户，主要是用来发送/接收&lt;code&gt;Ether&lt;/code&gt;代币或者向智能合约发送交易（即调用智能合约）。&lt;/p&gt;
+&lt;p&gt;而另一种则是&lt;code&gt;Contract Accounts&lt;/code&gt;，合约账户，不同于外部账户，这种账户是没有对应的私钥的，而是在部署合约的时候生成的，存储智能合约代码。值得注意的是，合约账户必须要被外部账户或者其他合约调用才能够发送或接收&lt;code&gt;Ether&lt;/code&gt;，而不能自己主动执行交易。&lt;/p&gt;
+&lt;h3 id=&#34;钱包&#34;&gt;钱包&lt;/h3&gt;
+&lt;p&gt;存储和管理&lt;code&gt;Ethereum&lt;/code&gt;账户的软件/插件称为钱包，提供了诸如交易签名、余额管理等功能。钱包生成主要有两种方式，非确定性随机生成或根据随机种子生成。&lt;/p&gt;
+&lt;h3 id=&#34;gas&#34;&gt;Gas&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Ethereum&lt;/code&gt;网络上的操作也需要“手续费”，称为&lt;code&gt;Gas&lt;/code&gt;，在区块链上部署智能合约以及转账都需要消耗一定单位的&lt;code&gt;Gas&lt;/code&gt;，这也是鼓励矿工参与&lt;code&gt;Ethereum&lt;/code&gt;网络建设的激励机制，从而使整个网络更加安全、可靠。&lt;/p&gt;
+&lt;p&gt;每个交易都可以设置相应的&lt;code&gt;Gas&lt;/code&gt;量和&lt;code&gt;Gas&lt;/code&gt;的价格，设置较高的&lt;code&gt;Gas&lt;/code&gt;费则往往矿工会更快处理你的交易，但为了预防交易多次执行消耗大量&lt;code&gt;Gas&lt;/code&gt;费，可以通过&lt;code&gt;Gas Limit&lt;/code&gt;来设置限制。&lt;code&gt;Gas&lt;/code&gt;相关信息可以通过 &lt;a href=&#34;https://etherscan.io/gastracker&#34;&gt;Ethereum Gas Tracker&lt;/a&gt; 工具进行查询。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;If START_GAS * GAS_PRICE &amp;gt; caller.balance, halt
+Deduct START_GAS * GAS_PRICE from caller.balance
+Set GAS = START_GAS
+Run code, deducting from GAS
+For negative values, add to GAS_REFUND
+After termination, add GAS_REFUND to caller.balance
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;智能合约&#34;&gt;智能合约&lt;/h3&gt;
+&lt;p&gt;上文提到，&lt;code&gt;Ethereum&lt;/code&gt;区块链不仅仅存储交易信息，还会存储与执行智能合约代码。&lt;/p&gt;
+&lt;p&gt;智能合约控制应用和交易逻辑，&lt;code&gt;Ethereum&lt;/code&gt;系统中的智能合约采用专属&lt;code&gt;Solidity&lt;/code&gt;语言，语法类似于&lt;code&gt;JavaScript&lt;/code&gt;，除此之外，还有&lt;code&gt;Vyper&lt;/code&gt;、&lt;code&gt;Bamboo&lt;/code&gt;等编程语言。智能合约代码会被编译为字节码并部署至区块链中，一旦上链则不可以再编辑。&lt;code&gt;EVM&lt;/code&gt;作为一个智能合约执行环境，能够保障执行结果的确定性。&lt;/p&gt;
+&lt;h4 id=&#34;智能合约示例众筹&#34;&gt;智能合约示例：众筹&lt;/h4&gt;
+&lt;p&gt;让我们想象一个更复杂的场景，假设我要众筹10000元开发一个新产品，通过现有众筹平台需要支付不菲的手续费，而且很难解决信任问题，于是，可以通过一个众筹的DApp来解决这个问题。&lt;/p&gt;
+&lt;p&gt;先为众筹设置一些规则：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;每个想参与众筹的人可以捐款10-10000元的金额&lt;/li&gt;
+&lt;li&gt;如果目标金额达成了，金额会通过智能合约发送给我（即众筹发起人）&lt;/li&gt;
+&lt;li&gt;如果目标在一定时间内（如1个月）没有达成，众筹的资金会原路返回至众筹用户&lt;/li&gt;
+&lt;li&gt;也可以设置一些规则，比如一周后，如果目标金额没有达成，用户可以申请退款&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;因为这些众筹条款是通过智能合约实现并部署在公开的区块链上的，即使是发起者也不能篡改条款，且任何人都可以查看，解决了信任问题。&lt;/p&gt;
+&lt;p&gt;完整代码可以点击这里查看：&lt;a href=&#34;https://www.toshblocks.com/solidity/complete-example-crowd-funding-smart-contract/&#34;&gt;Demo&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;交易&#34;&gt;交易&lt;/h3&gt;
+&lt;p&gt;在&lt;code&gt;Ethereum&lt;/code&gt;中，一个典型的交易是怎么样的呢？&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;开发者部署智能合约至区块链&lt;/li&gt;
+&lt;li&gt;DApp实例化合约、传入相应值以执行合约&lt;/li&gt;
+&lt;li&gt;DApp对交易进行数字签名&lt;/li&gt;
+&lt;li&gt;本地对交易进行验证&lt;/li&gt;
+&lt;li&gt;广播交易至网络中&lt;/li&gt;
+&lt;li&gt;矿工节点接收交易并进行验证&lt;/li&gt;
+&lt;li&gt;矿工节点确认可信区块后广播至网络中&lt;/li&gt;
+&lt;li&gt;本地节点与网络进行同步，接收新区块&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
+&lt;p&gt;以上就是对&lt;code&gt;Ethereum&lt;/code&gt;核心技术的一些解读，智能合约的引入给区块链的应用带来了更多可能性，但仍有很多安全性、隐私性和效率问题需要考虑。针对复杂的企业级应用场景，联盟链是更好的选择，后续将会对&lt;code&gt;Hyperledger Fabric&lt;/code&gt;进行详尽的分析，敬请期待！&lt;/p&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://msccs.cs.hku.hk/public/courses/2020/COMP7408A/&#34;&gt;COMP7408 Distributed Ledger and Blockchain Technology&lt;/a&gt;, &lt;em&gt;Professor S.M. Yiu, HKU&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.udacity.com/course/blockchain-developer-nanodegree--nd1309&#34;&gt;Udacity Blockchain Developer Nanodegree&lt;/a&gt;, &lt;em&gt;Udacity&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1Vt411X7JF&#34;&gt;区块链技术与应用&lt;/a&gt;，&lt;em&gt;肖臻，北京大学&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ituring.com.cn/book/2434&#34;&gt;区块链技术进阶与实战&lt;/a&gt;，&lt;em&gt;蔡亮 李启雷 梁秀波，浙江大学 | 趣链科技&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.zastrin.com/courses/ethereum-primer/lessons/1-5&#34;&gt;Ethereum Architecture&lt;/a&gt;, &lt;em&gt;zastrin&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.toshblocks.com/solidity/complete-example-crowd-funding-smart-contract/&#34;&gt;Learn Solidity: Complete Example: Crowd Funding Smart Contract&lt;/a&gt;, &lt;em&gt;TOSHBLOCKS&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>比特币核心技术解读</title>
       <link>https://www.pseudoyu.com/en/2021/02/17/blockchain_bitcoin_basic/</link>
       <pubDate>Wed, 17 Feb 2021 12:12:17 +0800</pubDate>
@@ -4410,394 +4495,6 @@ matches the distribution of letter in English)&lt;/li&gt;
 &lt;li&gt;Algorithms
 &lt;ul&gt;
 &lt;li&gt;RSA&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>ICOM6012 Topic 4 Transport Layer</title>
-      <link>https://www.pseudoyu.com/en/2020/10/20/icom6012_topic4/</link>
-      <pubDate>Tue, 20 Oct 2020 09:37:44 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/10/20/icom6012_topic4/</guid>
-      
-        <description>&lt;h1 id=&#34;icom6012-internet-infrastructure-technologies&#34;&gt;ICOM6012 Internet Infrastructure Technologies&lt;/h1&gt;
-&lt;h2 id=&#34;topic-4-transport-layer&#34;&gt;Topic 4 Transport Layer&lt;/h2&gt;
-&lt;h2 id=&#34;actions&#34;&gt;Actions&lt;/h2&gt;
-&lt;h3 id=&#34;sender&#34;&gt;Sender&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Get application layer message&lt;/li&gt;
-&lt;li&gt;Determine segment header fields values&lt;/li&gt;
-&lt;li&gt;Create segment&lt;/li&gt;
-&lt;li&gt;Pass segment to IP&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;receiver&#34;&gt;Receiver&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Receive segment from IP&lt;/li&gt;
-&lt;li&gt;Check header values&lt;/li&gt;
-&lt;li&gt;Extract application layer message&lt;/li&gt;
-&lt;li&gt;Demultiplexes message up to application via socket&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;services&#34;&gt;Services&lt;/h2&gt;
-&lt;h3 id=&#34;provide-logical-communication-between-processes&#34;&gt;Provide logical communication between processes&lt;/h3&gt;
-&lt;h3 id=&#34;run-in-end-system&#34;&gt;Run in end system&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Send side
-&lt;ul&gt;
-&lt;li&gt;Break app messages into segment&lt;/li&gt;
-&lt;li&gt;Pass to network layer&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Receive side
-&lt;ul&gt;
-&lt;li&gt;Reassembles segments into messages&lt;/li&gt;
-&lt;li&gt;Pass to application layer&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;protocols&#34;&gt;Protocols&lt;/h2&gt;
-&lt;h3 id=&#34;tcp&#34;&gt;TCP&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Features
-&lt;ul&gt;
-&lt;li&gt;Point-to-point
-&lt;ul&gt;
-&lt;li&gt;One sender, one receiver&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Reliable, in-order byte system
-&lt;ul&gt;
-&lt;li&gt;No message boundaries&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Full duplex data
-&lt;ul&gt;
-&lt;li&gt;Bi-directional data flow in same connection&lt;/li&gt;
-&lt;li&gt;MSS: maximum segment size (excluding header)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Cumulative ACKs&lt;/li&gt;
-&lt;li&gt;Pipelining
-&lt;ul&gt;
-&lt;li&gt;TCP congestion and flow control set window size&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Flow Control
-&lt;ul&gt;
-&lt;li&gt;Sender will not overwhelm receiver&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Congestion control&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Concepts
-&lt;ul&gt;
-&lt;li&gt;Segment structure&lt;/li&gt;
-&lt;li&gt;Sequence numbers
-&lt;ul&gt;
-&lt;li&gt;Byte stream &amp;ldquo;number&amp;rdquo; of first byte in segment&amp;rsquo;s data&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Acknowledgements (ACKs)
-&lt;ul&gt;
-&lt;li&gt;Seq # of next byte expected from other side&lt;/li&gt;
-&lt;li&gt;Cumulative ACKs&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Procedure
-&lt;ul&gt;
-&lt;li&gt;Connection-oriented
-&lt;ul&gt;
-&lt;li&gt;Handshaking initializes sender, receiver state before data exchange&lt;/li&gt;
-&lt;li&gt;TCP socket identified by 4-tuple
-&lt;ul&gt;
-&lt;li&gt;Source IP&lt;/li&gt;
-&lt;li&gt;Source Port #&lt;/li&gt;
-&lt;li&gt;Dest IP&lt;/li&gt;
-&lt;li&gt;Dest Port #&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Server host may support many simultaneous TCP sockets&lt;/li&gt;
-&lt;li&gt;Web servers have different sockets for each connecting client
-(Non-persistent HTTP will have different socket for each request)&lt;/li&gt;
-&lt;li&gt;Demux
-&lt;ul&gt;
-&lt;li&gt;Receiver uses all four values to direct segment to appropriate socket&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;3-way handshake
-&lt;ul&gt;
-&lt;li&gt;Connection setup&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Connection management
-&lt;ul&gt;
-&lt;li&gt;Handshake
-&lt;ul&gt;
-&lt;li&gt;Agree to establish connection&lt;/li&gt;
-&lt;li&gt;Agree on connection parameters&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Retransmission&lt;/li&gt;
-&lt;li&gt;Closing a connection&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Events
-&lt;ul&gt;
-&lt;li&gt;Data received from application
-&lt;ul&gt;
-&lt;li&gt;Create segment with seq # (a byte-stream number of first data byte in segment)&lt;/li&gt;
-&lt;li&gt;Start timer if not already running
-&lt;ul&gt;
-&lt;li&gt;Think of timer as for oldest unACKed segment&lt;/li&gt;
-&lt;li&gt;Expiration interval: TimeOutInterval&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Timeout
-&lt;ul&gt;
-&lt;li&gt;Retransmit segment that caused timeout&lt;/li&gt;
-&lt;li&gt;Restart timer&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;ACK received
-&lt;ul&gt;
-&lt;li&gt;Update what is known to ACKed&lt;/li&gt;
-&lt;li&gt;Start timer if there are still unACKed segment&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Shortcomings
-&lt;ul&gt;
-&lt;li&gt;SYN DoS Attack
-&lt;ul&gt;
-&lt;li&gt;Half-open TCP connections consume all the TCP connection resources&lt;/li&gt;
-&lt;li&gt;SYN packet with a spoofed source address&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;udp&#34;&gt;UDP&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Features&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;No frills&lt;/li&gt;
-&lt;li&gt;Bare bones&lt;/li&gt;
-&lt;li&gt;&amp;ldquo;Best effort&amp;rdquo;
-&lt;ul&gt;
-&lt;li&gt;Lost&lt;/li&gt;
-&lt;li&gt;Delivered out-of-order to app&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;No handshaking&lt;/li&gt;
-&lt;li&gt;Handle independently&lt;/li&gt;
-&lt;li&gt;Services not available
-&lt;ul&gt;
-&lt;li&gt;Delay guarantee&lt;/li&gt;
-&lt;li&gt;Bandwidth guarantee&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Concepts&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Segment format
-&lt;ul&gt;
-&lt;li&gt;Source port #&lt;/li&gt;
-&lt;li&gt;Dest port #&lt;/li&gt;
-&lt;li&gt;Length&lt;/li&gt;
-&lt;li&gt;Checksum
-&lt;ul&gt;
-&lt;li&gt;Detect errors
-&lt;ul&gt;
-&lt;li&gt;Sender
-&lt;ul&gt;
-&lt;li&gt;Treat segement contents&lt;/li&gt;
-&lt;li&gt;Checksum: 1&amp;rsquo;s complement sum&lt;/li&gt;
-&lt;li&gt;Put checksum into UDP field value&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Receiver
-&lt;ul&gt;
-&lt;li&gt;Compute checksum of received segment&lt;/li&gt;
-&lt;li&gt;Check equality
-&lt;ul&gt;
-&lt;li&gt;No: error detected&lt;/li&gt;
-&lt;li&gt;Yes: no error detected (not sure)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Checksum calculation may be disabled in order to speed up the processing&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Procedure&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Connectionless demux
-&lt;ul&gt;
-&lt;li&gt;Create socket with unique local port #&lt;/li&gt;
-&lt;li&gt;Sender side: create datagram to send into UDP socket
-&lt;ul&gt;
-&lt;li&gt;Dest IP&lt;/li&gt;
-&lt;li&gt;Dest port #&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Receive side: receive UDP segment
-(IP datagrams with same dest port #, but different source will be directed to same socket)
-&lt;ul&gt;
-&lt;li&gt;Check dest port #&lt;/li&gt;
-&lt;li&gt;Direct UDP segment to socket with that port #&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Utilization&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Streaming multimedia apps
-&lt;ul&gt;
-&lt;li&gt;Loss tolerant&lt;/li&gt;
-&lt;li&gt;Rate sensitive&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;DNS&lt;/li&gt;
-&lt;li&gt;SNMP&lt;/li&gt;
-&lt;li&gt;HTTP/3&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Shortcomings&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Need reliability at application layer&lt;/li&gt;
-&lt;li&gt;Congestion control&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;sctp&#34;&gt;SCTP&lt;/h3&gt;
-&lt;h3 id=&#34;dccp&#34;&gt;DCCP&lt;/h3&gt;
-&lt;h2 id=&#34;multiplexing-and-demultiplexing&#34;&gt;Multiplexing and Demultiplexing&lt;/h2&gt;
-&lt;h3 id=&#34;multiplexing-at-sender&#34;&gt;Multiplexing at sender&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Handle data from multiple sockets, add transport header&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;demultiplexing-at-receiver&#34;&gt;Demultiplexing at receiver&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Handle data info to deliver received segments to correct socket&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;host-receivers-ip-datagram-host-uses-ip--port--to-redirect-segment&#34;&gt;Host receivers IP datagram (Host uses IP &amp;amp; port # to redirect segment)&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Source IP&lt;/li&gt;
-&lt;li&gt;Dest IP&lt;/li&gt;
-&lt;li&gt;One transport layer segment
-&lt;ul&gt;
-&lt;li&gt;Source port #&lt;/li&gt;
-&lt;li&gt;Dest port #&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;congestion-control&#34;&gt;Congestion Control&lt;/h2&gt;
-&lt;h3 id=&#34;cause&#34;&gt;Cause&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Too many sources sending too much data too fast for network to handle&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;manifestations&#34;&gt;Manifestations&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Long delay
-&lt;ul&gt;
-&lt;li&gt;Queueing in router buffers&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Packet loss
-&lt;ul&gt;
-&lt;li&gt;Buffer overflow at network&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;approaches&#34;&gt;Approaches&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;End-end congestion control
-&lt;ul&gt;
-&lt;li&gt;Features
-&lt;ul&gt;
-&lt;li&gt;No explicit feedback from network&lt;/li&gt;
-&lt;li&gt;Congestion inferred from observed loss, delay&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Network-assisted congestion control
-&lt;ul&gt;
-&lt;li&gt;Features
-&lt;ul&gt;
-&lt;li&gt;Routers provide direct feedback to hosts with flow passing through congested router&lt;/li&gt;
-&lt;li&gt;May indicate congestion level or explicit set sending rate&lt;/li&gt;
-&lt;li&gt;TCP ECN ATM DECbit protocols&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;tcp-congestion-control&#34;&gt;TCP Congestion Control&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;AIMD
-&lt;ul&gt;
-&lt;li&gt;Sender can increase sending rate until packet loss occurs, then decrease&lt;/li&gt;
-&lt;li&gt;Additive increase
-&lt;ul&gt;
-&lt;li&gt;1 MSS (maximum segment size) until loss detected&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Multiplicative decrease
-&lt;ul&gt;
-&lt;li&gt;Cut sending rate in half at each loss event&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Detecting, reacting to loss
-&lt;ul&gt;
-&lt;li&gt;ACKs problem
-&lt;ul&gt;
-&lt;li&gt;cwnd is cut in half&lt;/li&gt;
-&lt;li&gt;Window grow linearly&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Timeout event
-&lt;ul&gt;
-&lt;li&gt;cwnd is set to 1 MSS&lt;/li&gt;
-&lt;li&gt;Window grow exponentially to threshold, then linearly&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;TCP slow start
-&lt;ul&gt;
-&lt;li&gt;Initially cwnd = 1 MSS&lt;/li&gt;
-&lt;li&gt;Double cwnd every RTT&lt;/li&gt;
-&lt;li&gt;Done by incrementing cwnd for every ACK received&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;

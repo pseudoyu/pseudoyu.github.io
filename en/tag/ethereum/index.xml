@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ethereum on Pseudoyu</title>
+    <link>https://www.pseudoyu.com/en/tag/ethereum/</link>
+    <description>Recent content in ethereum on Pseudoyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 20 Feb 2021 12:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/ethereum/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ethereum核心技术解读</title>
+      <link>https://www.pseudoyu.com/en/2021/02/20/blockchain_ethereum_basic/</link>
+      <pubDate>Sat, 20 Feb 2021 12:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2021/02/20/blockchain_ethereum_basic/</guid>
+      <description>前言 比特币作为一种去中心化的数字货币，是极其成功的，但受限于比特币脚本（非图灵完备，只能处理一些简单的逻辑），并不能处理很复杂的业务。而Et</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -390,6 +390,7 @@ ipfs repo gc
 &lt;h2 id=&#34;hyperledger-fabric&#34;&gt;Hyperledger Fabric&lt;/h2&gt;
 &lt;p&gt;我们着重来讲讲其中应用最广泛的&lt;code&gt;Fabric&lt;/code&gt;项目，它是由Linux基金会维护的一个模块化、可拓展的区块链联盟链项目，不依赖任何加密货币，它对有着共同目标（业务需求）但彼此不完全信息的实体之间的业务提供了保护，例如跨境电商、资金交易、溯源等。&lt;/p&gt;
 &lt;h3 id=&#34;架构&#34;&gt;架构&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ethereum_architecture_simple.png&#34; alt=&#34;ethereum_architecture_simple&#34;&gt;&lt;/p&gt;
 &lt;p&gt;在大部分公链中，架构为&lt;code&gt;Order - Execute - Validate - Update State&lt;/code&gt;。如比特币区块链中，如果有一个新交易，会先采用PoW机制对Block进行排序，然后比特币网络中的每个节点逐个进行验证，最后更新状态。因为需要依序进行验证，这种方式决定了其执行效率相对较低。&lt;/p&gt;
 &lt;p&gt;而&lt;code&gt;Fabric&lt;/code&gt;采用了&lt;code&gt;Execute - Order - Validate - Update State&lt;/code&gt;架构。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/hyperledger_fabric_architecture.png&#34; alt=&#34;hyperledger_fabric_architecture&#34;&gt;&lt;/p&gt;
@@ -1795,6 +1796,12 @@ After termination, add GAS_REFUND to caller.balance
 &lt;li&gt;矿工节点确认可信区块后广播至网络中&lt;/li&gt;
 &lt;li&gt;本地节点与网络进行同步，接收新区块&lt;/li&gt;
 &lt;/ol&gt;
+&lt;h3 id=&#34;架构&#34;&gt;架构&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ethereum_architecture_simple.png&#34; alt=&#34;ethereum_architecture_simple&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Ethereum采用的是一种&lt;/code&gt;Order - Execute - Validate - Update State&lt;code&gt;的系统架构。在这种架构下，当产生一笔新的交易，矿工会进行&lt;/code&gt;PoW&lt;code&gt;工作量证明机制的运算；验证完成后，将区块通过&lt;/code&gt;gossip`协议广播至网络中；网络中的其他节点接收到新区块后，也会对区块进行验证；最终，提交至区块链，更新状态。&lt;/p&gt;
+&lt;p&gt;具体来看，&lt;code&gt;Ethereum&lt;/code&gt;系统有共识层、数据层、应用层等核心组件，其交互逻辑如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ethereum_architecture_concrete.png&#34; alt=&#34;ethereum_architecture_concrete&#34;&gt;&lt;/p&gt;
+&lt;p&gt;如上图所示，&lt;code&gt;Ethereum&lt;/code&gt;数据由&lt;code&gt;Transaction Root&lt;/code&gt;和&lt;code&gt;State Root&lt;/code&gt;组成。&lt;code&gt;Transaction Root&lt;/code&gt;是所有交易组成的树，包含&lt;code&gt;From&lt;/code&gt;、&lt;code&gt;To&lt;/code&gt;、&lt;code&gt;Data&lt;/code&gt;、&lt;code&gt;Value&lt;/code&gt;、&lt;code&gt;Gas Limit&lt;/code&gt;和&lt;code&gt;Gas Price&lt;/code&gt;；而&lt;code&gt;State Root&lt;/code&gt;则是所有账户组成的树，包含&lt;code&gt;Address&lt;/code&gt;、&lt;code&gt;Code&lt;/code&gt;、&lt;code&gt;Storage&lt;/code&gt;、&lt;code&gt;Balance&lt;/code&gt;和&lt;code&gt;Nonce&lt;/code&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
 &lt;p&gt;以上就是对&lt;code&gt;Ethereum&lt;/code&gt;核心技术的一些解读，智能合约的引入给区块链的应用带来了更多可能性，但仍有很多安全性、隐私性和效率问题需要考虑。针对复杂的企业级应用场景，联盟链是更好的选择，后续将会对&lt;code&gt;Hyperledger Fabric&lt;/code&gt;进行详尽的分析，敬请期待！&lt;/p&gt;
 &lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;

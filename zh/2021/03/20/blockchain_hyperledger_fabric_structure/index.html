@@ -194,6 +194,7 @@
 <h2 id="hyperledger-fabric">Hyperledger Fabric</h2>
 <p>我们着重来讲讲其中应用最广泛的<code>Fabric</code>项目，它是由Linux基金会维护的一个模块化、可拓展的区块链联盟链项目，不依赖任何加密货币，它对有着共同目标（业务需求）但彼此不完全信息的实体之间的业务提供了保护，例如跨境电商、资金交易、溯源等。</p>
 <h3 id="架构">架构</h3>
+<p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ethereum_architecture_simple.png" alt="ethereum_architecture_simple"></p>
 <p>在大部分公链中，架构为<code>Order - Execute - Validate - Update State</code>。如比特币区块链中，如果有一个新交易，会先采用PoW机制对Block进行排序，然后比特币网络中的每个节点逐个进行验证，最后更新状态。因为需要依序进行验证，这种方式决定了其执行效率相对较低。</p>
 <p>而<code>Fabric</code>采用了<code>Execute - Order - Validate - Update State</code>架构。</p>
 <p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/hyperledger_fabric_architecture.png" alt="hyperledger_fabric_architecture"></p>

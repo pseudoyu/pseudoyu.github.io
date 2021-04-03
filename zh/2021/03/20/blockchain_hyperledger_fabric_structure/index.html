@@ -267,15 +267,15 @@
 <p>背书是相关组织对交易的认可，即相关节点对交易进行签名。对于一个链码交易来说，背书策略是在链码实例化的时候指定的，一笔有效交易必须是背书策略相关组织签名才能生效，本质上<code>Fabric</code>区块链中的交易验证是基于对背书节点的信任，这也是称<code>Fabric</code>并不是严格意义上的去中心化的原因之一。</p>
 <p>以下是一个简单的链码执行示例</p>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">SimpleChaincode</span><span class="p">)</span> <span class="nf">InitLedger</span><span class="p">(</span><span class="nx">ctx</span> <span class="nx">contractapi</span><span class="p">.</span><span class="nx">TransactionContextInterface</span><span class="p">)</span> <span class="kt">error</span> <span class="p">{</span>
-	<span class="kd">var</span> <span class="nx">product</span> <span class="p">=</span> <span class="nx">Product</span> <span class="p">{</span> <span class="nx">Name</span><span class="p">:</span> <span class="s">&#34;Test Product&#34;</span><span class="p">,</span> <span class="nx">Description</span><span class="p">:</span> <span class="s">&#34;Just a test product to make sure chaincode is running&#34;</span><span class="p">,</span> <span class="nx">CreatedBy</span><span class="p">:</span> <span class="s">&#34;admin&#34;</span><span class="p">,</span> <span class="nx">ProductId</span><span class="p">:</span> <span class="s">&#34;1&#34;</span> <span class="p">}</span>
+    <span class="kd">var</span> <span class="nx">product</span> <span class="p">=</span> <span class="nx">Product</span> <span class="p">{</span> <span class="nx">Name</span><span class="p">:</span> <span class="s">&#34;Test Product&#34;</span><span class="p">,</span> <span class="nx">Description</span><span class="p">:</span> <span class="s">&#34;Just a test product to make sure chaincode is running&#34;</span><span class="p">,</span> <span class="nx">CreatedBy</span><span class="p">:</span> <span class="s">&#34;admin&#34;</span><span class="p">,</span> <span class="nx">ProductId</span><span class="p">:</span> <span class="s">&#34;1&#34;</span> <span class="p">}</span>
 
-	<span class="nx">productAsBytes</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">json</span><span class="p">.</span><span class="nf">Marshal</span><span class="p">(</span><span class="nx">product</span><span class="p">)</span>
+    <span class="nx">productAsBytes</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">json</span><span class="p">.</span><span class="nf">Marshal</span><span class="p">(</span><span class="nx">product</span><span class="p">)</span>
 
-	<span class="nx">err</span> <span class="p">=</span> <span class="nx">ctx</span><span class="p">.</span><span class="nf">GetStub</span><span class="p">().</span><span class="nf">PutState</span><span class="p">(</span><span class="s">&#34;1&#34;</span><span class="p">,</span> <span class="nx">productAsBytes</span><span class="p">)</span>
+    <span class="nx">err</span> <span class="p">=</span> <span class="nx">ctx</span><span class="p">.</span><span class="nf">GetStub</span><span class="p">().</span><span class="nf">PutState</span><span class="p">(</span><span class="s">&#34;1&#34;</span><span class="p">,</span> <span class="nx">productAsBytes</span><span class="p">)</span>
 
-	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-		<span class="k">return</span> <span class="nx">err</span>
-	<span class="p">}</span>
+    <span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">err</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div><p>在这个简单示例中，链码的主要操作就是更新了<code>key-value</code>值，经过了这个操作后，<code>version</code>会变化。</p>
 <p>执行后返回的R-W Set为</p>

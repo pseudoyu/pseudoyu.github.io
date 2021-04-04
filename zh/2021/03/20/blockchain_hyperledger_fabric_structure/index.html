@@ -32,7 +32,7 @@
 <meta itemprop="description" content="前言 因为毕业Case Study的项目主要是基于Ethereum公链，也没有面向企业的应用场景，所以之前对Hyperledger Fabric的">
 <meta itemprop="datePublished" content="2021-03-20T12:12:17+08:00" />
 <meta itemprop="dateModified" content="2021-03-20T12:12:17+08:00" />
-<meta itemprop="wordCount" content="5856">
+<meta itemprop="wordCount" content="5855">
 
 
 
@@ -282,7 +282,7 @@
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="nx">key</span><span class="p">:</span> <span class="mi">1</span>
 <span class="nx">value</span><span class="p">:</span> <span class="nx">Product</span> <span class="p">{</span> <span class="nx">Name</span><span class="p">:</span> <span class="s">&#34;Test Product&#34;</span><span class="p">,</span> <span class="nx">Description</span><span class="p">:</span> <span class="s">&#34;Just a test product to make sure chaincode is running&#34;</span><span class="p">,</span> <span class="nx">CreatedBy</span><span class="p">:</span> <span class="s">&#34;admin&#34;</span><span class="p">,</span> <span class="nx">ProductId</span><span class="p">:</span> <span class="s">&#34;1&#34;</span> <span class="p">}</span> <span class="nx">的Json形式</span>
 </code></pre></div><h4 id="排序环节">排序环节</h4>
-<p>Client提交已背书的交易至排序节点（排序节点可通过一些共识策略组成OSN），排序节点接收到交易后，会打包成blocks并按照配置中的规则进行排序，在此过程中，只执行排序操作，而不进行任何执行或验证，排序完成后发送至所有节点。</p>
+<p>Client提交已背书交易至排序节点（排序节点可通过一些共识策略组成OSN），排序节点接收到交易后，会打包成blocks并按照配置中的规则进行排序，在此过程中，只执行排序操作，而不进行任何执行或验证，排序完成后发送至所有节点。</p>
 <p>排序服务用来对全网交易达成一致，只负责对交易顺序达成一致，避免了整个网络瓶颈，更容易横向拓展以提升网络效率，目前支持<code>Kafka</code>和<code>Raft</code>两种，<code>Fabric</code>区块链网络的统一/完整性依赖于排序节点的一致性。</p>
 <p>Raft共识机制属于非拜占庭共识机制，使用了领导者和跟随者（Leader和Follower）模型，当一个Leader被选出，日志信息会从Leader向Follower单向复制，更容易管理，在设计上允许所有节点都可以称为Orderer节点，相比Kafka更中心化，其实也允许采用PBFT共识机制，但是性能往往很差。</p>
 <h4 id="验证环节">验证环节</h4>

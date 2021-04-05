@@ -3879,7 +3879,7 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
     </item>
     
     <item>
-      <title>刷题常用数据结构（Java篇）</title>
+      <title>LeetCode刷题常用数据结构（Java篇）</title>
       <link>https://www.pseudoyu.com/zh/2021/01/01/algorithm_data_structure_java/</link>
       <pubDate>Fri, 01 Jan 2021 00:12:17 +0800</pubDate>
       

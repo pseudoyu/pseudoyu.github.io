@@ -1798,7 +1798,7 @@ After termination, add GAS_REFUND to caller.balance
 &lt;/ol&gt;
 &lt;h3 id=&#34;架构&#34;&gt;架构&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ethereum_architecture_simple.png&#34; alt=&#34;ethereum_architecture_simple&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Ethereum采用的是一种&lt;/code&gt;Order - Execute - Validate - Update State&lt;code&gt;的系统架构。在这种架构下，当产生一笔新的交易，矿工会进行&lt;/code&gt;PoW&lt;code&gt;工作量证明机制的运算；验证完成后，将区块通过&lt;/code&gt;gossip`协议广播至网络中；网络中的其他节点接收到新区块后，也会对区块进行验证；最终，提交至区块链，更新状态。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Ethereum&lt;/code&gt;采用的是一种&lt;code&gt;Order - Execute - Validate - Update State&lt;/code&gt;的系统架构。在这种架构下，当产生一笔新的交易，矿工会进行&lt;code&gt;PoW&lt;/code&gt;工作量证明机制的运算；验证完成后，将区块通过&lt;code&gt;gossip&lt;/code&gt;协议广播至网络中；网络中的其他节点接收到新区块后，也会对区块进行验证；最终，提交至区块链，更新状态。&lt;/p&gt;
 &lt;p&gt;具体来看，&lt;code&gt;Ethereum&lt;/code&gt;系统有共识层、数据层、应用层等核心组件，其交互逻辑如下：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/ethereum_architecture_concrete.png&#34; alt=&#34;ethereum_architecture_concrete&#34;&gt;&lt;/p&gt;
 &lt;p&gt;如上图所示，&lt;code&gt;Ethereum&lt;/code&gt;数据由&lt;code&gt;Transaction Root&lt;/code&gt;和&lt;code&gt;State Root&lt;/code&gt;组成。&lt;code&gt;Transaction Root&lt;/code&gt;是所有交易组成的树，包含&lt;code&gt;From&lt;/code&gt;、&lt;code&gt;To&lt;/code&gt;、&lt;code&gt;Data&lt;/code&gt;、&lt;code&gt;Value&lt;/code&gt;、&lt;code&gt;Gas Limit&lt;/code&gt;和&lt;code&gt;Gas Price&lt;/code&gt;；而&lt;code&gt;State Root&lt;/code&gt;则是所有账户组成的树，包含&lt;code&gt;Address&lt;/code&gt;、&lt;code&gt;Code&lt;/code&gt;、&lt;code&gt;Storage&lt;/code&gt;、&lt;code&gt;Balance&lt;/code&gt;和&lt;code&gt;Nonce&lt;/code&gt;。&lt;/p&gt;

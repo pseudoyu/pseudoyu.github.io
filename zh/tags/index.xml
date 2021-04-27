@@ -6,7 +6,34 @@
     <description>Recent content in Tags on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 27 Mar 2021 18:46:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 Mar 2021 00:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>database</title>
+      <link>https://www.pseudoyu.com/zh/tag/database/</link>
+      <pubDate>Mon, 29 Mar 2021 00:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/tag/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mysql</title>
+      <link>https://www.pseudoyu.com/zh/tag/mysql/</link>
+      <pubDate>Mon, 29 Mar 2021 00:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/tag/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programming</title>
+      <link>https://www.pseudoyu.com/zh/tag/programming/</link>
+      <pubDate>Mon, 29 Mar 2021 00:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/tag/programming/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>blockchain</title>
       <link>https://www.pseudoyu.com/zh/tag/blockchain/</link>
@@ -22,15 +49,6 @@
       <pubDate>Sat, 27 Mar 2021 18:46:17 +0800</pubDate>
       
       <guid>https://www.pseudoyu.com/zh/tag/ipfs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>programming</title>
-      <link>https://www.pseudoyu.com/zh/tag/programming/</link>
-      <pubDate>Sat, 27 Mar 2021 18:46:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/tag/programming/</guid>
       <description></description>
     </item>
     
@@ -107,15 +125,6 @@
     </item>
     
     <item>
-      <title>database</title>
-      <link>https://www.pseudoyu.com/zh/tag/database/</link>
-      <pubDate>Sat, 06 Mar 2021 01:18:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/tag/database/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>ethereum</title>
       <link>https://www.pseudoyu.com/zh/tag/ethereum/</link>
       <pubDate>Sat, 20 Feb 2021 12:12:17 +0800</pubDate>
@@ -175,15 +184,6 @@
       <pubDate>Fri, 01 Jan 2021 00:12:17 +0800</pubDate>
       
       <guid>https://www.pseudoyu.com/zh/tag/algorithm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>java</title>
-      <link>https://www.pseudoyu.com/zh/tag/java/</link>
-      <pubDate>Fri, 01 Jan 2021 00:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/tag/java/</guid>
       <description></description>
     </item>
     

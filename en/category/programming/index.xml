@@ -6,7 +6,16 @@
     <description>Recent content in Programming on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 27 Mar 2021 18:46:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/category/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 Mar 2021 00:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/category/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MySQL基础知识与相关操作</title>
+      <link>https://www.pseudoyu.com/en/2021/03/29/database_mysql_basic/</link>
+      <pubDate>Mon, 29 Mar 2021 00:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2021/03/29/database_mysql_basic/</guid>
+      <description>前言 数据库不论在基础知识学习还是真实企业业务场景中都很常用，也有很多调侃说日常工作总是离不开CRUD，熟练主流关系型与数据库的使用是一个开发</description>
+    </item>
+    
     <item>
       <title>IPFS本地节点搭建（命令行）</title>
       <link>https://www.pseudoyu.com/en/2021/03/27/blockchain_ipfs_practice/</link>

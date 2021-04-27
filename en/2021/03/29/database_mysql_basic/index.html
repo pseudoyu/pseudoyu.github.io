@@ -378,7 +378,7 @@ status<span class="p">;</span>
 <h3 id="表的连接">表的连接</h3>
 <p>不同的表可以通过一定连接条件发生关联，主要有自连接、内连接和外连接三种，其中外连接又分为左外连接、右外连接和全外连接三种，他们的区别如下</p>
 <p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mysql_table_join.png" alt="mysql_table_join"></p>
-<p>而自连接是一种页数的连接方式，通过在逻辑上生成多张表以实现复杂的层次结构，常应用于区域表、菜单表和商品分类表等，语法如下</p>
+<p>而自连接是一种特殊的连接方式，通过在逻辑上生成多张表以实现复杂的层次结构，常应用于区域表、菜单表和商品分类表等，语法如下</p>
 <div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">自连接语法</span>
 <span class="k">select</span> <span class="n">A</span><span class="p">.</span><span class="n">cloumn</span><span class="p">,</span> <span class="n">B</span><span class="p">.</span><span class="k">column</span>
 <span class="k">from</span> <span class="k">table</span> <span class="n">A</span><span class="p">,</span> <span class="k">table</span> <span class="n">B</span>

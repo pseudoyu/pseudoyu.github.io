@@ -265,7 +265,7 @@ status&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;h3 id=&#34;表的连接&#34;&gt;表的连接&lt;/h3&gt;
 &lt;p&gt;不同的表可以通过一定连接条件发生关联，主要有自连接、内连接和外连接三种，其中外连接又分为左外连接、右外连接和全外连接三种，他们的区别如下&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mysql_table_join.png&#34; alt=&#34;mysql_table_join&#34;&gt;&lt;/p&gt;
-&lt;p&gt;而自连接是一种页数的连接方式，通过在逻辑上生成多张表以实现复杂的层次结构，常应用于区域表、菜单表和商品分类表等，语法如下&lt;/p&gt;
+&lt;p&gt;而自连接是一种特殊的连接方式，通过在逻辑上生成多张表以实现复杂的层次结构，常应用于区域表、菜单表和商品分类表等，语法如下&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;o&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;自连接语法&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;select&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cloumn&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;column&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;B&lt;/span&gt;

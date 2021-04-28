@@ -32,7 +32,7 @@
 <meta itemprop="description" content="前言 数据库不论在基础知识学习还是真实企业业务场景中都很常用，也有很多调侃说日常工作总是离不开CRUD，熟练主流关系型与数据库的使用是一个开发">
 <meta itemprop="datePublished" content="2021-03-29T00:12:17+08:00" />
 <meta itemprop="dateModified" content="2021-03-29T00:12:17+08:00" />
-<meta itemprop="wordCount" content="3835">
+<meta itemprop="wordCount" content="4018">
 
 
 
@@ -361,7 +361,11 @@ status<span class="p">;</span>
 <p>有时候我们只需要返回唯一值，而需要去掉重复数据，则可以使用<code>DISTINCT</code>关键字</p>
 <div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">在查询时对字段进行去重</span>
 <span class="k">select</span> <span class="n">distinc</span> <span class="n">sex</span> <span class="k">from</span> <span class="n">contacts</span><span class="p">;</span>
-</code></pre></div><h3 id="内置函数">内置函数</h3>
+</code></pre></div><p>在实际应用中，还很有可能会需要对某些商品交易量进行排名、对一些数值进行排列或博客文章中按照时间线后进行顺序显示等，这就需要用到<code>ORDER BY</code>这一关键字，它默认为<code>ASC</code>升序排列，可以通过手动设置<code>DESC</code>来实现降序。</p>
+<p>同时，有的数据库数据量非常大，一次返回所有的数据比较消耗资源，因此也可以使用<code>LIMIT</code>关键字来约束返回的记录数，同时，也可以实现分页。</p>
+<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">contacts</span> <span class="k">order</span> <span class="k">by</span> <span class="n">id</span> <span class="k">desc</span> <span class="k">limit</span> <span class="mi">5</span><span class="p">;</span>
+</code></pre></div><p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mysql_dql_order_by_limit.png" alt="mysql_dql_order_by_limit"></p>
+<h3 id="内置函数">内置函数</h3>
 <p>MySQL也有很多常见的内置函数，可以帮助用户更方便处理各种数据，简化操作，大多数功能都很直观，不作一一说明了</p>
 <p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mysql_functions.png" alt="mysql_functions"></p>
 <p>其中值得注意的是，聚合函数是对一组值进行计算并返回单个值。</p>

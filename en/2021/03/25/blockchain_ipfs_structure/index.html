@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 <head>
-  <meta name="generator" content="Hugo 0.80.0" />
+  <meta name="generator" content="Hugo 0.82.1" />
   <meta charset="utf-8">
   <title>IPFS分布式存储协议分析与思考 · Pseudoyu</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -25,19 +25,15 @@
 <meta property="og:title" content="IPFS分布式存储协议分析与思考" />
 <meta property="og:description" content="前言 最近在做学校的Case Study项目，是一个基于Ethereum平台的音乐版权管理项目，其中对于音乐作品、版权证明文件等上传用到了IPF" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.pseudoyu.com/en/2021/03/25/blockchain_ipfs_structure/" />
-<meta property="article:published_time" content="2021-03-25T16:30:17+08:00" />
-<meta property="article:modified_time" content="2021-03-25T16:30:17+08:00" />
+<meta property="og:url" content="https://www.pseudoyu.com/en/2021/03/25/blockchain_ipfs_structure/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-03-25T16:30:17&#43;08:00" />
+<meta property="article:modified_time" content="2021-03-25T16:30:17&#43;08:00" />
+
 <meta itemprop="name" content="IPFS分布式存储协议分析与思考">
-<meta itemprop="description" content="前言 最近在做学校的Case Study项目，是一个基于Ethereum平台的音乐版权管理项目，其中对于音乐作品、版权证明文件等上传用到了IPF">
-<meta itemprop="datePublished" content="2021-03-25T16:30:17+08:00" />
-<meta itemprop="dateModified" content="2021-03-25T16:30:17+08:00" />
-<meta itemprop="wordCount" content="4347">
-
-
-
-<meta itemprop="keywords" content="programming,blockchain,ipfs," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="前言 最近在做学校的Case Study项目，是一个基于Ethereum平台的音乐版权管理项目，其中对于音乐作品、版权证明文件等上传用到了IPF"><meta itemprop="datePublished" content="2021-03-25T16:30:17&#43;08:00" />
+<meta itemprop="dateModified" content="2021-03-25T16:30:17&#43;08:00" />
+<meta itemprop="wordCount" content="4353">
+<meta itemprop="keywords" content="programming,blockchain,ipfs," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="IPFS分布式存储协议分析与思考"/>
 <meta name="twitter:description" content="前言 最近在做学校的Case Study项目，是一个基于Ethereum平台的音乐版权管理项目，其中对于音乐作品、版权证明文件等上传用到了IPF"/>
 </head>
@@ -180,7 +176,7 @@
 </blockquote>
 <p>在IPFS文件存储系统中，每当上传一个新文件，系统会将单个文件拆分成若干个256KB的block，每个block会有一个专属的CID进行标识，这个后面会详细讲；然后计算每一个block的Hash值，并存储再一个数组中，最后对这个数组求Hash得到文件的最终Hash值；接着将文件的Hash和所有的blocks Hash的数组组成成一个对象，也就形成了一种索引结构；最后把文件block和这个索引结构全部上传到IPFS节点，同步到IPFS网络。</p>
 <p>文件上传时有两个值得注意的情况：1.文件特别小，如果文件小于1KB的话就不浪费一个block了，会直接和Hash一起上传到IPFS。2.文件特别大，比如之前上传了一个1G的视频，之后又加了几KB的字幕文件，这种情况下未变化的1G部分是不会重新分配新的空间的，而只会为追加的字母文件部分分配新的block，再重新上传Hash。</p>
-<p>因此，很好理解的是，即使是不同文件的相同部分也只会存储一份，很多文件的索引会指向同一个block，所形成的结构就是MerkleDAG数据结构。</p>
+<p>因此，很好理解的是，即使是不同文件的相同部分也只会存储一份（同一节点），很多文件的索引会指向同一个block，所形成的结构就是MerkleDAG数据结构。</p>
 <p>值得注意的是，当节点执行add操作时，会保留到本地blockstore中，但不会立刻主动上传到IPFS网络中，也就是说，与其连接的节点并不会存储这个文件，除非有某个节点请求过该block数据！因此，它并不是一个自动备份数据的分布式数据库。IPFS这种设计是出于网络带宽、可靠性等方面的考虑。</p>
 <p>还有一个细节就是，当节点在执行<code>add</code>命令时，还会广播自己的块信息，并维护一个所有发给这个节点的block请求列表，一旦add命令添加到数据满足这个列表，就会主动向对应的节点发送数据并且更新列表。</p>
 <h3 id="ipfs-get命令">IPFS get命令</h3>

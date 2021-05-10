@@ -6,7 +6,16 @@
     <description>Recent content in projects on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 11 Nov 2020 16:30:25 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 May 2021 19:30:25 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Uright - 区块链音乐版权管理DApp</title>
+      <link>https://www.pseudoyu.com/zh/2021/05/10/uright_case_study/</link>
+      <pubDate>Mon, 10 May 2021 19:30:25 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/05/10/uright_case_study/</guid>
+      <description>Uright 简介 基于Angular+Solidity+Web3.js，应用IPFS、ENS、Oracles等技术，通过Truffle部署于Ethere</description>
+    </item>
+    
     <item>
       <title>xDeepFM for Recommender Systems</title>
       <link>https://www.pseudoyu.com/zh/2020/11/11/comp7404_group_project/</link>

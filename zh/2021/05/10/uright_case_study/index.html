@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta name="generator" content="Hugo 0.82.1" />
+  <meta charset="utf-8">
+  <title>Uright - 区块链音乐版权管理DApp · Pseudoyu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<script async src="https://cdn.splitbee.io/sb.js"></script>
+<script src="https://cdn.splitbee.io/sb-ab.js"></script>
+  <meta name="description" content="Uright 简介 基于Angular&#43;Solidity&#43;Web3.js，应用IPFS、ENS、Oracles等技术，通过Truffle部署于Ethere" />
+
+  <meta name="keywords" content="hugo, blockchain, programming" />
+
+<link rel="canonical" href="https://www.pseudoyu.com/zh/2021/05/10/uright_case_study/" />
+<link rel="alternate" href="https://www.pseudoyu.com/en/2021/05/10/uright_case_study/" hreflang="en">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.pseudoyu.com/css/den.css">
+
+
+
+
+<meta property="og:title" content="Uright - 区块链音乐版权管理DApp" />
+<meta property="og:description" content="Uright 简介 基于Angular&#43;Solidity&#43;Web3.js，应用IPFS、ENS、Oracles等技术，通过Truffle部署于Ethere" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.pseudoyu.com/zh/2021/05/10/uright_case_study/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-05-10T19:30:25&#43;08:00" />
+<meta property="article:modified_time" content="2021-05-10T19:30:25&#43;08:00" />
+
+<meta itemprop="name" content="Uright - 区块链音乐版权管理DApp">
+<meta itemprop="description" content="Uright 简介 基于Angular&#43;Solidity&#43;Web3.js，应用IPFS、ENS、Oracles等技术，通过Truffle部署于Ethere"><meta itemprop="datePublished" content="2021-05-10T19:30:25&#43;08:00" />
+<meta itemprop="dateModified" content="2021-05-10T19:30:25&#43;08:00" />
+<meta itemprop="wordCount" content="2560">
+<meta itemprop="keywords" content="projects,blockchain,ethereum,ipfs,hku," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Uright - 区块链音乐版权管理DApp"/>
+<meta name="twitter:description" content="Uright 简介 基于Angular&#43;Solidity&#43;Web3.js，应用IPFS、ENS、Oracles等技术，通过Truffle部署于Ethere"/>
+</head>
+<body>
+  
+  <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://www.pseudoyu.com/images/background.jpg'); background-position: center; background-size: cover;">
+  <div class="container">
+  <nav class="header-nav navbar navbar-expand-md navbar-dark light-dark">
+    <div class="header-logo navbar-brand">
+      
+        <a class="float-left" href="https://www.pseudoyu.com/zh/">
+      
+        
+        <img class="mr20 header-logo-image" src="https://www.pseudoyu.com/images/fly.png" alt="logo">
+        
+        
+          Pseudoyu
+         
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav-menu collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/ideas/">思考</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/programming/">编程</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/notes/">笔记</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/zh/category/projects/">项目</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              <a class="nav-link" href="https://www.pseudoyu.com/zh/about/">关于</a>
+            
+          </li>
+        
+        
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.pseudoyu.com/en/"><i class="fas fa-globe"></i> English</a>
+            </li>
+          
+          
+        
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container header-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="header-content">
+        <h1 class="header-title">Uright - 区块链音乐版权管理DApp</h1>
+        <p class="header-date">作者：
+          Arthur /
+        
+        2021-05-10
+          / 分类：
+          <a href="https://www.pseudoyu.com/zh/category/projects/">Projects</a>
+        </p>
+        
+        <div class="header-underline"></div>
+        
+          <div class="clearfix"></div>
+          <p class="float-right header-tags">
+              <i class="fas fa-tags" aria-hidden="true"></i>
+              <a href="https://www.pseudoyu.com/zh/tag/blockchain/">blockchain</a>, 
+                <a href="https://www.pseudoyu.com/zh/tag/ethereum/">ethereum</a>, 
+                <a href="https://www.pseudoyu.com/zh/tag/hku/">hku</a>, 
+                <a href="https://www.pseudoyu.com/zh/tag/ipfs/">ipfs</a>, 
+                <a href="https://www.pseudoyu.com/zh/tag/projects/">projects</a>
+          </p>
+        
+        <div class="clearfix"></div>
+<p class="float-right translations">
+    <i class="fas fa-language" aria-hidden="true"></i>
+    翻译： 
+    <a href="https://www.pseudoyu.com/en/2021/05/10/uright_case_study/">EN</a>
+</p>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <main>
+<div class="container content">
+  <article>
+  <h1 id="uright">Uright</h1>
+<h3 id="简介">简介</h3>
+<p>基于Angular+Solidity+Web3.js，应用IPFS、ENS、Oracles等技术，通过Truffle部署于Ethereum的音乐版权管理Decentralized Application (ÐApp)。</p>
+<p>Uright去中心化应用允许音乐人（内容所有者）将他们的作品注册为&quot;Manifestations&quot;并登记至以太坊区块链。</p>
+<p>&ldquo;Manifestations&quot;是将音乐人的作品展现为内容片段，用以证明作者身份。这是通过&quot;Manifestations&quot;智能合约完成的，该智能合约记录显示作品内容的IPFS散列、标题(计划附加元数据)以及注册时间，这些信息可以用来证明作者身份，并且内容可以从IPFS文件存储系统中检索到。</p>
+<p>然而，仅仅注册一个&quot;Manifestations&quot;是不够的，还应提供支撑材料，否则该&quot;Manifestations&quot;将于一天后失效。这些支持材料通常由音乐人（作品上传者）注册，但任何其他人都可以添加支撑材料，支撑材料可以是任何类型的文件，入截图、PDF文档等。&ldquo;UploadEvidences&quot;智能合约会将支撑材料上传至IPFS文件系统。</p>
+<p>此外，&ldquo;YouTubeEvidences&quot;智能合约允许音乐人在YouTube等视频/音乐平台的上传简介中声明作品“Manifestations”，智能合约将自动检测作为支撑材料。</p>
+<p>（开发中&hellip;）如果有其他人已经注册了音乐人的原创作品/支持材料，音乐人可以进行申诉，合约功能已实现，但在Web应用尚不可用。</p>
+<p>（开发中&hellip;）通过NFT技术对音乐人作品进行注册和价值传递。</p>
+<p>项目地址：<a href="https://github.com/pseudoyu/Uright">GitHub</a></p>
+<h3 id="功能">功能</h3>
+<p>Uright ÐApp通过Web客户端对音乐人和用户提供音乐版权管理服务</p>
+<ol>
+<li>版权注册：以作品文件生成唯一哈希值，将音乐人的作品注册上链，以此证明作品版权</li>
+</ol>
+<ul>
+<li>注册从未注册的新作品</li>
+<li>注册已存在注册记录的作品并进行申诉</li>
+<li>添加支撑材料来证明作品版权</li>
+</ul>
+<ol start="2">
+<li>版权检索：通过哈希值检查一个作品是否已被注册</li>
+</ol>
+<ul>
+<li>我的：查找当前音乐人的所有注册作品</li>
+<li>版权库：查找链上所有已注册作品</li>
+<li>详细信息：单击“详细信息”查看详细信息，包括所有已上传证据</li>
+</ul>
+<h3 id="核心技术">核心技术</h3>
+<h4 id="ipfs">IPFS</h4>
+<p>当音乐人使用数字文件（如.mp3格式文件）注册自己的作品时，文件将被上传至IPFS且其生成的IPFS标识符(哈希值)用于在Ethereum区块链中注册作品。用户可以选择将作品上传至IPFS网络，也可以保持作品的私密性，设置将内容不上传至IPFS网络，而只生成作品哈希值。</p>
+<p>用户需要保留与生成作品哈希时使用的完全相同的文件，可在以后用作拥有数字文件的证据，以便于哈希检验。IPFS哈希值也将用于检索上传的内容。</p>
+<h4 id="ethereum-naming-system-ens">Ethereum Naming System (ENS)</h4>
+<p>Uright项目集成了ethereum-ens包，可作用于以太坊主网、Ropsten、Rinkeby测试网及本地测试网。ensdomains/ens包用于设置地址名称。</p>
+<h4 id="oracles">Oracles</h4>
+<p>Oracle模块集成在上传YouTube证据的智能合约，通过YouTube的视频ID (<a href="https://www.youtube.com/watch?v=VIDEO_ID">https://www.youtube.com/watch?v=VIDEO_ID</a>) 来检索该视频描述中是否含有特定作品哈希。</p>
+<p>因此，该功能允许音乐人证明该作品同时存在于YouTube平台并属于自己（因为仅上传者可以编辑视频描述，使其包含作品哈希值）</p>
+<p>可使用Oraclize提供的在线服务进行查询: <a href="http://app.oraclize.it/home/test_query">http://app.oraclize.it/home/test_query</a></p>
+<h4 id="可升级性">可升级性</h4>
+<p>为了使作品注册合约具备可升级性，引入ZeppelinOS中的AdminUpgradeabilityProxy，通过中继代理的方式实现了委任模式。</p>
+<h3 id="智能合约详解">智能合约详解</h3>
+<h4 id="manifestationssol">Manifestations.sol</h4>
+<p>此智能合约用于注册作品Manifestations，通过将作品元数据（目前为标题）及内容的IPFS 哈希值与作者身份（即以太坊账户地址）进行关联，以证明作品所有权，同一作品可声明为单人作者或联合作者。此外，如用一个已经注册的内容哈希重新注册新Manifestations，系统会检测为失败。</p>
+<h4 id="uploadevidencessol">UploadEvidences.sol</h4>
+<p>此智能合约主要用于支持材料登记，通过将作品文件内容上传至IPFS文件系统实施证据登记。对于同一个作品，可以添加多个证据（但不能重复添加）。</p>
+<h4 id="expirablelibsol">ExpirableLib.sol</h4>
+<p>此智能合约主要用于管理作品创建和到期时间的项目逻辑，实现作品注册（或申诉）的时效性。</p>
+<h3 id="设计模式">设计模式</h3>
+<p>Uright项目智能合约的设计有利于模块化和可重用性。比如，将验证过期功能实现为一个实体库；以及&quot;Evidencable&quot;库使注册作品可累积多项支持材料，也可以在后续申诉功能等研发中提供便利。</p>
+<p>此外，将这些功能作为库提供可以降低部署成本。</p>
+<h4 id="circuit-breaker-断路器模式--emergency-stop">Circuit Breaker (断路器模式) / Emergency Stop</h4>
+<p>断路器的模式可以防止一个应用程序反复尝试执行一个可能会失败的操作，让它继续不等待故障的纠正或浪费处理器周期，而它决定了故障是长期持久的。断路器的模式也使一个应用程序来检测故障是否已得到解决。如果出现问题，该应用程序可以尝试调用操作。</p>
+<h4 id="automatic-deprecation">Automatic Deprecation</h4>
+<p>此外，对已登记的作品实行了类似于&quot;Automatic Deprecation&quot;的模式。这样，如果一个
+用户注册了作品但不提供支持材料，其注册将在设定的固定时间后过期，在这种情况下，过期意味着该作品可以被另一个用户重新注册覆盖。</p>
+<h3 id="安全措施">安全措施</h3>
+<p>所有智能合约都已使用Remix和Solhint工具进行了代码检查，通过这两种工具检查常见的安全问题，如可重入性或时间戳依赖性等。</p>
+<p>SafeMath库用于避免整数上溢和下溢问题。</p>
+<p>最后，Solhint被设置为定义的连续集成和部署工作流中的一个步骤，这样，每次代码被推送到GitHub时，travis都会运行所有的测试(对于合同和Angular前端)，如果所有测试都通过，则负责部署。</p>
+<p>此外，Solhint工具也会在测试之前执行，用于跟踪任何可能出现的安全问题。</p>
+<h3 id="相关库">相关库</h3>
+<p>Uright项目从ZeppelinOS和OpenZeppelin包中导入了一些库用于功能实现</p>
+<h4 id="zeppelinos">ZeppelinOS</h4>
+<ul>
+<li>AdminUpgradeabilityProxy: 实现智能合约的可升级性</li>
+<li>Initializable: 通过可升级的智能合约拓展实现代理的初始化</li>
+</ul>
+<h4 id="openzeppelin">OpenZeppelin</h4>
+<ul>
+<li>Pausable: 实现&quot;Circuit Breaker (断路器模式) / Emergency Stop&quot;设计模式，通过拓展Ownable以实现只有拥有者可以停止</li>
+<li>SafeMath: 用于避免整数上溢和下溢问题</li>
+<li>OraclizeAPI包，usingOraclize，用于检验YouTube视频是否属于特定用户且绑定至版权作品</li>
+</ul>
+
+  </article>
+
+  
+  
+  
+
+
+</div>
+
+  </main><div class="footer gradient-2">
+  <div class="container footer-container ">
+    <div class="row">
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        <div class="footer-title">网站地图</div>
+        <ul class="list-unstyled">
+            
+              
+                <li><a href="https://www.pseudoyu.com/zh/tags/">标签</a></li>
+              
+              
+                <li><a href="https://www.pseudoyu.com/zh/categories/">分类</a></li>
+              
+            
+            
+            
+            <li><a rel="alternate" type="application/rss&#43;xml" href="https://www.pseudoyu.com/zh/index.xml"><i class="fas fa-rss-square"></i> RSS订阅</a></li>
+            
+            
+            
+        </ul>
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">社群</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://www.facebook.com/pseudoyuzhang" rel="noopener" target="_blank">Facebook</a></li>
+          
+          <li><a href="https://www.instagram.com/pseudo.yu/" rel="noopener" target="_blank">Instagram</a></li>
+          
+          <li><a href="https://space.bilibili.com/5374948/" rel="noopener" target="_blank">BiliBili</a></li>
+          
+        </ul>
+        
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">友链</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://www.linkedin.com/in/pseudoyu/" rel="noopener" target="_blank">LinkedIn</a></li>
+          
+          <li><a href="https://github.com/pseudoyu" rel="noopener" target="_blank">GitHub</a></li>
+          
+          <li><a href="https://www.coursera.org/user/ffe947f087d1f63b161c3fcb310a6578" rel="noopener" target="_blank">Coursera</a></li>
+          
+        </ul>
+        
+      </div> 
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <p class="pull-right text-right">
+          <small><em>Team Rocket: <a href="https://www.marshalgao.com" rel="noopener" target="_blank">Marshal</a> | <a href="https://www.m1sty.com" rel="noopener" target="_blank">Misty</a></em></small><br/>
+          <small><em>The University of Hong Kong - <a href="https://www.cs.hku.hk" rel="noopener" target="_blank">CS</a></em></small><br/>
+          <small>
+            &copy; 
+            Arthur
+            
+              2020 -
+            2021
+          </small>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

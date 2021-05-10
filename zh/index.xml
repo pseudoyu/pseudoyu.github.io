@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 29 Mar 2021 00:12:17 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 10 May 2021 19:30:25 +0800</lastBuildDate>
     
     <atom:link href="https://www.pseudoyu.com/zh/index.xml" rel="self" type="application/rss+xml" />
     
@@ -33,6 +33,90 @@
 &lt;p&gt;我常辗转于自我怀疑之中，在与挚友聊天时谈及「初心」或是「意义」时总是选择逃避，即使取得一些世俗的小成就也很难从心底感受到喜悦或满足，总觉得一切都如同「伪物」一样毫无意义。而随着年岁与经历的增长，我在另一篇文章 &lt;a href=&#34;https://www.pseudoyu.com/zh/2020/06/06/23%E5%B2%81%E7%9A%84%E8%87%AA%E7%99%BD%E5%8E%BB%E8%BF%BD%E5%AF%BB%E6%84%8F%E4%B9%89/&#34;&gt;&lt;em&gt;23岁的自白：去追寻意义&lt;/em&gt;&lt;/a&gt; 中写道，「&lt;em&gt;也许思考本身就是建构意义的过程，让我不再期待某个瞬间能够顿悟，只是希望继续向前，体验和追寻着自己的人生.&lt;/em&gt;」&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Pseudoyu&lt;/strong&gt; 这个名字也是寓意自己不应该再时常纠结意义，而是要不断去学习、体验与挑战新的事物，即使被评价「变了」、「不像自己」也能欣然接受。&lt;/p&gt;
 &lt;p&gt;希望自己能多输入一些新的知识和想法，多写一些小文章。&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Uright - 区块链音乐版权管理DApp</title>
+      <link>https://www.pseudoyu.com/zh/2021/05/10/uright_case_study/</link>
+      <pubDate>Mon, 10 May 2021 19:30:25 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/05/10/uright_case_study/</guid>
+      
+        <description>&lt;h1 id=&#34;uright&#34;&gt;Uright&lt;/h1&gt;
+&lt;h3 id=&#34;简介&#34;&gt;简介&lt;/h3&gt;
+&lt;p&gt;基于Angular+Solidity+Web3.js，应用IPFS、ENS、Oracles等技术，通过Truffle部署于Ethereum的音乐版权管理Decentralized Application (ÐApp)。&lt;/p&gt;
+&lt;p&gt;Uright去中心化应用允许音乐人（内容所有者）将他们的作品注册为&amp;quot;Manifestations&amp;quot;并登记至以太坊区块链。&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;Manifestations&amp;quot;是将音乐人的作品展现为内容片段，用以证明作者身份。这是通过&amp;quot;Manifestations&amp;quot;智能合约完成的，该智能合约记录显示作品内容的IPFS散列、标题(计划附加元数据)以及注册时间，这些信息可以用来证明作者身份，并且内容可以从IPFS文件存储系统中检索到。&lt;/p&gt;
+&lt;p&gt;然而，仅仅注册一个&amp;quot;Manifestations&amp;quot;是不够的，还应提供支撑材料，否则该&amp;quot;Manifestations&amp;quot;将于一天后失效。这些支持材料通常由音乐人（作品上传者）注册，但任何其他人都可以添加支撑材料，支撑材料可以是任何类型的文件，入截图、PDF文档等。&amp;ldquo;UploadEvidences&amp;quot;智能合约会将支撑材料上传至IPFS文件系统。&lt;/p&gt;
+&lt;p&gt;此外，&amp;ldquo;YouTubeEvidences&amp;quot;智能合约允许音乐人在YouTube等视频/音乐平台的上传简介中声明作品“Manifestations”，智能合约将自动检测作为支撑材料。&lt;/p&gt;
+&lt;p&gt;（开发中&amp;hellip;）如果有其他人已经注册了音乐人的原创作品/支持材料，音乐人可以进行申诉，合约功能已实现，但在Web应用尚不可用。&lt;/p&gt;
+&lt;p&gt;（开发中&amp;hellip;）通过NFT技术对音乐人作品进行注册和价值传递。&lt;/p&gt;
+&lt;p&gt;项目地址：&lt;a href=&#34;https://github.com/pseudoyu/Uright&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;功能&#34;&gt;功能&lt;/h3&gt;
+&lt;p&gt;Uright ÐApp通过Web客户端对音乐人和用户提供音乐版权管理服务&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;版权注册：以作品文件生成唯一哈希值，将音乐人的作品注册上链，以此证明作品版权&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;注册从未注册的新作品&lt;/li&gt;
+&lt;li&gt;注册已存在注册记录的作品并进行申诉&lt;/li&gt;
+&lt;li&gt;添加支撑材料来证明作品版权&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;版权检索：通过哈希值检查一个作品是否已被注册&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;我的：查找当前音乐人的所有注册作品&lt;/li&gt;
+&lt;li&gt;版权库：查找链上所有已注册作品&lt;/li&gt;
+&lt;li&gt;详细信息：单击“详细信息”查看详细信息，包括所有已上传证据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;核心技术&#34;&gt;核心技术&lt;/h3&gt;
+&lt;h4 id=&#34;ipfs&#34;&gt;IPFS&lt;/h4&gt;
+&lt;p&gt;当音乐人使用数字文件（如.mp3格式文件）注册自己的作品时，文件将被上传至IPFS且其生成的IPFS标识符(哈希值)用于在Ethereum区块链中注册作品。用户可以选择将作品上传至IPFS网络，也可以保持作品的私密性，设置将内容不上传至IPFS网络，而只生成作品哈希值。&lt;/p&gt;
+&lt;p&gt;用户需要保留与生成作品哈希时使用的完全相同的文件，可在以后用作拥有数字文件的证据，以便于哈希检验。IPFS哈希值也将用于检索上传的内容。&lt;/p&gt;
+&lt;h4 id=&#34;ethereum-naming-system-ens&#34;&gt;Ethereum Naming System (ENS)&lt;/h4&gt;
+&lt;p&gt;Uright项目集成了ethereum-ens包，可作用于以太坊主网、Ropsten、Rinkeby测试网及本地测试网。ensdomains/ens包用于设置地址名称。&lt;/p&gt;
+&lt;h4 id=&#34;oracles&#34;&gt;Oracles&lt;/h4&gt;
+&lt;p&gt;Oracle模块集成在上传YouTube证据的智能合约，通过YouTube的视频ID (&lt;a href=&#34;https://www.youtube.com/watch?v=VIDEO_ID&#34;&gt;https://www.youtube.com/watch?v=VIDEO_ID&lt;/a&gt;) 来检索该视频描述中是否含有特定作品哈希。&lt;/p&gt;
+&lt;p&gt;因此，该功能允许音乐人证明该作品同时存在于YouTube平台并属于自己（因为仅上传者可以编辑视频描述，使其包含作品哈希值）&lt;/p&gt;
+&lt;p&gt;可使用Oraclize提供的在线服务进行查询: &lt;a href=&#34;http://app.oraclize.it/home/test_query&#34;&gt;http://app.oraclize.it/home/test_query&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;可升级性&#34;&gt;可升级性&lt;/h4&gt;
+&lt;p&gt;为了使作品注册合约具备可升级性，引入ZeppelinOS中的AdminUpgradeabilityProxy，通过中继代理的方式实现了委任模式。&lt;/p&gt;
+&lt;h3 id=&#34;智能合约详解&#34;&gt;智能合约详解&lt;/h3&gt;
+&lt;h4 id=&#34;manifestationssol&#34;&gt;Manifestations.sol&lt;/h4&gt;
+&lt;p&gt;此智能合约用于注册作品Manifestations，通过将作品元数据（目前为标题）及内容的IPFS 哈希值与作者身份（即以太坊账户地址）进行关联，以证明作品所有权，同一作品可声明为单人作者或联合作者。此外，如用一个已经注册的内容哈希重新注册新Manifestations，系统会检测为失败。&lt;/p&gt;
+&lt;h4 id=&#34;uploadevidencessol&#34;&gt;UploadEvidences.sol&lt;/h4&gt;
+&lt;p&gt;此智能合约主要用于支持材料登记，通过将作品文件内容上传至IPFS文件系统实施证据登记。对于同一个作品，可以添加多个证据（但不能重复添加）。&lt;/p&gt;
+&lt;h4 id=&#34;expirablelibsol&#34;&gt;ExpirableLib.sol&lt;/h4&gt;
+&lt;p&gt;此智能合约主要用于管理作品创建和到期时间的项目逻辑，实现作品注册（或申诉）的时效性。&lt;/p&gt;
+&lt;h3 id=&#34;设计模式&#34;&gt;设计模式&lt;/h3&gt;
+&lt;p&gt;Uright项目智能合约的设计有利于模块化和可重用性。比如，将验证过期功能实现为一个实体库；以及&amp;quot;Evidencable&amp;quot;库使注册作品可累积多项支持材料，也可以在后续申诉功能等研发中提供便利。&lt;/p&gt;
+&lt;p&gt;此外，将这些功能作为库提供可以降低部署成本。&lt;/p&gt;
+&lt;h4 id=&#34;circuit-breaker-断路器模式--emergency-stop&#34;&gt;Circuit Breaker (断路器模式) / Emergency Stop&lt;/h4&gt;
+&lt;p&gt;断路器的模式可以防止一个应用程序反复尝试执行一个可能会失败的操作，让它继续不等待故障的纠正或浪费处理器周期，而它决定了故障是长期持久的。断路器的模式也使一个应用程序来检测故障是否已得到解决。如果出现问题，该应用程序可以尝试调用操作。&lt;/p&gt;
+&lt;h4 id=&#34;automatic-deprecation&#34;&gt;Automatic Deprecation&lt;/h4&gt;
+&lt;p&gt;此外，对已登记的作品实行了类似于&amp;quot;Automatic Deprecation&amp;quot;的模式。这样，如果一个
+用户注册了作品但不提供支持材料，其注册将在设定的固定时间后过期，在这种情况下，过期意味着该作品可以被另一个用户重新注册覆盖。&lt;/p&gt;
+&lt;h3 id=&#34;安全措施&#34;&gt;安全措施&lt;/h3&gt;
+&lt;p&gt;所有智能合约都已使用Remix和Solhint工具进行了代码检查，通过这两种工具检查常见的安全问题，如可重入性或时间戳依赖性等。&lt;/p&gt;
+&lt;p&gt;SafeMath库用于避免整数上溢和下溢问题。&lt;/p&gt;
+&lt;p&gt;最后，Solhint被设置为定义的连续集成和部署工作流中的一个步骤，这样，每次代码被推送到GitHub时，travis都会运行所有的测试(对于合同和Angular前端)，如果所有测试都通过，则负责部署。&lt;/p&gt;
+&lt;p&gt;此外，Solhint工具也会在测试之前执行，用于跟踪任何可能出现的安全问题。&lt;/p&gt;
+&lt;h3 id=&#34;相关库&#34;&gt;相关库&lt;/h3&gt;
+&lt;p&gt;Uright项目从ZeppelinOS和OpenZeppelin包中导入了一些库用于功能实现&lt;/p&gt;
+&lt;h4 id=&#34;zeppelinos&#34;&gt;ZeppelinOS&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;AdminUpgradeabilityProxy: 实现智能合约的可升级性&lt;/li&gt;
+&lt;li&gt;Initializable: 通过可升级的智能合约拓展实现代理的初始化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;openzeppelin&#34;&gt;OpenZeppelin&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Pausable: 实现&amp;quot;Circuit Breaker (断路器模式) / Emergency Stop&amp;quot;设计模式，通过拓展Ownable以实现只有拥有者可以停止&lt;/li&gt;
+&lt;li&gt;SafeMath: 用于避免整数上溢和下溢问题&lt;/li&gt;
+&lt;li&gt;OraclizeAPI包，usingOraclize，用于检验YouTube视频是否属于特定用户且绑定至版权作品&lt;/li&gt;
+&lt;/ul&gt;
 </description>
       
     </item>
@@ -4303,84 +4387,6 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
 &lt;li&gt;&lt;a href=&#34;https://github.com/labuladong/fucking-algorithm&#34;&gt;labuladong的算法小抄&lt;/a&gt;，&lt;em&gt;GitHub&lt;/em&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>xDeepFM for Recommender Systems</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/11/comp7404_group_project/</link>
-      <pubDate>Wed, 11 Nov 2020 16:30:25 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/11/comp7404_group_project/</guid>
-      
-        <description>&lt;h1 id=&#34;xdeepfm-for-recommender-systems&#34;&gt;xDeepFM for Recommender Systems&lt;/h1&gt;
-&lt;p&gt;eXtreme Deep Factorization Machine (&lt;a href=&#34;https://arxiv.org/abs/1803.05170&#34;&gt;xDeepFM&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;This paper proposes a novel Compressed Interaction Network (CIN), which aims to generate feature interactions in an explicit fashion and at the vector-wise level.&lt;/p&gt;
-&lt;h2 id=&#34;github-repository&#34;&gt;Github Repository&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/pseudoyu/xDeepFM_for_Recommender_Systems&#34;&gt;GitHub: xDeepFM_for_Recommender_Systems&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;video-demo&#34;&gt;Video Demo&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=rFEGAtTZLyQ&#34;&gt;YouTube&lt;/a&gt; | &lt;a href=&#34;https://drive.google.com/file/d/1qPx6H9R1b-EDP7HZpAg5bDjkzR8QEHnR/view?usp=sharing&#34;&gt;Google Drive&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;datasets&#34;&gt;Datasets&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;http://labs.criteo.com/2014/02/kaggle-display-advertising-challenge-dataset/&#34;&gt;Criteo Dataset&lt;/a&gt;.&lt;/strong&gt; It is a famous industry benchmarking dataset for developing models predicting ad click-through rate, and is publicly accessible. Given a user and the page he is visiting, the goal is to predict the probability that he will clik on a given ad&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;running-environment&#34;&gt;Running Environment&lt;/h2&gt;
-&lt;p&gt;I strongly recommmend that you use &lt;a href=&#34;https://www.anaconda.com&#34;&gt;Anaconda&lt;/a&gt; to implement this project. Here are some simple instructions:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Download a suitable version (&lt;a href=&#34;https://repo.anaconda.com/archive/Anaconda3-2020.07-Windows-x86_64.exe&#34;&gt;Windows&lt;/a&gt;/&lt;a href=&#34;https://repo.anaconda.com/archive/Anaconda3-2020.07-MacOSX-x86_64.pkg&#34;&gt;MacOS&lt;/a&gt;/&lt;a href=&#34;https://repo.anaconda.com/archive/Anaconda3-2020.07-Linux-x86_64.sh&#34;&gt;Linux&lt;/a&gt;)  for your OS and install it (check for latest version from &lt;a href=&#34;https://www.anaconda.com&#34;&gt;Anaconda&lt;/a&gt;)
-&lt;ol&gt;
-&lt;li&gt;On Windows or MacOS, you can just use the &lt;em&gt;.exe&lt;/em&gt; or &lt;em&gt;.pkg&lt;/em&gt; installer and follow the instructions&lt;/li&gt;
-&lt;li&gt;On Linux, you may need to run &lt;code&gt;bash ./.Anaconda3-2020.07-Linux-x86_64.sh&lt;/code&gt; in the same directory of the downloaded &lt;em&gt;.sh&lt;/em&gt; file to allow the installer to initialize Anaconda3 in your .bashrc&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;Create a dedicated Conda environment for this project (strongly recommended)
-&lt;ol&gt;
-&lt;li&gt;Run &lt;code&gt;conda create -n xdeepfm python=3.6&lt;/code&gt; and enter &lt;code&gt;y&lt;/code&gt; to create the conda environment&lt;/li&gt;
-&lt;li&gt;Run &lt;code&gt;conda activate xdeepfm&lt;/code&gt; to activate the project environment&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;Run &lt;code&gt;pip install -r requirements.txt&lt;/code&gt; to install the package dependencies&lt;/li&gt;
-&lt;li&gt;Now you can run the code simply through &lt;code&gt;python main.py&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; YouPath/xDeepFM_for_Recommender_Systems/exdeepfm
-bash ./.Anaconda3-2020.07-Linux-x86_64.sh
-conda create -n xdeepfm &lt;span class=&#34;nv&#34;&gt;python&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;3.6
-conda activate xdeepfm
-pip install -r requirements.txt
-python main.py
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;dependencies&#34;&gt;Dependencies&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;absl-py==0.8.1&lt;/li&gt;
-&lt;li&gt;astor==0.8.0&lt;/li&gt;
-&lt;li&gt;gast==0.3.2&lt;/li&gt;
-&lt;li&gt;google-pasta==0.1.7&lt;/li&gt;
-&lt;li&gt;grpcio==1.24.3&lt;/li&gt;
-&lt;li&gt;h5py==2.10.0&lt;/li&gt;
-&lt;li&gt;joblib==0.14.0&lt;/li&gt;
-&lt;li&gt;Keras-Applications==1.0.8&lt;/li&gt;
-&lt;li&gt;Keras-Preprocessing==1.1.0&lt;/li&gt;
-&lt;li&gt;Markdown==3.1.1&lt;/li&gt;
-&lt;li&gt;numpy==1.17.3&lt;/li&gt;
-&lt;li&gt;packaging==19.2&lt;/li&gt;
-&lt;li&gt;protobuf==3.10.0&lt;/li&gt;
-&lt;li&gt;pyparsing==2.4.2&lt;/li&gt;
-&lt;li&gt;PyYAML==5.1.2&lt;/li&gt;
-&lt;li&gt;scikit-learn==0.21.3&lt;/li&gt;
-&lt;li&gt;scipy==1.3.1&lt;/li&gt;
-&lt;li&gt;six==1.12.0&lt;/li&gt;
-&lt;li&gt;sklearn==0.0&lt;/li&gt;
-&lt;li&gt;tensorboard==1.14.0&lt;/li&gt;
-&lt;li&gt;tensorflow==1.14.0&lt;/li&gt;
-&lt;li&gt;tensorflow-estimator==1.14.0&lt;/li&gt;
-&lt;li&gt;termcolor==1.1.0&lt;/li&gt;
-&lt;li&gt;Werkzeug==0.16.0&lt;/li&gt;
-&lt;li&gt;wrapt==1.11.2&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;running-results&#34;&gt;Running Results&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/comp7404_screenshot1.png&#34; alt=&#34;comp7404_screenshot1&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&amp;hellip;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/comp7404_screenshot2.png&#34; alt=&#34;comp7404_screenshot2&#34;&gt;&lt;/p&gt;
 </description>
       
     </item>

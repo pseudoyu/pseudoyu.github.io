@@ -6,7 +6,16 @@
     <description>Recent content in hku on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 18 Mar 2021 01:18:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/hku/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 May 2021 19:30:25 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/hku/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Uright - 区块链音乐版权管理DApp</title>
+      <link>https://www.pseudoyu.com/en/2021/05/10/uright_case_study/</link>
+      <pubDate>Mon, 10 May 2021 19:30:25 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2021/05/10/uright_case_study/</guid>
+      <description>Uright 简介 基于Angular+Solidity+Web3.js，应用IPFS、ENS、Oracles等技术，通过Truffle部署于Ethere</description>
+    </item>
+    
     <item>
       <title>COMP7103 Topic 3 Clustering</title>
       <link>https://www.pseudoyu.com/en/2021/03/18/comp7103_topic3/</link>
@@ -195,17 +204,6 @@ Datasets  Criteo Dataset. It is a famous industry benchmarking dataset for devel
       <description>ECOM6013 E-Commerce Technologies Topic 7 E-Payment Systems Payment System Stakeholders&#39; Priorities
  Customer  Low-risk Low-cost Refutable Convenience Reliable   Merchants  Low-risks Low-cost Irrefutable Secure Reliable   Financial intermediaries  Secure Low-risk Maximizing profit   Government regulators  Secure Trust Protecting participants and enforcing reporting    Type of Payment Systems
  Cash Cheque transfer Credit card Stored value Accumulating balance  B2C Payment System</description>
-    </item>
-    
-    <item>
-      <title>ECOM6013 Topic 6 E-Commerce Security</title>
-      <link>https://www.pseudoyu.com/en/2020/09/26/ecom6013_topic6/</link>
-      <pubDate>Sat, 26 Sep 2020 15:46:28 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2020/09/26/ecom6013_topic6/</guid>
-      <description>ECOM6013 E-Commerce Technologies Topic 6 E-Commerce Security Good E-Commerce Security
- Highest degree of security  New technologies Organizational policies and procedures Industry standards and government law   Other factors  Cost of security vs. potential loss Security often breaks at weakest link    The Tense Between Security and Other Values
- Security vs. Easy of use  More Secure -&amp;gt; More difficult to use + slower   Security vs.</description>
     </item>
     
   </channel>

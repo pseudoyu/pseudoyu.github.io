@@ -17,6 +17,15 @@
     </item>
     
     <item>
+      <title>BlockchainGuide - 区块链核心知识库</title>
+      <link>https://www.pseudoyu.com/zh/2021/04/03/blockchain_guide/</link>
+      <pubDate>Sat, 03 Apr 2021 12:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/04/03/blockchain_guide/</guid>
+      <description>BlockchainGuide 一个不断更新的区块链核心知识库 源项目地址 目录 BlockchainGuide 基础知识 区块链基础 比特币 以太坊 Hyperledger Fabric 热门技术 IPFS 开发实战 编程语言 开发工具 个人项目 其他 关于我 基础知</description>
+    </item>
+    
+    <item>
       <title>MySQL基础知识与相关操作</title>
       <link>https://www.pseudoyu.com/zh/2021/03/29/database_mysql_basic/</link>
       <pubDate>Mon, 29 Mar 2021 00:12:17 +0800</pubDate>
@@ -184,19 +193,6 @@ Application  Understanding  Group related documents for browsing, group genes an
       
       <guid>https://www.pseudoyu.com/zh/2021/01/01/algorithm_data_structure_java/</guid>
       <description>前言 最近开始刷LeetCode算法题，针对工作需求的算法刷题其实主要是锻炼解决问题的思路和代码撰写能力，而不是像算法竞赛那样用复杂的数据结构</description>
-    </item>
-    
-    <item>
-      <title>xDeepFM for Recommender Systems</title>
-      <link>https://www.pseudoyu.com/zh/2020/11/11/comp7404_group_project/</link>
-      <pubDate>Wed, 11 Nov 2020 16:30:25 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2020/11/11/comp7404_group_project/</guid>
-      <description>xDeepFM for Recommender Systems eXtreme Deep Factorization Machine (xDeepFM)
-This paper proposes a novel Compressed Interaction Network (CIN), which aims to generate feature interactions in an explicit fashion and at the vector-wise level.
-Github Repository GitHub: xDeepFM_for_Recommender_Systems
-Video Demo YouTube | Google Drive
-Datasets  Criteo Dataset. It is a famous industry benchmarking dataset for developing models predicting ad click-through rate, and is publicly accessible. Given a user and the page he is visiting, the goal is to predict the probability that he will clik on a given ad  Running Environment I strongly recommmend that you use Anaconda to implement this project.</description>
     </item>
     
   </channel>

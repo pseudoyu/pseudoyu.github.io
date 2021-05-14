@@ -54,6 +54,8 @@
 &lt;p&gt;（开发中&amp;hellip;）如果有其他人已经注册了音乐人的原创作品/支持材料，音乐人可以进行申诉，合约功能已实现，但在Web应用尚不可用。&lt;/p&gt;
 &lt;p&gt;（开发中&amp;hellip;）通过NFT技术对音乐人作品进行代币化。&lt;/p&gt;
 &lt;p&gt;项目地址：&lt;a href=&#34;https://github.com/pseudoyu/Uright&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;架构&#34;&gt;架构&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/uright_architecture.png&#34; alt=&#34;uright_architecture&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;功能&#34;&gt;功能&lt;/h3&gt;
 &lt;p&gt;Uright ÐApp通过Web客户端对音乐人和用户提供音乐版权管理服务&lt;/p&gt;
 &lt;ol&gt;

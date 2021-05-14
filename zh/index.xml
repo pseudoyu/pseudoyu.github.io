@@ -45,6 +45,7 @@
       <guid>https://www.pseudoyu.com/zh/2021/05/10/uright_case_study/</guid>
       
         <description>&lt;h1 id=&#34;uright---区块链音乐版权管理ðapp&#34;&gt;Uright - 区块链音乐版权管理ÐApp&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/uright_chain.png&#34; alt=&#34;uright_chain&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;简介&#34;&gt;简介&lt;/h3&gt;
 &lt;p&gt;基于Angular+Solidity+Web3.js，应用IPFS、ENS、Oracles等技术，通过Truffle部署于Ethereum的音乐版权管理Decentralized Application (ÐApp)。&lt;/p&gt;
 &lt;p&gt;Uright去中心化应用允许音乐人（内容所有者）将他们的作品注册为&amp;quot;Manifestations&amp;quot;并登记至以太坊区块链。&lt;/p&gt;

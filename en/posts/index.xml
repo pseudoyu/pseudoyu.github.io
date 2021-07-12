@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 10 May 2021 19:30:25 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Jul 2021 00:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode刷题常用数据结构（Go篇）</title>
+      <link>https://www.pseudoyu.com/en/2021/07/12/algorithm_data_structure_go/</link>
+      <pubDate>Mon, 12 Jul 2021 00:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2021/07/12/algorithm_data_structure_go/</guid>
+      <description>前言 最近开始刷LeetCode算法题，针对工作需求的算法刷题其实主要是锻炼解决问题的思路和代码撰写能力，而不是像算法竞赛那样用复杂的数据结构</description>
+    </item>
+    
     <item>
       <title>Uright - 区块链音乐版权管理ÐApp</title>
       <link>https://www.pseudoyu.com/en/2021/05/10/uright_case_study/</link>
@@ -184,15 +193,6 @@ Application  Understanding  Group related documents for browsing, group genes an
       <guid>https://www.pseudoyu.com/en/2021/01/23/comp7801_topic1a/</guid>
       <description>Relational Databases Structure of Relational Databases Basic structure  Given sets D1, D2, …. Dn A relation r is a subset of D1 x D2 x … x Dn A relation is a set of n-tuples (a1, a2, …, an) where each ai Di  Example
  if  customer-name = {Jones, Smith, Curry, Lindsay} customer-street = {Main, North, Park} customer-city = {Harrison, Rye, Pittsfield}   Then  r = {(Jones, Main, Harrison), (Smith, North, Rye), (Curry, North, Rye), (Lindsay, Park, Pittsfield)} is a relation over customer-name x customer-street x customer-city    Attribute Types  Each attribute of a relation has a name The set of allowed values for each attribute is called the domain of the attribute  Relation Schema  A1, A2, …, An are attributes R = (A1, A2, …, An ) is a relation schema  E.</description>
-    </item>
-    
-    <item>
-      <title>LeetCode刷题常用数据结构（Java篇）</title>
-      <link>https://www.pseudoyu.com/en/2021/01/01/algorithm_data_structure_java/</link>
-      <pubDate>Fri, 01 Jan 2021 00:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2021/01/01/algorithm_data_structure_java/</guid>
-      <description>前言 最近开始刷LeetCode算法题，针对工作需求的算法刷题其实主要是锻炼解决问题的思路和代码撰写能力，而不是像算法竞赛那样用复杂的数据结构</description>
     </item>
     
   </channel>

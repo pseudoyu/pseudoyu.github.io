@@ -6,7 +6,16 @@
     <description>Recent content in algorithm on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 01 Jan 2021 00:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Jul 2021 00:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode刷题常用数据结构（Go篇）</title>
+      <link>https://www.pseudoyu.com/en/2021/07/12/algorithm_data_structure_go/</link>
+      <pubDate>Mon, 12 Jul 2021 00:12:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2021/07/12/algorithm_data_structure_go/</guid>
+      <description>前言 最近开始刷LeetCode算法题，针对工作需求的算法刷题其实主要是锻炼解决问题的思路和代码撰写能力，而不是像算法竞赛那样用复杂的数据结构</description>
+    </item>
+    
     <item>
       <title>LeetCode刷题常用数据结构（Java篇）</title>
       <link>https://www.pseudoyu.com/en/2021/01/01/algorithm_data_structure_java/</link>

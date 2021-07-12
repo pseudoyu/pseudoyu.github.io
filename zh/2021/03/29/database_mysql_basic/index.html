@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh" itemscope itemtype="http://schema.org/WebPage">
 <head>
-  <meta name="generator" content="Hugo 0.82.1" />
+  <meta name="generator" content="Hugo 0.83.1" />
   <meta charset="utf-8">
   <title>MySQL基础知识与相关操作 · Pseudoyu</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -32,7 +32,7 @@
 <meta itemprop="name" content="MySQL基础知识与相关操作">
 <meta itemprop="description" content="前言 数据库不论在基础知识学习还是真实企业业务场景中都很常用，也有很多调侃说日常工作总是离不开CRUD，熟练主流关系型与数据库的使用是一个开发"><meta itemprop="datePublished" content="2021-03-29T00:12:17&#43;08:00" />
 <meta itemprop="dateModified" content="2021-03-29T00:12:17&#43;08:00" />
-<meta itemprop="wordCount" content="4018">
+<meta itemprop="wordCount" content="5018">
 <meta itemprop="keywords" content="programming,database,mysql," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="MySQL基础知识与相关操作"/>
 <meta name="twitter:description" content="前言 数据库不论在基础知识学习还是真实企业业务场景中都很常用，也有很多调侃说日常工作总是离不开CRUD，熟练主流关系型与数据库的使用是一个开发"/>
@@ -194,13 +194,13 @@
 </ul>
 <p>实体完整性要求每张数据表都有一个唯一的标识符，每张表中的主键字段不能为空且不能重复，这主要是指表中的数据都可以被唯一区分。</p>
 <p>域完整性则是通过对表中列做一些额外限制，如限制数据类型、检查约束、设置默认值、是否允许空值以及值域范围等。</p>
-<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">在创建表时对字段进行唯一性的约束</span>
-<span class="k">create</span> <span class="k">table</span> <span class="n">person</span> <span class="p">(</span>
-    <span class="n">id</span> <span class="nb">int</span> <span class="k">not</span> <span class="k">null</span> <span class="n">auto_increment</span> <span class="k">primary</span> <span class="k">key</span><span class="p">,</span>
-    <span class="n">name</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">30</span><span class="p">),</span>
-    <span class="n">id_number</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span> <span class="k">unique</span>
-<span class="p">);</span>
-</code></pre></div><p>参照完整性是指数据库不允许引用不存在的实体，数据库的表与其他表之间往往存在一些关联，可以通过外键约束来保障其完整性。</p>
+<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">在创建表时对字段进行唯一性的约束</span><span class="w">
+</span><span class="w"></span><span class="k">create</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">person</span><span class="w"> </span><span class="p">(</span><span class="w">
+</span><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">int</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">null</span><span class="w"> </span><span class="n">auto_increment</span><span class="w"> </span><span class="k">primary</span><span class="w"> </span><span class="k">key</span><span class="p">,</span><span class="w">
+</span><span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">30</span><span class="p">),</span><span class="w">
+</span><span class="w">    </span><span class="n">id_number</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span><span class="w"> </span><span class="k">unique</span><span class="w">
+</span><span class="w"></span><span class="p">);</span><span class="w">
+</span></code></pre></div><p>参照完整性是指数据库不允许引用不存在的实体，数据库的表与其他表之间往往存在一些关联，可以通过外键约束来保障其完整性。</p>
 <p>而用户自定义完整性则是根据具体应用场景和涉及到数据来对数据进行一些语义方面的限制，如余额不能为负数等，一般用设定规则、存储过程和触发器等来进行约束和限制。</p>
 <h3 id="主流rdbms">主流RDBMS</h3>
 <p>目前主流的关系型数据库有以下几种</p>
@@ -256,134 +256,134 @@ status<span class="p">;</span>
 </ul>
 <p>接下来我们将通过实战完成一系列操作</p>
 <h4 id="ddl操作">DDL操作</h4>
-<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">创建数据库</span>
-<span class="k">create</span> <span class="k">database</span> <span class="n">learn_test</span><span class="p">;</span>
-
-<span class="o">#</span><span class="err">显示所有数据库</span>
-<span class="k">show</span> <span class="n">databases</span><span class="p">;</span>
-
-<span class="o">#</span><span class="err">删除数据库</span>
-<span class="k">drop</span> <span class="k">database</span> <span class="n">mydb</span><span class="p">;</span>
-</code></pre></div><p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mysql_ddl.png" alt="mysql_ddl"></p>
-<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">进入某个数据库</span>
-<span class="n">use</span> <span class="n">learn_test</span><span class="p">;</span>
-
-<span class="o">#</span><span class="err">创建一个简单的数据表</span>
-<span class="k">create</span> <span class="k">table</span> <span class="n">contacts</span> <span class="p">(</span>
-    <span class="n">id</span> <span class="nb">int</span> <span class="k">not</span> <span class="k">null</span> <span class="n">auto_increment</span> <span class="k">primary</span> <span class="k">key</span><span class="p">,</span>
-    <span class="n">name</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">30</span><span class="p">),</span>
-    <span class="n">phone</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
-<span class="p">);</span>
-
-<span class="o">#</span><span class="err">添加字段</span>
-<span class="k">alter</span> <span class="k">table</span> <span class="n">contacts</span> <span class="k">add</span> <span class="n">sex</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-
-<span class="o">#</span><span class="err">修改字段</span>
-<span class="k">alter</span> <span class="k">table</span> <span class="n">contacts</span> <span class="k">modify</span> <span class="n">sex</span> <span class="n">tinyint</span><span class="p">;</span>
-
-<span class="o">#</span><span class="err">删除字段</span>
-<span class="k">alter</span> <span class="k">table</span> <span class="n">contacts</span> <span class="k">drop</span> <span class="k">column</span> <span class="n">sex</span><span class="p">;</span>
-
-<span class="o">#</span><span class="err">删除全表</span>
-<span class="k">drop</span> <span class="k">table</span> <span class="n">contacts</span><span class="p">;</span>
-</code></pre></div><p>为了方便演示，这些操作都将在<code>Sequel Pro</code>客户端中进行，操作后我们的表结构如下</p>
+<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">创建数据库</span><span class="w">
+</span><span class="w"></span><span class="k">create</span><span class="w"> </span><span class="k">database</span><span class="w"> </span><span class="n">learn_test</span><span class="p">;</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="o">#</span><span class="err">显示所有数据库</span><span class="w">
+</span><span class="w"></span><span class="k">show</span><span class="w"> </span><span class="n">databases</span><span class="p">;</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="o">#</span><span class="err">删除数据库</span><span class="w">
+</span><span class="w"></span><span class="k">drop</span><span class="w"> </span><span class="k">database</span><span class="w"> </span><span class="n">mydb</span><span class="p">;</span><span class="w">
+</span></code></pre></div><p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mysql_ddl.png" alt="mysql_ddl"></p>
+<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">进入某个数据库</span><span class="w">
+</span><span class="w"></span><span class="n">use</span><span class="w"> </span><span class="n">learn_test</span><span class="p">;</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="o">#</span><span class="err">创建一个简单的数据表</span><span class="w">
+</span><span class="w"></span><span class="k">create</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">contacts</span><span class="w"> </span><span class="p">(</span><span class="w">
+</span><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">int</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">null</span><span class="w"> </span><span class="n">auto_increment</span><span class="w"> </span><span class="k">primary</span><span class="w"> </span><span class="k">key</span><span class="p">,</span><span class="w">
+</span><span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">30</span><span class="p">),</span><span class="w">
+</span><span class="w">    </span><span class="n">phone</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w">
+</span><span class="w"></span><span class="p">);</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="o">#</span><span class="err">添加字段</span><span class="w">
+</span><span class="w"></span><span class="k">alter</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">contacts</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="n">sex</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="o">#</span><span class="err">修改字段</span><span class="w">
+</span><span class="w"></span><span class="k">alter</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">contacts</span><span class="w"> </span><span class="k">modify</span><span class="w"> </span><span class="n">sex</span><span class="w"> </span><span class="n">tinyint</span><span class="p">;</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="o">#</span><span class="err">删除字段</span><span class="w">
+</span><span class="w"></span><span class="k">alter</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">contacts</span><span class="w"> </span><span class="k">drop</span><span class="w"> </span><span class="k">column</span><span class="w"> </span><span class="n">sex</span><span class="p">;</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="o">#</span><span class="err">删除全表</span><span class="w">
+</span><span class="w"></span><span class="k">drop</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">contacts</span><span class="p">;</span><span class="w">
+</span></code></pre></div><p>为了方便演示，这些操作都将在<code>Sequel Pro</code>客户端中进行，操作后我们的表结构如下</p>
 <p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mysql_learn_test_ddl.png" alt="mysql_learn_test_ddl"></p>
 <h4 id="dml操作">DML操作</h4>
-<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">插入多条数据</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="n">contacts</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">phone</span><span class="p">,</span> <span class="n">sex</span><span class="p">)</span> <span class="k">values</span><span class="p">(</span><span class="s1">&#39;张三&#39;</span><span class="p">,</span> <span class="s1">&#39;13100000000&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;李四&#39;</span><span class="p">,</span> <span class="s1">&#39;13100000001&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;王五&#39;</span><span class="p">,</span> <span class="s1">&#39;13100000002&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
-
-<span class="o">#</span><span class="err">修改数据内容</span>
-<span class="k">update</span> <span class="n">contacts</span> <span class="k">set</span> <span class="n">sex</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">where</span> <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;王五&#39;</span><span class="p">;</span>
-
-<span class="o">#</span><span class="err">删除数据内容</span>
-<span class="k">delete</span> <span class="o">*</span> <span class="k">from</span> <span class="n">contacts</span> <span class="k">where</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
-</code></pre></div><h4 id="dql操作">DQL操作</h4>
+<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">插入多条数据</span><span class="w">
+</span><span class="w"></span><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">contacts</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">phone</span><span class="p">,</span><span class="w"> </span><span class="n">sex</span><span class="p">)</span><span class="w"> </span><span class="k">values</span><span class="p">(</span><span class="s1">&#39;张三&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;13100000000&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;李四&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;13100000001&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;王五&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;13100000002&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="o">#</span><span class="err">修改数据内容</span><span class="w">
+</span><span class="w"></span><span class="k">update</span><span class="w"> </span><span class="n">contacts</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="n">sex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;王五&#39;</span><span class="p">;</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="o">#</span><span class="err">删除数据内容</span><span class="w">
+</span><span class="w"></span><span class="k">delete</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">contacts</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">
+</span></code></pre></div><h4 id="dql操作">DQL操作</h4>
 <p>MySQL可以通过<code>select</code>命令来对表进行查询，最常用的查看全表命令为</p>
-<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">查看表的全部数据</span>
-<span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">contacts</span><span class="p">;</span>
-</code></pre></div><p>还可以通过<code>where</code>关键字来进行条件查询、以及多个条件的组合查询</p>
-<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">组合条件进行查询</span>
-<span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">contacts</span> <span class="k">where</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">or</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;李四&#34;</span><span class="p">;</span>
-</code></pre></div><p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mysql_contacts_dql.png" alt="mysql_contacts_dql"></p>
+<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">查看表的全部数据</span><span class="w">
+</span><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">contacts</span><span class="p">;</span><span class="w">
+</span></code></pre></div><p>还可以通过<code>where</code>关键字来进行条件查询、以及多个条件的组合查询</p>
+<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">组合条件进行查询</span><span class="w">
+</span><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">contacts</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&#34;李四&#34;</span><span class="p">;</span><span class="w">
+</span></code></pre></div><p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mysql_contacts_dql.png" alt="mysql_contacts_dql"></p>
 <p><code>IN</code>和<code>LIKE</code>也是两个可以很灵活用于查询的关键字。</p>
 <p><code>IN</code>可以帮助我们过滤某个字段的多个值</p>
-<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">查询</span><span class="n">id在</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="err">中的数据</span>
-<span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">contacts</span> <span class="k">where</span> <span class="n">id</span> <span class="k">in</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
-</code></pre></div><p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mysql_contacts_dql_in.png" alt="mysql_contacts_dql_in"></p>
+<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">查询</span><span class="n">id在</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="err">中的数据</span><span class="w">
+</span><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">contacts</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="k">in</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span><span class="w">
+</span></code></pre></div><p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mysql_contacts_dql_in.png" alt="mysql_contacts_dql_in"></p>
 <p>同时，<code>IN</code>和<code>EXISTS</code>也可以用于子查询</p>
-<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">子查询</span> <span class="k">IN</span>
-<span class="k">select</span> <span class="n">A</span><span class="p">.</span><span class="o">*</span>
-<span class="k">from</span> <span class="n">student</span> <span class="n">A</span>
-<span class="k">where</span> <span class="n">A</span><span class="p">.</span><span class="n">stu_no</span> <span class="k">in</span><span class="p">(</span>
-        <span class="k">select</span> <span class="n">B</span><span class="p">.</span><span class="n">stu_no</span> <span class="k">from</span> <span class="n">score</span> <span class="n">B</span>
-<span class="p">);</span>
-
-<span class="o">#</span><span class="err">子查询</span> <span class="k">EXISTS</span>
-<span class="k">select</span> <span class="n">A</span><span class="p">.</span><span class="o">*</span>
-<span class="k">from</span> <span class="n">student</span> <span class="n">A</span>
-<span class="k">where</span> <span class="k">exists</span><span class="p">(</span>
-        <span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">score</span> <span class="n">B</span>
-        <span class="k">where</span> <span class="n">A</span><span class="p">.</span><span class="n">stu_no</span> <span class="o">=</span> <span class="n">B</span><span class="p">.</span><span class="n">stu</span><span class="p">.</span><span class="k">no</span>
-<span class="p">);</span>
-</code></pre></div><p><code>LIKE</code>可以帮助我们进行一些包含关系的模糊搜索，<code>%</code>可以匹配任一个字符，<code>_</code>可以匹配单个字符</p>
-<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">查询所有姓张的联系人</span>
-<span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">contacts</span> <span class="k">where</span> <span class="n">name</span> <span class="k">like</span> <span class="s1">&#39;张%&#39;</span><span class="p">;</span>
-</code></pre></div><p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mysql_contacts_dql_like_2.png" alt="mysql_contacts_dql_like_2"></p>
-<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">查询所有名字以四结尾且为两个字的的联系人</span>
-<span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">contacts</span> <span class="k">where</span> <span class="n">name</span> <span class="k">like</span> <span class="s1">&#39;_四&#39;</span><span class="p">;</span>
-</code></pre></div><p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mysql_contacts_dql_like.png" alt="mysql_contacts_dql_like"></p>
+<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">子查询</span><span class="w"> </span><span class="k">IN</span><span class="w">
+</span><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="n">A</span><span class="p">.</span><span class="o">*</span><span class="w">
+</span><span class="w"></span><span class="k">from</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="n">A</span><span class="w">
+</span><span class="w"></span><span class="k">where</span><span class="w"> </span><span class="n">A</span><span class="p">.</span><span class="n">stu_no</span><span class="w"> </span><span class="k">in</span><span class="p">(</span><span class="w">
+</span><span class="w">        </span><span class="k">select</span><span class="w"> </span><span class="n">B</span><span class="p">.</span><span class="n">stu_no</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="n">B</span><span class="w">
+</span><span class="w"></span><span class="p">);</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="o">#</span><span class="err">子查询</span><span class="w"> </span><span class="k">EXISTS</span><span class="w">
+</span><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="n">A</span><span class="p">.</span><span class="o">*</span><span class="w">
+</span><span class="w"></span><span class="k">from</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="n">A</span><span class="w">
+</span><span class="w"></span><span class="k">where</span><span class="w"> </span><span class="k">exists</span><span class="p">(</span><span class="w">
+</span><span class="w">        </span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="n">B</span><span class="w">
+</span><span class="w">        </span><span class="k">where</span><span class="w"> </span><span class="n">A</span><span class="p">.</span><span class="n">stu_no</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">B</span><span class="p">.</span><span class="n">stu</span><span class="p">.</span><span class="k">no</span><span class="w">
+</span><span class="w"></span><span class="p">);</span><span class="w">
+</span></code></pre></div><p><code>LIKE</code>可以帮助我们进行一些包含关系的模糊搜索，<code>%</code>可以匹配任一个字符，<code>_</code>可以匹配单个字符</p>
+<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">查询所有姓张的联系人</span><span class="w">
+</span><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">contacts</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">like</span><span class="w"> </span><span class="s1">&#39;张%&#39;</span><span class="p">;</span><span class="w">
+</span></code></pre></div><p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mysql_contacts_dql_like_2.png" alt="mysql_contacts_dql_like_2"></p>
+<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">查询所有名字以四结尾且为两个字的的联系人</span><span class="w">
+</span><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">contacts</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">like</span><span class="w"> </span><span class="s1">&#39;_四&#39;</span><span class="p">;</span><span class="w">
+</span></code></pre></div><p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mysql_contacts_dql_like.png" alt="mysql_contacts_dql_like"></p>
 <p>实际应用中，往往数据表的数据量非常庞大，会对数据根据相应条件进行分组，这就要用到<code>GROUP BY</code>关键字，以及<code>HAVING</code>用于进一步筛选条件。<code>GROUP BY</code>需要配合聚合函数进行使用。</p>
-<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">统计男联系人数量</span>
-<span class="k">select</span> <span class="k">case</span> <span class="n">sex</span>
-            <span class="k">when</span> <span class="mi">1</span> <span class="k">then</span> <span class="s2">&#34;男&#34;</span> 
-            <span class="k">when</span> <span class="mi">2</span> <span class="k">then</span> <span class="s2">&#34;女&#34;</span> 
-            <span class="k">else</span> <span class="s2">&#34;未知&#34;</span> <span class="k">end</span> <span class="k">as</span> <span class="err">性别</span><span class="p">,</span>
-        <span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">as</span> <span class="err">人数</span>
-<span class="k">from</span> <span class="n">contacts</span> 
-<span class="k">group</span> <span class="k">by</span> <span class="n">sex</span>
-<span class="k">having</span> <span class="n">sex</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-</code></pre></div><p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mysql_contacts_dql_group_by.png" alt="mysql_contacts_dql_group_by"></p>
+<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">统计男联系人数量</span><span class="w">
+</span><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="n">sex</span><span class="w">
+</span><span class="w">            </span><span class="k">when</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="s2">&#34;男&#34;</span><span class="w"> 
+</span><span class="w">            </span><span class="k">when</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="s2">&#34;女&#34;</span><span class="w"> 
+</span><span class="w">            </span><span class="k">else</span><span class="w"> </span><span class="s2">&#34;未知&#34;</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="err">性别</span><span class="p">,</span><span class="w">
+</span><span class="w">        </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="err">人数</span><span class="w">
+</span><span class="w"></span><span class="k">from</span><span class="w"> </span><span class="n">contacts</span><span class="w"> 
+</span><span class="w"></span><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">sex</span><span class="w">
+</span><span class="w"></span><span class="k">having</span><span class="w"> </span><span class="n">sex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">
+</span></code></pre></div><p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mysql_contacts_dql_group_by.png" alt="mysql_contacts_dql_group_by"></p>
 <p>而也可以通过<code>GROUP_CONCAT</code>来结合一些具体的数据</p>
-<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">按性别显示不同性别联系人的列表及总数</span>
-<span class="k">select</span> <span class="k">case</span> <span class="n">sex</span>
-            <span class="k">when</span> <span class="mi">1</span> <span class="k">then</span> <span class="s2">&#34;男&#34;</span> 
-            <span class="k">when</span> <span class="mi">2</span> <span class="k">then</span> <span class="s2">&#34;女&#34;</span> 
-            <span class="k">else</span> <span class="s2">&#34;未知&#34;</span> <span class="k">end</span> <span class="k">as</span> <span class="err">性别</span><span class="p">,</span>
-        <span class="n">group_concat</span><span class="p">(</span><span class="n">name</span> <span class="k">order</span> <span class="k">by</span> <span class="n">name</span> <span class="k">desc</span> <span class="n">separator</span> <span class="s1">&#39; | &#39;</span><span class="p">),</span>
-        <span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">as</span> <span class="err">人数</span>
-<span class="k">from</span> <span class="n">contacts</span> 
-<span class="k">group</span> <span class="k">by</span> <span class="n">sex</span><span class="p">;</span>
-</code></pre></div><p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mysql_contacts_dql_group_concat.png" alt="mysql_contacts_dql_group_concat"></p>
+<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">按性别显示不同性别联系人的列表及总数</span><span class="w">
+</span><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="n">sex</span><span class="w">
+</span><span class="w">            </span><span class="k">when</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="s2">&#34;男&#34;</span><span class="w"> 
+</span><span class="w">            </span><span class="k">when</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="s2">&#34;女&#34;</span><span class="w"> 
+</span><span class="w">            </span><span class="k">else</span><span class="w"> </span><span class="s2">&#34;未知&#34;</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="err">性别</span><span class="p">,</span><span class="w">
+</span><span class="w">        </span><span class="n">group_concat</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">desc</span><span class="w"> </span><span class="n">separator</span><span class="w"> </span><span class="s1">&#39; | &#39;</span><span class="p">),</span><span class="w">
+</span><span class="w">        </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="err">人数</span><span class="w">
+</span><span class="w"></span><span class="k">from</span><span class="w"> </span><span class="n">contacts</span><span class="w"> 
+</span><span class="w"></span><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">sex</span><span class="p">;</span><span class="w">
+</span></code></pre></div><p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mysql_contacts_dql_group_concat.png" alt="mysql_contacts_dql_group_concat"></p>
 <p>有时候我们只需要返回唯一值，而需要去掉重复数据，则可以使用<code>DISTINCT</code>关键字</p>
-<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">在查询时对字段进行去重</span>
-<span class="k">select</span> <span class="n">distinc</span> <span class="n">sex</span> <span class="k">from</span> <span class="n">contacts</span><span class="p">;</span>
-</code></pre></div><p>在实际应用中，还很有可能会需要对某些商品交易量进行排名、对一些数值进行排列或博客文章中按照时间线后进行顺序显示等，这就需要用到<code>ORDER BY</code>这一关键字，它默认为<code>ASC</code>升序排列，可以通过手动设置<code>DESC</code>来实现降序。</p>
+<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">在查询时对字段进行去重</span><span class="w">
+</span><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="n">distinc</span><span class="w"> </span><span class="n">sex</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">contacts</span><span class="p">;</span><span class="w">
+</span></code></pre></div><p>在实际应用中，还很有可能会需要对某些商品交易量进行排名、对一些数值进行排列或博客文章中按照时间线后进行顺序显示等，这就需要用到<code>ORDER BY</code>这一关键字，它默认为<code>ASC</code>升序排列，可以通过手动设置<code>DESC</code>来实现降序。</p>
 <p>同时，有的数据库数据量非常大，一次返回所有的数据比较消耗资源，因此也可以使用<code>LIMIT</code>关键字来约束返回的记录数，同时，也可以实现分页。</p>
-<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">contacts</span> <span class="k">order</span> <span class="k">by</span> <span class="n">id</span> <span class="k">desc</span> <span class="k">limit</span> <span class="mi">5</span><span class="p">;</span>
-</code></pre></div><p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mysql_dql_order_by_limit.png" alt="mysql_dql_order_by_limit"></p>
+<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">contacts</span><span class="w"> </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="k">desc</span><span class="w"> </span><span class="k">limit</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">
+</span></code></pre></div><p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mysql_dql_order_by_limit.png" alt="mysql_dql_order_by_limit"></p>
 <h3 id="内置函数">内置函数</h3>
 <p>MySQL也有很多常见的内置函数，可以帮助用户更方便处理各种数据，简化操作，大多数功能都很直观，不作一一说明了</p>
 <p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mysql_functions.png" alt="mysql_functions"></p>
 <p>其中值得注意的是，聚合函数是对一组值进行计算并返回单个值。</p>
 <h3 id="流程控制">流程控制</h3>
 <p>MySQL有一种类似于编程语言中的if else或switch的流程控制语句，以实现复杂的应用逻辑</p>
-<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">选取数据并且把性别以中文标识</span>
-<span class="k">select</span> <span class="n">name</span><span class="p">,</span> <span class="n">phone</span><span class="p">,</span> <span class="k">case</span> <span class="n">sex</span>
-                        <span class="k">when</span> <span class="mi">1</span> <span class="k">then</span> <span class="s2">&#34;男&#34;</span>
-                        <span class="k">when</span> <span class="mi">2</span> <span class="k">then</span> <span class="s2">&#34;女&#34;</span>
-                        <span class="k">else</span> <span class="s2">&#34;未知&#34;</span> <span class="k">end</span>
-                    <span class="k">as</span> <span class="n">sex</span>
-<span class="k">from</span> <span class="n">contacts</span><span class="p">;</span>
-</code></pre></div><p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mysql_contacts_flow_control.png" alt="mysql_contacts_flow_control"></p>
+<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">选取数据并且把性别以中文标识</span><span class="w">
+</span><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">phone</span><span class="p">,</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="n">sex</span><span class="w">
+</span><span class="w">                        </span><span class="k">when</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="s2">&#34;男&#34;</span><span class="w">
+</span><span class="w">                        </span><span class="k">when</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="s2">&#34;女&#34;</span><span class="w">
+</span><span class="w">                        </span><span class="k">else</span><span class="w"> </span><span class="s2">&#34;未知&#34;</span><span class="w"> </span><span class="k">end</span><span class="w">
+</span><span class="w">                    </span><span class="k">as</span><span class="w"> </span><span class="n">sex</span><span class="w">
+</span><span class="w"></span><span class="k">from</span><span class="w"> </span><span class="n">contacts</span><span class="p">;</span><span class="w">
+</span></code></pre></div><p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mysql_contacts_flow_control.png" alt="mysql_contacts_flow_control"></p>
 <h3 id="表的连接">表的连接</h3>
 <p>不同的表可以通过一定连接条件发生关联，主要有自连接、内连接和外连接三种，其中外连接又分为左外连接、右外连接和全外连接三种，他们的区别如下</p>
 <p><img src="https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/mysql_table_join.png" alt="mysql_table_join"></p>
 <p>而自连接是一种特殊的连接方式，通过在逻辑上生成多张表以实现复杂的层次结构，常应用于区域表、菜单表和商品分类表等，语法如下</p>
-<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">自连接语法</span>
-<span class="k">select</span> <span class="n">A</span><span class="p">.</span><span class="n">cloumn</span><span class="p">,</span> <span class="n">B</span><span class="p">.</span><span class="k">column</span>
-<span class="k">from</span> <span class="k">table</span> <span class="n">A</span><span class="p">,</span> <span class="k">table</span> <span class="n">B</span>
-<span class="k">where</span> <span class="n">A</span><span class="p">.</span><span class="k">column</span> <span class="o">=</span> <span class="n">B</span><span class="p">.</span><span class="k">column</span><span class="p">;</span>
-</code></pre></div><h2 id="总结">总结</h2>
+<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="err">自连接语法</span><span class="w">
+</span><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="n">A</span><span class="p">.</span><span class="n">cloumn</span><span class="p">,</span><span class="w"> </span><span class="n">B</span><span class="p">.</span><span class="k">column</span><span class="w">
+</span><span class="w"></span><span class="k">from</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">B</span><span class="w">
+</span><span class="w"></span><span class="k">where</span><span class="w"> </span><span class="n">A</span><span class="p">.</span><span class="k">column</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">B</span><span class="p">.</span><span class="k">column</span><span class="p">;</span><span class="w">
+</span></code></pre></div><h2 id="总结">总结</h2>
 <p>学完了关系型数据库，那非关系型数据库又是怎样的呢？后续将会对Redis这一使用广泛的非关系性数据库进行整理，敬请期待！</p>
 <h2 id="参考资料">参考资料</h2>
 <blockquote>

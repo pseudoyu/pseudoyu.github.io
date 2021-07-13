@@ -1,81 +1,81 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Programming on Pseudoyu</title>
-    <link>https://www.pseudoyu.com/en/category/programming/</link>
-    <description>Recent content in Programming on Pseudoyu</description>
+    <title>develop on Pseudoyu</title>
+    <link>https://www.pseudoyu.com/zh/tag/develop/</link>
+    <description>Recent content in develop on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 29 Mar 2021 00:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/category/programming/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh</language>
+    <lastBuildDate>Mon, 29 Mar 2021 00:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/tag/develop/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MySQL基础知识与相关操作</title>
-      <link>https://www.pseudoyu.com/en/2021/03/29/database_mysql_basic/</link>
+      <link>https://www.pseudoyu.com/zh/2021/03/29/database_mysql_basic/</link>
       <pubDate>Mon, 29 Mar 2021 00:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/03/29/database_mysql_basic/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/03/29/database_mysql_basic/</guid>
       <description>前言 数据库不论在基础知识学习还是真实企业业务场景中都很常用，也有很多调侃说日常工作总是离不开CRUD，熟练主流关系型与数据库的使用是一个开发</description>
     </item>
     
     <item>
       <title>IPFS本地节点搭建（命令行）</title>
-      <link>https://www.pseudoyu.com/en/2021/03/27/blockchain_ipfs_practice/</link>
+      <link>https://www.pseudoyu.com/zh/2021/03/27/blockchain_ipfs_practice/</link>
       <pubDate>Sat, 27 Mar 2021 18:46:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/03/27/blockchain_ipfs_practice/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/03/27/blockchain_ipfs_practice/</guid>
       <description>前言 上一篇《IPFS分布式文件存储原理》对于IPFS系统的设计理念、功能、工作原理及IPNS做了详细的介绍，那么，如何在本地搭建一个IPFS</description>
     </item>
     
     <item>
       <title>IPFS分布式存储协议分析与思考</title>
-      <link>https://www.pseudoyu.com/en/2021/03/25/blockchain_ipfs_structure/</link>
+      <link>https://www.pseudoyu.com/zh/2021/03/25/blockchain_ipfs_structure/</link>
       <pubDate>Thu, 25 Mar 2021 16:30:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/03/25/blockchain_ipfs_structure/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/03/25/blockchain_ipfs_structure/</guid>
       <description>前言 最近在做学校的Case Study项目，是一个基于Ethereum平台的音乐版权管理项目，其中对于音乐作品、版权证明文件等上传用到了IPF</description>
     </item>
     
     <item>
       <title>Hyperledger Fabric网络与安全体系浅析</title>
-      <link>https://www.pseudoyu.com/en/2021/03/23/blockchain_hyperledger_fabric_network/</link>
+      <link>https://www.pseudoyu.com/zh/2021/03/23/blockchain_hyperledger_fabric_network/</link>
       <pubDate>Tue, 23 Mar 2021 12:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/03/23/blockchain_hyperledger_fabric_network/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/03/23/blockchain_hyperledger_fabric_network/</guid>
       <description>前言 上一篇文章《Hyperledger Fabric架构详解》对Fabric的架构和工作原理进行了详细的解读与分析，那作为一个企业级的区块链系</description>
     </item>
     
     <item>
       <title>Hyperledger Fabric系统架构详解</title>
-      <link>https://www.pseudoyu.com/en/2021/03/20/blockchain_hyperledger_fabric_structure/</link>
+      <link>https://www.pseudoyu.com/zh/2021/03/20/blockchain_hyperledger_fabric_structure/</link>
       <pubDate>Sat, 20 Mar 2021 12:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/03/20/blockchain_hyperledger_fabric_structure/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/03/20/blockchain_hyperledger_fabric_structure/</guid>
       <description>前言 因为毕业Case Study的项目主要是基于Ethereum公链，也没有面向企业的应用场景，所以之前对Hyperledger Fabric的</description>
     </item>
     
     <item>
       <title>Ethereum核心技术解读</title>
-      <link>https://www.pseudoyu.com/en/2021/02/20/blockchain_ethereum_basic/</link>
+      <link>https://www.pseudoyu.com/zh/2021/02/20/blockchain_ethereum_basic/</link>
       <pubDate>Sat, 20 Feb 2021 12:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/02/20/blockchain_ethereum_basic/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/02/20/blockchain_ethereum_basic/</guid>
       <description>前言 比特币作为一种去中心化的数字货币，是极其成功的，但受限于比特币脚本（非图灵完备，只能处理一些简单的逻辑），并不能处理很复杂的业务。而Et</description>
     </item>
     
     <item>
       <title>比特币核心技术解读</title>
-      <link>https://www.pseudoyu.com/en/2021/02/17/blockchain_bitcoin_basic/</link>
+      <link>https://www.pseudoyu.com/zh/2021/02/17/blockchain_bitcoin_basic/</link>
       <pubDate>Wed, 17 Feb 2021 12:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/02/17/blockchain_bitcoin_basic/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/02/17/blockchain_bitcoin_basic/</guid>
       <description>前言 在上一篇文章《区块链基础知识与关键技术》里对区块链的基础知识和关键技术进行了梳理，而比特币是区块链最典型的应用，本文将对比特币核心技术进</description>
     </item>
     
     <item>
       <title>区块链基础知识与关键技术</title>
-      <link>https://www.pseudoyu.com/en/2021/02/12/blockchain_basic/</link>
+      <link>https://www.pseudoyu.com/zh/2021/02/12/blockchain_basic/</link>
       <pubDate>Fri, 12 Feb 2021 12:12:17 +0800</pubDate>
       
-      <guid>https://www.pseudoyu.com/en/2021/02/12/blockchain_basic/</guid>
+      <guid>https://www.pseudoyu.com/zh/2021/02/12/blockchain_basic/</guid>
       <description>前言 最近对在上HKU的&amp;lt;COMP7408 Distributed Ledger and Blockchain Technology&amp;gt;课程，对区块链的基础概念有了更系统的认知，结合之前上过的北</description>
     </item>
     

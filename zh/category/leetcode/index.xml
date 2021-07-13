@@ -6,7 +6,16 @@
     <description>Recent content in LeetCode on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 13 Jul 2021 17:50:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/category/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Jul 2021 22:30:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/category/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode #28 实现 strStr()</title>
+      <link>https://www.pseudoyu.com/zh/2021/07/13/leetcode_28/</link>
+      <pubDate>Tue, 13 Jul 2021 22:30:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/07/13/leetcode_28/</guid>
+      <description>题目描述 实现 strStr() 函数。 给你两个字符串 haystack 和 needle ，请你在 haystack 字符串中找出 needle 字符串出现的第一个位置（下标从 0 开始）。如果不存在，则返回 -1 。 说明： 当 needle 是空</description>
+    </item>
+    
     <item>
       <title>LeetCode #1 两数之和</title>
       <link>https://www.pseudoyu.com/zh/2021/07/13/leetcode_1/</link>

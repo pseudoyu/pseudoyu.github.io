@@ -6,7 +6,16 @@
     <description>Recent content in leetcode on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 12 Jul 2021 00:12:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Jul 2021 17:50:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/en/tag/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode #1 两数之和</title>
+      <link>https://www.pseudoyu.com/en/2021/07/13/leetcode_1/</link>
+      <pubDate>Tue, 13 Jul 2021 17:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2021/07/13/leetcode_1/</guid>
+      <description>题目描述 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target 的那 两个 整数，并返回它们的数组下标。 你可以假设每种输入</description>
+    </item>
+    
     <item>
       <title>LeetCode刷题常用数据结构（Go篇）</title>
       <link>https://www.pseudoyu.com/en/2021/07/12/algorithm_data_structure_go/</link>

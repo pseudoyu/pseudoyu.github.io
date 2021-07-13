@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 12 Jul 2021 00:12:17 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 13 Jul 2021 17:50:17 +0800</lastBuildDate>
     
     <atom:link href="https://www.pseudoyu.com/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -33,6 +33,69 @@
 &lt;p&gt;I always fall into self-doubt. Whenever I&amp;rsquo;m talking with my best friend, if the topics are about &lt;em&gt;initials&lt;/em&gt; or &lt;em&gt;meanings&lt;/em&gt;, I&amp;rsquo;ll choose to escape. It&amp;rsquo;s difficult for me to feel the simple joy or satisfaction emotions even if I made some achievements and praised by others. I used to regard everything in my life is meaningless. As time goes by, I begin to understand more about it. I wrote a paragh in my another article &lt;a href=&#34;https://www.pseudoyu.com/en/2020/06/06/23%E5%B2%81%E7%9A%84%E8%87%AA%E7%99%BD%E5%8E%BB%E8%BF%BD%E5%AF%BB%E6%84%8F%E4%B9%89/&#34;&gt;&lt;em&gt;Dear Yu, Are you ready for 23?&lt;/em&gt;&lt;/a&gt;, &lt;em&gt;&lt;strong&gt;&amp;ldquo;Perhaps, thinking about meaning itself is also a process of constructing meanings. I decide to give up the previous illusion of an &amp;lsquo;Aha moment&amp;rsquo; and just continue moving forward to experience my own life.&amp;quot;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The name &lt;strong&gt;Pseudoyu&lt;/strong&gt; also tells myself that I should never constantly struggle with what meaning is anymore. Instead, I will continue to learn, experience and challenge new things. And I can finally accept other&amp;rsquo;s judgement or complain about me like &amp;ldquo;&lt;strong&gt;You changed&lt;/strong&gt;&amp;rdquo; with pressure.&lt;/p&gt;
 &lt;p&gt;I hope I can acquire more inputs like new knowledge and ideas, and write more short articles as outputs.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>LeetCode #1 两数之和</title>
+      <link>https://www.pseudoyu.com/en/2021/07/13/leetcode_1/</link>
+      <pubDate>Tue, 13 Jul 2021 17:50:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2021/07/13/leetcode_1/</guid>
+      
+        <description>&lt;h2 id=&#34;题目描述&#34;&gt;题目描述&lt;/h2&gt;
+&lt;p&gt;给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。&lt;/p&gt;
+&lt;p&gt;你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。&lt;/p&gt;
+&lt;p&gt;你可以按任意顺序返回答案。&lt;/p&gt;
+&lt;p&gt;示例 1：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：nums = [2,7,11,15], target = 9
+输出：[0,1]
+解释：因为 nums[0] + nums[1] == 9 ，返回 [0, 1] 。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;示例 2：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：nums = [3,2,4], target = 6
+输出：[1,2]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;示例 3：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：nums = [3,3], target = 6
+输出：[0,1]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;题解&#34;&gt;题解&lt;/h2&gt;
+&lt;h3 id=&#34;暴力解法&#34;&gt;暴力解法&lt;/h3&gt;
+&lt;p&gt;首先能想到的就是暴力解法，也就是两层循环嵌套遍历所有的i，j，用一个int切片存储返回结果，如果找到相等的则返回两个索引值，如没找到则返回初始化值0&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;twoSum&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;nums&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;target&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nx&#34;&gt;ans&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;make&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;nums&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;j&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;j&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;nums&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;nums&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;nums&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;target&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+                &lt;span class=&#34;nx&#34;&gt;ans&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+            &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;ans&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;map结构&#34;&gt;map结构&lt;/h3&gt;
+&lt;p&gt;暴力解法虽然容易想到，但是两层循环的时间复杂度很高，因此，可以采取以空间换时间的方式来进行优化，以map结构来找键值对复杂度为O(1)，哈希&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;twoSum&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;nums&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;target&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nx&#34;&gt;ans&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;make&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;nx&#34;&gt;numsMap&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;make&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;nums&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;ok&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;numsMap&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;target&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;nums&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]];&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;ok&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;nx&#34;&gt;ans&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+        &lt;span class=&#34;nx&#34;&gt;numsMap&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;nums&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;ans&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/two-sum/&#34;&gt;LeetCode题目链接&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/greyireland/algorithm-pattern&#34;&gt;greyireland/algorithm-pattern&lt;/a&gt;，&lt;em&gt;GitHub&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
 </description>
       
     </item>
@@ -3838,294 +3901,6 @@ m1(sqrt(5)). Since sqrt(5) &amp;gt;= dist(q,oNN)= sqrt(2), search stops and oNN 
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;These problems can be avoided by using techniques that allow the number of buckets to be modified dynamically (dynamic hashing)&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>COMP7103 Topic 1 Introduction</title>
-      <link>https://www.pseudoyu.com/en/2021/01/28/comp7103_topic1/</link>
-      <pubDate>Thu, 28 Jan 2021 01:18:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2021/01/28/comp7103_topic1/</guid>
-      
-        <description>&lt;h1 id=&#34;comp7103-data-mining&#34;&gt;COMP7103 Data Mining&lt;/h1&gt;
-&lt;h2 id=&#34;topic-1-introduction&#34;&gt;Topic 1 Introduction&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Decision-Support System (DSS)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A decision-support system (DSS) is a system that assists decision makers to make important decisions for an organization or business&lt;/li&gt;
-&lt;li&gt;KDD and data mining are important components in many DSS&amp;rsquo;s&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Data and Knowledge&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Data
-&lt;ul&gt;
-&lt;li&gt;A collecion of facts about certain group of objects&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Pattern
-&lt;ul&gt;
-&lt;li&gt;Certain characteristics of data that are frequently observed&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Knowledge
-&lt;ul&gt;
-&lt;li&gt;Some general rules about the objects&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Data Warehouse&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;An integration of various departmental databases (organization-wide data)&lt;/li&gt;
-&lt;li&gt;Avoids overloading local operational databases&lt;/li&gt;
-&lt;li&gt;A convenient place where KDD and data mining applications are performed&lt;/li&gt;
-&lt;li&gt;Provide data mining algorithms an easy access to the required data&lt;/li&gt;
-&lt;li&gt;Wrappers
-&lt;ul&gt;
-&lt;li&gt;Extract&lt;/li&gt;
-&lt;li&gt;Transform&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Can also be used to support other DSS tools, e.g. On-Line Analytical Processing (OLAP) - analyze large amount of data, Online Transaction Processing (OLTP)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Data Mining and KDD&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;KDD (Knowledge Discovery in Databases)
-&lt;ul&gt;
-&lt;li&gt;A process of discovering useful knowledge from big collection of data&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Data Mining
-&lt;ul&gt;
-&lt;li&gt;A step within the KDD process in which interesting patterns are found. Some of these patterns are then interpreted and transformed into useful knowledge.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Data Mining is a step in the whole KDD process&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;KDD is a process of identifying patterns in data and deriving knowledge from them&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;valid&lt;/li&gt;
-&lt;li&gt;novel&lt;/li&gt;
-&lt;li&gt;potentially useful&lt;/li&gt;
-&lt;li&gt;understandable&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Data Mining&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/data_mining_system.png&#34; alt=&#34;data_mining_system&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Databases&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Bottom layer of the architecture&lt;/li&gt;
-&lt;li&gt;Contains data sources (raw data)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Traditional Database usually only provides the functions of storing and retrieving facts&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;The knowledge resulting from data mining should carry certain degree of predictive ability or descriptive (explanatory) ability (or both)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Data Mining Engine&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Applies data mining algorithms on data&lt;/li&gt;
-&lt;li&gt;Provides multiple functionality&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Evaluation Module&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Allow users to specify what is/isn&amp;rsquo;t interesting&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Knowledge Base&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Capture domain specific knowledge&lt;/li&gt;
-&lt;li&gt;Stores the rules generated by data mining&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Graphical User Interface&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Presents mined patterns and rules to users in an easy-to-visualize way&lt;/li&gt;
-&lt;li&gt;Provides feedback mechanisms for the users to specify the criteria of interestingness&lt;/li&gt;
-&lt;li&gt;Provides a query language or query interface for users to select and retrieve&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Challenges of Data Mining&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Technical
-&lt;ul&gt;
-&lt;li&gt;Scalability&lt;/li&gt;
-&lt;li&gt;Dimensionality&lt;/li&gt;
-&lt;li&gt;Data stream&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Data
-&lt;ul&gt;
-&lt;li&gt;Complex and heterogeneous data&lt;/li&gt;
-&lt;li&gt;Data quality&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Privacy
-&lt;ul&gt;
-&lt;li&gt;Data ownership and distribution&lt;/li&gt;
-&lt;li&gt;Privacy preservation&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Results
-&lt;ul&gt;
-&lt;li&gt;Interpretation of patterns&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;The KDD Process&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/kdd_process.png&#34; alt=&#34;kdd_process&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Step 1: Goal Setting
-&lt;ul&gt;
-&lt;li&gt;Understand your application domain&lt;/li&gt;
-&lt;li&gt;Obtain prior known knowledge&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Step 2: Data Collection
-&lt;ul&gt;
-&lt;li&gt;Characteristics&lt;/li&gt;
-&lt;li&gt;Where to find&lt;/li&gt;
-&lt;li&gt;How to store&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Step 3: Data Cleaning and Preprocessing
-&lt;ul&gt;
-&lt;li&gt;Missing data&lt;/li&gt;
-&lt;li&gt;Incorrect data (noise)&lt;/li&gt;
-&lt;li&gt;Outliers&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Step 4: Data Reduction and Transformation (or Preparation)
-&lt;ul&gt;
-&lt;li&gt;Compact data into a form&lt;/li&gt;
-&lt;li&gt;Improve data mining algorithms&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Step 5: Data Mining
-&lt;ul&gt;
-&lt;li&gt;Pick a data mining model&lt;/li&gt;
-&lt;li&gt;Pick a data mining algorithm&lt;/li&gt;
-&lt;li&gt;Apply the algorithm to the data&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Step 6: Result Evaluation
-&lt;ul&gt;
-&lt;li&gt;Check the results and goals&lt;/li&gt;
-&lt;li&gt;Refine and re-run (if not)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Step 7: Knowledge Consolidation
-&lt;ul&gt;
-&lt;li&gt;Document&lt;/li&gt;
-&lt;li&gt;Report&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Iterative and Interactive&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Some steps of the process need to be refined, and the whole process be repeated&lt;/li&gt;
-&lt;li&gt;Certain amount of human involvement is needed to monitor and to fine tune the steps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Prediction&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Uses database records that describe information about past behavior to automatically generate a model (or rule) that can predict future behavior&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Derive patterns that summarize the underlying relationships in data and to describe the characteristics of data&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;OLAP (On-Line Analytical Processing)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;View data in a multi-dimensional model (a data cube)&lt;/li&gt;
-&lt;li&gt;Fast aggregation&lt;/li&gt;
-&lt;li&gt;Summarization&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Example&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Selection -&amp;gt; Group-by -&amp;gt; Summarization&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Classification&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Supervised learning&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Goal
-&lt;ul&gt;
-&lt;li&gt;Unseen records should be assigned a class (accuracy)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Approach
-&lt;ul&gt;
-&lt;li&gt;Given a training set&lt;/li&gt;
-&lt;li&gt;Learn classifier&lt;/li&gt;
-&lt;li&gt;Find a model&lt;/li&gt;
-&lt;li&gt;Test the model using test set&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Example&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Direct Marketing
-&lt;ul&gt;
-&lt;li&gt;Reduce cost of mailing by targeting a set of consumers likely to buy a new cell-phone product&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Regression&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Goal
-&lt;ul&gt;
-&lt;li&gt;Preduct a value of numerical variable based on the values of other variables&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Example&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Predicting sales amounts of new product based on advertising expenditure&lt;/li&gt;
-&lt;li&gt;Predicting wind velocities as a function of temperature, humidity, air pressure, etc.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Clustering&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Given a set of data objects with a set of attributes and similarity measure&lt;/li&gt;
-&lt;li&gt;Find clusters (e.g. distance-based clustering)
-&lt;ul&gt;
-&lt;li&gt;Maximize the intra-cluster similarity&lt;/li&gt;
-&lt;li&gt;Minimize the inter-cluster similarity&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Objects in one cluster are more similiar to one another&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/pseudoyu/image_hosting/master/hugo_images/illustrating_cluster.png&#34; alt=&#34;illustrating_cluster&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Example&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Document Clustering
-&lt;ul&gt;
-&lt;li&gt;To find groups of documents that are similar to each other based on the important terms they contain&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Association Rule Discovery&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Given a set of records each of which contains some items from a given collection&lt;/li&gt;
-&lt;li&gt;Goal
-&lt;ul&gt;
-&lt;li&gt;Produce dependency rules which predict occurrence of an item based on occurrences of other items&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Example&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Marketing and Sales Promotion&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Sequence Analysis&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Given a sequence database contains sequences of events&lt;/li&gt;
-&lt;li&gt;Find sequences
-&lt;ul&gt;
-&lt;li&gt;Interesting&lt;/li&gt;
-&lt;li&gt;Frequently occurring&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Predict future behavior.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Example&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Renting movies&lt;/li&gt;
-&lt;li&gt;Buying habits&lt;/li&gt;
-&lt;li&gt;Web serving behavior&lt;/li&gt;
-&lt;li&gt;Web log analysis&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       

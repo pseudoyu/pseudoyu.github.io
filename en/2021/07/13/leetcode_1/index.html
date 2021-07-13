@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta name="generator" content="Hugo 0.83.1" />
+  <meta charset="utf-8">
+  <title>LeetCode #1 两数之和 · Pseudoyu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<script async src="https://cdn.splitbee.io/sb.js"></script>
+<script src="https://cdn.splitbee.io/sb-ab.js"></script>
+  <meta name="description" content="题目描述 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target 的那 两个 整数，并返回它们的数组下标。 你可以假设每种输入" />
+
+  <meta name="keywords" content="hugo, blockchain, programming" />
+
+<link rel="canonical" href="https://www.pseudoyu.com/en/2021/07/13/leetcode_1/" />
+<link rel="alternate" href="https://www.pseudoyu.com/zh/2021/07/13/leetcode_1/" hreflang="zh">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.pseudoyu.com/css/den.css">
+
+
+
+
+<meta property="og:title" content="LeetCode #1 两数之和" />
+<meta property="og:description" content="题目描述 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target 的那 两个 整数，并返回它们的数组下标。 你可以假设每种输入" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.pseudoyu.com/en/2021/07/13/leetcode_1/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-07-13T17:50:17&#43;08:00" />
+<meta property="article:modified_time" content="2021-07-13T17:50:17&#43;08:00" />
+
+<meta itemprop="name" content="LeetCode #1 两数之和">
+<meta itemprop="description" content="题目描述 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target 的那 两个 整数，并返回它们的数组下标。 你可以假设每种输入"><meta itemprop="datePublished" content="2021-07-13T17:50:17&#43;08:00" />
+<meta itemprop="dateModified" content="2021-07-13T17:50:17&#43;08:00" />
+<meta itemprop="wordCount" content="506">
+<meta itemprop="keywords" content="leetcode,algorithm," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="LeetCode #1 两数之和"/>
+<meta name="twitter:description" content="题目描述 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target 的那 两个 整数，并返回它们的数组下标。 你可以假设每种输入"/>
+</head>
+<body>
+  
+  <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://www.pseudoyu.com/images/background.jpg'); background-position: center; background-size: cover;">
+  <div class="container">
+  <nav class="header-nav navbar navbar-expand-md navbar-dark light-dark">
+    <div class="header-logo navbar-brand">
+      
+        <a class="float-left" href="https://www.pseudoyu.com/en/">
+      
+        
+        <img class="mr20 header-logo-image" src="https://www.pseudoyu.com/images/fly.png" alt="logo">
+        
+        
+          Pseudoyu
+         
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav-menu collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/en/category/ideas/">Ideas</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/en/category/develop/">develop</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/en/category/leetcode/">LeetCode</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/en/category/notes/">Notes</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="https://www.pseudoyu.com/en/category/projects/">Projects</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              <a class="nav-link" href="https://www.pseudoyu.com/en/about/">About</a>
+            
+          </li>
+        
+        
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.pseudoyu.com/zh/"><i class="fas fa-globe"></i> 中文</a>
+            </li>
+          
+          
+          
+          
+        
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container header-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="header-content">
+        <h1 class="header-title">LeetCode #1 两数之和</h1>
+        <p class="header-date">By
+          Arthur /
+        
+        2021-07-13
+          / In categories
+          <a href="https://www.pseudoyu.com/en/category/leetcode/">LeetCode</a>
+        </p>
+        
+        <div class="header-underline"></div>
+        
+          <div class="clearfix"></div>
+          <p class="float-right header-tags">
+              <i class="fas fa-tags" aria-hidden="true"></i>
+              <a href="https://www.pseudoyu.com/en/tag/algorithm/">algorithm</a>, 
+                <a href="https://www.pseudoyu.com/en/tag/leetcode/">leetcode</a>
+          </p>
+        
+        <div class="clearfix"></div>
+<p class="float-right translations">
+    <i class="fas fa-language" aria-hidden="true"></i>
+    Translations: 
+    <a href="https://www.pseudoyu.com/zh/2021/07/13/leetcode_1/">ZH</a>
+</p>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <main>
+<div class="container content">
+  <article>
+  <h2 id="题目描述">题目描述</h2>
+<p>给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。</p>
+<p>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。</p>
+<p>你可以按任意顺序返回答案。</p>
+<p>示例 1：</p>
+<pre><code>输入：nums = [2,7,11,15], target = 9
+输出：[0,1]
+解释：因为 nums[0] + nums[1] == 9 ，返回 [0, 1] 。
+</code></pre>
+<p>示例 2：</p>
+<pre><code>输入：nums = [3,2,4], target = 6
+输出：[1,2]
+</code></pre>
+<p>示例 3：</p>
+<pre><code>输入：nums = [3,3], target = 6
+输出：[0,1]
+</code></pre>
+<h2 id="题解">题解</h2>
+<h3 id="暴力解法">暴力解法</h3>
+<p>首先能想到的就是暴力解法，也就是两层循环嵌套遍历所有的i，j，用一个int切片存储返回结果，如果找到相等的则返回两个索引值，如没找到则返回初始化值0</p>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">twoSum</span><span class="p">(</span><span class="nx">nums</span> <span class="p">[]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">target</span> <span class="kt">int</span><span class="p">)</span> <span class="p">[]</span><span class="kt">int</span> <span class="p">{</span>
+    <span class="nx">ans</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="nx">j</span> <span class="o">:=</span> <span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">j</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums</span><span class="p">);</span> <span class="nx">j</span><span class="o">++</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">+</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">==</span> <span class="nx">target</span> <span class="p">{</span>
+                <span class="nx">ans</span> <span class="p">=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="nx">i</span><span class="p">,</span> <span class="nx">j</span><span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">ans</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="map结构">map结构</h3>
+<p>暴力解法虽然容易想到，但是两层循环的时间复杂度很高，因此，可以采取以空间换时间的方式来进行优化，以map结构来找键值对复杂度为O(1)，哈希</p>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">twoSum</span><span class="p">(</span><span class="nx">nums</span> <span class="p">[]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">target</span> <span class="kt">int</span><span class="p">)</span> <span class="p">[]</span><span class="kt">int</span> <span class="p">{</span>
+    <span class="nx">ans</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="nx">numsMap</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="kt">int</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums</span><span class="p">);</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="nx">j</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="nx">numsMap</span><span class="p">[</span><span class="nx">target</span> <span class="o">-</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]];</span> <span class="nx">ok</span> <span class="p">{</span>
+            <span class="nx">ans</span> <span class="p">=</span> <span class="p">[]</span><span class="kt">int</span> <span class="p">{</span><span class="nx">i</span><span class="p">,</span> <span class="nx">j</span><span class="p">}</span>
+        <span class="p">}</span>
+        <span class="nx">numsMap</span><span class="p">[</span><span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]]</span> <span class="p">=</span> <span class="nx">i</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">ans</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="参考资料">参考资料</h2>
+<blockquote>
+<ol>
+<li><a href="https://leetcode-cn.com/problems/two-sum/">LeetCode题目链接</a></li>
+<li><a href="https://github.com/greyireland/algorithm-pattern">greyireland/algorithm-pattern</a>，<em>GitHub</em></li>
+</ol>
+</blockquote>
+
+  </article>
+
+  
+  
+  
+
+
+</div>
+
+  </main><div class="footer gradient-2">
+  <div class="container footer-container ">
+    <div class="row">
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        <div class="footer-title">Sitemap</div>
+        <ul class="list-unstyled">
+            
+              
+                <li><a href="https://www.pseudoyu.com/en/tags/">Tags</a></li>
+              
+              
+                <li><a href="https://www.pseudoyu.com/en/categories/">Categories</a></li>
+              
+            
+            
+            
+            <li><a rel="alternate" type="application/rss&#43;xml" href="https://www.pseudoyu.com/en/index.xml"><i class="fas fa-rss-square"></i> RSS Feed</a></li>
+            
+            
+            
+        </ul>
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">Social</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://www.facebook.com/pseudoyuzhang" rel="noopener" target="_blank">Facebook</a></li>
+          
+          <li><a href="https://www.instagram.com/pseudo.yu/" rel="noopener" target="_blank">Instagram</a></li>
+          
+          <li><a href="https://space.bilibili.com/5374948/" rel="noopener" target="_blank">BiliBili</a></li>
+          
+        </ul>
+        
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">Links</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://www.linkedin.com/in/pseudoyu/" rel="noopener" target="_blank">LinkedIn</a></li>
+          
+          <li><a href="https://github.com/pseudoyu" rel="noopener" target="_blank">GitHub</a></li>
+          
+          <li><a href="https://www.coursera.org/user/ffe947f087d1f63b161c3fcb310a6578" rel="noopener" target="_blank">Coursera</a></li>
+          
+        </ul>
+        
+      </div> 
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <p class="pull-right text-right">
+          <small><em>Team Rocket: <a href="https://www.marshalgao.com" rel="noopener" target="_blank">Marshal</a> | <a href="https://www.m1sty.com" rel="noopener" target="_blank">Misty</a></em></small><br/>
+          <small><em>The University of Hong Kong - <a href="https://www.cs.hku.hk" rel="noopener" target="_blank">CS</a></em></small><br/>
+          <small>
+            &copy; 
+            Arthur
+            
+              2020 -
+            2021
+          </small>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 14 Jul 2021 17:40:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Jul 2021 18:20:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode #236 二叉树的最近公共祖先</title>
+      <link>https://www.pseudoyu.com/zh/2021/07/14/leetcode_236/</link>
+      <pubDate>Wed, 14 Jul 2021 18:20:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/07/14/leetcode_236/</guid>
+      <description>题目描述 给定一个二叉树, 找到该树中两个指定节点的最近公共祖先。 百度百科中最近公共祖先的定义为：“对于有根树 T 的两个节点 p、q，最近公共祖先表</description>
+    </item>
+    
     <item>
       <title>LeetCode #124 二叉树中的最大路径和</title>
       <link>https://www.pseudoyu.com/zh/2021/07/14/leetcode_124/</link>
@@ -178,15 +187,6 @@ Application  Understanding  Group related documents for browsing, group genes an
       
       <guid>https://www.pseudoyu.com/zh/2021/02/17/blockchain_bitcoin_basic/</guid>
       <description>前言 在上一篇文章《区块链基础知识与关键技术》里对区块链的基础知识和关键技术进行了梳理，而比特币是区块链最典型的应用，本文将对比特币核心技术进</description>
-    </item>
-    
-    <item>
-      <title>区块链基础知识与关键技术</title>
-      <link>https://www.pseudoyu.com/zh/2021/02/12/blockchain_basic/</link>
-      <pubDate>Fri, 12 Feb 2021 12:12:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2021/02/12/blockchain_basic/</guid>
-      <description>前言 最近对在上HKU的&amp;lt;COMP7408 Distributed Ledger and Blockchain Technology&amp;gt;课程，对区块链的基础概念有了更系统的认知，结合之前上过的北</description>
     </item>
     
   </channel>

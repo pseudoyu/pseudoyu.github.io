@@ -6,7 +6,16 @@
     <description>Recent content in LeetCode on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 14 Jul 2021 17:40:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/category/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Jul 2021 18:20:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/category/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode #236 二叉树的最近公共祖先</title>
+      <link>https://www.pseudoyu.com/zh/2021/07/14/leetcode_236/</link>
+      <pubDate>Wed, 14 Jul 2021 18:20:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/07/14/leetcode_236/</guid>
+      <description>题目描述 给定一个二叉树, 找到该树中两个指定节点的最近公共祖先。 百度百科中最近公共祖先的定义为：“对于有根树 T 的两个节点 p、q，最近公共祖先表</description>
+    </item>
+    
     <item>
       <title>LeetCode #124 二叉树中的最大路径和</title>
       <link>https://www.pseudoyu.com/zh/2021/07/14/leetcode_124/</link>

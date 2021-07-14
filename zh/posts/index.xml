@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 14 Jul 2021 14:00:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Jul 2021 14:40:17 +0800</lastBuildDate><atom:link href="https://www.pseudoyu.com/zh/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode #110 平衡二叉树</title>
+      <link>https://www.pseudoyu.com/zh/2021/07/14/leetcode_110/</link>
+      <pubDate>Wed, 14 Jul 2021 14:40:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/zh/2021/07/14/leetcode_110/</guid>
+      <description>题目描述 给定一个二叉树，判断它是否是高度平衡的二叉树。 本题中，一棵高度平衡二叉树定义为： 一个二叉树每个节点 的左右两个子树的高度差的绝对值不超</description>
+    </item>
+    
     <item>
       <title>LeetCode #104 二叉树的最大深度</title>
       <link>https://www.pseudoyu.com/zh/2021/07/14/leetcode_104/</link>
@@ -178,18 +187,6 @@ Application  Understanding  Group related documents for browsing, group genes an
       
       <guid>https://www.pseudoyu.com/zh/2021/02/11/learning_plan_okr/</guid>
       <description>用一句话形容理想情况下，自己想要达到的状态 具体目标范围：提升编程技术能力 时间周期：2个月 描述：我想要成为一名具备过硬的编程能力的开发者，并对</description>
-    </item>
-    
-    <item>
-      <title>COMP7801 Topic 2 Spatial Data Management</title>
-      <link>https://www.pseudoyu.com/zh/2021/02/06/comp7801_topic2/</link>
-      <pubDate>Sat, 06 Feb 2021 01:18:17 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/zh/2021/02/06/comp7801_topic2/</guid>
-      <description>Spatial Data Management Concepts Spatial Data
- Location data  Check-in service Online Maps Location-based services   Location tracking Traffic Data  Spatial Databases
- PostgreSQL with PostGIS Neo4J-spatial HadoopGIS Ingres GeoMesa  Spatial Data Management
- Spatial Database Systems  Manage large collections of multidimensional objects (2D/3D)   A spatial object  Contains (at least) one spatial attributes that describes its location and/or geometry   A spatial relation  Is an organized collection of spatial objects of the same entity    Spatial Data Representation</description>
     </item>
     
   </channel>

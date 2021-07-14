@@ -6,7 +6,7 @@
     <description>Recent content on Pseudoyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 14 Jul 2021 14:00:17 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 14 Jul 2021 14:40:17 +0800</lastBuildDate>
     
     <atom:link href="https://www.pseudoyu.com/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -33,6 +33,71 @@
 &lt;p&gt;I always fall into self-doubt. Whenever I&amp;rsquo;m talking with my best friend, if the topics are about &lt;em&gt;initials&lt;/em&gt; or &lt;em&gt;meanings&lt;/em&gt;, I&amp;rsquo;ll choose to escape. It&amp;rsquo;s difficult for me to feel the simple joy or satisfaction emotions even if I made some achievements and praised by others. I used to regard everything in my life is meaningless. As time goes by, I begin to understand more about it. I wrote a paragh in my another article &lt;a href=&#34;https://www.pseudoyu.com/en/2020/06/06/23%E5%B2%81%E7%9A%84%E8%87%AA%E7%99%BD%E5%8E%BB%E8%BF%BD%E5%AF%BB%E6%84%8F%E4%B9%89/&#34;&gt;&lt;em&gt;Dear Yu, Are you ready for 23?&lt;/em&gt;&lt;/a&gt;, &lt;em&gt;&lt;strong&gt;&amp;ldquo;Perhaps, thinking about meaning itself is also a process of constructing meanings. I decide to give up the previous illusion of an &amp;lsquo;Aha moment&amp;rsquo; and just continue moving forward to experience my own life.&amp;quot;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The name &lt;strong&gt;Pseudoyu&lt;/strong&gt; also tells myself that I should never constantly struggle with what meaning is anymore. Instead, I will continue to learn, experience and challenge new things. And I can finally accept other&amp;rsquo;s judgement or complain about me like &amp;ldquo;&lt;strong&gt;You changed&lt;/strong&gt;&amp;rdquo; with pressure.&lt;/p&gt;
 &lt;p&gt;I hope I can acquire more inputs like new knowledge and ideas, and write more short articles as outputs.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>LeetCode #110 平衡二叉树</title>
+      <link>https://www.pseudoyu.com/en/2021/07/14/leetcode_110/</link>
+      <pubDate>Wed, 14 Jul 2021 14:40:17 +0800</pubDate>
+      
+      <guid>https://www.pseudoyu.com/en/2021/07/14/leetcode_110/</guid>
+      
+        <description>&lt;h2 id=&#34;题目描述&#34;&gt;题目描述&lt;/h2&gt;
+&lt;p&gt;给定一个二叉树，判断它是否是高度平衡的二叉树。&lt;/p&gt;
+&lt;p&gt;本题中，一棵高度平衡二叉树定义为：&lt;/p&gt;
+&lt;p&gt;一个二叉树每个节点 的左右两个子树的高度差的绝对值不超过 1 。&lt;/p&gt;
+&lt;p&gt;示例 1：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：root = [3,9,20,null,null,15,7]
+输出：true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;示例 2：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：root = [1,2,2,3,3,null,null,4,4]
+输出：false
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;示例 3：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：root = []
+输出：true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;题解&#34;&gt;题解&lt;/h2&gt;
+&lt;h3 id=&#34;分治法&#34;&gt;分治法&lt;/h3&gt;
+&lt;p&gt;跟二叉树的最大高度一样，只是需要判断左右节点之间差值是否不超过1，按照模板写比较容易，&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;isBalanced&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;root&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;TreeNode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;bool&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;maxDepth&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;root&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+		&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;
+	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+	&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;maxDepth&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;root&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;TreeNode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;root&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;nil&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+		&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+	&lt;span class=&#34;nx&#34;&gt;left&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;maxDepth&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;root&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Left&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+	&lt;span class=&#34;nx&#34;&gt;right&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;maxDepth&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;root&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Right&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+	&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;left&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;right&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;left&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;right&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;right&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;left&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+		&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+	&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;left&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;right&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+		&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt;
+	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+	&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;b&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/balanced-binary-tree&#34;&gt;LeetCode题目链接&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/greyireland/algorithm-pattern&#34;&gt;greyireland/algorithm-pattern&lt;/a&gt;，&lt;em&gt;GitHub&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
 </description>
       
     </item>
@@ -2953,92 +3018,6 @@ After termination, add GAS_REFUND to caller.balance
 &lt;li&gt;&lt;a href=&#34;https://www.ituring.com.cn/book/2434&#34;&gt;区块链技术进阶与实战&lt;/a&gt;，&lt;em&gt;蔡亮 李启雷 梁秀波，浙江大学 | 趣链科技&lt;/em&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>用OKR的方式梳理自己的学习计划</title>
-      <link>https://www.pseudoyu.com/en/2021/02/11/learning_plan_okr/</link>
-      <pubDate>Thu, 11 Feb 2021 00:00:00 +0800</pubDate>
-      
-      <guid>https://www.pseudoyu.com/en/2021/02/11/learning_plan_okr/</guid>
-      
-        <description>&lt;h2 id=&#34;用一句话形容理想情况下自己想要达到的状态&#34;&gt;用一句话形容理想情况下，自己想要达到的状态&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;具体目标范围&lt;/strong&gt;：提升编程技术能力&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;时间周期&lt;/strong&gt;：2个月&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;描述&lt;/strong&gt;：我想要成为一名具备过硬的编程能力的开发者，并对技术有持续学习的开放心态 &lt;em&gt;&lt;strong&gt;— 目标O&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;寻找关键词拆解状态为目标&#34;&gt;寻找关键词，拆解状态为目标&lt;/h2&gt;
-&lt;h3 id=&#34;我需要提升解决的部分&#34;&gt;我需要提升解决的部分&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;过硬的编程能力&lt;/li&gt;
-&lt;li&gt;持续学习的开放心态&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;想要达到的程度&#34;&gt;想要达到的程度&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;能够通过技术创造价值&lt;/li&gt;
-&lt;li&gt;对技术有热爱和追求&lt;/li&gt;
-&lt;li&gt;B站Up主“是落拓呀”的持续学习状态&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;制定每一个关键词目标的指标&#34;&gt;制定每一个关键词/目标的指标&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;过硬的编程能力&lt;/strong&gt;：能够满足目前香港/内地区块链公司，如蚂蚁链、腾讯区块链、杭州趣链科技等目标公司的技术面试要求，并主导完成1-2个完整的项目，深入技术细节 &lt;strong&gt;— KR1&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;持续学习的开放心态&lt;/strong&gt;：提升对于热门区块链技术平台（Ethereum、Hyperledger）与Java后端技术的理解与学习，并完成多篇原创技术博客 &lt;strong&gt;— KR2&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;填充每一个关键指标的todo-list&#34;&gt;填充每一个关键指标的todo list&lt;/h2&gt;
-&lt;h3 id=&#34;过硬的编程能力&#34;&gt;过硬的编程能力&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;每天按照分类与难度刷LeetCode算法题
-&lt;ol&gt;
-&lt;li&gt;白天刷5-10题&lt;/li&gt;
-&lt;li&gt;晚上按照节奏复习之前刷过的题的思路&lt;/li&gt;
-&lt;li&gt;看关于算法框架思路的书籍，完善&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;完成区块链音乐版权项目毕业设计
-&lt;ol&gt;
-&lt;li&gt;每天至少2小时学习Ethereum智能合约编写相关&lt;/li&gt;
-&lt;li&gt;按照项目进度进行开发&lt;/li&gt;
-&lt;li&gt;与导师和同学定期交流，优化项目&lt;/li&gt;
-&lt;li&gt;调研市场上区块链产品，思考运营与商业化相关&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;完成开源项目RPC框架的学习
-&lt;ol&gt;
-&lt;li&gt;每天至少1小时学习课程并实践代码&lt;/li&gt;
-&lt;li&gt;撰写关于RPC框架原理和核心知识点的技术博文&lt;/li&gt;
-&lt;li&gt;将此作为亮点项目，添加至简历并与同学进行模拟面试&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;针对GitHub与一些书籍的面试经验，学习掌握计算机基础面试知识，和同学每周模拟面试，现场写算法题并讲解，找到问题并提出建议&lt;/li&gt;
-&lt;li&gt;参加春招面试，积攒面试经验查漏补缺，总结心得&lt;/li&gt;
-&lt;li&gt;和落拓学长交流区块链学习心得和路径，寻求建议&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;持续学习的开放心态&#34;&gt;持续学习的开放心态&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;完成学校COMP7408区块链与分布式账本课程（共计30学时，每周一节3小时的课程）
-&lt;ol&gt;
-&lt;li&gt;每周一晚上参加线下课程&lt;/li&gt;
-&lt;li&gt;课程第二天花3-6小时整理当周课程的知识点与拓展部分&lt;/li&gt;
-&lt;li&gt;每周2-3小时将课程中的理论部分通过代码实践&lt;/li&gt;
-&lt;li&gt;每天至少3天对之前所有知识点进行复习和查漏补缺（每次30分钟左右）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;Udacity 区块链开发课程并整理笔记（共计约40学时）
-&lt;ol&gt;
-&lt;li&gt;每天至少2小时学习课程并实践代码&lt;/li&gt;
-&lt;li&gt;每天至少3天对之前所有知识点进行复习和查漏补缺（每次30分钟左右）&lt;/li&gt;
-&lt;li&gt;阶段性对课程里的项目进行详细整理，添加至简历并针对面试进行准备&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;每天学习间隙整理基础理论知识，并了解一些前沿技术和产品&lt;/li&gt;
-&lt;li&gt;完成CSDN关于Spring Boot和其他框架的入门视频并整理&lt;/li&gt;
-&lt;li&gt;完成Udacity关于Java开发相关框架的介绍并进行项目实践&lt;/li&gt;
-&lt;li&gt;结合自己的理解与学习笔记，撰写针对特定技术的原创博客&lt;/li&gt;
-&lt;li&gt;定期和目前从事区块链的同学进行交流讨论，补充项目经验至简历与面试准备&lt;/li&gt;
-&lt;/ol&gt;
 </description>
       
     </item>
